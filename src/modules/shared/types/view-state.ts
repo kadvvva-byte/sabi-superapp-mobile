@@ -1,0 +1,15 @@
+export type ViewState =
+  | "idle"
+  | "loading"
+  | "refreshing"
+  | "success"
+  | "empty"
+  | "error"
+  | "offline"
+  | "disabled"
+  | "maintenance"
+  | "pending"
+  | "failed"
+  | "restricted"
+  | "verification_required"
+  | "under_review";

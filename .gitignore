@@ -1,0 +1,83 @@
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+node_modules/
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# macOS
+.DS_Store
+*.pem
+
+# local env files
+.env*.local
+
+# typescript
+*.tsbuildinfo
+
+app-example
+
+# generated native folders
+/ios
+/android
+
+
+# SABI BUILD SAFETY
+.env
+.env.*
+*.env
+*.zip
+*.bak
+*.diff
+*.log
+*.tmp
+*.tsbuildinfo
+
+# local/generated
+.expo/
+node_modules/
+android/
+ios/
+dist/
+build/
+coverage/
+
+# reports/backups/install patches not needed for APK build
+*.txt
+*.md
+*.ps1
+*.cjs
+*.js.bak
+*backup*/
+*BACKUP*/
+performance-100-1-backup-*/
+PERFORMANCE-100.1/
+wallet-mobile-*-report.json
+*-audit.txt
+*-report.txt
+*-targets.txt
+*-diagnostics.txt
+*-exact-blocks.txt
+VERIFY_LOG.txt
+LOCATION-*.txt

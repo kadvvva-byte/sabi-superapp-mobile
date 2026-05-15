@@ -1,0 +1,1 @@
+export * from "../../../core/kernel/auth/domain/access-control";

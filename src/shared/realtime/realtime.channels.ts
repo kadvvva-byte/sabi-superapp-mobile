@@ -1,0 +1,33 @@
+export const RealtimeChannels = {
+  user: (userId: string) => `user:${userId}`,
+  authUser: (userId: string) => `auth:user:${userId}`,
+  userProfile: (userId: string) => `user-profile:${userId}`,
+  notificationUser: (userId: string) => `notification:user:${userId}`,
+  walletUser: (userId: string) => `wallet-core:user:${userId}`,
+  wallet: (walletId: string) => `wallet-core:wallet:${walletId}`,
+  walletOperation: (operationId: string) => `wallet-core:operation:${operationId}`,
+  chat: (chatId: string) => chatId,
+} as const
+
+export const RealtimeEvents = {
+  authSessionChanged: "auth:session.changed",
+  authAccountUpdated: "auth:account.updated",
+  userUpdated: "user:updated",
+  userProfileUpdated: "user:profile.updated",
+  notificationNew: "notification:new",
+  notificationRead: "notification:read",
+  walletBalanceUpdated: "wallet:balance.updated",
+  walletHistoryChanged: "wallet:history.changed",
+  walletOperationUpdated: "wallet:operation.updated",
+  walletCoreEvent: "wallet-core:event",
+  realtimeEvent: "realtime:event",
+  messageNew: "message:new",
+  messageEdited: "message:edited",
+  messageDeleted: "message:deleted",
+  messageDelivered: "message:delivered",
+  messageRead: "message:read",
+  typingStart: "typing:start",
+  typingStop: "typing:stop",
+  presenceOnline: "presence:online",
+  presenceOffline: "presence:offline",
+} as const

@@ -1,0 +1,15 @@
+{
+  "name": "sabi-screen-share",
+  "version": "1.0.0",
+  "private": true,
+  "main": "app.plugin.js",
+  "keywords": [
+    "expo",
+    "screen-share",
+    "screen-sharing",
+    "media-projection",
+    "replaykit",
+    "video-call"
+  ],
+  "license": "UNLICENSED"
+}

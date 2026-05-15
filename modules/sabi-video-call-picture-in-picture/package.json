@@ -1,0 +1,27 @@
+{
+  "name": "sabi-video-call-picture-in-picture",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index",
+  "types": "src/index.ts",
+  "keywords": [
+    "expo-module",
+    "picture-in-picture",
+    "pip",
+    "video-call",
+    "android",
+    "sabi"
+  ],
+  "license": "UNLICENSED",
+  "peerDependencies": {
+    "expo": "*"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "expo-modules-core": "^2.2.3"
+  }
+}

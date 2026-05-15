@@ -1,0 +1,1108 @@
+import React, { useCallback, useEffect, useMemo, useState } from "react";
+import {
+  Alert,
+  Image,
+  Pressable,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+  Switch,
+  Text,
+  TextInput,
+  View,
+  useWindowDimensions,
+} from "react-native";
+import * as ImagePicker from "expo-image-picker";
+import { LinearGradient } from "expo-linear-gradient";
+import { router, useLocalSearchParams } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  Camera,
+  ChevronLeft,
+  Gift,
+  Globe2,
+  Hash,
+  Heart,
+  History,
+  ImagePlus,
+  Link2,
+  Lock,
+  Megaphone,
+  MessageCircleMore,
+  Plus,
+  Radio,
+  Save,
+  Settings2,
+  Video,
+} from "lucide-react-native";
+
+import { profileKernelFacade } from "../../../core/kernel/profile";
+import { useI18n } from "../../../shared/i18n";
+import { openMessengerRoom } from "../../messenger/navigation/messengerRoomNavigation";
+
+type I18nHookValue =
+  | ((key: string, params?: Record<string, unknown>) => string)
+  | {
+      t?: (key: string, params?: Record<string, unknown>) => string;
+    };
+
+type RouteParams = {
+  userId?: string | string[];
+  selfId?: string | string[];
+  source?: string | string[];
+};
+
+type ChannelMediaItem = {
+  id: string;
+  uri: string;
+  type: "photo" | "video";
+  createdAt: number;
+};
+
+type ChannelHistoryEntry = {
+  id: string;
+  title: string;
+  subtitle: string;
+  kind: "identity" | "publication" | "control" | "media";
+  createdAt: number;
+};
+
+type ChannelProfileState = {
+  created: boolean;
+  channelId: string;
+  channelName: string;
+  username: string;
+  description: string;
+  avatarUri: string;
+  coverUri: string;
+  ownerName: string;
+  ownerUserId: string;
+  ownerRole: string;
+  ownerPhone: string;
+  ownerEmail: string;
+  isPublic: boolean;
+  isPublished: boolean;
+  showInProfile: boolean;
+  searchableInDirectory: boolean;
+  previewEnabled: boolean;
+  visibleInDiscovery: boolean;
+  approveSubscribers: boolean;
+  onlyAdminsCanPost: boolean;
+  onlyAdminsCanEdit: boolean;
+  commentsEnabled: boolean;
+  reactionsEnabled: boolean;
+  linkedChatId: string;
+  linkedPublicationId: string;
+  linkedBotId: string;
+  inviteLink: string;
+  publicationTitle: string;
+  publicationSubtitle: string;
+  publicationSlug: string;
+  publicationTags: string;
+  publicationSummary: string;
+  publicationPhotos: ChannelMediaItem[];
+  publicationVideos: ChannelMediaItem[];
+  likesCount: number;
+  publicGiftsCount: number;
+  subscribersCount: number;
+  lastUpdatedAt: number;
+  history: ChannelHistoryEntry[];
+};
+
+type TabKey = "overview" | "public" | "control" | "history";
+
+type KernelCollectionState<T = Record<string, unknown>> = {
+  items: T[];
+  selectedId: string | null;
+};
+
+const BG_TOP = "#08111F";
+const BG_MID = "#0D1830";
+const BG_BOTTOM = "#111F3F";
+const TEXT = "#F3F7FF";
+const MUTED = "#B8C6E3";
+const CARD = "rgba(14, 23, 43, 0.78)";
+const CARD_STRONG = "rgba(17, 28, 52, 0.92)";
+const CARD_BORDER = "rgba(132, 168, 255, 0.18)";
+const BLUE = "#6F9CFF";
+const BLUE_2 = "#8D82FF";
+const MINT = "#54E1C1";
+const GOLD = "#FFC96B";
+const PINK = "#FF7FBC";
+
+const DEFAULT_CHANNEL_STATE: ChannelProfileState = {
+  created: false,
+  channelId: "",
+  channelName: "",
+  username: "",
+  description: "",
+  avatarUri: "",
+  coverUri: "",
+  ownerName: "",
+  ownerUserId: "",
+  ownerRole: "",
+  ownerPhone: "",
+  ownerEmail: "",
+  isPublic: true,
+  isPublished: false,
+  showInProfile: false,
+  searchableInDirectory: false,
+  previewEnabled: true,
+  visibleInDiscovery: true,
+  approveSubscribers: false,
+  onlyAdminsCanPost: true,
+  onlyAdminsCanEdit: true,
+  commentsEnabled: false,
+  reactionsEnabled: true,
+  linkedChatId: "",
+  linkedPublicationId: "",
+  linkedBotId: "",
+  inviteLink: "",
+  publicationTitle: "",
+  publicationSubtitle: "",
+  publicationSlug: "",
+  publicationTags: "",
+  publicationSummary: "",
+  publicationPhotos: [],
+  publicationVideos: [],
+  likesCount: 0,
+  publicGiftsCount: 0,
+  subscribersCount: 0,
+  lastUpdatedAt: 0,
+  history: [],
+};
+
+function buildId(prefix: string) {
+  return `${prefix}_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function sanitizeUsername(value: string) {
+  return value
+    .toLowerCase()
+    .replace(/\s+/g, "_")
+    .replace(/[^a-z0-9_]/g, "")
+    .slice(0, 32);
+}
+
+function sanitizeSlug(value: string) {
+  return value
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")
+    .replace(/[^a-z0-9-_]/g, "")
+    .replace(/-+/g, "-")
+    .replace(/^[-_]+|[-_]+$/g, "")
+    .slice(0, 48);
+}
+
+function buildInviteLink(username: string, channelId: string) {
+  const clean = sanitizeUsername(username);
+  return clean ? `sabi://channel/${clean}` : `sabi://channel/${channelId}`;
+}
+
+function buildPublicationId(channelId: string) {
+  return `pub_channel_${channelId}`;
+}
+
+function buildDefaultPublicationSlug(channelName: string, username: string, channelId: string) {
+  const fromName = sanitizeSlug(channelName);
+  if (fromName) return fromName;
+  const fromUsername = sanitizeSlug(username);
+  if (fromUsername) return fromUsername;
+  return sanitizeSlug(channelId);
+}
+
+function readParamValue(value?: string | string[]) {
+  if (Array.isArray(value)) return String(value[0] ?? "").trim();
+  return String(value ?? "").trim();
+}
+
+function resolveCurrentUserId(params: RouteParams) {
+  const fromRoute = readParamValue(params.userId) || readParamValue(params.selfId);
+  if (fromRoute) return fromRoute;
+  const fromGlobal =
+    typeof globalThis !== "undefined" &&
+    typeof (globalThis as { __SABI_USER_ID__?: string }).__SABI_USER_ID__ === "string"
+      ? String((globalThis as { __SABI_USER_ID__?: string }).__SABI_USER_ID__ || "").trim()
+      : "";
+  return fromGlobal;
+}
+
+function normalizeMedia(value: unknown, type: "photo" | "video"): ChannelMediaItem[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => {
+      const raw = item as Partial<ChannelMediaItem>;
+      return {
+        id: String(raw?.id ?? "").trim() || buildId(type),
+        uri: String(raw?.uri ?? "").trim(),
+        type,
+        createdAt: Number(raw?.createdAt ?? Date.now()),
+      };
+    })
+    .filter((item) => item.uri);
+}
+
+function normalizeHistory(value: unknown): ChannelHistoryEntry[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => {
+      const raw = item as Partial<ChannelHistoryEntry>;
+      const kind = String(raw?.kind ?? "control") as ChannelHistoryEntry["kind"];
+      return {
+        id: String(raw?.id ?? "").trim() || buildId("hist"),
+        title: String(raw?.title ?? "").trim(),
+        subtitle: String(raw?.subtitle ?? "").trim(),
+        kind,
+        createdAt: Number(raw?.createdAt ?? Date.now()),
+      };
+    })
+    .filter((item) => item.title)
+    .sort((a, b) => b.createdAt - a.createdAt);
+}
+
+function normalizeChannelState(raw?: Partial<ChannelProfileState> | null): ChannelProfileState {
+  const merged: ChannelProfileState = {
+    ...DEFAULT_CHANNEL_STATE,
+    ...(raw ?? {}),
+    publicationPhotos: normalizeMedia(raw?.publicationPhotos, "photo"),
+    publicationVideos: normalizeMedia(raw?.publicationVideos, "video"),
+    history: normalizeHistory(raw?.history),
+    likesCount: Number(raw?.likesCount ?? 0),
+    publicGiftsCount: Number(raw?.publicGiftsCount ?? 0),
+    subscribersCount: Number(raw?.subscribersCount ?? 0),
+    lastUpdatedAt: Number(raw?.lastUpdatedAt ?? 0),
+  };
+
+  if (merged.username) merged.username = sanitizeUsername(merged.username);
+  if (merged.channelId && !merged.inviteLink) merged.inviteLink = buildInviteLink(merged.username, merged.channelId);
+  if (merged.channelId && !merged.linkedPublicationId) merged.linkedPublicationId = buildPublicationId(merged.channelId);
+  if (!merged.isPublic) {
+    merged.isPublished = false;
+    merged.showInProfile = false;
+    merged.searchableInDirectory = false;
+    merged.visibleInDiscovery = false;
+  }
+  return merged;
+}
+
+function pushHistory(state: ChannelProfileState, entry: Omit<ChannelHistoryEntry, "id" | "createdAt">): ChannelProfileState {
+  return {
+    ...state,
+    history: [{ id: buildId("hist"), createdAt: Date.now(), ...entry }, ...state.history].slice(0, 40),
+  };
+}
+
+function formatRelativeTime(timestamp: number) {
+  const diff = Date.now() - timestamp;
+  const minute = 60 * 1000;
+  const hour = 60 * minute;
+  const day = 24 * hour;
+  if (diff < hour) return `${Math.max(1, Math.round(diff / minute))} min ago`;
+  if (diff < day) return `${Math.max(1, Math.round(diff / hour))} h ago`;
+  return `${Math.max(1, Math.round(diff / day))} d ago`;
+}
+
+export default function ChannelProfileScreen() {
+  const params = useLocalSearchParams<RouteParams>();
+  const i18n = useI18n() as I18nHookValue;
+  const { width } = useWindowDimensions();
+  const currentUserId = useMemo(() => resolveCurrentUserId(params), [params]);
+
+  const [form, setForm] = useState<ChannelProfileState>(DEFAULT_CHANNEL_STATE);
+  const [selectedChannelId, setSelectedChannelId] = useState<string | null>(null);
+  const [isReady, setIsReady] = useState(false);
+  const [isSaving, setIsSaving] = useState(false);
+  const [activeTab, setActiveTab] = useState<TabKey>("overview");
+  const [tick, setTick] = useState(0);
+
+  const t = useCallback(
+    (key: string, params?: Record<string, unknown>) => {
+      if (typeof i18n === "function") {
+        const value = i18n(key, params);
+        return typeof value === "string" && value.length ? value : key;
+      }
+      if (i18n && typeof i18n.t === "function") {
+        const value = i18n.t(key, params);
+        return typeof value === "string" && value.length ? value : key;
+      }
+      return key;
+    },
+    [i18n],
+  );
+
+  const tt = useCallback(
+    (key: string, fallback: string, params?: Record<string, unknown>) => {
+      const value = t(key, params);
+      return value === key ? fallback : value;
+    },
+    [t],
+  );
+
+  useEffect(() => {
+    let mounted = true;
+    void profileKernelFacade.boot().finally(() => {
+      if (mounted) setIsReady(true);
+    });
+    const unsub = profileKernelFacade.subscribe(() => setTick((v) => v + 1));
+    return () => {
+      mounted = false;
+      unsub();
+    };
+  }, []);
+
+  const channelCollection = useMemo(() => {
+    const raw = (profileKernelFacade.selectors as any).channelProfiles?.() as KernelCollectionState | undefined;
+    return raw ?? { items: [], selectedId: null };
+  }, [tick]);
+
+  const channels = useMemo(
+    () => (Array.isArray(channelCollection.items) ? channelCollection.items.map((item) => normalizeChannelState(item as Partial<ChannelProfileState>)) : []),
+    [channelCollection.items],
+  );
+
+  useEffect(() => {
+    const selectedId = selectedChannelId ?? channelCollection.selectedId ?? null;
+    const nextActive = channels.find((item) => item.channelId === selectedId) ?? (selectedId ? null : null);
+    if (nextActive) {
+      setForm(nextActive);
+      return;
+    }
+    if (!selectedId && channels.length === 0) {
+      setForm(DEFAULT_CHANNEL_STATE);
+    }
+  }, [channels, channelCollection.selectedId, selectedChannelId]);
+
+  const activeStoredChannel = useMemo(
+    () => channels.find((item) => item.channelId === (selectedChannelId ?? channelCollection.selectedId ?? null)) || null,
+    [channels, selectedChannelId, channelCollection.selectedId],
+  );
+
+  const listCardWidth = useMemo(() => Math.max(140, Math.floor((width - 32 - 32 - 10) / 2)), [width]);
+  const heroCardWidth = listCardWidth;
+  const shelfCardWidth = useMemo(() => Math.max(148, Math.floor((width - 32 - 32 - 10) / 2)), [width]);
+  const infoChipWidth = useMemo(() => Math.max(148, listCardWidth), [listCardWidth]);
+  const channelInitial = useMemo(() => (form.channelName.trim().charAt(0) || "C").toUpperCase(), [form.channelName]);
+
+  const beginNewChannel = useCallback(() => {
+    setSelectedChannelId(null);
+    setForm(DEFAULT_CHANNEL_STATE);
+    setActiveTab("overview");
+  }, []);
+
+  const openStoredChannel = useCallback(
+    (channelId: string) => {
+      const target = channels.find((item) => item.channelId === channelId);
+      if (!target) return;
+      setSelectedChannelId(channelId);
+      setForm(target);
+      setActiveTab("overview");
+    },
+    [channels],
+  );
+
+  const saveCollection = useCallback(
+    async (nextItems: ChannelProfileState[], nextSelectedId: string | null, nextForm: ChannelProfileState, alertTitle?: string, alertMessage?: string) => {
+      try {
+        setIsSaving(true);
+        const finalized = nextItems.map((item) => normalizeChannelState({ ...item, lastUpdatedAt: item.lastUpdatedAt || Date.now() }));
+        await (profileKernelFacade as any).saveChannelProfiles({ items: finalized, selectedId: nextSelectedId });
+        await profileKernelFacade.saveChannelPreview(
+          nextForm
+            ? ({
+                created: Boolean(nextForm.created),
+                channelId: nextForm.channelId,
+                channelName: nextForm.channelName,
+                username: nextForm.username,
+                isPublic: Boolean(nextForm.isPublic),
+                isPublished: Boolean(nextForm.isPublished),
+                ownerUserId: nextForm.ownerUserId,
+                linkedPublicationId: nextForm.linkedPublicationId,
+                linkedChatId: nextForm.linkedChatId,
+              } as any)
+            : null,
+        );
+        setSelectedChannelId(nextSelectedId);
+        setForm(nextForm);
+        if (alertTitle && alertMessage) Alert.alert(alertTitle, alertMessage);
+      } catch {
+        Alert.alert(tt("profile.channelScreen.alerts.error.title", "Error"), tt("profile.channelScreen.alerts.error.saveFailed", "Unable to save channel settings."));
+      } finally {
+        setIsSaving(false);
+      }
+    },
+    [tt],
+  );
+
+  const setField = useCallback((key: keyof ChannelProfileState, value: ChannelProfileState[keyof ChannelProfileState]) => {
+    setForm((prev) => {
+      const next = { ...prev, [key]: value } as ChannelProfileState;
+      if (key === "username") {
+        const clean = sanitizeUsername(String(value));
+        next.username = clean;
+        if (next.channelId) next.inviteLink = buildInviteLink(clean, next.channelId);
+        if (!next.publicationSlug.trim()) next.publicationSlug = buildDefaultPublicationSlug(next.channelName, clean, next.channelId);
+      }
+      if (key === "channelName") {
+        const channelName = String(value);
+        if (!next.publicationTitle.trim()) next.publicationTitle = channelName;
+        if (!next.publicationSlug.trim()) next.publicationSlug = buildDefaultPublicationSlug(channelName, next.username, next.channelId);
+      }
+      if (key === "publicationSlug") next.publicationSlug = sanitizeSlug(String(value));
+      if (key === "isPublic" && value === false) {
+        next.isPublished = false;
+        next.showInProfile = false;
+        next.searchableInDirectory = false;
+        next.visibleInDiscovery = false;
+      }
+      return next;
+    });
+  }, []);
+
+  const buildCreatedState = useCallback(
+    (source: ChannelProfileState) => {
+      const channelName = source.channelName.trim();
+      if (!channelName) return null;
+      const channelId = source.channelId.trim() || buildId("channel");
+      const username = sanitizeUsername(source.username || channelName);
+      const ownerUserId = source.ownerUserId.trim() || currentUserId || buildId("owner");
+      const ownerName = source.ownerName.trim() || "Owner";
+      const ownerRole = source.ownerRole.trim() || "Owner";
+      const inviteLink = buildInviteLink(username, channelId);
+      const publicationSlug = source.publicationSlug.trim() || buildDefaultPublicationSlug(channelName, username, channelId);
+      return {
+        ...source,
+        created: true,
+        channelId,
+        channelName,
+        username,
+        ownerUserId,
+        ownerName,
+        ownerRole,
+        inviteLink,
+        linkedChatId: source.linkedChatId.trim() || `channel:${channelId}`,
+        linkedPublicationId: source.linkedPublicationId.trim() || buildPublicationId(channelId),
+        publicationTitle: source.publicationTitle.trim() || channelName,
+        publicationSlug,
+        isPublished: source.isPublic ? source.isPublished : false,
+        showInProfile: source.isPublic ? source.showInProfile : false,
+        searchableInDirectory: source.isPublic ? source.searchableInDirectory : false,
+        visibleInDiscovery: source.isPublic ? source.visibleInDiscovery : false,
+      } satisfies ChannelProfileState;
+    },
+    [currentUserId],
+  );
+
+  const handleCreateChannel = useCallback(async () => {
+    if (!form.channelName.trim()) {
+      Alert.alert(tt("profile.channelScreen.alerts.validation.nameTitle", "Channel name required"), tt("profile.channelScreen.alerts.validation.nameMessage", "Enter channel name before creating it."));
+      return;
+    }
+    const createdState = buildCreatedState(form);
+    if (!createdState) return;
+    const nextState = { ...pushHistory(createdState, { kind: "identity", title: tt("profile.channelScreen.actions.create", "Create channel"), subtitle: tt("profile.channelScreen.alerts.success.created", "Channel created") }), lastUpdatedAt: Date.now() };
+    const nextChannels = [nextState, ...channels.filter((item) => item.channelId !== nextState.channelId)];
+    await saveCollection(nextChannels, nextState.channelId, nextState, tt("profile.channelScreen.alerts.success.title", "Done"), tt("profile.channelScreen.alerts.success.created", "Channel created"));
+  }, [buildCreatedState, channels, form, saveCollection, tt]);
+
+  const handleSaveChanges = useCallback(async () => {
+    if (!form.channelName.trim()) {
+      Alert.alert(tt("profile.channelScreen.alerts.validation.nameTitle", "Channel name required"), tt("profile.channelScreen.alerts.validation.nameMessage", "Enter channel name before saving."));
+      return;
+    }
+    const baseState = buildCreatedState(form);
+    if (!baseState) return;
+    const nextState = { ...pushHistory(baseState, { kind: "control", title: tt("profile.channelScreen.actions.save", "Save"), subtitle: tt("profile.channelScreen.alerts.success.saved", "Channel settings saved") }), lastUpdatedAt: Date.now() };
+    const nextChannels = channels.some((item) => item.channelId === nextState.channelId)
+      ? channels.map((item) => (item.channelId === nextState.channelId ? nextState : item))
+      : [nextState, ...channels];
+    await saveCollection(nextChannels, nextState.channelId, nextState, tt("profile.channelScreen.alerts.success.title", "Done"), tt("profile.channelScreen.alerts.success.saved", "Channel settings saved"));
+  }, [buildCreatedState, channels, form, saveCollection, tt]);
+
+  const handleResetChannel = useCallback(() => {
+    Alert.alert(
+      tt("profile.channelScreen.alerts.resetConfirm.title", "Reset channel"),
+      tt("profile.channelScreen.alerts.resetConfirm.message", "This channel will be removed from this screen and you will return to create mode."),
+      [
+        { text: tt("profile.channelScreen.alerts.resetConfirm.cancel", "Cancel"), style: "cancel" },
+        {
+          text: tt("profile.channelScreen.alerts.resetConfirm.confirm", "Reset"),
+          style: "destructive",
+          onPress: async () => {
+            const currentId = selectedChannelId || form.channelId || null;
+            if (!currentId) {
+              beginNewChannel();
+              return;
+            }
+            const remaining = channels.filter((item) => item.channelId !== currentId);
+            const nextSelected = remaining[0]?.channelId || null;
+            const nextForm = remaining[0] || DEFAULT_CHANNEL_STATE;
+            await saveCollection(remaining, nextSelected, nextForm, tt("profile.channelScreen.alerts.success.title", "Done"), tt("profile.channelScreen.alerts.success.reset", "Channel removed"));
+            setActiveTab("overview");
+          },
+        },
+      ],
+    );
+  }, [beginNewChannel, channels, form.channelId, saveCollection, selectedChannelId, tt]);
+
+  const openPicker = useCallback(
+    async (mode: "avatar" | "cover" | "photo" | "video") => {
+      const permission = await ImagePicker.requestMediaLibraryPermissionsAsync();
+      if (!permission.granted) {
+        Alert.alert(tt("common.error", "Permission required"), tt("profile.photosScreen.alerts.permissionMessage", "Allow access to your gallery."));
+        return;
+      }
+      const result = await ImagePicker.launchImageLibraryAsync({
+        mediaTypes: mode === "video" ? ImagePicker.MediaTypeOptions.Videos : ImagePicker.MediaTypeOptions.Images,
+        allowsEditing: mode !== "video",
+        quality: 0.92,
+      });
+      if (result.canceled || !result.assets.length) return;
+      const asset = result.assets[0];
+      setForm((prev) => {
+        let next = { ...prev };
+        if (mode === "avatar") {
+          next.avatarUri = asset.uri;
+          next = pushHistory(next, { kind: "identity", title: tt("profile.channelScreen.media.avatar", "Avatar"), subtitle: tt("common.update", "Updated") });
+        }
+        if (mode === "cover") {
+          next.coverUri = asset.uri;
+          next = pushHistory(next, { kind: "publication", title: tt("profile.channelScreen.media.cover", "Cover"), subtitle: tt("common.update", "Updated") });
+        }
+        if (mode === "photo") {
+          const nextPhoto: ChannelMediaItem = { id: buildId("photo"), type: "photo", uri: asset.uri, createdAt: Date.now() };
+          next.publicationPhotos = [nextPhoto, ...prev.publicationPhotos].slice(0, 12);
+          next = pushHistory(next, { kind: "media", title: tt("profile.channelScreen.media.photos", "Photos"), subtitle: tt("common.add", "Added") });
+        }
+        if (mode === "video") {
+          const nextVideo: ChannelMediaItem = { id: buildId("video"), type: "video", uri: asset.uri, createdAt: Date.now() };
+          next.publicationVideos = [nextVideo, ...prev.publicationVideos].slice(0, 12);
+          next = pushHistory(next, { kind: "media", title: tt("profile.channelScreen.media.videos", "Videos"), subtitle: tt("common.add", "Added") });
+        }
+        return next;
+      });
+    },
+    [tt],
+  );
+
+  const handleRemoveMedia = useCallback((id: string, type: "photo" | "video") => {
+    setForm((prev) => {
+      const next = {
+        ...prev,
+        publicationPhotos: type === "photo" ? prev.publicationPhotos.filter((item) => item.id !== id) : prev.publicationPhotos,
+        publicationVideos: type === "video" ? prev.publicationVideos.filter((item) => item.id !== id) : prev.publicationVideos,
+      };
+      return pushHistory(next, { kind: "media", title: tt("common.remove", "Removed"), subtitle: type === "photo" ? tt("profile.channelScreen.media.photos", "Photos") : tt("profile.channelScreen.media.videos", "Videos") });
+    });
+  }, [tt]);
+
+  const openCurrentChannelChat = useCallback(async () => {
+    if (!form.created || !form.linkedChatId.trim()) {
+      Alert.alert(tt("profile.channelScreen.alerts.validation.nameTitle", "Channel name required"), tt("profile.channelScreen.readonly.notice", "Create the channel first"));
+      return;
+    }
+
+    await openMessengerRoom({
+      chatId: form.linkedChatId,
+      name: form.channelName.trim() || "New channel",
+      roomType: "channel",
+      handle: form.username ? `@${form.username}` : undefined,
+      username: form.username ? `@${form.username}` : undefined,
+      subtitle: form.publicationSubtitle || form.description || form.channelName,
+      avatarLetter: (form.channelName.trim().charAt(0) || "C").toUpperCase(),
+      avatarUrl: form.avatarUri || undefined,
+      photoUrl: form.avatarUri || undefined,
+      coverUrl: form.coverUri || undefined,
+      publicPhotos: JSON.stringify(form.publicationPhotos.map((item) => ({ id: item.id, uri: item.uri, kind: "photo" as const }))),
+      publicVideos: JSON.stringify(form.publicationVideos.map((item) => ({ id: item.id, uri: item.uri, kind: "video" as const }))),
+      likesCount: String(form.likesCount || 0),
+      publicGiftsCount: String(form.publicGiftsCount || 0),
+      verified: form.isPublished ? "1" : undefined,
+      currentUserId: currentUserId || form.ownerUserId || undefined,
+      markRead: false,
+    });
+  }, [currentUserId, form, tt]);
+
+  const overviewCards = useMemo(
+    () => [
+      { key: "photos", label: tt("profile.channelScreen.media.photos", "Photos"), value: String(form.publicationPhotos.length), accent: ["#6AE1C7", "#5D9CFF"] as [string, string] },
+      { key: "videos", label: tt("profile.channelScreen.media.videos", "Videos"), value: String(form.publicationVideos.length), accent: ["#88A8FF", "#B688FF"] as [string, string] },
+      { key: "likes", label: tt("profile.surface.likes.title", "Likes"), value: String(form.likesCount), accent: ["#FF9F87", "#FF6FA1"] as [string, string] },
+      { key: "gifts", label: tt("profile.giftsScreen.header.title", "Gifts"), value: String(form.publicGiftsCount), accent: ["#FFD76B", "#FF9E5D"] as [string, string] },
+    ],
+    [form.likesCount, form.publicationPhotos.length, form.publicationVideos.length, form.publicGiftsCount, tt],
+  );
+
+  const tabs = useMemo(
+    () => [
+      { key: "overview" as TabKey, label: tt("profile.channelScreen.tabs.overview", "Profile") },
+      { key: "public" as TabKey, label: tt("profile.channelScreen.tabs.public", "Public") },
+      { key: "control" as TabKey, label: tt("profile.channelScreen.tabs.control", "Settings") },
+      { key: "history" as TabKey, label: tt("profile.channelScreen.tabs.history", "History") },
+    ],
+    [tt],
+  );
+
+  if (!isReady) {
+    return (
+      <LinearGradient colors={[BG_TOP, BG_MID, BG_BOTTOM]} style={styles.root}>
+        <SafeAreaView style={styles.safeArea}>
+          <StatusBar barStyle="light-content" />
+          <View style={styles.loadingWrap}>
+            <Text style={styles.loadingText}>{tt("profile.channelScreen.loading", "Loading channel...")}</Text>
+          </View>
+        </SafeAreaView>
+      </LinearGradient>
+    );
+  }
+
+  return (
+    <LinearGradient colors={[BG_TOP, BG_MID, BG_BOTTOM]} style={styles.root}>
+      <SafeAreaView style={styles.safeArea}>
+        <StatusBar barStyle="light-content" />
+
+        <View style={styles.header}>
+          <Pressable style={styles.backButton} onPress={() => router.back()}>
+            <ChevronLeft size={20} color={TEXT} />
+          </Pressable>
+          <View style={styles.headerTextWrap}>
+            <Text style={styles.headerEyebrow}>CHANNEL OWNER</Text>
+            <Text style={styles.headerTitle}>{tt("profile.channelScreen.header.title", "Channel management")}</Text>
+          </View>
+          <View style={styles.headerBadge}>
+            <Text style={styles.headerBadgeText}>
+              {form.created ? `${tt("profile.channelScreen.header.active", "Active")} · ${channels.length}` : `${tt("profile.channelScreen.header.create", "Create")} · ${channels.length}`}
+            </Text>
+          </View>
+        </View>
+
+        <ScrollView contentContainerStyle={styles.content} showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled">
+          <View style={styles.sectionCard}>
+            <View style={styles.rowBetween}>
+              <View>
+                <Text style={styles.sectionTitle}>{tt("profile.channelScreen.shelf.title", "My channels")}</Text>
+                <Text style={styles.sectionSubtitle}>
+                  {activeStoredChannel
+                    ? `${channels.length} ${tt("profile.channelScreen.shelf.countLabel", "channels")} · ${activeStoredChannel.channelName}`
+                    : `${channels.length} ${tt("profile.channelScreen.shelf.countLabel", "channels")}`}
+                </Text>
+              </View>
+              <Pressable style={styles.smallButton} onPress={beginNewChannel}>
+                <Plus size={16} color="#fff" />
+                <Text style={styles.smallButtonText}>{tt("common.new", "New")}</Text>
+              </Pressable>
+            </View>
+            {channels.length ? (
+              <View style={styles.gridWrap}>
+                {channels.map((item) => (
+                  <Pressable key={item.channelId} style={[styles.shelfItem, { width: shelfCardWidth }, item.channelId === (selectedChannelId ?? channelCollection.selectedId ?? null) && styles.shelfItemActive]} onPress={() => openStoredChannel(item.channelId)}>
+                    <View style={styles.shelfAvatar}><Text style={styles.shelfAvatarText}>{(item.channelName.trim().charAt(0) || "C").toUpperCase()}</Text></View>
+                    <View style={styles.flex1}>
+                      <Text style={styles.shelfTitle} numberOfLines={1}>{item.channelName || tt("profile.channelScreen.defaults.channelName", "New channel")}</Text>
+                      <Text style={styles.shelfSubtitle} numberOfLines={1}>{item.username ? `@${item.username}` : item.inviteLink || item.channelId}</Text>
+                    </View>
+                  </Pressable>
+                ))}
+              </View>
+            ) : (
+              <EmptyState title={tt("profile.channelScreen.shelf.empty", "No channels yet. Create the first channel here.")} description="" />
+            )}
+          </View>
+
+          {!form.created ? (
+            <View style={styles.sectionCard}>
+              <View style={styles.rowStart}>
+                <View style={styles.iconBubble}><Radio size={18} color={BLUE} /></View>
+                <View style={styles.flex1}>
+                  <Text style={styles.sectionTitle}>{tt("profile.channelScreen.actions.create", "Create channel")}</Text>
+                  <Text style={styles.sectionSubtitle}>{tt("profile.channelScreen.createFlow.subtitle", "Enter channel name first. Owner ID and invite link will be generated automatically.")}</Text>
+                </View>
+              </View>
+              <CompactInput label={tt("profile.channelScreen.main.channelName.label", "Channel name")} value={form.channelName} onChangeText={(value) => setField("channelName", value)} placeholder={tt("profile.channelScreen.main.channelName.placeholder", "Enter channel name")} />
+              <CompactInput label={tt("profile.channelScreen.main.username.label", "Username")} value={form.username} onChangeText={(value) => setField("username", sanitizeUsername(value))} placeholder={tt("profile.channelScreen.main.username.placeholder", "channel_username")} prefix="@" />
+              <CompactInput label={tt("profile.channelScreen.main.description.label", "Description")} value={form.description} onChangeText={(value) => setField("description", value)} placeholder={tt("profile.channelScreen.main.description.placeholder", "Write channel description")} multiline />
+              <View style={styles.gridWrap}>
+                <InfoChip width={infoChipWidth} icon={<Hash size={14} color={MINT} />} label={tt("profile.channelScreen.createFlow.ownerAuto", "Owner ID and chat binding are generated automatically")} />
+                <InfoChip width={infoChipWidth} icon={<Link2 size={14} color={BLUE_2} />} label={tt("profile.channelScreen.createFlow.inviteAuto", "Invite link and publication ID are generated automatically")} />
+              </View>
+              <PrimaryAction disabled={isSaving} onPress={handleCreateChannel} label={isSaving ? tt("profile.channelScreen.actions.creating", "Creating...") : tt("profile.channelScreen.actions.create", "Create channel")} />
+            </View>
+          ) : null}
+
+          <View style={styles.heroCard}>
+            <View style={styles.heroCoverWrap}>
+              {form.coverUri ? <Image source={{ uri: form.coverUri }} style={styles.heroCoverImage} /> : <LinearGradient colors={["rgba(84,225,193,0.72)", "rgba(111,156,255,0.78)", "rgba(141,130,255,0.70)"]} style={styles.heroCoverFallback} />}
+              <Pressable style={styles.coverAction} onPress={() => void openPicker("cover")}>
+                <Camera size={14} color="#FFFFFF" />
+                <Text style={styles.coverActionText}>{tt("profile.channelScreen.media.cover", "Cover")}</Text>
+              </Pressable>
+            </View>
+            <View style={styles.heroMainRow}>
+              <View style={styles.avatarWrap}>
+                <LinearGradient colors={["#72E4CB", "#689AFF"]} style={styles.avatarRing}>
+                  {form.avatarUri ? <Image source={{ uri: form.avatarUri }} style={styles.avatarImage} /> : <View style={styles.avatarFallback}><Text style={styles.avatarText}>{channelInitial}</Text></View>}
+                </LinearGradient>
+                <Pressable style={styles.avatarAction} onPress={() => void openPicker("avatar")}>
+                  <Camera size={13} color="#FFFFFF" />
+                </Pressable>
+              </View>
+              <View style={styles.flex1}>
+                <Text style={styles.heroTitle}>{form.channelName.trim() || tt("profile.channelScreen.defaults.channelName", "New channel")}</Text>
+                <Text style={styles.heroSubtitle}>{form.username ? `@${form.username}` : tt("profile.channelScreen.defaults.username", "Username not set yet")}</Text>
+                <Text style={styles.heroDescription} numberOfLines={2}>{form.description.trim() || tt("profile.channelScreen.defaults.description", "Channel title, username, description and public identity layer live here.")}</Text>
+              </View>
+            </View>
+            <View style={styles.gridWrap}>
+              <HeroChip width={listCardWidth} label={tt("profile.channelScreen.stats.subscribers", "Subscribers")} value={String(form.subscribersCount)} tone="blue" />
+              <HeroChip width={listCardWidth} label={tt("profile.channelScreen.stats.photos", "Photos")} value={String(form.publicationPhotos.length)} tone="mint" />
+              <HeroChip width={listCardWidth} label={tt("profile.channelScreen.stats.gifts", "Gifts")} value={String(form.publicGiftsCount)} tone="gold" />
+              <HeroChip width={listCardWidth} label={tt("profile.channelScreen.stats.history", "History")} value={String(form.history.length)} tone="pink" />
+            </View>
+            <View style={styles.gridWrap}>
+              <QuickActionCard width={heroCardWidth} icon={<ImagePlus size={18} color={BLUE} />} title={tt("profile.channelScreen.media.photos", "Photos")} subtitle={tt("profile.channelScreen.media.photosSubtitle", "Upload and manage public photos")} onPress={() => { setActiveTab("public"); void openPicker("photo"); }} />
+              <QuickActionCard width={heroCardWidth} icon={<Video size={18} color={MINT} />} title={tt("profile.channelScreen.media.videos", "Videos")} subtitle={tt("profile.channelScreen.media.videosSubtitle", "Upload and manage short videos")} onPress={() => { setActiveTab("public"); void openPicker("video"); }} />
+              <QuickActionCard width={heroCardWidth} icon={<Megaphone size={18} color={BLUE_2} />} title={tt("profile.channelScreen.quick.public", "Public layer")} subtitle={tt("profile.channelScreen.quick.publicSubtitle", "Publication metadata and visibility")} onPress={() => setActiveTab("public")} />
+              <QuickActionCard width={heroCardWidth} icon={<Settings2 size={18} color={PINK} />} title={tt("profile.channelScreen.quick.settings", "Settings")} subtitle={tt("profile.channelScreen.quick.settingsSubtitle", "Channel permissions and control")} onPress={() => setActiveTab("control")} />
+            </View>
+            {form.created ? (
+              <Pressable style={styles.focusCard} onPress={openCurrentChannelChat}>
+                <View style={styles.rowStart}>
+                  <View style={styles.inlineActionIcon}><MessageCircleMore size={18} color={BLUE} /></View>
+                  <View>
+                    <Text style={styles.focusCardTitle}>{tt("profile.channelScreen.openChat.title", "Open channel chat")}</Text>
+                    <Text style={styles.focusCardSubtitle}>{tt("profile.channelScreen.openChat.subtitle", "Go to the existing channel room with avatar and public media")}</Text>
+                  </View>
+                </View>
+                <Text style={styles.focusCardArrow}>→</Text>
+              </Pressable>
+            ) : null}
+          </View>
+
+          <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tabsRow}>
+            {tabs.map((tab) => {
+              const active = activeTab === tab.key;
+              return <Pressable key={tab.key} onPress={() => setActiveTab(tab.key)} style={[styles.tabButton, active && styles.tabButtonActive]}><Text style={[styles.tabButtonText, active && styles.tabButtonTextActive]}>{tab.label}</Text></Pressable>;
+            })}
+          </ScrollView>
+
+          {activeTab === "overview" ? (
+            <>
+              <GlassSection title={tt("profile.channelScreen.sections.identity.title", "Identity layers")} subtitle={tt("profile.channelScreen.sections.identity.subtitle", "Main public identity block of the channel.")}>
+                <View style={styles.gridWrap}>{overviewCards.map((item) => <StatCard key={item.key} width={listCardWidth} label={item.label} value={item.value} accent={item.accent} />)}</View>
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.activity.title", "Incoming activity")} subtitle={tt("profile.channelScreen.sections.activity.subtitle", "Likes and gifts come from users. The owner does not add them manually.")}>
+                <View style={styles.gridWrap}>
+                  <ReadOnlyCounterCard width={listCardWidth} icon={<Heart size={16} color={PINK} />} title={tt("profile.surface.likes.title", "Likes")} value={`${form.likesCount}`} subtitle={tt("profile.channelScreen.readonly.likes", "This is incoming activity. The owner does not add likes manually.")} />
+                  <ReadOnlyCounterCard width={listCardWidth} icon={<Gift size={16} color={GOLD} />} title={tt("profile.giftsScreen.header.title", "Gifts")} value={`${form.publicGiftsCount}`} subtitle={tt("profile.channelScreen.readonly.gifts", "This is incoming activity. The owner does not add gifts manually.")} />
+                </View>
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.publication.title", "Publication and public layer")} subtitle={tt("profile.channelScreen.sections.publication.subtitle", "Channel public metadata and visibility rules.")}>
+                <View style={styles.chipsWrap}>
+                  <InfoChip icon={<Globe2 size={14} color={BLUE} />} label={form.isPublic ? tt("profile.channelScreen.flags.public", "Public") : tt("profile.channelScreen.flags.private", "Private")} />
+                  <InfoChip icon={<Megaphone size={14} color={MINT} />} label={form.isPublished ? tt("profile.channelScreen.flags.published", "Published") : tt("profile.channelScreen.flags.preview", "Preview")} />
+                  <InfoChip icon={<Link2 size={14} color={BLUE_2} />} label={form.showInProfile ? tt("profile.channelScreen.flags.profileVisible", "Visible in profile") : tt("profile.channelScreen.flags.profileHidden", "Hidden from profile")} />
+                </View>
+                <Pressable style={styles.focusCard} onPress={() => setActiveTab("public")}>
+                  <View>
+                    <Text style={styles.focusCardTitle}>{tt("common.open", "Open")}</Text>
+                    <Text style={styles.focusCardSubtitle}>{tt("profile.channelScreen.focus.public", "Manage public layer and media")}</Text>
+                  </View>
+                  <Text style={styles.focusCardArrow}>→</Text>
+                </Pressable>
+              </GlassSection>
+            </>
+          ) : null}
+
+          {activeTab === "public" ? (
+            <>
+              <GlassSection title={tt("profile.channelScreen.sections.public.title", "Public")} subtitle={tt("profile.channelScreen.sections.public.subtitle", "Photos, videos and publication visibility.")}>
+                <View style={styles.gridWrap}>
+                  <StatCard width={listCardWidth} label={tt("profile.channelScreen.media.photos", "Photos")} value={String(form.publicationPhotos.length)} accent={["#72E4CB", "#689AFF"]} />
+                  <StatCard width={listCardWidth} label={tt("profile.channelScreen.media.videos", "Videos")} value={String(form.publicationVideos.length)} accent={["#9A8DFF", "#689AFF"]} />
+                  <StatCard width={listCardWidth} label={tt("profile.surface.likes.title", "Likes")} value={String(form.likesCount)} accent={["#FF9C88", "#FF6FA1"]} />
+                  <StatCard width={listCardWidth} label={tt("profile.giftsScreen.header.title", "Gifts")} value={String(form.publicGiftsCount)} accent={["#FFD66A", "#F3A93B"]} />
+                </View>
+                <View style={styles.gridWrap}>
+                  <InlineActionButton width={listCardWidth} icon={<ImagePlus size={16} color={BLUE} />} title={tt("profile.channelScreen.media.addPhoto", "Add photo")} value={tt("profile.channelScreen.media.gallery", "Gallery")} onPress={() => void openPicker("photo")} />
+                  <InlineActionButton width={listCardWidth} icon={<Video size={16} color={MINT} />} title={tt("profile.channelScreen.media.addVideo", "Add video")} value={tt("profile.channelScreen.media.gallery", "Gallery")} onPress={() => void openPicker("video")} />
+                </View>
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.media.photos", "Photos")} subtitle={tt("profile.channelScreen.media.photosSubtitle", "Public photos shown in chat profile.")}>
+                <MediaStrip items={form.publicationPhotos} type="photo" emptyTitle={tt("profile.channelScreen.media.emptyPhotosTitle", "No photos yet")} emptyDescription={tt("profile.channelScreen.media.emptyPhotosSubtitle", "Add the first photo.")} onAdd={() => void openPicker("photo")} onRemove={(id) => handleRemoveMedia(id, "photo")} />
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.media.videos", "Videos")} subtitle={tt("profile.channelScreen.media.videosSubtitle", "Public videos shown in chat profile.")}>
+                <MediaStrip items={form.publicationVideos} type="video" emptyTitle={tt("profile.channelScreen.media.emptyVideosTitle", "No videos yet")} emptyDescription={tt("profile.channelScreen.media.emptyVideosSubtitle", "Add the first video.")} onAdd={() => void openPicker("video")} onRemove={(id) => handleRemoveMedia(id, "video")} />
+              </GlassSection>
+            </>
+          ) : null}
+
+          {activeTab === "control" ? (
+            <>
+              <GlassSection title={tt("profile.channelScreen.sections.owner.title", "Owner data")} subtitle={tt("profile.channelScreen.sections.owner.subtitle", "Owner user ID is generated automatically if empty.")}>
+                <CompactInput label={tt("profile.channelScreen.owner.name", "Owner name")} value={form.ownerName} onChangeText={(value) => setField("ownerName", value)} placeholder={tt("profile.channelScreen.owner.namePlaceholder", "Owner")} />
+                <CompactInput label={tt("profile.channelScreen.owner.userId", "Owner User ID")} value={form.ownerUserId} onChangeText={(value) => setField("ownerUserId", value)} placeholder={tt("profile.channelScreen.owner.userIdPlaceholder", "Generated automatically")} />
+                <View style={styles.formGrid}>
+                  <CompactInput label={tt("profile.channelScreen.owner.role", "Owner role")} value={form.ownerRole} onChangeText={(value) => setField("ownerRole", value)} placeholder={tt("profile.channelScreen.owner.rolePlaceholder", "Owner")} />
+                  <CompactInput label={tt("profile.channelScreen.owner.phone", "Owner phone")} value={form.ownerPhone} onChangeText={(value) => setField("ownerPhone", value)} placeholder="+998..." />
+                </View>
+                <CompactInput label={tt("profile.channelScreen.owner.email", "Owner email")} value={form.ownerEmail} onChangeText={(value) => setField("ownerEmail", value)} placeholder="owner@sabi.app" />
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.main.title", "Main data")} subtitle={tt("profile.channelScreen.sections.main.subtitle", "Only channel name is required to create it.")}>
+                <CompactInput label={tt("profile.channelScreen.main.channelName.label", "Channel name")} value={form.channelName} onChangeText={(value) => setField("channelName", value)} placeholder={tt("profile.channelScreen.main.channelName.placeholder", "Enter channel name")} />
+                <CompactInput label={tt("profile.channelScreen.main.username.label", "Username")} value={form.username} onChangeText={(value) => setField("username", sanitizeUsername(value))} placeholder={tt("profile.channelScreen.main.username.placeholder", "channel_username")} prefix="@" />
+                <CompactInput label={tt("profile.channelScreen.main.description.label", "Description")} value={form.description} onChangeText={(value) => setField("description", value)} placeholder={tt("profile.channelScreen.main.description.placeholder", "Write channel description")} multiline />
+                {!!form.created ? <View style={styles.formGrid}><CompactInput label={tt("profile.channelScreen.main.channelId", "Channel ID")} value={form.channelId} onChangeText={(value) => setField("channelId", value)} placeholder={tt("profile.channelScreen.main.channelIdPlaceholder", "Generated automatically")} /><CompactInput label={tt("profile.channelScreen.main.inviteLink", "Invite link")} value={form.inviteLink} onChangeText={(value) => setField("inviteLink", value)} placeholder="sabi://channel/..." /></View> : null}
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.publication.title", "Publication and public layer")} subtitle={tt("profile.channelScreen.sections.publication.subtitle", "Public/private mode and publication rules.")}>
+                <ToggleRow icon={<Globe2 size={18} color={BLUE} />} title={tt("profile.channelScreen.toggles.public", "Public channel")} subtitle={tt("profile.channelScreen.toggles.publicSubtitle", "Use this channel in public mode.")} value={form.isPublic} onValueChange={(value) => setField("isPublic", value)} />
+                <ToggleRow icon={<Megaphone size={18} color={MINT} />} title={tt("profile.channelScreen.toggles.published", "Publication enabled")} subtitle={tt("profile.channelScreen.toggles.publishedSubtitle", "Activate public publication layer.")} value={form.isPublished} onValueChange={(value) => setField("isPublished", value)} disabled={!form.isPublic} />
+                <ToggleRow icon={<Link2 size={18} color={BLUE_2} />} title={tt("profile.channelScreen.toggles.showInProfile", "Show in profile")} subtitle={tt("profile.channelScreen.toggles.showInProfileSubtitle", "Display channel section inside profile.")} value={form.showInProfile} onValueChange={(value) => setField("showInProfile", value)} disabled={!form.isPublic} />
+                <ToggleRow icon={<Globe2 size={18} color={BLUE} />} title={tt("profile.channelScreen.toggles.searchable", "Searchable in directory")} subtitle={tt("profile.channelScreen.toggles.searchableSubtitle", "Allow directory discovery.")} value={form.searchableInDirectory} onValueChange={(value) => setField("searchableInDirectory", value)} disabled={!form.isPublic} />
+                <ToggleRow icon={<Link2 size={18} color={BLUE_2} />} title={tt("profile.channelScreen.toggles.preview", "Preview enabled")} subtitle={tt("profile.channelScreen.toggles.previewSubtitle", "Show previews in profile and links.")} value={form.previewEnabled} onValueChange={(value) => setField("previewEnabled", value)} />
+                <ToggleRow icon={<Globe2 size={18} color={MINT} />} title={tt("profile.channelScreen.toggles.discovery", "Visible in discovery")} subtitle={tt("profile.channelScreen.toggles.discoverySubtitle", "Allow public discovery surfaces.")} value={form.visibleInDiscovery} onValueChange={(value) => setField("visibleInDiscovery", value)} disabled={!form.isPublic} />
+                <CompactInput label={tt("profile.channelScreen.publication.publicationId", "Publication ID")} value={form.linkedPublicationId} onChangeText={(value) => setField("linkedPublicationId", value)} placeholder="pub_channel_..." />
+                <CompactInput label={tt("profile.channelScreen.publication.title", "Publication title")} value={form.publicationTitle} onChangeText={(value) => setField("publicationTitle", value)} placeholder={tt("profile.channelScreen.publication.titlePlaceholder", "Public title")} />
+                <CompactInput label={tt("profile.channelScreen.publication.subtitle", "Publication subtitle")} value={form.publicationSubtitle} onChangeText={(value) => setField("publicationSubtitle", value)} placeholder={tt("profile.channelScreen.publication.subtitlePlaceholder", "Short public description")} />
+                <View style={styles.formGrid}>
+                  <CompactInput label={tt("profile.channelScreen.publication.slug", "Publication slug")} value={form.publicationSlug} onChangeText={(value) => setField("publicationSlug", sanitizeSlug(value))} placeholder="channel-slug" />
+                  <CompactInput label={tt("profile.channelScreen.publication.tags", "Tags")} value={form.publicationTags} onChangeText={(value) => setField("publicationTags", value)} placeholder="news, updates" />
+                </View>
+                <CompactInput label={tt("profile.channelScreen.publication.summary", "Publication summary")} value={form.publicationSummary} onChangeText={(value) => setField("publicationSummary", value)} placeholder={tt("profile.channelScreen.publication.summaryPlaceholder", "Short summary for public card")} multiline />
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.permissions.title", "Permissions and moderation")} subtitle={tt("profile.channelScreen.sections.permissions.subtitle", "Subscriber flow and posting rules.")}>
+                <ToggleRow icon={<Hash size={18} color={BLUE} />} title={tt("profile.channelScreen.toggles.approveSubscribers", "Approve subscribers")} subtitle={tt("profile.channelScreen.toggles.approveSubscribersSubtitle", "Require manual approval for subscription.")} value={form.approveSubscribers} onValueChange={(value) => setField("approveSubscribers", value)} />
+                <ToggleRow icon={<Megaphone size={18} color={PINK} />} title={tt("profile.channelScreen.toggles.onlyAdminsCanPost", "Only admins can post")} subtitle={tt("profile.channelScreen.toggles.onlyAdminsCanPostSubtitle", "Posting is limited to owner/admins.")} value={form.onlyAdminsCanPost} onValueChange={(value) => setField("onlyAdminsCanPost", value)} />
+                <ToggleRow icon={<Lock size={18} color={BLUE_2} />} title={tt("profile.channelScreen.toggles.onlyAdminsCanEdit", "Only admins can edit")} subtitle={tt("profile.channelScreen.toggles.onlyAdminsCanEditSubtitle", "Channel data can be edited only by admins.")} value={form.onlyAdminsCanEdit} onValueChange={(value) => setField("onlyAdminsCanEdit", value)} />
+                <ToggleRow icon={<History size={18} color={GOLD} />} title={tt("profile.channelScreen.toggles.commentsEnabled", "Comments enabled")} subtitle={tt("profile.channelScreen.toggles.commentsEnabledSubtitle", "Allow comments under posts.")} value={form.commentsEnabled} onValueChange={(value) => setField("commentsEnabled", value)} />
+                <ToggleRow icon={<Heart size={18} color={MINT} />} title={tt("profile.channelScreen.toggles.reactionsEnabled", "Reactions enabled")} subtitle={tt("profile.channelScreen.toggles.reactionsEnabledSubtitle", "Allow reactions on channel posts.")} value={form.reactionsEnabled} onValueChange={(value) => setField("reactionsEnabled", value)} />
+              </GlassSection>
+              <GlassSection title={tt("profile.channelScreen.sections.links.title", "Bindings")} subtitle={tt("profile.channelScreen.sections.links.subtitle", "Chat, publication and bot bindings.")}>
+                <CompactInput label={tt("profile.channelScreen.links.chatId", "Linked chat ID")} value={form.linkedChatId} onChangeText={(value) => setField("linkedChatId", value)} placeholder="channel:..." />
+                <CompactInput label={tt("profile.channelScreen.links.botId", "Linked bot ID")} value={form.linkedBotId} onChangeText={(value) => setField("linkedBotId", value)} placeholder="bot_..." />
+                <CompactInput label={tt("profile.channelScreen.links.subscribers", "Subscribers count")} value={String(form.subscribersCount || 0)} onChangeText={(value) => setField("subscribersCount", Number(value.replace(/[^0-9]/g, "") || 0))} placeholder="0" />
+              </GlassSection>
+            </>
+          ) : null}
+
+          {activeTab === "history" ? (
+            <GlassSection title={tt("profile.channelScreen.tabs.history", "History")} subtitle={tt("profile.channelScreen.history.subtitle", "Latest owner and public events.")}>
+              {form.history.length ? (
+                <View style={styles.timelineWrap}>{form.history.map((item, index) => <View key={item.id} style={[styles.timelineItem, index !== form.history.length - 1 && styles.timelineDivider]}><View style={styles.timelineDotWrap}><View style={[styles.timelineDot, timelineColor(item.kind)]} /></View><View style={styles.flex1}><Text style={styles.timelineTitle}>{item.title}</Text><Text style={styles.timelineSubtitle}>{item.subtitle}</Text></View><Text style={styles.timelineTime}>{formatRelativeTime(item.createdAt)}</Text></View>)}</View>
+              ) : (
+                <EmptyState title={tt("profile.channelScreen.history.emptyTitle", "Nothing here yet")} description={tt("profile.channelScreen.history.emptySubtitle", "History will appear here when actions happen.")} />
+              )}
+            </GlassSection>
+          ) : null}
+
+          <View style={{ height: 120 }} />
+        </ScrollView>
+
+        {form.created ? (
+          <View style={styles.bottomBar}>
+            <View style={styles.bottomActionsRow}>
+              <Pressable style={[styles.secondaryButton, isSaving && styles.buttonDisabled]} disabled={isSaving} onPress={handleResetChannel}><Text style={styles.secondaryButtonText}>{tt("profile.channelScreen.actions.reset", "Reset")}</Text></Pressable>
+              <Pressable style={[styles.primaryButton, styles.flex1, isSaving && styles.buttonDisabled]} disabled={isSaving} onPress={handleSaveChanges}>
+                <LinearGradient colors={[BLUE, BLUE_2]} style={styles.primaryButtonGradient}><Save size={18} color="#FFFFFF" /><Text style={styles.primaryButtonText}>{isSaving ? tt("profile.channelScreen.actions.saving", "Saving...") : tt("profile.channelScreen.actions.save", "Save")}</Text></LinearGradient>
+              </Pressable>
+            </View>
+          </View>
+        ) : null}
+      </SafeAreaView>
+    </LinearGradient>
+  );
+}
+
+function GlassSection(props: { title: string; subtitle?: string; children: React.ReactNode }) {
+  return <View style={styles.sectionCard}><Text style={styles.sectionTitle}>{props.title}</Text>{props.subtitle ? <Text style={styles.sectionSubtitle}>{props.subtitle}</Text> : null}{props.children}</View>;
+}
+
+function CompactInput(props: { label: string; value: string; onChangeText: (value: string) => void; placeholder?: string; prefix?: string; multiline?: boolean }) {
+  return (
+    <View style={styles.inputWrap}>
+      <Text style={styles.inputLabel}>{props.label}</Text>
+      <View style={[styles.inputShell, props.multiline && styles.inputShellMultiline]}>
+        {props.prefix ? <Text style={styles.inputPrefix}>{props.prefix}</Text> : null}
+        <TextInput value={props.value} onChangeText={props.onChangeText} placeholder={props.placeholder} placeholderTextColor="rgba(184,198,227,0.45)" style={[styles.input, props.multiline && styles.inputMultiline]} multiline={props.multiline} />
+      </View>
+    </View>
+  );
+}
+
+function ToggleRow(props: { icon: React.ReactNode; title: string; subtitle: string; value: boolean; onValueChange: (value: boolean) => void; disabled?: boolean }) {
+  return <View style={[styles.toggleRow, props.disabled && { opacity: 0.5 }]}><View style={styles.rowStart}>{props.icon}<View style={{ marginLeft: 10, flex: 1 }}><Text style={styles.toggleTitle}>{props.title}</Text><Text style={styles.toggleSubtitle}>{props.subtitle}</Text></View></View><Switch value={props.value} onValueChange={props.onValueChange} disabled={props.disabled} /></View>;
+}
+
+function InfoChip(props: { icon: React.ReactNode; label: string; width?: number }) {
+  return <View style={[styles.infoChip, props.width ? { width: props.width } : null]}><View>{props.icon}</View><Text style={styles.infoChipText}>{props.label}</Text></View>;
+}
+
+function EmptyState(props: { title: string; description: string }) {
+  return <View style={styles.emptyWrap}><Text style={styles.emptyTitle}>{props.title}</Text>{props.description ? <Text style={styles.emptyDescription}>{props.description}</Text> : null}</View>;
+}
+
+function HeroChip(props: { width?: number; label: string; value: string; tone: "blue" | "mint" | "gold" | "pink" }) {
+  const toneStyles = {
+    blue: { backgroundColor: "rgba(58,113,255,0.10)", borderColor: "rgba(58,113,255,0.16)" },
+    mint: { backgroundColor: "rgba(56,199,177,0.10)", borderColor: "rgba(56,199,177,0.16)" },
+    gold: { backgroundColor: "rgba(243,169,59,0.10)", borderColor: "rgba(243,169,59,0.16)" },
+    pink: { backgroundColor: "rgba(255,111,161,0.10)", borderColor: "rgba(255,111,161,0.16)" },
+  }[props.tone];
+  return <View style={[styles.heroChip, props.width ? { width: props.width } : null, toneStyles]}><Text style={styles.heroChipValue}>{props.value}</Text><Text style={styles.heroChipLabel}>{props.label}</Text></View>;
+}
+
+function QuickActionCard(props: { width: number; icon: React.ReactNode; title: string; subtitle: string; onPress: () => void }) {
+  return <Pressable style={[styles.quickActionCard, { width: props.width }]} onPress={props.onPress}><View style={styles.iconBubble}>{props.icon}</View><Text style={styles.quickTitle}>{props.title}</Text><Text style={styles.quickSubtitle}>{props.subtitle}</Text></Pressable>;
+}
+
+function StatCard(props: { width: number; label: string; value: string; accent: [string, string] }) {
+  return <LinearGradient colors={props.accent} style={[styles.statCardWrap, { width: props.width }]}><View style={styles.statCardInner}><Text style={styles.statCardValue}>{props.value}</Text><Text style={styles.statCardLabel}>{props.label}</Text></View></LinearGradient>;
+}
+
+function ReadOnlyCounterCard(props: { width: number; icon: React.ReactNode; title: string; value: string; subtitle: string }) {
+  return <View style={[styles.readOnlyCard, { width: props.width }]}><View style={styles.rowStart}>{props.icon}<Text style={styles.readOnlyTitle}>{props.title}</Text></View><Text style={styles.readOnlyValue}>{props.value}</Text><Text style={styles.readOnlySubtitle}>{props.subtitle}</Text></View>;
+}
+
+function InlineActionButton(props: { width: number; icon: React.ReactNode; title: string; value: string; onPress: () => void }) {
+  return <Pressable style={[styles.inlineButton, { width: props.width }]} onPress={props.onPress}><View style={styles.rowStart}><View style={styles.inlineActionIcon}>{props.icon}</View><View><Text style={styles.inlineActionTitle}>{props.title}</Text><Text style={styles.inlineActionValue}>{props.value}</Text></View></View></Pressable>;
+}
+
+function MediaStrip(props: { items: ChannelMediaItem[]; type: "photo" | "video"; emptyTitle: string; emptyDescription: string; onAdd: () => void; onRemove: (id: string) => void }) {
+  if (!props.items.length) {
+    return <EmptyState title={props.emptyTitle} description={props.emptyDescription} />;
+  }
+  return <View style={styles.gridWrap}>{props.items.map((item) => <View key={item.id} style={styles.mediaCard}><Image source={{ uri: item.uri }} style={styles.mediaImage} /><View style={styles.mediaFooter}><Text style={styles.mediaType}>{props.type === "photo" ? "Photo" : "Video"}</Text><Pressable onPress={() => props.onRemove(item.id)}><Text style={styles.removeText}>Remove</Text></Pressable></View></View>)}<Pressable style={styles.addMediaCard} onPress={props.onAdd}><Plus size={18} color={TEXT} /><Text style={styles.addMediaText}>Add</Text></Pressable></View>;
+}
+
+function PrimaryAction(props: { label: string; disabled?: boolean; onPress: () => void }) {
+  return <Pressable style={[styles.primaryActionShell, props.disabled && styles.buttonDisabled]} disabled={props.disabled} onPress={props.onPress}><LinearGradient colors={[BLUE, BLUE_2]} style={styles.createEntryButtonGradient}><Plus size={18} color="#FFFFFF" /><Text style={styles.createEntryButtonText}>{props.label}</Text></LinearGradient></Pressable>;
+}
+
+function timelineColor(kind: ChannelHistoryEntry["kind"]) {
+  switch (kind) {
+    case "identity":
+      return { backgroundColor: BLUE };
+    case "publication":
+      return { backgroundColor: MINT };
+    case "media":
+      return { backgroundColor: GOLD };
+    default:
+      return { backgroundColor: PINK };
+  }
+}
+
+const styles = StyleSheet.create({
+  root: { flex: 1 },
+  safeArea: { flex: 1 },
+  loadingWrap: { flex: 1, alignItems: "center", justifyContent: "center" },
+  loadingText: { color: TEXT, fontSize: 16 },
+  header: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, paddingTop: 8, paddingBottom: 12 },
+  backButton: { width: 40, height: 40, borderRadius: 20, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.08)", borderWidth: 1, borderColor: CARD_BORDER },
+  headerTextWrap: { flex: 1, marginLeft: 12 },
+  headerEyebrow: { color: MUTED, fontSize: 11, letterSpacing: 1.5 },
+  headerTitle: { color: TEXT, fontSize: 20, fontWeight: "800" },
+  headerBadge: { backgroundColor: "rgba(255,255,255,0.08)", borderColor: CARD_BORDER, borderWidth: 1, paddingHorizontal: 10, paddingVertical: 8, borderRadius: 14 },
+  headerBadgeText: { color: TEXT, fontSize: 12, fontWeight: "700" },
+  content: { padding: 16, gap: 14 },
+  sectionCard: { backgroundColor: CARD, borderColor: CARD_BORDER, borderWidth: 1, borderRadius: 22, padding: 16, gap: 12 },
+  sectionTitle: { color: TEXT, fontSize: 17, fontWeight: "800" },
+  sectionSubtitle: { color: MUTED, fontSize: 13, lineHeight: 18 },
+  rowBetween: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12 },
+  rowStart: { flexDirection: "row", alignItems: "center" },
+  flex1: { flex: 1 },
+  smallButton: { flexDirection: "row", alignItems: "center", gap: 6, paddingHorizontal: 12, paddingVertical: 10, backgroundColor: BLUE, borderRadius: 14 },
+  smallButtonText: { color: "#fff", fontWeight: "700" },
+  gridWrap: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
+  shelfItem: { flexDirection: "row", alignItems: "center", backgroundColor: CARD_STRONG, borderRadius: 18, borderWidth: 1, borderColor: CARD_BORDER, padding: 12, gap: 10 },
+  shelfItemActive: { borderColor: BLUE },
+  shelfAvatar: { width: 44, height: 44, borderRadius: 22, backgroundColor: "rgba(255,255,255,0.10)", alignItems: "center", justifyContent: "center" },
+  shelfAvatarText: { color: TEXT, fontWeight: "800" },
+  shelfTitle: { color: TEXT, fontSize: 14, fontWeight: "700" },
+  shelfSubtitle: { color: MUTED, fontSize: 12 },
+  heroCard: { backgroundColor: CARD_STRONG, borderColor: CARD_BORDER, borderWidth: 1, borderRadius: 24, overflow: "hidden", paddingBottom: 16 },
+  heroCoverWrap: { height: 180, position: "relative" },
+  heroCoverImage: { width: "100%", height: "100%" },
+  heroCoverFallback: { width: "100%", height: "100%" },
+  coverAction: { position: "absolute", right: 12, bottom: 12, flexDirection: "row", alignItems: "center", gap: 6, backgroundColor: "rgba(0,0,0,0.35)", paddingHorizontal: 10, paddingVertical: 8, borderRadius: 12 },
+  coverActionText: { color: "#fff", fontWeight: "700" },
+  heroMainRow: { flexDirection: "row", gap: 14, paddingHorizontal: 16, marginTop: -28 },
+  avatarWrap: { position: "relative" },
+  avatarRing: { width: 88, height: 88, borderRadius: 44, padding: 3, alignItems: "center", justifyContent: "center" },
+  avatarImage: { width: 82, height: 82, borderRadius: 41 },
+  avatarFallback: { width: 82, height: 82, borderRadius: 41, backgroundColor: "rgba(12,20,38,0.95)", alignItems: "center", justifyContent: "center" },
+  avatarText: { color: TEXT, fontSize: 28, fontWeight: "900" },
+  avatarAction: { position: "absolute", right: -2, bottom: -2, width: 28, height: 28, borderRadius: 14, alignItems: "center", justifyContent: "center", backgroundColor: BLUE_2 },
+  heroTitle: { color: TEXT, fontSize: 22, fontWeight: "900", marginTop: 20 },
+  heroSubtitle: { color: MUTED, fontSize: 14, marginTop: 2 },
+  heroDescription: { color: MUTED, fontSize: 13, lineHeight: 18, marginTop: 8 },
+  heroChip: { padding: 12, borderWidth: 1, borderRadius: 16 },
+  heroChipValue: { color: TEXT, fontSize: 18, fontWeight: "900" },
+  heroChipLabel: { color: MUTED, fontSize: 12, marginTop: 4 },
+  tabsRow: { paddingVertical: 4, gap: 10 },
+  tabButton: { paddingHorizontal: 14, paddingVertical: 10, borderRadius: 999, backgroundColor: "rgba(255,255,255,0.08)", borderWidth: 1, borderColor: CARD_BORDER },
+  tabButtonActive: { backgroundColor: BLUE },
+  tabButtonText: { color: TEXT, fontWeight: "700" },
+  tabButtonTextActive: { color: "#fff" },
+  inputWrap: { gap: 8 },
+  inputLabel: { color: TEXT, fontSize: 13, fontWeight: "700" },
+  inputShell: { minHeight: 52, borderRadius: 16, borderWidth: 1, borderColor: CARD_BORDER, backgroundColor: "rgba(255,255,255,0.06)", paddingHorizontal: 12, flexDirection: "row", alignItems: "center" },
+  inputShellMultiline: { alignItems: "flex-start", paddingVertical: 12 },
+  inputPrefix: { color: MUTED, marginRight: 6 },
+  input: { flex: 1, color: TEXT, fontSize: 14, paddingVertical: 0 },
+  inputMultiline: { minHeight: 88, textAlignVertical: "top" },
+  formGrid: { flexDirection: "row", gap: 10 },
+  infoChip: { flexDirection: "row", alignItems: "center", gap: 8, backgroundColor: "rgba(255,255,255,0.08)", borderRadius: 14, borderWidth: 1, borderColor: CARD_BORDER, paddingHorizontal: 12, paddingVertical: 10 },
+  infoChipText: { color: MUTED, fontSize: 12, flex: 1 },
+  emptyWrap: { paddingVertical: 20, alignItems: "center", justifyContent: "center" },
+  emptyTitle: { color: TEXT, fontSize: 15, fontWeight: "700", textAlign: "center" },
+  emptyDescription: { color: MUTED, fontSize: 13, textAlign: "center", marginTop: 6 },
+  iconBubble: { width: 38, height: 38, borderRadius: 19, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.08)", marginRight: 10 },
+  quickActionCard: { backgroundColor: CARD, borderColor: CARD_BORDER, borderWidth: 1, borderRadius: 18, padding: 14, minHeight: 120 },
+  quickTitle: { color: TEXT, fontSize: 14, fontWeight: "800", marginTop: 10 },
+  quickSubtitle: { color: MUTED, fontSize: 12, lineHeight: 16, marginTop: 6 },
+  statCardWrap: { borderRadius: 18, padding: 1 },
+  statCardInner: { borderRadius: 17, backgroundColor: "rgba(7,12,24,0.94)", padding: 14 },
+  statCardValue: { color: TEXT, fontSize: 20, fontWeight: "900" },
+  statCardLabel: { color: MUTED, fontSize: 12, marginTop: 4 },
+  readOnlyCard: { backgroundColor: CARD, borderWidth: 1, borderColor: CARD_BORDER, borderRadius: 18, padding: 14, gap: 8 },
+  readOnlyTitle: { color: TEXT, fontSize: 14, fontWeight: "800", marginLeft: 8 },
+  readOnlyValue: { color: TEXT, fontSize: 24, fontWeight: "900" },
+  readOnlySubtitle: { color: MUTED, fontSize: 12, lineHeight: 16 },
+  inlineButton: { backgroundColor: CARD, borderWidth: 1, borderColor: CARD_BORDER, borderRadius: 18, padding: 14 },
+  inlineActionIcon: { width: 32, height: 32, borderRadius: 16, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.08)", marginRight: 10 },
+  inlineActionTitle: { color: TEXT, fontSize: 14, fontWeight: "800" },
+  inlineActionValue: { color: MUTED, fontSize: 12, marginTop: 3 },
+  mediaCard: { width: 150, backgroundColor: CARD, borderWidth: 1, borderColor: CARD_BORDER, borderRadius: 16, overflow: "hidden" },
+  mediaImage: { width: "100%", height: 130 },
+  mediaFooter: { padding: 10, flexDirection: "row", alignItems: "center", justifyContent: "space-between" },
+  mediaType: { color: TEXT, fontSize: 12, fontWeight: "700" },
+  removeText: { color: PINK, fontSize: 12, fontWeight: "800" },
+  addMediaCard: { width: 150, height: 178, borderRadius: 16, borderWidth: 1, borderStyle: "dashed", borderColor: CARD_BORDER, alignItems: "center", justifyContent: "center", gap: 8 },
+  addMediaText: { color: TEXT, fontWeight: "700" },
+  focusCard: { backgroundColor: "rgba(255,255,255,0.08)", borderWidth: 1, borderColor: CARD_BORDER, borderRadius: 16, padding: 14, flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginTop: 4 },
+  focusCardTitle: { color: TEXT, fontSize: 14, fontWeight: "800" },
+  focusCardSubtitle: { color: MUTED, fontSize: 12, marginTop: 4, maxWidth: 250 },
+  focusCardArrow: { color: TEXT, fontSize: 18, fontWeight: "900" },
+  toggleRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12, backgroundColor: "rgba(255,255,255,0.05)", borderRadius: 16, borderWidth: 1, borderColor: CARD_BORDER, padding: 12 },
+  toggleTitle: { color: TEXT, fontSize: 14, fontWeight: "800" },
+  toggleSubtitle: { color: MUTED, fontSize: 12, lineHeight: 16, marginTop: 2 },
+  chipsWrap: { flexDirection: "row", flexWrap: "wrap", gap: 10 },
+  timelineWrap: { gap: 0 },
+  timelineItem: { flexDirection: "row", alignItems: "center", paddingVertical: 12 },
+  timelineDivider: { borderBottomWidth: 1, borderBottomColor: "rgba(255,255,255,0.06)" },
+  timelineDotWrap: { width: 24, alignItems: "center" },
+  timelineDot: { width: 10, height: 10, borderRadius: 5 },
+  timelineTitle: { color: TEXT, fontSize: 14, fontWeight: "700" },
+  timelineSubtitle: { color: MUTED, fontSize: 12, marginTop: 2 },
+  timelineTime: { color: MUTED, fontSize: 12, marginLeft: 10 },
+  bottomBar: { position: "absolute", left: 0, right: 0, bottom: 0, padding: 16, backgroundColor: "rgba(8,12,22,0.94)", borderTopWidth: 1, borderTopColor: CARD_BORDER },
+  bottomActionsRow: { flexDirection: "row", gap: 10 },
+  secondaryButton: { minWidth: 110, borderRadius: 16, borderWidth: 1, borderColor: CARD_BORDER, alignItems: "center", justifyContent: "center", paddingHorizontal: 16, paddingVertical: 14, backgroundColor: "rgba(255,255,255,0.06)" },
+  secondaryButtonText: { color: TEXT, fontWeight: "800" },
+  primaryButton: { borderRadius: 16, overflow: "hidden" },
+  primaryButtonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, paddingHorizontal: 16, paddingVertical: 14 },
+  primaryButtonText: { color: "#fff", fontWeight: "800" },
+  createEntryButtonGradient: { flexDirection: "row", alignItems: "center", justifyContent: "center", gap: 8, paddingHorizontal: 16, paddingVertical: 14, borderRadius: 16 },
+  createEntryButtonText: { color: "#fff", fontWeight: "800" },
+  primaryActionShell: { borderRadius: 16, overflow: "hidden" },
+  buttonDisabled: { opacity: 0.55 },
+});

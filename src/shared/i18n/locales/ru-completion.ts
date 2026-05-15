@@ -1,0 +1,1241 @@
+export const RU_COMPLETION_LOCALE = {
+  "common": {
+    "error": "Ошибка"
+  },
+  "gameCenter": {
+    "foundation": {
+      "games": "Открыть игры",
+      "hero": {
+        "text": "Сетевые игры, награды, рейтинги и связи с Messenger/Stream. Без фальшивых достижений и фальшивых игроков.",
+        "title": "Основа игр"
+      },
+      "leaderboard": {
+        "title": "Рейтинги",
+        "value": "Хранение рейтинга запланировано без фальшивых баллов."
+      },
+      "lobby": {
+        "title": "Сетевое лобби",
+        "value": "Основа лобби готова. Для реального match-making требуется подключение provider."
+      },
+      "miniApps": "Mini Apps",
+      "policy": {
+        "title": "Политика наград"
+      },
+      "realtime": {
+        "title": "Realtime provider",
+        "value": "Без фальшивых онлайн-соперников. До интеграции показывается состояние provider required."
+      },
+      "rewards": {
+        "title": "Награды",
+        "value": "Для наград нужны маршрут Coin Wallet и admin/compliance hooks."
+      }
+    }
+  },
+  "messenger": {
+    "animatedEmoji": {
+      "celebration": "Праздник",
+      "empty": "В этом разделе ничего не найдено",
+      "faces": "Лица",
+      "hearts": "Сердца",
+      "search": "Поиск animated emoji",
+      "subtitle": "Premium emoji с полноэкранным воспроизведением 5 секунд",
+      "title": "Animated emoji"
+    },
+    "chat": {
+      "addContactName": "Имя",
+      "addContactNamePlaceholder": "Введите имя контакта",
+      "addContactPhone": "Телефон",
+      "addContactPhonePlaceholder": "Введите номер телефона",
+      "addContactSave": "Сохранить контакт",
+      "addContactSubtitle": "Сохраните контакт в Sabi Messenger или в контактах телефона.",
+      "addContactTitle": "Добавить контакт",
+      "addContactUsername": "Username",
+      "addContactUsernamePlaceholder": "Введите username",
+      "contactChooseSource": "Выберите источник контакта",
+      "contactNameRequired": "Нужно указать имя контакта.",
+      "contactSavedInContacts": "Контакт сохранён в контактах телефона.",
+      "contactSavedInMessenger": "Контакт сохранён в Sabi Messenger.",
+      "conversationHidden": "Переписка скрыта",
+      "linkEmpty": "Ссылка не выбрана",
+      "linkTitle": "Ссылка",
+      "mediaSavedToPhone": "Медиа сохранено на телефон.",
+      "mediaSavedToSabi": "Медиа сохранено в Sabi.",
+      "openContactInMessenger": "Открыть в Sabi Messenger",
+      "openContactInPhone": "Открыть в контактах телефона",
+      "phoneContactsSubtitle": "Выбор из контактов телефона",
+      "phoneContactsTitle": "Контакты телефона",
+      "sabiContactsSubtitle": "Выбор из контактов Sabi Messenger",
+      "sabiContactsTitle": "Контакты Sabi",
+      "saveMediaChooseTitle": "Куда сохранить медиа?",
+      "saveToPhone": "Телефон",
+      "saveToSabiApp": "Sabi App"
+    },
+    "report": "Жалоба",
+    "reportDetails": "Дополнительная причина",
+    "reportDetailsHint": "Это поможет модерации быстрее понять проблему.",
+    "reportDetailsPlaceholder": "Подробно опишите причину жалобы",
+    "reportMinDetails": "Опишите причину подробнее.",
+    "reportReasonList": "Причина жалобы",
+    "reportSent": "Жалоба отправлена",
+    "reportSubtitle": "Выберите причину жалобы. Если подходящей причины нет, напишите её вручную.",
+    "reportTarget": "Объект жалобы",
+    "reportTitle": "Отправить жалобу",
+    "reportValidation": "Выберите причину жалобы или напишите её вручную.",
+    "sendReport": "Отправить жалобу"
+  },
+  "privacyPolicyScreen": {
+    "paragraph1": "Sabi уважает конфиденциальность пользователей и защищает персональные данные. Мы можем собирать номер телефона, данные устройства, технические журналы и другую информацию, необходимую для регистрации, безопасности аккаунта, подтверждения личности, предотвращения мошенничества и улучшения сервиса.",
+    "paragraph2": "Ваши данные используются только для работы платформы, соблюдения законодательства, защиты транзакций, поддержки пользователей и развития функций SuperApp.",
+    "paragraph3": "Мы не раскрываем персональные данные третьим лицам без законных оснований, кроме случаев, когда это необходимо для оказания услуг, верификации, выполнения нормативных требований или защиты прав и безопасности пользователей и платформы.",
+    "paragraph4": "Используя Sabi, вы соглашаетесь на обработку данных в соответствии с этой политикой."
+  },
+  "profile": {
+    "autoDeleteScreen": {
+      "hero": {
+        "description": "Управляйте правилами автоматической очистки сообщений в чатах, группах и каналах.",
+        "title": "Автоматическое удаление"
+      },
+      "intro": {
+        "eyebrow": "ПРИВАТНОСТЬ",
+        "subtitle": "Настройте срок хранения сообщений для новых разговоров и каналов публикаций.",
+        "title": "Автоматическая очистка сообщений"
+      },
+      "note": {
+        "description": "Эта настройка применяется только к новым сообщениям и выбранным направлениям. Для важных данных может потребоваться отдельное подтверждение.",
+        "title": "Примечание"
+      },
+      "selectedBadge": "Выбранный срок",
+      "toggles": {
+        "channels": {
+          "description": "Применять автоматическую очистку для новых сообщений в каналах.",
+          "title": "Каналы"
+        },
+        "groups": {
+          "description": "Применять автоматическую очистку для новых сообщений в группах.",
+          "title": "Группы"
+        },
+        "newChats": {
+          "description": "Применять автоматическую очистку для новых личных чатов.",
+          "title": "Новые чаты"
+        }
+      }
+    },
+    "blockedScreen": {
+      "empty": {
+        "description": "Заблокированные пользователи появятся здесь.",
+        "title": "Заблокированных нет"
+      },
+      "hero": {
+        "description": "Просматривайте заблокированные аккаунты и снимайте блокировку при необходимости.",
+        "title": "Заблокированные аккаунты"
+      },
+      "intro": {
+        "eyebrow": "ПРИВАТНОСТЬ",
+        "subtitle": "Заблокированные пользователи не могут отправлять вам сообщения и получают ограниченный доступ к профилю.",
+        "title": "Список блокировок"
+      },
+      "metric": {
+        "title": "Заблокировано"
+      },
+      "person": {
+        "defaultNote": "Заблокированный контакт",
+        "unblockAction": "Разблокировать"
+      }
+    },
+    "businessUpgradeScreen": {
+      "cta": "cta",
+      "header": {
+        "backAction": "Назад",
+        "eyebrow": "БИЗНЕС-АККАУНТА",
+        "subtitle": "Управление разделом бизнес-аккаунта.",
+        "title": "Раздел бизнес-аккаунта"
+      },
+      "hero": {
+        "description": "Настройки и информация для раздела бизнес-аккаунта.",
+        "launchBadge": "launch Бейдж",
+        "title": "Раздел бизнес-аккаунта"
+      },
+      "sections": {
+        "features": "features",
+        "plans": "plans"
+      }
+    },
+    "colorsScreen": {
+      "alerts": {
+        "savedDescription": "saved Описание",
+        "savedTitle": "saved Заголовок"
+      },
+      "footer": {
+        "action": "Продолжить",
+        "description": "Настройки и информация для раздела темы и рамок профиля.",
+        "title": "Раздел темы и рамок профиля"
+      },
+      "header": {
+        "title": "Раздел темы и рамок профиля"
+      },
+      "intro": {
+        "eyebrow": "ТЕМЫ И РАМОК ПРОФИЛЯ",
+        "subtitle": "Управление разделом темы и рамок профиля.",
+        "title": "Раздел темы и рамок профиля"
+      },
+      "notice": {
+        "description": "Настройки и информация для раздела темы и рамок профиля.",
+        "title": "Раздел темы и рамок профиля"
+      },
+      "preview": {
+        "bio": "bio",
+        "ownerThemeBadge": "Тема владельца",
+        "quickPills": {
+          "aiIdentity": "AI-идентичность",
+          "premium": "Premium",
+          "profileSurface": "Слой профиля"
+        },
+        "stats": {
+          "frame": "Рамка",
+          "theme": "Тема"
+        }
+      },
+      "sections": {
+        "avatarFrames": "Аватар Рамки",
+        "themePresets": "Тема presets"
+      },
+      "themes": {
+        "aiNeon": {
+          "badge": "Бейдж",
+          "subtitle": "Управление разделом темы и рамок профиля.",
+          "title": "Раздел темы и рамок профиля"
+        },
+        "emeraldGlass": {
+          "badge": "Бейдж",
+          "subtitle": "Управление разделом темы и рамок профиля.",
+          "title": "Раздел темы и рамок профиля"
+        },
+        "midnightViolet": {
+          "badge": "Бейдж",
+          "subtitle": "Управление разделом темы и рамок профиля.",
+          "title": "Раздел темы и рамок профиля"
+        },
+        "royalAurora": {
+          "badge": "Бейдж",
+          "subtitle": "Управление разделом темы и рамок профиля.",
+          "title": "Раздел темы и рамок профиля"
+        },
+        "sunsetRose": {
+          "badge": "Бейдж",
+          "subtitle": "Управление разделом темы и рамок профиля.",
+          "title": "Раздел темы и рамок профиля"
+        }
+      }
+    },
+    "completeScreen": {
+      "badge": "НАСТРОЙКА ПРОФИЛЯ",
+      "firstName": "Имя",
+      "lastName": "Фамилия",
+      "phone": "Подтверждённый номер",
+      "privacy": "После активации этот единый ID должен оставаться одинаковым во всех модулях.",
+      "required": "Заполните все поля правильно, чтобы продолжить",
+      "saveErrorMessage": "Не удалось сохранить данные профиля. Попробуйте снова.",
+      "saveErrorTitle": "Ошибка сохранения",
+      "saving": "Сохранение...",
+      "subtitle": "Введите имя и фамилию. Username и единый ID будут созданы автоматически.",
+      "title": "Завершите профиль",
+      "unifiedId": "Единый User ID",
+      "unifiedIdHint": "Это будет основной ID для Wallet, Messenger и всего аккаунта.",
+      "username": "Username",
+      "usernameHint": "Username создаётся на основе имени, но его можно изменить вручную."
+    },
+    "creditsScreen": {
+      "balance": {
+        "actions": {
+          "giftCenter": "gift center",
+          "statistics": "statistics",
+          "topUp": "top up"
+        },
+        "label": "Поле кредитов"
+      },
+      "header": {
+        "backAction": "Назад",
+        "eyebrow": "КРЕДИТОВ",
+        "subtitle": "Управление разделом кредитов.",
+        "title": "Раздел кредитов"
+      },
+      "tabs": {
+        "all": "Все",
+        "incoming": "Входящие",
+        "outgoing": "Исходящие"
+      }
+    },
+    "dataManagementScreen": {
+      "actions": {
+        "clearCache": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "requestExport": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "reviewDrafts": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        }
+      },
+      "discovery": {
+        "memoryControls": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "searchSuggestions": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "syncContacts": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        }
+      },
+      "hero": {
+        "description": "Настройки и информация для раздела управления данными.",
+        "title": "Раздел управления данными"
+      },
+      "intro": {
+        "eyebrow": "УПРАВЛЕНИЯ ДАННЫМИ",
+        "subtitle": "Управление разделом управления данными.",
+        "title": "Раздел управления данными"
+      },
+      "links": {
+        "privacy": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "support": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        }
+      },
+      "metrics": {
+        "contactsSync": "contacts sync",
+        "draftBackup": "draft backup",
+        "privateExport": "private export"
+      },
+      "metricStates": {
+        "off": "off",
+        "on": "on"
+      },
+      "note": {
+        "description": "Настройки и информация для раздела управления данными.",
+        "title": "Раздел управления данными"
+      },
+      "retention": {
+        "autoCleanup": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        }
+      },
+      "sections": {
+        "discovery": "discovery",
+        "retention": "retention",
+        "storage": "storage"
+      },
+      "storage": {
+        "draftBackup": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "paymentHints": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        },
+        "privateExportMode": {
+          "description": "Настройки и информация для раздела управления данными.",
+          "title": "Раздел управления данными"
+        }
+      }
+    },
+    "editScreen": {
+      "header": {
+        "title": "Раздел редактирования профиля",
+        "viewAction": "Просмотр"
+      },
+      "hero": {
+        "aiLinkedBadge": "AI linked Бейдж",
+        "changeAvatarAction": "change Аватар Действие",
+        "editModeBadge": "edit mode Бейдж",
+        "quickActions": {
+          "photos": "Фото",
+          "public": "Публичный профиль",
+          "videos": "Видео",
+          "voice": "Голос"
+        },
+        "subtitle": "Управление разделом редактирования профиля."
+      },
+      "identity": {
+        "birthday": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "email": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "language": {
+          "badge": "Бейдж",
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "phone": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "photos": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "username": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "videos": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "voice": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        }
+      },
+      "intro": {
+        "eyebrow": "РЕДАКТИРОВАНИЯ ПРОФИЛЯ",
+        "subtitle": "Управление разделом редактирования профиля.",
+        "title": "Раздел редактирования профиля"
+      },
+      "presentation": {
+        "ai": {
+          "badge": "Бейдж",
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "colors": {
+          "badge": "Бейдж",
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "public": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "qr": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        }
+      },
+      "safety": {
+        "privacy": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "security": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        },
+        "verification": {
+          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Раздел редактирования профиля"
+        }
+      },
+      "sections": {
+        "identity": "Идентичность",
+        "presentation": "presentation",
+        "safety": "safety"
+      }
+    },
+    "giftsScreen": {
+      "common": {
+        "diamonds": "diamonds"
+      },
+      "footer": {
+        "action": "Продолжить",
+        "description": "Настройки и информация для раздела подарков профиля.",
+        "title": "Раздел подарков профиля"
+      },
+      "header": {
+        "openAction": "Открыть",
+        "title": "Раздел подарков профиля"
+      },
+      "hero": {
+        "actions": {
+          "credits": "credits",
+          "premium": "Premium",
+          "public": "Публичный профиль",
+          "theme": "Тема"
+        },
+        "badges": {
+          "identity": "Идентичность",
+          "unifiedIdBound": "unified id bound"
+        },
+        "stats": {
+          "diamonds": "diamonds",
+          "owner": "Владелец",
+          "status": "status"
+        }
+      },
+      "intro": {
+        "eyebrow": "ПОДАРКОВ ПРОФИЛЯ",
+        "subtitle": "Управление разделом подарков профиля.",
+        "title": "Раздел подарков профиля"
+      },
+      "notice": {
+        "description": "Настройки и информация для раздела подарков профиля.",
+        "title": "Раздел подарков профиля"
+      },
+      "tabs": {
+        "history": "История",
+        "inventory": "Инвентарь",
+        "received": "Полученные"
+      }
+    },
+    "giftsSection": {
+      "subtitle": "Управление разделом подарков профиля.",
+      "title": "Раздел подарков профиля"
+    },
+    "hub": {
+      "eyebrow": "ЦЕНТРА ПРОФИЛЯ"
+    },
+    "identityDetail": {
+      "birthday": {
+        "day": "day",
+        "dayPlaceholder": "day Поле ввода",
+        "month": "month",
+        "monthPlaceholder": "month Поле ввода",
+        "noteText": "Примечание Текст",
+        "noteTitle": "Примечание Заголовок",
+        "year": "year",
+        "yearPlaceholder": "year Поле ввода"
+      },
+      "channel": {
+        "fieldLabel": "Поле Метка",
+        "noteText": "Примечание Текст",
+        "noteTitle": "Примечание Заголовок",
+        "placeholder": "Введите данные для раздела деталей профиля"
+      },
+      "colors": {
+        "noteText": "Примечание Текст",
+        "noteTitle": "Примечание Заголовок",
+        "presets": {
+          "blue": "blue",
+          "emerald": "emerald",
+          "gold": "gold",
+          "purple": "purple",
+          "teal": "teal"
+        },
+        "previewTitle": "preview Заголовок"
+      },
+      "modes": {
+        "birthday": {
+          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
+          "subtitle": "Управление разделом деталей профиля.",
+          "title": "Раздел деталей профиля"
+        },
+        "channel": {
+          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
+          "subtitle": "Управление разделом деталей профиля.",
+          "title": "Раздел деталей профиля"
+        },
+        "colors": {
+          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
+          "subtitle": "Управление разделом деталей профиля.",
+          "title": "Раздел деталей профиля"
+        },
+        "phone": {
+          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
+          "subtitle": "Управление разделом деталей профиля.",
+          "title": "Раздел деталей профиля"
+        },
+        "username": {
+          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
+          "subtitle": "Управление разделом деталей профиля.",
+          "title": "Раздел деталей профиля"
+        }
+      },
+      "phone": {
+        "fieldLabel": "Поле Метка",
+        "noteText": "Примечание Текст",
+        "noteTitle": "Примечание Заголовок",
+        "placeholder": "Введите данные для раздела деталей профиля"
+      },
+      "username": {
+        "fieldLabel": "Поле Метка",
+        "noteText": "Примечание Текст",
+        "noteTitle": "Примечание Заголовок",
+        "placeholder": "Введите данные для раздела деталей профиля"
+      }
+    },
+    "likesScreen": {
+      "actions": {
+        "fromUsers": "from users"
+      },
+      "card": {
+        "subtitle": "Управление разделом лайков профиля.",
+        "title": "Раздел лайков профиля"
+      },
+      "empty": {
+        "description": "Настройки и информация для раздела лайков профиля.",
+        "title": "Раздел лайков профиля"
+      },
+      "header": {
+        "title": "Раздел лайков профиля"
+      },
+      "notes": {
+        "nonEmptyDescription": "non Пустое состояние Описание",
+        "readonlyDescription": "readonly Описание",
+        "readonlyTitle": "readonly Заголовок",
+        "sourceDescription": "source Описание",
+        "sourceTitle": "source Заголовок"
+      }
+    },
+    "linksScreen": {
+      "card": {
+        "subtitle": "Управление разделом ссылок профиля.",
+        "title": "Раздел ссылок профиля"
+      },
+      "empty": {
+        "description": "Настройки и информация для раздела ссылок профиля.",
+        "title": "Раздел ссылок профиля"
+      },
+      "form": {
+        "labelPlaceholder": "Метка Поле ввода",
+        "urlPlaceholder": "url Поле ввода"
+      },
+      "header": {
+        "title": "Раздел ссылок профиля"
+      }
+    },
+    "loginEmailScreen": {
+      "field": {
+        "label": "Поле email для входа",
+        "placeholder": "Введите данные для раздела email для входа"
+      },
+      "hero": {
+        "description": "Настройки и информация для раздела email для входа.",
+        "title": "Раздел email для входа"
+      },
+      "intro": {
+        "eyebrow": "EMAIL ДЛЯ ВХОДА",
+        "subtitle": "Управление разделом email для входа.",
+        "title": "Раздел email для входа"
+      },
+      "note": {
+        "description": "Настройки и информация для раздела email для входа.",
+        "title": "Раздел email для входа"
+      },
+      "toggles": {
+        "currentVerification": {
+          "description": "Настройки и информация для раздела email для входа.",
+          "title": "Раздел email для входа"
+        },
+        "newVerification": {
+          "description": "Настройки и информация для раздела email для входа.",
+          "title": "Раздел email для входа"
+        }
+      }
+    },
+    "mediaScreen": {
+      "card": {
+        "subtitle": "Управление разделом медиа профиля.",
+        "title": "Раздел медиа профиля"
+      },
+      "header": {
+        "title": "Раздел медиа профиля"
+      },
+      "routes": {
+        "links": {
+          "subtitle": "Управление разделом медиа профиля.",
+          "title": "Раздел медиа профиля"
+        },
+        "photos": {
+          "subtitle": "Управление разделом медиа профиля.",
+          "title": "Раздел медиа профиля"
+        },
+        "shortVideos": {
+          "subtitle": "Управление разделом медиа профиля.",
+          "title": "Раздел медиа профиля"
+        },
+        "voice": {
+          "subtitle": "Управление разделом медиа профиля.",
+          "title": "Раздел медиа профиля"
+        }
+      }
+    },
+    "photosScreen": {
+      "actions": {
+        "cameraFx": "camera fx",
+        "gallery": "gallery"
+      },
+      "alerts": {
+        "permissionMessage": "permission message",
+        "permissionTitle": "permission Заголовок"
+      },
+      "badges": {
+        "avatar": "Аватар"
+      },
+      "card": {
+        "subtitle": "Управление разделом фотографий профиля.",
+        "title": "Раздел фотографий профиля"
+      },
+      "empty": {
+        "description": "Настройки и информация для раздела фотографий профиля.",
+        "title": "Раздел фотографий профиля"
+      },
+      "filters": {
+        "cool": "cool",
+        "emerald": "emerald",
+        "mono": "mono",
+        "none": "none",
+        "warm": "warm"
+      },
+      "header": {
+        "title": "Раздел фотографий профиля"
+      },
+      "modal": {
+        "actions": {
+          "delete": "delete",
+          "setAvatar": "set Аватар"
+        },
+        "editor": {
+          "left": "left",
+          "mirrorX": "mirror x",
+          "mirrorY": "mirror y",
+          "right": "right"
+        }
+      }
+    },
+    "preferencesScreen": {
+      "intro": {
+        "eyebrow": "НАСТРОЕК ПРОФИЛЯ",
+        "subtitle": "Управление разделом настроек профиля.",
+        "title": "Раздел настроек профиля"
+      },
+      "language": {
+        "description": "Настройки и информация для раздела настроек профиля.",
+        "title": "Раздел настроек профиля"
+      },
+      "links": {
+        "language": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        },
+        "notifications": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        }
+      },
+      "metrics": {
+        "compact": "compact",
+        "haptics": "haptics",
+        "sound": "sound"
+      },
+      "note": {
+        "description": "Настройки и информация для раздела настроек профиля.",
+        "title": "Раздел настроек профиля"
+      },
+      "sections": {
+        "interaction": "interaction",
+        "localization": "localization",
+        "presentation": "presentation"
+      },
+      "toggles": {
+        "compact": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        },
+        "haptics": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        },
+        "preview": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        },
+        "smartInsights": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        },
+        "sound": {
+          "description": "Настройки и информация для раздела настроек профиля.",
+          "title": "Раздел настроек профиля"
+        }
+      }
+    },
+    "premiumScreen": {
+      "features": {
+        "ai": {
+          "subtitle": "Управление разделом профиля.",
+          "title": "Раздел профиля"
+        },
+        "frames": {
+          "subtitle": "Управление разделом профиля.",
+          "title": "Раздел профиля"
+        },
+        "gifts": {
+          "subtitle": "Управление разделом профиля.",
+          "title": "Раздел профиля"
+        },
+        "themes": {
+          "subtitle": "Управление разделом профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "footer": {
+        "action": "Продолжить",
+        "description": "Настройки и информация для раздела профиля.",
+        "title": "Раздел профиля"
+      },
+      "header": {
+        "openAction": "Открыть",
+        "title": "Раздел профиля"
+      },
+      "hero": {
+        "actions": {
+          "ai": "AI",
+          "gifts": "gifts",
+          "public": "Публичный профиль",
+          "themes": "Темы"
+        },
+        "badges": {
+          "identity": "Идентичность",
+          "ownerSurface": "Владелец surface"
+        },
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "identityCard": {
+        "description": "Настройки и информация для раздела профиля.",
+        "title": "Раздел профиля"
+      },
+      "intro": {
+        "eyebrow": "ПРОФИЛЯ",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "notice": {
+        "description": "Настройки и информация для раздела профиля.",
+        "title": "Раздел профиля"
+      },
+      "rows": {
+        "ai": {
+          "badge": "Бейдж",
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "business": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "colors": {
+          "badge": "Бейдж",
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "credits": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "gifts": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "public": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "qr": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "sections": {
+        "controls": "controls",
+        "unlocks": "unlocks"
+      }
+    },
+    "privacyDetailScreen": {
+      "defaults": {
+        "eyebrow": "ПРОФИЛЯ"
+      },
+      "exceptions": {
+        "title": "Раздел профиля"
+      },
+      "lockedHelper": "locked helper",
+      "notes": {
+        "title": "Раздел профиля"
+      },
+      "notFound": {
+        "backAction": "Назад",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "premium": {
+        "eyebrow": "ПРОФИЛЯ"
+      },
+      "preview": {
+        "forwardedFrom": "forwarded from"
+      }
+    },
+    "privacyScreen": {
+      "intro": {
+        "eyebrow": "ПРОФИЛЯ",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "sections": {
+        "securityAccess": "Безопасность access",
+        "visibilityCommunication": "visibility communication"
+      }
+    },
+    "publicScreen": {
+      "editor": {
+        "bio": "bio",
+        "name": "name",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля",
+        "username": "Username"
+      },
+      "fallback": {
+        "bio": "bio",
+        "subtitle": "Управление разделом профиля."
+      },
+      "header": {
+        "title": "Раздел профиля"
+      },
+      "hero": {
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "rows": {
+        "photos": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "videos": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "sections": {
+        "manage": "manage",
+        "metrics": "Метрики"
+      }
+    },
+    "reactionsScreen": {
+      "card": {
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "header": {
+        "title": "Раздел профиля"
+      }
+    },
+    "securityScreen": {
+      "common": {
+        "notRequired": "not required",
+        "required": "Обязательно"
+      },
+      "emailFlow": {
+        "currentEmail": "current Email {{value}}",
+        "currentVerification": "current Верификация {{value}}",
+        "newVerification": "new Верификация {{value}}",
+        "title": "Раздел профиля"
+      },
+      "identityChange": {
+        "emailFaceId": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "fallbackPin": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "phoneFaceId": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "intro": {
+        "eyebrow": "ПРОФИЛЯ",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "links": {
+        "devices": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "mainProtection": {
+        "appPin": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "biometric": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "twoFactor": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "metrics": {
+        "appPin": "app pin",
+        "biometric": "biometric",
+        "twoFactor": "two factor"
+      },
+      "phoneFlow": {
+        "currentPhone": "current Телефон {{value}}",
+        "newVerification": "new Верификация {{value}}",
+        "oldVerification": "old Верификация {{value}}",
+        "title": "Раздел профиля"
+      },
+      "sections": {
+        "identityChangeProtection": "Идентичность change protection",
+        "mainProtection": "main protection",
+        "sensitiveActions": "sensitive Действия"
+      },
+      "sensitiveActions": {
+        "confirmation": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "suspiciousAlerts": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "trustedAlerts": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      }
+    },
+    "shortVideosScreen": {
+      "actions": {
+        "add": "add"
+      },
+      "alerts": {
+        "permission": {
+          "message": "message",
+          "title": "Раздел профиля"
+        }
+      },
+      "card": {
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "empty": {
+        "description": "Настройки и информация для раздела профиля.",
+        "title": "Раздел профиля"
+      },
+      "header": {
+        "title": "Раздел профиля"
+      },
+      "item": {
+        "title": "Раздел профиля"
+      },
+      "modal": {
+        "remove": "remove"
+      }
+    },
+    "supportScreen": {
+      "hero": {
+        "description": "Настройки и информация для раздела профиля.",
+        "title": "Раздел профиля"
+      },
+      "intro": {
+        "eyebrow": "ПРОФИЛЯ",
+        "subtitle": "Управление разделом профиля.",
+        "title": "Раздел профиля"
+      },
+      "notes": {
+        "legalTrust": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        },
+        "premiumFoundation": {
+          "description": "Настройки и информация для раздела профиля.",
+          "title": "Раздел профиля"
+        }
+      },
+      "sections": {
+        "links": "Ссылки"
+      }
+    },
+    "trustedScreen": {
+      "actions": {
+        "block": "block",
+        "restore": "restore"
+      },
+      "badges": {
+        "blocked": "Заблокированные",
+        "trusted": "Доверенные"
+      },
+      "empty": {
+        "blocked": {
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "title": "Раздел доверенных и заблокированных контактов"
+        },
+        "trusted": {
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "title": "Раздел доверенных и заблокированных контактов"
+        }
+      },
+      "hero": {
+        "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+        "title": "Раздел доверенных и заблокированных контактов"
+      },
+      "intro": {
+        "eyebrow": "ДОВЕРЕННЫХ И ЗАБЛОКИРОВАННЫХ КОНТАКТОВ",
+        "subtitle": "Управление разделом доверенных и заблокированных контактов.",
+        "title": "Раздел доверенных и заблокированных контактов"
+      },
+      "links": {
+        "blockedOnly": {
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "title": "Раздел доверенных и заблокированных контактов"
+        },
+        "privacyCenter": {
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "title": "Раздел доверенных и заблокированных контактов"
+        }
+      },
+      "metrics": {
+        "blocked": "Заблокированные",
+        "totalRules": "Всего правил",
+        "trusted": "Доверенные"
+      },
+      "notes": {
+        "genericBlocked": "generic Заблокированные",
+        "genericTrusted": "generic Доверенные",
+        "movedFromTrusted": "moved from Доверенные",
+        "restoredFromBlocked": "restored from Заблокированные"
+      },
+      "sections": {
+        "blocked": "Заблокированные",
+        "trusted": "Доверенные"
+      }
+    },
+    "verificationScreen": {
+      "checks": {
+        "address": "Адрес",
+        "email": "Email",
+        "liveness": "Liveness",
+        "phone": "Телефон"
+      },
+      "common": {
+        "pending": "Ожидает",
+        "unknown": "Неизвестно",
+        "verified": "Подтверждено"
+      },
+      "complianceState": {
+        "label": "Комплаенс: {{value}}",
+        "noRestrictions": "Активных ограничений пока нет.",
+        "restrictedIntro": "Следующие действия сейчас ограничены или находятся под наблюдением:",
+        "reverificationRequired": "Перед некоторыми расширенными действиями требуется повторная верификация.",
+        "sourceOfFundsRequested": "Запрошена информация об источнике средств."
+      },
+      "documents": {
+        "updatedAt": "Обновлено: {{value}}"
+      },
+      "hero": {
+        "residencyCountry": "Страна проживания: {{value}}",
+        "reviewReason": "Примечание проверки: {{value}}"
+      },
+      "intro": {
+        "eyebrow": "ПОДТВЕРЖДЕНИЕ ИДЕНТИЧНОСТИ",
+        "subtitle": "Отслеживайте подтверждение профиля, комплаенс-статус, документы и проверки идентичности в одном слое.",
+        "title": "Верификация"
+      },
+      "metrics": {
+        "email": "Email",
+        "liveness": "Liveness",
+        "phone": "Телефон"
+      },
+      "sections": {
+        "checks": "Проверки",
+        "compliance": "Комплаенс",
+        "documents": "Документы"
+      }
+    },
+    "voiceScreen": {
+      "actions": {
+        "record": "Записать",
+        "stop": "Остановить"
+      },
+      "alerts": {
+        "permission": {
+          "message": "Разрешите доступ к микрофону.",
+          "title": "Разрешение микрофона"
+        },
+        "recordFailed": "Не удалось записать голос."
+      },
+      "card": {
+        "subtitle": "Голосовые заметки теперь подключены к реальной записи, сохранению и воспроизведению.",
+        "title": "Голосовые заметки"
+      },
+      "header": {
+        "title": "Голос"
+      },
+      "item": {
+        "title": "Голосовая заметка"
+      }
+    }
+  },
+  "sabiMessengerChannelMenu": {
+    "channelAddedToChats": "Канал добавлен в чаты",
+    "channelBotMissing": "Бот канала отсутствует",
+    "channelInviteMissing": "Ссылка приглашения канала ещё не готова",
+    "channelShareReady": "Канал отправлен"
+  },
+  "sabiMessengerGroupMenu": {
+    "groupAddMember": "Добавить участника",
+    "groupInviteMissing": "Ссылка приглашения ещё не готова",
+    "groupInviteReady": "Ссылка приглашения",
+    "groupShareReady": "Группа отправлена"
+  },
+  "stories": {
+    "actions": {
+      "add": "Добавить"
+    },
+    "empty": {
+      "action": "Открыть профиль",
+      "text": "Добавьте публичные фото или короткие видео внутри профиля. Здесь отображаются только выбранные публичные медиа.",
+      "title": "Публичных stories пока нет"
+    },
+    "header": {
+      "title": "Stories"
+    },
+    "hero": {
+      "subtitle": "Фото и короткие видео из публичного профиля показываются здесь без чёрного экрана.",
+      "title": "Публичные stories"
+    },
+    "kind": {
+      "photo": "Фото",
+      "video": "Видео"
+    },
+    "photo": {
+      "unavailable": {
+        "title": "Фото недоступно"
+      }
+    },
+    "preview": {
+      "photo": "Фото",
+      "video": "Видео"
+    },
+    "video": {
+      "unavailable": {
+        "text": "У этого видео пока нет загруженного публичного файла, поэтому его нельзя воспроизвести на другом устройстве.",
+        "title": "Видео недоступно"
+      }
+    }
+  }
+} as const;
+
+export default RU_COMPLETION_LOCALE;
