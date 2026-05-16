@@ -1545,6 +1545,33 @@ const [phase, setPhase] = useState<StandardCallPhase>(
     return () => clearTimeout(timer);
   }, [finishLocal, phase, route.callId, route.incoming, standardRuntimeBlocked]);
 
+  useEffect(() => {
+    // SABI_DIRECT_CALLER_PREWARM_MEDIA:
+    // For 1:1 outgoing calls prepare RTCPeerConnection + local mic/camera while ringing.
+    // The offer is still sent only after remote accept, but startCaller no longer waits
+    // for getUserMedia at accept time.
+    if (standardRuntimeBlocked) return;
+    if (route.incoming) return;
+    if (parsedGroupCallRoute || isInvitedGroupParticipantRoute) return;
+    if (acceptedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+
+    void ensurePeer()
+      .prepareCallee()
+      .catch((error) => {
+        callDebug("caller:prewarm:error", {
+          message: error instanceof Error ? error.message : String(error),
+        });
+      });
+  }, [
+    callDebug,
+    ensurePeer,
+    isInvitedGroupParticipantRoute,
+    parsedGroupCallRoute,
+    route.callId,
+    route.incoming,
+    standardRuntimeBlocked,
+  ]);
+
   const accept = useCallback(() => {
     const isGroupInviteAccept = isInvitedGroupParticipantRoute;
 
@@ -1880,6 +1907,39 @@ const [phase, setPhase] = useState<StandardCallPhase>(
         !isExplicitSabiGroupPayload(payload) &&
         !isSabiExplicitDirectEndReason(payload)
       ) {
+        return;
+      }
+
+      const remoteEndText = getSabiCallPayloadEvent(payload).toLowerCase();
+      const softTimeoutEnd =
+        remoteEndText.includes("missed") ||
+        remoteEndText.includes("no_answer") ||
+        remoteEndText.includes("timeout");
+      const explicitUserEnd =
+        remoteEndText.includes("decline") ||
+        remoteEndText.includes("declined") ||
+        remoteEndText.includes("hangup") ||
+        remoteEndText.includes("hang_up") ||
+        remoteEndText.includes("cancel") ||
+        remoteEndText.includes("cancelled") ||
+        remoteEndText.includes("busy");
+
+      // SABI_DIRECT_IGNORE_ACCEPTED_SOFT_TIMEOUT:
+      // Backend/no-answer watchdogs can arrive while WebRTC is still ICE checking.
+      // After a 1:1 call is accepted, ignore only soft timeout/missed/no_answer ends.
+      // Explicit user actions still close the call.
+      if (
+        !standardRuntimeBlocked &&
+        !parsedGroupCallRoute &&
+        acceptedRef.current &&
+        phase !== "ended" &&
+        softTimeoutEnd &&
+        !explicitUserEnd
+      ) {
+        callDebug("end:ignored_accepted_soft_timeout", {
+          event: remoteEndText,
+          phase,
+        });
         return;
       }
 
