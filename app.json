@@ -45,7 +45,41 @@
     },
     "plugins": [
       "expo-router",
-      "expo-notifications",
+      [
+        "expo-notifications",
+        {
+          "sounds": [
+            "./assets/sounds/sabi_call_neon.wav",
+            "./assets/sounds/sabi_call_premium.wav",
+            "./assets/sounds/sabi_call_soft.wav",
+            "./assets/sounds/sabi_call_digital.wav",
+            "./assets/sounds/sabi_call_skyline.wav",
+            "./assets/sounds/sabi_call_ocean.wav",
+            "./assets/sounds/sabi_call_crystal.wav",
+            "./assets/sounds/sabi_call_lux.wav",
+            "./assets/sounds/sabi_call_night.wav",
+            "./assets/sounds/sabi_call_minimal.wav",
+            "./assets/sounds/sabi_msg_clean.wav",
+            "./assets/sounds/sabi_msg_soft.wav",
+            "./assets/sounds/sabi_msg_glass.wav",
+            "./assets/sounds/sabi_msg_pop.wav",
+            "./assets/sounds/sabi_msg_air.wav",
+            "./assets/sounds/sabi_msg_pixel.wav",
+            "./assets/sounds/sabi_msg_drop.wav",
+            "./assets/sounds/sabi_msg_bell.wav",
+            "./assets/sounds/sabi_msg_swipe.wav",
+            "./assets/sounds/sabi_msg_tap.wav",
+            "./assets/sounds/sabi_wallet_confirm.wav",
+            "./assets/sounds/sabi_wallet_alert.wav",
+            "./assets/sounds/sabi_market_alert.wav",
+            "./assets/sounds/sabi_market_soft.wav",
+            "./assets/sounds/sabi_ai_ping.wav",
+            "./assets/sounds/sabi_ai_soft.wav",
+            "./assets/sounds/sabi_system_notice.wav",
+            "./assets/sounds/sabi_system_soft.wav"
+          ]
+        }
+      ],
       [
         "expo-splash-screen",
         {

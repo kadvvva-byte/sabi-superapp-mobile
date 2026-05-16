@@ -13,7 +13,7 @@ import {
 
 let sabiCallNotificationHandlerInstalled = false;
 
-const SABI_INCOMING_CALL_CHANNEL_ID = "sabi_incoming_calls_v2";
+const SABI_INCOMING_CALL_CHANNEL_ID = "sabi_calls_neon_v1";
 const SABI_INCOMING_CALL_CATEGORY_ID = "sabi_incoming_call";
 const SABI_CALL_ACCEPT_ACTION_ID = "sabi_call_accept";
 const SABI_CALL_DECLINE_ACTION_ID = "sabi_call_decline";
@@ -74,7 +74,7 @@ async function ensureSabiCallAndroidChannel() {
   await Notifications.setNotificationChannelAsync(SABI_INCOMING_CALL_CHANNEL_ID, {
     name: "Sabi Incoming Calls",
     importance: Notifications.AndroidImportance.MAX,
-    sound: "default",
+    sound: "sabi_call_neon.wav",
     vibrationPattern: [0, 700, 300, 700, 300, 700],
     enableVibrate: true,
     showBadge: true,
@@ -371,6 +371,8 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
+
 
 
 
