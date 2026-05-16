@@ -1,3 +1,4 @@
+import { resolveSabiCallIceServers, summarizeSabiCallIceServersForDebug } from "./callIceServers";
 import { Audio } from "expo-av";
 import {
   RTCPeerConnection,
@@ -833,12 +834,14 @@ export function createStandardCallPeer(options: {
     if (closed) throw new Error("peer_closed");
     if (pc) return pc;
 
+    const iceServers = await resolveSabiCallIceServers();
+
     const nextPc: any = new RTCPeerConnection({
-      iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
+      iceServers,
     } as any);
 
     pc = nextPc;
-    debug("peer:created", { iceServers: "stun:stun.l.google.com:19302" });
+    debug("peer:created", { iceServers: summarizeSabiCallIceServersForDebug(iceServers) });
 
     nextPc.onicecandidate = (event: any) => {
       if (closed || !event?.candidate) return;
