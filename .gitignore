@@ -83,3 +83,11 @@ VERIFY_LOG.txt
 LOCATION-*.txt
 
 fcm-service-account.json
+
+android-keys/
+*.keystore
+*.jks
+
+android-keys/
+*.keystore
+*.jks
