@@ -27,10 +27,10 @@ type AuthSession = {
   currentUserId: string | null;
 };
 
-const AI_MOBILE_API_VERSION = "AI-34" as const;
+const AI_MOBILE_API_VERSION = "AI-115.1" as const;
 
 const AI_PROVIDER_GATEWAY_ROUTES = {
-  textTranslation: "/api/ai/provider-gateway/translation/text",
+  textTranslation: "/api/ai/translation/realtime/text",
   imageTranslation: "/api/ai/provider-gateway/translation/image",
   manifest: "/api/ai/provider-gateway/manifest",
   health: "/api/ai/provider-gateway/health",
@@ -392,6 +392,33 @@ async function requestAiMobile<T>(
         error instanceof Error ? error.message : String(error ?? "network error"),
       ),
     };
+  }
+}
+
+async function ensureAiMobileTranslationConsent(): Promise<void> {
+  const session = getAiMobileAuthSession();
+
+  if (!session?.currentUserId) return;
+
+  const result = await requestAiMobile<Record<string, unknown>>(
+    `/api/ai/consent/${encodeURIComponent(session.currentUserId)}`,
+    {
+      method: "PATCH",
+      body: JSON.stringify({
+        actorType: "user",
+        reason: "mobile_explicit_ai_translation_consent",
+        consent: {
+          readAccessAllowed: true,
+          toolExecutionAllowed: true,
+          internetSearchAllowed: true,
+          memoryWriteAllowed: false,
+        },
+      }),
+    },
+  );
+
+  if (!result.ok) {
+    console.warn("[sabi-ai:translation] consent sync skipped", result.error.code, result.error.message);
   }
 }
 
@@ -950,11 +977,9 @@ export const aiMobileApi = {
         locale: getAppLanguage(),
         source: input.source ?? "text",
         preferredMode: mapAssistantModeToFoundationMode(input.assistantMode),
-        preferredProvider:
-          input.providerHint === "google_search" || input.providerHint === "google_translate"
-            ? "google"
-            : "openai",
-        providerHint: mapProviderHint(input.providerHint),
+        preferredProvider: "yandex",
+        providerHint: "yandex_gpt",
+
         webSearchEnabled: Boolean(input.webSearchEnabled),
         voiceControlEnabled: Boolean(input.voiceOutput?.enabled),
         attachments: (input.attachments ?? []).map((attachment) => ({
@@ -993,6 +1018,8 @@ export const aiMobileApi = {
       };
     }
 
+    await ensureAiMobileTranslationConsent();
+
     const result = await requestAiMobile<Record<string, unknown>>(AI_PROVIDER_GATEWAY_ROUTES.textTranslation, {
       method: "POST",
       body: JSON.stringify({
@@ -1004,8 +1031,9 @@ export const aiMobileApi = {
         surface: "ai_text_translation",
         client: "mobile",
         version: AI_MOBILE_API_VERSION,
-        preferredProvider: "google",
-        providerHint: "google_translate",
+        preferredProvider: "yandex",
+        providerHint: "yandex_translation",
+
         gatewayRequired: true,
         allowFallback: false,
         preserveFormatting: true,
