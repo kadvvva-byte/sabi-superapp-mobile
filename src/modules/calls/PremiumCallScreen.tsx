@@ -1270,6 +1270,8 @@ const [phase, setPhase] = useState<StandardCallPhase>(
       callDebug("invite:start:emit", summarizeSabiCallPayloadForDebug(payload));
       socket.emit("call:start", payload);
       socket.emit("call:incoming", payload);
+      socket.emit("sabi-call:start", payload);
+      socket.emit("sabi-call:incoming", payload);
       recordCallHistory("call:start", { event: "start", status: "calling", phase: "calling" });
     }
 
