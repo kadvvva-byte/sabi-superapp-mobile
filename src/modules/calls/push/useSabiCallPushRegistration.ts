@@ -20,11 +20,11 @@ function installSabiCallNotificationHandler() {
   Notifications.setNotificationHandler({
     handleNotification: async () =>
       ({
-        shouldShowAlert: true,
-        shouldPlaySound: true,
+        shouldShowAlert: false,
+        shouldPlaySound: false,
         shouldSetBadge: false,
-        shouldShowBanner: true,
-        shouldShowList: true,
+        shouldShowBanner: false,
+        shouldShowList: false,
       }) as Notifications.NotificationBehavior,
   });
 }
@@ -304,5 +304,6 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
 
 
