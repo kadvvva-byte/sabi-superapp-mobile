@@ -400,7 +400,7 @@ function sabiSignalingState(connection: any): string {
   }
 }
 
-async function withSabiCallTimeout<T>(label: string, promise: Promise<T>, timeoutMs = 9000): Promise<T> {
+async function withSabiCallTimeout<T>(label: string, promise: Promise<T>, timeoutMs = 4000): Promise<T> {
   let timer: ReturnType<typeof setTimeout> | null = null;
 
   try {
@@ -466,7 +466,7 @@ async function setSabiRemoteDescription(
   // object that passed through Socket.IO. Passing a clean plain init object
   // first is the most stable path; wrapper fallback keeps old builds compatible.
   try {
-    await withSabiCallTimeout(label, connection.setRemoteDescription(plainDescription as any), 9000);
+    await withSabiCallTimeout(label, connection.setRemoteDescription(plainDescription as any), 4000);
     return;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -475,8 +475,7 @@ async function setSabiRemoteDescription(
 
   await withSabiCallTimeout(
     label + "_wrapped",
-    connection.setRemoteDescription(new RTCSessionDescription(plainDescription as any)),
-    9000,
+    connection.setRemoteDescription(new RTCSessionDescription(plainDescription as any)), 4000,
   );
 }
 
@@ -488,7 +487,7 @@ async function setSabiLocalDescription(
   const plainDescription = { type: description.type, sdp: description.sdp };
 
   try {
-    await withSabiCallTimeout(label, connection.setLocalDescription(plainDescription as any), 9000);
+    await withSabiCallTimeout(label, connection.setLocalDescription(plainDescription as any), 4000);
     return;
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -497,8 +496,7 @@ async function setSabiLocalDescription(
 
   await withSabiCallTimeout(
     label + "_wrapped",
-    connection.setLocalDescription(new RTCSessionDescription(plainDescription as any)),
-    9000,
+    connection.setLocalDescription(new RTCSessionDescription(plainDescription as any)), 4000,
   );
 }
 
@@ -520,7 +518,7 @@ async function setSabiNativeLocalDescription(
   // must be tried first. After WebRTC accepts it, read pc.localDescription for
   // the exact SDP that should be sent to the peer.
   try {
-    await withSabiCallTimeout(label + "_native", connection.setLocalDescription(nativeDescription as any), 9000);
+    await withSabiCallTimeout(label + "_native", connection.setLocalDescription(nativeDescription as any), 4000);
   } catch (nativeError) {
     const nativeMessage = nativeError instanceof Error ? nativeError.message : String(nativeError);
     if (!nativeMessage.toLowerCase().includes("sessiondescription is null")) throw nativeError;
@@ -533,7 +531,7 @@ async function setSabiNativeLocalDescription(
 
       // Last compatibility path for react-native-webrtc builds that support the
       // browser-style no-arg setLocalDescription after createOffer/createAnswer.
-      await withSabiCallTimeout(label + "_implicit", connection.setLocalDescription(), 9000);
+      await withSabiCallTimeout(label + "_implicit", connection.setLocalDescription(), 4000);
     }
   }
 
@@ -566,8 +564,8 @@ async function stabilizeVideoSender(sender: any) {
 
     parameters.encodings[0] = {
       ...parameters.encodings[0],
-      maxBitrate: 850000,
-      maxFramerate: 24,
+      maxBitrate: 1600000,
+      maxFramerate: 30,
     };
 
     if ("degradationPreference" in parameters) {
@@ -596,9 +594,9 @@ async function resetSabiCallAudioMode() {
 function videoConstraints(facing: StandardCameraFacing) {
   return {
     facingMode: facing,
-    width: 640,
-    height: 360,
-    frameRate: 24,
+    width: 960,
+    height: 540,
+    frameRate: 30,
   };
 }
 
@@ -1502,6 +1500,7 @@ export function createStandardCallPeer(options: {
     },
   };
 }
+
 
 
 
