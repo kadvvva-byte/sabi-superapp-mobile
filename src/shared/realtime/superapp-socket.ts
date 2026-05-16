@@ -1,4 +1,4 @@
-import { io, type Socket } from "socket.io-client";
+﻿import { io, type Socket } from "socket.io-client";
 import { resolveSabiApiBaseUrl } from "../api/apiBaseUrl";
 
 const SOCKET_BASE_URL = resolveSabiApiBaseUrl(undefined, { port: "4001" }).replace(/\/+$/, "");
@@ -81,12 +81,12 @@ function ensureSocket(userId?: string | null) {
     socket = io(SOCKET_BASE_URL, {
       autoConnect: false,
       path: SOCKET_PATH,
-      transports: ["websocket", "polling"],
+      transports: ["websocket"],
       reconnection: true,
       reconnectionAttempts: Infinity,
-      reconnectionDelay: 1000,
-      reconnectionDelayMax: 5000,
-      timeout: 15000,
+      reconnectionDelay: 300,
+      reconnectionDelayMax: 2500,
+      timeout: 5000,
       auth: buildAuth(resolvedUserId),
       query: buildQuery(resolvedUserId),
     });
@@ -643,3 +643,4 @@ export function emitVideoCallSignal<T = unknown>(
     resolvedUserId,
   );
 }
+

@@ -216,13 +216,13 @@ export function connectMessengerRealtimeSocket(
 
   socket = io(nextUrl, {
     path: nextPath,
-    transports: ["websocket", "polling"],
+    transports: ["websocket"],
     autoConnect: false,
     reconnection: true,
     reconnectionAttempts: Infinity,
-    reconnectionDelay: 600,
-    reconnectionDelayMax: 5000,
-    timeout: 12000,
+    reconnectionDelay: 300,
+    reconnectionDelayMax: 2500,
+    timeout: 5000,
     auth: {
       userId: config.auth.userId,
       token: config.auth.token ?? config.auth.accessToken ?? undefined,
@@ -294,5 +294,6 @@ export function emitMessengerRealtimeSocketEvent(input: MessengerRealtimeClientE
 
   return true;
 }
+
 
 
