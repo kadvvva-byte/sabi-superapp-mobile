@@ -79,9 +79,71 @@ function parseRouteParams(value: unknown): Record<string, string> {
 function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpenKeyRef: React.MutableRefObject<string>) {
   if (readString(data.sabiType) !== "incoming_call") return;
 
+  const auth = getAuthSessionState();
+
   const callId = readString(data.callId) || String(Date.now());
-  const routePath = readString(data.routePath) || (readString(data.kind) === "video" ? "/calls/video" : "/calls/audio");
+  const kindText = [
+    readString(data.kind),
+    readString(data.callType),
+    readString(data.type),
+  ].join(" ").toLowerCase();
+
+  const kind = kindText.includes("video") ? "video" : "audio";
+  const routePath = readString(data.routePath) || (kind === "video" ? "/calls/video" : "/calls/audio");
   const params = parseRouteParams(data.routeParams);
+
+  const currentUserId =
+    readString(params.userId) ||
+    readString(params.selfId) ||
+    readString(params.toUserId) ||
+    readString(params.receiverUserId) ||
+    readString(params.targetUserId) ||
+    readString(data.toUserId) ||
+    readString(data.receiverUserId) ||
+    readString(data.targetUserId) ||
+    readString(data.userId) ||
+    readString(auth.currentUserId);
+
+  const peerId =
+    readString(params.peerId) ||
+    readString(params.peerUserId) ||
+    readString(params.partnerId) ||
+    readString(params.fromUserId) ||
+    readString(data.fromUserId) ||
+    readString(data.callerId) ||
+    readString(data.senderUserId) ||
+    readString(data.peerId);
+
+  const chatId =
+    readString(params.chatId) ||
+    readString(params.id) ||
+    readString(data.chatId) ||
+    readString(data.contextId) ||
+    callId;
+
+  const name =
+    readString(params.name) ||
+    readString(params.callerName) ||
+    readString(data.callerName) ||
+    readString(data.fromName) ||
+    readString(data.senderName) ||
+    readString(data.name) ||
+    peerId ||
+    "Sabi";
+
+  const avatarLetter =
+    readString(params.avatarLetter) ||
+    readString(data.callerAvatarLetter) ||
+    readString(data.avatarLetter) ||
+    name.replace(/^\+/, "").match(/[\p{L}\p{N}]/u)?.[0]?.toUpperCase() ||
+    "S";
+
+  const avatarUrl =
+    readString(params.avatarUrl) ||
+    readString(params.photoUrl) ||
+    readString(data.callerAvatarUrl) ||
+    readString(data.avatarUrl) ||
+    readString(data.photoUrl);
 
   const openKey = `${callId}:${routePath}`;
   if (lastOpenKeyRef.current === openKey) return;
@@ -91,12 +153,34 @@ function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpe
     pathname: routePath as never,
     params: {
       ...params,
+      id: chatId,
+      chatId,
+      roomId: readString(params.roomId) || chatId,
       callId,
       incoming: "1",
       incomingCall: "1",
       action: "incoming",
       direction: "incoming",
       phase: "ringing",
+      kind,
+      type: kind === "video" ? "VIDEO" : "AUDIO",
+      userId: currentUserId,
+      selfId: currentUserId,
+      currentUserId,
+      peerId,
+      peerUserId: peerId,
+      partnerId: peerId,
+      targetUserId: peerId,
+      fromUserId: peerId,
+      callerId: peerId,
+      name,
+      callerName: name,
+      fromName: name,
+      roomTitle: name,
+      avatarLetter,
+      avatarUrl: avatarUrl || undefined,
+      photoUrl: avatarUrl || undefined,
+      status: kind === "video" ? "Incoming video call" : "Incoming audio call",
     } as never,
   });
 }
@@ -219,3 +303,4 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
