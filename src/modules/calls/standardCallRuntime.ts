@@ -1,4 +1,4 @@
-import { resolveSabiCallIceServers, summarizeSabiCallIceServersForDebug } from "./callIceServers";
+﻿import { resolveSabiCallIceServers, summarizeSabiCallIceServersForDebug } from "./callIceServers";
 import { Audio } from "expo-av";
 import {
   RTCPeerConnection,
@@ -50,7 +50,7 @@ export function record(value: unknown): AnyRecord {
 
 function sanitizeSabiCallDebugValue(value: unknown): unknown {
   if (value === null || value === undefined) return value;
-  if (typeof value === "string") return value.length > 220 ? value.slice(0, 220) + "…" : value;
+  if (typeof value === "string") return value.length > 220 ? value.slice(0, 220) + "вЂ¦" : value;
   if (typeof value === "number" || typeof value === "boolean") return value;
   if (Array.isArray(value)) return value.slice(0, 8).map(sanitizeSabiCallDebugValue);
   if (typeof value === "object") {
@@ -632,7 +632,7 @@ export function createStandardCallPeer(options: {
   let lastRemoteStreamUrl = "";
   let lastRemoteTrackSignature = "";
   let connectedEmitted = false;
-  const SABI_DIRECT_ICE_FAILURE_GRACE_MS = 25000;
+  const SABI_DIRECT_ICE_FAILURE_GRACE_MS = 8000;
   let iceFailureTimer: ReturnType<typeof setTimeout> | null = null;
   const pendingIceCandidates: unknown[] = [];
   let lastLocalAnswerDescription: AnyRecord | null = null;
@@ -841,7 +841,13 @@ export function createStandardCallPeer(options: {
     } as any);
 
     pc = nextPc;
-    debug("peer:created", { iceServers: summarizeSabiCallIceServersForDebug(iceServers) });
+    debug("peer:created", {
+  iceServers: summarizeSabiCallIceServersForDebug(iceServers),
+  hasTurn: iceServers.some((server: any) => {
+    const urls = Array.isArray(server?.urls) ? server.urls : [server?.urls];
+    return urls.some((url: unknown) => String(url || "").startsWith("turn:") || String(url || "").startsWith("turns:"));
+  }),
+});
 
     nextPc.onicecandidate = (event: any) => {
       if (closed || !event?.candidate) return;
@@ -1496,6 +1502,7 @@ export function createStandardCallPeer(options: {
     },
   };
 }
+
 
 
 
