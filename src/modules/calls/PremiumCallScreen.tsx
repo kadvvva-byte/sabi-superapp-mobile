@@ -49,82 +49,32 @@ type GroupCallTile = {
   status?: "active" | "invited" | "connecting";
 };
 
-const TEXTS = {
-  en: {
-    audio: "Sabi Audio",
-    video: "Sabi Video",
-    incoming: "Incoming call",
-    calling: "Calling",
-    connecting: "Connecting",
-    connected: "Connected",
-    ended: "Ended",
-    secure: "Sabi secure call",
-    waitingVideo: "Waiting for video",
-    videoCall: "Video call",
-    accept: "Accept",
-    decline: "Decline",
-    end: "End",
-    mic: "Microphone",
-    speaker: "Speaker",
-    camera: "Camera",
-    presentation: "Presentation",
-    aiTranslate: "AI translation",
-    minimize: "Minimize",
-    swap: "Swap",
-    more: "More",
-    add: "Add",
-  },
-  ru: {
-    audio: "Sabi Audio",
-    video: "Sabi Video",
-    incoming: "Р’С…РѕРґСЏС‰РёР№ РІС‹Р·РѕРІ",
-    calling: "Р’С‹Р·РѕРІ",
-    connecting: "РЎРѕРµРґРёРЅРµРЅРёРµ",
-    connected: "РџРѕРґРєР»СЋС‡РµРЅРѕ",
-    ended: "Р—Р°РІРµСЂС€РµРЅРѕ",
-    secure: "Р—Р°С‰РёС‰С‘РЅРЅР°СЏ СЃРІСЏР·СЊ Sabi",
-    waitingVideo: "РћР¶РёРґР°РЅРёРµ РІРёРґРµРѕ",
-    videoCall: "Р’РёРґРµРѕ РІС‹Р·РѕРІ",
-    accept: "РџСЂРёРЅСЏС‚СЊ",
-    decline: "РћС‚РєР»РѕРЅРёС‚СЊ",
-    end: "Р—Р°РІРµСЂС€РёС‚СЊ",
-    mic: "РњРёРєСЂРѕС„РѕРЅ",
-    speaker: "Р“СЂРѕРјРєР°СЏ СЃРІСЏР·СЊ",
-    camera: "РљР°РјРµСЂР°",
-    presentation: "РџСЂРµР·РµРЅС‚Р°С†РёСЏ",
-    aiTranslate: "AI РїРµСЂРµРІРѕРґ",
-    minimize: "РЎРІРµСЂРЅСѓС‚СЊ",
-    swap: "РЎРјРµРЅРёС‚СЊ",
-    more: "Р•С‰С‘",
-    add: "Р”РѕР±Р°РІРёС‚СЊ",
-  },
-  uz: {
-    audio: "Sabi Audio",
-    video: "Sabi Video",
-    incoming: "Kiruvchi qoвЂngвЂiroq",
-    calling: "QoвЂngвЂiroq qilinmoqda",
-    connecting: "Ulanmoqda",
-    connected: "Ulangan",
-    ended: "Yakunlandi",
-    secure: "Sabi himoyalangan aloqa",
-    waitingVideo: "Video kutilmoqda",
-    videoCall: "Video qoвЂngвЂiroq",
-    accept: "Qabul qilish",
-    decline: "Rad etish",
-    end: "Yakunlash",
-    mic: "Mikrofon",
-    speaker: "Ovoz",
-    camera: "Kamera",
-    presentation: "Prezentatsiya",
-    aiTranslate: "AI tarjima",
-    minimize: "Kichraytirish",
-    swap: "Almashtirish",
-    more: "Yana",
-    add: "QoвЂshish",
-  },
-} as const;
+const CALL_TEXT_KEYS = [
+  "audio",
+  "video",
+  "incoming",
+  "calling",
+  "connecting",
+  "connected",
+  "ended",
+  "secure",
+  "waitingVideo",
+  "videoCall",
+  "accept",
+  "decline",
+  "end",
+  "mic",
+  "speaker",
+  "camera",
+  "presentation",
+  "aiTranslate",
+  "minimize",
+  "swap",
+  "more",
+  "add",
+] as const;
 
-type TextKey = keyof typeof TEXTS.en;
+type TextKey = (typeof CALL_TEXT_KEYS)[number];
 
 function normalizeContactPhone(value: unknown): string {
   return String(value || "")
@@ -669,13 +619,7 @@ export default function PremiumCallScreen({ kind }: { kind: StandardCallKind }) 
       const translated = t(i18nKey);
       if (translated && translated !== i18nKey) return translated;
 
-      const lang = String(language).startsWith("ru")
-        ? "ru"
-        : String(language).startsWith("uz")
-          ? "uz"
-          : "en";
-
-      return TEXTS[lang][key];
+      return i18nKey;
     },
     [language, t],
   );
