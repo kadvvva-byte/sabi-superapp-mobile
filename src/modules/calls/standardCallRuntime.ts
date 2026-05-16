@@ -631,6 +631,8 @@ export function createStandardCallPeer(options: {
   let lastRemoteStreamUrl = "";
   let lastRemoteTrackSignature = "";
   let connectedEmitted = false;
+  const SABI_DIRECT_ICE_FAILURE_GRACE_MS = 25000;
+  let iceFailureTimer: ReturnType<typeof setTimeout> | null = null;
   const pendingIceCandidates: unknown[] = [];
   let lastLocalAnswerDescription: AnyRecord | null = null;
   let lastRemoteAnswerSdp = "";
@@ -963,16 +965,54 @@ export function createStandardCallPeer(options: {
       debug("peer:state", { iceConnectionState: ice, connectionState: connection, signalingState: nextPc.signalingState });
 
       if (ice === "connected" || ice === "completed" || connection === "connected") {
+        if (iceFailureTimer) {
+          clearTimeout(iceFailureTimer);
+          iceFailureTimer = null;
+        }
+
         void applyAudioMode();
         if (!connectedEmitted) {
           connectedEmitted = true;
           emit("call:connected", { event: "connected", phase: "active", status: "active", connectedAt: new Date().toISOString() });
           options.onConnected();
         }
+        return;
       }
 
-      if (ice === "failed" || connection === "failed") {
-        options.onError("connection_failed");
+      const isIceStillWorking =
+        ice === "new" ||
+        ice === "checking" ||
+        connection === "new" ||
+        connection === "connecting";
+
+      if (isIceStillWorking) {
+        return;
+      }
+
+      const isTransientFailure =
+        ice === "disconnected" ||
+        ice === "failed" ||
+        connection === "disconnected" ||
+        connection === "failed";
+
+      if (isTransientFailure && !iceFailureTimer && !connectedEmitted) {
+        // SABI_DIRECT_ICE_FAILURE_GRACE:
+        // Android/WebRTC can briefly report failed/disconnected while ICE is still recovering.
+        // Do not end a 1:1 call immediately; give the peer time before surfacing connection_failed.
+        iceFailureTimer = setTimeout(() => {
+          iceFailureTimer = null;
+          if (closed || connectedEmitted) return;
+
+          const latestIce = String(nextPc.iceConnectionState || "");
+          const latestConnection = String(nextPc.connectionState || "");
+          if (latestIce === "connected" || latestIce === "completed" || latestConnection === "connected") return;
+
+          debug("peer:failure_grace_expired", {
+            iceConnectionState: latestIce,
+            connectionState: latestConnection,
+          });
+          options.onError("connection_failed");
+        }, SABI_DIRECT_ICE_FAILURE_GRACE_MS);
       }
     };
 
@@ -1416,6 +1456,11 @@ export function createStandardCallPeer(options: {
     close() {
       debug("peer:close");
       closed = true;
+
+      if (iceFailureTimer) {
+        clearTimeout(iceFailureTimer);
+        iceFailureTimer = null;
+      }
 
       try {
         pc?.close?.();
