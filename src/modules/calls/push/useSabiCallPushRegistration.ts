@@ -13,6 +13,11 @@ import {
 
 let sabiCallNotificationHandlerInstalled = false;
 
+const SABI_INCOMING_CALL_CHANNEL_ID = "sabi_incoming_calls_v2";
+const SABI_INCOMING_CALL_CATEGORY_ID = "sabi_incoming_call";
+const SABI_CALL_ACCEPT_ACTION_ID = "sabi_call_accept";
+const SABI_CALL_DECLINE_ACTION_ID = "sabi_call_decline";
+
 function installSabiCallNotificationHandler() {
   if (sabiCallNotificationHandlerInstalled) return;
   sabiCallNotificationHandlerInstalled = true;
@@ -41,12 +46,43 @@ function readProjectId(): string {
   );
 }
 
+async function ensureSabiCallNotificationActions() {
+  await Notifications.setNotificationCategoryAsync(SABI_INCOMING_CALL_CATEGORY_ID, [
+    {
+      identifier: SABI_CALL_ACCEPT_ACTION_ID,
+      buttonTitle: "Принять",
+      options: {
+        opensAppToForeground: true,
+        isDestructive: false,
+        isAuthenticationRequired: false,
+      },
+    },
+    {
+      identifier: SABI_CALL_DECLINE_ACTION_ID,
+      buttonTitle: "Отклонить",
+      options: {
+        opensAppToForeground: true,
+        isDestructive: true,
+        isAuthenticationRequired: false,
+      },
+    },
+  ]);
+}
 async function ensureSabiCallAndroidChannel() {
   if (Platform.OS !== "android") return;
 
+  await Notifications.setNotificationChannelAsync(SABI_INCOMING_CALL_CHANNEL_ID, {
+    name: "Sabi Incoming Calls",
+    importance: Notifications.AndroidImportance.MAX,
+    sound: "default",
+    vibrationPattern: [0, 700, 300, 700, 300, 700],
+    enableVibrate: true,
+    showBadge: true,
+  });
+
   await Notifications.setNotificationChannelAsync("sabi_calls", {
     name: "Sabi Calls",
-    importance: Notifications.AndroidImportance.MAX,
+    importance: Notifications.AndroidImportance.HIGH,
     sound: "default",
     vibrationPattern: [0, 250, 250, 250],
     enableVibrate: true,
@@ -74,6 +110,32 @@ function parseRouteParams(value: unknown): Record<string, string> {
     result[key] = String(item);
   });
   return result;
+}
+
+function declineSabiIncomingCallNotification(data: Record<string, unknown>) {
+  const auth = getAuthSessionState();
+  const callId = readString(data.callId);
+  if (!callId || !auth.apiBaseUrl) return;
+
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+  };
+
+  if (auth.accessToken) headers.Authorization = `Bearer ${auth.accessToken}`;
+  if (auth.currentUserId) headers["X-User-Id"] = auth.currentUserId;
+
+  void fetch(`${auth.apiBaseUrl.replace(/\/+$/, "")}/api/v2/calls/${encodeURIComponent(callId)}/decline`, {
+    method: "POST",
+    headers,
+    body: JSON.stringify({
+      callId,
+      userId: auth.currentUserId,
+      action: "decline",
+      source: "notification_action",
+    }),
+  }).catch((error) => {
+    console.warn("[sabi-call:push] decline action failed", error instanceof Error ? error.message : error);
+  });
 }
 
 function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpenKeyRef: React.MutableRefObject<string>) {
@@ -202,6 +264,7 @@ async function registerSabiCallPushTokenOnce(lastRegisteredKeyRef: React.Mutable
   }
 
   await ensureSabiCallAndroidChannel();
+  await ensureSabiCallNotificationActions();
 
   const currentPermission = await Notifications.getPermissionsAsync();
   let finalStatus = currentPermission.status;
@@ -265,10 +328,14 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     installSabiCallNotificationHandler();
 
     const responseSubscription = Notifications.addNotificationResponseReceivedListener((response) => {
-      openSabiIncomingCallNotification(
-        (response.notification.request.content.data || {}) as Record<string, unknown>,
-        lastOpenKeyRef,
-      );
+      const data = (response.notification.request.content.data || {}) as Record<string, unknown>;
+
+      if (response.actionIdentifier === SABI_CALL_DECLINE_ACTION_ID) {
+        declineSabiIncomingCallNotification(data);
+        return;
+      }
+
+      openSabiIncomingCallNotification(data, lastOpenKeyRef);
     });
 
     void Notifications.getLastNotificationResponseAsync()
@@ -304,6 +371,7 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
 
 
 
