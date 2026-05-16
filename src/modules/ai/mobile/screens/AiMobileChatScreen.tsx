@@ -1,4 +1,4 @@
-import * as DocumentPicker from "expo-document-picker";
+﻿import * as DocumentPicker from "expo-document-picker";
 import * as ImagePicker from "expo-image-picker";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
@@ -198,186 +198,12 @@ function assistantModeToFoundation(mode: AiMobileAssistantMode) {
   return "general" as const;
 }
 
-function providerHintFor(mode: AiMobileAssistantMode, webSearchEnabled: boolean) {
-  if (webSearchEnabled) return "google_search" as const;
-  return mode === "chatgpt" ? ("chatgpt" as const) : ("openai" as const);
+function providerHintFor(_mode: AiMobileAssistantMode, _webSearchEnabled: boolean) {
+  return "yandex" as const;
 }
 
 function voiceFallbackPrompt(language: string) {
-  if (language.startsWith("uz")) {
-    return "Ushbu ovozli xabarni AI buyruq sifatida qayta ishlang.";
-  }
-
-  if (language.startsWith("ru")) {
-    return "Обработай это голосовое сообщение как команду для AI.";
-  }
-
-  return "Process this voice message as an AI command.";
-}
-
-function isPremiumMode(mode: AiMobileAssistantMode) {
-  return mode !== "chatgpt";
-}
-
-function premiumStatusText(language: string, hasPremium: boolean) {
-  if (hasPremium) {
-    if (language.startsWith("uz")) return "Premium faol";
-    if (language.startsWith("ru")) return "Premium активен";
-    return "Premium active";
-  }
-
-  if (language.startsWith("uz")) return "Bepul asosiy rejim";
-  if (language.startsWith("ru")) return "Бесплатный базовый режим";
-  return "Free basic mode";
-}
-
-function premiumBadgeText(language: string) {
-  if (language.startsWith("uz")) return "Premium";
-  if (language.startsWith("ru")) return "Premium";
-  return "Premium";
-}
-
-function premiumFeatureTitle(language: string, feature: PremiumFeatureKind) {
-  const isUz = language.startsWith("uz");
-  const isRu = language.startsWith("ru");
-
-  if (feature === "web_search") {
-    if (isUz) return "internet qidiruv";
-    if (isRu) return "поиск в интернете";
-    return "web search";
-  }
-
-  if (feature === "voice") {
-    if (isUz) return "ovozli AI";
-    if (isRu) return "голосовой AI";
-    return "voice AI";
-  }
-
-  if (feature === "camera") {
-    if (isUz) return "kamera";
-    if (isRu) return "камера";
-    return "camera";
-  }
-
-  if (feature === "photo") {
-    if (isUz) return "foto yuklash";
-    if (isRu) return "загрузка фото";
-    return "photo upload";
-  }
-
-  if (feature === "video") {
-    if (isUz) return "video yuklash";
-    if (isRu) return "загрузка видео";
-    return "video upload";
-  }
-
-  if (feature === "document") {
-    if (isUz) return "hujjat yuklash";
-    if (isRu) return "загрузка документов";
-    return "document upload";
-  }
-
-  if (feature === "attachment") {
-    if (isUz) return "fayllar bilan ishlash";
-    if (isRu) return "работа с файлами";
-    return "attachments";
-  }
-
-  if (isUz) return "maxsus AI rejimi";
-  if (isRu) return "специальный AI-режим";
-  return "special AI mode";
-}
-
-function premiumRequiredTitle(language: string) {
-  if (language.startsWith("uz")) return "Premium kerak";
-  if (language.startsWith("ru")) return "Нужен Premium";
-  return "Premium required";
-}
-
-function premiumRequiredMessage(language: string, feature: PremiumFeatureKind) {
-  const featureName = premiumFeatureTitle(language, feature);
-
-  if (language.startsWith("uz")) {
-    return `Bu funksiya Premium uchun: ${featureName}. Hozir bepul rejimda faqat oddiy matnli Sabi AI chat ishlaydi. Real provayder kalitlari faqat serverda ulanishi kerak.`;
-  }
-
-  if (language.startsWith("ru")) {
-    return `Эта функция доступна только в Premium: ${featureName}. В бесплатном режиме сейчас работает только базовый текстовый чат Sabi AI. Реальные ключи провайдера подключаются только на сервере.`;
-  }
-
-  return `This feature is Premium-only: ${featureName}. Free mode currently supports only basic text Sabi AI chat. Real provider keys must be connected only on the server.`;
-}
-
-function voiceCommandMeta(language: string): string {
-  if (language.startsWith("uz")) return "Ovozli buyruq · ayol ovozli javob so‘raldi";
-  if (language.startsWith("ru")) return "Голосовая команда · запрошен женский голос TTS";
-  return "Voice command · female TTS requested";
-}
-
-
-function normalizeStatusText(value: unknown): string {
-  return typeof value === "string" ? value.trim().toLowerCase() : "";
-}
-
-function isUnavailableStatusText(value: unknown): boolean {
-  const text = normalizeStatusText(value);
-  return (
-    text.includes("unconfigured") ||
-    text.includes("not_configured") ||
-    text.includes("not configured") ||
-    text.includes("provider_not_configured") ||
-    text.includes("provider not configured") ||
-    text.includes("provider_unavailable") ||
-    text.includes("provider unavailable") ||
-    text.includes("translation_provider_not_configured") ||
-    text.includes("ai_provider_gateway_unavailable")
-  );
-}
-
-function isProviderRouteUnavailable(route: unknown): boolean {
-  const record = toRecord(route);
-  if (!record) return false;
-
-  return (
-    isUnavailableStatusText(record.status) ||
-    isUnavailableStatusText(record.state) ||
-    isUnavailableStatusText(record.code) ||
-    isUnavailableStatusText(record.reason) ||
-    isUnavailableStatusText(record.message) ||
-    isUnavailableStatusText(toRecord(record.raw)?.status) ||
-    isUnavailableStatusText(toRecord(record.raw)?.code)
-  );
-}
-
-function isAssistantProviderPlaceholder(text: string): boolean {
-  const normalized = text.trim().toLowerCase();
-  return (
-    normalized.includes("ai understood this as conversation") ||
-    normalized.includes("assistant brain prepared context") ||
-    normalized.includes("client-dispatch routing") ||
-    normalized.includes("openai · unconfigured") ||
-    normalized.includes("provider_not_configured") ||
-    normalized.includes("provider not configured") ||
-    normalized.includes("unconfigured")
-  );
-}
-
-function assistantProviderUnavailableText(language: string): string {
-  if (language.startsWith("uz")) {
-    return "AI javob provayderi serverda hali ulanmagan. Ishga tushirishdan oldin real API kalitlar faqat serverda ulanadi. Hozir lokal yoki soxta javob berilmaydi.";
-  }
-
-  if (language.startsWith("ru")) {
-    return "AI провайдер ответов пока не подключён на сервере. Перед запуском реальные API-ключи будут подключены только на сервере. Сейчас локальный или фейковый ответ не используется.";
-  }
-
-  return "AI response provider is not connected on the server yet. Real API keys will be connected only on the server before launch. Local or fake answers are not used now.";
-}
-
-function providerUnavailableMeta(language: string): string {
-  if (language.startsWith("uz")) return "Provayder ulanmagan";
-  if (language.startsWith("ru")) return "Провайдер не подключён";
-  return "Provider not configured";
+  return aiMobileText(language, "chat.providerUnavailable");
 }
 
 function providerRouteMeta(language: string, route: unknown): string | null {
@@ -385,7 +211,7 @@ function providerRouteMeta(language: string, route: unknown): string | null {
   if (!record) return null;
 
   if (isProviderRouteUnavailable(record)) {
-    return providerUnavailableMeta(language);
+    return aiMobileText(language, "chat.providerUnavailable");
   }
 
   const label = toText(record.label) || toText(record.provider) || "AI";
@@ -476,6 +302,85 @@ function SheetButton({
   );
 }
 
+
+function isPremiumMode(mode: AiMobileAssistantMode) {
+  return mode !== "chatgpt";
+}
+
+function premiumStatusText(language: string, hasPremium: boolean) {
+  return aiMobileText(language, hasPremium ? "premium.statusActive" : "premium.statusFreeBasic");
+}
+
+function premiumBadgeText(language: string) {
+  return aiMobileText(language, "premium.badge");
+}
+
+function premiumFeatureTitle(language: string, feature: PremiumFeatureKind) {
+  return aiMobileText(language, `premium.feature.${feature}`);
+}
+
+function premiumRequiredTitle(language: string) {
+  return aiMobileText(language, "premium.requiredTitle");
+}
+
+function premiumRequiredMessage(language: string, feature: PremiumFeatureKind) {
+  return aiMobileText(language, "premium.requiredMessage").replace("{feature}", premiumFeatureTitle(language, feature));
+}
+
+function voiceCommandMeta(language: string): string {
+  return aiMobileText(language, "chat.voiceCommandMeta");
+}
+
+function assistantProviderUnavailableText(language: string) {
+  return aiMobileText(language, "chat.providerUnavailable");
+}
+
+function normalizeProviderStatusText(value: unknown): string {
+  return typeof value === "string" ? value.trim().toLowerCase() : "";
+}
+
+function isUnavailableProviderValue(value: unknown): boolean {
+  const text = normalizeProviderStatusText(value);
+  return (
+    text.includes("unconfigured") ||
+    text.includes("not_configured") ||
+    text.includes("not configured") ||
+    text.includes("provider_not_configured") ||
+    text.includes("provider not configured") ||
+    text.includes("provider_unavailable") ||
+    text.includes("provider unavailable") ||
+    text.includes("translation_provider_not_configured") ||
+    text.includes("ai_provider_gateway_unavailable")
+  );
+}
+
+function isProviderRouteUnavailable(route: unknown): boolean {
+  const record = toRecord(route);
+  if (!record) return false;
+
+  return (
+    isUnavailableProviderValue(record.status) ||
+    isUnavailableProviderValue(record.state) ||
+    isUnavailableProviderValue(record.code) ||
+    isUnavailableProviderValue(record.reason) ||
+    isUnavailableProviderValue(record.message) ||
+    isUnavailableProviderValue(toRecord(record.raw)?.status) ||
+    isUnavailableProviderValue(toRecord(record.raw)?.code)
+  );
+}
+
+function isAssistantProviderPlaceholder(text: string): boolean {
+  const normalized = text.trim().toLowerCase();
+  return (
+    normalized.includes("ai understood this as conversation") ||
+    normalized.includes("assistant brain prepared context") ||
+    normalized.includes("client-dispatch routing") ||
+    normalized.includes("openai · unconfigured") ||
+    normalized.includes("provider_not_configured") ||
+    normalized.includes("provider not configured") ||
+    normalized.includes("unconfigured")
+  );
+}
 export default function AiMobileChatScreen() {
   const { language } = useI18n();
   const insets = useSafeAreaInsets();
@@ -806,10 +711,10 @@ export default function AiMobileChatScreen() {
               "camera",
               "photo_library",
               "document_picker",
-              "chatgpt_provider",
+              "yandex_gpt_live",
               "premium_ai",
             ]
-          : ["basic_text_chat", "chatgpt_provider"],
+          : ["basic_text_chat", "yandex_gpt_live"],
       });
 
       if (!result.ok) {
@@ -1707,3 +1612,7 @@ const styles = StyleSheet.create({
     fontWeight: "900",
   },
 });
+
+
+
+

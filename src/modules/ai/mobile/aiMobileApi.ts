@@ -1,4 +1,4 @@
-import {
+﻿import {
   getAuthenticatedAuthSession,
   getAuthSessionState,
 } from "../../../core/kernel/auth/session.store";
@@ -183,25 +183,25 @@ function providerGatewayStatusText(manifest: AiProviderGatewayManifest | null): 
   const language = getAppLanguage();
 
   if (!manifest) {
-    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib bo‘lmadi.";
-    if (language.startsWith("ru")) return "Статус AI provider gateway пока не удалось проверить.";
+    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib boвЂlmadi.";
+    if (language.startsWith("ru")) return "РЎС‚Р°С‚СѓСЃ AI provider gateway РїРѕРєР° РЅРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕРІРµСЂРёС‚СЊ.";
     return "AI provider gateway status could not be checked yet.";
   }
 
   if (manifest.status === "ready" && manifest.translationConfigured) {
     if (language.startsWith("uz")) return "AI provider gateway tayyor. Real tarjima provayderi server orqali ulangan.";
-    if (language.startsWith("ru")) return "AI provider gateway готов. Реальный провайдер перевода подключён через сервер.";
+    if (language.startsWith("ru")) return "AI provider gateway РіРѕС‚РѕРІ. Р РµР°Р»СЊРЅС‹Р№ РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РїРѕРґРєР»СЋС‡С‘РЅ С‡РµСЂРµР· СЃРµСЂРІРµСЂ.";
     return "AI provider gateway is ready. A real translation provider is connected through the server.";
   }
 
   if (!manifest.translationConfigured) {
-    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima o‘chirilgan.";
-    if (language.startsWith("ru")) return "AI провайдер перевода на сервере пока не подключён. Локальный резервный перевод отключён.";
+    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima oвЂchirilgan.";
+    if (language.startsWith("ru")) return "AI РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РЅР° СЃРµСЂРІРµСЂРµ РїРѕРєР° РЅРµ РїРѕРґРєР»СЋС‡С‘РЅ. Р›РѕРєР°Р»СЊРЅС‹Р№ СЂРµР·РµСЂРІРЅС‹Р№ РїРµСЂРµРІРѕРґ РѕС‚РєР»СЋС‡С‘РЅ.";
     return "AI translation provider is not connected on the server yet. Local offline translation is disabled.";
   }
 
   if (language.startsWith("uz")) return `AI provider gateway holati: ${manifest.status}.`;
-  if (language.startsWith("ru")) return `Статус AI provider gateway: ${manifest.status}.`;
+  if (language.startsWith("ru")) return `РЎС‚Р°С‚СѓСЃ AI provider gateway: ${manifest.status}.`;
   return `AI provider gateway status: ${manifest.status}.`;
 }
 
@@ -578,8 +578,8 @@ function mapProviderHint(
   if (hint === "google_search") return "google_search";
   if (hint === "google_translate") return "google_translate";
   if (hint === "google" || hint === "yandex" || hint === "internal") return hint;
-  if (hint === "openai" || hint === "chatgpt") return "chatgpt";
-  return "chatgpt";
+  if (hint === "openai" || hint === "chatgpt") return "yandex";
+  return "yandex";
 }
 
 function buildSafetyCategory(message: string): string {
@@ -589,9 +589,9 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("send money") ||
     lowered.includes("transfer money") ||
     lowered.includes("pay") ||
-    lowered.includes("переведи деньги") ||
-    lowered.includes("отправь деньги") ||
-    lowered.includes("оплат")
+    lowered.includes("РїРµСЂРµРІРµРґРё РґРµРЅСЊРіРё") ||
+    lowered.includes("РѕС‚РїСЂР°РІСЊ РґРµРЅСЊРіРё") ||
+    lowered.includes("РѕРїР»Р°С‚")
   ) {
     return "money_movement";
   }
@@ -599,8 +599,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send coin") ||
     lowered.includes("coin transfer") ||
-    lowered.includes("отправь коин") ||
-    lowered.includes("переведи coin")
+    lowered.includes("РѕС‚РїСЂР°РІСЊ РєРѕРёРЅ") ||
+    lowered.includes("РїРµСЂРµРІРµРґРё coin")
   ) {
     return "coin_movement";
   }
@@ -608,8 +608,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send message") ||
     lowered.includes("message to") ||
-    lowered.includes("отправь сообщение") ||
-    lowered.includes("напиши в чат")
+    lowered.includes("РѕС‚РїСЂР°РІСЊ СЃРѕРѕР±С‰РµРЅРёРµ") ||
+    lowered.includes("РЅР°РїРёС€Рё РІ С‡Р°С‚")
   ) {
     return "message_send";
   }
@@ -617,8 +617,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("delete account") ||
     lowered.includes("remove account") ||
-    lowered.includes("удалить аккаунт") ||
-    lowered.includes("удали аккаунт")
+    lowered.includes("СѓРґР°Р»РёС‚СЊ Р°РєРєР°СѓРЅС‚") ||
+    lowered.includes("СѓРґР°Р»Рё Р°РєРєР°СѓРЅС‚")
   ) {
     return "account_delete";
   }
@@ -627,12 +627,12 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("logout") ||
     lowered.includes("sign out") ||
     lowered.includes("log out") ||
-    lowered.includes("выйти из аккаунта")
+    lowered.includes("РІС‹Р№С‚Рё РёР· Р°РєРєР°СѓРЅС‚Р°")
   ) {
     return "account_security";
   }
 
-  if (lowered.includes("settings") || lowered.includes("настрой")) {
+  if (lowered.includes("settings") || lowered.includes("РЅР°СЃС‚СЂРѕР№")) {
     return "settings_change";
   }
 
@@ -647,8 +647,8 @@ function normalizeProviderRoute(rawValue: unknown): AiMobileProviderRoute | null
 
   return {
     kind: (toStringValue(data.kind) as AiMobileProviderRouteKind | null) || "assistant",
-    provider: toStringValue(data.provider) || "openai",
-    label: toStringValue(data.label) || "ChatGPT / OpenAI",
+    provider: toStringValue(data.provider) || "yandex",
+    label: toStringValue(data.label) || "Yandex GPT",
     status: toStringValue(data.status) || "unconfigured",
     configured: Boolean(data.configured),
     requiresGateway: Boolean(data.requiresGateway),
@@ -879,7 +879,7 @@ export const aiMobileApi = {
           ? "yandex"
           : input.providerHint === "internal"
             ? "internal"
-            : "openai";
+            : "yandex";
 
     const result = await requestAiMobile<unknown>("/api/ai/providers/resolve", {
       method: "POST",
@@ -888,7 +888,7 @@ export const aiMobileApi = {
         kind,
         mode: input.mode ?? "general",
         preferredProvider,
-        providerHint: input.providerHint ?? "chatgpt",
+        providerHint: input.providerHint ?? "yandex",
       }),
     });
 
@@ -898,7 +898,7 @@ export const aiMobileApi = {
         data: {
           kind,
           provider: preferredProvider,
-          label: preferredProvider === "google" ? "Google" : "ChatGPT / OpenAI",
+          label: preferredProvider === "yandex" ? "Yandex GPT" : preferredProvider === "google" ? "Google" : preferredProvider === "internal" ? "Internal AI" : "Server AI",
           status: "unconfigured",
           configured: false,
           requiresGateway: preferredProvider !== "internal",
@@ -915,7 +915,7 @@ export const aiMobileApi = {
         normalizeProviderRoute(result.data) || {
           kind,
           provider: preferredProvider,
-          label: preferredProvider === "google" ? "Google" : "ChatGPT / OpenAI",
+          label: preferredProvider === "yandex" ? "Yandex GPT" : preferredProvider === "google" ? "Google" : preferredProvider === "internal" ? "Internal AI" : "Server AI",
           status: "unconfigured",
           configured: false,
           requiresGateway: preferredProvider !== "internal",
@@ -978,7 +978,7 @@ export const aiMobileApi = {
         source: input.source ?? "text",
         preferredMode: mapAssistantModeToFoundationMode(input.assistantMode),
         preferredProvider: "yandex",
-        providerHint: "yandex_gpt",
+        providerHint: "yandex",
 
         webSearchEnabled: Boolean(input.webSearchEnabled),
         voiceControlEnabled: Boolean(input.voiceOutput?.enabled),
@@ -1383,3 +1383,5 @@ export function extractAssistantText(value: unknown): string | null {
     null
   );
 }
+
+
