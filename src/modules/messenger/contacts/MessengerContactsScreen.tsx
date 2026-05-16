@@ -730,8 +730,8 @@ export default function MessengerContactsScreen() {
 
       const [permission, persistedRooms, savedCustomContacts, deletedKeys, serverUsers] = await Promise.all([
         Contacts.requestPermissionsAsync(),
-        listPersistedChatRooms(),
-        listCustomMessengerContacts(),
+        listPersistedChatRooms(effectiveCurrentUserId),
+        listCustomMessengerContacts(effectiveCurrentUserId),
         listDeletedCustomMessengerContactKeys(),
         effectiveCurrentUserId
           ? fetchMessengerUsers({

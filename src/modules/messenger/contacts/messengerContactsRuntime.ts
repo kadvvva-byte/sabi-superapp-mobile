@@ -266,10 +266,29 @@ export function buildChatId(args: BuildChatIdArgs) {
   return `custom-${normalized}`;
 }
 
-export async function listCustomMessengerContacts() {
-  return (await readAllCustomContacts()).sort((a, b) =>
+export async function listCustomMessengerContacts(ownerUserId?: string | null) {
+  const contacts = (await readAllCustomContacts()).sort((a, b) =>
     String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")),
   );
+
+  // SABI_OWNER_SCOPED_CUSTOM_CONTACTS:
+  // Saved contacts are personal. Do not leak contacts saved by another user.
+  // Legacy records without currentUserId/ownerUserId are hidden when ownerUserId is provided.
+  const normalizedOwnerUserId = typeof ownerUserId === "string" ? ownerUserId.trim() : "";
+  if (!normalizedOwnerUserId) {
+    return contacts;
+  }
+
+  return contacts.filter((contact: any) => {
+    const contactOwnerUserId =
+      typeof contact?.currentUserId === "string"
+        ? contact.currentUserId.trim()
+        : typeof contact?.ownerUserId === "string"
+          ? contact.ownerUserId.trim()
+          : "";
+
+    return contactOwnerUserId === normalizedOwnerUserId;
+  });
 }
 
 export async function listDeletedCustomMessengerContactKeys() {

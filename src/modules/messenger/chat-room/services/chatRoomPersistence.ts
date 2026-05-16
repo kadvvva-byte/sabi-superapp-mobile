@@ -474,8 +474,27 @@ export async function clearPersistedChatMessagesForUser(
   return clearAtMs;
 }
 
-export async function listPersistedChatRooms() {
-  return readJson<ChatRoomMetaSnapshot[]>(ROOMS_KEY, []);
+export async function listPersistedChatRooms(ownerUserId?: string | null) {
+  const rooms = await readJson<ChatRoomMetaSnapshot[]>(ROOMS_KEY, []);
+
+  // SABI_OWNER_SCOPED_PERSISTED_ROOMS:
+  // Contacts must never show another user's saved chat rooms.
+  // Legacy records without currentUserId/ownerUserId are hidden when ownerUserId is provided.
+  const normalizedOwnerUserId = typeof ownerUserId === "string" ? ownerUserId.trim() : "";
+  if (!normalizedOwnerUserId) {
+    return rooms;
+  }
+
+  return rooms.filter((room: any) => {
+    const roomOwnerUserId =
+      typeof room?.currentUserId === "string"
+        ? room.currentUserId.trim()
+        : typeof room?.ownerUserId === "string"
+          ? room.ownerUserId.trim()
+          : "";
+
+    return roomOwnerUserId === normalizedOwnerUserId;
+  });
 }
 
 export async function hydratePersistedChatPresence(chatId: string) {
