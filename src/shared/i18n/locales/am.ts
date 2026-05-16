@@ -4400,6 +4400,10 @@ export const AM_LOCALE = {
         "description": "መግለጫ",
         "badge": "Smart"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "ርዕስ",
         "description": "መግለጫ"

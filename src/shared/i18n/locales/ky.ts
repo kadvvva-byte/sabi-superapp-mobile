@@ -4400,6 +4400,10 @@ export const KY_LOCALE = {
         "description": "сүрөттөмө",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "аталыш",
         "description": "сүрөттөмө"

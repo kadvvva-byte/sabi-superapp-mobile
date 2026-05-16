@@ -4400,6 +4400,10 @@ export const AR_LOCALE = {
         "description": "الوصف",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "نغمات وإشعارات",
+        "description": "نغمات المكالمات، أصوات الرسائل، تنبيهات الخدمات وملفات MP3 الشخصية."
+      },
       "notifications": {
         "title": "العنوان",
         "description": "الوصف"

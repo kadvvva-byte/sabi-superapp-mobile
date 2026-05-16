@@ -4400,6 +4400,10 @@ export const UK_LOCALE = {
         "description": "AI-настройки профиля, polishing bio, privacy hint и smart helper tools.",
         "badge": "Smart",
       },
+      "notificationSounds": {
+        "title": "Мелодии и сигналы",
+        "description": "Мелодии вызова, сигналы сообщений, сервисные уведомления и личные MP3."
+      },
       "notifications": {
         "title": "Уведомления",
         "description": "Global inbox, приоритет оповещений, wallet notifications и preferences.",
@@ -4556,6 +4560,61 @@ export const UK_LOCALE = {
         "title": "Wallet Settings",
         "description": "Payment rules, smart routing, privacy behavior and wallet preferences.",
       },
+    },
+    "notificationSounds": {
+      "title": "Мелодии и сигналы",
+      "subtitle": "Выберите звук для вызовов, сообщений, Wallet, Market, AI и системных событий.",
+      "sections": {
+        "call": "Вызовы",
+        "message": "Сообщения",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "Система"
+      },
+      "actions": {
+        "addMp3": "Добавить MP3 из телефона"
+      },
+      "custom": {
+        "localFile": "Файл на телефоне"
+      },
+      "notes": {
+        "customMp3": "Личные MP3 работают внутри Sabi и на экране входящего вызова. Закрытые Android push используют звуки, встроенные в APK."
+      },
+      "errors": {
+        "addTitle": "Звук не добавлен",
+        "addMessage": "Не удалось импортировать этот аудиофайл."
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "Современная мелодия вызова" },
+        "call_premium": { "title": "Premium", "description": "Современная мелодия вызова" },
+        "call_soft": { "title": "Soft", "description": "Современная мелодия вызова" },
+        "call_digital": { "title": "Digital", "description": "Современная мелодия вызова" },
+        "call_skyline": { "title": "Skyline", "description": "Современная мелодия вызова" },
+        "call_ocean": { "title": "Ocean", "description": "Современная мелодия вызова" },
+        "call_crystal": { "title": "Crystal", "description": "Современная мелодия вызова" },
+        "call_lux": { "title": "Lux", "description": "Современная мелодия вызова" },
+        "call_night": { "title": "Night", "description": "Современная мелодия вызова" },
+        "call_minimal": { "title": "Minimal", "description": "Современная мелодия вызова" },
+        "msg_clean": { "title": "Clean", "description": "Короткий сигнал уведомления" },
+        "msg_soft": { "title": "Soft", "description": "Короткий сигнал уведомления" },
+        "msg_glass": { "title": "Glass", "description": "Короткий сигнал уведомления" },
+        "msg_pop": { "title": "Pop", "description": "Короткий сигнал уведомления" },
+        "msg_air": { "title": "Air", "description": "Короткий сигнал уведомления" },
+        "msg_pixel": { "title": "Pixel", "description": "Короткий сигнал уведомления" },
+        "msg_drop": { "title": "Drop", "description": "Короткий сигнал уведомления" },
+        "msg_bell": { "title": "Bell", "description": "Короткий сигнал уведомления" },
+        "msg_swipe": { "title": "Swipe", "description": "Короткий сигнал уведомления" },
+        "msg_tap": { "title": "Tap", "description": "Короткий сигнал уведомления" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "Сервисный сигнал уведомления" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "Сервисный сигнал уведомления" },
+        "market_alert": { "title": "Market Alert", "description": "Сервисный сигнал уведомления" },
+        "market_soft": { "title": "Market Soft", "description": "Сервисный сигнал уведомления" },
+        "ai_ping": { "title": "AI Ping", "description": "Сервисный сигнал уведомления" },
+        "ai_soft": { "title": "AI Soft", "description": "Сервисный сигнал уведомления" },
+        "system_notice": { "title": "System Notice", "description": "Сервисный сигнал уведомления" },
+        "system_soft": { "title": "System Soft", "description": "Сервисный сигнал уведомления" },
+      }
     },
     "editScreen": {
       "header": {

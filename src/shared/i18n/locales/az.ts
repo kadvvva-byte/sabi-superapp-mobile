@@ -4400,6 +4400,10 @@ export const AZ_LOCALE = {
         "description": "təsvir",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "başlıq",
         "description": "təsvir"

@@ -4400,6 +4400,10 @@ export const KO_LOCALE = {
         "description": "설명",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "제목",
         "description": "설명"

@@ -4400,6 +4400,10 @@ export const FA_AF_LOCALE = {
         "description": "description",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "title",
         "description": "description"

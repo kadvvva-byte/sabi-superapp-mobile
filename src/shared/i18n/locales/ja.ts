@@ -4400,6 +4400,10 @@ export const JA_LOCALE = {
         "description": "説明",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "タイトル",
         "description": "説明"

@@ -4400,6 +4400,10 @@ export const ZH_LOCALE = {
         "description": "说明",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "铃声和通知声音",
+        "description": "来电铃声、消息提示音、服务提醒和个人 MP3。"
+      },
       "notifications": {
         "title": "标题",
         "description": "说明"
@@ -4555,6 +4559,61 @@ export const ZH_LOCALE = {
       "settings": {
         "title": "标题",
         "description": "说明"
+      }
+    },
+    "notificationSounds": {
+      "title": "铃声和提示音",
+      "subtitle": "为来电、消息、Wallet、Market、AI 和系统事件选择声音。",
+      "sections": {
+        "call": "来电",
+        "message": "消息",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "系统"
+      },
+      "actions": {
+        "addMp3": "从手机添加 MP3"
+      },
+      "custom": {
+        "localFile": "本地文件"
+      },
+      "notes": {
+        "customMp3": "个人 MP3 可在 Sabi 内和来电界面使用。关闭应用后的 Android 推送使用 APK 内置声音。"
+      },
+      "errors": {
+        "addTitle": "声音未添加",
+        "addMessage": "无法导入此音频文件。"
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "现代来电铃声" },
+        "call_premium": { "title": "Premium", "description": "现代来电铃声" },
+        "call_soft": { "title": "Soft", "description": "现代来电铃声" },
+        "call_digital": { "title": "Digital", "description": "现代来电铃声" },
+        "call_skyline": { "title": "Skyline", "description": "现代来电铃声" },
+        "call_ocean": { "title": "Ocean", "description": "现代来电铃声" },
+        "call_crystal": { "title": "Crystal", "description": "现代来电铃声" },
+        "call_lux": { "title": "Lux", "description": "现代来电铃声" },
+        "call_night": { "title": "Night", "description": "现代来电铃声" },
+        "call_minimal": { "title": "Minimal", "description": "现代来电铃声" },
+        "msg_clean": { "title": "Clean", "description": "短通知提示音" },
+        "msg_soft": { "title": "Soft", "description": "短通知提示音" },
+        "msg_glass": { "title": "Glass", "description": "短通知提示音" },
+        "msg_pop": { "title": "Pop", "description": "短通知提示音" },
+        "msg_air": { "title": "Air", "description": "短通知提示音" },
+        "msg_pixel": { "title": "Pixel", "description": "短通知提示音" },
+        "msg_drop": { "title": "Drop", "description": "短通知提示音" },
+        "msg_bell": { "title": "Bell", "description": "短通知提示音" },
+        "msg_swipe": { "title": "Swipe", "description": "短通知提示音" },
+        "msg_tap": { "title": "Tap", "description": "短通知提示音" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "服务通知声音" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "服务通知声音" },
+        "market_alert": { "title": "Market Alert", "description": "服务通知声音" },
+        "market_soft": { "title": "Market Soft", "description": "服务通知声音" },
+        "ai_ping": { "title": "AI Ping", "description": "服务通知声音" },
+        "ai_soft": { "title": "AI Soft", "description": "服务通知声音" },
+        "system_notice": { "title": "System Notice", "description": "服务通知声音" },
+        "system_soft": { "title": "System Soft", "description": "服务通知声音" },
       }
     },
     "editScreen": {

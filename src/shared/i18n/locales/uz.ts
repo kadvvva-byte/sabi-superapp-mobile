@@ -4400,6 +4400,10 @@ export const UZ_LOCALE = {
         "description": "AI profil sozlamalari, bio polishing, privacy hint va smart helper tools.",
         "badge": "Smart"
       },
+      "notificationSounds": {
+        "title": "Musiqa va bildirishnoma tovushlari",
+        "description": "Qo‘ng‘iroq musiqalari, xabar signallari, servis ogohlantirishlari va shaxsiy MP3."
+      },
       "notifications": {
         "title": "Bildirishnomalar",
         "description": "Global inbox, ogohlantirish ustuvorligi, wallet notifications va preferences."
@@ -4555,6 +4559,61 @@ export const UZ_LOCALE = {
       "settings": {
         "title": "Hamyon sozlamalari",
         "description": "To‘lov qoidalari, smart routing, maxfiylik xatti-harakati va wallet sozlamalari."
+      }
+    },
+    "notificationSounds": {
+      "title": "Musiqa va signallar",
+      "subtitle": "Qo‘ng‘iroq, xabar, Wallet, Market, AI va tizim hodisalari uchun tovush tanlang.",
+      "sections": {
+        "call": "Qo‘ng‘iroqlar",
+        "message": "Xabarlar",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "Tizim"
+      },
+      "actions": {
+        "addMp3": "Telefondan MP3 qo‘shish"
+      },
+      "custom": {
+        "localFile": "Telefondagi fayl"
+      },
+      "notes": {
+        "customMp3": "Shaxsiy MP3 Sabi ichida va kiruvchi qo‘ng‘iroq ekranida ishlaydi. Yopiq Android push APK ichidagi tovushlardan foydalanadi."
+      },
+      "errors": {
+        "addTitle": "Tovush qo‘shilmadi",
+        "addMessage": "Bu audiofaylni import qilib bo‘lmadi."
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_premium": { "title": "Premium", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_soft": { "title": "Soft", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_digital": { "title": "Digital", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_skyline": { "title": "Skyline", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_ocean": { "title": "Ocean", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_crystal": { "title": "Crystal", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_lux": { "title": "Lux", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_night": { "title": "Night", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "call_minimal": { "title": "Minimal", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
+        "msg_clean": { "title": "Clean", "description": "Qisqa bildirishnoma signali" },
+        "msg_soft": { "title": "Soft", "description": "Qisqa bildirishnoma signali" },
+        "msg_glass": { "title": "Glass", "description": "Qisqa bildirishnoma signali" },
+        "msg_pop": { "title": "Pop", "description": "Qisqa bildirishnoma signali" },
+        "msg_air": { "title": "Air", "description": "Qisqa bildirishnoma signali" },
+        "msg_pixel": { "title": "Pixel", "description": "Qisqa bildirishnoma signali" },
+        "msg_drop": { "title": "Drop", "description": "Qisqa bildirishnoma signali" },
+        "msg_bell": { "title": "Bell", "description": "Qisqa bildirishnoma signali" },
+        "msg_swipe": { "title": "Swipe", "description": "Qisqa bildirishnoma signali" },
+        "msg_tap": { "title": "Tap", "description": "Qisqa bildirishnoma signali" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "Servis bildirishnoma signali" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "Servis bildirishnoma signali" },
+        "market_alert": { "title": "Market Alert", "description": "Servis bildirishnoma signali" },
+        "market_soft": { "title": "Market Soft", "description": "Servis bildirishnoma signali" },
+        "ai_ping": { "title": "AI Ping", "description": "Servis bildirishnoma signali" },
+        "ai_soft": { "title": "AI Soft", "description": "Servis bildirishnoma signali" },
+        "system_notice": { "title": "System Notice", "description": "Servis bildirishnoma signali" },
+        "system_soft": { "title": "System Soft", "description": "Servis bildirishnoma signali" },
       }
     },
     "editScreen": {

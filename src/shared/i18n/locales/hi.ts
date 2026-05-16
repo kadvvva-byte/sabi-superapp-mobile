@@ -4400,6 +4400,10 @@ export const HI_LOCALE = {
         "description": "विवरण",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "शीर्षक",
         "description": "विवरण"

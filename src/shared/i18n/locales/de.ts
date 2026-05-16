@@ -4400,6 +4400,10 @@ export const DE_LOCALE = {
         "description": "Beschreibung",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "Titel",
         "description": "Beschreibung"

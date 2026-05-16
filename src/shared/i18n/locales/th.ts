@@ -4400,6 +4400,10 @@ export const TH_LOCALE = {
         description: "AI profil sozlamalari, bio polishing, privacy hint va smart helper tools.",
         badge: "Smart",
       },
+      "notificationSounds": {
+        "title": "เสียงเรียกเข้าและเสียงแจ้งเตือน",
+        "description": "เสียงเรียกเข้า เสียงข้อความ การแจ้งเตือนบริการ และ MP3 ส่วนตัว"
+      },
       notifications: {
         title: "Bildirishnomalar",
         description: "Global inbox, ogohlantirish ustuvorligi, wallet notifications va preferences.",
@@ -4556,6 +4560,61 @@ export const TH_LOCALE = {
         title: "Hamyon sozlamalari",
         description: "To‘lov qoidalari, smart routing, maxfiylik xatti-harakati va wallet sozlamalari.",
       },
+    },
+    "notificationSounds": {
+      "title": "เสียงเรียกเข้าและเสียงแจ้งเตือน",
+      "subtitle": "เลือกเสียงสำหรับการโทร ข้อความ Wallet, Market, AI และระบบ",
+      "sections": {
+        "call": "การโทร",
+        "message": "ข้อความ",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "ระบบ"
+      },
+      "actions": {
+        "addMp3": "เพิ่ม MP3 จากโทรศัพท์"
+      },
+      "custom": {
+        "localFile": "ไฟล์ในเครื่อง"
+      },
+      "notes": {
+        "customMp3": "MP3 ส่วนตัวใช้งานได้ภายใน Sabi และหน้าจอสายเข้า ส่วน Android push ตอนปิดแอปใช้เสียงที่อยู่ใน APK"
+      },
+      "errors": {
+        "addTitle": "ไม่ได้เพิ่มเสียง",
+        "addMessage": "ไม่สามารถนำเข้าไฟล์เสียงนี้ได้"
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_premium": { "title": "Premium", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_soft": { "title": "Soft", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_digital": { "title": "Digital", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_skyline": { "title": "Skyline", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_ocean": { "title": "Ocean", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_crystal": { "title": "Crystal", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_lux": { "title": "Lux", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_night": { "title": "Night", "description": "เสียงเรียกเข้าทันสมัย" },
+        "call_minimal": { "title": "Minimal", "description": "เสียงเรียกเข้าทันสมัย" },
+        "msg_clean": { "title": "Clean", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_soft": { "title": "Soft", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_glass": { "title": "Glass", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_pop": { "title": "Pop", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_air": { "title": "Air", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_pixel": { "title": "Pixel", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_drop": { "title": "Drop", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_bell": { "title": "Bell", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_swipe": { "title": "Swipe", "description": "เสียงแจ้งเตือนสั้น" },
+        "msg_tap": { "title": "Tap", "description": "เสียงแจ้งเตือนสั้น" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "เสียงแจ้งเตือนบริการ" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "เสียงแจ้งเตือนบริการ" },
+        "market_alert": { "title": "Market Alert", "description": "เสียงแจ้งเตือนบริการ" },
+        "market_soft": { "title": "Market Soft", "description": "เสียงแจ้งเตือนบริการ" },
+        "ai_ping": { "title": "AI Ping", "description": "เสียงแจ้งเตือนบริการ" },
+        "ai_soft": { "title": "AI Soft", "description": "เสียงแจ้งเตือนบริการ" },
+        "system_notice": { "title": "System Notice", "description": "เสียงแจ้งเตือนบริการ" },
+        "system_soft": { "title": "System Soft", "description": "เสียงแจ้งเตือนบริการ" },
+      }
     },
     editScreen: {
       header: {

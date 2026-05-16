@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useState } from "react";
+﻿import React, { useCallback, useEffect, useMemo, useState } from "react";
 import {
   Alert,
   Image,
@@ -33,6 +33,7 @@ import {
   Lock,
   LogOut,
   Mic,
+  Music2,
   Palette,
   QrCode,
   Settings2,
@@ -1152,6 +1153,18 @@ export default function ProfileScreen() {
           badge: tt("profile.app.ai.badge") || undefined,
         },
         {
+          key: "notification_sounds",
+          title: tt("profile.app.notificationSounds.title"),
+          description: tt("profile.app.notificationSounds.description"),
+          icon: (
+            <PremiumGlyph
+              colors={["rgba(181,136,255,0.32)", "rgba(88,213,201,0.24)"]}
+              borderColor="rgba(181,136,255,0.20)"
+              icon={<Music2 size={18} color={PURPLE} strokeWidth={2.4} />}
+            />
+          ),
+          route: "/profile/notification-sounds",
+        },        {
           key: "notifications",
           title: tt("profile.app.notifications.title"),
           description: tt("profile.app.notifications.description"),

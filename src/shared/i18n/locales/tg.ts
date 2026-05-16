@@ -4400,6 +4400,10 @@ export const TG_LOCALE = {
         "description": "AI profil sozlamalari, bio polishing, privacy hint va smart helper tools.",
         "badge": "Smart",
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "Bildirishnomalar",
         "description": "Global inbox, ogohlantirish ustuvorligi, wallet notifications va preferences.",

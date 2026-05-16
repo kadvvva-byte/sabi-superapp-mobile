@@ -4400,6 +4400,10 @@ export const TK_LOCALE = {
         "description": "description",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodiler ve bildirim sesleri",
+        "description": "Arama melodileri, mesaj sesleri, servis uyarıları ve kişisel MP3."
+      },
       "notifications": {
         "title": "title",
         "description": "description"
@@ -4555,6 +4559,61 @@ export const TK_LOCALE = {
       "settings": {
         "title": "title",
         "description": "description"
+      }
+    },
+    "notificationSounds": {
+      "title": "Melodiler ve sesler",
+      "subtitle": "Arama, mesaj, Wallet, Market, AI ve sistem olayları için ses seçin.",
+      "sections": {
+        "call": "Aramalar",
+        "message": "Mesajlar",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "Sistem"
+      },
+      "actions": {
+        "addMp3": "Telefondan MP3 ekle"
+      },
+      "custom": {
+        "localFile": "Yerel dosya"
+      },
+      "notes": {
+        "customMp3": "Kişisel MP3 Sabi içinde ve gelen arama ekranında çalışır. Kapalı Android push APK içindeki sesleri kullanır."
+      },
+      "errors": {
+        "addTitle": "Ses eklenmedi",
+        "addMessage": "Bu ses dosyası içe aktarılamadı."
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "Modern arama melodisi" },
+        "call_premium": { "title": "Premium", "description": "Modern arama melodisi" },
+        "call_soft": { "title": "Soft", "description": "Modern arama melodisi" },
+        "call_digital": { "title": "Digital", "description": "Modern arama melodisi" },
+        "call_skyline": { "title": "Skyline", "description": "Modern arama melodisi" },
+        "call_ocean": { "title": "Ocean", "description": "Modern arama melodisi" },
+        "call_crystal": { "title": "Crystal", "description": "Modern arama melodisi" },
+        "call_lux": { "title": "Lux", "description": "Modern arama melodisi" },
+        "call_night": { "title": "Night", "description": "Modern arama melodisi" },
+        "call_minimal": { "title": "Minimal", "description": "Modern arama melodisi" },
+        "msg_clean": { "title": "Clean", "description": "Kısa bildirim sesi" },
+        "msg_soft": { "title": "Soft", "description": "Kısa bildirim sesi" },
+        "msg_glass": { "title": "Glass", "description": "Kısa bildirim sesi" },
+        "msg_pop": { "title": "Pop", "description": "Kısa bildirim sesi" },
+        "msg_air": { "title": "Air", "description": "Kısa bildirim sesi" },
+        "msg_pixel": { "title": "Pixel", "description": "Kısa bildirim sesi" },
+        "msg_drop": { "title": "Drop", "description": "Kısa bildirim sesi" },
+        "msg_bell": { "title": "Bell", "description": "Kısa bildirim sesi" },
+        "msg_swipe": { "title": "Swipe", "description": "Kısa bildirim sesi" },
+        "msg_tap": { "title": "Tap", "description": "Kısa bildirim sesi" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "Servis bildirim sesi" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "Servis bildirim sesi" },
+        "market_alert": { "title": "Market Alert", "description": "Servis bildirim sesi" },
+        "market_soft": { "title": "Market Soft", "description": "Servis bildirim sesi" },
+        "ai_ping": { "title": "AI Ping", "description": "Servis bildirim sesi" },
+        "ai_soft": { "title": "AI Soft", "description": "Servis bildirim sesi" },
+        "system_notice": { "title": "System Notice", "description": "Servis bildirim sesi" },
+        "system_soft": { "title": "System Soft", "description": "Servis bildirim sesi" },
       }
     },
     "editScreen": {

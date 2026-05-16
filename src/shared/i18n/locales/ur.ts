@@ -4400,6 +4400,10 @@ export const UR_LOCALE = {
         "description": "تفصیل",
         "badge": "badge"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "عنوان",
         "description": "تفصیل"
@@ -4555,6 +4559,61 @@ export const UR_LOCALE = {
       "settings": {
         "title": "عنوان",
         "description": "تفصیل"
+      }
+    },
+    "notificationSounds": {
+      "title": "Melodies and notification sounds",
+      "subtitle": "Choose sounds for calls, messages, Wallet, Market, AI and system events.",
+      "sections": {
+        "call": "Calls",
+        "message": "Messages",
+        "wallet": "Wallet",
+        "market": "Market",
+        "ai": "AI",
+        "system": "System"
+      },
+      "actions": {
+        "addMp3": "Add MP3 from phone"
+      },
+      "custom": {
+        "localFile": "Local file"
+      },
+      "notes": {
+        "customMp3": "Personal MP3 files work inside Sabi and for in-app call screens. Closed Android push uses bundled sounds from the APK."
+      },
+      "errors": {
+        "addTitle": "Sound was not added",
+        "addMessage": "Could not import this audio file."
+      },
+      "options": {
+        "call_neon": { "title": "Neon", "description": "Modern call melody" },
+        "call_premium": { "title": "Premium", "description": "Modern call melody" },
+        "call_soft": { "title": "Soft", "description": "Modern call melody" },
+        "call_digital": { "title": "Digital", "description": "Modern call melody" },
+        "call_skyline": { "title": "Skyline", "description": "Modern call melody" },
+        "call_ocean": { "title": "Ocean", "description": "Modern call melody" },
+        "call_crystal": { "title": "Crystal", "description": "Modern call melody" },
+        "call_lux": { "title": "Lux", "description": "Modern call melody" },
+        "call_night": { "title": "Night", "description": "Modern call melody" },
+        "call_minimal": { "title": "Minimal", "description": "Modern call melody" },
+        "msg_clean": { "title": "Clean", "description": "Short notification sound" },
+        "msg_soft": { "title": "Soft", "description": "Short notification sound" },
+        "msg_glass": { "title": "Glass", "description": "Short notification sound" },
+        "msg_pop": { "title": "Pop", "description": "Short notification sound" },
+        "msg_air": { "title": "Air", "description": "Short notification sound" },
+        "msg_pixel": { "title": "Pixel", "description": "Short notification sound" },
+        "msg_drop": { "title": "Drop", "description": "Short notification sound" },
+        "msg_bell": { "title": "Bell", "description": "Short notification sound" },
+        "msg_swipe": { "title": "Swipe", "description": "Short notification sound" },
+        "msg_tap": { "title": "Tap", "description": "Short notification sound" },
+        "wallet_confirm": { "title": "Wallet Confirm", "description": "Service notification sound" },
+        "wallet_alert": { "title": "Wallet Alert", "description": "Service notification sound" },
+        "market_alert": { "title": "Market Alert", "description": "Service notification sound" },
+        "market_soft": { "title": "Market Soft", "description": "Service notification sound" },
+        "ai_ping": { "title": "AI Ping", "description": "Service notification sound" },
+        "ai_soft": { "title": "AI Soft", "description": "Service notification sound" },
+        "system_notice": { "title": "System Notice", "description": "Service notification sound" },
+        "system_soft": { "title": "System Soft", "description": "Service notification sound" },
       }
     },
     "editScreen": {

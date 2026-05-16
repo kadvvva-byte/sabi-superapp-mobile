@@ -4400,6 +4400,10 @@ export const EN_LOCALE = {
         "description": "AI profile settings, bio polishing, privacy hints, and smart helper tools.",
         "badge": "Smart"
       },
+      "notificationSounds": {
+        "title": "Melodies and notification sounds",
+        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+      },
       "notifications": {
         "title": "Notifications",
         "description": "Global inbox, alert priorities, wallet notifications, and preferences."
