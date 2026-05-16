@@ -81,3 +81,5 @@ wallet-mobile-*-report.json
 *-exact-blocks.txt
 VERIFY_LOG.txt
 LOCATION-*.txt
+
+fcm-service-account.json

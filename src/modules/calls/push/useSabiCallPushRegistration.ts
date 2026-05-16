@@ -242,6 +242,7 @@ async function registerSabiCallPushTokenOnce(lastRegisteredKeyRef: React.Mutable
     body: JSON.stringify({
       userId: auth.currentUserId,
       token,
+      expoPushToken: token,
       platform: Platform.OS,
       deviceId: `${Platform.OS}:${Device.osBuildId || Device.modelId || Device.modelName || "device"}`,
       deviceName: Device.deviceName || Device.modelName || null,
@@ -303,4 +304,5 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
 
