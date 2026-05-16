@@ -1164,7 +1164,9 @@ export default function ProfileScreen() {
             />
           ),
           route: "/profile/notification-sounds",
-        },        {
+        },
+        {
+          
           key: "notifications",
           title: tt("profile.app.notifications.title"),
           description: tt("profile.app.notifications.description"),
@@ -2295,3 +2297,4 @@ const styles = StyleSheet.create({
     color: "#FFD7DD",
   },
 });
+
