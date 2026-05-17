@@ -111,7 +111,7 @@ import {
   canInviteToGroup,
   getGroupInviteLink,
 } from "../groups/groupModerationRuntime";
-import { ensureMessengerDirectRoom, fetchMessengerUsers, syncMessengerContactAlias } from "../contacts/messengerContactsApi";
+import { ensureMessengerDirectRoom, fetchMessengerUsers } from "../contacts/messengerContactsApi";
 import { registerPersistedChatRoom,
   hydratePersistedChatClearAt,
   clearPersistedChatMessagesForUser,
@@ -6696,16 +6696,6 @@ const secondaryHeaderAction = () => {
       peerUserId: card.userId || undefined,
     });
 
-    void syncMessengerContactAlias({
-      ownerUserId: transportUserId || routeUserId || undefined,
-      contactUserId: card.userId || undefined,
-      peerUserId: card.userId || undefined,
-      displayName: card.name,
-      name: card.name,
-      phone: card.phone || undefined,
-      phoneNumber: card.phone || undefined,
-    });
-
     showNotice(texts.contactSavedInMessenger);
     await openMessengerRoom({
       chatId: saved.chatId,
@@ -8069,16 +8059,6 @@ const secondaryHeaderAction = () => {
         source: "custom",
         currentUserId: transportUserId || routeUserId || undefined,
         peerUserId: resolvedPeerUserId,
-      });
-
-      void syncMessengerContactAlias({
-        ownerUserId: transportUserId || routeUserId || undefined,
-        contactUserId: resolvedPeerUserId || undefined,
-        peerUserId: resolvedPeerUserId || undefined,
-        displayName: contactName,
-        name: contactName,
-        phone: phone || undefined,
-        phoneNumber: phone || undefined,
       });
 
       await registerPersistedChatRoom({
@@ -12008,9 +11988,6 @@ readOnlyComposerAction: {
     opacity: 0.9,
   },
 });
-
-
-
 
 
 

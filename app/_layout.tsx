@@ -47,7 +47,6 @@ import { AppearanceProvider } from "../src/theme/AppearanceProvider";
 import { ThemeProvider } from "../src/theme/ThemeProvider";
 import AppNotificationOverlay from "../src/modules/notifications/overlay/AppNotificationOverlay";
 import { useSabiCallPushRegistration } from "../src/modules/calls/push/useSabiCallPushRegistration";
-import { useSabiMessengerPushRegistration } from "../src/modules/messenger/push/useSabiMessengerPushRegistration";
 
 let appKernelsConfigured = false;
 
@@ -592,7 +591,6 @@ function RootBootstrap() {
   const pathname = usePathname();
   const [isReady, setIsReady] = useState(false);
   useSabiCallPushRegistration(isReady);
-  useSabiMessengerPushRegistration(isReady);
   const aliveRef = useRef(true);
   const appStateRef = useRef<AppStateStatus>(AppState.currentState);
   const lastMessengerPresenceKeyRef = useRef<string | null>(null);
@@ -1458,7 +1456,6 @@ export default function RootLayout() {
     </GestureHandlerRootView>
   );
 }
-
 
 
 

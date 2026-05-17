@@ -1,4 +1,4 @@
-﻿import { resolveMessengerKernelSession } from "../../../core/kernel/messenger/session/service";
+import { resolveMessengerKernelSession } from "../../../core/kernel/messenger/session/service";
 
 export type MessengerDirectoryUser = {
   userId: string;
@@ -287,60 +287,3 @@ export async function ensureMessengerDirectRoom(
 
   return null;
 }
-
-export type SyncMessengerContactAliasParams = {
-  ownerUserId?: string | null;
-  contactUserId?: string | null;
-  peerUserId?: string | null;
-  displayName?: string | null;
-  name?: string | null;
-  phone?: string | null;
-  phoneNumber?: string | null;
-  apiBaseUrl?: string;
-  accessToken?: string;
-  signal?: AbortSignal;
-};
-
-export async function syncMessengerContactAlias(
-  params: SyncMessengerContactAliasParams,
-): Promise<boolean> {
-  const displayName = normalizeString(params.displayName) || normalizeString(params.name);
-  const contactUserId = normalizeString(params.contactUserId) || normalizeString(params.peerUserId);
-  const phone = normalizeString(params.phone) || normalizeString(params.phoneNumber);
-  const ownerUserId = normalizeString(params.ownerUserId);
-
-  if (!displayName || (!contactUserId && !phone)) return false;
-
-  let context: ResolvedRequestContext;
-  try {
-    context = await resolveRequestContext({
-      currentUserId: ownerUserId,
-      apiBaseUrl: params.apiBaseUrl,
-      accessToken: params.accessToken,
-    });
-  } catch {
-    return false;
-  }
-
-  try {
-    const response = await fetch(buildMessengerApiUrl(context, "/contact-alias"), {
-      method: "POST",
-      headers: buildHeaders(context, true),
-      body: JSON.stringify({
-        ownerUserId: context.currentUserId,
-        contactUserId: contactUserId || undefined,
-        peerUserId: contactUserId || undefined,
-        phone: phone || undefined,
-        phoneNumber: phone || undefined,
-        displayName,
-        name: displayName,
-      }),
-      signal: params.signal,
-    });
-
-    return response.ok;
-  } catch {
-    return false;
-  }
-}
-
