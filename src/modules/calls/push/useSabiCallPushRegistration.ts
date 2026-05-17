@@ -13,7 +13,7 @@ import {
 
 let sabiCallNotificationHandlerInstalled = false;
 
-const SABI_INCOMING_CALL_CHANNEL_ID = "sabi_calls_neon_v1";
+const SABI_INCOMING_CALL_CHANNEL_ID = "sabi_calls_neon_v2";
 const SABI_INCOMING_CALL_CATEGORY_ID = "sabi_incoming_call";
 const SABI_CALL_ACCEPT_ACTION_ID = "sabi_call_accept";
 const SABI_CALL_DECLINE_ACTION_ID = "sabi_call_decline";
@@ -285,7 +285,6 @@ async function registerSabiCallPushTokenOnce(lastRegisteredKeyRef: React.Mutable
     console.warn("[sabi-call:push] EAS projectId is missing");
     return;
   }
-
   const tokenResult = await Notifications.getExpoPushTokenAsync({ projectId });
   const token = readString(tokenResult.data);
 
@@ -371,6 +370,10 @@ export function useSabiCallPushRegistration(enabled: boolean) {
     };
   }, [enabled]);
 }
+
+
+
+
 
 
 
