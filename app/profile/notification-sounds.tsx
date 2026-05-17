@@ -37,63 +37,6 @@ type I18nHookValue =
 
 const KIND_ORDER: SabiNotificationSoundKind[] = ["call", "message", "wallet", "market", "ai", "system"];
 
-const PROFILE_NOTIFICATION_SOUND_FALLBACKS: Record<string, string> = {
-  "profile.notificationSounds.title": "\u041c\u0435\u043b\u043e\u0434\u0438\u0438 \u0438 \u0441\u0438\u0433\u043d\u0430\u043b\u044b",
-  "profile.notificationSounds.subtitle": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0437\u0432\u0443\u043a \u0434\u043b\u044f \u0432\u044b\u0437\u043e\u0432\u043e\u0432, \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u0439, Wallet, Market, AI \u0438 \u0441\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u0439.",
-  "profile.notificationSounds.sections.call": "\u0412\u044b\u0437\u043e\u0432\u044b",
-  "profile.notificationSounds.sections.message": "\u0421\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f",
-  "profile.notificationSounds.sections.wallet": "Wallet",
-  "profile.notificationSounds.sections.market": "Market",
-  "profile.notificationSounds.sections.ai": "AI",
-  "profile.notificationSounds.sections.system": "\u0421\u0438\u0441\u0442\u0435\u043c\u0430",
-  "profile.notificationSounds.actions.addMp3": "\u0414\u043e\u0431\u0430\u0432\u0438\u0442\u044c MP3",
-  "profile.notificationSounds.custom.localFile": "\u041b\u043e\u043a\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0430\u0439\u043b",
-  "profile.notificationSounds.notes.customMp3": "\u041c\u043e\u0436\u043d\u043e \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u043b\u0438\u0447\u043d\u044b\u0439 MP3-\u0441\u0438\u0433\u043d\u0430\u043b.",
-  "profile.notificationSounds.errors.addTitle": "\u041d\u0435 \u0443\u0434\u0430\u043b\u043e\u0441\u044c \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c \u0437\u0432\u0443\u043a",
-  "profile.notificationSounds.errors.addMessage": "\u041f\u0440\u043e\u0432\u0435\u0440\u044c\u0442\u0435 \u0444\u0430\u0439\u043b \u0438 \u043f\u043e\u043f\u0440\u043e\u0431\u0443\u0439\u0442\u0435 \u0435\u0449\u0451 \u0440\u0430\u0437.",
-};
-
-const PROFILE_NOTIFICATION_SOUND_TITLES: Record<string, string> = {
-  call_neon: "Neon",
-  call_premium: "Premium",
-  call_soft: "Soft",
-  call_digital: "Digital",
-  call_skyline: "Skyline",
-  call_ocean: "Ocean",
-  call_crystal: "Crystal",
-  call_lux: "Lux",
-  call_night: "Night",
-  call_minimal: "Minimal",
-  msg_clean: "Clean",
-  msg_soft: "Soft",
-  msg_glass: "Glass",
-  msg_pop: "Pop",
-};
-
-function fallbackNotificationSoundText(key: string): string {
-  const direct = PROFILE_NOTIFICATION_SOUND_FALLBACKS[key];
-  if (direct) return direct;
-
-  const match = key.match(/^profile\.notificationSounds\.options\.([^.]+)\.(title|description)$/);
-  if (match) {
-    const id = match[1] || "";
-    const field = match[2] || "";
-
-    if (field === "title") {
-      return PROFILE_NOTIFICATION_SOUND_TITLES[id] || id.replace(/_/g, " ").replace(/\b\w/g, (char) => char.toUpperCase());
-    }
-
-    if (id.startsWith("call_")) return "\u041c\u0435\u043b\u043e\u0434\u0438\u044f \u0432\u044b\u0437\u043e\u0432\u0430";
-    if (id.startsWith("msg_")) return "\u0421\u0438\u0433\u043d\u0430\u043b \u0441\u043e\u043e\u0431\u0449\u0435\u043d\u0438\u044f";
-    if (id.startsWith("wallet_")) return "\u0421\u0438\u0433\u043d\u0430\u043b Wallet";
-    if (id.startsWith("market_")) return "\u0421\u0438\u0433\u043d\u0430\u043b Market";
-    if (id.startsWith("ai_")) return "\u0421\u0438\u0433\u043d\u0430\u043b AI";
-    return "\u0421\u0438\u0441\u0442\u0435\u043c\u043d\u044b\u0439 \u0441\u0438\u0433\u043d\u0430\u043b";
-  }
-
-  return key;
-}
-
 export default function ProfileNotificationSoundsScreen() {
   const i18n = useI18n() as I18nHookValue;
   const [preferences, setPreferences] = useState<SabiSoundPreferences | null>(null);
@@ -101,14 +44,9 @@ export default function ProfileNotificationSoundsScreen() {
 
   const t = useCallback(
     (key: string, params?: Record<string, unknown>) => {
-      const translated =
-        typeof i18n === "function"
-          ? i18n(key, params)
-          : i18n?.t
-            ? i18n.t(key, params)
-            : key;
-
-      return translated && translated !== key ? translated : fallbackNotificationSoundText(key);
+      if (typeof i18n === "function") return i18n(key, params);
+      if (i18n?.t) return i18n.t(key, params);
+      return key;
     },
     [i18n],
   );
