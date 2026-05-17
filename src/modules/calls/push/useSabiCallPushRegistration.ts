@@ -25,11 +25,11 @@ function installSabiCallNotificationHandler() {
   Notifications.setNotificationHandler({
     handleNotification: async () =>
       ({
-        shouldShowAlert: false,
-        shouldPlaySound: false,
+        shouldShowAlert: true,
+        shouldPlaySound: true,
         shouldSetBadge: false,
-        shouldShowBanner: false,
-        shouldShowList: false,
+        shouldShowBanner: true,
+        shouldShowList: true,
       }) as Notifications.NotificationBehavior,
   });
 }
@@ -138,7 +138,11 @@ function declineSabiIncomingCallNotification(data: Record<string, unknown>) {
   });
 }
 
-function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpenKeyRef: React.MutableRefObject<string>) {
+function openSabiIncomingCallNotification(
+  data: Record<string, unknown>,
+  lastOpenKeyRef: React.MutableRefObject<string>,
+  actionIdentifier = "",
+) {
   if (readString(data.sabiType) !== "incoming_call") return;
 
   const auth = getAuthSessionState();
@@ -207,6 +211,8 @@ function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpe
     readString(data.avatarUrl) ||
     readString(data.photoUrl);
 
+  const acceptFromNotification = actionIdentifier === SABI_CALL_ACCEPT_ACTION_ID;
+
   const openKey = `${callId}:${routePath}`;
   if (lastOpenKeyRef.current === openKey) return;
   lastOpenKeyRef.current = openKey;
@@ -221,6 +227,9 @@ function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpe
       callId,
       incoming: "1",
       incomingCall: "1",
+      notificationAction: actionIdentifier || "",
+      autoAccept: acceptFromNotification ? "1" : "0",
+      acceptedFromNotification: acceptFromNotification ? "1" : "0",
       action: "incoming",
       direction: "incoming",
       phase: "ringing",
@@ -334,7 +343,7 @@ export function useSabiCallPushRegistration(enabled: boolean) {
         return;
       }
 
-      openSabiIncomingCallNotification(data, lastOpenKeyRef);
+      openSabiIncomingCallNotification(data, lastOpenKeyRef, response.actionIdentifier || "");
     });
 
     void Notifications.getLastNotificationResponseAsync()
@@ -343,6 +352,7 @@ export function useSabiCallPushRegistration(enabled: boolean) {
         openSabiIncomingCallNotification(
           (response.notification.request.content.data || {}) as Record<string, unknown>,
           lastOpenKeyRef,
+          response.actionIdentifier || "",
         );
       })
       .catch(() => undefined);

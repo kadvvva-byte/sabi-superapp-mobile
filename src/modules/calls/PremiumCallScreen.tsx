@@ -1685,6 +1685,30 @@ const [phase, setPhase] = useState<StandardCallPhase>(
     socket.emit("sabi-call:signal", acceptedSignalPayload);
   }, [callDebug, ensurePeer, isInvitedGroupParticipantRoute, rawGroupRouteParams, recordCallHistory, rememberGroupParticipantIds, route, setProtectedLocalStream, socket]);
 
+  const autoAcceptFromNotification = useMemo(() => {
+    const raw = [
+      String((route as any).autoAccept || ""),
+      String((route as any).acceptedFromNotification || ""),
+      String((route as any).notificationAction || ""),
+    ].join(" ").toLowerCase();
+
+    return raw === "1" || raw.includes("sabi_call_accept") || raw.includes("accept");
+  }, [routeKey]);
+
+  // SABI_CALL_PUSH_AUTO_ACCEPT:
+  // Android notification action "???????" opens the call screen and accepts it
+  // without requiring a second in-app tap.
+  useEffect(() => {
+    if (!autoAcceptFromNotification) return undefined;
+    if (!route.incoming || acceptedRef.current || phase !== "ringing") return undefined;
+
+    const timer = setTimeout(() => {
+      if (!acceptedRef.current) accept();
+    }, 120);
+
+    return () => clearTimeout(timer);
+  }, [accept, autoAcceptFromNotification, phase, route.incoming, routeKey]);
+
   const toggleMic = useCallback(() => {
     const next = !micEnabled;
     setMicEnabledState(next);

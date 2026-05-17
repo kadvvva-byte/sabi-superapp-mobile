@@ -1141,8 +1141,10 @@ export function createStandardCallPeer(options: {
       try {
         debug("startCaller:start");
         await ensurePeer();
+        // CALL-AV-121.2_START_CALLER_LOCK_RELEASE
         if (closed || !options.canStartCaller()) {
           debug("startCaller:cancelled_after_peer", { closed });
+          SABI_CALL_INITIAL_OFFER_LOCKS.delete(offerLock);
           return;
         }
         await negotiate("offer");
