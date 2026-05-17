@@ -1,8 +1,11 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+﻿import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { router, useLocalSearchParams } from "expo-router";
+import { activateKeepAwakeAsync, deactivateKeepAwake } from "expo-keep-awake";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Animated, DeviceEventEmitter, FlatList, Image, PanResponder, Pressable, StyleSheet, Text, TextInput, useWindowDimensions, View } from "react-native";
 import { RTCView } from "react-native-webrtc";
+
+const SABI_VIDEO_CALL_KEEP_AWAKE_TAG = "sabi-video-call-screen";
 
 import { useI18n } from "../../shared/i18n";
 import { getSuperAppSocket } from "../../shared/realtime/superapp-socket";
@@ -1883,7 +1886,7 @@ const [phase, setPhase] = useState<StandardCallPhase>(
       if (!isRealCallEndPayload(payload)) return;
       if (!shouldProcessSignal("call:ended", payload)) return;
 
-      // During direct в†’ group handoff the legacy direct peer can emit/receive a
+      // During direct РІвЂ вЂ™ group handoff the legacy direct peer can emit/receive a
       // normal call:end for the old 1:1 leg. call:end/call:ended must never
       // terminate an active group mesh. Group termination is handled only by
       // sabi-call:group:ended with an explicit end reason.
@@ -2166,6 +2169,18 @@ const [phase, setPhase] = useState<StandardCallPhase>(
 
   const showAccept = (route.incoming || isInvitedGroupParticipantRoute) && phase === "ringing";
   const active = phase === "active";
+
+  // SABI_VIDEO_CALL_KEEP_AWAKE:
+  // During video calls Android must not turn the screen off after 30 seconds.
+  useEffect(() => {
+    if (route.kind !== "video" || phase === "ended") return undefined;
+
+    void activateKeepAwakeAsync(SABI_VIDEO_CALL_KEEP_AWAKE_TAG).catch(() => undefined);
+
+    return () => {
+      deactivateKeepAwake(SABI_VIDEO_CALL_KEEP_AWAKE_TAG);
+    };
+  }, [phase, route.kind, route.callId]);
   // SABI_AUDIO_CALL_NO_VIDEO_BUTTON:
   // Audio calls must stay audio-only for launch. Do not show camera controls in
   // the audio route. VideoCall/Premium video route remains unchanged.
@@ -4001,6 +4016,9 @@ function createStyles(theme: ReturnType<typeof makeTheme>) {
     },
   });
 }
+
+
+
 
 
 

@@ -1154,8 +1154,8 @@ export default function ProfileScreen() {
         },
         {
           key: "notification_sounds",
-          title: tt("profile.app.notificationSounds.title"),
-          description: tt("profile.app.notificationSounds.description"),
+          title: tt("profile.app.notificationSounds.title") || tt("profile.notificationSounds.title") || "Мелодии и сигналы",
+          description: tt("profile.app.notificationSounds.description") || tt("profile.notificationSounds.subtitle") || "Выбор звуков для звонков, сообщений, AI, Wallet и системных уведомлений.",
           icon: (
             <PremiumGlyph
               colors={["rgba(181,136,255,0.32)", "rgba(88,213,201,0.24)"]}
@@ -2297,4 +2297,5 @@ const styles = StyleSheet.create({
     color: "#FFD7DD",
   },
 });
+
 

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+﻿import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Animated,
   Easing,
@@ -82,6 +82,9 @@ type IncomingCallEvent = Partial<{
   time: string;
   duration: string;
   type: string;
+  kind: string;
+  callKind: string;
+  callType: string;
   direction: string;
   status: string;
   verified: boolean;
@@ -206,7 +209,7 @@ function resolveAvatarLetter(name?: string | null) {
   const raw = String(name ?? "")
     .trim()
     .replace(/^\+/, "");
-  const hit = raw.match(/[A-Za-zА-Яа-яЁё0-9]/);
+  const hit = raw.match(/[\p{L}\p{N}]/u);
   return String(hit?.[0] || raw[0] || "S").toUpperCase();
 }
 
@@ -335,8 +338,8 @@ function mapEventToCallItem(
     name: String(event.name || event.title || "").trim() || "Sabi",
     time: event.time || formatTimeLabel(createdAt, locale),
     dateLabel: formatDateLabel(createdAt, todayLabel, yesterdayLabel, locale),
-    duration: String(event.duration || "—"),
-    type: normalizeCallType(event.type),
+    duration: String(event.duration || "вЂ”"),
+    type: normalizeCallType(event.kind || event.callKind || event.callType || event.type),
     direction: normalizeDirection(event.direction, event.status),
     verified: Boolean(event.verified),
     online: Boolean(event.online),
@@ -363,8 +366,8 @@ function mapHistoryItemToCallItem(
     name: item.counterpartyName || "Sabi",
     time: formatTimeLabel(createdAt, locale),
     dateLabel: formatDateLabel(createdAt, todayLabel, yesterdayLabel, locale),
-    duration: item.durationLabel || (item.durationSeconds ? `${item.durationSeconds}s` : "—"),
-    type: item.kind === "video" ? "video" : "voice",
+    duration: item.durationLabel || (item.durationSeconds ? `${item.durationSeconds}s` : "вЂ”"),
+    type: normalizeCallType(String((item as any).kind ?? (item as any).callKind ?? (item as any).callType ?? (item as any).type ?? "")),
     direction: item.direction,
     verified: Boolean(item.verified),
     online: false,
@@ -772,7 +775,7 @@ export default function CallsScreen() {
     const peerId = String(item.peerUserId || item.chatId || item.id || "").trim();
 
     if (!userId || !peerId) {
-      console.warn("[sabi-tabs-calls] audio call blocked: missing route identity", {
+      console.warn("[sabi-tabs-calls] call blocked: missing route identity", {
         userId: userId || "",
         peerId,
         callId: item.id || "",
@@ -780,6 +783,7 @@ export default function CallsScreen() {
       return;
     }
 
+    const resolvedCallKind = String((item as any).kind ?? (item as any).callKind ?? (item as any).callType ?? (item as any).type ?? "").toLowerCase().includes("video") ? "video" : "audio";
     const callRouteParams = {
       id: item.chatId || item.id,
       chatId: item.chatId || item.id,
@@ -789,9 +793,9 @@ export default function CallsScreen() {
       partnerId: peerId,
       targetUserId: peerId,
       roomType: "direct",
-      kind: "audio",
-      type: "voice",
-      callType: "audio",
+      kind: resolvedCallKind,
+      type: resolvedCallKind,
+      callType: resolvedCallKind,
       name: item.name,
       avatarLetter: resolveAvatarLetter(item.name),
       avatarUrl: item.avatarUrl || undefined,
@@ -802,7 +806,7 @@ export default function CallsScreen() {
     };
 
     router.push({
-      pathname: "/calls/audio",
+      pathname: String((callRouteParams as any).kind ?? (callRouteParams as any).type ?? "").toLowerCase() === "video" ? "/calls/video" : "/calls/audio",
       params: callRouteParams,
     } as never);
   };
@@ -999,7 +1003,7 @@ export default function CallsScreen() {
                   {texts.recentCalls}
                 </Text>
                 <Text style={[styles.sectionMeta, { color: withAlpha(palette.textSecondary, 0.76) }]}>
-                  {filteredCalls.length} • {missedCount}
+                  {filteredCalls.length} вЂў {missedCount}
                 </Text>
               </View>
 
@@ -1174,7 +1178,7 @@ export default function CallsScreen() {
                                 >
                                   {isMissed
                                     ? texts.missed
-                                    : `${call.duration || texts.durationFallback} • ${call.dateLabel}`}
+                                    : `${call.duration || texts.durationFallback} вЂў ${call.dateLabel}`}
                                 </Text>
                               </View>
 
@@ -1604,3 +1608,6 @@ const styles = StyleSheet.create<any>({
 
   pressedScale: { transform: [{ scale: 0.986 }] },
 });
+
+
+

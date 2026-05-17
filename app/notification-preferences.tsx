@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+﻿import React, { useEffect, useMemo, useState } from "react";
 import {
   Pressable,
   ScrollView,
@@ -11,6 +11,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { router } from "expo-router";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Bell, MoonStar, ShieldCheck, Volume2 } from "lucide-react-native";
 
 import { DEFAULT_NOTIFICATION_PREFERENCES } from "../src/modules/notifications/data/notifications";
@@ -38,6 +39,41 @@ const BLUE = "#63A8FF";
 const PURPLE = "#B588FF";
 const GOLD = "#FFCC66";
 const TEAL = "#58D5C9";
+
+const SABI_NOTIFICATION_PREFERENCES_STORAGE_KEY = "sabi.notification.preferences.v1";
+
+function mergeNotificationPreferences(saved: unknown): NotificationPreferences {
+  if (!saved || typeof saved !== "object" || Array.isArray(saved)) {
+    return DEFAULT_NOTIFICATION_PREFERENCES;
+  }
+
+  return {
+    ...DEFAULT_NOTIFICATION_PREFERENCES,
+    ...(saved as Partial<NotificationPreferences>),
+  };
+}
+
+async function loadStoredNotificationPreferences(): Promise<NotificationPreferences> {
+  try {
+    const raw = await AsyncStorage.getItem(SABI_NOTIFICATION_PREFERENCES_STORAGE_KEY);
+    if (!raw) return DEFAULT_NOTIFICATION_PREFERENCES;
+    return mergeNotificationPreferences(JSON.parse(raw));
+  } catch {
+    return DEFAULT_NOTIFICATION_PREFERENCES;
+  }
+}
+
+async function saveStoredNotificationPreferences(preferences: NotificationPreferences): Promise<void> {
+  try {
+    await AsyncStorage.setItem(
+      SABI_NOTIFICATION_PREFERENCES_STORAGE_KEY,
+      JSON.stringify(preferences),
+    );
+  } catch {
+    // Notification settings must never crash the screen.
+  }
+}
+
 
 const UI_TEXT = {
   en: {
@@ -90,14 +126,14 @@ const UI_TEXT = {
     channelsOn: "Каналы",
     on: "ВКЛ",
     off: "ВЫКЛ",
-    globalBehavior: "Глобально",
+    globalBehavior: "Общие настройки",
     quietModeTitle: "Тихий режим",
     start: "Начало",
     end: "Конец",
-    criticalBypassTitle: "Критические обходят",
+    criticalBypassTitle: "Критические уведомления обходят тихий режим",
     lockTitle: "Экран блокировки",
-    groupTitle: "Группировать",
-    autoReadTitle: "Авто прочитано",
+    groupTitle: "Группировать по модулю",
+    autoReadTitle: "Автоматически отмечать прочитанным",
     modules: "Модули",
     criticalOnlyTitle: "Только критические",
     channels: {
@@ -110,9 +146,9 @@ const UI_TEXT = {
       preview: "Превью",
     },
     moduleTexts: {
-      wallet: "Кошелёк",
-      business: "Бизнес",
-      merchant: "Мерчант",
+      wallet: "Wallet",
+      business: "Business",
+      merchant: "Merchant",
       messenger: "Messenger",
       marketplace: "Marketplace",
       ai: "AI",
@@ -130,15 +166,15 @@ const UI_TEXT = {
     quietMode: "Tinch",
     channelsOn: "Kanallar",
     on: "YOQ",
-    off: "O‘CHIQ",
+    off: "OвЂCHIQ",
     globalBehavior: "Global",
     quietModeTitle: "Tinch rejim",
     start: "Boshlanish",
     end: "Tugash",
-    criticalBypassTitle: "Muhim chetlab o‘tadi",
+    criticalBypassTitle: "Muhim chetlab oвЂtadi",
     lockTitle: "Qulf ekrani",
-    groupTitle: "Modul bo‘yicha",
-    autoReadTitle: "Avto o‘qilgan",
+    groupTitle: "Modul boвЂyicha",
+    autoReadTitle: "Avto oвЂqilgan",
     modules: "Modullar",
     criticalOnlyTitle: "Faqat muhim",
     channels: {
@@ -148,7 +184,7 @@ const UI_TEXT = {
       sms: "SMS",
       sound: "Ovoz",
       vibration: "Vibratsiya",
-      preview: "Ko‘rinish",
+      preview: "KoвЂrinish",
     },
     moduleTexts: {
       wallet: "Hamyon",
@@ -179,7 +215,29 @@ function updateModulePreference(
 export default function NotificationPreferencesScreen() {
   const language = useRuntimeLanguage();
   const texts = pickRuntimeDictionary(normalizeRuntimeLanguage(language), UI_TEXT);
-  const [preferences, setPreferences] = useState<NotificationPreferences>(DEFAULT_NOTIFICATION_PREFERENCES);
+  const [preferences, setPreferences] = useState<NotificationPreferences>(
+    DEFAULT_NOTIFICATION_PREFERENCES,
+  );
+  const [notificationPreferencesHydrated, setNotificationPreferencesHydrated] = useState(false);
+
+  useEffect(() => {
+    let mounted = true;
+
+    void loadStoredNotificationPreferences().then((next) => {
+      if (!mounted) return;
+      setPreferences(next);
+      setNotificationPreferencesHydrated(true);
+    });
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!notificationPreferencesHydrated) return;
+    void saveStoredNotificationPreferences(preferences);
+  }, [notificationPreferencesHydrated, preferences]);
 
   const enabledModules = useMemo(() => preferences.modules.filter((item) => item.enabled).length, [preferences.modules]);
   const enabledChannels = useMemo(() => preferences.modules.reduce((acc, module) => acc + Object.values(module.channels).filter(Boolean).length, 0), [preferences.modules]);
@@ -415,3 +473,5 @@ const styles = StyleSheet.create({
   channelChipTextActive: { color: GREEN },
   settingRowCompact: { minHeight: 52, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: 12, borderTopWidth: 1, borderTopColor: "rgba(255,255,255,0.08)", paddingTop: 10 },
 });
+
+
