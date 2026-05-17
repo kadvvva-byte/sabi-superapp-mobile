@@ -2,22 +2,10 @@
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - "app/**"
-      - "src/**"
-      - "assets/**"
-      - "package.json"
-      - "package-lock.json"
-      - "app.json"
-      - "eas.json"
-      - ".github/workflows/android-dev-client-apk.yml"
 
 jobs:
   build-dev-client-apk:
-    name: Build Android Dev Client APK
+    name: Build Android Expo Dev Client APK
     runs-on: ubuntu-latest
 
     env:
@@ -40,6 +28,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify expo-dev-client is installed
+        run: node -e "require.resolve('expo-dev-client/package.json'); console.log('expo-dev-client OK')"
+
+      - name: Verify EAS development profile
+        run: node -e "const eas=require('./eas.json'); const p=eas.build&&eas.build.development; if(!p||p.developmentClient!==true||p.android?.buildType!=='apk'){ console.error(JSON.stringify(p,null,2)); process.exit(1); } console.log('developmentClient APK profile OK')"
+
       - name: TypeScript check
         run: npx tsc --noEmit -p tsconfig.json
 
@@ -49,6 +43,5 @@ jobs:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
 
-      - name: Build dev client APK
+      - name: Build Android DEV CLIENT APK
         run: eas build --platform android --profile development --non-interactive --wait
-
