@@ -1,0 +1,57 @@
+﻿name: Android Dev Client Local APK
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build-dev-client-local-apk:
+    name: Build Android Dev Client APK without EAS
+    runs-on: ubuntu-latest
+
+    env:
+      NODE_ENV: development
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      EXPO_NO_TELEMETRY: 1
+      EXPO_PUBLIC_API_BASE_URL: http://178.154.210.119
+      EXPO_PUBLIC_AUTH_API_BASE_URL: http://178.154.210.119
+      EXPO_PUBLIC_QR_API_BASE_URL: http://178.154.210.119
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node 24
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Setup Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify expo-dev-client
+        run: node -e "require.resolve('expo-dev-client/package.json'); console.log('expo-dev-client OK')"
+
+      - name: TypeScript check
+        run: npx tsc --noEmit -p tsconfig.json
+
+      - name: Prebuild Android project
+        run: npx expo prebuild --platform android --clean --non-interactive
+
+      - name: Build debug dev client APK
+        run: |
+          cd android
+          chmod +x ./gradlew
+          ./gradlew assembleDebug --no-daemon
+
+      - name: Upload dev client APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: sabi-android-dev-client-apk
+          path: android/app/build/outputs/apk/debug/*.apk
