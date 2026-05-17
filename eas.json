@@ -1,6 +1,7 @@
+@'
 {
   "cli": {
-    "version": ">= 18.0.0"
+    "version": ">= 12.0.0"
   },
   "build": {
     "development": {
@@ -8,6 +9,12 @@
       "distribution": "internal",
       "android": {
         "buildType": "apk"
+      },
+      "env": {
+        "NODE_ENV": "development",
+        "EXPO_PUBLIC_API_BASE_URL": "http://178.154.210.119",
+        "EXPO_PUBLIC_AUTH_API_BASE_URL": "http://178.154.210.119",
+        "EXPO_PUBLIC_QR_API_BASE_URL": "http://178.154.210.119"
       }
     },
     "preview": {
@@ -16,19 +23,23 @@
         "buildType": "apk"
       },
       "env": {
+        "NODE_ENV": "production",
         "EXPO_PUBLIC_API_BASE_URL": "http://178.154.210.119",
         "EXPO_PUBLIC_AUTH_API_BASE_URL": "http://178.154.210.119",
-        "EXPO_PUBLIC_QR_API_BASE_URL": "http://178.154.210.119",
-        "EXPO_PUBLIC_SOCKET_BASE_URL": "http://178.154.210.119",
-        "EXPO_PUBLIC_SOCKET_PATH": "/socket.io",
-        "EXPO_PUBLIC_API_PORT": "80",
-        "EXPO_PUBLIC_ALLOW_NATIVE_LOOPBACK": "0"
+        "EXPO_PUBLIC_QR_API_BASE_URL": "http://178.154.210.119"
       }
     },
     "production": {
       "android": {
         "buildType": "app-bundle"
+      },
+      "env": {
+        "NODE_ENV": "production",
+        "EXPO_PUBLIC_API_BASE_URL": "http://178.154.210.119",
+        "EXPO_PUBLIC_AUTH_API_BASE_URL": "http://178.154.210.119",
+        "EXPO_PUBLIC_QR_API_BASE_URL": "http://178.154.210.119"
       }
     }
   }
 }
+'@ | Set-Content eas.json -Encoding utf8
