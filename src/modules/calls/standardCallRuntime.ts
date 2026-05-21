@@ -1,5 +1,4 @@
-﻿import { resolveSabiCallIceServers, summarizeSabiCallIceServersForDebug } from "./callIceServers";
-import { Audio } from "expo-av";
+import { resetSabiCallAudioMode as resetSabiCallAudioModeBridge, setSabiCallAudioMode } from "./sabiCallAudio";
 import {
   RTCPeerConnection,
   RTCIceCandidate,
@@ -8,6 +7,8 @@ import {
 } from "react-native-webrtc";
 
 import { profileStore } from "../profile/profile-store";
+import { resolveSabiCallIceServers, summarizeSabiCallIceServersForDebug } from "./callIceServers";
+import { emitSabiCallTransportEvent } from "./callSignalTransport";
 
 export type StandardCallKind = "audio" | "video";
 export type StandardCallPhase = "calling" | "ringing" | "connecting" | "active" | "ended";
@@ -50,7 +51,7 @@ export function record(value: unknown): AnyRecord {
 
 function sanitizeSabiCallDebugValue(value: unknown): unknown {
   if (value === null || value === undefined) return value;
-  if (typeof value === "string") return value.length > 220 ? value.slice(0, 220) + "вЂ¦" : value;
+  if (typeof value === "string") return value.length > 220 ? value.slice(0, 220) + "…" : value;
   if (typeof value === "number" || typeof value === "boolean") return value;
   if (Array.isArray(value)) return value.slice(0, 8).map(sanitizeSabiCallDebugValue);
   if (typeof value === "object") {
@@ -156,7 +157,7 @@ function safeColor(value: string | undefined, fallback: string): string {
 
 export function parseStandardCallRoute(params: unknown, fallbackKind: StandardCallKind): StandardCallRoute {
   const p = record(params);
-  const rawKind = firstText(p.kind, p.type, p.callKind, p.callType).toLowerCase();
+  const rawKind = firstText(p.kind, p.type, p.callKind, p.callType, p.mediaKind, p.callMediaKind, p.routePath, p.pathname).toLowerCase();
   const kind = rawKind.includes("video") ? "video" : fallbackKind;
 
   const rawDirection = firstText(p.incoming, p.direction, p.action, p.event).toLowerCase();
@@ -166,33 +167,46 @@ export function parseStandardCallRoute(params: unknown, fallbackKind: StandardCa
     rawDirection === "yes" ||
     rawDirection === "incoming";
 
-  const chatId = firstText(p.chatId, p.id, p.roomId) || "direct";
-  const roomId = firstText(p.roomId) || chatId;
-  const userId = firstText(p.userId, p.currentUserId, p.selfId, p.toUserId, p.receiverUserId);
-  const peerId = firstText(
-    p.peerId,
-    p.peerUserId,
-    p.partnerId,
-    p.targetUserId,
-    p.fromUserId,
-    p.callerId,
-    p.senderUserId,
-  );
+  const callIdParam = firstText(p.callId, p.callID, p.id);
+  const callParts = callIdParam.startsWith("call:") ? callIdParam.split(":") : [];
+  const callFromUserId = callParts.length >= 4 ? callParts[2] : "";
+  const callToUserId = callParts.length >= 4 ? callParts[3] : "";
 
-  const callId = firstText(p.callId) || "call:" + chatId + ":" + userId + ":" + peerId;
-  const name = firstText(p.name, p.contactName, p.callerName, p.roomTitle) || "Sabi";
+  const userId = incoming
+    ? firstText(p.currentUserId, p.selfId, p.me, p.localUserId, p.toUserId, p.receiverUserId, p.targetUserId, p.recipientId, callToUserId, p.userId)
+    : firstText(p.currentUserId, p.selfId, p.me, p.localUserId, p.userId, p.fromUserId, p.senderUserId, callFromUserId);
+
+  let peerId = incoming
+    ? firstText(p.peerId, p.peerUserId, p.partnerId, p.fromUserId, p.senderUserId, p.callerId, p.callerUserId, callFromUserId)
+    : firstText(p.peerId, p.peerUserId, p.partnerId, p.targetUserId, p.toUserId, p.receiverUserId, p.recipientId, callToUserId);
+
+  if (userId && peerId && userId === peerId) {
+    const fallbackPeer = incoming ? callFromUserId : callToUserId;
+    if (fallbackPeer && fallbackPeer !== userId) peerId = fallbackPeer;
+  }
+
+  const chatId = firstText(p.chatId, p.roomId) || ["direct", userId || "self", peerId || "peer"].join(":");
+  const roomId = firstText(p.roomId) || chatId;
+  const callId = callIdParam || "call:" + chatId + ":" + userId + ":" + peerId;
+  const displayName = (incoming
+    ? firstText(p.callerName, p.fromName, p.senderName, p.name, p.contactName, p.roomTitle)
+    : firstText(p.targetName, p.calleeName, p.peerName, p.partnerName, p.contactName, p.name, p.roomTitle)) || "Sabi";
   const avatarLetter =
-    firstText(p.avatarLetter) ||
-    name.replace(/^\\+/, "").match(/[A-Za-z\\u0410-\\u042F\\u0430-\\u044F\\u0401\\u04510-9]/u)?.[0]?.toUpperCase() ||
+    firstText(incoming ? p.callerAvatarLetter : p.targetAvatarLetter, p.avatarLetter) ||
+    displayName.replace(/^\+/, "").match(/[A-Za-z\u0410-\u042F\u0430-\u044F\u0401\u04510-9]/u)?.[0]?.toUpperCase() ||
     "S";
 
   const accent = safeColor(firstText(p.themeAccent, p.accent, p.accentColor, p.chatAccent), "#25D366");
   const background = safeColor(firstText(p.themeBackground, p.background, p.chatBackground), "#07130F");
 
-  const avatarUrl = firstText(p.avatarUrl, p.photoUrl, p.avatarUri, p.profilePhotoUrl);
-  const photoUrl = firstText(p.photoUrl, p.avatarUrl, p.avatarUri, p.profilePhotoUrl);
+  const avatarUrl = incoming
+    ? firstText(p.callerAvatarUrl, p.fromAvatarUrl, p.avatarUrl, p.photoUrl, p.avatarUri, p.profilePhotoUrl)
+    : firstText(p.targetAvatarUrl, p.targetPhotoUrl, p.peerAvatarUrl, p.peerPhotoUrl, p.avatarUrl, p.photoUrl, p.avatarUri, p.profilePhotoUrl);
+  const photoUrl = incoming
+    ? firstText(p.callerPhotoUrl, p.callerAvatarUrl, p.fromPhotoUrl, p.photoUrl, p.avatarUrl, p.avatarUri, p.profilePhotoUrl)
+    : firstText(p.targetPhotoUrl, p.targetAvatarUrl, p.peerPhotoUrl, p.peerAvatarUrl, p.photoUrl, p.avatarUrl, p.avatarUri, p.profilePhotoUrl);
 
-  return { kind, incoming, callId, chatId, roomId, userId, peerId, name, avatarLetter, accent, background, avatarUrl, photoUrl };
+  return { kind, incoming, callId, chatId, roomId, userId, peerId, name: displayName, avatarLetter, accent, background, avatarUrl, photoUrl };
 }
 
 function currentSabiCallerProfile() {
@@ -220,13 +234,16 @@ function makePayloadDisplayFields(route: StandardCallRoute, patch: AnyRecord) {
 
   if (!isOutgoingIncomingInvite) {
     return {
-      name: route.name,
-      contactName: route.name,
+      name: firstText(patch.name, patch.contactName, route.name),
+      contactName: firstText(patch.contactName, patch.name, route.name),
       callerName: firstText(patch.callerName),
       targetName: firstText(patch.targetName) || route.name,
-      avatarLetter: route.avatarLetter,
-      avatarUrl: route.avatarUrl || route.photoUrl || undefined,
-      photoUrl: route.photoUrl || route.avatarUrl || undefined,
+      calleeName: firstText(patch.calleeName),
+      avatarLetter: firstText(patch.avatarLetter, route.avatarLetter),
+      avatarUrl: firstText(patch.avatarUrl, patch.photoUrl, route.avatarUrl, route.photoUrl) || undefined,
+      photoUrl: firstText(patch.photoUrl, patch.avatarUrl, route.photoUrl, route.avatarUrl) || undefined,
+      targetAvatarUrl: firstText(patch.targetAvatarUrl, patch.targetPhotoUrl, patch.avatarUrl, route.avatarUrl, route.photoUrl) || undefined,
+      targetPhotoUrl: firstText(patch.targetPhotoUrl, patch.targetAvatarUrl, patch.photoUrl, route.photoUrl, route.avatarUrl) || undefined,
     };
   }
 
@@ -247,6 +264,8 @@ function makePayloadDisplayFields(route: StandardCallRoute, patch: AnyRecord) {
     callerAvatarLetter,
     avatarUrl: callerAvatarUrl || undefined,
     photoUrl: callerAvatarUrl || undefined,
+    targetAvatarUrl: firstText(patch.targetAvatarUrl, patch.avatarUrl, route.avatarUrl, route.photoUrl) || undefined,
+    targetPhotoUrl: firstText(patch.targetPhotoUrl, patch.photoUrl, route.photoUrl, route.avatarUrl) || undefined,
   };
 }
 
@@ -275,6 +294,8 @@ export function makeCallPayload(route: StandardCallRoute, patch: AnyRecord = {})
     callerName: display.callerName || undefined,
     targetName: display.targetName || undefined,
     calleeName: display.calleeName || undefined,
+    targetAvatarUrl: display.targetAvatarUrl || undefined,
+    targetPhotoUrl: display.targetPhotoUrl || undefined,
     avatarLetter: display.avatarLetter,
     callerAvatarLetter: display.callerAvatarLetter || undefined,
     avatarUrl: display.avatarUrl || undefined,
@@ -376,7 +397,18 @@ function clearCallLocks(route: StandardCallRoute) {
 }
 
 function sabiCallDescription(payload: unknown, fallbackType: "offer" | "answer") {
-  return makeSabiRtcDescriptionInit(payload, fallbackType);
+  const body = record(payload);
+  const nested = record(body.description);
+  const type = firstText(nested.type, body.descriptionType, body.signalKind, body.type).toLowerCase();
+  const sdp = firstText(nested.sdp, body.sdp);
+
+  if (!sdp) return null;
+
+  return {
+    ...(Object.keys(nested).length > 0 ? nested : {}),
+    type: type === "answer" || type === "offer" ? type : fallbackType,
+    sdp,
+  };
 }
 
 function sabiCallCandidate(payload: unknown) {
@@ -400,7 +432,7 @@ function sabiSignalingState(connection: any): string {
   }
 }
 
-async function withSabiCallTimeout<T>(label: string, promise: Promise<T>, timeoutMs = 4000): Promise<T> {
+async function withSabiCallTimeout<T>(label: string, promise: Promise<T>, timeoutMs = 9000): Promise<T> {
   let timer: ReturnType<typeof setTimeout> | null = null;
 
   try {
@@ -413,138 +445,6 @@ async function withSabiCallTimeout<T>(label: string, promise: Promise<T>, timeou
   } finally {
     if (timer) clearTimeout(timer);
   }
-}
-
-type SabiRtcDescriptionType = "offer" | "answer";
-
-type SabiRtcDescriptionInit = {
-  type: SabiRtcDescriptionType;
-  sdp: string;
-};
-
-function normalizeSabiCallSdp(value: unknown): string {
-  const raw = firstText(value);
-  if (!raw) return "";
-
-  // Some socket/backend bridges can double-escape SDP newlines. Native WebRTC
-  // then receives an invalid/null session description on Android. Always pass
-  // a clean SDP string to react-native-webrtc and keep the final CRLF that
-  // Android's SessionDescription parser expects on some devices.
-  const normalized = raw
-    .replace(/\\r\\n/g, "\r\n")
-    .replace(/\\n/g, "\n")
-    .replace(/\r?\n/g, "\r\n")
-    .replace(/^\uFEFF/, "");
-
-  return normalized.endsWith("\r\n") ? normalized : normalized + "\r\n";
-}
-
-function makeSabiRtcDescriptionInit(
-  value: unknown,
-  fallbackType: SabiRtcDescriptionType,
-): SabiRtcDescriptionInit | null {
-  const body = record(value);
-  const nested = record(body.description);
-  const rawType = firstText(nested.type, body.descriptionType, body.signalKind, body.type).toLowerCase();
-  const type: SabiRtcDescriptionType = rawType === "answer" || rawType === "offer" ? rawType : fallbackType;
-  const sdp = normalizeSabiCallSdp(firstText(nested.sdp, body.sdp, (value as AnyRecord)?.sdp));
-
-  if (!sdp || !sdp.startsWith("v=")) return null;
-
-  return { type, sdp };
-}
-
-async function setSabiRemoteDescription(
-  connection: any,
-  description: SabiRtcDescriptionInit,
-  label: string,
-) {
-  const plainDescription = { type: description.type, sdp: description.sdp };
-
-  // react-native-webrtc on Android can throw "SessionDescription is NULL"
-  // when it receives an RTCSessionDescription wrapper produced from a payload
-  // object that passed through Socket.IO. Passing a clean plain init object
-  // first is the most stable path; wrapper fallback keeps old builds compatible.
-  try {
-    await withSabiCallTimeout(label, connection.setRemoteDescription(plainDescription as any), 4000);
-    return;
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    if (!message.toLowerCase().includes("sessiondescription is null")) throw error;
-  }
-
-  await withSabiCallTimeout(
-    label + "_wrapped",
-    connection.setRemoteDescription(new RTCSessionDescription(plainDescription as any)), 4000,
-  );
-}
-
-async function setSabiLocalDescription(
-  connection: any,
-  description: SabiRtcDescriptionInit,
-  label: string,
-) {
-  const plainDescription = { type: description.type, sdp: description.sdp };
-
-  try {
-    await withSabiCallTimeout(label, connection.setLocalDescription(plainDescription as any), 4000);
-    return;
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    if (!message.toLowerCase().includes("sessiondescription is null")) throw error;
-  }
-
-  await withSabiCallTimeout(
-    label + "_wrapped",
-    connection.setLocalDescription(new RTCSessionDescription(plainDescription as any)), 4000,
-  );
-}
-
-async function setSabiNativeLocalDescription(
-  connection: any,
-  nativeDescription: unknown,
-  fallbackType: SabiRtcDescriptionType,
-  label: string,
-): Promise<SabiRtcDescriptionInit> {
-  const normalizedBefore = makeSabiRtcDescriptionInit(nativeDescription, fallbackType);
-  if (!normalizedBefore || normalizedBefore.type !== fallbackType) {
-    throw new Error("invalid_local_" + fallbackType);
-  }
-
-  // SABI_CALLS_100_3_ANDROID_NATIVE_LOCAL_DESCRIPTION:
-  // react-native-webrtc 124 on Android can throw "SessionDescription is NULL"
-  // when setLocalDescription receives a normalized plain object. The object
-  // returned by createOffer/createAnswer is the native-backed description and
-  // must be tried first. After WebRTC accepts it, read pc.localDescription for
-  // the exact SDP that should be sent to the peer.
-  try {
-    await withSabiCallTimeout(label + "_native", connection.setLocalDescription(nativeDescription as any), 4000);
-  } catch (nativeError) {
-    const nativeMessage = nativeError instanceof Error ? nativeError.message : String(nativeError);
-    if (!nativeMessage.toLowerCase().includes("sessiondescription is null")) throw nativeError;
-
-    try {
-      await setSabiLocalDescription(connection, normalizedBefore, label + "_normalized");
-    } catch (normalizedError) {
-      const normalizedMessage = normalizedError instanceof Error ? normalizedError.message : String(normalizedError);
-      if (!normalizedMessage.toLowerCase().includes("sessiondescription is null")) throw normalizedError;
-
-      // Last compatibility path for react-native-webrtc builds that support the
-      // browser-style no-arg setLocalDescription after createOffer/createAnswer.
-      await withSabiCallTimeout(label + "_implicit", connection.setLocalDescription(), 4000);
-    }
-  }
-
-  const normalizedAfter = makeSabiRtcDescriptionInit(
-    connection.localDescription || connection.currentLocalDescription || connection.pendingLocalDescription || nativeDescription,
-    fallbackType,
-  );
-
-  if (!normalizedAfter || normalizedAfter.type !== fallbackType) {
-    return normalizedBefore;
-  }
-
-  return normalizedAfter;
 }
 
 function isRenegotiatePayload(payload: unknown): boolean {
@@ -564,8 +464,8 @@ async function stabilizeVideoSender(sender: any) {
 
     parameters.encodings[0] = {
       ...parameters.encodings[0],
-      maxBitrate: 1600000,
-      maxFramerate: 30,
+      maxBitrate: 850000,
+      maxFramerate: 24,
     };
 
     if ("degradationPreference" in parameters) {
@@ -580,23 +480,15 @@ async function stabilizeVideoSender(sender: any) {
 
 
 async function resetSabiCallAudioMode() {
-  try {
-    await Audio.setAudioModeAsync({
-      allowsRecordingIOS: false,
-      playsInSilentModeIOS: true,
-      staysActiveInBackground: false,
-      shouldDuckAndroid: true,
-      playThroughEarpieceAndroid: false,
-    });
-  } catch {}
+  await resetSabiCallAudioModeBridge();
 }
 
 function videoConstraints(facing: StandardCameraFacing) {
   return {
     facingMode: facing,
-    width: 960,
-    height: 540,
-    frameRate: 30,
+    width: 640,
+    height: 360,
+    frameRate: 24,
   };
 }
 
@@ -628,10 +520,7 @@ export function createStandardCallPeer(options: {
   let upgradingVideo = false;
   let lastCameraSwitchAt = 0;
   let lastRemoteStreamUrl = "";
-  let lastRemoteTrackSignature = "";
   let connectedEmitted = false;
-  const SABI_DIRECT_ICE_FAILURE_GRACE_MS = 8000;
-  let iceFailureTimer: ReturnType<typeof setTimeout> | null = null;
   const pendingIceCandidates: unknown[] = [];
   let lastLocalAnswerDescription: AnyRecord | null = null;
   let lastRemoteAnswerSdp = "";
@@ -653,14 +542,11 @@ export function createStandardCallPeer(options: {
 
   const applyAudioMode = async () => {
     try {
-      await Audio.setAudioModeAsync({
-        allowsRecordingIOS: true,
-        playsInSilentModeIOS: true,
-        staysActiveInBackground: true,
-        shouldDuckAndroid: false,
-        // Audio calls default to earpiece to reduce echo. Video calls default to speaker.
-        // Manual speaker toggle still works through setSpeakerEnabled().
-        playThroughEarpieceAndroid: !speakerEnabled,
+      await setSabiCallAudioMode({
+        allowsRecording: true,
+        speakerEnabled,
+        shouldPlayInBackground: true,
+        duckOthers: false,
       });
     } catch {}
   };
@@ -668,49 +554,7 @@ export function createStandardCallPeer(options: {
   const emit = (eventName: string, payload: AnyRecord) => {
     const richPayload = makeCallPayload(options.route, payload);
     debug("emit:" + eventName, summarizeSabiCallPayloadForDebug(richPayload));
-    options.socket.emit(eventName, richPayload);
-
-    // SABI_CALLS_FINAL_B_SIGNAL_ALIASES:
-    // Some realtime gateways relay generic call signal events while others relay
-    // the explicit call:webrtc:* events. Emit both shapes with the same callId so
-    // the receiver can de-duplicate by makeSignalKey().
-    if (eventName === "call:webrtc:offer" || eventName === "call:webrtc:answer" || eventName === "call:webrtc:ice") {
-      const signalKind = eventName.endsWith(":offer")
-        ? "offer"
-        : eventName.endsWith(":answer")
-          ? "answer"
-          : "ice";
-      const signalPayload = {
-        ...richPayload,
-        signalKind,
-        event: firstText(richPayload.event) || signalKind,
-        action: firstText(richPayload.action) || signalKind,
-      };
-
-      options.socket.emit("call:signal", signalPayload);
-      options.socket.emit("call_signal", signalPayload);
-      options.socket.emit("call:webrtc:signal", signalPayload);
-      options.socket.emit("sabi-call:signal", signalPayload);
-    }
-
-    if (eventName === "call:connected") {
-      const connectedPayload = {
-        ...richPayload,
-        event: "connected",
-        action: "connected",
-        phase: "active",
-        status: "active",
-        connectedAt: new Date().toISOString(),
-      };
-
-      // SABI_CALLS_FINAL_D_CONNECTED_ALIASES:
-      // Different gateway versions relay either call:connected, call:active or
-      // sabi-call:* events. Emit all safe lifecycle aliases so the other phone
-      // can stop ringback and start the connected timer exactly once.
-      options.socket.emit("call:active", connectedPayload);
-      options.socket.emit("sabi-call:connected", connectedPayload);
-      options.socket.emit("sabi-call:active", connectedPayload);
-    }
+    emitSabiCallTransportEvent(options.socket, eventName, richPayload);
   };
 
   const publishLocal = () => {
@@ -754,21 +598,16 @@ export function createStandardCallPeer(options: {
 
     try {
       debug("offer:create:start", { event });
-      const rawOffer = await pc.createOffer();
-      const previewOffer = makeSabiRtcDescriptionInit(rawOffer, "offer");
-      if (!previewOffer) throw new Error("invalid_local_offer");
+      const offer = await pc.createOffer();
       if (closed) return;
 
-      debug("offer:setLocal:start", { event, sdp: previewOffer.sdp.slice(0, 96) });
-      const offer = await setSabiNativeLocalDescription(pc, rawOffer, "offer", "set_local_offer");
+      debug("offer:setLocal:start", { event, sdp: firstText((offer as AnyRecord).sdp).slice(0, 96) });
+      await pc.setLocalDescription(offer);
       if (closed) return;
 
-      debug("offer:setLocal:done", { event, sdp: offer.sdp.slice(0, 96), signalingState: sabiSignalingState(pc) });
-      debug("offer:send", { event, sdp: offer.sdp.slice(0, 96) });
+      debug("offer:send", { event, sdp: firstText((offer as AnyRecord).sdp).slice(0, 96) });
       emit("call:webrtc:offer", {
         event,
-        signalKind: "offer",
-        descriptionType: "offer",
         description: offer,
         sdp: offer.sdp,
       });
@@ -783,12 +622,7 @@ export function createStandardCallPeer(options: {
   const ensureLocalStream = async () => {
     if (localStream) return localStream;
 
-    // SABI_CALLS_100_2_FAST_MEDIA_START:
-    // On real Android devices Audio.setAudioModeAsync can block for several
-    // seconds while the other side already accepted the call. Do not let audio
-    // routing delay getUserMedia/offer creation; apply the audio route in the
-    // background before and after media capture.
-    void applyAudioMode();
+    await applyAudioMode();
     debug("media:getUserMedia:start", { videoWanted, speakerEnabled, cameraFacing });
 
     localStream = await mediaDevices.getUserMedia({
@@ -824,7 +658,6 @@ export function createStandardCallPeer(options: {
     });
 
     publishLocal();
-    void applyAudioMode();
     return localStream;
   };
 
@@ -832,20 +665,13 @@ export function createStandardCallPeer(options: {
     if (closed) throw new Error("peer_closed");
     if (pc) return pc;
 
-    const iceServers = await resolveSabiCallIceServers();
-
+    const iceServers = await resolveSabiCallIceServers().catch(() => [{ urls: "stun:stun.l.google.com:19302" }]);
     const nextPc: any = new RTCPeerConnection({
-      iceServers,
+      iceServers: iceServers.length ? iceServers : [{ urls: "stun:stun.l.google.com:19302" }],
     } as any);
 
     pc = nextPc;
-    debug("peer:created", {
-  iceServers: summarizeSabiCallIceServersForDebug(iceServers),
-  hasTurn: iceServers.some((server: any) => {
-    const urls = Array.isArray(server?.urls) ? server.urls : [server?.urls];
-    return urls.some((url: unknown) => String(url || "").startsWith("turn:") || String(url || "").startsWith("turns:"));
-  }),
-});
+    debug("peer:created", { iceServers: summarizeSabiCallIceServersForDebug(iceServers) || "stun" });
 
     nextPc.onicecandidate = (event: any) => {
       if (closed || !event?.candidate) return;
@@ -859,100 +685,33 @@ export function createStandardCallPeer(options: {
 
     nextPc.ontrack = (event: any) => {
       const stream = event?.streams?.[0];
-      const track = event?.track;
       if (!stream) {
-        debug("track:remote_empty", { trackKind: track?.kind, trackId: track?.id });
+        debug("track:remote_empty");
         return;
       }
 
       try {
-        if (track) track.enabled = true;
-        stream.getTracks?.().forEach((nextTrack: any) => {
-          nextTrack.enabled = true;
+        stream.getTracks?.().forEach((track: any) => {
+          track.enabled = true;
         });
       } catch {}
 
-      // VIDEO-100.4:
-      // rn-webrtc often fires ontrack twice for video calls: first audio, then
-      // video, but both events can point to the same MediaStream URL. The old
-      // guard published the stream only when the URL changed, so the UI kept the
-      // audio-only snapshot and the call looked connected without video. For
-      // video calls we republish the same stream when the track set changes and
-      // also schedule short refreshes because Android may attach the video track
-      // a few frames after the ontrack callback.
-      const publishRemoteStream = (reason: string) => {
-        try {
-          stream.getTracks?.().forEach((nextTrack: any) => {
-            nextTrack.enabled = true;
-          });
-        } catch {}
+      void applyAudioMode();
 
-        const audioCount = stream.getAudioTracks?.()?.length ?? 0;
-        const videoTracks = stream.getVideoTracks?.() ?? [];
-        const videoCount = videoTracks.length;
-        const streamTracks = stream.getTracks?.() ?? [];
-        const streamUrl =
-          typeof stream.toURL === "function"
-            ? String(stream.toURL())
-            : String((stream as any).id || "");
-        const currentSignature = [
-          streamUrl,
-          streamTracks.length,
-          audioCount,
-          videoCount,
-          track?.kind || "",
-          track?.id || "",
-          track?.readyState || "",
-          videoTracks.map((videoTrack: any) => [
-            videoTrack?.id || "",
-            videoTrack?.readyState || "",
-            videoTrack?.enabled === false ? "disabled" : "enabled",
-            videoTrack?.muted === true ? "muted" : "live",
-          ].join(":" )).join(","),
-        ].join("|");
+      const streamUrl =
+        typeof stream.toURL === "function"
+          ? String(stream.toURL())
+          : String((stream as any).id || "");
 
-        const isVideoCall = options.route.kind === "video";
-        const shouldPublish =
-          !streamUrl ||
-          streamUrl !== lastRemoteStreamUrl ||
-          (isVideoCall && (
-            currentSignature !== lastRemoteTrackSignature ||
-            track?.kind === "video" ||
-            videoCount > 0
-          ));
-
-        if (!shouldPublish) return;
-
+      if (!streamUrl || streamUrl !== lastRemoteStreamUrl) {
         lastRemoteStreamUrl = streamUrl;
-        lastRemoteTrackSignature = currentSignature;
         debug("track:remote_stream", {
-          reason,
           url: streamUrl,
-          trackKind: track?.kind,
-          trackId: track?.id,
-          tracks: streamTracks.length,
-          audio: audioCount,
-          video: videoCount,
-          videoEnabled: videoTracks.some((videoTrack: any) => videoTrack?.enabled !== false),
-          videoMuted: videoTracks.some((videoTrack: any) => videoTrack?.muted === true),
-          videoReadyState: firstText(...videoTracks.map((videoTrack: any) => videoTrack?.readyState)),
+          tracks: stream.getTracks?.()?.length ?? 0,
+          audio: stream.getAudioTracks?.()?.length ?? 0,
+          video: stream.getVideoTracks?.()?.length ?? 0,
         });
         options.onRemoteStream?.(stream);
-      };
-
-      void applyAudioMode();
-      publishRemoteStream("ontrack");
-
-      if (options.route.kind === "video") {
-        setTimeout(() => {
-          if (!closed) publishRemoteStream("video_delayed_120ms");
-        }, 120);
-        setTimeout(() => {
-          if (!closed) publishRemoteStream("video_delayed_450ms");
-        }, 450);
-        setTimeout(() => {
-          if (!closed) publishRemoteStream("video_delayed_900ms");
-        }, 900);
       }
 
       if (!connectedEmitted) {
@@ -972,54 +731,16 @@ export function createStandardCallPeer(options: {
       debug("peer:state", { iceConnectionState: ice, connectionState: connection, signalingState: nextPc.signalingState });
 
       if (ice === "connected" || ice === "completed" || connection === "connected") {
-        if (iceFailureTimer) {
-          clearTimeout(iceFailureTimer);
-          iceFailureTimer = null;
-        }
-
         void applyAudioMode();
         if (!connectedEmitted) {
           connectedEmitted = true;
           emit("call:connected", { event: "connected", phase: "active", status: "active", connectedAt: new Date().toISOString() });
           options.onConnected();
         }
-        return;
       }
 
-      const isIceStillWorking =
-        ice === "new" ||
-        ice === "checking" ||
-        connection === "new" ||
-        connection === "connecting";
-
-      if (isIceStillWorking) {
-        return;
-      }
-
-      const isTransientFailure =
-        ice === "disconnected" ||
-        ice === "failed" ||
-        connection === "disconnected" ||
-        connection === "failed";
-
-      if (isTransientFailure && !iceFailureTimer && !connectedEmitted) {
-        // SABI_DIRECT_ICE_FAILURE_GRACE:
-        // Android/WebRTC can briefly report failed/disconnected while ICE is still recovering.
-        // Do not end a 1:1 call immediately; give the peer time before surfacing connection_failed.
-        iceFailureTimer = setTimeout(() => {
-          iceFailureTimer = null;
-          if (closed || connectedEmitted) return;
-
-          const latestIce = String(nextPc.iceConnectionState || "");
-          const latestConnection = String(nextPc.connectionState || "");
-          if (latestIce === "connected" || latestIce === "completed" || latestConnection === "connected") return;
-
-          debug("peer:failure_grace_expired", {
-            iceConnectionState: latestIce,
-            connectionState: latestConnection,
-          });
-          options.onError("connection_failed");
-        }, SABI_DIRECT_ICE_FAILURE_GRACE_MS);
+      if (ice === "failed" || connection === "failed") {
+        options.onError("connection_failed");
       }
     };
 
@@ -1114,15 +835,6 @@ export function createStandardCallPeer(options: {
   };
 
   return {
-    async prepareCallee() {
-      try {
-        debug("prepareCallee:start");
-        await ensurePeer();
-      } catch (error) {
-        if (!closed) options.onError(error instanceof Error ? error.message : "connection_error");
-      }
-    },
-
     async startCaller() {
       if (!options.canStartCaller()) {
         debug("startCaller:blocked");
@@ -1161,8 +873,6 @@ export function createStandardCallPeer(options: {
         if (lastLocalAnswerDescription) {
           emit("call:webrtc:answer", {
             event: "answer",
-            signalKind: "answer",
-            descriptionType: "answer",
             description: lastLocalAnswerDescription,
             sdp: firstText(lastLocalAnswerDescription.sdp),
           });
@@ -1192,8 +902,6 @@ export function createStandardCallPeer(options: {
           if (lastLocalAnswerDescription) {
             emit("call:webrtc:answer", {
               event: "answer",
-              signalKind: "answer",
-              descriptionType: "answer",
               description: lastLocalAnswerDescription,
               sdp: firstText(lastLocalAnswerDescription.sdp),
             });
@@ -1206,7 +914,10 @@ export function createStandardCallPeer(options: {
           return;
         }
 
-        await setSabiRemoteDescription(connection, offer, "set_remote_offer");
+        await withSabiCallTimeout(
+          "set_remote_offer",
+          connection.setRemoteDescription(new RTCSessionDescription(offer as any)),
+        );
         if (closed) return;
         debug("offer:setRemote:done", { signalingState: sabiSignalingState(connection) });
 
@@ -1214,27 +925,23 @@ export function createStandardCallPeer(options: {
         if (closed) return;
 
         debug("answer:create:start");
-        const rawAnswer = await withSabiCallTimeout(
+        const answer = (await withSabiCallTimeout(
           "create_answer",
           connection.createAnswer(),
           9000,
-        );
-        const previewAnswer = makeSabiRtcDescriptionInit(rawAnswer, "answer");
-        if (!previewAnswer) throw new Error("invalid_local_answer");
+        )) as AnyRecord;
         if (closed) return;
 
-        const answer = await setSabiNativeLocalDescription(connection, rawAnswer, "answer", "set_local_answer");
+        await withSabiCallTimeout("set_local_answer", connection.setLocalDescription(answer as any), 9000);
         if (closed) return;
-        debug("answer:setLocal:done", { signalingState: sabiSignalingState(connection), sdp: answer.sdp.slice(0, 96) });
+        debug("answer:setLocal:done", { signalingState: sabiSignalingState(connection), sdp: firstText(answer.sdp).slice(0, 96) });
 
         lastLocalAnswerDescription = answer;
 
         emit("call:webrtc:answer", {
           event: "answer",
-          signalKind: "answer",
-          descriptionType: "answer",
           description: answer,
-          sdp: answer.sdp,
+          sdp: firstText(answer.sdp),
         });
       } catch (error) {
         debug("offer:handle:error", { message: error instanceof Error ? error.message : String(error), isRenegotiate });
@@ -1272,7 +979,10 @@ export function createStandardCallPeer(options: {
           return;
         }
 
-        await setSabiRemoteDescription(connection, answer, "set_remote_answer");
+        await withSabiCallTimeout(
+          "set_remote_answer",
+          connection.setRemoteDescription(new RTCSessionDescription(answer as any)),
+        );
 
         lastRemoteAnswerSdp = answerSdp;
         debug("answer:setRemote:done", { signalingState: sabiSignalingState(connection), pendingIce: pendingIceCandidates.length });
@@ -1464,11 +1174,6 @@ export function createStandardCallPeer(options: {
       debug("peer:close");
       closed = true;
 
-      if (iceFailureTimer) {
-        clearTimeout(iceFailureTimer);
-        iceFailureTimer = null;
-      }
-
       try {
         pc?.close?.();
       } catch {}
@@ -1485,7 +1190,6 @@ export function createStandardCallPeer(options: {
       localVideoTrack = null;
       localStream = null;
       lastRemoteStreamUrl = "";
-      lastRemoteTrackSignature = "";
       connectedEmitted = false;
       pendingIceCandidates.splice(0, pendingIceCandidates.length);
       lastLocalAnswerDescription = null;
@@ -1500,8 +1204,6 @@ export function createStandardCallPeer(options: {
     },
   };
 }
-
-
 
 
 

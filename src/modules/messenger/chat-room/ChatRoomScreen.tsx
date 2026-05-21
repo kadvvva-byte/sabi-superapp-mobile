@@ -1,4 +1,4 @@
-﻿import { Audio, ResizeMode, Video } from "expo-av";
+import { Audio, ResizeMode, Video } from "expo-av";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { LinearGradient } from "expo-linear-gradient";
 import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
@@ -275,7 +275,7 @@ function parseSabiAnimatedControl(value?: string | null): SabiAnimatedControlPay
   if (!parsed) return null;
 
   const id = typeof parsed.id === "string" && parsed.id.trim() ? parsed.id.trim() : `animated_${Date.now()}`;
-  const emoji = typeof parsed.emoji === "string" && parsed.emoji.trim() ? parsed.emoji.trim() : "РІСљРЃ";
+  const emoji = typeof parsed.emoji === "string" && parsed.emoji.trim() ? parsed.emoji.trim() : "✨";
   const title = typeof parsed.title === "string" && parsed.title.trim() ? parsed.title.trim() : "Animated";
   const subtitle =
     typeof parsed.subtitle === "string" && parsed.subtitle.trim() ? parsed.subtitle.trim() : title;
@@ -778,7 +778,7 @@ function isRouteStatusOnlineText(value?: string | null) {
     .toLowerCase()
     .replace(/\s+/g, " ");
 
-  return normalized === "online" || normalized === "onlayn" || normalized === "РІ СЃРµС‚Рё" || normalized === "РѕРЅР»Р°Р№РЅ";
+  return normalized === "online" || normalized === "onlayn" || normalized === "в сети" || normalized === "онлайн";
 }
 
 function formatLastSeenText(
@@ -893,7 +893,7 @@ function buildBotSubtitle(args: {
         : args.assistantLabel;
 
   const handle = String(args.handle ?? "").trim();
-  return handle ? `${base} Р’В· ${handle}` : base;
+  return handle ? `${base} · ${handle}` : base;
 }
 
 
@@ -1349,14 +1349,14 @@ const COMPOSER_BASE_HEIGHT = 70;
 const CHAT_ROOM_FALLBACKS = {
   encrypted: "Encrypted chat",
   you: "You",
-  typing: "yozmoqdaвЂ¦",
+  typing: "yozmoqda…",
   online: "onlayn",
   offline: "oflayn",
-  connecting: "ulanmoqdaвЂ¦",
-  reconnecting: "qayta ulanmoqdaвЂ¦",
-  lastSeenToday: "bugun {{time}} da koвЂrilgan",
-  lastSeenYesterday: "kecha {{time}} da koвЂrilgan",
-  lastSeenDate: "{{date}} {{time}} da koвЂrilgan",
+  connecting: "ulanmoqda…",
+  reconnecting: "qayta ulanmoqda…",
+  lastSeenToday: "bugun {{time}} da ko‘rilgan",
+  lastSeenYesterday: "kecha {{time}} da ko‘rilgan",
+  lastSeenDate: "{{date}} {{time}} da ko‘rilgan",
   conversationPlaceholder: "Conversation will appear here.",
   today: "Today",
   yesterday: "Yesterday",
@@ -1396,7 +1396,7 @@ const CHAT_ROOM_FALLBACKS = {
   documentAttached: "Document attached",
   documentPreviewUnavailable: "Document preview is unavailable.",
   documentOpenNotice: "Opening document",
-  documentOpening: "Hujjat ochilmoqdaвЂ¦",
+  documentOpening: "Hujjat ochilmoqda…",
   documentOpenError: "Unable to open document.",
   documentAccessError: "Unable to access document.",
   galleryTitle: "Gallery",
@@ -1418,8 +1418,8 @@ const CHAT_ROOM_FALLBACKS = {
   sabiContactsSubtitle: "Pick from Sabi Messenger contacts",
   openContactInPhone: "Save to phone contacts",
   openContactInMessenger: "Open in Sabi Messenger",
-  addContactTitle: "Kontakt qoвЂshish",
-  addContactSubtitle: "Kontakt maвЂ™lumotlarini kiriting",
+  addContactTitle: "Kontakt qo‘shish",
+  addContactSubtitle: "Kontakt ma’lumotlarini kiriting",
   addContactName: "Ism",
   addContactPhone: "Telefon",
   addContactUsername: "Foydalanuvchi nomi",
@@ -1468,7 +1468,7 @@ const CHAT_ROOM_FALLBACKS = {
   privacyTitle: "Privacy",
   privacyMessage: "Privacy settings",
   roomThemeUpdated: "Chat theme updated",
-  recordingVoice: "Ovoz yozilmoqdaвЂ¦",
+  recordingVoice: "Ovoz yozilmoqda…",
   voiceReady: "Voice ready",
   voiceReadyToSend: "Voice message is ready to send",
   voiceSent: "Voice message sent",
@@ -1709,7 +1709,7 @@ function getStatusIcon(status?: MessageItem["status"]) {
 }
 
 function shortenReplyText(value: string) {
-  return value.length > 72 ? `${value.slice(0, 72)}вЂ¦` : value;
+  return value.length > 72 ? `${value.slice(0, 72)}…` : value;
 }
 
 function buildReplyRef(
@@ -3007,7 +3007,7 @@ function getAttachmentMetaKindLabel(value?: string | null, fileBadgeGeneric = ""
   if (source.includes("MP4")) return "MP4";
   if (source.includes("VIDEO")) return "VIDEO";
   if (source.includes("IMAGE")) return "IMAGE";
-  return source.split("Р’В·")[0].trim() || fileBadgeGeneric;
+  return source.split("·")[0].trim() || fileBadgeGeneric;
 }
 
 function getFileExtensionLabel(name?: string | null) {
@@ -3182,7 +3182,7 @@ function MessageBubble({
     !isGift && message.animatedPayload?.id
       ? getPremiumAnimatedPreviewSource(message.animatedPayload.id)
       : null;
-  const animatedEmoji = message.animatedPayload?.emoji ?? giftAsset?.fallbackEmoji ?? "РІСљРЃ";
+  const animatedEmoji = message.animatedPayload?.emoji ?? giftAsset?.fallbackEmoji ?? "✨";
   const animatedImageSource = isGift ? giftAsset?.icon : premiumAnimatedSource ?? undefined;
 
   return (
@@ -3404,7 +3404,7 @@ function MessageBubble({
               {message.previewTitle}
             </Text>
             <Text style={[styles.documentMeta, { color: metaColor }]} numberOfLines={1}>
-              {(message.previewSubtitle || "").replace(/\s*Р’В·\s*/g, " вЂў ")}
+              {(message.previewSubtitle || "").replace(/\s*·\s*/g, " • ")}
             </Text>
           </View>
         </LinearGradient>
@@ -5819,6 +5819,10 @@ const directVideoCallRouteParams = {
   partnerId: directCallPeerId,
   targetUserId: directCallPeerId,
   roomType,
+  kind: "video",
+  type: "video",
+  callKind: "video",
+  callType: "video",
   name: meta.name,
   handle: directCallHandle,
   phone: directCallPhone,
@@ -6284,7 +6288,7 @@ const secondaryHeaderAction = () => {
     setContactSheetMode("sabi");
     setContactSheetLoading(true);
     try {
-      const items = await listCustomMessengerContacts();
+      const items = await listCustomMessengerContacts(transportUserId || routeUserId || undefined);
       setContactSheetOptions(
         dedupeContactOptions(
           items.map((item) => ({
@@ -7402,7 +7406,7 @@ const secondaryHeaderAction = () => {
           previewSubtitle:
             result.effectId === "normal"
               ? texts.imageNormal
-              : `${effect.title} Р’В· ${result.effectIntensity}%`,
+              : `${effect.title} · ${result.effectIntensity}%`,
           localUri: result.uri,
           mimeType: imageMimeType,
           transportMediaUriOverride: uploadedTransportUri,
@@ -7488,7 +7492,7 @@ const secondaryHeaderAction = () => {
           previewSubtitle:
             result.effectId === "normal"
               ? texts.imageNormal
-              : `${effect.title} Р’В· ${result.effectIntensity}%`,
+              : `${effect.title} · ${result.effectIntensity}%`,
           fileLabel: durationLabel,
           durationLabel,
           durationMs: result.durationMs ?? undefined,
@@ -7941,7 +7945,7 @@ const secondaryHeaderAction = () => {
       id: item.id,
       emoji,
       title: item.label,
-      subtitle: `x${quantity} Р’В· ${totalDiamonds.toLocaleString()} ${texts.diamondsUnit}`,
+      subtitle: `x${quantity} · ${totalDiamonds.toLocaleString()} ${texts.diamondsUnit}`,
       durationMs: item.durationMs,
       kind: "gift",
       premium: item.premium,
@@ -7952,7 +7956,7 @@ const secondaryHeaderAction = () => {
       id: item.id,
       emoji,
       title: item.label,
-      subtitle: `x${quantity} Р’В· ${totalDiamonds.toLocaleString()} ${texts.diamondsUnit}`,
+      subtitle: `x${quantity} · ${totalDiamonds.toLocaleString()} ${texts.diamondsUnit}`,
       durationMs: item.durationMs,
       kind: "gift" as const,
       premium: item.premium,
@@ -8698,6 +8702,10 @@ const secondaryHeaderAction = () => {
                         partnerId: directCallPeerId,
                         targetUserId: directCallPeerId,
                         roomType,
+                        kind: "audio",
+                        type: "audio",
+                        callKind: "audio",
+                        callType: "audio",
                         name: meta.name,
                         handle: directCallHandle,
                         phone: directCallPhone,
@@ -9033,7 +9041,7 @@ const secondaryHeaderAction = () => {
                       {isVoiceRecording
                         ? texts.voiceRecordingSubtitle
                         : pendingVoiceMessage
-                          ? `${pendingVoiceMessage.durationLabel} Р’В· ${isSendingPendingVoice ? texts.voiceSent : texts.tapSend}`
+                          ? `${pendingVoiceMessage.durationLabel} · ${isSendingPendingVoice ? texts.voiceSent : texts.tapSend}`
                           : ""}
                     </Text>
                   </View>
@@ -9248,7 +9256,7 @@ const secondaryHeaderAction = () => {
 
               const subtitle =
                 typeof latitude === "number" && typeof longitude === "number"
-                  ? `${item.subtitle} вЂў ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`
+                  ? `${item.subtitle} • ${latitude.toFixed(5)}, ${longitude.toFixed(5)}`
                   : item.subtitle;
 
               await sendKernelMessage({
@@ -9288,7 +9296,7 @@ const secondaryHeaderAction = () => {
                 return;
               }
 
-              const subtitle = `${item.subtitle} вЂў ${coords.latitude.toFixed(5)}, ${coords.longitude.toFixed(5)}`;
+              const subtitle = `${item.subtitle} • ${coords.latitude.toFixed(5)}, ${coords.longitude.toFixed(5)}`;
 
               await sendKernelMessage({
                 type: "LOCATION",

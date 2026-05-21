@@ -252,7 +252,7 @@ export const AM_AI_MOBILE_LOCALE = {
         nativeBridge: "Ovoz ulanishi",
         sttTtsBridgeTitle: "Ovoz tizimi",
         realBridgeDescription:
-          "Ovoz matni va javoblar haqiqiy ovoz provayderi orqali ishlaydi.",
+          "እውነተኛ የሞባይል ድልድይ፦ የማይክሮፎን ቀረጻ፣ native የድምጽ ክስተቶች፣ transcript ማስተላለፍ እና የaudio URL 播放። የጽሑፍ-ብቻ TTS አይመሰልም።",
         bind: "Ulash",
         start: "ጀምር",
         stop: "አቁም",
@@ -273,7 +273,7 @@ export const AM_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Ovozli javob matni…",
         playLastTts: "Oxirgi javobni eshittirish",
         noFakeTts:
-          "Audio faqat haqiqiy audio URL kelganda eshittiriladi.",
+          "የሐሰት ድምጽ የለም፦ ድምጽ የሚጫወተው backend/native TTS audio URL ሲመልስ ብቻ ነው። expo-speech ወይም native TTS module እስኪገናኝ ድረስ የጽሑፍ-ብቻ TTS እንደ ጽሑፍ ይታያል።",
         runtimeLog: "Ovoz hodisalari",
         noEvents: "Hozircha hodisa yo‘q.",
         sessionStopped: "Sessiya to‘xtadi.",
@@ -352,7 +352,7 @@ export const AM_AI_MOBILE_LOCALE = {
         subtitle: "ለSabi መገናኛ የሚጠቀሙትን ቋንቋ ይምረጡ።",
         accessTitle: "Premium AI funksiyalari",
         noFakePayment:
-          "Premium faqat haqiqiy COIN to‘lovi tasdiqlangandan keyin yoqiladi.",
+          "ክፍያ እዚህ አይመሰልም። ማንቃት ከእውነተኛ Premium/COIN ማረጋገጫ ፍሰት መምጣት አለበት።",
         realtimeCallTranslationTitle: "Qo‘ng‘iroq tarjimasi",
         realtimeTranslationTitle: "Real vaqt tarjimasi",
         realtimeTranslationDescription:

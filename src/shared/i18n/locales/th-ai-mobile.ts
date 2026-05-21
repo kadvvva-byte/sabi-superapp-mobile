@@ -252,7 +252,7 @@ const TH_AI_MOBILE_LOCALE = {
         nativeBridge: "Ovoz ulanishi",
         sttTtsBridgeTitle: "Ovoz tizimi",
         realBridgeDescription:
-          "Ovoz matni va javoblar haqiqiy ovoz provayderi orqali ishlaydi.",
+          "บริดจ์มือถือจริง: การบันทึกไมโครโฟน เหตุการณ์เสียง native การส่งต่อ transcript และการเล่น audio URL ไม่มีการจำลอง Text-only TTS",
         bind: "Ulash",
         start: "Boshlash",
         stop: "To‘xtatish",
@@ -273,7 +273,7 @@ const TH_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Ovozli javob matni…",
         playLastTts: "Oxirgi javobni eshittirish",
         noFakeTts:
-          "Audio faqat haqiqiy audio URL kelganda eshittiriladi.",
+          "ไม่มีเสียงปลอม: audio playback ทำงานเฉพาะเมื่อ backend/native TTS ส่ง audio URL กลับมา Text-only TTS จะแสดงเป็นข้อความจนกว่าจะเชื่อมต่อ expo-speech หรือ native TTS module",
         runtimeLog: "Ovoz hodisalari",
         noEvents: "Hozircha hodisa yo‘q.",
         sessionStopped: "Sessiya to‘xtadi.",
@@ -352,7 +352,7 @@ const TH_AI_MOBILE_LOCALE = {
         subtitle: "COIN orqali Premium AI.",
         accessTitle: "Premium AI funksiyalari",
         noFakePayment:
-          "Premium faqat haqiqiy COIN to‘lovi tasdiqlangandan keyin yoqiladi.",
+          "ไม่มีการจำลองการชำระเงินที่นี่ การเปิดใช้งานต้องมาจากขั้นตอนยืนยัน Premium/COIN จริง",
         realtimeCallTranslationTitle: "Qo‘ng‘iroq tarjimasi",
         realtimeTranslationTitle: "Real vaqt tarjimasi",
         realtimeTranslationDescription:

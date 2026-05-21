@@ -1,4 +1,4 @@
-﻿import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Animated,
   Easing,
@@ -72,6 +72,7 @@ type CallItem = {
   avatarUrl?: string;
   createdAt?: string;
   chatId?: string;
+  callId?: string;
   peerUserId?: string;
 };
 
@@ -85,6 +86,8 @@ type IncomingCallEvent = Partial<{
   kind: string;
   callKind: string;
   callType: string;
+  mediaKind: string;
+  callMediaKind: string;
   direction: string;
   status: string;
   verified: boolean;
@@ -95,6 +98,7 @@ type IncomingCallEvent = Partial<{
   avatarUri: string;
   photoUrl: string;
   chatId: string;
+  callId: string;
   peerUserId: string;
   userId: string;
   fromUserId: string;
@@ -164,18 +168,34 @@ function formatDateLabel(
   const date = dateInput ? new Date(dateInput) : new Date();
   if (Number.isNaN(date.getTime())) return fallbackToday;
 
+  const dayKey = (value: Date) =>
+    [value.getFullYear(), value.getMonth(), value.getDate()].join("-");
+
   const now = new Date();
+  const yesterday = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1);
+  const inputDay = dayKey(date);
+  const nowDay = dayKey(now);
+
+  if (inputDay === nowDay) return fallbackToday;
+
+  // Calls can arrive from backend as UTC timestamps while the UI clock is shown in the
+  // device locale. If the call is very recent, the calls list must not mark it as
+  // yesterday just because of a timezone/day-boundary mismatch.
+  const ageMs = now.getTime() - date.getTime();
+  if (ageMs >= -5 * 60 * 1000 && ageMs < 24 * 60 * 60 * 1000) {
+    return fallbackToday;
+  }
+
+  if (inputDay === dayKey(yesterday)) return fallbackYesterday;
+
   const startOfToday = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const startOfDate = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-  const diffDays = Math.round(
+  const diffDays = Math.floor(
     (startOfToday.getTime() - startOfDate.getTime()) / 86400000,
   );
 
-  if (diffDays <= 0) return fallbackToday;
-  if (diffDays === 1) return fallbackYesterday;
-
   try {
-    if (diffDays < 7) {
+    if (diffDays >= 0 && diffDays < 7) {
       return date.toLocaleDateString(locale || undefined, { weekday: "short" });
     }
     return date.toLocaleDateString(locale || undefined, {
@@ -183,13 +203,130 @@ function formatDateLabel(
       month: "short",
     });
   } catch {
-    if (diffDays < 7) return date.toDateString().slice(0, 3);
+    if (diffDays >= 0 && diffDays < 7) return date.toDateString().slice(0, 3);
     return date.toDateString().slice(4, 10);
   }
 }
 
-function normalizeCallType(value?: string): CallType {
-  return String(value).toLowerCase() === "video" ? "video" : "voice";
+const CALL_TYPE_FIELD_NAMES = new Set([
+  "type",
+  "kind",
+  "calltype",
+  "callkind",
+  "mediakind",
+  "callmediakind",
+  "mediatype",
+  "callmode",
+  "mode",
+  "routekind",
+  "routetype",
+  "routepath",
+  "pathname",
+  "path",
+  "screen",
+  "href",
+  "url",
+]);
+
+function collectCallTypeCandidates(
+  value: unknown,
+  output: unknown[] = [],
+  depth = 0,
+  seen = new Set<object>(),
+): unknown[] {
+  if (depth > 5 || value == null) return output;
+
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    const raw = String(value).toLowerCase();
+    if (raw.includes("/calls/video") || raw.includes("calls/video") || raw.includes("video_call") || raw.includes("video-call")) {
+      output.push(value);
+    }
+    if (raw.includes("/calls/audio") || raw.includes("calls/audio") || raw.includes("audio_call") || raw.includes("audio-call")) {
+      output.push(value);
+    }
+    return output;
+  }
+
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectCallTypeCandidates(item, output, depth + 1, seen));
+    return output;
+  }
+
+  if (typeof value !== "object") return output;
+  if (seen.has(value)) return output;
+  seen.add(value);
+
+  Object.entries(value as Record<string, unknown>).forEach(([key, nested]) => {
+    const normalizedKey = key.toLowerCase().replace(/[^a-z0-9]/g, "");
+    if (CALL_TYPE_FIELD_NAMES.has(normalizedKey)) {
+      output.push(nested);
+    }
+    collectCallTypeCandidates(nested, output, depth + 1, seen);
+  });
+
+  return output;
+}
+
+function normalizeCallType(...values: unknown[]): CallType {
+  const directValues = values
+    .flatMap((value) => Array.isArray(value) ? value : [value])
+    .map((value) => String(value ?? "").trim().toLowerCase())
+    .filter(Boolean);
+
+  for (const value of directValues) {
+    if (value === "audio" || value === "voice" || value === "audio-call" || value === "audio_call") return "voice";
+    if (value === "video" || value === "video-call" || value === "video_call") return "video";
+    if (value.includes("/calls/audio") || value.includes("calls/audio")) return "voice";
+    if (value.includes("/calls/video") || value.includes("calls/video")) return "video";
+  }
+
+  const candidates: unknown[] = [];
+
+  values.forEach((value) => {
+    if (Array.isArray(value)) {
+      value.forEach((item) => collectCallTypeCandidates(item, candidates));
+    } else {
+      collectCallTypeCandidates(value, candidates);
+    }
+  });
+
+  const nestedValues = candidates
+    .flatMap((value) => Array.isArray(value) ? value : [value])
+    .map((value) => String(value ?? "").trim().toLowerCase())
+    .filter(Boolean);
+
+  for (const value of nestedValues) {
+    if (value === "audio" || value === "voice" || value === "audio-call" || value === "audio_call") return "voice";
+    if (value === "video" || value === "video-call" || value === "video_call") return "video";
+    if (value.includes("/calls/audio") || value.includes("calls/audio")) return "voice";
+    if (value.includes("/calls/video") || value.includes("calls/video")) return "video";
+  }
+
+  const raw = nestedValues.join(" ");
+  if (raw.includes("audio") || raw.includes("voice")) return "voice";
+  if (raw.includes("video")) return "video";
+
+  return "voice";
+}
+
+function extractPeerFromCallRouteId(value: unknown, currentUserId?: string) {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "";
+  const parts = raw.split(":").filter(Boolean);
+
+  if (parts[0] === "call" && parts.length >= 5) {
+    const from = parts[2] || "";
+    const to = parts[3] || "";
+    if (from && from !== currentUserId) return from;
+    if (to && to !== currentUserId) return to;
+  }
+
+  if (parts[0] === "direct" && parts.length >= 3) {
+    const peer = parts.slice(1).find((part) => part && part !== currentUserId);
+    return peer || "";
+  }
+
+  return "";
 }
 
 function normalizeDirection(value?: string, status?: string): CallDirection {
@@ -226,27 +363,51 @@ function getAvatarUriFromUnknownProfile(value: unknown) {
 }
 
 function buildCallDedupKey(item: CallItem) {
+  const callId = String(item.callId || "").trim();
+  if (callId) return `call:${callId}`;
+
+  const id = String(item.id || "").trim();
+  if (id) return `id:${id}`;
+
   return [
-    String(item.id || "").trim(),
+    String(item.peerUserId || "").trim(),
     String(item.createdAt || item.time || "").trim(),
-    String(item.type || "").trim(),
     String(item.direction || "").trim(),
+    String(item.type || "").trim(),
     normalizeSearchValue(item.name),
   ].join("|");
 }
 
+function mergeCallItems(existing: CallItem, next: CallItem): CallItem {
+  const resolvedType: CallType = next.type || existing.type;
+  return {
+    ...existing,
+    ...next,
+    type: resolvedType,
+    peerUserId: next.peerUserId || existing.peerUserId,
+    callId: next.callId || existing.callId,
+    chatId: next.chatId || existing.chatId,
+    avatarUrl: next.avatarUrl || existing.avatarUrl,
+  };
+}
+
 function dedupeCallItems(items: CallItem[]) {
-  const seen = new Set<string>();
-  const result: CallItem[] = [];
+  const byKey = new Map<string, CallItem>();
+  const order: string[] = [];
 
   items.forEach((item) => {
     const key = buildCallDedupKey(item);
-    if (seen.has(key)) return;
-    seen.add(key);
-    result.push(item);
+    const existing = byKey.get(key);
+    if (existing) {
+      byKey.set(key, mergeCallItems(existing, item));
+      return;
+    }
+
+    byKey.set(key, item);
+    order.push(key);
   });
 
-  return result;
+  return order.map((key) => byKey.get(key)).filter((item): item is CallItem => Boolean(item));
 }
 
 function buildCallRenderKey(item: CallItem, index: number) {
@@ -254,15 +415,46 @@ function buildCallRenderKey(item: CallItem, index: number) {
   return `${base}|row-${index}`;
 }
 
-function getCallPresenceLookupId(item: Pick<CallItem, "peerUserId" | "chatId" | "id">) {
+function getCallPresenceLookupId(item: Pick<CallItem, "peerUserId" | "chatId" | "callId" | "id">) {
   return (
     String(item.peerUserId ?? "").trim() ||
+    extractPeerFromCallRouteId(item.callId, undefined) ||
     String(item.chatId ?? "").trim() ||
     String(item.id ?? "").trim()
   );
 }
 
-function isCallPeerOnline(item: Pick<CallItem, "peerUserId" | "chatId" | "id" | "online">) {
+function resolveDirectCallPeerId(item: Pick<CallItem, "peerUserId" | "chatId" | "callId" | "id">, currentUserId?: string) {
+  const direct = String(item.peerUserId || "").trim();
+  if (direct && direct !== currentUserId) return direct;
+
+  const callRoutePeer = extractPeerFromCallRouteId(item.callId, currentUserId);
+  if (callRoutePeer) return callRoutePeer;
+
+  const candidates = [String(item.chatId || ""), String(item.id || "")];
+  for (const value of candidates) {
+    const parts = value.split(":").filter(Boolean);
+    if (parts[0] === "call" && parts.length >= 6) {
+      const from = parts[2] || "";
+      const to = parts[3] || "";
+      if (from && currentUserId && from !== currentUserId) return from;
+      if (to && currentUserId && to !== currentUserId) return to;
+    }
+    if (parts[0] === "direct" && parts.length >= 3) {
+      const users = parts.slice(1).filter((part) => part && part !== currentUserId);
+      if (users[0]) return users[0];
+    }
+  }
+
+  return "";
+}
+
+function buildDirectCallId(chatId: string, userId: string, peerId: string) {
+  const safeChatId = String(chatId || "direct").replace(/:/g, "_");
+  return ["call", safeChatId, userId, peerId, Date.now(), Math.random().toString(36).slice(2, 10)].join(":");
+}
+
+function isCallPeerOnline(item: Pick<CallItem, "peerUserId" | "chatId" | "callId" | "id" | "online">) {
   if (item.online) return true;
   const userId = getCallPresenceLookupId(item);
   return userId ? messengerKernelFacade.selectors.isUserOnline(userId) : false;
@@ -338,17 +530,18 @@ function mapEventToCallItem(
     name: String(event.name || event.title || "").trim() || "Sabi",
     time: event.time || formatTimeLabel(createdAt, locale),
     dateLabel: formatDateLabel(createdAt, todayLabel, yesterdayLabel, locale),
-    duration: String(event.duration || "вЂ”"),
-    type: normalizeCallType(event.kind || event.callKind || event.callType || event.type),
+    duration: String(event.duration || "—"),
+    type: normalizeCallType(event.kind, event.callKind, event.callType, event.mediaKind, event.callMediaKind, event.type, event),
     direction: normalizeDirection(event.direction, event.status),
     verified: Boolean(event.verified),
     online: Boolean(event.online),
     unread: Boolean(event.unread),
     avatarUrl: getAvatarUriFromUnknownProfile(event) || avatarFallback || "",
     createdAt,
-    chatId: String(event.chatId || event.id || "").trim() || undefined,
+    chatId: String(event.chatId || "").trim() || undefined,
+    callId: String(event.callId || event.id || "").trim() || undefined,
     peerUserId:
-      String(event.peerUserId || event.userId || event.fromUserId || event.targetUserId || "").trim() ||
+      String(event.peerUserId || event.targetUserId || event.fromUserId || event.userId || "").trim() ||
       undefined,
   };
 }
@@ -360,14 +553,14 @@ function mapHistoryItemToCallItem(
   locale?: string,
   avatarFallback?: string,
 ): CallItem {
-  const createdAt = item.startedAt || item.endedAt || new Date().toISOString();
+  const createdAt = item.endedAt || item.answeredAt || item.startedAt || new Date().toISOString();
   return {
-    id: item.chatId || item.peerId || item.callId || item.id,
+    id: String(item.id || item.callId || item.chatId || item.peerId || `call:${createdAt}:${item.counterpartyName || "unknown"}`),
     name: item.counterpartyName || "Sabi",
     time: formatTimeLabel(createdAt, locale),
     dateLabel: formatDateLabel(createdAt, todayLabel, yesterdayLabel, locale),
-    duration: item.durationLabel || (item.durationSeconds ? `${item.durationSeconds}s` : "вЂ”"),
-    type: normalizeCallType(String((item as any).kind ?? (item as any).callKind ?? (item as any).callType ?? (item as any).type ?? "")),
+    duration: item.durationLabel || (item.durationSeconds ? `${item.durationSeconds}s` : "—"),
+    type: item.kind === "video" ? "video" : "voice",
     direction: item.direction,
     verified: Boolean(item.verified),
     online: false,
@@ -375,7 +568,8 @@ function mapHistoryItemToCallItem(
     avatarUrl: item.avatarUrl || avatarFallback || "",
     createdAt,
     chatId: item.chatId || undefined,
-    peerUserId: item.peerId || undefined,
+    callId: item.callId || undefined,
+    peerUserId: item.peerId || extractPeerFromCallRouteId(item.callId, item.userId || undefined) || undefined,
   };
 }
 
@@ -536,6 +730,7 @@ export default function CallsScreen() {
   const [calls, setCalls] = useState<CallItem[]>([]);
   const [themeState, setThemeState] = useState<MessengerThemeState>(getMessengerThemeState());
   const avatarLookupRef = useRef<CallAvatarLookup>({ byId: {}, byName: {} });
+  const invalidRouteWarnedRef = useRef<Set<string>>(new Set());
 
   const palette = useMemo<MessengerThemePalette>(
     () => getMessengerThemePalette(themeState.themeId),
@@ -772,29 +967,41 @@ export default function CallsScreen() {
   }, [handleRealtimeEvent]);
 
   const openCall = (item: CallItem) => {
-    const peerId = String(item.peerUserId || item.chatId || item.id || "").trim();
+    const peerId = resolveDirectCallPeerId(item, userId);
+    const chatIdForCall = String(item.chatId || item.id || ["direct", userId || "self", peerId || "peer"].join(":")).trim();
 
-    if (!userId || !peerId) {
-      console.warn("[sabi-tabs-calls] call blocked: missing route identity", {
-        userId: userId || "",
-        peerId,
-        callId: item.id || "",
-      });
+    if (!userId || !peerId || peerId === userId) {
+      const warnKey = [userId || "", peerId || "", item.callId || item.id || ""].join("|");
+      if (!invalidRouteWarnedRef.current.has(warnKey)) {
+        invalidRouteWarnedRef.current.add(warnKey);
+        console.warn("[sabi-tabs-calls] call blocked: invalid route identity", {
+          userId: userId || "",
+          peerId,
+          callId: item.callId || item.id || "",
+        });
+      }
       return;
     }
 
-    const resolvedCallKind = String((item as any).kind ?? (item as any).callKind ?? (item as any).callType ?? (item as any).type ?? "").toLowerCase().includes("video") ? "video" : "audio";
+    const resolvedCallKind = item.type === "video" ? "video" : "audio";
+    const callId = buildDirectCallId(chatIdForCall, userId, peerId);
     const callRouteParams = {
-      id: item.chatId || item.id,
-      chatId: item.chatId || item.id,
+      id: chatIdForCall,
+      chatId: chatIdForCall,
+      callId,
       userId,
       selfId: userId,
+      fromUserId: userId,
       peerId,
+      peerUserId: peerId,
       partnerId: peerId,
       targetUserId: peerId,
+      toUserId: peerId,
+      receiverUserId: peerId,
       roomType: "direct",
       kind: resolvedCallKind,
       type: resolvedCallKind,
+      callKind: resolvedCallKind,
       callType: resolvedCallKind,
       name: item.name,
       avatarLetter: resolveAvatarLetter(item.name),
@@ -806,7 +1013,7 @@ export default function CallsScreen() {
     };
 
     router.push({
-      pathname: String((callRouteParams as any).kind ?? (callRouteParams as any).type ?? "").toLowerCase() === "video" ? "/calls/video" : "/calls/audio",
+      pathname: resolvedCallKind === "video" ? "/calls/video" : "/calls/audio",
       params: callRouteParams,
     } as never);
   };
@@ -1003,7 +1210,7 @@ export default function CallsScreen() {
                   {texts.recentCalls}
                 </Text>
                 <Text style={[styles.sectionMeta, { color: withAlpha(palette.textSecondary, 0.76) }]}>
-                  {filteredCalls.length} вЂў {missedCount}
+                  {filteredCalls.length} • {missedCount}
                 </Text>
               </View>
 
@@ -1164,7 +1371,7 @@ export default function CallsScreen() {
                                 >
                                   <Phone size={12} strokeWidth={2.3} color={palette.accentSoft} />
                                   <Text style={[styles.typePillText, { color: palette.accentSoft }]}>
-                                    {texts.voice}
+                                    {call.type === "video" ? texts.video : texts.voice}
                                   </Text>
                                 </View>
 
@@ -1178,7 +1385,7 @@ export default function CallsScreen() {
                                 >
                                   {isMissed
                                     ? texts.missed
-                                    : `${call.duration || texts.durationFallback} вЂў ${call.dateLabel}`}
+                                    : `${call.duration || texts.durationFallback} • ${call.dateLabel}`}
                                 </Text>
                               </View>
 

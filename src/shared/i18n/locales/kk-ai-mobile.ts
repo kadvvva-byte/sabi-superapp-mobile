@@ -252,7 +252,7 @@ const KK_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "real bridge сипаттамасы",
+          "Нақты мобильді bridge: микрофон жазбасы, native дауыс оқиғалары, transcript беру және audio URL ойнату. Text-only TTS жалған жасалмайды.",
         bind: "bind",
         start: "бастау",
         stop: "тоқтату",
@@ -273,7 +273,7 @@ const KK_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts үшін кеңес",
         playLastTts: "play соңғы tts",
         noFakeTts:
-          "жоқ fake tts",
+          "Жалған дауыс жоқ: audio playback тек backend/native TTS audio URL қайтарғанда ғана жұмыс істейді. expo-speech немесе native TTS module қосылғанша Text-only TTS мәтін ретінде көрсетіледі.",
         runtimeLog: "runtime log",
         noEvents: "жоқ events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const KK_AI_MOBILE_LOCALE = {
         subtitle: "subtitle",
         accessTitle: "access",
         noFakePayment:
-          "жоқ fake төлем",
+          "Төлем мұнда жалған жасалмайды. Белсендіру нақты Premium/COIN растау ағымынан келуі керек.",
         realtimeCallTranslationTitle: "нақты уақыт қоңырау аударма",
         realtimeTranslationTitle: "нақты уақыт аударма",
         realtimeTranslationDescription:

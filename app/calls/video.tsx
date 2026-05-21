@@ -1,1 +1,1 @@
-export { default } from "../../src/modules/calls/VideoCallScreen";
+export { default } from "../../src/modules/calls/video/VideoCallScreen";

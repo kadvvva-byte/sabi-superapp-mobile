@@ -252,7 +252,7 @@ const AZ_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "real bridge təsviri",
+          "Real mobil körpü: mikrofon yazısı, native səs hadisələri, transkript ötürməsi və audio URL oxutması. Yalnız mətn TTS saxtalaşdırılmır.",
         bind: "bind",
         start: "başla",
         stop: "dayandır",
@@ -273,7 +273,7 @@ const AZ_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts köməkçi mətn",
         playLastTts: "play soyad tts",
         noFakeTts:
-          "xeyr fake tts",
+          "Saxta səs yoxdur: audio yalnız backend/native TTS audio URL qaytardıqda işləyir. Yalnız mətn TTS expo-speech və ya native TTS modulu qoşulana qədər mətn kimi göstərilir.",
         runtimeLog: "runtime log",
         noEvents: "xeyr events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const AZ_AI_MOBILE_LOCALE = {
         subtitle: "alt başlıq",
         accessTitle: "access",
         noFakePayment:
-          "xeyr fake ödəniş",
+          "Ödəniş burada saxtalaşdırılmır. Aktivləşmə real Premium/COIN təsdiq axınından gəlməlidir.",
         realtimeCallTranslationTitle: "real vaxt zəng tərcümə",
         realtimeTranslationTitle: "real vaxt tərcümə",
         realtimeTranslationDescription:

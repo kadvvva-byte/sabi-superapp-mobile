@@ -252,7 +252,7 @@ const UZ_AI_MOBILE_LOCALE = {
         nativeBridge: "Ovoz ulanishi",
         sttTtsBridgeTitle: "Ovoz tizimi",
         realBridgeDescription:
-          "Ovoz matni va javoblar haqiqiy ovoz provayderi orqali ishlaydi.",
+          "Real mobil bridge: mikrofon yozuvi, native voice events, transcript uzatish va audio URL ijrosi. Text-only TTS soxtalashtirilmaydi.",
         bind: "Ulash",
         start: "Boshlash",
         stop: "To‘xtatish",
@@ -273,7 +273,7 @@ const UZ_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Ovozli javob matni…",
         playLastTts: "Oxirgi javobni eshittirish",
         noFakeTts:
-          "Audio faqat haqiqiy audio URL kelganda eshittiriladi.",
+          "Soxta ovoz yo‘q: audio playback faqat backend/native TTS audio URL qaytarganda ishlaydi. expo-speech yoki native TTS module ulanmaguncha Text-only TTS matn sifatida ko‘rsatiladi.",
         runtimeLog: "Ovoz hodisalari",
         noEvents: "Hozircha hodisa yo‘q.",
         sessionStopped: "Sessiya to‘xtadi.",
@@ -352,7 +352,7 @@ const UZ_AI_MOBILE_LOCALE = {
         subtitle: "COIN orqali Premium AI.",
         accessTitle: "Premium AI funksiyalari",
         noFakePayment:
-          "Premium faqat haqiqiy COIN to‘lovi tasdiqlangandan keyin yoqiladi.",
+          "Bu yerda to‘lov soxtalashtirilmaydi. Faollashtirish real Premium/COIN tasdiqlash oqimidan kelishi kerak.",
         realtimeCallTranslationTitle: "Qo‘ng‘iroq tarjimasi",
         realtimeTranslationTitle: "Real vaqt tarjimasi",
         realtimeTranslationDescription:

@@ -183,25 +183,25 @@ function providerGatewayStatusText(manifest: AiProviderGatewayManifest | null): 
   const language = getAppLanguage();
 
   if (!manifest) {
-    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib boвЂlmadi.";
-    if (language.startsWith("ru")) return "РЎС‚Р°С‚СѓСЃ AI provider gateway РїРѕРєР° РЅРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕРІРµСЂРёС‚СЊ.";
+    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib bo‘lmadi.";
+    if (language.startsWith("ru")) return "Статус AI provider gateway пока не удалось проверить.";
     return "AI provider gateway status could not be checked yet.";
   }
 
   if (manifest.status === "ready" && manifest.translationConfigured) {
     if (language.startsWith("uz")) return "AI provider gateway tayyor. Real tarjima provayderi server orqali ulangan.";
-    if (language.startsWith("ru")) return "AI provider gateway РіРѕС‚РѕРІ. Р РµР°Р»СЊРЅС‹Р№ РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РїРѕРґРєР»СЋС‡С‘РЅ С‡РµСЂРµР· СЃРµСЂРІРµСЂ.";
+    if (language.startsWith("ru")) return "AI provider gateway готов. Реальный провайдер перевода подключён через сервер.";
     return "AI provider gateway is ready. A real translation provider is connected through the server.";
   }
 
   if (!manifest.translationConfigured) {
-    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima oвЂchirilgan.";
-    if (language.startsWith("ru")) return "AI РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РЅР° СЃРµСЂРІРµСЂРµ РїРѕРєР° РЅРµ РїРѕРґРєР»СЋС‡С‘РЅ. Р›РѕРєР°Р»СЊРЅС‹Р№ СЂРµР·РµСЂРІРЅС‹Р№ РїРµСЂРµРІРѕРґ РѕС‚РєР»СЋС‡С‘РЅ.";
+    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima o‘chirilgan.";
+    if (language.startsWith("ru")) return "AI провайдер перевода на сервере пока не подключён. Локальный резервный перевод отключён.";
     return "AI translation provider is not connected on the server yet. Local offline translation is disabled.";
   }
 
   if (language.startsWith("uz")) return `AI provider gateway holati: ${manifest.status}.`;
-  if (language.startsWith("ru")) return `РЎС‚Р°С‚СѓСЃ AI provider gateway: ${manifest.status}.`;
+  if (language.startsWith("ru")) return `Статус AI provider gateway: ${manifest.status}.`;
   return `AI provider gateway status: ${manifest.status}.`;
 }
 
@@ -589,9 +589,9 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("send money") ||
     lowered.includes("transfer money") ||
     lowered.includes("pay") ||
-    lowered.includes("РїРµСЂРµРІРµРґРё РґРµРЅСЊРіРё") ||
-    lowered.includes("РѕС‚РїСЂР°РІСЊ РґРµРЅСЊРіРё") ||
-    lowered.includes("РѕРїР»Р°С‚")
+    lowered.includes("переведи деньги") ||
+    lowered.includes("отправь деньги") ||
+    lowered.includes("оплат")
   ) {
     return "money_movement";
   }
@@ -599,8 +599,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send coin") ||
     lowered.includes("coin transfer") ||
-    lowered.includes("РѕС‚РїСЂР°РІСЊ РєРѕРёРЅ") ||
-    lowered.includes("РїРµСЂРµРІРµРґРё coin")
+    lowered.includes("отправь коин") ||
+    lowered.includes("переведи coin")
   ) {
     return "coin_movement";
   }
@@ -608,8 +608,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send message") ||
     lowered.includes("message to") ||
-    lowered.includes("РѕС‚РїСЂР°РІСЊ СЃРѕРѕР±С‰РµРЅРёРµ") ||
-    lowered.includes("РЅР°РїРёС€Рё РІ С‡Р°С‚")
+    lowered.includes("отправь сообщение") ||
+    lowered.includes("напиши в чат")
   ) {
     return "message_send";
   }
@@ -617,8 +617,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("delete account") ||
     lowered.includes("remove account") ||
-    lowered.includes("СѓРґР°Р»РёС‚СЊ Р°РєРєР°СѓРЅС‚") ||
-    lowered.includes("СѓРґР°Р»Рё Р°РєРєР°СѓРЅС‚")
+    lowered.includes("удалить аккаунт") ||
+    lowered.includes("удали аккаунт")
   ) {
     return "account_delete";
   }
@@ -627,12 +627,12 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("logout") ||
     lowered.includes("sign out") ||
     lowered.includes("log out") ||
-    lowered.includes("РІС‹Р№С‚Рё РёР· Р°РєРєР°СѓРЅС‚Р°")
+    lowered.includes("выйти из аккаунта")
   ) {
     return "account_security";
   }
 
-  if (lowered.includes("settings") || lowered.includes("РЅР°СЃС‚СЂРѕР№")) {
+  if (lowered.includes("settings") || lowered.includes("настрой")) {
     return "settings_change";
   }
 

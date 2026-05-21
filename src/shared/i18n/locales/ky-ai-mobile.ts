@@ -252,7 +252,7 @@ const KY_AI_MOBILE_LOCALE = {
         nativeBridge: "Туташуу",
         sttTtsBridgeTitle: "Үн AI",
         realBridgeDescription:
-          "Үн AI",
+          "Чыныгы мобилдик bridge: микрофон жазуу, native үн окуялары, transcript өткөрүү жана audio URL ойнотуу. Text-only TTS жасалма эмес.",
         bind: "Туташуу",
         start: "Баштоо",
         stop: "Токтотуу",
@@ -273,7 +273,7 @@ const KY_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Үн AI",
         playLastTts: "Ойнотуу",
         noFakeTts:
-          "Провайдер",
+          "Жасалма үн жок: audio playback backend/native TTS audio URL кайтарганда гана иштейт. expo-speech же native TTS module туташканча Text-only TTS текст катары көрсөтүлөт.",
         runtimeLog: "Тарых",
         noEvents: "Азырынча бош",
         sessionStopped: "Токтотуу",
@@ -352,7 +352,7 @@ const KY_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "Провайдер",
+          "Төлөм бул жерде жасалма эмес. Активдештирүү чыныгы Premium/COIN ырастоо агымынан келиши керек.",
         realtimeCallTranslationTitle: "Котормо",
         realtimeTranslationTitle: "Котормо",
         realtimeTranslationDescription:

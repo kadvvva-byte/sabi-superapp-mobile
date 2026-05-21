@@ -252,7 +252,7 @@ const UR_AI_MOBILE_LOCALE = {
         nativeBridge: "native Bridge",
         sttTtsBridgeTitle: "stt Tts Bridge عنوان",
         realBridgeDescription:
-          "real Bridge تفصیل",
+          "حقیقی mobile bridge: microphone recording، native voice events، transcript handoff اور audio URL playback. Text-only TTS جعلی نہیں ہے۔",
         bind: "bind",
         start: "شروع کریں",
         stop: "روکیں",
@@ -273,7 +273,7 @@ const UR_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts پلیس ہولڈر",
         playLastTts: "چلائیں آخری Tts",
         noFakeTts:
-          "no Fake Tts",
+          "جعلی آواز نہیں: audio playback صرف اس وقت کام کرتا ہے جب backend/native TTS audio URL واپس کرے۔ expo-speech یا native TTS module منسلک ہونے تک Text-only TTS متن کے طور پر دکھایا جاتا ہے۔",
         runtimeLog: "runtime Log",
         noEvents: "no Events",
         sessionStopped: "session Stopped",
@@ -352,7 +352,7 @@ const UR_AI_MOBILE_LOCALE = {
         subtitle: "ذیلی عنوان",
         accessTitle: "رسائی عنوان",
         noFakePayment:
-          "no Fake ادائیگی",
+          "یہاں ادائیگی جعلی نہیں ہے۔ Activation حقیقی Premium/COIN confirmation flow سے آنا چاہیے۔",
         realtimeCallTranslationTitle: "realtime کال ترجمہ عنوان",
         realtimeTranslationTitle: "realtime ترجمہ عنوان",
         realtimeTranslationDescription:

@@ -252,7 +252,7 @@ const TR_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "real bridge açıklaması",
+          "Gerçek mobil bridge: mikrofon kaydı, native ses olayları, transcript aktarımı ve audio URL oynatma. Text-only TTS taklit edilmez.",
         bind: "bind",
         start: "başlat",
         stop: "durdur",
@@ -273,7 +273,7 @@ const TR_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts yardımcı metni",
         playLastTts: "play soyad tts",
         noFakeTts:
-          "hayır fake tts",
+          "Sahte ses yok: audio playback yalnızca backend/native TTS audio URL döndürürse çalışır. Text-only TTS, expo-speech veya native TTS module bağlanana kadar metin olarak gösterilir.",
         runtimeLog: "runtime log",
         noEvents: "hayır events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const TR_AI_MOBILE_LOCALE = {
         subtitle: "alt başlık",
         accessTitle: "access",
         noFakePayment:
-          "hayır fake ödeme",
+          "Ödeme burada taklit edilmiyor. Aktivasyon gerçek Premium/COIN onay akışından gelmelidir.",
         realtimeCallTranslationTitle: "gerçek zamanlı arama çeviri",
         realtimeTranslationTitle: "gerçek zamanlı çeviri",
         realtimeTranslationDescription:

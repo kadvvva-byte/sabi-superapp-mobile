@@ -148,7 +148,7 @@ export async function resolveSabiCallIceServers(): Promise<SabiCallIceServer[]> 
           method: "GET",
           headers,
         },
-        1800,
+        450,
       );
 
       if (!response || !response.ok) continue;

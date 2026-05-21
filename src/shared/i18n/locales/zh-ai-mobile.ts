@@ -252,7 +252,7 @@ const ZH_AI_MOBILE_LOCALE = {
         nativeBridge: "连接",
         sttTtsBridgeTitle: "语音 AI",
         realBridgeDescription:
-          "语音 AI",
+          "真实移动桥接：麦克风录音、native 语音事件、transcript 交接和 audio URL 播放。Text-only TTS 不会被伪造。",
         bind: "连接",
         start: "开始",
         stop: "停止",
@@ -273,7 +273,7 @@ const ZH_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "语音 AI",
         playLastTts: "播放",
         noFakeTts:
-          "服务提供方",
+          "没有假语音：只有 backend/native TTS 返回 audio URL 时才会播放音频。在连接 expo-speech 或 native TTS module 前，Text-only TTS 只显示为文本。",
         runtimeLog: "历史",
         noEvents: "暂无内容",
         sessionStopped: "停止",
@@ -352,7 +352,7 @@ const ZH_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "服务提供方",
+          "此处不会伪造支付。激活必须来自真实的 Premium/COIN 确认流程。",
         realtimeCallTranslationTitle: "翻译",
         realtimeTranslationTitle: "翻译",
         realtimeTranslationDescription:

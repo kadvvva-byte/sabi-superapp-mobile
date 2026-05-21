@@ -1,0 +1,17 @@
+{
+  "platforms": [
+    "ios",
+    "android"
+  ],
+  "ios": {
+    "modules": [
+      "SabiCallNativeModule"
+    ],
+    "appDelegateSubscribers": [
+      "SabiCallAppDelegateSubscriber"
+    ]
+  },
+  "android": {
+    "modules": []
+  }
+}

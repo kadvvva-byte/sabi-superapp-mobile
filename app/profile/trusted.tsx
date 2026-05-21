@@ -250,7 +250,7 @@ export default function TrustedScreen() {
 
             <Pressable
               style={styles.linkCard}
-              onPress={() => router.push("/profile/blocked" as never)}
+              onPress={() => router.push("/profile/privacy/blocked" as never)}
             >
               <View style={styles.linkLeft}>
                 <View style={styles.linkIconWrap}>

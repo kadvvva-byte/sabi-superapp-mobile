@@ -252,7 +252,7 @@ const FA_AF_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "real bridge توضیحات",
+          "پل واقعی موبایل: ضبط میکروفون، رویدادهای صدای native، انتقال transcript و پخش audio URL. TTS فقط متنی شبیه‌سازی نمی‌شود.",
         bind: "bind",
         start: "شروع",
         stop: "توقف",
@@ -273,7 +273,7 @@ const FA_AF_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts راهنما",
         playLastTts: "play آخر tts",
         noFakeTts:
-          "نخیر fake tts",
+          "صدای جعلی وجود ندارد: صدا فقط وقتی پخش می‌شود که backend/native TTS یک audio URL برگرداند. TTS فقط متنی تا زمان اتصال expo-speech یا ماژول native TTS به صورت متن نشان داده می‌شود.",
         runtimeLog: "runtime log",
         noEvents: "نخیر events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const FA_AF_AI_MOBILE_LOCALE = {
         subtitle: "subtitle",
         accessTitle: "access",
         noFakePayment:
-          "نخیر fake پرداخت",
+          "پرداخت در اینجا شبیه‌سازی نمی‌شود. فعال‌سازی باید از جریان واقعی تأیید Premium/COIN بیاید.",
         realtimeCallTranslationTitle: "زمان واقعی تماس ترجمه",
         realtimeTranslationTitle: "زمان واقعی ترجمه",
         realtimeTranslationDescription:

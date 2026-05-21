@@ -1,1 +1,1 @@
-export { default } from "../src/modules/calls/AudioCallScreen";
+export { default } from "../src/modules/calls/audio/AudioCallScreen";

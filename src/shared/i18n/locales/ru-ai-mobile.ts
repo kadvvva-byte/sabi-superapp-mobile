@@ -252,7 +252,7 @@ const RU_AI_MOBILE_LOCALE = {
         nativeBridge: "Подключение",
         sttTtsBridgeTitle: "Голосовой AI",
         realBridgeDescription:
-          "Голосовой AI",
+          "Реальный мобильный мост: запись микрофона, native voice events, передача transcript и воспроизведение audio URL. Text-only TTS не имитируется.",
         bind: "Подключение",
         start: "Начать",
         stop: "Остановить",
@@ -273,7 +273,7 @@ const RU_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Голосовой AI",
         playLastTts: "Воспроизвести",
         noFakeTts:
-          "Провайдер",
+          "Без фейкового голоса: аудио работает только если backend/native TTS вернул audio URL. Text-only TTS показывается как текст до подключения expo-speech или native TTS module.",
         runtimeLog: "История",
         noEvents: "Пока пусто",
         sessionStopped: "Остановить",
@@ -352,7 +352,7 @@ const RU_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "Провайдер",
+          "Оплата здесь не имитируется. Активация должна прийти из реального потока подтверждения Premium/COIN.",
         realtimeCallTranslationTitle: "Перевод",
         realtimeTranslationTitle: "Перевод",
         realtimeTranslationDescription:

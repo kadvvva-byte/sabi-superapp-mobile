@@ -252,7 +252,7 @@ export const HY_AI_MOBILE_LOCALE = {
         nativeBridge: "Native bridge",
         sttTtsBridgeTitle: "STT / TTS bridge",
         realBridgeDescription:
-          "Real mobile bridge: microphone recording, native voice events, transcript handoff and audio URL playback. Text-only TTS is not faked.",
+          "Իրական mobile bridge՝ միկրոֆոնի ձայնագրում, native ձայնային իրադարձություններ, transcript փոխանցում և audio URL նվագարկում։ Text-only TTS-ը չի կեղծվում։",
         bind: "Bind bridge",
         start: "Start session",
         stop: "Stop session",
@@ -273,7 +273,7 @@ export const HY_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Text to request from backend TTS...",
         playLastTts: "Play last TTS",
         noFakeTts:
-          "No fake voice: audio playback works only when backend/native TTS returns an audio URL. Text-only TTS is shown as text until expo-speech or a native TTS module is connected.",
+          "Կեղծ ձայն չկա․ ձայնը նվագարկվում է միայն, եթե backend/native TTS-ը վերադարձնում է audio URL։ Text-only TTS-ը ցուցադրվում է որպես տեքստ, մինչև միացվի expo-speech կամ native TTS module։",
         runtimeLog: "Voice runtime log",
         noEvents: "No voice events yet.",
         sessionStopped: "Voice session stopped.",
@@ -352,7 +352,7 @@ export const HY_AI_MOBILE_LOCALE = {
         subtitle: "COIN access for translation, voice AI and advanced assistant actions.",
         accessTitle: "Premium AI access",
         noFakePayment:
-          "Payment is not faked here. Activation must come from the real Premium/COIN confirmation flow.",
+          "Այստեղ վճարումը չի կեղծվում։ Ակտիվացումը պետք է գա իրական Premium/COIN հաստատման հոսքից։",
         realtimeCallTranslationTitle: "Realtime call translation",
         realtimeTranslationTitle: "Realtime translation",
         realtimeTranslationDescription:

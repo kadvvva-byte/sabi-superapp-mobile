@@ -1,4 +1,4 @@
-import { Audio } from "expo-av";
+import { setSabiCallAudioMode } from "./sabiCallAudio";
 import {
   RTCIceCandidate,
   RTCPeerConnection,
@@ -332,7 +332,33 @@ export function createSabiGroupCallRuntime(input: CreateSabiGroupCallRuntimeInpu
     };
 
     for (const eventName of emitEvents) {
-      input.socket.emit(eventName, payload);
+      try { input.socket.emit(eventName, payload); } catch {}
+    }
+
+    const envelope = {
+      eventName: "sabi-call:group:signal",
+      name: "sabi-call:group:signal",
+      event: "sabi-call:group:signal",
+      type: "sabi_group_call_event",
+      payload,
+      data: payload,
+      message: payload,
+      callId: input.callId,
+      chatId: input.chatId ?? undefined,
+      roomId: input.chatId ?? input.callId,
+      fromUserId: input.selfUserId,
+      senderUserId: input.selfUserId,
+      toUserId: peerUserId,
+      targetUserId: peerUserId,
+      receiverUserId: peerUserId,
+      userId: peerUserId,
+      channel: `user:${peerUserId}`,
+      callChannel: `call:${input.callId}`,
+      at: new Date().toISOString(),
+    };
+
+    for (const eventName of ["realtime:event", "messenger:realtime:event", "sabi:realtime:event", "user:realtime:event"]) {
+      try { input.socket.emit(eventName, envelope); } catch {}
     }
   }
 
@@ -493,12 +519,11 @@ export function createSabiGroupCallRuntime(input: CreateSabiGroupCallRuntimeInpu
 
   async function prepareSabiGroupAudioSession() {
     try {
-      await Audio.setAudioModeAsync({
-        allowsRecordingIOS: true,
-        playsInSilentModeIOS: true,
-        staysActiveInBackground: true,
-        shouldDuckAndroid: false,
-        playThroughEarpieceAndroid: false,
+      await setSabiCallAudioMode({
+        allowsRecording: true,
+        speakerEnabled: true,
+        shouldPlayInBackground: true,
+        duckOthers: false,
       });
     } catch {}
   }

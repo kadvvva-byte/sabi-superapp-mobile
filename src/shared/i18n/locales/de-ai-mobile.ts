@@ -252,7 +252,7 @@ const DE_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "Beschreibung real bridge",
+          "Echte mobile Bridge: Mikrofonaufnahme, native Sprachereignisse, Transcript-Übergabe und Wiedergabe der Audio-URL. Text-only TTS wird nicht simuliert.",
         bind: "bind",
         start: "Starten",
         stop: "Stoppen",
@@ -273,7 +273,7 @@ const DE_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Hinweis tts",
         playLastTts: "play Nachname tts",
         noFakeTts:
-          "Nein fake tts",
+          "Keine falsche Stimme: Audio wird nur abgespielt, wenn backend/native TTS eine Audio-URL zurückgibt. Text-only TTS wird als Text angezeigt, bis expo-speech oder ein natives TTS-Modul verbunden ist.",
         runtimeLog: "runtime log",
         noEvents: "Nein events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const DE_AI_MOBILE_LOCALE = {
         subtitle: "Untertitel",
         accessTitle: "access",
         noFakePayment:
-          "Nein fake Zahlung",
+          "Zahlung wird hier nicht simuliert. Die Aktivierung muss aus dem echten Premium/COIN-Bestätigungsablauf kommen.",
         realtimeCallTranslationTitle: "Echtzeit Anruf Übersetzung",
         realtimeTranslationTitle: "Echtzeit Übersetzung",
         realtimeTranslationDescription:

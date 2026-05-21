@@ -8,6 +8,12 @@ export type SabiApiBaseUrlOptions = {
 
 const DEFAULT_API_PORT = "4001";
 const SABI_DEFAULT_LAN_API_BASE_URL = "";
+const SABI_PRODUCTION_API_BASE_URL = "http://178.154.210.119";
+const KNOWN_INVALID_NATIVE_BUNDLE_HOSTS = new Set([
+  "index.android.bundle",
+  "assets.android.bundle",
+  "main.jsbundle",
+]);
 const KNOWN_DEV_PACKAGER_PORTS = new Set(["8081", "8082", "19000", "19001", "19002", "19006"]);
 const KNOWN_OLD_API_PORTS = new Set(["3000", "4000", "5000"]);
 
@@ -39,7 +45,19 @@ function defaultApiPort(options?: SabiApiBaseUrlOptions): string {
 
 function isLoopbackHost(hostname: string): boolean {
   const host = hostname.trim().toLowerCase();
-  return host === "localhost" || host === "127.0.0.1" || host === "::1" || host === "[::1]" || host === "0.0.0.0";
+  return (
+    host === "localhost" ||
+    host === "127.0.0.1" ||
+    host === "::1" ||
+    host === "[::1]" ||
+    host === "0.0.0.0" ||
+    isInvalidNativeBundleHost(host)
+  );
+}
+
+function isInvalidNativeBundleHost(hostname: string): boolean {
+  const host = hostname.trim().toLowerCase();
+  return KNOWN_INVALID_NATIVE_BUNDLE_HOSTS.has(host);
 }
 
 function isLanHost(hostname: string): boolean {
@@ -116,7 +134,7 @@ function getExpoDevHost(): string | null {
 
   for (const candidate of candidates) {
     const host = hostFromHostUri(candidate);
-    if (host && !isLoopbackHost(host)) return host;
+    if (host && !isLoopbackHost(host) && !isInvalidNativeBundleHost(host)) return host;
   }
 
   return null;
@@ -169,6 +187,8 @@ function normalizeUrlCandidate(value: string, options?: SabiApiBaseUrlOptions): 
     const hostname = normalizeString(parsed.hostname);
     if (!hostname) return null;
 
+    if (isInvalidNativeBundleHost(hostname)) return null;
+
     const loopbackReplacement = isLoopbackHost(hostname) ? replacementHostForLoopback() : null;
     const nextHostname = loopbackReplacement ?? hostname;
 
@@ -187,6 +207,8 @@ function normalizeUrlCandidate(value: string, options?: SabiApiBaseUrlOptions): 
   } catch {
     const host = hostFromHostUri(value);
     if (!host) return null;
+
+    if (isInvalidNativeBundleHost(host)) return null;
 
     const loopbackReplacement = isLoopbackHost(host) ? replacementHostForLoopback() : null;
     const nextHost = loopbackReplacement ?? host;
@@ -221,6 +243,10 @@ export function getSabiApiBaseUrlDebugCandidates(value?: unknown, options?: Sabi
   pushUnique(candidates, explicitExpoExtraApiBaseUrl(), options);
   pushUnique(candidates, explicitAndroidEmulatorApiBaseUrl(), options);
   pushUnique(candidates, SABI_DEFAULT_LAN_API_BASE_URL, options);
+
+  if (Platform.OS !== "web") {
+    pushUnique(candidates, SABI_PRODUCTION_API_BASE_URL, options);
+  }
 
   if (Platform.OS === "web") {
     pushUnique(candidates, `http://localhost:${port}`, { ...options, rejectLoopback: false });

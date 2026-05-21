@@ -1,5 +1,5 @@
-import { Audio } from "expo-av";
 import { useEffect, useRef } from "react";
+import { createSabiLoopingCallTonePlayer, setSabiCallAudioMode, stopAndRemoveSabiCallTonePlayer, type SabiCallTonePlayer } from "./sabiCallAudio";
 
 const SABI_RINGBACK_SOUND = require("../../../assets/sounds/sabi-ringback.wav");
 const SABI_RINGTONE_SOUND = require("../../../assets/sounds/sabi-ringtone.wav");
@@ -7,10 +7,13 @@ const SABI_RINGTONE_SOUND = require("../../../assets/sounds/sabi-ringtone.wav");
 export type SabiCallToneMode = "none" | "incoming" | "outgoing";
 
 type SabiGlobalToneState = {
-  sound: Audio.Sound | null;
+  sound: SabiCallTonePlayer | null;
   ownerKey: string;
+  callId: string;
   mode: SabiCallToneMode;
+  generation: number;
   stopTimer: ReturnType<typeof setTimeout> | null;
+  closedCallIds: Record<string, number>;
 };
 
 function getSabiGlobalToneState(): SabiGlobalToneState {
@@ -19,26 +22,45 @@ function getSabiGlobalToneState(): SabiGlobalToneState {
     root.__sabiCallToneState = {
       sound: null,
       ownerKey: "",
+      callId: "",
       mode: "none",
+      generation: 0,
       stopTimer: null,
+      closedCallIds: {},
     } as SabiGlobalToneState;
   }
 
-  return root.__sabiCallToneState as SabiGlobalToneState;
+  const state = root.__sabiCallToneState as SabiGlobalToneState;
+  if (!state.closedCallIds) state.closedCallIds = {};
+  if (typeof state.generation !== "number") state.generation = 0;
+  return state;
+}
+
+function isClosedCallId(callId: string) {
+  if (!callId) return false;
+  const state = getSabiGlobalToneState();
+  const closedAt = state.closedCallIds[callId] || 0;
+  if (!closedAt) return false;
+  if (Date.now() - closedAt > 120000) {
+    delete state.closedCallIds[callId];
+    return false;
+  }
+  return true;
 }
 
 async function configureSabiCallToneAudio() {
   try {
-    await Audio.setAudioModeAsync({
-      // Ringback/ringtone is playback only. Do not open recorder here;
-      // the WebRTC peer enables recording only when the call starts.
-      allowsRecordingIOS: false,
-      playsInSilentModeIOS: true,
-      staysActiveInBackground: true,
-      shouldDuckAndroid: false,
-      playThroughEarpieceAndroid: false,
+    await setSabiCallAudioMode({
+      allowsRecording: false,
+      speakerEnabled: true,
+      shouldPlayInBackground: true,
+      duckOthers: false,
     });
   } catch {}
+}
+
+async function unloadSound(sound: SabiCallTonePlayer | null) {
+  await stopAndRemoveSabiCallTonePlayer(sound);
 }
 
 async function stopSabiGlobalTone(ownerKey?: string) {
@@ -48,9 +70,11 @@ async function stopSabiGlobalTone(ownerKey?: string) {
     return;
   }
 
+  state.generation += 1;
   const sound = state.sound;
   state.sound = null;
   state.ownerKey = "";
+  state.callId = "";
   state.mode = "none";
 
   if (state.stopTimer) {
@@ -58,16 +82,35 @@ async function stopSabiGlobalTone(ownerKey?: string) {
     state.stopTimer = null;
   }
 
-  if (!sound) return;
-
-  try {
-    await sound.stopAsync();
-  } catch {}
-
-  try {
-    await sound.unloadAsync();
-  } catch {}
+  await unloadSound(sound);
 }
+
+export function markSabiCallToneCallClosed(callId?: string) {
+  const id = String(callId || "");
+  if (!id) return;
+  const state = getSabiGlobalToneState();
+  state.closedCallIds[id] = Date.now();
+  if (state.callId === id || state.ownerKey.startsWith(id + ":")) {
+    void stopSabiGlobalTone();
+  }
+}
+
+export function stopSabiCallToneNow() {
+  return stopSabiGlobalTone();
+}
+
+export function stopSabiCallToneForCall(callId?: string) {
+  const id = String(callId || "");
+  if (!id) return stopSabiGlobalTone();
+  markSabiCallToneCallClosed(id);
+  return stopSabiGlobalTone();
+}
+
+try {
+  const root = globalThis as any;
+  root.__sabiStopCallToneNow = stopSabiCallToneNow;
+  root.__sabiStopCallToneForCall = stopSabiCallToneForCall;
+} catch {}
 
 export function useSabiCallTone(params: {
   enabled: boolean;
@@ -78,11 +121,12 @@ export function useSabiCallTone(params: {
 
   useEffect(() => {
     let cancelled = false;
-    const ownerKey = [String(params.callId || "call"), params.mode].join(":");
+    const callId = String(params.callId || "call");
+    const ownerKey = [callId, params.mode].join(":");
     ownerRef.current = ownerKey;
 
     async function startTone() {
-      if (!params.enabled || params.mode === "none") {
+      if (!params.enabled || params.mode === "none" || isClosedCallId(callId)) {
         await stopSabiGlobalTone(ownerKey);
         return;
       }
@@ -93,47 +137,44 @@ export function useSabiCallTone(params: {
       }
 
       await stopSabiGlobalTone();
-      if (cancelled) return;
+      const startGeneration = getSabiGlobalToneState().generation;
+      if (cancelled || isClosedCallId(callId)) return;
 
-      await configureSabiCallToneAudio();
-      if (cancelled) return;
+      // Configure in parallel with sound creation. Waiting for audio-mode first
+      // caused delayed ringback on some Android devices.
+      void configureSabiCallToneAudio();
 
       const source = params.mode === "incoming" ? SABI_RINGTONE_SOUND : SABI_RINGBACK_SOUND;
-      const volume = params.mode === "incoming" ? 0.85 : 0.45;
+      const volume = params.mode === "incoming" ? 0.9 : 0.5;
 
       try {
-        const { sound } = await Audio.Sound.createAsync(source, {
-          shouldPlay: true,
-          isLooping: true,
-          volume,
-          progressUpdateIntervalMillis: 500,
-        });
+        const sound = await createSabiLoopingCallTonePlayer(source, volume);
 
-        if (cancelled || ownerRef.current !== ownerKey) {
-          try {
-            await sound.stopAsync();
-          } catch {}
-          try {
-            await sound.unloadAsync();
-          } catch {}
+        const current = getSabiGlobalToneState();
+        if (
+          cancelled ||
+          ownerRef.current !== ownerKey ||
+          isClosedCallId(callId) ||
+          current.generation !== startGeneration
+        ) {
+          await unloadSound(sound);
           return;
         }
 
-        const nextState = getSabiGlobalToneState();
-        nextState.sound = sound;
-        nextState.ownerKey = ownerKey;
-        nextState.mode = params.mode;
+        current.sound = sound;
+        current.ownerKey = ownerKey;
+        current.callId = callId;
+        current.mode = params.mode;
 
-        // Safety guard: never let a stale ringback/ringtone loop forever if a
-        // route is abandoned without a normal phase update. The screen still
-        // stops it immediately when phase changes to connecting/active/ended.
-        nextState.stopTimer = setTimeout(() => {
+        if (current.stopTimer) clearTimeout(current.stopTimer);
+        current.stopTimer = setTimeout(() => {
           void stopSabiGlobalTone(ownerKey);
         }, params.mode === "incoming" ? 90000 : 75000);
       } catch {
         const failedState = getSabiGlobalToneState();
         if (failedState.ownerKey === ownerKey) {
           failedState.ownerKey = "";
+          failedState.callId = "";
           failedState.mode = "none";
           failedState.sound = null;
         }

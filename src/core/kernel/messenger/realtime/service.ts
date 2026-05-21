@@ -92,9 +92,13 @@ function isHiddenReactionControlText(value: unknown) {
 }
 
 function resolveCurrentUserIdForRealtime() {
-  const session = getMessengerKernelSession();
   const state = getMessengerKernelState();
-  return normalizeString(session.currentUserId) ?? normalizeString(state.currentUserId);
+  try {
+    const session = getMessengerKernelSession();
+    return normalizeString(session.currentUserId) ?? normalizeString(state.currentUserId);
+  } catch {
+    return normalizeString(state.currentUserId);
+  }
 }
 
 function isMessageFromCurrentUser(message: MessengerKernelMessageRecord) {
@@ -676,6 +680,22 @@ function normalizeMessage(payload: unknown): MessengerKernelMessageRecord | null
     messageSource.file && typeof messageSource.file === "object"
       ? (messageSource.file as Record<string, unknown>)
       : {};
+  const messageSender =
+    messageSource.sender && typeof messageSource.sender === "object"
+      ? (messageSource.sender as Record<string, unknown>)
+      : messageSource.author && typeof messageSource.author === "object"
+        ? (messageSource.author as Record<string, unknown>)
+        : messageSource.from && typeof messageSource.from === "object"
+          ? (messageSource.from as Record<string, unknown>)
+          : {};
+  const messageRecipient =
+    messageSource.recipient && typeof messageSource.recipient === "object"
+      ? (messageSource.recipient as Record<string, unknown>)
+      : messageSource.receiver && typeof messageSource.receiver === "object"
+        ? (messageSource.receiver as Record<string, unknown>)
+        : messageSource.to && typeof messageSource.to === "object"
+          ? (messageSource.to as Record<string, unknown>)
+          : {};
 
   const mediaUri =
     normalizeString(messageSource.mediaUri) ??
@@ -707,7 +727,67 @@ function normalizeMessage(payload: unknown): MessengerKernelMessageRecord | null
     userId:
       normalizeString(messageSource.userId) ??
       normalizeString(messageSource.senderId) ??
-      normalizeString(messageSource.authorId),
+      normalizeString(messageSource.authorId) ??
+      normalizeString(messageSource.fromUserId),
+    senderId:
+      normalizeString(messageSource.senderId) ??
+      normalizeString(messageSource.authorId) ??
+      normalizeString(messageSource.fromUserId) ??
+      normalizeString(messageSource.userId) ??
+      normalizeString(messageSender.userId) ??
+      normalizeString(messageSender.id),
+    authorId:
+      normalizeString(messageSource.authorId) ??
+      normalizeString(messageSource.senderId) ??
+      normalizeString(messageSource.fromUserId) ??
+      normalizeString(messageSource.userId) ??
+      normalizeString(messageSender.userId) ??
+      normalizeString(messageSender.id),
+    fromUserId:
+      normalizeString(messageSource.fromUserId) ??
+      normalizeString(messageSource.senderId) ??
+      normalizeString(messageSource.authorId) ??
+      normalizeString(messageSource.userId) ??
+      normalizeString(messageSender.userId) ??
+      normalizeString(messageSender.id),
+    recipientUserId:
+      normalizeString(messageSource.recipientUserId) ??
+      normalizeString(messageSource.receiverUserId) ??
+      normalizeString(messageSource.toUserId) ??
+      normalizeString(messageSource.targetUserId) ??
+      normalizeString(messageRecipient.userId) ??
+      normalizeString(messageRecipient.id),
+    receiverUserId:
+      normalizeString(messageSource.receiverUserId) ??
+      normalizeString(messageSource.recipientUserId) ??
+      normalizeString(messageSource.toUserId) ??
+      normalizeString(messageSource.targetUserId) ??
+      normalizeString(messageRecipient.userId) ??
+      normalizeString(messageRecipient.id),
+    toUserId:
+      normalizeString(messageSource.toUserId) ??
+      normalizeString(messageSource.recipientUserId) ??
+      normalizeString(messageSource.receiverUserId) ??
+      normalizeString(messageSource.targetUserId) ??
+      normalizeString(messageRecipient.userId) ??
+      normalizeString(messageRecipient.id),
+    senderName:
+      normalizeString(messageSource.senderName) ??
+      normalizeString(messageSource.authorName) ??
+      normalizeString(messageSource.fromName) ??
+      normalizeString(messageSource.displayName) ??
+      normalizeString(messageSender.name) ??
+      normalizeString(messageSender.displayName) ??
+      normalizeString(messageSender.fullName) ??
+      normalizeString(messageSender.username),
+    senderPhone:
+      normalizeString(messageSource.senderPhone) ??
+      normalizeString(messageSource.authorPhone) ??
+      normalizeString(messageSource.fromPhone) ??
+      normalizeString(messageSource.phone) ??
+      normalizeString(messageSender.phone) ??
+      normalizeString(messageSender.phoneNumber) ??
+      normalizeString(messageSender.msisdn),
     type: normalizeString(messageSource.type)?.toUpperCase() ?? "TEXT",
     content,
     text: content,
@@ -1177,7 +1257,14 @@ function handleSocketEvent(eventName: string, payload: unknown) {
   ) {
     const message = normalizeMessage(payload);
     if (message) {
-      applyUnreadForIncomingMessage(message);
+      try {
+        applyUnreadForIncomingMessage(message);
+      } catch (error) {
+        const messageText = error instanceof Error ? error.message : String(error ?? "unknown");
+        if (messageText !== "Messenger kernel session is not resolved yet") {
+          console.warn("[messenger-realtime] unread apply skipped", messageText);
+        }
+      }
       upsertMessengerKernelMessages([message]);
       emitLocalCustom("message:new", {
         ...message,
@@ -1192,7 +1279,9 @@ function handleSocketEvent(eventName: string, payload: unknown) {
 
 export function subscribeMessengerRealtimeService(listener: MessengerRealtimeServiceListener) {
   listeners.add(listener);
-  return () => listeners.delete(listener);
+  return () => {
+    listeners.delete(listener);
+  };
 }
 
 export function getMessengerRealtimeConnectionSnapshot() {

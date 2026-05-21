@@ -252,7 +252,7 @@ const AR_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "وصف real bridge",
+          "جسر جوّال حقيقي: تسجيل الميكروفون، أحداث صوت native، تسليم النص، وتشغيل رابط الصوت. لا يتم تزوير TTS النصي فقط.",
         bind: "bind",
         start: "بدء",
         stop: "إيقاف",
@@ -273,7 +273,7 @@ const AR_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "نص إرشادي tts",
         playLastTts: "play الأخير tts",
         noFakeTts:
-          "لا fake tts",
+          "لا صوت وهمي: يعمل تشغيل الصوت فقط عندما يعيد backend/native TTS رابط صوت. يتم عرض TTS النصي فقط كنص حتى يتم ربط expo-speech أو وحدة TTS native.",
         runtimeLog: "runtime log",
         noEvents: "لا events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const AR_AI_MOBILE_LOCALE = {
         subtitle: "العنوان الفرعي",
         accessTitle: "access",
         noFakePayment:
-          "لا fake الدفع",
+          "لا يتم تزوير الدفع هنا. يجب أن تأتي عملية التفعيل من تدفق تأكيد Premium/COIN الحقيقي.",
         realtimeCallTranslationTitle: "الوقت الفعلي مكالمة الترجمة",
         realtimeTranslationTitle: "الوقت الفعلي الترجمة",
         realtimeTranslationDescription:

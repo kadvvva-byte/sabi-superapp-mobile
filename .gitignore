@@ -1,93 +1,59 @@
-# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
-
-# dependencies
+# Dependencies
 node_modules/
 
-# Expo
+# Expo / Metro generated files
 .expo/
 dist/
 web-build/
 expo-env.d.ts
+.metro-health-check*
 
-# Native
+# Build outputs and local generated artifacts
+build/
+coverage/
+*.tsbuildinfo
+
+# Native build cache only
 .kotlin/
-*.orig.*
+.gradle/
+.cxx/
+
+# Logs / crash dumps
+*.log
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+hs_err_pid*.log
+replay_pid*.log
+
+# macOS / editor
+.DS_Store
+.idea/
+*.iml
+
+# Secrets / local environment / signing keys
+.env
+.env.*
+*.env
+*.pem
 *.jks
+*.keystore
 *.p8
 *.p12
 *.key
 *.mobileprovision
+fcm-service-account.json
+android-keys/
 
-# Metro
-.metro-health-check*
-
-# debug
-npm-debug.*
-yarn-debug.*
-yarn-error.*
-
-# macOS
-.DS_Store
-*.pem
-
-# local env files
-.env*.local
-
-# typescript
-*.tsbuildinfo
-
-app-example
-
-# generated native folders
-/ios
-/android
-
-
-# SABI BUILD SAFETY
-.env
-.env.*
-*.env
+# Archives and temporary backups
 *.zip
 *.bak
-*.diff
-*.log
 *.tmp
-*.tsbuildinfo
-
-# local/generated
-.expo/
-node_modules/
-android/
-ios/
-dist/
-build/
-coverage/
-
-# reports/backups/install patches not needed for APK build
-*.txt
-*.md
-*.ps1
-*.cjs
-*.js.bak
+*.orig.*
 *backup*/
 *BACKUP*/
-performance-100-1-backup-*/
-PERFORMANCE-100.1/
-wallet-mobile-*-report.json
-*-audit.txt
-*-report.txt
-*-targets.txt
-*-diagnostics.txt
-*-exact-blocks.txt
-VERIFY_LOG.txt
-LOCATION-*.txt
 
-fcm-service-account.json
-
-android-keys/
-*.keystore
-*.jks
-
-android-keys/
-*.keystore
-*.jks
+# Keep real project/source files visible to Git:
+# - android/ and ios/ are NOT ignored
+# - modules/**/android and modules/**/ios are NOT ignored
+# - .txt, .md, .ps1, .cjs are NOT globally ignored

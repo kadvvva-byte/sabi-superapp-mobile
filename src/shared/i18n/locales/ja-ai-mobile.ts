@@ -252,7 +252,7 @@ const JA_AI_MOBILE_LOCALE = {
         nativeBridge: "接続",
         sttTtsBridgeTitle: "音声 AI",
         realBridgeDescription:
-          "音声 AI",
+          "実際のモバイルブリッジ: マイク録音、native音声イベント、文字起こしの引き渡し、audio URL再生。Text-only TTSは偽装されません。",
         bind: "接続",
         start: "開始",
         stop: "停止",
@@ -273,7 +273,7 @@ const JA_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "音声 AI",
         playLastTts: "再生",
         noFakeTts:
-          "プロバイダー",
+          "偽の音声はありません: 音声再生はbackend/native TTSがaudio URLを返した場合のみ動作します。expo-speechまたはnative TTS moduleが接続されるまで、Text-only TTSはテキストとして表示されます。",
         runtimeLog: "履歴",
         noEvents: "まだありません",
         sessionStopped: "停止",
@@ -352,7 +352,7 @@ const JA_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "プロバイダー",
+          "ここでは支払いを偽装しません。有効化は実際のPremium/COIN確認フローから行う必要があります。",
         realtimeCallTranslationTitle: "翻訳",
         realtimeTranslationTitle: "翻訳",
         realtimeTranslationDescription:

@@ -123,33 +123,46 @@ export function emitSabiOutgoingCallInvite(socket: SocketLike, payload: CallInvi
   const targetUserId = text(incoming.targetUserId);
 
   const events = [
+    "call:start",
     "call:incoming",
     "call_incoming",
+    "call:ringing",
+    "sabi-call:incoming",
+    "sabi-call:ringing",
     kind === "video" ? "video-call:incoming" : "audio-call:incoming",
     kind === "video" ? "video_call_incoming" : "audio_call_incoming",
-    "call:ringing",
     kind === "video" ? "video-call:ringing" : "audio-call:ringing",
   ];
 
   for (const eventName of events) {
-    socket.emit(eventName, incoming);
+    try { socket.emit(eventName, incoming); } catch {}
   }
 
-  socket.emit("realtime:event", {
+  const envelope = {
     eventName: "call:incoming",
+    name: "call:incoming",
+    event: "call:incoming",
+    type: "sabi_call_event",
     payload: incoming,
+    data: incoming,
+    message: incoming,
+    callId: text(incoming.callId),
+    chatId: text(incoming.chatId),
+    roomId: text(incoming.roomId),
+    fromUserId: text(incoming.fromUserId),
+    senderUserId: text(incoming.fromUserId),
+    toUserId: targetUserId,
     targetUserId,
+    receiverUserId: targetUserId,
     userId: targetUserId,
     channel: targetUserId ? `user:${targetUserId}` : undefined,
-  });
+    callChannel: text(incoming.callId) ? `call:${text(incoming.callId)}` : undefined,
+    at: new Date().toISOString(),
+  };
 
-  socket.emit("messenger:realtime:event", {
-    eventName: "call:incoming",
-    payload: incoming,
-    targetUserId,
-    userId: targetUserId,
-    channel: targetUserId ? `user:${targetUserId}` : undefined,
-  });
+  for (const eventName of ["realtime:event", "messenger:realtime:event", "sabi:realtime:event", "user:realtime:event"]) {
+    try { socket.emit(eventName, envelope); } catch {}
+  }
 
   return true;
 }

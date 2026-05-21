@@ -1,0 +1,11 @@
+{
+  "name": "sabi-call-native",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "private": true,
+  "expo": {
+    "plugins": [
+      "./plugin/withSabiCallNative"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, type ComponentType } from "react";
+﻿import React, { useCallback, useEffect, useState, type ComponentType } from "react";
 import { ActivityIndicator, BackHandler, InteractionManager, StyleSheet, View } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
 
@@ -8,7 +8,7 @@ let cachedGestureScreen: GestureScreenComponent | null = null;
 
 export default function HomeScreen() {
   const [GestureScreen, setGestureScreen] = useState<GestureScreenComponent | null>(
-    cachedGestureScreen,
+    () => cachedGestureScreen,
   );
 
   useFocusEffect(
@@ -72,3 +72,4 @@ const styles = StyleSheet.create({
     backgroundColor: "transparent",
   },
 });
+

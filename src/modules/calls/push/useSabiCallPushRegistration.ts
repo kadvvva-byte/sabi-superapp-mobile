@@ -1,5 +1,5 @@
-﻿import { useEffect, useRef } from "react";
-import { Platform } from "react-native";
+import { useEffect, useRef } from "react";
+import { AppState, Platform } from "react-native";
 import * as Device from "expo-device";
 import * as Notifications from "expo-notifications";
 import Constants from "expo-constants";
@@ -18,19 +18,89 @@ const SABI_INCOMING_CALL_CATEGORY_ID = "sabi_incoming_call";
 const SABI_CALL_ACCEPT_ACTION_ID = "sabi_call_accept";
 const SABI_CALL_DECLINE_ACTION_ID = "sabi_call_decline";
 
+function normalizeNotificationText(value: unknown): string {
+  return typeof value === "string" ? value.trim().toLowerCase() : "";
+}
+
+function isSabiIncomingCallNotificationData(data: Record<string, unknown>): boolean {
+  const typeText = [
+    data.sabiType,
+    data.notificationType,
+    data.type,
+    data.kind,
+    data.category,
+    data.event,
+    data.action,
+    data.status,
+    data.signalKind,
+  ]
+    .map(normalizeNotificationText)
+    .join("|");
+
+  return (
+    typeText.includes("incoming_call") ||
+    typeText.includes("call_incoming") ||
+    typeText.includes("call:incoming") ||
+    typeText.includes("audio-call:incoming") ||
+    typeText.includes("video-call:incoming")
+  );
+}
+
+function isSabiMissedCallNotificationData(data: Record<string, unknown>): boolean {
+  const typeText = [
+    data.sabiType,
+    data.notificationType,
+    data.type,
+    data.kind,
+    data.category,
+    data.event,
+    data.action,
+    data.status,
+    data.reason,
+    data.endReason,
+    data.signalKind,
+  ]
+    .map(normalizeNotificationText)
+    .join("|");
+
+  return typeText.includes("missed") || typeText.includes("no_answer") || typeText.includes("unanswered");
+}
+
+function isSabiActiveCallPath(): boolean {
+  const path = normalizeNotificationText((globalThis as any).__sabiCurrentPathname);
+  return path === "/calls/audio" || path === "/calls/video" || path === "/audio-call" || path === "/video-call";
+}
+
+function shouldSuppressForegroundIncomingCallNotification(data: Record<string, unknown>): boolean {
+  if (!isSabiIncomingCallNotificationData(data)) return false;
+  if (isSabiMissedCallNotificationData(data)) return false;
+
+  const appState = normalizeNotificationText((globalThis as any).__sabiAppState) || normalizeNotificationText(AppState.currentState);
+  if (appState && appState !== "active") return false;
+
+  return true;
+}
+
 function installSabiCallNotificationHandler() {
   if (sabiCallNotificationHandlerInstalled) return;
   sabiCallNotificationHandlerInstalled = true;
 
   Notifications.setNotificationHandler({
-    handleNotification: async () =>
-      ({
-        shouldShowAlert: false,
-        shouldPlaySound: false,
-        shouldSetBadge: false,
-        shouldShowBanner: false,
-        shouldShowList: false,
-      }) as Notifications.NotificationBehavior,
+    handleNotification: async (notification) => {
+      const data = (notification.request.content.data || {}) as Record<string, unknown>;
+
+      // Incoming calls are represented by the call screen/overlay while the app
+      // is active. A normal notification is shown only for missed/unanswered
+      // call pushes. Messages and all other modules always use system banners.
+      const suppressIncomingCall = shouldSuppressForegroundIncomingCallNotification(data);
+
+      return ({
+        shouldPlaySound: !suppressIncomingCall,
+        shouldSetBadge: true,
+        shouldShowBanner: !suppressIncomingCall,
+        shouldShowList: !suppressIncomingCall,
+      }) as Notifications.NotificationBehavior;
+    },
   });
 }
 
@@ -124,13 +194,18 @@ function declineSabiIncomingCallNotification(data: Record<string, unknown>) {
   if (auth.accessToken) headers.Authorization = `Bearer ${auth.accessToken}`;
   if (auth.currentUserId) headers["X-User-Id"] = auth.currentUserId;
 
-  void fetch(`${auth.apiBaseUrl.replace(/\/+$/, "")}/api/v2/calls/${encodeURIComponent(callId)}/decline`, {
+  void fetch(`${auth.apiBaseUrl.replace(/\/+$/, "")}/api/v2/calls/signal`, {
     method: "POST",
     headers,
     body: JSON.stringify({
       callId,
       userId: auth.currentUserId,
-      action: "decline",
+      fromUserId: auth.currentUserId,
+      event: "declined",
+      action: "declined",
+      status: "declined",
+      signalKind: "ended",
+      endReason: "declined",
       source: "notification_action",
     }),
   }).catch((error) => {
@@ -225,7 +300,10 @@ function openSabiIncomingCallNotification(data: Record<string, unknown>, lastOpe
       direction: "incoming",
       phase: "ringing",
       kind,
-      type: kind === "video" ? "VIDEO" : "AUDIO",
+      type: kind,
+      callKind: kind,
+      callType: kind,
+      mediaKind: kind,
       userId: currentUserId,
       selfId: currentUserId,
       currentUserId,
@@ -327,6 +405,15 @@ export function useSabiCallPushRegistration(enabled: boolean) {
   useEffect(() => {
     installSabiCallNotificationHandler();
 
+    const receivedSubscription = Notifications.addNotificationReceivedListener((notification) => {
+      const data = (notification.request.content.data || {}) as Record<string, unknown>;
+
+      if (!shouldSuppressForegroundIncomingCallNotification(data)) return;
+      if (isSabiActiveCallPath()) return;
+
+      openSabiIncomingCallNotification(data, lastOpenKeyRef);
+    });
+
     const responseSubscription = Notifications.addNotificationResponseReceivedListener((response) => {
       const data = (response.notification.request.content.data || {}) as Record<string, unknown>;
 
@@ -349,6 +436,7 @@ export function useSabiCallPushRegistration(enabled: boolean) {
       .catch(() => undefined);
 
     return () => {
+      receivedSubscription.remove();
       responseSubscription.remove();
     };
   }, []);

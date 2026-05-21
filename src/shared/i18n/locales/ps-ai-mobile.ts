@@ -252,7 +252,7 @@ const PS_AI_MOBILE_LOCALE = {
         nativeBridge: "native Bridge",
         sttTtsBridgeTitle: "stt Tts Bridge Title",
         realBridgeDescription:
-          "real Bridge Description",
+          "رښتینی موبایل bridge: د مایکروفون ثبت، native غږیزې پېښې، transcript سپارل او audio URL غږول. Text-only TTS جعلي نه دی.",
         bind: "bind",
         start: "پیل",
         stop: "درول",
@@ -273,7 +273,7 @@ const PS_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts Placeholder",
         playLastTts: "play Last Tts",
         noFakeTts:
-          "no Fake Tts",
+          "جعلي غږ نشته: audio playback یوازې هغه وخت کار کوي چې backend/native TTS audio URL ورکړي. Text-only TTS د expo-speech یا native TTS module تر نښلولو پورې د متن په توګه ښودل کېږي.",
         runtimeLog: "runtime Log",
         noEvents: "no Events",
         sessionStopped: "session Stopped",
@@ -352,7 +352,7 @@ const PS_AI_MOBILE_LOCALE = {
         subtitle: "فرعي سرلیک",
         accessTitle: "access Title",
         noFakePayment:
-          "no Fake Payment",
+          "دلته تادیه جعلي نه ده. فعالول باید د رښتیني Premium/COIN تایید جریان څخه راشي.",
         realtimeCallTranslationTitle: "realtime Call Translation Title",
         realtimeTranslationTitle: "realtime Translation Title",
         realtimeTranslationDescription:

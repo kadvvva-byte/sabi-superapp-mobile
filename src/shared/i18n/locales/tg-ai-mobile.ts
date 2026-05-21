@@ -252,7 +252,7 @@ const TG_AI_MOBILE_LOCALE = {
         nativeBridge: "Ovoz ulanishi",
         sttTtsBridgeTitle: "Ovoz tizimi",
         realBridgeDescription:
-          "Ovoz matni va javoblar haqiqiy ovoz provayderi orqali ishlaydi.",
+          "Пули воқеии mobile: сабти микрофон, рӯйдодҳои native voice, интиқоли transcript ва playback audio URL. Text-only TTS сохта намешавад.",
         bind: "Ulash",
         start: "Boshlash",
         stop: "To‘xtatish",
@@ -273,7 +273,7 @@ const TG_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "Ovozli javob matni…",
         playLastTts: "Oxirgi javobni eshittirish",
         noFakeTts:
-          "Audio faqat haqiqiy audio URL kelganda eshittiriladi.",
+          "Овози сохта нест: audio playback танҳо вақте кор мекунад, ки backend/native TTS audio URL баргардонад. Text-only TTS то пайваст шудани expo-speech ё native TTS module ҳамчун матн нишон дода мешавад.",
         runtimeLog: "Ovoz hodisalari",
         noEvents: "Hozircha hodisa yo‘q.",
         sessionStopped: "Sessiya to‘xtadi.",
@@ -352,7 +352,7 @@ const TG_AI_MOBILE_LOCALE = {
         subtitle: "COIN orqali Premium AI.",
         accessTitle: "Premium AI funksiyalari",
         noFakePayment:
-          "Premium faqat haqiqiy COIN to‘lovi tasdiqlangandan keyin yoqiladi.",
+          "Пардохт дар ин ҷо сохта нест. Фаъолсозӣ бояд аз ҷараёни воқеии тасдиқи Premium/COIN ояд.",
         realtimeCallTranslationTitle: "Qo‘ng‘iroq tarjimasi",
         realtimeTranslationTitle: "Real vaqt tarjimasi",
         realtimeTranslationDescription:

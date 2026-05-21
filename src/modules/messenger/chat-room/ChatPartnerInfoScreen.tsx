@@ -4038,15 +4038,35 @@ export default function ChatPartnerInfoScreen() {
 
   const callMembersCount = countMessengerCallParticipants(initialCallParticipants);
 
+  const directCallPeerId = String(routePeerId || "").trim() && String(routePeerId || "").trim() !== String(presenceUserId || "").trim()
+    ? String(routePeerId || "").trim()
+    : "";
+
   const directCallRouteParams = useMemo(
-    () => ({
+    () => {
+      const safePeerId = directCallPeerId || undefined;
+      const safeChatId = String(chatId || "direct").trim();
+      const fullCallId = [
+        "call",
+        safeChatId.replace(/:/g, "_"),
+        String(presenceUserId || "self").replace(/:/g, "_"),
+        String(safePeerId || "peer").replace(/:/g, "_"),
+        String(Date.now()),
+        Math.random().toString(36).slice(2, 10),
+      ].join(":");
+
+      return ({
       id: chatId,
       chatId,
+      callId: fullCallId,
       userId: presenceUserId || undefined,
       selfId: presenceUserId || undefined,
-      peerId: routePeerId || undefined,
-      partnerId: routePeerId || undefined,
-      targetUserId: routePeerId || undefined,
+      peerId: safePeerId,
+      peerUserId: safePeerId,
+      partnerId: safePeerId,
+      targetUserId: safePeerId,
+      toUserId: safePeerId,
+      receiverUserId: safePeerId,
       roomType,
       name: partnerName,
       avatarLetter: partnerLetter,
@@ -4073,12 +4093,14 @@ export default function ChatPartnerInfoScreen() {
           ? params.botKind.trim()
           : undefined,
       isBotOwnedByMe: isBotOwnedByMe ? "1" : "0",
-    }),
+    });
+    },
     [
       avatarUri,
       callMembersCount,
       callParticipantsParam,
       chatId,
+      directCallPeerId,
       displayStatus,
       effectiveIsOnline,
       effectiveLastSeenAt,
@@ -4105,7 +4127,13 @@ export default function ChatPartnerInfoScreen() {
     if (roomType !== "direct") return;
     router.push({
       pathname: "/calls/audio",
-      params: directCallRouteParams,
+      params: {
+        ...directCallRouteParams,
+        kind: "audio",
+        type: "audio",
+        callKind: "audio",
+        callType: "audio",
+      },
     } as never);
   }, [directCallRouteParams, roomType]);
 
@@ -4113,7 +4141,13 @@ export default function ChatPartnerInfoScreen() {
     if (roomType !== "direct") return;
     router.push({
       pathname: "/calls/video",
-      params: directCallRouteParams,
+      params: {
+        ...directCallRouteParams,
+        kind: "video",
+        type: "video",
+        callKind: "video",
+        callType: "video",
+      },
     } as never);
   }, [directCallRouteParams, roomType]);
 

@@ -71,6 +71,8 @@ type RemoveCustomMessengerContactTarget =
       phone?: string | null;
       username?: string | null;
       source?: MessengerCustomContactSource | string | null;
+      currentUserId?: string | null;
+      ownerUserId?: string | null;
     };
 
 const STORAGE_KEY = "sabi.messenger.custom_contacts";
@@ -166,6 +168,44 @@ function normalizeStoredIdentity(value?: string | null) {
   return String(value ?? "").trim() || undefined;
 }
 
+function normalizeStoredOwnerUserId(value?: string | null) {
+  return String(value ?? "").trim();
+}
+
+function getContactOwnerUserId(contact: Partial<MessengerCustomContact> & { ownerUserId?: string | null }) {
+  return normalizeStoredOwnerUserId(contact.currentUserId) || normalizeStoredOwnerUserId(contact.ownerUserId);
+}
+
+function isSameContactOwner(
+  contact: Partial<MessengerCustomContact> & { ownerUserId?: string | null },
+  ownerUserId?: string | null,
+) {
+  const normalizedOwnerUserId = normalizeStoredOwnerUserId(ownerUserId);
+  if (!normalizedOwnerUserId) return true;
+  return getContactOwnerUserId(contact) === normalizedOwnerUserId;
+}
+
+function isSameWritableContactScope(
+  left: Partial<MessengerCustomContact> & { ownerUserId?: string | null },
+  right: Partial<MessengerCustomContact> & { ownerUserId?: string | null },
+) {
+  const leftOwnerUserId = getContactOwnerUserId(left);
+  const rightOwnerUserId = getContactOwnerUserId(right);
+
+  if (leftOwnerUserId || rightOwnerUserId) {
+    return Boolean(leftOwnerUserId && rightOwnerUserId && leftOwnerUserId === rightOwnerUserId);
+  }
+
+  return true;
+}
+
+function filterWritableContactsForOwnerScope(
+  contacts: MessengerCustomContact[],
+  input: Partial<UpsertCustomMessengerContactArgs> & { ownerUserId?: string | null },
+) {
+  return contacts.filter((item) => isSameWritableContactScope(input, item));
+}
+
 function contactAliasKeys(input: Partial<UpsertCustomMessengerContactArgs> | MessengerCustomContact) {
   return buildMessengerContactAliasKeys({
     id: input.id,
@@ -196,6 +236,7 @@ function getRemovalIdentity(target: RemoveCustomMessengerContactTarget) {
       chatId: "",
       phone: "",
       username: "",
+      currentUserId: "",
     };
   }
 
@@ -204,6 +245,7 @@ function getRemovalIdentity(target: RemoveCustomMessengerContactTarget) {
     chatId: String(target.chatId ?? "").trim(),
     phone: normalizePhone(target.phone),
     username: normalizeUsername(target.username),
+    currentUserId: normalizeStoredOwnerUserId(target.currentUserId) || normalizeStoredOwnerUserId(target.ownerUserId),
   };
 }
 
@@ -279,26 +321,17 @@ export async function listCustomMessengerContacts(ownerUserId?: string | null) {
     return contacts;
   }
 
-  return contacts.filter((contact: any) => {
-    const contactOwnerUserId =
-      typeof contact?.currentUserId === "string"
-        ? contact.currentUserId.trim()
-        : typeof contact?.ownerUserId === "string"
-          ? contact.ownerUserId.trim()
-          : "";
-
-    return contactOwnerUserId === normalizedOwnerUserId;
-  });
+  return contacts.filter((contact) => isSameContactOwner(contact, normalizedOwnerUserId));
 }
 
 export async function listDeletedCustomMessengerContactKeys() {
   return readDeletedKeys();
 }
 
-export async function getCustomMessengerContactById(id: string) {
+export async function getCustomMessengerContactById(id: string, ownerUserId?: string | null) {
   const normalized = String(id ?? "").trim();
   return (
-    (await listCustomMessengerContacts()).find((item) => item.id === normalized) ??
+    (await listCustomMessengerContacts(ownerUserId)).find((item) => item.id === normalized) ??
     null
   );
 }
@@ -317,23 +350,25 @@ export async function upsertCustomMessengerContact(
   const existing = await readAllCustomContacts();
   const normalizedInputId = String(input.id ?? "").trim();
   const normalizedInputChatId = String(input.chatId ?? "").trim();
+  const normalizedInputOwnerUserId = normalizeStoredOwnerUserId(input.currentUserId);
+  const ownerScopedExisting = filterWritableContactsForOwnerScope(existing, input);
 
   const matched =
-    existing.find((item) => contactsShareIdentity(input, item)) ||
+    ownerScopedExisting.find((item) => contactsShareIdentity(input, item)) ||
     (normalizedInputId
-      ? existing.find((item) => item.id === normalizedInputId) || null
+      ? ownerScopedExisting.find((item) => item.id === normalizedInputId) || null
       : null) ||
     (normalizedInputChatId
-      ? existing.find((item) => item.chatId === normalizedInputChatId) || null
+      ? ownerScopedExisting.find((item) => item.chatId === normalizedInputChatId) || null
       : null) ||
     (input.peerUserId
-      ? existing.find((item) => normalizeStoredIdentity(item.peerUserId) === normalizeStoredIdentity(input.peerUserId)) || null
+      ? ownerScopedExisting.find((item) => normalizeStoredIdentity(item.peerUserId) === normalizeStoredIdentity(input.peerUserId)) || null
       : null) ||
     (phone
-      ? existing.find((item) => normalizePhone(item.phone) === phone) || null
+      ? ownerScopedExisting.find((item) => normalizePhone(item.phone) === phone) || null
       : null) ||
     (username
-      ? existing.find((item) => normalizeUsername(item.username).toLowerCase() === username.toLowerCase()) || null
+      ? ownerScopedExisting.find((item) => normalizeUsername(item.username).toLowerCase() === username.toLowerCase()) || null
       : null);
 
   const canonicalId = buildMessengerCanonicalContactId({
@@ -387,7 +422,12 @@ export async function upsertCustomMessengerContact(
 
   const next = [
     nextItem,
-    ...existing.filter((item) => item.id !== nextItem.id && !contactsShareIdentity(nextItem, item)),
+    ...existing.filter((item) => {
+      if (!isSameWritableContactScope(nextItem, item)) return true;
+      if (item.id === nextItem.id) return false;
+      if (item.chatId === nextItem.chatId) return false;
+      return !contactsShareIdentity(nextItem, item);
+    }),
   ].sort((a, b) =>
     String(b.updatedAt || "").localeCompare(String(a.updatedAt || "")),
   );
@@ -412,12 +452,15 @@ export async function removeCustomMessengerContact(target: RemoveCustomMessenger
   if (!hasAnyIdentity) return;
 
   const current = await readAllCustomContacts();
+  const ownerScopedCurrent = identity.currentUserId
+    ? current.filter((item) => isSameContactOwner(item, identity.currentUserId))
+    : current.filter((item) => !getContactOwnerUserId(item));
   const matched =
-    current.find((item) => identity.id && item.id === identity.id) ||
-    current.find((item) => identity.chatId && item.chatId === identity.chatId) ||
-    current.find((item) => contactsShareIdentity(identity, item)) ||
-    current.find((item) => identity.phone && normalizePhone(item.phone) === identity.phone) ||
-    current.find((item) => identity.username && normalizeUsername(item.username).toLowerCase() === identity.username.toLowerCase()) ||
+    ownerScopedCurrent.find((item) => identity.id && item.id === identity.id) ||
+    ownerScopedCurrent.find((item) => identity.chatId && item.chatId === identity.chatId) ||
+    ownerScopedCurrent.find((item) => contactsShareIdentity(identity, item)) ||
+    ownerScopedCurrent.find((item) => identity.phone && normalizePhone(item.phone) === identity.phone) ||
+    ownerScopedCurrent.find((item) => identity.username && normalizeUsername(item.username).toLowerCase() === identity.username.toLowerCase()) ||
     null;
 
   const next = matched

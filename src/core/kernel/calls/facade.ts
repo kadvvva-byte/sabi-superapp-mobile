@@ -105,7 +105,12 @@ function normalizeParams(args: OpenCallArgs, kind: "audio" | "video"): Normalize
     return null;
   }
 
-  const callId = text(args.callId) || `call:${chatId}:${userId}:${peerId}:${Date.now()}`;
+  // CALL-AV-123.1_FRESH_OUTGOING_CALL_ID:
+  // Every new outgoing audio/video call must have a unique callId.
+  // Reusing args.callId lets stale offer/answer/ice/ended events from an older
+  // attempt close or poison the next call.
+  const callNonce = Math.random().toString(36).slice(2, 10);
+  const callId = `call:${chatId}:${userId}:${peerId}:${Date.now()}:${callNonce}`;
   const name = text(args.name) || text(args.roomTitle) || (kind === "video" ? "Video call" : "Audio call");
   const videoEnabled = kind === "video" ? "1" : "0";
 

@@ -252,7 +252,7 @@ const KO_AI_MOBILE_LOCALE = {
         nativeBridge: "연결",
         sttTtsBridgeTitle: "음성 AI",
         realBridgeDescription:
-          "음성 AI",
+          "실제 모바일 브리지: 마이크 녹음, native 음성 이벤트, transcript 전달 및 audio URL 재생. Text-only TTS는 가짜로 처리되지 않습니다.",
         bind: "연결",
         start: "시작",
         stop: "중지",
@@ -273,7 +273,7 @@ const KO_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "음성 AI",
         playLastTts: "재생",
         noFakeTts:
-          "제공자",
+          "가짜 음성 없음: audio playback은 backend/native TTS가 audio URL을 반환할 때만 작동합니다. expo-speech 또는 native TTS module이 연결될 때까지 Text-only TTS는 텍스트로 표시됩니다.",
         runtimeLog: "기록",
         noEvents: "비어 있음",
         sessionStopped: "중지",
@@ -352,7 +352,7 @@ const KO_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "제공자",
+          "여기서는 결제가 가짜로 처리되지 않습니다. 활성화는 실제 Premium/COIN 확인 흐름에서 와야 합니다.",
         realtimeCallTranslationTitle: "번역",
         realtimeTranslationTitle: "번역",
         realtimeTranslationDescription:

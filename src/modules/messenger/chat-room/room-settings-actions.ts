@@ -47,7 +47,7 @@ export function handleRoomSettingsAction({
   switch (toolId) {
     case "add_contact": {
       router.push({
-        pathname: "/contacts" as never,
+        pathname: "/tabs/contacts" as never,
         params: {
           mode: "create",
           source: "chat_room_settings",

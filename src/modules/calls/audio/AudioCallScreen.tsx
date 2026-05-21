@@ -1,0 +1,853 @@
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { router, useLocalSearchParams } from "expo-router";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+
+import { useI18n } from "../../../shared/i18n";
+import { getSuperAppSocket } from "../../../shared/realtime/superapp-socket";
+import {
+  emitSabiCallTransportEvent,
+  getSabiCallTransportSignalKind,
+  joinSabiCallTransportScopes,
+  leaveSabiCallTransportScopes,
+  subscribeSabiCallTransportEvents,
+} from "../callSignalTransport";
+import { stopSabiCallToneNow, useSabiCallTone } from "../useSabiCallTone";
+import {
+  createStandardCallPeer,
+  isFromPeer,
+  isRealCallEndPayload,
+  logSabiCallDebug,
+  makeCallPayload,
+  makeSignalKey,
+  parseStandardCallRoute,
+  payloadMatches,
+  summarizeSabiCallPayloadForDebug,
+  type StandardCallPhase,
+} from "./audioCallRuntime";
+
+type PeerHandle = ReturnType<typeof createStandardCallPeer>;
+
+function closeCallRoute() {
+  try { router.replace("/tabs/chats" as never); return; } catch {}
+  try { (router as any).replace("/(tabs)/chats"); return; } catch {}
+  try { (router as any).replace("/"); } catch {}
+}
+
+function stopStream(stream: any | null | undefined) {
+  try {
+    stream?.getTracks?.().forEach((track: any) => {
+      try { if (track && "enabled" in track) track.enabled = false; track?.stop?.(); } catch {}
+    });
+  } catch {}
+}
+
+
+const SABI_RECENTLY_FINISHED_CALL_SUPPRESS_MS = 900;
+
+function callLifecycleKey(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+  return [
+    route.kind || "audio",
+    route.chatId || route.roomId || "direct",
+    route.userId || "self",
+    route.peerId || "peer",
+  ].join("|");
+}
+
+function rememberFinishedCall(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+  try {
+    const root = globalThis as any;
+    const map = (root.__sabiRecentlyFinishedCalls ||= {}) as Record<string, number>;
+    map[callLifecycleKey(route)] = Date.now();
+  } catch {}
+}
+
+function wasCallJustFinished(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+  try {
+    const root = globalThis as any;
+    const map = (root.__sabiRecentlyFinishedCalls || {}) as Record<string, number>;
+    const at = Number(map[callLifecycleKey(route)] || 0);
+    return at > 0 && Date.now() - at < SABI_RECENTLY_FINISHED_CALL_SUPPRESS_MS;
+  } catch {
+    return false;
+  }
+}
+
+function baseCallId(callId: string) {
+  const parts = String(callId || "").split(":");
+  return parts.length >= 5 && parts[0] === "call" ? parts.slice(0, 5).join(":") : String(callId || "");
+}
+
+function sabiCallPayloadTimeMs(payload: unknown): number {
+  try {
+    const body = payload && typeof payload === "object" ? (payload as Record<string, unknown>) : {};
+    const nested = body.payload && typeof body.payload === "object" ? (body.payload as Record<string, unknown>) : {};
+    const data = body.data && typeof body.data === "object" ? (body.data as Record<string, unknown>) : {};
+    const message = body.message && typeof body.message === "object" ? (body.message as Record<string, unknown>) : {};
+    const raw = body.timestamp ?? body.sentAt ?? body.at ?? body.relayAt ?? nested.timestamp ?? nested.sentAt ?? nested.at ?? data.timestamp ?? data.sentAt ?? data.at ?? message.timestamp ?? message.sentAt ?? message.at;
+    if (typeof raw === "number" && Number.isFinite(raw)) return raw;
+    if (typeof raw === "string" && raw.trim()) {
+      const parsed = Number(raw);
+      if (Number.isFinite(parsed) && parsed > 1000000000) return parsed;
+      const time = Date.parse(raw);
+      if (Number.isFinite(time)) return time;
+    }
+  } catch {}
+  return 0;
+}
+
+function isStaleSabiCallSignal(payload: unknown, maxAgeMs = 12000): boolean {
+  const at = sabiCallPayloadTimeMs(payload);
+  return at > 0 && Date.now() - at > maxAgeMs;
+}
+
+const AUDIO_EVENTS = [
+  "call:accepted", "call:accept", "sabi-call:accept", "sabi-call:accepted", "audio:call:accept", "audio-call:accepted",
+  "call:webrtc:offer", "call:webrtc:answer", "call:webrtc:ice", "call:signal", "call_signal", "call:webrtc:signal", "sabi-call:signal", "audio:call:signal", "audio-call:signal", "call.signal",
+  "call:ended", "call:end", "call:declined", "call:missed", "call:cancelled", "call:busy", "sabi-call:ended", "sabi-call:end", "sabi-call:declined", "sabi-call:missed", "sabi-call:cancelled", "sabi-call:busy",
+  "call:connected", "call:active", "sabi-call:connected", "sabi-call:active",
+];
+
+export default function AudioCallScreen() {
+  const { t } = useI18n();
+  const params = useLocalSearchParams();
+  const parsedRoute = useMemo(() => parseStandardCallRoute(params as Record<string, unknown>, "audio"), [params]);
+
+  const outgoingSessionCallIdRef = useRef<string | null>(null);
+  const route = useMemo(() => {
+    if (parsedRoute.incoming) return parsedRoute;
+
+    const rawCallId = String(parsedRoute.callId || "").trim();
+    const parts = rawCallId.split(":").filter(Boolean);
+    const alreadyHasInstance =
+      (rawCallId.startsWith("call:") && parts.length >= 6) ||
+      (!rawCallId.startsWith("call:") && parts.length >= 3);
+
+    if (alreadyHasInstance) {
+      outgoingSessionCallIdRef.current = rawCallId;
+      return parsedRoute;
+    }
+
+    if (!outgoingSessionCallIdRef.current) {
+      outgoingSessionCallIdRef.current = [
+        rawCallId || parsedRoute.chatId || "audio-call",
+        String(Date.now()),
+        Math.random().toString(36).slice(2, 10),
+      ].join(":");
+    }
+
+    return { ...parsedRoute, callId: outgoingSessionCallIdRef.current };
+  }, [parsedRoute]);
+
+  const socket = useMemo(() => getSuperAppSocket(route.userId || undefined), [route.userId]);
+
+  const [phase, setPhase] = useState<StandardCallPhase>(route.incoming ? "ringing" : "calling");
+  const [seconds, setSeconds] = useState(0);
+  const [micEnabled, setMicEnabled] = useState(true);
+  const [speakerEnabled, setSpeakerEnabled] = useState(false);
+  const [minimized, setMinimized] = useState(false);
+  const [localStream, setLocalStream] = useState<any | null>(null);
+  const [remoteStream, setRemoteStream] = useState<any | null>(null);
+
+  const peerRef = useRef<PeerHandle | null>(null);
+  const mountedRef = useRef(true);
+  const finishedRef = useRef(false);
+  const acceptedRef = useRef(false);
+  const inviteSentRef = useRef(false);
+  const offerStartedRef = useRef(false);
+  const handlingOfferRef = useRef(false);
+  const roomJoinSentRef = useRef(false);
+  const activeStartedAtRef = useRef<number | null>(null);
+  const seenRef = useRef(new Set<string>());
+  const pendingOfferRef = useRef<unknown | null>(null);
+  const acceptedFallbackOfferTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useSabiCallTone({
+    enabled: !finishedRef.current && (phase === "calling" || phase === "ringing"),
+    mode: phase === "calling" ? "outgoing" : phase === "ringing" ? "incoming" : "none",
+    callId: route.callId,
+  });
+
+  const callDebug = useCallback((stage: string, details: Record<string, unknown> = {}) => {
+    logSabiCallDebug(route, "screen:" + stage, details);
+  }, [route]);
+
+  const shouldProcess = useCallback((eventName: string, payload: unknown) => {
+    const key = makeSignalKey(eventName, payload);
+    if (!key || seenRef.current.has(key)) return false;
+    seenRef.current.add(key);
+    if (seenRef.current.size > 160) seenRef.current = new Set(Array.from(seenRef.current).slice(-80));
+    return true;
+  }, []);
+
+  const emitFast = useCallback((eventName: string, payload: Record<string, unknown>) => {
+    const body = makeCallPayload(route, payload);
+    emitSabiCallTransportEvent(socket, eventName, body);
+  }, [route, socket]);
+
+  const ensurePeer = useCallback(() => {
+    if (peerRef.current) return peerRef.current;
+    callDebug("peer:create");
+    peerRef.current = createStandardCallPeer({
+      route,
+      socket,
+      initialVideoEnabled: false,
+      initialCameraFacing: "user",
+      canStartCaller: () => !finishedRef.current,
+      onLocalStream: setLocalStream,
+      onRemoteStream: (stream) => {
+        if (finishedRef.current) return;
+        setRemoteStream(stream);
+        if (stream) {
+          activeStartedAtRef.current ||= Date.now();
+          void stopSabiCallToneNow();
+          setPhase("active");
+        }
+      },
+      onConnected: () => {
+        if (!mountedRef.current || finishedRef.current) return;
+        activeStartedAtRef.current ||= Date.now();
+        void stopSabiCallToneNow();
+        setPhase("active");
+      },
+      onError: (message) => {
+        callDebug("peer:error", { message });
+        if (!finishedRef.current) setPhase("connecting");
+      },
+    });
+    void peerRef.current.setSpeakerEnabled(speakerEnabled);
+    void peerRef.current.setMicEnabled(micEnabled);
+    return peerRef.current;
+  }, [callDebug, micEnabled, route, socket, speakerEnabled]);
+
+  const startOfferOnce = useCallback((reason = "start", options: { keepTone?: boolean } = {}) => {
+    if (finishedRef.current || offerStartedRef.current) return;
+    offerStartedRef.current = true;
+    setPhase(options.keepTone ? "calling" : "connecting");
+    callDebug("startOfferOnce", { reason, keepTone: Boolean(options.keepTone) });
+    if (!options.keepTone) void stopSabiCallToneNow();
+    void ensurePeer().startCaller();
+  }, [callDebug, ensurePeer]);
+
+  const clearAcceptedFallbackOfferTimer = useCallback(() => {
+    const timer = acceptedFallbackOfferTimerRef.current;
+    if (!timer) return;
+    acceptedFallbackOfferTimerRef.current = null;
+    clearTimeout(timer);
+  }, []);
+
+  const scheduleOutgoingAcceptedFallbackOffer = useCallback((reason = "accepted_without_peer_offer") => {
+    if (route.incoming || finishedRef.current || offerStartedRef.current) return;
+    clearAcceptedFallbackOfferTimer();
+    acceptedFallbackOfferTimerRef.current = setTimeout(() => {
+      acceptedFallbackOfferTimerRef.current = null;
+      if (route.incoming || finishedRef.current || offerStartedRef.current || peerRef.current) return;
+      callDebug("accepted:fallback_offer:start", { reason });
+      startOfferOnce("accepted_outgoing_fallback_offer", { keepTone: false });
+    }, 1800);
+  }, [callDebug, clearAcceptedFallbackOfferTimer, route.incoming, startOfferOnce]);
+
+  const finishLocal = useCallback((reason: string) => {
+    if (finishedRef.current) return;
+    finishedRef.current = true;
+    rememberFinishedCall(route);
+    clearAcceptedFallbackOfferTimer();
+    void stopSabiCallToneNow();
+    setPhase("ended");
+    setMinimized(false);
+    callDebug("finish", { reason });
+
+    const payload = makeCallPayload(route, {
+      event: reason === "declined" ? "declined" : "ended",
+      action: reason === "declined" ? "declined" : "ended",
+      phase: "ended",
+      status: reason === "declined" ? "declined" : "ended",
+      endReason: reason,
+      signalKind: "ended",
+    });
+
+    emitSabiCallTransportEvent(socket, "call:end", payload);
+
+    peerRef.current?.close();
+    peerRef.current = null;
+    stopStream(localStream);
+    stopStream(remoteStream);
+    setLocalStream(null);
+    setRemoteStream(null);
+    closeCallRoute();
+  }, [callDebug, clearAcceptedFallbackOfferTimer, localStream, remoteStream, route, socket]);
+
+  const accept = useCallback(() => {
+    if (!route.incoming || acceptedRef.current || finishedRef.current) return;
+    acceptedRef.current = true;
+    void stopSabiCallToneNow();
+    setPhase("connecting");
+
+    const payload = makeCallPayload(route, {
+      event: "accepted",
+      action: "accepted",
+      phase: "connecting",
+      status: "connecting",
+      signalKind: "accepted",
+    });
+
+    callDebug("accept:emit", summarizeSabiCallPayloadForDebug(payload));
+    emitSabiCallTransportEvent(socket, "call:accepted", payload);
+
+    const pendingOffer = pendingOfferRef.current;
+    pendingOfferRef.current = null;
+    if (pendingOffer) {
+      handlingOfferRef.current = true;
+      void ensurePeer().handleOffer(pendingOffer).finally(() => { handlingOfferRef.current = false; });
+      return;
+    }
+
+    // CALL-LOCKED-RELAY-16: incoming side only confirms accept.
+    // The caller creates the initial offer after accepted is received. This
+    // prevents the callee from sending offer before the caller is ready and
+    // fixes the observed state: callee have-local-offer, caller still new.
+  }, [callDebug, ensurePeer, route, socket]);
+
+  const toggleMic = useCallback(() => {
+    const next = !micEnabled;
+    setMicEnabled(next);
+    void peerRef.current?.setMicEnabled(next);
+  }, [micEnabled]);
+
+  const toggleSpeaker = useCallback(() => {
+    const next = !speakerEnabled;
+    setSpeakerEnabled(next);
+    // audioCallRuntime already applies the native audio route and performs
+    // its own short retry. Do not schedule extra screen-level retries here:
+    // repeated route changes were delaying audio path activation and could
+    // make audio feel one-sided on some Android devices.
+    void peerRef.current?.setSpeakerEnabled(next);
+  }, [speakerEnabled]);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    finishedRef.current = false;
+    acceptedRef.current = false;
+    inviteSentRef.current = false;
+    offerStartedRef.current = false;
+    handlingOfferRef.current = false;
+    roomJoinSentRef.current = false;
+    activeStartedAtRef.current = null;
+    seenRef.current.clear();
+    pendingOfferRef.current = null;
+    clearAcceptedFallbackOfferTimer();
+    setPhase(route.incoming ? "ringing" : "calling");
+    setSeconds(0);
+    setLocalStream(null);
+    setRemoteStream(null);
+    return () => {
+      mountedRef.current = false;
+      clearAcceptedFallbackOfferTimer();
+      void stopSabiCallToneNow();
+      peerRef.current?.close();
+      peerRef.current = null;
+    };
+  }, [clearAcceptedFallbackOfferTimer, route.callId, route.incoming]);
+
+  useEffect(() => {
+    if (!route.incoming && wasCallJustFinished(route)) {
+      callDebug("invite:skip:recently_finished", { callId: route.callId });
+      finishedRef.current = true;
+      setPhase("ended");
+      closeCallRoute();
+      return undefined;
+    }
+
+    try { if (!socket.connected) socket.connect?.(); } catch {}
+
+    const joinPayload = makeCallPayload(route, { event: "join", signalKind: "audio" });
+    if (!roomJoinSentRef.current) {
+      roomJoinSentRef.current = true;
+      callDebug("room:join:emit", summarizeSabiCallPayloadForDebug(joinPayload));
+      joinSabiCallTransportScopes(socket, joinPayload);
+    }
+
+    if (!route.incoming && !inviteSentRef.current) {
+      inviteSentRef.current = true;
+      const payload = makeCallPayload(route, {
+        event: "incoming",
+        action: "incoming",
+        phase: "ringing",
+        status: "ringing",
+        signalKind: "incoming",
+      });
+      callDebug("invite:start:emit", summarizeSabiCallPayloadForDebug(payload));
+      emitSabiCallTransportEvent(socket, "call:incoming", payload);
+      setPhase("calling");
+      // AUDIO-1600: caller must NOT create WebRTC offer during ringback.
+      // On Android rn-webrtc createOffer can block 10+ seconds before Accept.
+      // Press call = immediate ringback + route invite only; after Accept the
+      // incoming side creates the offer and caller answers.
+    }
+
+    return () => {
+      leaveSabiCallTransportScopes(socket, makeCallPayload(route, { event: "leave", signalKind: "audio" }));
+    };
+  }, [callDebug, route, socket, startOfferOnce]);
+
+  useEffect(() => {
+    const handleAccepted = (payload: unknown, eventName = "call:accepted") => {
+      if (route.incoming || finishedRef.current || wasCallJustFinished(route)) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (isStaleSabiCallSignal(payload)) {
+        callDebug("accepted:ignored_stale", summarizeSabiCallPayloadForDebug(payload));
+        return;
+      }
+      if (!shouldProcess(eventName, payload)) return;
+      if (acceptedRef.current) return;
+      callDebug("accepted:recv", summarizeSabiCallPayloadForDebug(payload));
+      acceptedRef.current = true;
+      void stopSabiCallToneNow();
+      setPhase("connecting");
+      startOfferOnce("accepted_outgoing_offer", { keepTone: false });
+    };
+
+    const handleOffer = (payload: unknown, alreadyDeduped = false) => {
+      if (finishedRef.current) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (!alreadyDeduped && !shouldProcess("call:webrtc:offer", payload)) return;
+      callDebug("offer:recv", summarizeSabiCallPayloadForDebug(payload));
+      clearAcceptedFallbackOfferTimer();
+
+      // Same rule as stable video-call: if the callee has not pressed Accept yet,
+      // keep the offer pending. Do not start WebRTC/media before Accept.
+      if (route.incoming && !acceptedRef.current) {
+        pendingOfferRef.current = payload;
+        return;
+      }
+
+      if (!route.incoming && !acceptedRef.current) {
+        acceptedRef.current = true;
+      }
+
+      // Do not close a fresh/stable incoming audio peer. Old audio logic closed
+      // the peer too aggressively and could restart microphone/signaling. Only
+      // reset real stale glare states, same as the fixed video-call flow.
+      if (route.incoming && acceptedRef.current && offerStartedRef.current) {
+        const currentState = String(peerRef.current?.getSignalingState?.() || "");
+        if (currentState === "have-local-offer" || currentState === "have-remote-pranswer") {
+          offerStartedRef.current = false;
+          try { peerRef.current?.close(); } catch {}
+          peerRef.current = null;
+        }
+      }
+
+      acceptedRef.current = true;
+      void stopSabiCallToneNow();
+      setPhase("connecting");
+      if (handlingOfferRef.current) return;
+      handlingOfferRef.current = true;
+      void ensurePeer().handleOffer(payload).finally(() => { handlingOfferRef.current = false; });
+    };
+
+    const handleAnswer = (payload: unknown, alreadyDeduped = false) => {
+      if (finishedRef.current) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (!alreadyDeduped && !shouldProcess("call:webrtc:answer", payload)) return;
+      callDebug("answer:recv", summarizeSabiCallPayloadForDebug(payload));
+      void stopSabiCallToneNow();
+      void peerRef.current?.handleAnswer(payload);
+    };
+
+    const handleIce = (payload: unknown, alreadyDeduped = false) => {
+      if (finishedRef.current) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (!alreadyDeduped && !shouldProcess("call:webrtc:ice", payload)) return;
+      callDebug("ice:recv", summarizeSabiCallPayloadForDebug(payload));
+      void peerRef.current?.handleIce(payload);
+    };
+
+    const handleEnded = (payload: unknown, eventName = "call:end") => {
+      if (finishedRef.current) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (!isRealCallEndPayload(payload)) return;
+      if (!shouldProcess(eventName, payload)) return;
+      callDebug("ended:recv", summarizeSabiCallPayloadForDebug(payload));
+      finishedRef.current = true;
+      rememberFinishedCall(route);
+      clearAcceptedFallbackOfferTimer();
+      void stopSabiCallToneNow();
+      peerRef.current?.close();
+      peerRef.current = null;
+      stopStream(localStream);
+      stopStream(remoteStream);
+      setLocalStream(null);
+      setRemoteStream(null);
+      setPhase("ended");
+      setMinimized(false);
+      closeCallRoute();
+    };
+
+    const handleConnected = (payload: unknown, eventName = "call:connected") => {
+      if (finishedRef.current) return;
+      if (!payloadMatches(route, payload) || !isFromPeer(route, payload)) return;
+      if (!shouldProcess(eventName, payload)) return;
+      callDebug("connected:recv", summarizeSabiCallPayloadForDebug(payload));
+      clearAcceptedFallbackOfferTimer();
+      void stopSabiCallToneNow();
+      activeStartedAtRef.current ||= Date.now();
+      setPhase("active");
+    };
+
+    const handleSignal = (payload: unknown, eventName = "call:signal") => {
+      const kind = getSabiCallTransportSignalKind(eventName, payload);
+      if (kind === "offer") {
+        if (!shouldProcess("call:webrtc:offer", payload)) return;
+        callDebug("signal:recv", { signalKind: "offer", ...summarizeSabiCallPayloadForDebug(payload) });
+        handleOffer(payload, true);
+        return;
+      }
+      if (kind === "answer") {
+        if (!shouldProcess("call:webrtc:answer", payload)) return;
+        callDebug("signal:recv", { signalKind: "answer", ...summarizeSabiCallPayloadForDebug(payload) });
+        handleAnswer(payload, true);
+        return;
+      }
+      if (kind === "ice") {
+        if (!shouldProcess("call:webrtc:ice", payload)) return;
+        callDebug("signal:recv", { signalKind: "ice", ...summarizeSabiCallPayloadForDebug(payload) });
+        handleIce(payload, true);
+      }
+    };
+
+    const acceptedEvents = [
+      "call:accepted",
+      "call:accept",
+      "sabi-call:accepted",
+      "sabi-call:accept",
+      "audio:call:accept",
+      "audio-call:accepted",
+    ];
+    const signalEvents = [
+      "call:webrtc:offer",
+      "call:webrtc:answer",
+      "call:webrtc:ice",
+      "call:signal",
+      "call_signal",
+      "call:webrtc:signal",
+      "sabi-call:signal",
+      "audio:call:signal",
+      "audio-call:signal",
+      "call.signal",
+    ];
+    const connectedEvents = [
+      "call:connected",
+      "call:active",
+      "sabi-call:connected",
+      "sabi-call:active",
+    ];
+    const endedEvents = [
+      "call:ended",
+      "call:end",
+      "call:declined",
+      "call:missed",
+      "call:cancelled",
+      "call:busy",
+      "sabi-call:ended",
+      "sabi-call:end",
+      "sabi-call:declined",
+      "sabi-call:missed",
+      "sabi-call:cancelled",
+      "sabi-call:busy",
+    ];
+
+    const unsubscribeAccepted = subscribeSabiCallTransportEvents(
+      socket,
+      acceptedEvents,
+      (payload, eventName) => handleAccepted(payload, eventName),
+      { currentUserId: route.userId, callId: route.callId },
+    );
+    const unsubscribeSignal = subscribeSabiCallTransportEvents(
+      socket,
+      signalEvents,
+      (payload, eventName) => handleSignal(payload, eventName),
+      { currentUserId: route.userId, callId: route.callId },
+    );
+    const unsubscribeConnected = subscribeSabiCallTransportEvents(
+      socket,
+      connectedEvents,
+      (payload, eventName) => handleConnected(payload, eventName),
+      { currentUserId: route.userId, callId: route.callId },
+    );
+    const unsubscribeEnded = subscribeSabiCallTransportEvents(
+      socket,
+      endedEvents,
+      (payload, eventName) => handleEnded(payload, eventName),
+      { currentUserId: route.userId, callId: route.callId },
+    );
+
+    return () => {
+      unsubscribeAccepted();
+      unsubscribeSignal();
+      unsubscribeConnected();
+      unsubscribeEnded();
+    };
+  }, [callDebug, clearAcceptedFallbackOfferTimer, ensurePeer, localStream, remoteStream, route, shouldProcess, socket, startOfferOnce]);
+
+  useEffect(() => {
+    if (phase !== "active") return undefined;
+    activeStartedAtRef.current ||= Date.now();
+    const timer = setInterval(() => {
+      const startedAt = activeStartedAtRef.current || Date.now();
+      setSeconds(Math.max(0, Math.floor((Date.now() - startedAt) / 1000)));
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [phase]);
+
+  const title = route.name || "Sabi";
+  const avatarUrl = String((route as any).avatarUrl || (route as any).photoUrl || "").trim();
+  const avatarLetter = String(route.avatarLetter || title[0] || "S").slice(0, 1).toUpperCase();
+  const timeLabel = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, "0")}`;
+  const statusText = phase === "active"
+    ? timeLabel
+    : phase === "ringing"
+      ? t("calls.incoming")
+      : phase === "connecting"
+        ? t("calls.connecting")
+        : phase === "ended"
+          ? t("calls.ended")
+          : t("calls.calling");
+
+  if (minimized) {
+    return (
+      <View style={styles.minimizedScreen}>
+        <Pressable style={styles.miniCard} onPress={() => setMinimized(false)}>
+          <View style={styles.miniAvatar}>
+            {avatarUrl ? <Image source={{ uri: avatarUrl }} style={styles.miniAvatarPhoto} /> : <Text style={styles.miniAvatarText}>{avatarLetter}</Text>}
+          </View>
+          <View style={styles.miniTextBox}>
+            <Text style={styles.miniName} numberOfLines={1}>{title}</Text>
+            <Text style={styles.miniStatus} numberOfLines={1}>{statusText}</Text>
+          </View>
+          <Pressable style={styles.miniHangup} onPress={() => finishLocal("local_end")}>
+            <MaterialCommunityIcons name="phone-hangup" size={22} color="#FFFFFF" />
+          </Pressable>
+        </Pressable>
+      </View>
+    );
+  }
+
+  return (
+    <View style={styles.screen}>
+      <View style={styles.waitingBackdrop}>
+        <View style={styles.patternOne} />
+        <View style={styles.patternTwo} />
+        <View style={styles.avatarImage}>
+          {avatarUrl ? <Image source={{ uri: avatarUrl }} style={styles.avatarPhoto} /> : <Text style={styles.avatarText}>{avatarLetter}</Text>}
+        </View>
+      </View>
+
+      <View style={styles.topBar}>
+        <Pressable style={styles.topCircle} onPress={() => setMinimized(true)}>
+          <MaterialCommunityIcons name="arrow-collapse-all" size={24} color="#FFFFFF" />
+        </Pressable>
+        <View style={styles.titleBox}>
+          <Text style={styles.name} numberOfLines={1}>{title}</Text>
+          <Text style={styles.secure} numberOfLines={1}>
+            <MaterialCommunityIcons name="lock" size={13} color="rgba(255,255,255,0.70)" /> {statusText}
+          </Text>
+        </View>
+        <View style={styles.topCircle} pointerEvents="none" />
+      </View>
+
+      <View style={styles.statusBox}>
+        <Text style={styles.statusText}>{statusText}</Text>
+      </View>
+
+      {route.incoming && phase === "ringing" ? (
+        <View style={styles.acceptLayer}>
+          <Pressable style={styles.acceptButton} onPress={accept}>
+            <MaterialCommunityIcons name="phone" size={28} color="#FFFFFF" />
+            <Text style={styles.acceptText}>{t("calls.accept")}</Text>
+          </Pressable>
+          <Pressable style={styles.declineButton} onPress={() => finishLocal("declined")}>
+            <MaterialCommunityIcons name="phone-hangup" size={28} color="#FFFFFF" />
+            <Text style={styles.acceptText}>{t("calls.decline")}</Text>
+          </Pressable>
+        </View>
+      ) : null}
+
+      <View style={styles.dock}>
+        <Pressable style={[styles.dockButton, !micEnabled ? styles.dockButtonDim : null]} onPress={toggleMic}>
+          <MaterialCommunityIcons name={micEnabled ? "microphone" : "microphone-off"} size={24} color="#FFFFFF" />
+        </Pressable>
+        <Pressable style={[styles.dockButton, styles.dockButtonLight, speakerEnabled ? null : styles.dockButtonDim]} onPress={toggleSpeaker}>
+          <MaterialCommunityIcons name="volume-high" size={24} color="#FFFFFF" />
+        </Pressable>
+        <Pressable style={[styles.dockButton, styles.dockButtonDanger]} onPress={() => finishLocal(route.incoming && phase === "ringing" ? "declined" : "local_end")}>
+          <MaterialCommunityIcons name="phone-hangup" size={26} color="#FFFFFF" />
+        </Pressable>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  screen: { flex: 1, backgroundColor: "#05070F", overflow: "hidden" },
+  waitingBackdrop: {
+    ...StyleSheet.absoluteFillObject,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#07130F",
+  },
+  patternOne: {
+    position: "absolute",
+    width: 360,
+    height: 360,
+    borderRadius: 180,
+    backgroundColor: "rgba(37,211,102,0.16)",
+    top: 72,
+    right: -110,
+  },
+  patternTwo: {
+    position: "absolute",
+    width: 320,
+    height: 320,
+    borderRadius: 160,
+    backgroundColor: "rgba(74,144,226,0.12)",
+    bottom: 88,
+    left: -120,
+  },
+  avatarImage: {
+    width: 178,
+    height: 178,
+    borderRadius: 89,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.14)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.22)",
+    overflow: "hidden",
+  },
+  avatarPhoto: { width: "100%", height: "100%" },
+  avatarText: { color: "#FFFFFF", fontSize: 70, fontWeight: "900" },
+  topBar: {
+    position: "absolute",
+    top: 42,
+    left: 18,
+    right: 18,
+    height: 58,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    zIndex: 12,
+  },
+  topCircle: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(0,0,0,0.34)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+  },
+  titleBox: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 14 },
+  name: { color: "#FFFFFF", fontSize: 20, fontWeight: "900", maxWidth: "100%" },
+  secure: { color: "rgba(255,255,255,0.72)", fontSize: 13, fontWeight: "800", marginTop: 4 },
+  statusBox: {
+    position: "absolute",
+    top: "58%",
+    left: 24,
+    right: 24,
+    alignItems: "center",
+    zIndex: 11,
+  },
+  statusText: { color: "#FFFFFF", fontSize: 18, fontWeight: "900", textAlign: "center" },
+  acceptLayer: {
+    position: "absolute",
+    left: 24,
+    right: 24,
+    bottom: 132,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 32,
+    zIndex: 20,
+  },
+  acceptButton: {
+    minWidth: 96,
+    height: 76,
+    borderRadius: 38,
+    backgroundColor: "#25D366",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+  },
+  declineButton: {
+    minWidth: 96,
+    height: 76,
+    borderRadius: 38,
+    backgroundColor: "#FF1744",
+    alignItems: "center",
+    justifyContent: "center",
+    paddingHorizontal: 16,
+  },
+  acceptText: { color: "#FFFFFF", fontSize: 12, fontWeight: "900", marginTop: 3 },
+  dock: {
+    position: "absolute",
+    left: 18,
+    right: 18,
+    bottom: 28,
+    height: 82,
+    borderRadius: 28,
+    backgroundColor: "rgba(8,17,20,0.92)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 18,
+    zIndex: 18,
+  },
+  dockButton: {
+    width: 58,
+    height: 58,
+    borderRadius: 29,
+    backgroundColor: "rgba(255,255,255,0.14)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  dockButtonLight: { backgroundColor: "rgba(255,255,255,0.22)" },
+  dockButtonDim: { opacity: 0.52 },
+  dockButtonDanger: { backgroundColor: "#FF1744" },
+  minimizedScreen: { flex: 1, backgroundColor: "rgba(0,0,0,0.2)", justifyContent: "flex-start", paddingTop: 54, paddingHorizontal: 18 },
+  miniCard: {
+    minHeight: 76,
+    borderRadius: 24,
+    backgroundColor: "rgba(8,17,20,0.98)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.14)",
+    flexDirection: "row",
+    alignItems: "center",
+    paddingHorizontal: 14,
+    gap: 12,
+  },
+  miniAvatar: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: "rgba(37,211,102,0.35)",
+    alignItems: "center",
+    justifyContent: "center",
+    overflow: "hidden",
+  },
+  miniAvatarPhoto: { width: "100%", height: "100%" },
+  miniAvatarText: { color: "#FFFFFF", fontSize: 20, fontWeight: "900" },
+  miniTextBox: { flex: 1, minWidth: 0 },
+  miniName: { color: "#FFFFFF", fontSize: 16, fontWeight: "900" },
+  miniStatus: { color: "rgba(255,255,255,0.68)", fontSize: 13, fontWeight: "800", marginTop: 2 },
+  miniHangup: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: "#FF1744",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

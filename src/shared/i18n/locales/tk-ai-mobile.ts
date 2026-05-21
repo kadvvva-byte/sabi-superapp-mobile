@@ -252,7 +252,7 @@ const TK_AI_MOBILE_LOCALE = {
         nativeBridge: "native bridge",
         sttTtsBridgeTitle: "stt tts bridge",
         realBridgeDescription:
-          "real bridge düşündiriş",
+          "Hakyky mobile bridge: mikrofon ýazgysy, native ses wakalary, transcript geçirişi we audio URL playback. Text-only TTS galplaşdyrylmaýar.",
         bind: "bind",
         start: "başla",
         stop: "duruz",
@@ -273,7 +273,7 @@ const TK_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "tts kömekçi tekst",
         playLastTts: "play soňky tts",
         noFakeTts:
-          "ýok fake tts",
+          "Galp ses ýok: audio playback diňe backend/native TTS audio URL gaýtarsa işleýär. expo-speech ýa-da native TTS module birikdirilýänçä Text-only TTS tekst hökmünde görkezilýär.",
         runtimeLog: "runtime log",
         noEvents: "ýok events",
         sessionStopped: "session stopped",
@@ -352,7 +352,7 @@ const TK_AI_MOBILE_LOCALE = {
         subtitle: "subtitle",
         accessTitle: "access",
         noFakePayment:
-          "ýok fake töleg",
+          "Töleg bu ýerde galp däl. Işjeňleşdirme hakyky Premium/COIN tassyklama akymyndan gelmeli.",
         realtimeCallTranslationTitle: "hakyky wagt jaň terjime",
         realtimeTranslationTitle: "hakyky wagt terjime",
         realtimeTranslationDescription:

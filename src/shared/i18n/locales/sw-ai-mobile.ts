@@ -252,7 +252,7 @@ export const SW_AI_MOBILE_LOCALE = {
         nativeBridge: "Muunganisho",
         sttTtsBridgeTitle: "AI ya sauti",
         realBridgeDescription:
-          "AI ya sauti",
+          "Daraja halisi la mobile: kurekodi kipaza sauti, matukio ya sauti ya native, kukabidhi transcript na kucheza audio URL. Text-only TTS haifanywi kwa uongo.",
         bind: "Muunganisho",
         start: "Anza",
         stop: "Simamisha",
@@ -273,7 +273,7 @@ export const SW_AI_MOBILE_LOCALE = {
         ttsPlaceholder: "AI ya sauti",
         playLastTts: "Cheza",
         noFakeTts:
-          "Mtoa huduma",
+          "Hakuna sauti bandia: audio playback hufanya kazi tu backend/native TTS ikirudisha audio URL. Text-only TTS huonyeshwa kama maandishi hadi expo-speech au native TTS module iunganishwe.",
         runtimeLog: "Historia",
         noEvents: "Bado tupu",
         sessionStopped: "Simamisha",
@@ -352,7 +352,7 @@ export const SW_AI_MOBILE_LOCALE = {
         subtitle: "Premium AI",
         accessTitle: "Premium AI",
         noFakePayment:
-          "Mtoa huduma",
+          "Malipo hayafanywi kwa uongo hapa. Uwezeshaji lazima utoke kwenye mtiririko halisi wa uthibitisho wa Premium/COIN.",
         realtimeCallTranslationTitle: "Tafsiri",
         realtimeTranslationTitle: "Tafsiri",
         realtimeTranslationDescription:
