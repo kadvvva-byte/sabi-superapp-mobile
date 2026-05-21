@@ -100,13 +100,13 @@
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "Разрешите Sabi использовать Face ID для подтверждения платежей и переводов."
+          "faceIDPermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Face ID Р Т‘Р В»РЎРЏ Р С—Р С•Р Т‘РЎвЂљР Р†Р ВµРЎР‚Р В¶Р Т‘Р ВµР Р…Р С‘РЎРЏ Р С—Р В»Р В°РЎвЂљР ВµР В¶Р ВµР в„– Р С‘ Р С—Р ВµРЎР‚Р ВµР Р†Р С•Р Т‘Р С•Р Р†."
         }
       ],
       [
         "expo-audio",
         {
-          "microphonePermission": "Разрешите Sabi использовать микрофон для аудиозвонков.",
+          "microphonePermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р СР С‘Р С”РЎР‚Р С•РЎвЂћР С•Р Р… Р Т‘Р В»РЎРЏ Р В°РЎС“Р Т‘Р С‘Р С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†.",
           "enableBackgroundRecording": true,
           "enableBackgroundPlayback": true
         }
@@ -114,8 +114,8 @@
       [
         "@config-plugins/react-native-webrtc",
         {
-          "cameraPermission": "Разрешите Sabi использовать камеру для видеозвонков.",
-          "microphonePermission": "Разрешите Sabi использовать микрофон для аудиозвонков."
+          "cameraPermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р С”Р В°Р СР ВµРЎР‚РЎС“ Р Т‘Р В»РЎРЏ Р Р†Р С‘Р Т‘Р ВµР С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†.",
+          "microphonePermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р СР С‘Р С”РЎР‚Р С•РЎвЂћР С•Р Р… Р Т‘Р В»РЎРЏ Р В°РЎС“Р Т‘Р С‘Р С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†."
         }
       ],
       [
@@ -130,7 +130,6 @@
           }
         }
       ],
-      "./modules/sabi-call-native/plugin/withSabiCallNative.js",
       "./modules/sabi-screen-share/app.plugin.js",
       "./modules/sabi-video-call-picture-in-picture/app.plugin.js",
       "expo-web-browser",
@@ -146,7 +145,7 @@
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Разрешите Sabi использовать геолокацию для отправки локации в Messenger."
+          "locationWhenInUsePermission": "Р Р°Р·СЂРµС€РёС‚Рµ Sabi РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РіРµРѕР»РѕРєР°С†РёСЋ РґР»СЏ РѕС‚РїСЂР°РІРєРё Р»РѕРєР°С†РёРё РІ Messenger."
         }
       ]
     ],

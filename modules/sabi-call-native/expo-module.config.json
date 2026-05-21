@@ -12,8 +12,6 @@
     ]
   },
   "android": {
-    "modules": [
-      "expo.modules.sabicallnative.SabiCallNativeModule"
-    ]
+    "modules": []
   }
 }
