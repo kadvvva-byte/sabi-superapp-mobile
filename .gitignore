@@ -57,3 +57,30 @@ android-keys/
 # - android/ and ios/ are NOT ignored
 # - modules/**/android and modules/**/ios are NOT ignored
 # - .txt, .md, .ps1, .cjs are NOT globally ignored
+
+# Local/generated folders - never commit
+.vscode/
+android/
+ios/
+backend/
+public/
+docs/
+tools/
+scripts/
+patches/
+
+# Local repair/build scripts - never commit
+build-android-apk.ps1
+install-sabi-emblem.ps1
+
+# Local repair/readme/backup files - never commit
+*.bak
+*.bak-*
+*.log
+README.md
+README_*.txt
+REMOVED_FILES_MANIFEST.txt
+SABI_REPAIR_README_RU.txt
+src/README.txt
+src/modules/**/README.md
+src/modules/**/README.txt
