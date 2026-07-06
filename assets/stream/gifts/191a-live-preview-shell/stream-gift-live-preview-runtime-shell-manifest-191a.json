@@ -1,0 +1,16 @@
+{
+  "version": "STREAM-GAME-GIFTS-191A",
+  "title": "Premium Gift Live Preview Runtime Shell / local phase playback only",
+  "giftCount": 24,
+  "phaseCountPerGift": 3,
+  "stageLayerCountPerGift": 8,
+  "localPhasePlaybackShellReady": true,
+  "actualAnimationPlaybackRuntimeEnabledNow": false,
+  "actualMediaPlaybackRuntimeEnabledNow": false,
+  "actualSoundAutoplayRuntimeEnabledNow": false,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false
+}

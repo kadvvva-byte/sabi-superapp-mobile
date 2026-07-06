@@ -1,0 +1,89 @@
+{
+  "version": "STREAM-GAME-GIFTS-190B",
+  "generatedAtUtc": "2026-06-10T12:42:55.262946+00:00",
+  "giftCount": 8,
+  "items": [
+    {
+      "assetId": "solar-samurai-dash",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/solar-samurai-dash-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "mermaid-pearl-bloom",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/mermaid-pearl-bloom-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "midnight-wolf-moon",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/midnight-wolf-moon-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "candy-planet-pop",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/candy-planet-pop-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "royal-peacock-fan",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/royal-peacock-fan-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "neon-shark-surge",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/neon-shark-surge-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "angel-harp-glow",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/angel-harp-glow-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    },
+    {
+      "assetId": "volcano-dragon-flare",
+      "posterPolishFile": "assets/stream/gifts/190b-visual-animation-polish/volcano-dragon-flare-visual-animation-polish.svg",
+      "phases": [
+        "entrance",
+        "loop",
+        "finale"
+      ],
+      "runtimeEnabledNow": false
+    }
+  ],
+  "actualAnimationPlaybackRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false
+}

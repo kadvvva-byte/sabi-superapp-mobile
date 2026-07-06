@@ -51,7 +51,9 @@ import { useHomeKernel } from "../../../core/kernel/home/bindings";
 import { useHomeLayout } from "../HomeLayoutProvider";
 import type { MiniAppItem } from "../HomeLayoutProvider";
 import { useAppearance } from "../../../theme/AppearanceProvider";
+import { useI18n } from "../../../shared/i18n";
 import { useHomeMobileText } from "../../../shared/i18n/home-mobile-translations";
+import { localizeSilkRoadMiniAppItems } from "../../marketplace/presentation/marketplace.i18n";
 
 const GRID_COLUMNS = 4;
 const GRID_GAP = 6;
@@ -364,6 +366,7 @@ export default function MiniAppsPanel({ onBack }: { onBack?: () => void }) {
   const home = useHomeKernel();
   const { themeMode, backgroundType } = useAppearance();
   const homeText = useHomeMobileText();
+  const { language } = useI18n();
 
   const pinnedMiniApps: MiniAppItem[] = homeLayout?.pinnedMiniApps ?? [];
 
@@ -447,11 +450,12 @@ export default function MiniAppsPanel({ onBack }: { onBack?: () => void }) {
   const overlayBackground = palette.overlayBackground;
   const screenTint = palette.screenTint;
   const isWeb = Platform.OS === "web";
+  const localizedMiniAppsAll = useMemo(() => localizeSilkRoadMiniAppItems(MINI_APPS_ALL, language), [language]);
 
   const allItems = useMemo(
     () =>
       dedupeMiniApps(
-        MINI_APPS_ALL.filter((item) => {
+        localizedMiniAppsAll.filter((item) => {
           if (item.enabled === false) return false;
           if (item.id === "mini-apps" || item.kind === "mini_apps") return false;
           if (hiddenIds.includes(item.id)) return false;
@@ -468,13 +472,13 @@ export default function MiniAppsPanel({ onBack }: { onBack?: () => void }) {
 
         return left.title.localeCompare(right.title);
       }),
-    [hiddenIds, isWeb, pinnedIds],
+    [hiddenIds, isWeb, localizedMiniAppsAll, pinnedIds],
   );
 
   const hiddenItems = useMemo(
     () =>
       dedupeMiniApps(
-        MINI_APPS_ALL.filter((item) => {
+        localizedMiniAppsAll.filter((item) => {
           if (item.enabled === false) return false;
           if (item.id === "mini-apps" || item.kind === "mini_apps") return false;
           if (!isWeb && item.id === "web") return false;
@@ -483,7 +487,7 @@ export default function MiniAppsPanel({ onBack }: { onBack?: () => void }) {
           return hiddenIds.includes(item.id) || homeCardIds.some((cardId) => hiddenHomeCardIds.includes(cardId));
         }),
       ),
-    [hiddenIds, hiddenHomeCardIds, isWeb],
+    [hiddenIds, hiddenHomeCardIds, isWeb, localizedMiniAppsAll],
   );
 
   const openDrawer = () => setDrawerVisible(true);
@@ -511,7 +515,7 @@ export default function MiniAppsPanel({ onBack }: { onBack?: () => void }) {
   };
 
   const restoreItem = (id: string) => {
-    const item = MINI_APPS_ALL.find((entry) => entry.id === id);
+    const item = localizedMiniAppsAll.find((entry) => entry.id === id);
     setHiddenIds((prev) => prev.filter((itemId) => itemId !== id));
 
     if (!item) {

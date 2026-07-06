@@ -1,6 +1,7 @@
 import { MiniAppItem, MiniAppsSectionData } from "../types/miniApps.types";
+import { isMiniAppKindVisibleForSabiPolicy } from "../../../../shared/policy/sabiMobilePolicy";
 
-export const MINI_APPS_ALL: MiniAppItem[] = [
+const MINI_APPS_ALL_SOURCE: MiniAppItem[] = [
   { id: "messenger", title: "Messenger", subtitle: "", category: "core", kind: "messenger", pinnedToHome: true, enabled: true, route: "/tabs/chats" },
   { id: "wallet", title: "Wallet", subtitle: "", category: "core", kind: "wallet", pinnedToHome: true, enabled: true, route: "/wallet/home" },
   { id: "qr", title: "QR", subtitle: "", category: "core", kind: "qr", pinnedToHome: true, enabled: true, route: "/qr" },
@@ -9,7 +10,7 @@ export const MINI_APPS_ALL: MiniAppItem[] = [
   { id: "sabi-voice", title: "SABI Voice", subtitle: "", category: "core", kind: "ai_voice", visualKey: "ai_voice", pinnedToHome: true, enabled: true, route: "/ai/voice-control" },
   { id: "gallery", title: "Gallery", subtitle: "", category: "media", kind: "gallery", pinnedToHome: true, enabled: true, route: "/gallery" },
   { id: "network-games", title: "Game Center", subtitle: "", category: "media", kind: "games", visualKey: "games", pinnedToHome: true, enabled: true, route: "/network-game-center" },
-  { id: "marketplace", title: "Marketplace", subtitle: "", category: "commerce", kind: "marketplace", pinnedToHome: true, enabled: true, route: "/marketplace" },
+  { id: "marketplace", title: "SilkRoad", subtitle: "", category: "commerce", kind: "marketplace", pinnedToHome: true, enabled: true, route: "/marketplace" },
   { id: "hotels", title: "Hotels", subtitle: "", category: "commerce", kind: "hotels", visualKey: "hotels", pinnedToHome: true, enabled: true, route: "/hotels" },
   { id: "supermarket", title: "Supermarket", subtitle: "", category: "commerce", kind: "supermarket", visualKey: "supermarket", pinnedToHome: true, enabled: true, route: "/supermarket" },
   { id: "food-delivery", title: "Food Delivery", subtitle: "", category: "commerce", kind: "food_delivery", visualKey: "food", enabled: true, route: "/food-delivery" },
@@ -20,12 +21,14 @@ export const MINI_APPS_ALL: MiniAppItem[] = [
   { id: "events", title: "Events", subtitle: "", category: "tools", kind: "events", visualKey: "events", enabled: true, route: "/events" },
   { id: "camera", title: "Camera", subtitle: "", category: "tools", kind: "camera", enabled: true, route: "/camera" },
   { id: "documents", title: "Documents", subtitle: "", category: "tools", kind: "documents", enabled: true, route: "/documents" },
-  { id: "wifi-cast", title: "Wi‑Fi Cast", subtitle: "", category: "tools", kind: "cast", enabled: true, route: "/wifi-cast" },
+  { id: "wifi-cast", title: "Wi‑Fi Cast", subtitle: "", category: "tools", kind: "cast", pinnedToHome: true, enabled: true, route: "/wifi-cast" },
   { id: "business", title: "Business", subtitle: "", category: "system", kind: "business", visualKey: "business", enabled: true, route: "/business" },
   { id: "merchant", title: "Merchant", subtitle: "", category: "system", kind: "merchant", visualKey: "merchant", enabled: true, route: "/merchant" },
   { id: "settings", title: "Settings", subtitle: "", category: "system", kind: "settings", enabled: true, route: "/mini-apps" },
   { id: "web", title: "Web", subtitle: "", category: "system", kind: "web", enabled: true, route: "/mini-apps/web" },
 ];
+
+export const MINI_APPS_ALL: MiniAppItem[] = MINI_APPS_ALL_SOURCE.filter((item) => isMiniAppKindVisibleForSabiPolicy(item.kind));
 
 export const MINI_APPS_SECTIONS: MiniAppsSectionData[] = [
   { id: "pinned", title: "Pinned", subtitle: "", items: MINI_APPS_ALL.filter((item) => item.pinnedToHome) },

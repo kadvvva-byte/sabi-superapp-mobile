@@ -1,0 +1,51 @@
+{
+  "version": "STREAM-GAME-GIFTS-188A",
+  "giftCount": 8,
+  "assets": [
+    {
+      "id": "phoenix-crown-burst",
+      "poster": "phoenix-crown-burst.svg",
+      "displayNameRu": "Феникс Корона"
+    },
+    {
+      "id": "crystal-whale-wave",
+      "poster": "crystal-whale-wave.svg",
+      "displayNameRu": "Кристальный Кит"
+    },
+    {
+      "id": "cyber-panda-beat",
+      "poster": "cyber-panda-beat.svg",
+      "displayNameRu": "Кибер Панда"
+    },
+    {
+      "id": "velvet-butterfly-storm",
+      "poster": "velvet-butterfly-storm.svg",
+      "displayNameRu": "Бархатные Бабочки"
+    },
+    {
+      "id": "thunder-tiger-flash",
+      "poster": "thunder-tiger-flash.svg",
+      "displayNameRu": "Громовой Тигр"
+    },
+    {
+      "id": "aurora-unicorn-ride",
+      "poster": "aurora-unicorn-ride.svg",
+      "displayNameRu": "Аврора Единорог"
+    },
+    {
+      "id": "diamond-genie-lamp",
+      "poster": "diamond-genie-lamp.svg",
+      "displayNameRu": "Алмазный Джинн"
+    },
+    {
+      "id": "galaxy-idol-stage",
+      "poster": "galaxy-idol-stage.svg",
+      "displayNameRu": "Галакси Айдол"
+    }
+  ],
+  "safety": {
+    "userFacingOnly": true,
+    "sendRuntimeIncludedNow": false,
+    "paymentRuntimeIncludedNow": false
+  }
+}

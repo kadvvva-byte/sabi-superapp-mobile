@@ -1,0 +1,28 @@
+export const stream112kLiveRoomLocalQaNoClutterPlan = {
+  stage: "112K",
+  title: "Live room local QA / no-clutter pass",
+  scope: "mobile-stream-only",
+  noCinemaMixing: true,
+  mainScreenRule: "live viewer remains clean: video/chat plus side actions only",
+  qaPanelLocation: "inside Stream room Settings as Проверка",
+  localChecks: [
+    "clean viewer screen",
+    "all secondary tools inside settings",
+    "local chat",
+    "participants/request-to-join",
+    "host lifecycle",
+    "source controls",
+    "cohost invite",
+    "battle",
+    "security/moderation",
+    "no cinema/anime/series mixing",
+  ],
+  forbidden: [
+    "fake live start",
+    "fake realtime success",
+    "fake provider success",
+    "fake gift payment",
+    "cinema/series/anime inside Stream",
+    "Wallet/Messenger/Calls changes",
+  ],
+} as const;

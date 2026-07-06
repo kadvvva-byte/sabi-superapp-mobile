@@ -1,6 +1,7 @@
 import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+
+import FoodDeliveryScreen from "../src/modules/food-delivery/screens/FoodDeliveryScreen";
 
 export default function FoodDeliveryEntryScreen() {
-  return <HomeProgramEntryScreen kind="food-delivery" />;
+  return <FoodDeliveryScreen />;
 }

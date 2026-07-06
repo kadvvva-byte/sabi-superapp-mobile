@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "aurora-unicorn-ride",
+  "displayNameRu": "Аврора Единорог",
+  "displayName": "Aurora Unicorn Ride",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/aurora-unicorn-ride-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/aurora-unicorn-ride-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/aurora-unicorn-ride-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/aurora-unicorn-ride-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/aurora-unicorn-ride-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3240,
+    "finaleDurationMs": 920
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#94F7D1",
+    "light": "#E5FFF6"
+  }
+}

@@ -1,0 +1,37 @@
+export const stream109kScenarioQaRunnerPlan = {
+  version: "STREAM-109K",
+  title: "Room QA checklist + real local scenario runner",
+  scope: "Stream-only local QA scenario runner for ordinary, group, audio, game, video, and Business Stream rooms.",
+  streamOnly: true,
+  walletTouched: false,
+  messengerTouched: false,
+  callsTouched: false,
+  serverTouched: false,
+  backendFinanceTouched: false,
+  paymentsTouched: false,
+  giftsTouched: false,
+  monetizationTouched: false,
+  fakeLiveAllowed: false,
+  fakeOnAirAllowed: false,
+  fakeProviderAllowed: false,
+  fakeScenarioPassAllowed: false,
+  fakePaymentAllowed: false,
+  fakeGiftAllowed: false,
+  readyForBackendUnion: false,
+  localScenarioCoverage: [
+    "ordinary/direct live scenario",
+    "group live scenario",
+    "audio room scenario",
+    "game broadcast scenario",
+    "video broadcast scenario",
+    "Business Stream scenario without payments/gifts",
+  ],
+  requiredContractsLater: [
+    "backend room lifecycle contract",
+    "realtime scenario provider",
+    "media scenario provider",
+    "Admin QA audit sink",
+  ],
+} as const;
+
+export type Stream109kScenarioQaRunnerPlan = typeof stream109kScenarioQaRunnerPlan;

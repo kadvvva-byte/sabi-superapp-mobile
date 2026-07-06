@@ -1,0 +1,80 @@
+{
+  "version": "STREAM-GAME-GIFTS-197G",
+  "pack": "197g-pack-9-royal-ocean-legends",
+  "giftCount": 8,
+  "cumulativeGiftCountAfter197G": 72,
+  "diamondPriceMin": 4,
+  "diamondPriceMax": 10000,
+  "totalDiamondRangeMin": 1,
+  "totalDiamondRangeMax": 10000,
+  "minimumTopUpCoins": 10,
+  "minimumTopUpUsd": 10,
+  "userFacingOnly": true,
+  "runtime": {
+    "backend": false,
+    "payment": false,
+    "provider": false,
+    "walletMutation": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "pearl-like-four",
+      "displayNameRu": "Жемчужный Лайк",
+      "diamondPrice": 4,
+      "poster": "posters/pearl-like-four.svg",
+      "soundCue": "sound-cues/pearl-like-four-cue.wav"
+    },
+    {
+      "id": "coral-heart-eighteen",
+      "displayNameRu": "Коралловое Сердце",
+      "diamondPrice": 18,
+      "poster": "posters/coral-heart-eighteen.svg",
+      "soundCue": "sound-cues/coral-heart-eighteen-cue.wav"
+    },
+    {
+      "id": "aqua-dolphin-eighty",
+      "displayNameRu": "Аква Дельфин",
+      "diamondPrice": 80,
+      "poster": "posters/aqua-dolphin-eighty.svg",
+      "soundCue": "sound-cues/aqua-dolphin-eighty-cue.wav"
+    },
+    {
+      "id": "golden-anchor-four-fifty",
+      "displayNameRu": "Золотой Якорь",
+      "diamondPrice": 450,
+      "poster": "posters/golden-anchor-four-fifty.svg",
+      "soundCue": "sound-cues/golden-anchor-four-fifty-cue.wav"
+    },
+    {
+      "id": "emerald-mermaid-nine-ninety",
+      "displayNameRu": "Изумрудная Русалка",
+      "diamondPrice": 990,
+      "poster": "posters/emerald-mermaid-nine-ninety.svg",
+      "soundCue": "sound-cues/emerald-mermaid-nine-ninety-cue.wav"
+    },
+    {
+      "id": "royal-submarine-four-thousand",
+      "displayNameRu": "Королевская Субмарина",
+      "diamondPrice": 4000,
+      "poster": "posters/royal-submarine-four-thousand.svg",
+      "soundCue": "sound-cues/royal-submarine-four-thousand-cue.wav"
+    },
+    {
+      "id": "atlantic-palace-nine-thousand",
+      "displayNameRu": "Атлантический Дворец",
+      "diamondPrice": 9000,
+      "poster": "posters/atlantic-palace-nine-thousand.svg",
+      "soundCue": "sound-cues/atlantic-palace-nine-thousand-cue.wav"
+    },
+    {
+      "id": "ocean-emperor-ten-thousand",
+      "displayNameRu": "Океанский Император",
+      "diamondPrice": 10000,
+      "poster": "posters/ocean-emperor-ten-thousand.svg",
+      "soundCue": "sound-cues/ocean-emperor-ten-thousand-cue.wav"
+    }
+  ]
+}

@@ -15,6 +15,7 @@ import { useSabiTheme } from "../../src/theme/ThemeProvider";
 import { useI18n } from "../../src/shared/i18n";
 import { walletText } from "../../src/shared/wallet/wallet-i18n";
 import WalletProviderStatusPanel from "../../src/modules/wallet/components/WalletProviderStatusPanel";
+import PlayReadyFinancialFeatureDisclosurePanel from "../../src/modules/play-ready/mobile/PlayReadyFinancialFeatureDisclosurePanel";
 import {
   formatPrimaryWalletAmount,
   useWalletFoundation,
@@ -220,6 +221,11 @@ export default function CryptoWalletScreen() {
         </View>
 
         <WalletProviderStatusPanel scope="crypto" compact />
+
+        <PlayReadyFinancialFeatureDisclosurePanel
+          compact
+          contextLabel="Tokenized Digital Asset disclosure evidence"
+        />
 
         <View
           style={[

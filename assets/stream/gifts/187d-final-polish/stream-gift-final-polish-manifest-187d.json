@@ -1,0 +1,23 @@
+{
+  "version": "STREAM-GAME-GIFTS-187D",
+  "assetCount": 8,
+  "posterFallbackDir": "assets/stream/gifts/187d-final-polish",
+  "posters": [
+    "assets/stream/gifts/187d-final-polish/sakura-heart-burst-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/koi-luck-splash-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/neon-fox-tail-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/moon-cat-guard-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/dj-star-drop-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/golden-lion-roar-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/royal-rose-stage-final-polish.svg",
+    "assets/stream/gifts/187d-final-polish/cosmic-dragon-gate-final-polish.svg"
+  ],
+  "safety": {
+    "userFacingOnly": true,
+    "localPreviewOnlyNow": true,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "realSendRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false
+  }
+}

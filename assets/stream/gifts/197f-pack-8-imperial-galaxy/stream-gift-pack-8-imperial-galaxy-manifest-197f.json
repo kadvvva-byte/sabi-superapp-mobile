@@ -1,0 +1,80 @@
+{
+  "version": "STREAM-GAME-GIFTS-197F",
+  "pack": "197f-pack-8-imperial-galaxy",
+  "giftCount": 8,
+  "cumulativeGiftCountAfter197F": 64,
+  "diamondPriceMin": 3,
+  "diamondPriceMax": 10000,
+  "totalDiamondRangeMin": 1,
+  "totalDiamondRangeMax": 10000,
+  "minimumTopUpCoins": 10,
+  "minimumTopUpUsd": 10,
+  "userFacingOnly": true,
+  "runtime": {
+    "backend": false,
+    "payment": false,
+    "provider": false,
+    "walletMutation": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "azure-like-three",
+      "displayNameRu": "Лазурный Лайк",
+      "diamondPrice": 3,
+      "poster": "posters/azure-like-three.svg",
+      "soundCue": "sound-cues/azure-like-three-cue.wav"
+    },
+    {
+      "id": "ruby-heart-twelve",
+      "displayNameRu": "Рубиновое Сердце",
+      "diamondPrice": 12,
+      "poster": "posters/ruby-heart-twelve.svg",
+      "soundCue": "sound-cues/ruby-heart-twelve-cue.wav"
+    },
+    {
+      "id": "crystal-unicorn-sixty",
+      "displayNameRu": "Хрустальный Единорог",
+      "diamondPrice": 60,
+      "poster": "posters/crystal-unicorn-sixty.svg",
+      "soundCue": "sound-cues/crystal-unicorn-sixty-cue.wav"
+    },
+    {
+      "id": "golden-meteor-three-hundred",
+      "displayNameRu": "Золотой Метеор",
+      "diamondPrice": 300,
+      "poster": "posters/golden-meteor-three-hundred.svg",
+      "soundCue": "sound-cues/golden-meteor-three-hundred-cue.wav"
+    },
+    {
+      "id": "imperial-lily-eight-eight-eight",
+      "displayNameRu": "Имперская Лилия",
+      "diamondPrice": 888,
+      "poster": "posters/imperial-lily-eight-eight-eight.svg",
+      "soundCue": "sound-cues/imperial-lily-eight-eight-eight-cue.wav"
+    },
+    {
+      "id": "galactic-lion-three-thousand",
+      "displayNameRu": "Галактический Лев",
+      "diamondPrice": 3000,
+      "poster": "posters/galactic-lion-three-thousand.svg",
+      "soundCue": "sound-cues/galactic-lion-three-thousand-cue.wav"
+    },
+    {
+      "id": "diamond-jet-eight-eight-zero-zero",
+      "displayNameRu": "Алмазный Самолёт",
+      "diamondPrice": 8800,
+      "poster": "posters/diamond-jet-eight-eight-zero-zero.svg",
+      "soundCue": "sound-cues/diamond-jet-eight-eight-zero-zero-cue.wav"
+    },
+    {
+      "id": "universe-crown-ten-thousand",
+      "displayNameRu": "Корона Вселенной",
+      "diamondPrice": 10000,
+      "poster": "posters/universe-crown-ten-thousand.svg",
+      "soundCue": "sound-cues/universe-crown-ten-thousand-cue.wav"
+    }
+  ]
+}

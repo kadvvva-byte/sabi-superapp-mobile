@@ -1,0 +1,19 @@
+{
+  "version": "STREAM-GAME-GIFTS-188B",
+  "assetPack": "premium_stream_gift_pack_2_visual_preview_polish",
+  "previewPosterCount": 8,
+  "previewPosters": [
+    "assets/stream/gifts/188b-preview-polish/phoenix-crown-burst-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/crystal-whale-wave-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/cyber-panda-beat-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/velvet-butterfly-storm-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/thunder-tiger-flash-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/aurora-unicorn-ride-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/diamond-genie-lamp-preview-polish.svg",
+    "assets/stream/gifts/188b-preview-polish/galaxy-idol-stage-preview-polish.svg"
+  ],
+  "runtimeEnabledNow": false,
+  "backendPaymentProviderPayoutEnabledNow": false,
+  "actualSoundAutoplayEnabledNow": false,
+  "realSendEnabledNow": false
+}

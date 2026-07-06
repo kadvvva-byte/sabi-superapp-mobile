@@ -1,0 +1,69 @@
+{
+  "version": "STREAM-GAME-GIFTS-191E",
+  "mode": "premium_live_preview_final_handoff_user_facing_only",
+  "basedOn": "STREAM-GAME-GIFTS-191D",
+  "giftCount": 24,
+  "coveredStages": [
+    {
+      "version": "191A",
+      "name": "Live Preview Runtime Shell",
+      "status": "closed",
+      "scope": "local phase preview shell"
+    },
+    {
+      "version": "191A-FIX1",
+      "name": "Missing live preview style keys TypeScript fix",
+      "status": "closed",
+      "scope": "StyleSheet-only fix"
+    },
+    {
+      "version": "191B",
+      "name": "Live Preview Overlay Polish",
+      "status": "closed",
+      "scope": "local overlay polish"
+    },
+    {
+      "version": "191C",
+      "name": "Live Preview Interaction Polish",
+      "status": "closed",
+      "scope": "local preview controls only"
+    },
+    {
+      "version": "191D",
+      "name": "Live Preview Final QA",
+      "status": "closed",
+      "scope": "QA evidence"
+    },
+    {
+      "version": "191E",
+      "name": "Live Preview Final Handoff",
+      "status": "closed",
+      "scope": "handoff evidence only"
+    }
+  ],
+  "coverage": {
+    "phaseShellCoverage": 24,
+    "overlayPolishCoverage": 24,
+    "interactionPolishCoverage": 24,
+    "phaseCountPerGift": 3,
+    "totalPhaseCards": 72
+  },
+  "handoffDecision": "closed_for_user_facing_local_preview_controls_only",
+  "sourceRuntimeChangedIn191E": false,
+  "streamScreenChangedIn191E": false,
+  "indexChangedIn191E": false,
+  "safetyLocks": {
+    "userFacingOnly": true,
+    "localPreviewControlsOnly": true,
+    "localPhasePlaybackOnly": true,
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

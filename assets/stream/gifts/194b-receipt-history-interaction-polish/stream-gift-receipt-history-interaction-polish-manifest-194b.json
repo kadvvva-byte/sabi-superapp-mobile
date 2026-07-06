@@ -1,0 +1,25 @@
+{
+  "version": "STREAM-GAME-GIFTS-194B",
+  "title": "Stream Gift Receipt/History Interaction Polish",
+  "scope": "user-facing mobile UI only",
+  "giftCount": 24,
+  "filters": [
+    "all",
+    "sent",
+    "received",
+    "drafts"
+  ],
+  "safety": {
+    "backendRuntimeEnabledNow": false,
+    "dbReadRuntimeEnabledNow": false,
+    "dbWriteRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "sendRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

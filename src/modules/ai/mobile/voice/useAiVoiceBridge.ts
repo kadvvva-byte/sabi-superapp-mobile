@@ -159,7 +159,7 @@ export function useAiVoiceBridge() {
     return result;
   }, [applyError, pushLog]);
 
-  const stopRecording = useCallback(async () => {
+  const stopRecording = useCallback(async (options?: { includeBase64?: boolean }) => {
     setState((prev) => ({
       ...prev,
       recordingState: "processing",
@@ -167,7 +167,7 @@ export function useAiVoiceBridge() {
       lastError: null,
     }));
 
-    const result = await aiVoiceMobileBridge.stopRecording(sessionIdRef.current);
+    const result = await aiVoiceMobileBridge.stopRecording(sessionIdRef.current, options);
 
     if (result.ok) {
       setState((prev) => ({
@@ -277,10 +277,26 @@ export function useAiVoiceBridge() {
 
         pushLog(
           "tts_requested",
-          result.data.audioUrl
+          result.data.audioUrl || result.data.audioBase64
             ? "Sabi AI voice response is ready."
             : "Sabi AI returned text only; audio playback is not faked.",
         );
+
+        if (result.data.audioUrl || result.data.audioBase64) {
+          const playbackResult = await aiVoiceMobileBridge.playAudioUrl(result.data);
+          if (playbackResult.ok) {
+            setState((prev) => ({
+              ...prev,
+              status: "ready",
+              recordingState: "playing",
+              isPlaying: true,
+              lastError: null,
+            }));
+            pushLog("playback_started", "Sabi AI voice response is playing.");
+          } else {
+            applyError(playbackResult.error);
+          }
+        }
       } else {
         applyError(result.error);
       }
@@ -404,8 +420,8 @@ export function useAiVoiceBridge() {
   );
 
   const canPlay = useMemo(
-    () => Boolean(state.currentPlayback?.audioUrl) && !state.isRecording,
-    [state.currentPlayback?.audioUrl, state.isRecording],
+    () => Boolean(state.currentPlayback?.audioUrl || state.currentPlayback?.audioBase64) && !state.isRecording,
+    [state.currentPlayback?.audioBase64, state.currentPlayback?.audioUrl, state.isRecording],
   );
 
   return {

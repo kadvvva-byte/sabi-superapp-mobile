@@ -53,7 +53,7 @@ type ModuleSeed = {
 };
 
 const MODULE_SEEDS: Record<SabiModuleEntryCode, ModuleSeed> = {
-  marketplace: { title: "Marketplace", route: "/marketplace", icon: "marketplace", programCode: "marketplace" },
+  marketplace: { title: "SilkRoad", route: "/marketplace", icon: "marketplace", programCode: "marketplace" },
   wholesale: { title: "Wholesale Market", route: "/wholesale-market", icon: "wholesale", programCode: "wholesale_market" },
   supermarket: { title: "Supermarket", route: "/supermarket", icon: "supermarket", programCode: "supermarket" },
   hotels: { title: "Hotels", route: "/hotels", icon: "hotels", programCode: "hotels" },

@@ -1,4 +1,4 @@
-﻿import * as DocumentPicker from "expo-document-picker";
+import * as DocumentPicker from "expo-document-picker";
 import * as ImagePicker from "expo-image-picker";
 import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
@@ -10,6 +10,7 @@ import {
   Camera,
   Check,
   FileText,
+  Flag,
   GraduationCap,
   Image as ImageIcon,
   Menu,
@@ -25,11 +26,13 @@ import {
   Video,
   X,
 } from "lucide-react-native";
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import {
   ActivityIndicator,
   Alert,
+  Keyboard,
   KeyboardAvoidingView,
+  Linking,
   Modal,
   Platform,
   Pressable,
@@ -43,7 +46,15 @@ import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 
 import { useI18n } from "../../../../shared/i18n";
 import { aiMobileApi, createAiMobileId, extractAssistantText } from "../aiMobileApi";
+import { resolveSabiAssistantClientAction } from "../aiAssistantActionRouter";
+import {
+  extractSabiVoiceTranscript,
+  hasSabiWakeWord,
+  stripSabiWakeWord,
+  type SabiHandsFreeVoiceStatus,
+} from "../voice/aiSabiHandsFreeVoice";
 import { aiMobileErrorText, aiMobileText } from "../aiMobileI18n";
+import PlayReadyProviderNotConfiguredEvidencePanel from "../../../play-ready/mobile/PlayReadyProviderNotConfiguredEvidencePanel";
 import { resolveAiPremiumEntitlement } from "../aiMobileEntitlements";
 import { AI_MOBILE_COLORS, AI_MOBILE_GRADIENT } from "../aiMobileTheme";
 import type {
@@ -219,9 +230,71 @@ function providerRouteMeta(language: string, route: unknown): string | null {
   return status ? `${label} · ${status}` : label;
 }
 
+function isVisibleMessageMeta(value: string | null | undefined): value is string {
+  if (!value) return false;
+
+  const normalized = value.trim().toLowerCase();
+  if (!normalized) return false;
+
+  return !(
+    normalized.startsWith("sabi_") ||
+    normalized.startsWith("sabi:") ||
+    normalized.includes("sabi_app_navigation") ||
+    normalized.includes("sabi_assistant_capabilities") ||
+    normalized.includes("external_search") ||
+    normalized.includes("external_browser") ||
+    normalized.includes("providerroute") ||
+    normalized.includes("provider_route") ||
+    normalized.includes("client_action") ||
+    normalized.includes("action_router") ||
+    normalized.includes("tts") ||
+    normalized.includes("voice command") ||
+    normalized.includes("голосовая команда") ||
+    normalized.includes("запрошен женский голос") ||
+    normalized.includes("ovozli buyruq") ||
+    normalized.includes("tts ovozi") ||
+    normalized.includes("语音指令") ||
+    normalized.includes("صوت tts")
+  );
+}
+
 function appendPremiumDescription(language: string, description: string, locked: boolean) {
   if (!locked) return description;
   return `${description} · ${premiumBadgeText(language)}`;
+}
+
+function aiReportReasonLines(language: string) {
+  return [
+    aiMobileText(language, "chat.aiReportReason.offensive"),
+    aiMobileText(language, "chat.aiReportReason.unsafe"),
+    aiMobileText(language, "chat.aiReportReason.incorrect"),
+    aiMobileText(language, "chat.aiReportReason.privacy"),
+    aiMobileText(language, "chat.aiReportReason.financial"),
+    aiMobileText(language, "chat.aiReportReason.other"),
+  ]
+    .map((item) => `• ${item}`)
+    .join("\n");
+}
+
+function showAiReportPreview(language: string, message: AiMobileChatMessage) {
+  const clippedResponse = message.text.trim().slice(0, 160);
+
+  Alert.alert(
+    aiMobileText(language, "chat.aiReportTitle"),
+    [
+      aiMobileText(language, "chat.aiReportDescription"),
+      "",
+      aiMobileText(language, "chat.aiReportReasonsTitle"),
+      aiReportReasonLines(language),
+      "",
+      clippedResponse ? `"${clippedResponse}${message.text.length > 160 ? "…" : ""}"` : "",
+      "",
+      aiMobileText(language, "chat.aiReportReviewerNote"),
+    ]
+      .filter(Boolean)
+      .join("\n"),
+    [{ text: aiMobileText(language, "common.ready"), style: "default" }],
+  );
 }
 
 function MessageBubble({
@@ -232,6 +305,7 @@ function MessageBubble({
   language: string;
 }) {
   const isUser = message.role === "user";
+  const canReportAiResponse = !isUser && message.role === "assistant" && message.text.trim().length > 0;
 
   return (
     <View style={[styles.messageRow, isUser ? styles.messageRowUser : styles.messageRowAssistant]}>
@@ -254,14 +328,39 @@ function MessageBubble({
           </Text>
         ) : null}
 
-        {message.meta ? <Text style={styles.messageMeta}>{message.meta}</Text> : null}
+        {isVisibleMessageMeta(message.meta) ? <Text style={styles.messageMeta}>{message.meta}</Text> : null}
 
         {message.status === "error" ? (
           <Text style={styles.messageError}>{aiMobileText(language, "messageStatus.error")}</Text>
         ) : null}
+
+        {canReportAiResponse ? (
+          <Pressable
+            onPress={() => showAiReportPreview(language, message)}
+            style={styles.aiReportButton}
+            accessibilityRole="button"
+            accessibilityLabel={aiMobileText(language, "chat.aiReportTitle")}
+          >
+            <Flag size={13} color={AI_MOBILE_COLORS.gold} strokeWidth={2.4} />
+            <Text style={styles.aiReportButtonText}>
+              {aiMobileText(language, "chat.aiReportAction")}
+            </Text>
+          </Pressable>
+        ) : null}
       </View>
     </View>
   );
+}
+
+function buildSabiAssistantConversationHistory(messages: AiMobileChatMessage[]) {
+  return messages
+    .filter((message) => message.text && message.text.trim().length > 0)
+    .slice(-12)
+    .map((message) => ({
+      role: message.role,
+      text: message.text.trim().slice(0, 900),
+      createdAt: message.createdAt,
+    }));
 }
 
 function SheetButton({
@@ -327,8 +426,64 @@ function premiumRequiredMessage(language: string, feature: PremiumFeatureKind) {
   return aiMobileText(language, "premium.requiredMessage").replace("{feature}", premiumFeatureTitle(language, feature));
 }
 
-function voiceCommandMeta(language: string): string {
-  return aiMobileText(language, "chat.voiceCommandMeta");
+function extractVoiceTranscriptFromResponse(value: unknown): string | null {
+  const visited = new Set<unknown>();
+  const transcriptKeys = [
+    "transcript",
+    "recognizedText",
+    "recognized_text",
+    "text",
+    "utterance",
+    "speechText",
+    "speech_text",
+    "resultText",
+    "result_text",
+    "message",
+  ];
+
+  const search = (candidate: unknown, depth: number): string | null => {
+    if (depth > 5 || candidate == null) return null;
+
+    if (typeof candidate === "string") {
+      const clean = candidate.trim();
+      return clean ? clean : null;
+    }
+
+    const record = toRecord(candidate);
+    if (!record || visited.has(record)) return null;
+    visited.add(record);
+
+    for (const key of transcriptKeys) {
+      const text = toText(record[key]);
+      if (text) return text;
+    }
+
+    const priorityNested = [
+      record.data,
+      record.result,
+      record.payload,
+      record.transcription,
+      record.stt,
+      record.speech,
+      record.output,
+      record.response,
+      record.raw,
+    ];
+
+    for (const nested of priorityNested) {
+      const text = search(nested, depth + 1);
+      if (text) return text;
+    }
+
+    for (const nested of Object.values(record)) {
+      const text = search(nested, depth + 1);
+      if (text) return text;
+    }
+
+    return null;
+  };
+
+  return search(value, 0);
 }
 
 function assistantProviderUnavailableText(language: string) {
@@ -381,21 +536,46 @@ function isAssistantProviderPlaceholder(text: string): boolean {
     normalized.includes("unconfigured")
   );
 }
+
+
+
+function delay(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+
+const SABI_HANDS_FREE_RECORDING_WINDOW_MS = 3600;
+const SABI_HANDS_FREE_IDLE_DELAY_MS = 900;
+
 export default function AiMobileChatScreen() {
   const { language } = useI18n();
   const insets = useSafeAreaInsets();
   const { snapshot, isLoading, refresh } = useAiMobileSnapshot();
   const voice = useAiVoiceBridge();
   const scrollRef = useRef<ScrollView | null>(null);
+  const voiceRef = useRef(voice);
+  const submitMessageRef = useRef<((overrideText?: string, overrideAttachments?: AiMobileAttachment[], source?: "text" | "voice" | "attachment") => Promise<void>) | null>(null);
+  const handsFreeLoopActiveRef = useRef(false);
+  const handsFreeCancelledRef = useRef(false);
+  const liveStateRef = useRef({
+    isSending: false,
+    keyboardVisible: false,
+    text: "",
+    attachmentCount: 0,
+  });
 
   const [text, setText] = useState("");
   const [messages, setMessages] = useState<AiMobileChatMessage[]>([]);
   const [attachments, setAttachments] = useState<AiMobileAttachment[]>([]);
   const [activeMode, setActiveMode] = useState<AiMobileAssistantMode>("chatgpt");
   const [webSearchEnabled, setWebSearchEnabled] = useState(false);
+  const [keyboardVisible, setKeyboardVisible] = useState(false);
   const [isSending, setIsSending] = useState(false);
   const [toolsVisible, setToolsVisible] = useState(false);
   const [menuVisible, setMenuVisible] = useState(false);
+  const [handsFreeEnabled] = useState(false);
+  const [handsFreeStatus, setHandsFreeStatus] = useState<SabiHandsFreeVoiceStatus>("initializing");
+  const [handsFreeError, setHandsFreeError] = useState<string | null>(null);
 
   const aiPremiumEntitlement = useMemo(() => resolveAiPremiumEntitlement(snapshot), [snapshot]);
   const hasPremium = aiPremiumEntitlement.enabled;
@@ -415,9 +595,73 @@ export default function AiMobileChatScreen() {
   const voiceBusy =
     voice.state.recordingState === "requesting_permission" ||
     voice.state.recordingState === "processing";
+  useEffect(() => {
+    voiceRef.current = voice;
+  }, [voice]);
+
+  useEffect(() => {
+    liveStateRef.current = {
+      isSending,
+      keyboardVisible,
+      text,
+      attachmentCount: attachments.length,
+    };
+  }, [attachments.length, isSending, keyboardVisible, text]);
+
+  useEffect(() => {
+    const showEvent = Platform.OS === "ios" ? "keyboardWillShow" : "keyboardDidShow";
+    const hideEvent = Platform.OS === "ios" ? "keyboardWillHide" : "keyboardDidHide";
+    const showSub = Keyboard.addListener(showEvent, () => {
+      setKeyboardVisible(true);
+      requestAnimationFrame(() => {
+        scrollRef.current?.scrollToEnd({ animated: true });
+      });
+    });
+    const hideSub = Keyboard.addListener(hideEvent, () => {
+      setKeyboardVisible(false);
+    });
+
+    return () => {
+      showSub.remove();
+      hideSub.remove();
+    };
+  }, []);
 
   const showError = (message: string) => {
     Alert.alert(aiMobileText(language, "common.requestFailed"), message);
+  };
+
+  const formatVoiceRuntimeError = (stage: string, error: unknown) => {
+    const record = toRecord(error);
+    const code = toText(record?.code) || toText(record?.errorCode) || null;
+    const status = typeof record?.status === "number" ? String(record.status) : null;
+    const message =
+      error instanceof Error
+        ? error.message
+        : toText(record?.message) || toText(record?.error) || String(error ?? aiMobileText(language, "common.requestFailed"));
+    const suffix = [code, status ? `HTTP ${status}` : null].filter(Boolean).join(" · ");
+    return suffix ? `${stage}: ${message}
+${suffix}` : `${stage}: ${message}`;
+  };
+
+  const showVoiceError = (stage: string, error: unknown) => {
+    const message = formatVoiceRuntimeError(stage, error);
+    console.warn(`[sabi-ai-voice] ${message}`);
+    Alert.alert(aiMobileText(language, "common.requestFailed"), message);
+  };
+
+  const showVoiceRawError = (stage: string, raw: unknown) => {
+    let rawText = "";
+    try {
+      rawText = JSON.stringify(raw).slice(0, 420);
+    } catch {
+      rawText = String(raw ?? "").slice(0, 420);
+    }
+
+    showVoiceError(stage, {
+      code: "ai_voice_response_unreadable",
+      message: rawText || aiMobileText(language, "common.requestFailed"),
+    });
   };
 
   const showPremiumRequired = (feature: PremiumFeatureKind) => {
@@ -585,7 +829,7 @@ export default function AiMobileChatScreen() {
 
     const premiumFeature: PremiumFeatureKind | null =
       source === "voice"
-        ? "voice"
+        ? null
         : outgoingAttachments.length > 0
           ? "attachment"
           : webSearchEnabled
@@ -610,6 +854,8 @@ export default function AiMobileChatScreen() {
       status: "sent",
     };
 
+    const conversationHistory = buildSabiAssistantConversationHistory([...messages, userMessage]);
+
     setMessages((prev) => [...prev, userMessage]);
     setText("");
 
@@ -622,6 +868,36 @@ export default function AiMobileChatScreen() {
     });
 
     try {
+      const clientAction = resolveSabiAssistantClientAction(userMessage.text, { language });
+
+      if (clientAction) {
+        const assistantMessage: AiMobileChatMessage = {
+          id: createAiMobileId("ai_client_action_message"),
+          role: "assistant",
+          text: clientAction.assistantText,
+          createdAt: nowIso(),
+          status: clientAction.kind === "blocked_sensitive" ? "awaiting_confirmation" : "sent",
+          meta: null,
+        };
+
+        setMessages((prev) => [...prev, assistantMessage]);
+        requestAnimationFrame(() => {
+          scrollRef.current?.scrollToEnd({ animated: true });
+        });
+
+        await delay(180);
+
+        if (clientAction.kind === "navigate" && clientAction.route) {
+          (router.push as unknown as (href: string) => void)(clientAction.route);
+        } else if ((clientAction.kind === "web_search" || clientAction.kind === "open_url") && clientAction.url) {
+          await Linking.openURL(clientAction.url);
+        } else if (clientAction.kind === "blocked_sensitive" && clientAction.route) {
+          (router.push as unknown as (href: string) => void)(clientAction.route);
+        }
+
+        return;
+      }
+
       const safetyResult = await aiMobileApi.evaluateSafetyApproval({
         prompt: userMessage.text,
         source,
@@ -698,11 +974,12 @@ export default function AiMobileChatScreen() {
           promptInjectionGuard: true,
         },
         voiceOutput: {
-          enabled: source === "voice" && hasPremium,
+          enabled: source === "voice",
           preferredVoiceGender: "female",
         },
         providerRoute,
         safetyApproval,
+        conversationHistory,
         clientCapabilities: hasPremium
           ? [
               "attachments",
@@ -724,11 +1001,15 @@ export default function AiMobileChatScreen() {
       const rawAssistantText =
         extractAssistantText(result.data) ||
         aiMobileText(language, "chat.emptyBackendResponse");
-      const providerUnavailable =
-        isProviderRouteUnavailable(providerRoute) || isAssistantProviderPlaceholder(rawAssistantText);
+      const providerRouteUnavailable = isProviderRouteUnavailable(providerRoute);
+      const providerUnavailable = isAssistantProviderPlaceholder(rawAssistantText);
       const assistantText = providerUnavailable
         ? assistantProviderUnavailableText(language)
         : rawAssistantText;
+      const providerMeta =
+        providerRoute && !providerRouteUnavailable
+          ? providerRouteMeta(language, providerRoute)
+          : null;
 
       const assistantMessage: AiMobileChatMessage = {
         id: createAiMobileId("ai_assistant_message"),
@@ -740,11 +1021,7 @@ export default function AiMobileChatScreen() {
           : safetyApproval.requiresConfirmation
             ? "awaiting_confirmation"
             : "sent",
-        meta: providerRoute
-          ? providerRouteMeta(language, providerRoute)
-          : source === "voice"
-            ? voiceCommandMeta(language)
-            : null,
+        meta: providerMeta,
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
@@ -752,18 +1029,17 @@ export default function AiMobileChatScreen() {
       if (
         !providerUnavailable &&
         source === "voice" &&
-        hasPremium &&
         assistantText &&
         assistantText !== aiMobileText(language, "chat.emptyBackendResponse")
       ) {
-        await aiMobileApi.requestVoiceTts({
+        void voice.requestTts({
           text: assistantText,
           language,
-          preferredVoiceGender: "female",
-          source,
+        }).then((ttsResult) => {
+          if (!ttsResult.ok) {
+            showVoiceError("TTS", ttsResult.error);
+          }
         });
-
-        void voice.requestTts(assistantText);
       }
     } catch (error) {
       const assistantMessage: AiMobileChatMessage = {
@@ -782,74 +1058,194 @@ export default function AiMobileChatScreen() {
     }
   };
 
+  submitMessageRef.current = submitMessage;
+
+  useEffect(() => {
+    if (!handsFreeEnabled) return;
+    if (handsFreeLoopActiveRef.current) return;
+
+    handsFreeCancelledRef.current = false;
+    handsFreeLoopActiveRef.current = true;
+
+    const runHandsFreeLoop = async () => {
+      setHandsFreeStatus("initializing");
+      const bridge = await voiceRef.current.bindBridge();
+      if (!bridge.ok) {
+        setHandsFreeStatus("unavailable");
+        setHandsFreeError(bridge.error.message);
+        handsFreeLoopActiveRef.current = false;
+        return;
+      }
+
+      while (!handsFreeCancelledRef.current) {
+        const live = liveStateRef.current;
+        const bridgeState = voiceRef.current.state;
+        const canListen =
+          !live.isSending &&
+          !live.keyboardVisible &&
+          !live.text.trim() &&
+          live.attachmentCount === 0 &&
+          !bridgeState.isRecording &&
+          bridgeState.recordingState !== "processing";
+
+        if (!canListen) {
+          setHandsFreeStatus("sleeping");
+          await delay(SABI_HANDS_FREE_IDLE_DELAY_MS);
+          continue;
+        }
+
+        setHandsFreeError(null);
+        setHandsFreeStatus("listening");
+        const started = await voiceRef.current.startRecording();
+        if (!started.ok) {
+          setHandsFreeStatus("unavailable");
+          setHandsFreeError(started.error.message);
+          await delay(1800);
+          continue;
+        }
+
+        await delay(SABI_HANDS_FREE_RECORDING_WINDOW_MS);
+
+        if (handsFreeCancelledRef.current) break;
+
+        setHandsFreeStatus("processing");
+        const stopped = await voiceRef.current.stopRecording({ includeBase64: true });
+        if (!stopped.ok) {
+          setHandsFreeStatus("unavailable");
+          setHandsFreeError(stopped.error.message);
+          await delay(1400);
+          continue;
+        }
+
+        const audio = stopped.data;
+        const transcription = await aiMobileApi.transcribeVoiceAudio({
+          audioBase64: audio.base64 ?? null,
+          audioUri: audio.uri,
+          fileName: audio.fileName,
+          mimeType: audio.mimeType,
+          durationMillis: audio.durationMillis,
+          sizeBytes: audio.sizeBytes,
+          language,
+          source: "sabi_hands_free_wake_word",
+          listenForWakeWord: true,
+          wakeWord: "sabi",
+        });
+
+        if (!transcription.ok) {
+          setHandsFreeStatus("unavailable");
+          setHandsFreeError(transcription.error.message);
+          await delay(1800);
+          continue;
+        }
+
+        const transcript = extractSabiVoiceTranscript(transcription.data);
+        if (!transcript || !hasSabiWakeWord(transcript)) {
+          setHandsFreeStatus("listening");
+          await delay(260);
+          continue;
+        }
+
+        const command = stripSabiWakeWord(transcript);
+        setHandsFreeStatus("wake_detected");
+        await voiceRef.current.submitTranscript(transcript, {
+          language,
+          source: "sabi_hands_free_wake_word",
+        });
+
+        setHandsFreeStatus("answering");
+        await submitMessageRef.current?.(command, [], "voice");
+        await delay(650);
+      }
+
+      handsFreeLoopActiveRef.current = false;
+    };
+
+    void runHandsFreeLoop();
+
+    return () => {
+      handsFreeCancelledRef.current = true;
+      handsFreeLoopActiveRef.current = false;
+      if (voiceRef.current.state.isRecording) {
+        void voiceRef.current.stopRecording();
+      }
+    };
+  }, [handsFreeEnabled, language]);
+
   const toggleVoice = async () => {
-    if (!ensurePremiumAccess("voice")) return;
     if (voiceBusy || isSending) return;
 
     if (voice.state.isRecording) {
-      const stopped = await voice.stopRecording();
+      const stopped = await voice.stopRecording({ includeBase64: true });
       if (!stopped.ok) {
-        showError(aiMobileErrorText(language, stopped.error));
+        showVoiceError("stopRecording", stopped.error);
         return;
       }
 
-      const data = stopped.data as Record<string, unknown>;
-      const transcript =
-        toText(data.transcript) ||
-        toText(data.text) ||
-        toText(data.recognizedText) ||
-        toText(data.payload && toRecord(data.payload)?.transcript);
+      const audio = stopped.data;
+      const base64 = typeof audio.base64 === "string" ? audio.base64.trim() : "";
+      console.log(
+        `[sabi-ai-voice] captured uri=${audio.uri} mime=${audio.mimeType} size=${audio.sizeBytes ?? "unknown"} base64=${base64.length}`,
+      );
 
-      if (transcript) {
-        await voice.submitTranscript(transcript);
-        await submitMessage(transcript, [], "voice");
+      if (!base64) {
+        showVoiceError("audioBase64", {
+          code: "ai_voice_audio_base64_missing",
+          message:
+            "Recorded audio was saved, but mobile could not read it as base64. STT cannot use a local phone URI on the server.",
+        });
         return;
       }
 
-      const uri = typeof data.uri === "string" ? data.uri : null;
-      if (!uri) {
-        showError(aiMobileText(language, "common.requestFailed"));
-        return;
-      }
-
-      const audioAttachment = makeAttachment({
-        kind: "audio",
-        uri,
-        name:
-          typeof data.fileName === "string"
-            ? data.fileName
-            : `sabi-ai-voice-${Date.now()}.m4a`,
-        mimeType: typeof data.mimeType === "string" ? data.mimeType : "audio/m4a",
-        size: typeof data.sizeBytes === "number" ? data.sizeBytes : undefined,
-        raw: {
-          ...data,
-          voiceCommand: true,
-          requiresServerTranscription: true,
-        },
+      const transcription = await aiMobileApi.transcribeVoiceAudio({
+        audioBase64: base64,
+        audioUri: audio.uri,
+        fileName: audio.fileName,
+        mimeType: audio.mimeType,
+        durationMillis: audio.durationMillis,
+        sizeBytes: audio.sizeBytes,
+        language,
+        source: "sabi_ai_chat_voice",
+        listenForWakeWord: false,
+        wakeWord: "sabi",
       });
 
-      await submitMessage(voiceFallbackPrompt(language), [audioAttachment], "voice");
+      if (!transcription.ok) {
+        showVoiceError("STT", transcription.error);
+        return;
+      }
+
+      console.log("[sabi-ai-voice] stt response", transcription.data);
+
+      const transcript =
+        extractVoiceTranscriptFromResponse(transcription.data) ||
+        extractSabiVoiceTranscript(transcription.data);
+
+      if (!transcript) {
+        showVoiceRawError("STT transcript", transcription.data);
+        return;
+      }
+
+      await voice.submitTranscript(transcript, {
+        language,
+        source: "sabi_ai_chat_voice",
+      });
+
+      await submitMessage(transcript, [], "voice");
       return;
     }
 
     const bindResult = await voice.bindBridge();
     if (!bindResult.ok) {
-      showError(aiMobileErrorText(language, bindResult.error));
+      showVoiceError("bindBridge", bindResult.error);
       return;
     }
 
     const result = await voice.startRecording();
     if (!result.ok) {
-      showError(aiMobileErrorText(language, result.error));
+      showVoiceError("startRecording", result.error);
     }
   };
 
-  const quickPrompts = [
-    "chat.prompt.business",
-    "chat.prompt.study",
-    "chat.prompt.search",
-    "chat.prompt.file",
-  ];
 
   return (
     <LinearGradient colors={AI_MOBILE_GRADIENT} style={styles.gradient}>
@@ -865,7 +1261,7 @@ export default function AiMobileChatScreen() {
           <View style={styles.headerTitleWrap}>
             <Text style={styles.headerTitle}>{aiMobileText(language, "chat.title")}</Text>
             <Text style={styles.headerSubtitle} numberOfLines={1}>
-              {activeModeTitle} · {aiMobileText(language, `status.${status}`)} · {premiumStatusText(language, hasPremium)}
+              Sabi AI
             </Text>
           </View>
 
@@ -874,9 +1270,35 @@ export default function AiMobileChatScreen() {
           </Pressable>
         </View>
 
+        {status !== "ready" ? (
+          <View style={styles.providerNoticeBox}>
+            <ShieldCheck size={16} color={AI_MOBILE_COLORS.gold} strokeWidth={2.4} />
+            <View style={styles.providerNoticeTextWrap}>
+              <Text style={styles.providerNoticeTitle}>
+                {aiMobileText(language, "chat.providerNotConfiguredTitle")}
+              </Text>
+              <Text style={styles.providerNoticeText}>
+                {aiMobileText(language, "chat.providerNotConfiguredBody")}
+              </Text>
+              <Text style={styles.providerNoticeReviewerText}>
+                {aiMobileText(language, "chat.providerNotConfiguredReviewer")}
+              </Text>
+            </View>
+          </View>
+        ) : null}
+
+        {status !== "ready" ? (
+          <View style={styles.playReadyProviderEvidenceWrap}>
+            <PlayReadyProviderNotConfiguredEvidencePanel
+              compact
+              contextLabel="AI provider_not_configured reviewer evidence"
+            />
+          </View>
+        ) : null}
+
         <KeyboardAvoidingView
           style={styles.keyboardWrap}
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
+          behavior={Platform.OS === "ios" ? "padding" : "height"}
           keyboardVerticalOffset={Platform.OS === "ios" ? 8 : 0}
         >
           <ScrollView
@@ -884,40 +1306,13 @@ export default function AiMobileChatScreen() {
             style={styles.messages}
             contentContainerStyle={styles.messagesContent}
             keyboardShouldPersistTaps="handled"
+            keyboardDismissMode={Platform.OS === "ios" ? "interactive" : "none"}
           >
-            {messages.length === 0 ? (
-              <View style={styles.emptyWrap}>
-                <View style={styles.emptyIcon}>
-                  <Bot size={34} color={AI_MOBILE_COLORS.cyan} strokeWidth={2.4} />
-                </View>
-
-                <Text style={styles.emptyTitle}>{aiMobileText(language, "chat.emptyTitle")}</Text>
-                <Text style={styles.emptyText}>{aiMobileText(language, "chat.cleanEmptyText")}</Text>
-
-                {!hasPremium ? (
-                  <View style={styles.freeNoticeBox}>
-                    <ShieldCheck size={17} color={AI_MOBILE_COLORS.gold} strokeWidth={2.5} />
-                    <Text style={styles.freeNoticeText}>{premiumRequiredMessage(language, "mode")}</Text>
-                  </View>
-                ) : null}
-
-                <View style={styles.quickPromptWrap}>
-                  {quickPrompts.map((key) => (
-                    <Pressable
-                      key={key}
-                      onPress={() => setText(aiMobileText(language, key))}
-                      style={styles.quickPrompt}
-                    >
-                      <Text style={styles.quickPromptText}>{aiMobileText(language, key)}</Text>
-                    </Pressable>
-                  ))}
-                </View>
-              </View>
-            ) : (
-              messages.map((message) => (
-                <MessageBubble key={message.id} message={message} language={language} />
-              ))
-            )}
+            {messages.length > 0
+              ? messages.map((message) => (
+                  <MessageBubble key={message.id} message={message} language={language} />
+                ))
+              : null}
 
             {isSending ? (
               <View style={styles.typingRow}>
@@ -927,7 +1322,7 @@ export default function AiMobileChatScreen() {
             ) : null}
           </ScrollView>
 
-          {(attachments.length > 0 || webSearchEnabled || voice.state.isRecording) ? (
+          {(attachments.length > 0 || webSearchEnabled) ? (
             <View style={styles.activeToolsBar}>
               {webSearchEnabled ? (
                 <Pressable onPress={() => setWebSearchEnabled(false)} style={styles.activeChip}>
@@ -937,12 +1332,6 @@ export default function AiMobileChatScreen() {
                 </Pressable>
               ) : null}
 
-              {voice.state.isRecording ? (
-                <View style={[styles.activeChip, styles.recordingChip]}>
-                  <Mic size={14} color={AI_MOBILE_COLORS.danger} strokeWidth={2.4} />
-                  <Text style={styles.activeChipText}>{aiMobileText(language, "chat.voiceRecording")}</Text>
-                </View>
-              ) : null}
 
               {attachments.map((attachment) => (
                 <Pressable key={attachment.id} onPress={() => removeAttachment(attachment.id)} style={styles.activeChip}>
@@ -956,7 +1345,7 @@ export default function AiMobileChatScreen() {
             </View>
           ) : null}
 
-          <View style={[styles.composerWrap, { paddingBottom: Math.max(insets.bottom, 10) }]}>
+          <View style={[styles.composerWrap, { paddingBottom: keyboardVisible ? 10 : Math.max(insets.bottom, 10) }]}>
             <Pressable onPress={() => setToolsVisible(true)} style={styles.plusButton}>
               <Plus size={22} color={AI_MOBILE_COLORS.text} strokeWidth={2.8} />
             </Pressable>
@@ -966,22 +1355,28 @@ export default function AiMobileChatScreen() {
               onChangeText={setText}
               placeholder={aiMobileText(language, "chat.placeholder")}
               placeholderTextColor={AI_MOBILE_COLORS.dim}
+              selectionColor={AI_MOBILE_COLORS.cyan}
+              cursorColor={AI_MOBILE_COLORS.cyan}
               multiline
+              textAlignVertical="top"
+              onFocus={() => {
+                requestAnimationFrame(() => {
+                  scrollRef.current?.scrollToEnd({ animated: true });
+                });
+              }}
               style={styles.input}
             />
 
             <Pressable
               onPress={toggleVoice}
-              disabled={voiceBusy || isSending}
+              disabled={isSending || voiceBusy}
               style={[
                 styles.voiceButton,
                 voice.state.isRecording && styles.voiceButtonRecording,
-                (voiceBusy || isSending || !hasPremium) && styles.disabledButton,
+                (isSending || voiceBusy) && styles.disabledButton,
               ]}
             >
-              {voiceBusy ? (
-                <ActivityIndicator size="small" color={AI_MOBILE_COLORS.text} />
-              ) : voice.state.isRecording ? (
+              {voice.state.isRecording ? (
                 <MicOff size={18} color={AI_MOBILE_COLORS.text} strokeWidth={2.7} />
               ) : (
                 <Mic size={18} color={AI_MOBILE_COLORS.text} strokeWidth={2.7} />
@@ -1109,7 +1504,7 @@ export default function AiMobileChatScreen() {
               <View style={styles.securityBox}>
                 <ShieldCheck size={18} color={hasPremium ? AI_MOBILE_COLORS.green : AI_MOBILE_COLORS.gold} strokeWidth={2.5} />
                 <Text style={styles.securityText}>
-                  {hasPremium ? aiMobileText(language, "chat.securityNotice") : premiumRequiredMessage(language, "mode")}
+                  {aiMobileText(language, "chat.securityNotice")}
                 </Text>
               </View>
 
@@ -1118,7 +1513,7 @@ export default function AiMobileChatScreen() {
                 <Text style={styles.statusText}>
                   {isLoading
                     ? aiMobileText(language, "common.loading")
-                    : `${aiMobileText(language, `status.${status}`)} · ${activeModeShort} · ${premiumStatusText(language, hasPremium)}`}
+                    : `Sabi AI · ${activeModeShort}`}
                 </Text>
                 <Pressable onPress={refresh} style={styles.refreshButton}>
                   <Text style={styles.refreshText}>{aiMobileText(language, "common.ready")}</Text>
@@ -1249,6 +1644,47 @@ const styles = StyleSheet.create({
     lineHeight: 16,
     fontWeight: "800",
   },
+  commandPanel: {
+    width: "100%",
+    borderRadius: 24,
+    padding: 14,
+    marginTop: 20,
+    backgroundColor: "rgba(93,232,215,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(93,232,215,0.16)",
+  },
+  commandPanelTitle: {
+    color: AI_MOBILE_COLORS.text,
+    fontSize: 14,
+    fontWeight: "900",
+  },
+  commandPanelText: {
+    color: AI_MOBILE_COLORS.muted,
+    fontSize: 12,
+    lineHeight: 18,
+    fontWeight: "700",
+    marginTop: 6,
+  },
+  commandChipGrid: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 8,
+    marginTop: 12,
+  },
+  commandChip: {
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.12)",
+  },
+  commandChipText: {
+    color: AI_MOBILE_COLORS.softText,
+    fontSize: 11,
+    lineHeight: 15,
+    fontWeight: "900",
+  },
   quickPromptWrap: {
     width: "100%",
     gap: 9,
@@ -1344,6 +1780,68 @@ const styles = StyleSheet.create({
     marginTop: 8,
     textTransform: "uppercase",
   },
+  aiReportButton: {
+    alignSelf: "flex-start",
+    minHeight: 30,
+    borderRadius: 13,
+    paddingHorizontal: 10,
+    paddingVertical: 7,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
+    marginTop: 10,
+    backgroundColor: "rgba(255,209,102,0.10)",
+    borderWidth: 1,
+    borderColor: "rgba(255,209,102,0.18)",
+  },
+  aiReportButtonText: {
+    color: AI_MOBILE_COLORS.gold,
+    fontSize: 10,
+    fontWeight: "900",
+    textTransform: "uppercase",
+    letterSpacing: 0.2,
+  },
+  providerNoticeBox: {
+    marginHorizontal: 16,
+    marginBottom: 8,
+    borderRadius: 18,
+    paddingHorizontal: 12,
+    paddingVertical: 10,
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 10,
+    backgroundColor: "rgba(255,209,102,0.09)",
+    borderWidth: 1,
+    borderColor: "rgba(255,209,102,0.17)",
+  },
+  providerNoticeTextWrap: {
+    flex: 1,
+    minWidth: 0,
+  },
+  providerNoticeTitle: {
+    color: AI_MOBILE_COLORS.gold,
+    fontSize: 12,
+    lineHeight: 16,
+    fontWeight: "900",
+  },
+  providerNoticeText: {
+    color: AI_MOBILE_COLORS.softText,
+    fontSize: 11,
+    lineHeight: 16,
+    fontWeight: "800",
+    marginTop: 3,
+  },
+  providerNoticeReviewerText: {
+    color: AI_MOBILE_COLORS.muted,
+    fontSize: 10,
+    lineHeight: 14,
+    fontWeight: "700",
+    marginTop: 4,
+  },
+  playReadyProviderEvidenceWrap: {
+    marginHorizontal: 16,
+    marginBottom: 8,
+  },
   activeToolsBar: {
     maxHeight: 96,
     paddingHorizontal: 16,
@@ -1374,6 +1872,15 @@ const styles = StyleSheet.create({
     color: AI_MOBILE_COLORS.softText,
     fontSize: 11,
     fontWeight: "800",
+  },
+  activeChipError: {
+    color: AI_MOBILE_COLORS.danger,
+    fontSize: 12,
+    fontWeight: "900",
+  },
+  voiceWakeChip: {
+    borderColor: "rgba(102,231,224,0.26)",
+    backgroundColor: "rgba(102,231,224,0.10)",
   },
   composerWrap: {
     paddingHorizontal: 12,

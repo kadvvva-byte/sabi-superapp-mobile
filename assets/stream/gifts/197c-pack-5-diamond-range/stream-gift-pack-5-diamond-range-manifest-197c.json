@@ -1,0 +1,80 @@
+{
+  "version": "STREAM-GAME-GIFTS-197C",
+  "scope": "Pack 5 diamond price range gifts / mobile user-facing only",
+  "giftCount": 8,
+  "diamondPriceRange": {
+    "min": 1,
+    "max": 10000
+  },
+  "coinTopUpPolicy": {
+    "minimumTopUpCoins": 10,
+    "minimumTopUpUsd": 10,
+    "usdPerCoin": 1
+  },
+  "runtime": {
+    "backend": false,
+    "walletMutation": false,
+    "paymentProvider": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "diamond-spark-one",
+      "displayNameRu": "Алмазная Искра",
+      "diamondPrice": 1,
+      "poster": "posters/diamond-spark-one.svg",
+      "soundCue": "sound-cues/diamond-spark-one-cue.wav"
+    },
+    {
+      "id": "aurora-heart-five",
+      "displayNameRu": "Аврора Сердце",
+      "diamondPrice": 5,
+      "poster": "posters/aurora-heart-five.svg",
+      "soundCue": "sound-cues/aurora-heart-five-cue.wav"
+    },
+    {
+      "id": "silver-rose-ten",
+      "displayNameRu": "Серебряная Роза",
+      "diamondPrice": 10,
+      "poster": "posters/silver-rose-ten.svg",
+      "soundCue": "sound-cues/silver-rose-ten-cue.wav"
+    },
+    {
+      "id": "crystal-cat-twenty-five",
+      "displayNameRu": "Кристальный Кот",
+      "diamondPrice": 25,
+      "poster": "posters/crystal-cat-twenty-five.svg",
+      "soundCue": "sound-cues/crystal-cat-twenty-five-cue.wav"
+    },
+    {
+      "id": "royal-pegasus-seventy-five",
+      "displayNameRu": "Королевский Пегас",
+      "diamondPrice": 75,
+      "poster": "posters/royal-pegasus-seventy-five.svg",
+      "soundCue": "sound-cues/royal-pegasus-seventy-five-cue.wav"
+    },
+    {
+      "id": "stellar-train-two-fifty",
+      "displayNameRu": "Звёздный Поезд",
+      "diamondPrice": 250,
+      "poster": "posters/stellar-train-two-fifty.svg",
+      "soundCue": "sound-cues/stellar-train-two-fifty-cue.wav"
+    },
+    {
+      "id": "sky-palace-one-thousand",
+      "displayNameRu": "Небесный Дворец",
+      "diamondPrice": 1000,
+      "poster": "posters/sky-palace-one-thousand.svg",
+      "soundCue": "sound-cues/sky-palace-one-thousand-cue.wav"
+    },
+    {
+      "id": "imperial-galaxy-ten-thousand",
+      "displayNameRu": "Императорская Галактика",
+      "diamondPrice": 10000,
+      "poster": "posters/imperial-galaxy-ten-thousand.svg",
+      "soundCue": "sound-cues/imperial-galaxy-ten-thousand-cue.wav"
+    }
+  ]
+}

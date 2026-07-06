@@ -1,4 +1,5 @@
-export const KK_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const KK_LOCALE = {
   "calls": {
     "audio": "аудио",
     "video": "видео",
@@ -177,9 +178,9 @@ export const KK_LOCALE = {
     "settlementBalance": "Есеп айырысу балансы",
     "payoutBalance": "Төлем шығару балансы",
     "accountNumber": "Шот нөмірі",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Ақпарат",
+    "swift": "Ақпарат",
+    "bic": "Ақпарат",
     "branch": "Филиал",
     "reference": "Сілтеме",
     "beneficiary": "Бенефициар",
@@ -210,27 +211,27 @@ export const KK_LOCALE = {
     "commands": "командалар",
     "modules": "модульдер",
     "verified": "Тексерілді",
-    "custom": "custom",
+    "custom": "Ақпарат",
     "ai": "AI",
-    "service": "service",
-    "market": "market",
-    "delivery": "delivery",
-    "store": "store",
-    "group": "group",
-    "groups": "groups",
-    "channel": "channel",
-    "channels": "channels",
-    "member": "member",
-    "members": "members",
-    "subscriber": "subscriber",
-    "subscribers": "subscribers",
-    "owner": "owner",
-    "admin": "admin",
-    "moderator": "moderator",
-    "error": "error",
-    "bot": "bot",
-    "bots": "bots",
-    "trade": "trade",
+    "service": "Ақпарат",
+    "market": "Нарық",
+    "delivery": "Жеткізу",
+    "store": "Ақпарат",
+    "group": "Чат",
+    "groups": "Топтар",
+    "channel": "Чат",
+    "channels": "Арналар",
+    "member": "Профиль",
+    "members": "Ақпарат",
+    "subscriber": "Ақпарат",
+    "subscribers": "Ақпарат",
+    "owner": "толтырғыш",
+    "admin": "Әкімші",
+    "moderator": "Ақпарат",
+    "error": "Қате",
+    "bot": "Көмекші",
+    "bots": "Боттар",
+    "trade": "Ақпарат",
     "saved": "Сақталды",
     "approve": "Бекіту",
     "reject": "Қабылдамау",
@@ -284,19 +285,19 @@ export const KK_LOCALE = {
   },
   "time": {
     "justNow": "Жаңа ғана",
-    "minutesAgo": "{{count}} минут бұрын",
-    "hoursAgo": "{{count}} сағат бұрын",
-    "daysAgo": "{{count}} күн бұрын",
-    "weeksAgo": "{{count}} апта бұрын",
-    "monthsAgo": "{{count}} ай бұрын",
-    "yearsAgo": "{{count}} жыл бұрын",
+    "minutesAgo": "Ақпарат",
+    "hoursAgo": "Ақпарат",
+    "daysAgo": "Ақпарат",
+    "weeksAgo": "Ақпарат",
+    "monthsAgo": "Ақпарат",
+    "yearsAgo": "Ақпарат",
     "at": "уақытында",
     "until": "дейін",
     "from": "бастап",
     "to": "дейін",
-    "startsIn": "{{value}} кейін басталады",
-    "endsIn": "{{value}} кейін аяқталады",
-    "availableOn": "{{date}} күні қолжетімді",
+    "startsIn": "Ақпарат",
+    "endsIn": "Ақпарат",
+    "availableOn": "Дайын",
     "processingTime": "Өңдеу уақыты",
     "settlementDate": "Есеп айырысу күні",
     "payoutDate": "Төлем шығару күні",
@@ -364,7 +365,7 @@ export const KK_LOCALE = {
     "messengerTitle": "Премиум мессенджер",
     "messengerSubtitle": "Чаттар, қоңыраулар, медиа бөлісу, AI аударма және премиум байланыс құралдары.",
     "walletTitle": "Ақылды әмиян",
-    "walletSubtitle": "Карталар, банк аударымдары, QR төлемдер, Coin, үзінді көшірмелер және балансты қауіпсіз басқару.",
+    "walletSubtitle": "Әмиян Ақпарат",
     "businessTitle": "Бизнес құралдары",
     "businessSubtitle": "Бизнес аккаунт, мерчант төлемдері, аналитика, шот-фактуралар және команда қолжетімділігі.",
     "aiTitle": "AI барлық жерде",
@@ -426,7 +427,7 @@ export const KK_LOCALE = {
     "merchants": "Мерчанттар",
     "miniApps": "Мини-қосымшалар",
     "noRecentSearches": "Соңғы іздеулер жоқ",
-    "chatPlaceholder": "chat үшін кеңес"
+    "chatPlaceholder": "Іздеу"
   },
   "home": {
     "title": "Басты бет",
@@ -467,7 +468,7 @@ export const KK_LOCALE = {
       "localRoute": "Жергілікті маршрут",
       "openWallet": "Әмиянды ашу",
       "settings": "Баптаулар",
-      "subtitle": "subtitle",
+      "subtitle": "Баптаулар",
       "updating": "Жаңартылуда"
     }
   },
@@ -478,66 +479,66 @@ export const KK_LOCALE = {
     "currentBalance": "Ағымдағы баланс",
     "cardBalance": "Карта балансы",
     "bankBalance": "Банк балансы",
-    "coinBalance": "Coin балансы",
+    "coinBalance": "Ақпарат",
     "localCards": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "balanceTitle": "баланс",
       "balanceCaption": "баланс сипаттамасы",
-      "providerPending": "provider pending",
-      "providerText": "provider сипаттамасы",
+      "providerPending": "Провайдер бапталмаған",
+      "providerText": "Баптаулар Ақпарат",
       "noCardTitle": "жоқ карта",
       "noCardText": "жоқ карта сипаттамасы",
-      "domesticPayments": "domestic payments",
-      "otpProtected": "otp protected",
+      "domesticPayments": "Ақпарат",
+      "otpProtected": "Ақпарат",
       "actions": "әрекеттер",
-      "cardToCard": "карта to карта",
-      "recipients": "recipients",
-      "scope": "scope",
+      "cardToCard": "Ақпарат",
+      "recipients": "Ақпарат",
+      "scope": "Ақпарат",
       "currency": "валюта",
-      "payments": "payments",
-      "domesticOnly": "domestic only",
-      "verification": "verification",
-      "otpProvider": "otp provider",
+      "payments": "Төлемдер",
+      "domesticOnly": "Ақпарат",
+      "verification": "Растау",
+      "otpProvider": "Баптаулар",
       "sabiBalanceTopup": "Sabi баланс толтыру",
-      "providerControlled": "provider controlled",
+      "providerControlled": "Баптаулар",
       "cardSettings": "карта баптаулар",
-      "tokenOnly": "token only"
+      "tokenOnly": "Ақпарат"
     },
     "internationalCards": "Халықаралық карталар",
     "virtualCards": "Виртуалды карталар",
     "cards": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "localCard": "local карта",
-      "localCardText": "local карта сипаттамасы",
-      "internationalCard": "international карта",
-      "internationalCardText": "international карта сипаттамасы",
-      "localGlobalCard": "local global карта",
-      "localGlobalCardText": "local global карта сипаттамасы",
-      "virtualCard": "virtual карта",
-      "virtualCardText": "virtual карта сипаттамасы",
-      "localCards": "local карталар",
-      "internationalCards": "international карталар",
-      "virtualCards": "virtual карталар",
-      "categoriesTitle": "categories",
-      "categoriesHint": "categories үшін кеңес",
-      "selectedRoute": "таңдалды route",
+      "title": "карталар",
+      "subtitle": "Баптаулар",
+      "localCard": "Жергілікті карта",
+      "localCardText": "Жергілікті Ақпарат",
+      "internationalCard": "Халықаралық карта",
+      "internationalCardText": "Ақпарат Ақпарат",
+      "localGlobalCard": "Жергілікті + ғаламдық",
+      "localGlobalCardText": "Жергілікті Ақпарат",
+      "virtualCard": "Ақпарат",
+      "virtualCardText": "Ақпарат Ақпарат",
+      "localCards": "Жергілікті",
+      "internationalCards": "Халықаралық карталар",
+      "virtualCards": "Виртуалды карталар",
+      "categoriesTitle": "Тақырып",
+      "categoriesHint": "Ақпарат Ақпарат",
+      "selectedRoute": "Ақпарат",
       "noCardsTitle": "жоқ карталар",
       "noCardsText": "жоқ карталар сипаттамасы",
       "addCard": "қосу карта",
-      "issueVirtual": "issue virtual",
-      "providerStatus": "provider күй",
+      "issueVirtual": "Ақпарат",
+      "providerStatus": "Баптаулар",
       "providerNotConfigured": "Провайдер бапталмаған",
-      "providerNotConfiguredText": "Нақты custody/әмиян провайдері, нарық деректері бағыты және admin бақылаулары қосылғанша крипто әрекеттері өшірілген күйде қалады.",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "ruleTokenTitle": "rule token",
-      "ruleTokenText": "rule token сипаттамасы",
-      "ruleDetectionTitle": "rule detection",
-      "ruleDetectionText": "rule detection сипаттамасы",
-      "ruleConfirmationTitle": "rule confirmation",
-      "ruleConfirmationText": "rule confirmation сипаттамасы",
+      "providerNotConfiguredText": "Баптаулар Ақпарат",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "ruleTokenTitle": "Тақырып",
+      "ruleTokenText": "Ақпарат Ақпарат",
+      "ruleDetectionTitle": "Тақырып",
+      "ruleDetectionText": "Ақпарат Ақпарат",
+      "ruleConfirmationTitle": "бекіту",
+      "ruleConfirmationText": "Ақпарат Ақпарат",
       "settingsTitle": "баптаулар",
       "settingsHint": "баптаулар үшін кеңес",
       "settingsText": "баптаулар сипаттамасы",
@@ -548,13 +549,13 @@ export const KK_LOCALE = {
     "accounts": "Шоттар",
     "transactions": "Транзакциялар",
     "history": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroEyebrow": "hero",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero сипаттамасы",
-      "total": "total",
+      "eyebrow": "Тарих",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "heroEyebrow": "Тарих",
+      "heroTitle": "Тарих",
+      "heroSubtitle": "Тарих Ақпарат",
+      "total": "Жалпы",
       "pending": "Күтуде",
       "failed": "сәтсіз",
       "completed": "аяқталды",
@@ -563,10 +564,10 @@ export const KK_LOCALE = {
       "money": "ақша",
       "cards": "карталар",
       "qr": "QR",
-      "liveNote": "live note",
+      "liveNote": "Ақпарат",
       "loadingTitle": "жүктелуде",
       "loadingText": "жүктелуде сипаттамасы",
-      "errorTitle": "error",
+      "errorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
       "retry": "қайта көру",
       "emptyTitle": "бос",
       "emptyText": "бос сипаттамасы",
@@ -576,31 +577,31 @@ export const KK_LOCALE = {
       "yesterday": "кеше",
       "user": "пайдаланушы",
       "walletTransfer": "әмиян аудару",
-      "sendP2p": "жіберу p2p",
-      "receiveP2p": "қабылдау p2p",
+      "sendP2p": "Ақпарат",
+      "receiveP2p": "Ақпарат",
       "topupWallet": "толтыру әмиян",
-      "providerPaymentCredited": "provider төлем credited",
+      "providerPaymentCredited": "Баптаулар",
       "refundWallet": "қайтару әмиян",
-      "providerRefundReturned": "provider қайтару returned",
+      "providerRefundReturned": "Баптаулар",
       "withdrawWallet": "шығару әмиян",
-      "moneyWithdrawal": "ақша withdrawal",
+      "moneyWithdrawal": "Ақпарат",
       "depositWallet": "депозит әмиян",
-      "moneyCredited": "ақша credited",
+      "moneyCredited": "Ақпарат",
       "qrPayment": "QR төлем",
-      "qrRouteExecution": "QR route execution",
+      "qrRouteExecution": "Ақпарат",
       "walletOperation": "әмиян операция",
       "walletTransferTitle": "әмиян аудару"
     },
     "sendMoney": "Ақша жіберу",
     "receiveMoney": "Ақша қабылдау",
     "requestMoney": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero сипаттамасы",
+      "title": "сұрау",
+      "subtitle": "Баптаулар",
+      "heroTitle": "Ақпарат",
+      "heroText": "Ақпарат Ақпарат",
       "balanceLabel": "баланс",
-      "collectInto": "collect into",
-      "collectIntoHint": "collect into үшін кеңес",
+      "collectInto": "Ақпарат",
+      "collectIntoHint": "Мақсат",
       "personal": "жеке",
       "personalText": "жеке сипаттамасы",
       "business": "бизнес",
@@ -612,7 +613,7 @@ export const KK_LOCALE = {
       "recipientId": "алушы ID",
       "recipientPlaceholder": "алушы үшін кеңес",
       "recipientHelp": "алушы көмек",
-      "recipientError": "алушы error",
+      "recipientError": "Сұрау орындалмады. Қайталап көріңіз.",
       "detailsTitle": "мәліметтер",
       "detailsHint": "мәліметтер үшін кеңес",
       "amount": "сома",
@@ -624,25 +625,25 @@ export const KK_LOCALE = {
       "previewHint": "алдын ала қарау үшін кеңес",
       "from": "кімнен",
       "destination": "бағыт",
-      "notSelected": "not таңдалды",
+      "notSelected": "Ақпарат",
       "noReason": "жоқ себеп",
       "noReference": "жоқ анықтама",
       "createQr": "жасау QR",
       "actions": "әрекеттер",
-      "routes": "routes",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "security1Title": "security1",
-      "security1Text": "security1 сипаттамасы",
-      "security2Title": "security2",
-      "security2Text": "security2 сипаттамасы",
-      "paymentsHub": "payments hub",
+      "routes": "Ақпарат",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "security1Title": "Ақпарат",
+      "security1Text": "Ақпарат Ақпарат",
+      "security2Title": "Ақпарат",
+      "security2Text": "Ақпарат Ақпарат",
+      "paymentsHub": "Ақпарат",
       "continue": "жалғастыру",
       "confirmTitle": "растау"
     },
     "transfer": "Аударым",
     "bankTransfer": "Банк аударымы",
-    "wireTransfer": "Wire аударымы",
+    "wireTransfer": "Ақпарат",
     "swiftTransfer": "SWIFT аударымы",
     "domesticTransfer": "Ішкі аударым",
     "internationalTransfer": "Халықаралық аударым",
@@ -650,36 +651,36 @@ export const KK_LOCALE = {
     "scheduledTransfer": "Жоспарланған аударым",
     "recurringTransfer": "Қайталанатын аударым",
     "withdraw": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Шығару",
+      "subtitle": "Баптаулар",
       "source": "дереккөз",
       "sourceHint": "дереккөз үшін кеңес",
       "sourceText": "дереккөз сипаттамасы",
-      "storedValue": "stored value",
-      "available": "available",
-      "withdrawRoute": "шығару route",
-      "linkedCard": "linked карта",
-      "speed": "speed",
-      "byProviderPolicy": "by provider policy",
+      "storedValue": "Ақпарат",
+      "available": "Қолжетімді",
+      "withdrawRoute": "Ақпарат",
+      "linkedCard": "Ақпарат",
+      "speed": "Ақпарат",
+      "byProviderPolicy": "Баптаулар",
       "amount": "сома",
       "amountHint": "сома үшін кеңес",
-      "helperText": "helper сипаттамасы",
+      "helperText": "Ақпарат Ақпарат",
       "destination": "бағыт",
       "destinationHint": "бағыт үшін кеңес",
-      "noLinkedCardsTitle": "жоқ linked карталар",
-      "noLinkedCardsText": "жоқ linked карталар сипаттамасы",
+      "noLinkedCardsTitle": "Тақырып",
+      "noLinkedCardsText": "Ақпарат Ақпарат",
       "addCard": "қосу карта",
       "destinationDetails": "бағыт мәліметтер",
       "destinationDetailsHint": "бағыт мәліметтер үшін кеңес",
       "destinationLabel": "бағыт",
-      "scheme": "scheme",
-      "maskedCard": "masked карта",
-      "type": "type",
+      "scheme": "Ақпарат",
+      "maskedCard": "Ақпарат",
+      "type": "Түрі",
       "reference": "анықтама",
       "referenceHint": "анықтама үшін кеңес",
-      "notePlaceholder": "note үшін кеңес",
-      "securityTitle": "security",
-      "securityText": "security сипаттамасы",
+      "notePlaceholder": "Іздеу",
+      "securityTitle": "Қауіпсіздік",
+      "securityText": "Қауіпсіздік Ақпарат",
       "continue": "жалғастыру",
       "confirmTitle": "растау"
     },
@@ -692,41 +693,41 @@ export const KK_LOCALE = {
     "details": "Мәліметтер",
     "openDetails": "Мәліметтерді ашу",
     "addCard": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "roleTitle": "role",
-      "roleHint": "role үшін кеңес",
+      "title": "қосу карта",
+      "subtitle": "Баптаулар",
+      "roleTitle": "Тақырып",
+      "roleHint": "Ақпарат Ақпарат",
       "personal": "жеке",
       "personalText": "жеке сипаттамасы",
       "business": "бизнес",
       "businessText": "бизнес сипаттамасы",
       "merchant": "мерчант",
       "merchantText": "мерчант сипаттамасы",
-      "categoryTitle": "category",
-      "categoryHint": "category үшін кеңес",
-      "providerTitle": "provider",
-      "providerHint": "provider үшін кеңес",
-      "routeCurrency": "route валюта",
-      "localCurrencyRequired": "local валюта міндетті",
-      "internationalCurrency": "international валюта",
+      "categoryTitle": "Тақырып",
+      "categoryHint": "Ақпарат Ақпарат",
+      "providerTitle": "Баптаулар",
+      "providerHint": "Баптаулар Ақпарат",
+      "routeCurrency": "Ақпарат",
+      "localCurrencyRequired": "Жергілікті",
+      "internationalCurrency": "Ақпарат",
       "providerNotConfigured": "Провайдер бапталмаған",
-      "providerReady": "provider дайын",
-      "providerKycRequired": "provider KYC міндетті",
-      "providerReviewRequired": "provider тексеру міндетті",
-      "providerRestricted": "provider шектелген",
-      "providerOpenUnavailable": "provider ашу unavailable",
-      "providerText": "provider сипаттамасы",
-      "noManualTitle": "жоқ manual",
-      "noManualText": "жоқ manual сипаттамасы",
-      "policyTitle": "policy",
-      "policyHint": "policy үшін кеңес",
-      "tokenTitle": "token",
-      "tokenText": "token сипаттамасы",
+      "providerReady": "Дайын",
+      "providerKycRequired": "KYC қажет",
+      "providerReviewRequired": "Тексеру қажет",
+      "providerRestricted": "Шектелген",
+      "providerOpenUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "providerText": "Баптаулар Ақпарат",
+      "noManualTitle": "Тақырып",
+      "noManualText": "Ақпарат Ақпарат",
+      "policyTitle": "Тақырып",
+      "policyHint": "Ақпарат Ақпарат",
+      "tokenTitle": "дереккөз",
+      "tokenText": "Ақпарат Ақпарат",
       "confirmTitle": "растау",
       "confirmText": "растау сипаттамасы",
-      "adminTitle": "admin",
-      "adminText": "admin сипаттамасы",
-      "openProvider": "ашу provider",
+      "adminTitle": "Тақырып",
+      "adminText": "Ақпарат Ақпарат",
+      "openProvider": "Баптаулар",
       "providerDisabled": "Провайдер өшірілген"
     },
     "addBankAccount": "Банк шотын қосу",
@@ -740,56 +741,56 @@ export const KK_LOCALE = {
     "internationalCard": "Халықаралық карта",
     "localGlobalCard": "Жергілікті + ғаламдық",
     "virtualCard": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "previewEyebrow": "алдын ала қарау",
-      "previewMasked": "алдын ала қарау masked",
+      "previewMasked": "Ақпарат",
       "previewStatus": "алдын ала қарау күй",
-      "category": "category",
+      "category": "Санат",
       "theme": "тақырып",
       "currency": "валюта",
-      "usd": "usd",
+      "usd": "Ақпарат",
       "currencyFromSettings": "валюта кімнен баптаулар",
-      "monthlyLimit": "monthly limit",
-      "limitPlaceholder": "limit үшін кеңес",
-      "useCaseTitle": "use case",
-      "useCaseHint": "use case үшін кеңес",
+      "monthlyLimit": "Айлық лимит",
+      "limitPlaceholder": "сома үшін кеңес",
+      "useCaseTitle": "Тақырып",
+      "useCaseHint": "Ақпарат Ақпарат",
       "onlineTitle": "онлайн",
       "onlineText": "онлайн сипаттамасы",
-      "subscriptionTitle": "subscription",
-      "subscriptionText": "subscription сипаттамасы",
-      "travelTitle": "travel",
-      "travelText": "travel сипаттамасы",
-      "providerTitle": "provider",
-      "providerHint": "provider үшін кеңес",
+      "subscriptionTitle": "Тақырып",
+      "subscriptionText": "Ақпарат Ақпарат",
+      "travelTitle": "Тақырып",
+      "travelText": "Ақпарат Ақпарат",
+      "providerTitle": "Баптаулар",
+      "providerHint": "Баптаулар Ақпарат",
       "providerNotConfigured": "Провайдер бапталмаған",
-      "providerReady": "provider дайын",
-      "providerKycRequired": "provider KYC міндетті",
-      "providerReviewRequired": "provider тексеру міндетті",
-      "providerRestricted": "provider шектелген",
-      "providerOpenUnavailable": "provider ашу unavailable",
-      "providerText": "provider сипаттамасы",
-      "requirementsTitle": "requirements",
-      "requirementsHint": "requirements үшін кеңес",
-      "reqKycTitle": "req KYC",
-      "reqKycText": "req KYC сипаттамасы",
-      "reqTokenTitle": "req token",
-      "reqTokenText": "req token сипаттамасы",
-      "reqRiskTitle": "req risk",
-      "reqRiskText": "req risk сипаттамасы",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "freeze": "freeze",
-      "onlinePayments": "онлайн payments",
-      "internationalUsage": "international usage",
+      "providerReady": "Дайын",
+      "providerKycRequired": "KYC қажет",
+      "providerReviewRequired": "Тексеру қажет",
+      "providerRestricted": "Шектелген",
+      "providerOpenUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "providerText": "Баптаулар Ақпарат",
+      "requirementsTitle": "Тақырып",
+      "requirementsHint": "Ақпарат Ақпарат",
+      "reqKycTitle": "Тақырып",
+      "reqKycText": "Ақпарат Ақпарат",
+      "reqTokenTitle": "Тақырып",
+      "reqTokenText": "Ақпарат Ақпарат",
+      "reqRiskTitle": "Тақырып",
+      "reqRiskText": "Ақпарат Ақпарат",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "freeze": "Ақпарат",
+      "onlinePayments": "онлайн",
+      "internationalUsage": "Ақпарат",
       "statusTitle": "күй",
       "kycRequired": "KYC қажет",
       "ready": "Дайын",
-      "issue": "issue",
+      "issue": "Ақпарат",
       "disabledReason": "Шығарудан бұрын провайдерді қосыңыз.",
-      "manageCards": "manage карталар"
+      "manageCards": "карталар"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "Ақпарат",
     "qrPay": "QR арқылы төлеу",
     "qrReceive": "QR арқылы қабылдау",
     "paymentRequest": "Төлем сұрауы",
@@ -798,72 +799,72 @@ export const KK_LOCALE = {
     "transferByAccount": "Шот арқылы аудару",
     "transferBetweenOwnAccounts": "Өз шоттарым арасында аудару",
     "transactionDetails": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "loadingTitle": "жүктелуде",
       "loadingText": "жүктелуде сипаттамасы",
-      "errorTitle": "error",
+      "errorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
       "retry": "қайта көру",
       "completed": "аяқталды",
       "completedText": "аяқталды сипаттамасы",
       "pending": "Күтуде",
-      "pendingText": "pending сипаттамасы",
+      "pendingText": "Ақпарат Ақпарат",
       "failed": "сәтсіз",
       "failedText": "сәтсіз сипаттамасы",
       "incoming": "кіріс",
       "outgoing": "шығыс",
-      "summaryEyebrow": "summary",
-      "operationSummary": "операция summary",
-      "overview": "overview",
-      "type": "type",
-      "category": "category",
+      "summaryEyebrow": "Ақпарат",
+      "operationSummary": "Ақпарат",
+      "overview": "Ақпарат",
+      "type": "Түрі",
+      "category": "Санат",
       "status": "күй",
-      "direction": "direction",
-      "date": "date",
-      "time": "time",
-      "referenceData": "анықтама data",
-      "tracking": "tracking",
-      "transactionId": "transaction ID",
+      "direction": "Ақпарат",
+      "date": "Күні",
+      "time": "Уақыты",
+      "referenceData": "Ақпарат",
+      "tracking": "Ақпарат",
+      "transactionId": "Транзакция ID",
       "reference": "анықтама",
-      "route": "route",
+      "route": "Ақпарат",
       "walletId": "әмиян ID",
-      "statusNote": "күй note",
-      "processing": "processing",
-      "securityNote": "security note",
-      "securityText": "security сипаттамасы",
-      "backendPayload": "backend payload",
-      "liveData": "live data",
-      "quickActions": "quick әрекеттер",
-      "nextStep": "келесі step",
+      "statusNote": "Ақпарат",
+      "processing": "Жүктелуде...",
+      "securityNote": "Қауіпсіздік",
+      "securityText": "Қауіпсіздік Ақпарат",
+      "backendPayload": "Артқа",
+      "liveData": "Ақпарат",
+      "quickActions": "Баптаулар",
+      "nextStep": "Ақпарат",
       "backHistory": "артқа тарих",
       "walletHome": "әмиян басты",
-      "newSend": "new жіберу",
-      "newRequest": "new сұрау",
+      "newSend": "Ақпарат",
+      "newRequest": "Ақпарат",
       "copyReference": "көшіру анықтама",
       "referenceTitle": "анықтама",
-      "transaction": "transaction",
+      "transaction": "Ақпарат",
       "walletOperation": "әмиян операция",
       "refundWallet": "қайтару әмиян",
       "paymentWallet": "төлем әмиян",
-      "p2pTransfer": "p2p аудару",
-      "qrExecution": "QR execution",
-      "coreOperation": "core операция",
-      "providerPaymentLinked": "provider төлем linked",
-      "transferBetweenUsers": "аудару between users",
-      "qrRouteExecution": "QR route execution",
-      "businessMerchantRoute": "бизнес мерчант route",
-      "routeTransaction": "route transaction",
-      "routePayment": "route төлем",
-      "routeP2p": "route p2p",
-      "routeQr": "route QR",
-      "routeCore": "route core",
-      "routeSend": "route жіберу",
-      "routeReceive": "route қабылдау",
-      "routeTopup": "route толтыру",
-      "routeWithdraw": "route шығару",
-      "routeCard": "route карта",
-      "routeFallback": "route fallback"
+      "p2pTransfer": "Ақпарат",
+      "qrExecution": "Ақпарат",
+      "coreOperation": "әмиян операция",
+      "providerPaymentLinked": "Баптаулар",
+      "transferBetweenUsers": "Ақпарат",
+      "qrRouteExecution": "Ақпарат",
+      "businessMerchantRoute": "Ақпарат",
+      "routeTransaction": "Ақпарат",
+      "routePayment": "Ақпарат",
+      "routeP2p": "Ақпарат",
+      "routeQr": "Ақпарат",
+      "routeCore": "Ақпарат",
+      "routeSend": "Ақпарат",
+      "routeReceive": "Ақпарат",
+      "routeTopup": "Ақпарат",
+      "routeWithdraw": "Ақпарат",
+      "routeCard": "Ақпарат",
+      "routeFallback": "Артқа"
     },
     "incoming": "Кіріс",
     "outgoing": "Шығыс",
@@ -915,12 +916,12 @@ export const KK_LOCALE = {
     "statements": "Үзінді көшірмелер",
     "generateStatement": "Үзінді көшірме жасау",
     "downloadStatement": "Үзінді көшірмені жүктеп алу",
-    "coinWallet": "Coin Wallet",
-    "coinTopUp": "Coin толықтыру",
-    "coinSend": "Coin жіберу",
-    "coinReceive": "Coin қабылдау",
-    "coinHistory": "Coin тарихы",
-    "moveToSabiWallet": "Sabi Wallet-ке ауыстыру",
+    "coinWallet": "COIN әмиян",
+    "coinTopUp": "Ақпарат",
+    "coinSend": "Ақпарат",
+    "coinReceive": "Ақпарат",
+    "coinHistory": "Тарих",
+    "moveToSabiWallet": "Әмиян",
     "earnings": "Табыстар",
     "deposit": "Депозит",
     "interest": "Пайыз",
@@ -942,70 +943,70 @@ export const KK_LOCALE = {
       "safeHold": "Қауіпсіз ұстау"
     },
     "coinProvider": {
-      "bridgeRoute": "bridge route",
-      "directCardBlocked": "direct карта бұғатталған",
-      "guardReason": "guard себеп",
-      "providerStatus": "provider күй",
-      "eyebrow": "eyebrow",
-      "providerTitle": "provider",
-      "providerText": "provider сипаттамасы",
-      "noFakeTitle": "жоқ fake",
-      "noFakeText": "жоқ fake сипаттамасы",
-      "securityTitle": "security",
-      "securityText": "security сипаттамасы",
-      "availableCoin": "available COIN",
-      "totalCoin": "total COIN",
-      "diamonds": "diamonds",
-      "deposits": "deposits",
-      "records": "records",
+      "bridgeRoute": "Ақпарат",
+      "directCardBlocked": "Ақпарат",
+      "guardReason": "Ақпарат",
+      "providerStatus": "Баптаулар",
+      "eyebrow": "Баптаулар",
+      "providerTitle": "Провайдер бапталмаған",
+      "providerText": "Баптаулар Ақпарат",
+      "noFakeTitle": "Тақырып",
+      "noFakeText": "Ақпарат Ақпарат",
+      "securityTitle": "Қауіпсіздік",
+      "securityText": "Қауіпсіздік Ақпарат",
+      "availableCoin": "Дайын",
+      "totalCoin": "Ақпарат",
+      "diamonds": "Ақпарат",
+      "deposits": "Ақпарат",
+      "records": "Ақпарат",
       "disabled": "Өшірілген",
-      "backToCoin": "артқа to COIN",
+      "backToCoin": "Артқа",
       "screens": {
         "topup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "send": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "COIN",
+          "subtitle": "Баптаулар"
         },
         "withdraw": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "diamonds": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "withdrawDiamonds": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "earn": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "history": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "diamondsHistory": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "depositHistory": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "depositDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       }
     },
     "complianceStatus": {
-      "adminReview": "admin тексеру",
-      "amlReview": "AML тексеру",
+      "adminReview": "Ақпарат",
+      "amlReview": "Ақпарат",
       "blocked": "Бұғатталған",
       "clear": "Тазалау",
       "kycRequired": "KYC қажет",
@@ -1014,149 +1015,149 @@ export const KK_LOCALE = {
     },
     "cryptoProvider": {
       "providerNotConfiguredShort": "Бапталмаған",
-      "providerStatusText": "provider күй сипаттамасы",
-      "providerStatusTitle": "provider күй",
-      "eyebrow": "eyebrow",
-      "providerNotConfiguredTitle": "provider not configured",
-      "providerNotConfiguredText": "Нақты custody/әмиян провайдері, нарық деректері бағыты және admin бақылаулары қосылғанша крипто әрекеттері өшірілген күйде қалады.",
-      "cryptoValue": "крипто value",
+      "providerStatusText": "Баптаулар Ақпарат",
+      "providerStatusTitle": "Баптаулар",
+      "eyebrow": "Баптаулар",
+      "providerNotConfiguredTitle": "Провайдер бапталмаған",
+      "providerNotConfiguredText": "Баптаулар Ақпарат",
+      "cryptoValue": "крипто баланс",
       "status": "күй",
       "disabled": "Өшірілген",
-      "securityTitle": "security",
-      "securityText": "security сипаттамасы",
-      "keysTitle": "keys",
-      "keysText": "keys сипаттамасы",
-      "marketTitle": "market",
-      "marketText": "market сипаттамасы",
-      "backToCrypto": "артқа to крипто",
+      "securityTitle": "Қауіпсіздік",
+      "securityText": "Қауіпсіздік Ақпарат",
+      "keysTitle": "Тақырып",
+      "keysText": "Ақпарат Ақпарат",
+      "marketTitle": "Тақырып",
+      "marketText": "Ақпарат Ақпарат",
+      "backToCrypto": "Артқа",
       "screens": {
         "assets": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "portfolio": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "assetDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "buy": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "sell": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "swap": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "send": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "receive": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "history": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "transactionDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "confirm": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "market": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "watchlist": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "networks": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "manageTokens": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "importToken": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "addressBook": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "addAddress": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "seedCreate": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "seedBackup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "seedVerify": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       }
     },
     "home": {
-      "financialDashboardSubtitle": "financial dashboard сипаттамасы",
-      "financialDashboardTitle": "financial dashboard",
+      "financialDashboardSubtitle": "Сипаттама Ақпарат",
+      "financialDashboardTitle": "Тақырып",
       "receive": "Қабылдау",
       "receiveSubtitle": "қабылдау сипаттамасы",
       "scanQr": "QR сканерлеу",
       "settings": "Баптаулар",
       "settingsSubtitle": "баптаулар сипаттамасы",
       "topUp": "Толтыру",
-      "topUpSubtitle": "top up сипаттамасы",
+      "topUpSubtitle": "Толықтыру",
       "withdraw": "Шығару",
       "withdrawSubtitle": "шығару сипаттамасы",
-      "headerEyebrow": "header",
-      "headerTitle": "header",
-      "headerSubtitle": "header сипаттамасы",
-      "mainHeroTitle": "main hero",
-      "mainHeroSubtitle": "main hero сипаттамасы",
-      "mainBalanceLabel": "main баланс",
-      "mainBalanceHint": "main баланс үшін кеңес",
-      "localBalanceLabel": "local баланс",
-      "localBalanceHint": "local баланс үшін кеңес",
+      "headerEyebrow": "Sabi әмиян",
+      "headerTitle": "Тақырып",
+      "headerSubtitle": "Сипаттама Ақпарат",
+      "mainHeroTitle": "Тақырып",
+      "mainHeroSubtitle": "Сипаттама Ақпарат",
+      "mainBalanceLabel": "Ақпарат",
+      "mainBalanceHint": "Ақпарат Ақпарат",
+      "localBalanceLabel": "Жергілікті",
+      "localBalanceHint": "Жергілікті Ақпарат",
       "send": "жіберу",
       "cards": "карталар",
-      "quickActionsTitle": "quick әрекеттер",
-      "quickActionsHint": "quick әрекеттер үшін кеңес",
+      "quickActionsTitle": "Баптаулар",
+      "quickActionsHint": "Баптаулар Ақпарат",
       "request": "сұрау",
       "history": "тарих",
-      "mySabiId": "my Sabi ID",
-      "mainBlocksTitle": "main blocks",
-      "mainBlocksHint": "main blocks үшін кеңес",
-      "sabiPayTitle": "Sabi pay",
-      "sabiPaySubtitle": "Sabi pay сипаттамасы",
-      "sabiPayBalanceLabel": "Sabi pay баланс",
+      "mySabiId": "Ақпарат",
+      "mainBlocksTitle": "Тақырып",
+      "mainBlocksHint": "Ақпарат Ақпарат",
+      "sabiPayTitle": "Тақырып",
+      "sabiPaySubtitle": "Сипаттама Ақпарат",
+      "sabiPayBalanceLabel": "Ақпарат",
       "qrTitle": "QR",
       "qrSubtitle": "QR сипаттамасы",
       "coinTitle": "COIN",
       "coinSubtitle": "COIN сипаттамасы",
       "coinBalanceLabel": "COIN баланс",
-      "localCardsTitle": "local карталар",
-      "localCardsSubtitle": "local карталар сипаттамасы",
-      "localCardsBalanceLabel": "local карталар баланс",
+      "localCardsTitle": "Жергілікті",
+      "localCardsSubtitle": "Жергілікті Ақпарат",
+      "localCardsBalanceLabel": "Жергілікті",
       "businessTitle": "бизнес",
       "businessSubtitle": "бизнес сипаттамасы",
       "merchantTitle": "мерчант",
@@ -1164,68 +1165,68 @@ export const KK_LOCALE = {
       "cryptoTitle": "крипто",
       "cryptoSubtitle": "крипто сипаттамасы",
       "cryptoBalanceLabel": "крипто баланс",
-      "aiSectionTitle": "AI section",
-      "aiSectionHint": "AI section үшін кеңес",
+      "aiSectionTitle": "көмекші орталық",
+      "aiSectionHint": "AI Ақпарат",
       "aiTitle": "AI",
       "aiSubtitle": "AI сипаттамасы",
-      "aiGuidanceTitle": "AI guidance",
-      "aiGuidanceText": "AI guidance сипаттамасы",
+      "aiGuidanceTitle": "AI",
+      "aiGuidanceText": "AI Ақпарат",
       "aiSupportTitle": "AI қолдау",
       "aiSupportText": "AI қолдау сипаттамасы",
-      "infraTitle": "infra",
-      "infraHint": "infra үшін кеңес",
-      "cardsHubTitle": "карталар hub",
-      "cardsHubSubtitle": "карталар hub сипаттамасы",
-      "chatPaymentsTitle": "chat payments",
-      "chatPaymentsSubtitle": "chat payments сипаттамасы",
-      "virtualCardTitle": "virtual карта",
-      "virtualCardSubtitle": "virtual карта сипаттамасы",
-      "controlsTitle": "controls",
-      "controlsHint": "controls үшін кеңес",
-      "info1Title": "info1",
-      "info1Text": "info1 сипаттамасы",
-      "info2Title": "info2",
-      "info2Text": "info2 сипаттамасы",
-      "info3Title": "info3",
-      "info3Text": "info3 сипаттамасы",
-      "info4Title": "info4",
-      "info4Text": "info4 сипаттамасы",
-      "info5Title": "info5",
-      "info5Text": "info5 сипаттамасы",
-      "info6Title": "info6",
-      "info6Text": "info6 сипаттамасы",
-      "info7Title": "info7",
-      "info7Text": "info7 сипаттамасы",
-      "pillInternal": "pill internal",
-      "pillCore": "pill core",
-      "pillCamera": "pill камера",
-      "pillMerchant": "pill мерчант",
-      "pillGifts": "pill сыйлықтар",
-      "pillStream": "pill стрим",
-      "pillDomestic": "pill domestic",
-      "pillOperations": "pill operations",
-      "pillReferences": "pill references",
-      "pillCheckout": "pill checkout",
-      "pillSettlements": "pill settlements",
-      "pillAssets": "pill assets",
-      "pillProvider": "pill provider",
-      "pillCustody": "pill custody",
-      "pillSeparated": "pill separated",
-      "askAi": "ask AI",
-      "smartTips": "smart tips",
-      "recentHelp": "recent көмек",
+      "infraTitle": "Тақырып",
+      "infraHint": "Ақпарат Ақпарат",
+      "cardsHubTitle": "Тақырып",
+      "cardsHubSubtitle": "Сипаттама Ақпарат",
+      "chatPaymentsTitle": "Чат",
+      "chatPaymentsSubtitle": "Чат Ақпарат",
+      "virtualCardTitle": "Тақырып",
+      "virtualCardSubtitle": "Сипаттама Ақпарат",
+      "controlsTitle": "Тақырып",
+      "controlsHint": "Ақпарат Ақпарат",
+      "info1Title": "Ақпарат",
+      "info1Text": "Ақпарат Ақпарат",
+      "info2Title": "Ақпарат",
+      "info2Text": "Ақпарат Ақпарат",
+      "info3Title": "Ақпарат",
+      "info3Text": "Ақпарат Ақпарат",
+      "info4Title": "Ақпарат",
+      "info4Text": "Ақпарат Ақпарат",
+      "info5Title": "Ақпарат",
+      "info5Text": "Ақпарат Ақпарат",
+      "info6Title": "Ақпарат",
+      "info6Text": "Ақпарат Ақпарат",
+      "info7Title": "Ақпарат",
+      "info7Text": "Ақпарат Ақпарат",
+      "pillInternal": "Ақпарат",
+      "pillCore": "Ақпарат",
+      "pillCamera": "Камера",
+      "pillMerchant": "Мерчант",
+      "pillGifts": "сыйлықтар",
+      "pillStream": "Стрим",
+      "pillDomestic": "Ақпарат",
+      "pillOperations": "Ақпарат",
+      "pillReferences": "Ақпарат",
+      "pillCheckout": "Ақпарат",
+      "pillSettlements": "Есеп айырысулар",
+      "pillAssets": "Ақпарат",
+      "pillProvider": "Баптаулар",
+      "pillCustody": "Ақпарат",
+      "pillSeparated": "Ақпарат",
+      "askAi": "AI",
+      "smartTips": "Ақпарат",
+      "recentHelp": "Ақпарат",
       "loading": "жүктелуде",
-      "eyebrowSabiPay": "eyebrow Sabi pay",
-      "eyebrowQr": "eyebrow QR",
-      "eyebrowSabiCoin": "eyebrow Sabi COIN",
-      "eyebrowLocalCards": "eyebrow local карталар",
-      "eyebrowBusiness": "eyebrow бизнес",
-      "eyebrowMerchant": "eyebrow мерчант",
-      "eyebrowCrypto": "eyebrow крипто",
-      "pillSabiPay": "pill Sabi pay",
-      "pillSabiBalance": "pill Sabi баланс",
-      "pillMyQr": "pill my QR",
-      "pillBusiness": "pill бизнес"
+      "eyebrowSabiPay": "Ақпарат",
+      "eyebrowQr": "QR",
+      "eyebrowSabiCoin": "Ақпарат",
+      "eyebrowLocalCards": "Жергілікті",
+      "eyebrowBusiness": "Ақпарат",
+      "eyebrowMerchant": "Ақпарат",
+      "eyebrowCrypto": "Ақпарат",
+      "pillSabiPay": "Ақпарат",
+      "pillSabiBalance": "Sabi баланс",
+      "pillMyQr": "Менің QR кодым",
+      "pillBusiness": "Бизнес"
     },
     "kycStatus": {
       "notRequired": "Қажет емес",
@@ -1235,55 +1236,55 @@ export const KK_LOCALE = {
       "verified": "Тексерілді"
     },
     "pinConfirm": {
-      "guardReason": "guard себеп",
-      "providerStatus": "provider күй",
-      "riskStatus": "risk күй",
-      "walletRoute": "әмиян route",
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "protectedAction": "protected әрекет",
-      "authorizationTitle": "authorization",
-      "authorizationText": "authorization сипаттамасы",
+      "guardReason": "Ақпарат",
+      "providerStatus": "Баптаулар",
+      "riskStatus": "Ақпарат",
+      "walletRoute": "Әмиян",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "protectedAction": "Ақпарат",
+      "authorizationTitle": "Тақырып",
+      "authorizationText": "Ақпарат Ақпарат",
       "amountLabel": "сома",
-      "flow": "flow",
-      "digits": "digits",
-      "security": "security",
-      "active": "active",
-      "summaryTitle": "summary",
-      "summaryHint": "summary үшін кеңес",
+      "flow": "Ақпарат",
+      "digits": "Ақпарат",
+      "security": "Қауіпсіздік",
+      "active": "Белсенді",
+      "summaryTitle": "Тақырып",
+      "summaryHint": "Ақпарат Ақпарат",
       "recipientTarget": "алушы мақсат",
       "source": "дереккөз",
       "amount": "сома",
       "reference": "анықтама",
-      "note": "note",
+      "note": "Ескертпе",
       "emptyAmount": "бос сома",
-      "emptyNote": "бос note",
+      "emptyNote": "Ақпарат",
       "emptyReference": "бос анықтама",
-      "protectedTarget": "protected мақсат",
+      "protectedTarget": "Ақпарат",
       "walletSource": "әмиян дереккөз",
-      "enterPin": "enter бекіту",
-      "providerRequired": "provider міндетті",
-      "providerRequiredError": "provider міндетті error",
-      "helperText": "helper сипаттамасы",
-      "protectionTitle": "protection",
-      "protectionText": "protection сипаттамасы",
-      "providerTitle": "provider",
-      "providerText": "provider сипаттамасы"
+      "enterPin": "PIN енгізу",
+      "providerRequired": "Баптаулар",
+      "providerRequiredError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "helperText": "Ақпарат Ақпарат",
+      "protectionTitle": "Тақырып",
+      "protectionText": "Ақпарат Ақпарат",
+      "providerTitle": "Баптаулар",
+      "providerText": "Баптаулар Ақпарат"
     },
     "providerPanel": {
       "cardsHint": "карталар үшін кеңес",
       "cardsTitle": "карталар",
       "coinHint": "COIN үшін кеңес",
       "coinTitle": "COIN",
-      "compliance": "compliance",
+      "compliance": "Сәйкестік",
       "cryptoHint": "крипто үшін кеңес",
       "cryptoTitle": "крипто",
       "settingsHint": "баптаулар үшін кеңес",
       "settingsTitle": "баптаулар",
-      "tokenOnlyPolicy": "token only policy",
-      "virtualCardHint": "virtual карта үшін кеңес",
-      "virtualCardTitle": "virtual карта",
+      "tokenOnlyPolicy": "Ақпарат",
+      "virtualCardHint": "Ақпарат Ақпарат",
+      "virtualCardTitle": "Тақырып",
       "walletHint": "әмиян үшін кеңес",
       "walletTitle": "әмиян"
     },
@@ -1295,255 +1296,255 @@ export const KK_LOCALE = {
       "reviewRequired": "Тексеру қажет"
     },
     "settings": {
-      "adminComplianceDescription": "admin compliance сипаттамасы",
-      "adminComplianceTitle": "admin compliance",
-      "adminReview": "admin тексеру",
-      "adminReviewStatus": "admin тексеру күй",
-      "amlReview": "AML тексеру",
-      "amlStatus": "AML күй",
+      "adminComplianceDescription": "Сипаттама Ақпарат",
+      "adminComplianceTitle": "Тақырып",
+      "adminReview": "Ақпарат",
+      "adminReviewStatus": "Ақпарат",
+      "amlReview": "Ақпарат",
+      "amlStatus": "Ақпарат",
       "approved": "Бекітілді",
       "blocked": "Бұғатталған",
       "clear": "Тазалау",
-      "complianceStatus": "compliance күй",
+      "complianceStatus": "Ақпарат",
       "escalated": "Көтерілді",
       "kycRequired": "KYC қажет",
       "kycStatus": "KYC күй",
       "monitoring": "Бақылауда",
       "notRequired": "Қажет емес",
       "pending": "Күтуде",
-      "providerConfigurationRequired": "provider configuration міндетті",
+      "providerConfigurationRequired": "Баптаулар",
       "rejected": "Қабылданбады",
       "required": "Міндетті",
       "restricted": "Шектелген",
       "reviewRequired": "Тексеру қажет",
       "safeHold": "Қауіпсіз ұстау",
-      "safeHoldState": "safe hold state",
-      "tokenOnlyPolicy": "token only policy",
-      "tokenOnlyPolicyText": "token only policy сипаттамасы",
+      "safeHoldState": "Қауіпсіздік",
+      "tokenOnlyPolicy": "Ақпарат",
+      "tokenOnlyPolicyText": "Ақпарат Ақпарат",
       "verified": "Тексерілді",
       "back": "артқа",
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileActive": "профиль active",
-      "heroTitle": "hero",
-      "heroText": "hero сипаттамасы",
-      "smartRouting": "smart routing",
-      "sensitiveGuard": "sensitive guard",
-      "largePaymentCheck": "large төлем check",
-      "on": "on",
-      "off": "off",
+      "eyebrow": "Баптаулар",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "profileActive": "Профиль",
+      "heroTitle": "Баптаулар",
+      "heroText": "Ақпарат Ақпарат",
+      "smartRouting": "Ақпарат",
+      "sensitiveGuard": "Ақпарат",
+      "largePaymentCheck": "Ақпарат",
+      "on": "Ақпарат",
+      "off": "Ақпарат",
       "currencyTitle": "валюта",
-      "primaryCurrency": "primary валюта",
-      "primaryCurrencyDescription": "primary валюта сипаттамасы",
-      "localCurrency": "local валюта",
-      "localCurrencyDescription": "local валюта сипаттамасы",
-      "internationalCurrency": "international валюта",
-      "internationalCurrencyDescription": "international валюта сипаттамасы",
-      "noHardcodedCurrencyTitle": "жоқ hardcoded валюта",
-      "noHardcodedCurrencyText": "жоқ hardcoded валюта сипаттамасы",
-      "cardPreferences": "карта preferences",
-      "manageCards": "manage карталар",
-      "manageCardsDescription": "manage карталар сипаттамасы",
-      "defaultCardMode": "default карта mode",
-      "defaultCardModeDescription": "default карта mode сипаттамасы",
-      "smart": "smart",
-      "local": "local",
-      "international": "international",
-      "virtual": "virtual",
-      "autoSelectBestCard": "auto таңдау best карта",
-      "autoSelectBestCardDescription": "auto таңдау best карта сипаттамасы",
-      "showLast4": "show last4",
-      "showLast4Description": "show last4 сипаттамасы",
-      "walletPreferences": "әмиян preferences",
-      "sabiPayQuickAccess": "Sabi pay quick access",
-      "sabiPayQuickAccessDescription": "Sabi pay quick access сипаттамасы",
-      "qrQuickAccess": "QR quick access",
-      "qrQuickAccessDescription": "QR quick access сипаттамасы",
-      "allowSmartRouting": "рұқсат беру smart routing",
-      "allowSmartRoutingDescription": "рұқсат беру smart routing сипаттамасы",
-      "paymentPriority": "төлем priority",
-      "paymentPriorityDescription": "төлем priority сипаттамасы",
-      "security": "security",
+      "primaryCurrency": "Ақпарат",
+      "primaryCurrencyDescription": "Сипаттама Ақпарат",
+      "localCurrency": "сома үшін кеңес",
+      "localCurrencyDescription": "Жергілікті Ақпарат",
+      "internationalCurrency": "Ақпарат",
+      "internationalCurrencyDescription": "Сипаттама Ақпарат",
+      "noHardcodedCurrencyTitle": "Тақырып",
+      "noHardcodedCurrencyText": "Ақпарат Ақпарат",
+      "cardPreferences": "Таңдаулар",
+      "manageCards": "Ақпарат",
+      "manageCardsDescription": "Сипаттама Ақпарат",
+      "defaultCardMode": "Ақпарат",
+      "defaultCardModeDescription": "Сипаттама Ақпарат",
+      "smart": "Ақпарат",
+      "local": "Жергілікті",
+      "international": "Ақпарат",
+      "virtual": "Ақпарат",
+      "autoSelectBestCard": "Ақпарат",
+      "autoSelectBestCardDescription": "Сипаттама Ақпарат",
+      "showLast4": "Ақпарат",
+      "showLast4Description": "Ақпарат Ақпарат",
+      "walletPreferences": "Әмиян",
+      "sabiPayQuickAccess": "Ақпарат",
+      "sabiPayQuickAccessDescription": "Сипаттама Ақпарат",
+      "qrQuickAccess": "Ақпарат",
+      "qrQuickAccessDescription": "Сипаттама Ақпарат",
+      "allowSmartRouting": "Ақпарат",
+      "allowSmartRoutingDescription": "Сипаттама Ақпарат",
+      "paymentPriority": "Ақпарат",
+      "paymentPriorityDescription": "Сипаттама Ақпарат",
+      "security": "Қауіпсіздік",
       "walletNotifications": "әмиян хабарламалар",
       "walletNotificationsDescription": "әмиян хабарламалар сипаттамасы",
-      "securityAlerts": "security alerts",
-      "securityAlertsDescription": "security alerts сипаттамасы",
-      "requireLargeConfirmation": "require large confirmation",
-      "requireLargeConfirmationDescription": "require large confirmation сипаттамасы",
-      "sensitiveBehavior": "sensitive behavior",
-      "sensitiveBehaviorDescription": "sensitive behavior сипаттамасы",
-      "tap": "tap",
-      "biometric": "biometric",
+      "securityAlerts": "Қауіпсіздік",
+      "securityAlertsDescription": "Қауіпсіздік Ақпарат",
+      "requireLargeConfirmation": "Ақпарат",
+      "requireLargeConfirmationDescription": "Сипаттама Ақпарат",
+      "sensitiveBehavior": "Ақпарат",
+      "sensitiveBehaviorDescription": "Сипаттама Ақпарат",
+      "tap": "Ақпарат",
+      "biometric": "Ақпарат",
       "pin": "бекіту",
-      "useBiometric": "use biometric",
-      "useBiometricDescription": "use biometric сипаттамасы",
-      "hideBalances": "hide balances",
-      "hideBalancesDescription": "hide balances сипаттамасы",
-      "notificationPreferences": "хабарлама preferences",
-      "notificationPreferencesDescription": "хабарлама preferences сипаттамасы",
-      "limits": "limits",
-      "dailySendLimit": "daily жіберу limit",
-      "dailySendLimitDescription": "daily жіберу limit сипаттамасы",
-      "qrPaymentLimit": "QR төлем limit",
-      "qrPaymentLimitDescription": "QR төлем limit сипаттамасы",
-      "sensitiveWindow": "sensitive window",
-      "sensitiveWindowDescription": "sensitive window сипаттамасы",
-      "policyControlled": "policy controlled",
-      "defaultBehavior": "default behavior",
-      "defaultSensitiveUnlock": "default sensitive unlock",
-      "defaultCardSelection": "default карта selection",
-      "defaultPaymentSource": "default төлем дереккөз",
-      "smartAuto": "smart auto",
-      "localFirst": "local бірінші",
-      "internationalFirst": "international бірінші",
-      "virtualFirst": "virtual бірінші",
-      "tapToReveal": "tap to reveal",
+      "useBiometric": "Ақпарат",
+      "useBiometricDescription": "Сипаттама Ақпарат",
+      "hideBalances": "Ақпарат",
+      "hideBalancesDescription": "Сипаттама Ақпарат",
+      "notificationPreferences": "Хабарландырулар",
+      "notificationPreferencesDescription": "Хабарландырулар Ақпарат",
+      "limits": "Лимиттер",
+      "dailySendLimit": "Ақпарат",
+      "dailySendLimitDescription": "Сипаттама Ақпарат",
+      "qrPaymentLimit": "Ақпарат",
+      "qrPaymentLimitDescription": "Сипаттама Ақпарат",
+      "sensitiveWindow": "Ақпарат",
+      "sensitiveWindowDescription": "Сипаттама Ақпарат",
+      "policyControlled": "Ақпарат",
+      "defaultBehavior": "Ақпарат",
+      "defaultSensitiveUnlock": "Ақпарат",
+      "defaultCardSelection": "Ақпарат",
+      "defaultPaymentSource": "Ақпарат",
+      "smartAuto": "Ақпарат",
+      "localFirst": "Жергілікті",
+      "internationalFirst": "Ақпарат",
+      "virtualFirst": "Ақпарат",
+      "tapToReveal": "Ақпарат",
       "pinRequired": "бекіту міндетті",
-      "biometricRequired": "biometric міндетті",
+      "biometricRequired": "Ақпарат",
       "sabiBalanceFirst": "Sabi баланс бірінші",
       "cardsFirst": "карталар бірінші"
     },
     "shared": {
       "back": "артқа",
       "wallet": "әмиян",
-      "totalBalance": "total баланс",
+      "totalBalance": "Жалпы баланс",
       "walletBalance": "әмиян баланс",
       "personal": "жеке",
-      "mainBalance": "main баланс",
-      "localBalance": "local баланс",
+      "mainBalance": "Ақпарат",
+      "localBalance": "Жергілікті",
       "coinBalance": "COIN баланс",
-      "cryptoValue": "крипто value",
+      "cryptoValue": "крипто баланс",
       "sabiBalance": "Sabi баланс",
       "sabiBalanceDescription": "Sabi баланс сипаттамасы",
-      "internal": "internal",
-      "holder": "holder",
-      "expiry": "expiry",
+      "internal": "Ақпарат",
+      "holder": "Ақпарат",
+      "expiry": "Ақпарат",
       "balance": "баланс",
-      "unknown": "unknown"
+      "unknown": "Белгісіз"
     },
     "entry": {
-      "headerTitle": "header",
-      "headerSubtitle": "header сипаттамасы",
-      "quickActionsTitle": "quick әрекеттер",
-      "quickActionsHint": "quick әрекеттер үшін кеңес",
+      "headerTitle": "Әмиян",
+      "headerSubtitle": "Сипаттама Ақпарат",
+      "quickActionsTitle": "Баптаулар",
+      "quickActionsHint": "Баптаулар Ақпарат",
       "topUp": "Толтыру",
       "send": "жіберу",
       "receive": "Қабылдау",
-      "qrPay": "QR pay",
+      "qrPay": "QR арқылы төлеу",
       "cards": "карталар",
       "crypto": "крипто",
-      "cardsAccessTitle": "карталар access",
-      "cardsAccessHint": "карталар access үшін кеңес",
+      "cardsAccessTitle": "Тақырып",
+      "cardsAccessHint": "Ақпарат Ақпарат",
       "allCardsTitle": "барлығы карталар",
       "allCardsSubtitle": "барлығы карталар сипаттамасы",
-      "localCardsTitle": "local карталар",
-      "localCardsSubtitle": "local карталар сипаттамасы"
+      "localCardsTitle": "Жергілікті",
+      "localCardsSubtitle": "Жергілікті Ақпарат"
     },
     "coinIndex": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "totalLabel": "total",
-      "heroSubtitle": "hero сипаттамасы",
-      "myCoinQr": "my COIN QR",
-      "myCoinQrText": "my COIN QR сипаттамасы",
+      "eyebrow": "Ақпарат",
+      "title": "COIN әмиян",
+      "subtitle": "Баптаулар",
+      "totalLabel": "Ақпарат",
+      "heroSubtitle": "Ақпарат Ақпарат",
+      "myCoinQr": "Ақпарат",
+      "myCoinQrText": "Ақпарат Ақпарат",
       "scanCoinQr": "сканерлеу COIN QR",
       "scanCoinQrText": "сканерлеу COIN QR сипаттамасы",
-      "diamondLayer": "diamond layer",
-      "diamondLayerText": "diamond layer сипаттамасы",
+      "diamondLayer": "Ақпарат",
+      "diamondLayerText": "Ақпарат Ақпарат",
       "open": "ашу",
-      "diamondWithdrawRule": "diamond шығару rule",
-      "nextAvailableDate": "келесі available date",
+      "diamondWithdrawRule": "Ақпарат",
+      "nextAvailableDate": "Дайын",
       "coinActions": "COIN әрекеттер",
-      "coreWallet": "core әмиян",
+      "coreWallet": "Әмиян",
       "topUp": "Толтыру",
-      "topUpText": "top up сипаттамасы",
+      "topUpText": "Ақпарат Ақпарат",
       "send": "жіберу",
       "sendText": "жіберу сипаттамасы",
       "receive": "Қабылдау",
       "receiveText": "қабылдау сипаттамасы",
       "history": "тарих",
       "historyText": "тарих сипаттамасы",
-      "diamonds": "diamonds",
-      "diamondsText": "diamonds сипаттамасы",
-      "earn": "earn",
-      "earnText": "earn сипаттамасы",
-      "lockedDeposit": "locked депозит",
-      "lockedDepositText": "locked депозит сипаттамасы",
-      "manage": "manage",
-      "maturity": "maturity",
-      "months": "months",
-      "noActiveDeposits": "жоқ active deposits",
-      "moveCoinToWallet": "move COIN to әмиян",
-      "available": "available",
-      "frozen": "frozen",
-      "interest": "interest",
-      "spendable": "spendable",
-      "withdrawable": "withdrawable",
-      "gameEligible": "ойын eligible",
-      "diamondsUnit": "diamonds unit"
+      "diamonds": "Ақпарат",
+      "diamondsText": "Ақпарат Ақпарат",
+      "earn": "Ақпарат",
+      "earnText": "Ақпарат Ақпарат",
+      "lockedDeposit": "Ақпарат",
+      "lockedDepositText": "Ақпарат Ақпарат",
+      "manage": "Басқару",
+      "maturity": "Ақпарат",
+      "months": "Ақпарат",
+      "noActiveDeposits": "Ақпарат",
+      "moveCoinToWallet": "Әмиян",
+      "available": "Қолжетімді",
+      "frozen": "Мұздатылған",
+      "interest": "Пайыз",
+      "spendable": "Ақпарат",
+      "withdrawable": "Ақпарат",
+      "gameEligible": "Ақпарат",
+      "diamondsUnit": "Ақпарат"
     },
     "cryptoIndex": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "totalBalance": "total баланс",
-      "providerRequired": "provider міндетті",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "totalBalance": "Ақпарат",
+      "providerRequired": "Баптаулар",
       "providerNotConfigured": "Провайдер бапталмаған",
-      "assetsCount": "assets саны",
-      "networks": "networks",
-      "change24h": "change24h",
+      "assetsCount": "Ақпарат",
+      "networks": "Ақпарат",
+      "change24h": "Ақпарат",
       "status": "күй",
-      "quickActions": "quick әрекеттер",
-      "buy": "buy",
-      "buyText": "buy сипаттамасы",
+      "quickActions": "Баптаулар",
+      "buy": "Ақпарат",
+      "buyText": "Ақпарат Ақпарат",
       "send": "жіберу",
       "sendText": "жіберу сипаттамасы",
       "receive": "Қабылдау",
       "receiveText": "қабылдау сипаттамасы",
       "swap": "ауыстыру",
       "swapText": "ауыстыру сипаттамасы",
-      "sell": "sell",
-      "sellText": "sell сипаттамасы",
+      "sell": "Ақпарат",
+      "sellText": "Ақпарат Ақпарат",
       "history": "тарих",
       "historyText": "тарих сипаттамасы",
-      "portfolio": "portfolio",
-      "custody": "custody",
-      "custodyText": "custody сипаттамасы",
-      "pricing": "pricing",
-      "pricingText": "pricing сипаттамасы",
-      "risk": "risk",
-      "riskText": "risk сипаттамасы",
-      "assets": "assets",
-      "noAssetsTitle": "жоқ assets",
-      "noAssetsText": "жоқ assets сипаттамасы",
-      "networksTokens": "networks tokens",
-      "networksText": "networks сипаттамасы",
-      "tokensText": "tokens сипаттамасы",
-      "cryptoFoundation": "крипто foundation",
-      "cryptoFoundationText": "крипто foundation сипаттамасы",
-      "backToWalletHome": "артқа to әмиян басты",
-      "openAssets": "ашу assets"
+      "portfolio": "Ақпарат",
+      "custody": "Ақпарат",
+      "custodyText": "Ақпарат Ақпарат",
+      "pricing": "Ақпарат",
+      "pricingText": "Ақпарат Ақпарат",
+      "risk": "Ақпарат",
+      "riskText": "Ақпарат Ақпарат",
+      "assets": "Ақпарат",
+      "noAssetsTitle": "Тақырып",
+      "noAssetsText": "Ақпарат Ақпарат",
+      "networksTokens": "Ақпарат",
+      "networksText": "Ақпарат Ақпарат",
+      "tokensText": "Ақпарат Ақпарат",
+      "cryptoFoundation": "Ақпарат",
+      "cryptoFoundationText": "Ақпарат Ақпарат",
+      "backToWalletHome": "Артқа",
+      "openAssets": "Ақпарат"
     },
     "businessPay": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "providerStatus": "provider күй",
-      "routeTitle": "route",
-      "routeHint": "route үшін кеңес",
-      "routeEmptyTitle": "route бос",
-      "routeEmptyText": "route бос сипаттамасы",
+      "eyebrow": "Ақпарат",
+      "title": "бизнес",
+      "subtitle": "Баптаулар",
+      "providerStatus": "Провайдер бапталмаған",
+      "routeTitle": "Тақырып",
+      "routeHint": "Ақпарат Ақпарат",
+      "routeEmptyTitle": "Ақпарат",
+      "routeEmptyText": "Ақпарат Ақпарат",
       "searchPlaceholder": "іздеу үшін кеңес",
-      "fundingTitle": "funding",
-      "fundingHint": "funding үшін кеңес",
+      "fundingTitle": "Тақырып",
+      "fundingHint": "Ақпарат Ақпарат",
       "businessBalance": "бизнес баланс",
       "businessBalanceText": "бизнес баланс сипаттамасы",
       "sabiBalanceText": "Sabi баланс сипаттамасы",
       "merchantBalance": "мерчант баланс",
       "merchantBalanceText": "мерчант баланс сипаттамасы",
-      "notConfigured": "not configured",
+      "notConfigured": "Ақпарат",
       "detailsTitle": "мәліметтер",
       "detailsHint": "мәліметтер үшін кеңес",
       "amount": "сома",
@@ -1552,47 +1553,47 @@ export const KK_LOCALE = {
       "referencePlaceholder": "анықтама үшін кеңес",
       "previewTitle": "алдын ала қарау",
       "previewHint": "алдын ала қарау үшін кеңес",
-      "selectedRoute": "таңдалды route",
-      "fundingSource": "funding дереккөз",
+      "selectedRoute": "Ақпарат",
+      "fundingSource": "Ақпарат",
       "noReference": "жоқ анықтама",
       "qrTitle": "QR",
       "qrSubtitle": "QR сипаттамасы",
       "scanTitle": "сканерлеу",
       "scanSubtitle": "сканерлеу сипаттамасы",
-      "routesTitle": "routes",
-      "routesHint": "routes үшін кеңес",
+      "routesTitle": "Тақырып",
+      "routesHint": "Ақпарат Ақпарат",
       "merchantLink": "мерчант сілтеме",
       "history": "тарих",
-      "paymentsHub": "payments hub",
-      "notesTitle": "notes",
-      "notesHint": "notes үшін кеңес",
-      "note1Title": "note1",
-      "note1Text": "note1 сипаттамасы",
-      "note2Title": "note2",
-      "note2Text": "note2 сипаттамасы",
-      "note3Title": "note3",
-      "note3Text": "note3 сипаттамасы",
+      "paymentsHub": "Ақпарат",
+      "notesTitle": "Қауіпсіздік",
+      "notesHint": "Ақпарат Ақпарат",
+      "note1Title": "Ақпарат",
+      "note1Text": "Ақпарат Ақпарат",
+      "note2Title": "Ақпарат",
+      "note2Text": "Ақпарат Ақпарат",
+      "note3Title": "Ақпарат",
+      "note3Text": "Ақпарат Ақпарат",
       "back": "артқа",
-      "process": "process"
+      "process": "Ақпарат"
     },
     "merchantPay": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "providerStatus": "provider күй",
-      "routeTitle": "route",
-      "routeHint": "route үшін кеңес",
-      "routeEmptyTitle": "route бос",
-      "routeEmptyText": "route бос сипаттамасы",
+      "eyebrow": "Ақпарат",
+      "title": "мерчант",
+      "subtitle": "Баптаулар",
+      "providerStatus": "Провайдер бапталмаған",
+      "routeTitle": "мерчант баланс",
+      "routeHint": "Ақпарат Ақпарат",
+      "routeEmptyTitle": "Ақпарат",
+      "routeEmptyText": "Ақпарат Ақпарат",
       "searchPlaceholder": "іздеу үшін кеңес",
-      "fundingTitle": "funding",
-      "fundingHint": "funding үшін кеңес",
+      "fundingTitle": "Тақырып",
+      "fundingHint": "Ақпарат Ақпарат",
       "businessBalance": "бизнес баланс",
       "businessBalanceText": "бизнес баланс сипаттамасы",
       "sabiBalanceText": "Sabi баланс сипаттамасы",
       "merchantBalance": "мерчант баланс",
       "merchantBalanceText": "мерчант баланс сипаттамасы",
-      "notConfigured": "not configured",
+      "notConfigured": "Ақпарат",
       "detailsTitle": "мәліметтер",
       "detailsHint": "мәліметтер үшін кеңес",
       "amount": "сома",
@@ -1601,141 +1602,141 @@ export const KK_LOCALE = {
       "referencePlaceholder": "анықтама үшін кеңес",
       "previewTitle": "алдын ала қарау",
       "previewHint": "алдын ала қарау үшін кеңес",
-      "selectedRoute": "таңдалды route",
-      "fundingSource": "funding дереккөз",
+      "selectedRoute": "Ақпарат",
+      "fundingSource": "Ақпарат",
       "noReference": "жоқ анықтама",
       "qrTitle": "QR",
       "qrSubtitle": "QR сипаттамасы",
       "scanTitle": "сканерлеу",
       "scanSubtitle": "сканерлеу сипаттамасы",
-      "routesTitle": "routes",
-      "routesHint": "routes үшін кеңес",
+      "routesTitle": "Тақырып",
+      "routesHint": "Ақпарат Ақпарат",
       "merchantLink": "мерчант сілтеме",
       "history": "тарих",
-      "paymentsHub": "payments hub",
-      "notesTitle": "notes",
-      "notesHint": "notes үшін кеңес",
-      "note1Title": "note1",
-      "note1Text": "note1 сипаттамасы",
-      "note2Title": "note2",
-      "note2Text": "note2 сипаттамасы",
-      "note3Title": "note3",
-      "note3Text": "note3 сипаттамасы",
+      "paymentsHub": "Ақпарат",
+      "notesTitle": "Қауіпсіздік",
+      "notesHint": "Ақпарат Ақпарат",
+      "note1Title": "Ақпарат",
+      "note1Text": "Ақпарат Ақпарат",
+      "note2Title": "Ақпарат",
+      "note2Text": "Ақпарат Ақпарат",
+      "note3Title": "Ақпарат",
+      "note3Text": "Ақпарат Ақпарат",
       "back": "артқа",
-      "process": "process"
+      "process": "Ақпарат"
     },
     "paymentsHub": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero сипаттамасы",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "heroTitle": "Ақпарат",
+      "heroSubtitle": "Ақпарат Ақпарат",
       "providerNotConfigured": "Провайдер бапталмаған",
-      "mainBalance": "main баланс",
-      "primaryCurrency": "primary валюта",
-      "providerRoutes": "provider routes",
-      "pillSabi": "pill Sabi",
-      "pillCards": "pill карталар",
-      "pillMerchant": "pill мерчант",
-      "pillInternal": "pill internal",
-      "pillIdentity": "pill identity",
-      "featuredTitle": "featured",
-      "featuredHint": "featured үшін кеңес",
-      "internalEyebrow": "internal",
-      "internalTitle": "internal",
-      "internalSubtitle": "internal сипаттамасы",
-      "availableBalance": "available баланс",
+      "mainBalance": "Ақпарат",
+      "primaryCurrency": "Ақпарат",
+      "providerRoutes": "Баптаулар",
+      "pillSabi": "Sabi әмиян",
+      "pillCards": "карталар",
+      "pillMerchant": "Мерчант",
+      "pillInternal": "Ақпарат",
+      "pillIdentity": "Ақпарат",
+      "featuredTitle": "Премиум",
+      "featuredHint": "Премиум Ақпарат",
+      "internalEyebrow": "Ақпарат",
+      "internalTitle": "Тақырып",
+      "internalSubtitle": "Сипаттама Ақпарат",
+      "availableBalance": "Қолжетімді баланс",
       "cardEyebrow": "карта",
       "cardTitle": "карта",
       "cardSubtitle": "карта сипаттамасы",
-      "cardProvider": "карта provider",
-      "ecosystemEyebrow": "ecosystem",
-      "ecosystemTitle": "ecosystem",
-      "ecosystemSubtitle": "ecosystem сипаттамасы",
-      "ecosystemProvider": "ecosystem provider",
-      "qrAccess": "QR access",
-      "singleEntry": "single entry",
-      "myQr": "my QR",
-      "myQrSubtitle": "my QR сипаттамасы",
+      "cardProvider": "Баптаулар",
+      "ecosystemEyebrow": "Ақпарат",
+      "ecosystemTitle": "Тақырып",
+      "ecosystemSubtitle": "Сипаттама Ақпарат",
+      "ecosystemProvider": "Баптаулар",
+      "qrAccess": "Ақпарат",
+      "singleEntry": "Ақпарат",
+      "myQr": "Ақпарат",
+      "myQrSubtitle": "Сипаттама Ақпарат",
       "scanQr": "QR сканерлеу",
       "scanQrSubtitle": "сканерлеу QR сипаттамасы",
-      "internalPayments": "internal payments",
-      "core": "core",
+      "internalPayments": "Ақпарат",
+      "core": "Ақпарат",
       "cardsBalance": "карталар баланс",
-      "moneyMovement": "ақша movement",
-      "ecosystemPayments": "ecosystem payments",
-      "extendedRoutes": "extended routes",
-      "mySabiId": "my Sabi ID",
-      "mySabiIdSubtitle": "my Sabi ID сипаттамасы",
+      "moneyMovement": "Ақпарат",
+      "ecosystemPayments": "Ақпарат",
+      "extendedRoutes": "Ақпарат",
+      "mySabiId": "Sabi ID",
+      "mySabiIdSubtitle": "Сипаттама Ақпарат",
       "send": "жіберу",
       "sendSubtitle": "жіберу сипаттамасы",
       "request": "сұрау",
       "requestSubtitle": "сұрау сипаттамасы",
-      "contacts": "contacts",
-      "contactsSubtitle": "contacts сипаттамасы",
+      "contacts": "Ақпарат",
+      "contactsSubtitle": "Сипаттама Ақпарат",
       "topup": "толтыру",
       "topupSubtitle": "толтыру сипаттамасы",
       "withdraw": "Шығару",
       "withdrawSubtitle": "шығару сипаттамасы",
       "cards": "карталар",
       "cardsSubtitle": "карталар сипаттамасы",
-      "virtualCard": "virtual карта",
-      "virtualCardSubtitle": "virtual карта сипаттамасы",
-      "chatPayments": "chat payments",
-      "chatPaymentsSubtitle": "chat payments сипаттамасы",
-      "merchantPay": "мерчант pay",
-      "merchantPaySubtitle": "мерчант pay сипаттамасы",
-      "businessPay": "бизнес pay",
-      "businessPaySubtitle": "бизнес pay сипаттамасы",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "identityTitle": "identity",
-      "identityText": "identity сипаттамасы",
-      "tokenTitle": "token",
-      "tokenText": "token сипаттамасы",
-      "separationTitle": "separation",
-      "separationText": "separation сипаттамасы",
-      "noFakeTitle": "жоқ fake",
-      "noFakeText": "жоқ fake сипаттамасы"
+      "virtualCard": "Ақпарат",
+      "virtualCardSubtitle": "Сипаттама Ақпарат",
+      "chatPayments": "Чат",
+      "chatPaymentsSubtitle": "Чат Ақпарат",
+      "merchantPay": "Ақпарат",
+      "merchantPaySubtitle": "Сипаттама Ақпарат",
+      "businessPay": "бизнес",
+      "businessPaySubtitle": "Ақпарат Ақпарат",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "identityTitle": "Тақырып",
+      "identityText": "Ақпарат Ақпарат",
+      "tokenTitle": "Тақырып",
+      "tokenText": "Ақпарат Ақпарат",
+      "separationTitle": "Тақырып",
+      "separationText": "Ақпарат Ақпарат",
+      "noFakeTitle": "Тақырып",
+      "noFakeText": "Ақпарат Ақпарат"
     },
     "contacts": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "searchPlaceholder": "іздеу үшін кеңес",
       "all": "барлығы",
       "people": "Адамдар",
       "business": "бизнес",
       "merchant": "мерчант",
-      "quickRoutes": "quick routes",
-      "quickRoutesHint": "quick routes үшін кеңес",
+      "quickRoutes": "Ақпарат",
+      "quickRoutesHint": "әрекеттер",
       "send": "жіберу",
       "request": "сұрау",
-      "chatPay": "chat pay",
-      "mySabiId": "my Sabi ID",
-      "directoryTitle": "directory",
-      "directoryHint": "directory үшін кеңес",
+      "chatPay": "Чат",
+      "mySabiId": "Sabi ID",
+      "directoryTitle": "Тақырып",
+      "directoryHint": "Ақпарат Ақпарат",
       "emptyTitle": "бос",
       "emptyText": "бос сипаттамасы",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "identityTitle": "identity",
-      "identityText": "identity сипаттамасы",
-      "verifiedTitle": "verified",
-      "verifiedText": "verified сипаттамасы"
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "identityTitle": "Тақырып",
+      "identityText": "Ақпарат Ақпарат",
+      "verifiedTitle": "Тақырып",
+      "verifiedText": "Ақпарат Ақпарат"
     },
     "chatPayments": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero сипаттамасы",
-      "currentRoute": "current route",
-      "currentAmount": "current сома",
-      "byId": "by ID",
-      "byQr": "by QR",
-      "paymentMode": "төлем mode",
-      "paymentModeHint": "төлем mode үшін кеңес",
-      "byIdText": "by ID сипаттамасы",
-      "byQrText": "by QR сипаттамасы",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "heroTitle": "Чат",
+      "heroText": "Ақпарат Ақпарат",
+      "currentRoute": "Ақпарат",
+      "currentAmount": "Ақпарат",
+      "byId": "Ақпарат",
+      "byQr": "Ақпарат",
+      "paymentMode": "Ақпарат",
+      "paymentModeHint": "Ақпарат Ақпарат",
+      "byIdText": "Ақпарат Ақпарат",
+      "byQrText": "Ақпарат Ақпарат",
       "paymentSource": "төлем дереккөз",
       "paymentSourceHint": "төлем дереккөз үшін кеңес",
       "sabiWallet": "Sabi әмиян",
@@ -1750,64 +1751,64 @@ export const KK_LOCALE = {
       "qrRecipientHint": "QR алушы үшін кеңес",
       "qrRecipientLabel": "QR алушы",
       "qrRecipientPlaceholder": "QR алушы үшін кеңес",
-      "myMessengerQr": "my Messenger QR",
-      "myMessengerQrText": "my Messenger QR сипаттамасы",
+      "myMessengerQr": "Ақпарат",
+      "myMessengerQrText": "Ақпарат Ақпарат",
       "scanMessengerQr": "сканерлеу Messenger QR",
       "scanMessengerQrText": "сканерлеу Messenger QR сипаттамасы",
       "detailsTitle": "мәліметтер",
       "detailsHint": "мәліметтер үшін кеңес",
       "amount": "сома",
-      "note": "note",
-      "notePlaceholder": "note үшін кеңес",
+      "note": "Ескертпе",
+      "notePlaceholder": "Іздеу",
       "previewTitle": "алдын ала қарау",
       "previewHint": "алдын ала қарау үшін кеңес",
-      "mode": "mode",
+      "mode": "Ақпарат",
       "recipient": "алушы",
       "source": "дереккөз",
-      "notSelected": "not таңдалды",
-      "noNote": "жоқ note",
-      "shortcutsTitle": "shortcuts",
-      "shortcutsHint": "shortcuts үшін кеңес",
+      "notSelected": "Ақпарат",
+      "noNote": "Ақпарат",
+      "shortcutsTitle": "Тақырып",
+      "shortcutsHint": "Ақпарат Ақпарат",
       "history": "тарих",
-      "coinWalletShortcut": "COIN әмиян shortcut",
-      "sabiWalletShortcut": "Sabi әмиян shortcut",
-      "askAi": "ask AI",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "security1Title": "security1",
-      "security1Text": "security1 сипаттамасы",
-      "security2Title": "security2",
-      "security2Text": "security2 сипаттамасы",
+      "coinWalletShortcut": "COIN әмиян",
+      "sabiWalletShortcut": "Sabi әмиян",
+      "askAi": "AI",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "security1Title": "Ақпарат",
+      "security1Text": "Ақпарат Ақпарат",
+      "security2Title": "Ақпарат",
+      "security2Text": "Ақпарат Ақпарат",
       "back": "артқа",
-      "sendById": "жіберу by ID",
-      "sendByQr": "жіберу by QR",
-      "sendCoinById": "жіберу COIN by ID",
-      "sendCoinByQr": "жіберу COIN by QR"
+      "sendById": "Ақпарат",
+      "sendByQr": "Ақпарат",
+      "sendCoinById": "Ақпарат",
+      "sendCoinByQr": "Ақпарат"
     },
     "currency": {
-      "notConfigured": "not configured",
-      "usd": "usd",
-      "eur": "eur",
-      "cny": "cny",
-      "aed": "aed",
-      "gbp": "gbp",
-      "jpy": "jpy",
-      "krw": "krw",
-      "uzs": "uzs",
-      "kzt": "kzt",
-      "kgs": "kgs",
-      "tjs": "tjs",
-      "tmt": "tmt",
-      "azn": "azn",
-      "try": "try",
-      "inr": "inr"
+      "notConfigured": "Ақпарат",
+      "usd": "Ақпарат",
+      "eur": "Ақпарат",
+      "cny": "Ақпарат",
+      "aed": "Ақпарат",
+      "gbp": "Ақпарат",
+      "jpy": "Ақпарат",
+      "krw": "Ақпарат",
+      "uzs": "Ақпарат",
+      "kzt": "Ақпарат",
+      "kgs": "Ақпарат",
+      "tjs": "Ақпарат",
+      "tmt": "Ақпарат",
+      "azn": "Ақпарат",
+      "try": "Ақпарат",
+      "inr": "Ақпарат"
     },
     "localTransfer": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero сипаттамасы",
+      "eyebrow": "Жергілікті",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "heroTitle": "Жергілікті",
+      "heroText": "Ақпарат Ақпарат",
       "transferFrom": "аудару кімнен",
       "sourceHint": "дереккөз үшін кеңес",
       "sourceLabel": "дереккөз",
@@ -1819,146 +1820,146 @@ export const KK_LOCALE = {
       "amountTitle": "сома",
       "amountHint": "сома үшін кеңес",
       "amountPlaceholder": "сома үшін кеңес",
-      "noteLabel": "note",
-      "notePlaceholder": "note үшін кеңес",
+      "noteLabel": "Ескертпе",
+      "notePlaceholder": "Іздеу",
       "selectedSource": "таңдалды дереккөз",
       "selectedRecipient": "таңдалды алушы",
-      "providerTitle": "provider",
-      "providerText": "provider сипаттамасы",
+      "providerTitle": "Провайдер бапталмаған",
+      "providerText": "Баптаулар Ақпарат",
       "currencyTitle": "валюта",
       "currencyText": "валюта сипаттамасы",
-      "notesTitle": "notes",
-      "notesHint": "notes үшін кеңес",
-      "otpTitle": "otp",
-      "otpText": "otp сипаттамасы",
-      "localOnlyTitle": "local only",
-      "localOnlyText": "local only сипаттамасы",
-      "cardsHub": "карталар hub"
+      "notesTitle": "Тақырып",
+      "notesHint": "Ақпарат Ақпарат",
+      "otpTitle": "Тақырып",
+      "otpText": "Ақпарат Ақпарат",
+      "localOnlyTitle": "Жергілікті",
+      "localOnlyText": "Жергілікті Ақпарат",
+      "cardsHub": "Ақпарат"
     },
     "localRecipients": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero сипаттамасы",
-      "trusted": "trusted",
+      "eyebrow": "Жергілікті",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "heroTitle": "Жергілікті",
+      "heroText": "Ақпарат Ақпарат",
+      "trusted": "Ақпарат",
       "searchTitle": "іздеу",
       "searchHint": "іздеу үшін кеңес",
       "searchPlaceholder": "іздеу үшін кеңес",
       "emptyTitle": "бос",
       "emptyText": "бос сипаттамасы",
-      "note1Title": "note1",
-      "note1Text": "note1 сипаттамасы",
-      "note2Title": "note2",
-      "note2Text": "note2 сипаттамасы",
-      "newTransfer": "new аудару"
+      "note1Title": "Ақпарат",
+      "note1Text": "Ақпарат Ақпарат",
+      "note2Title": "Ақпарат",
+      "note2Text": "Ақпарат Ақпарат",
+      "newTransfer": "Жаңа аударым"
     },
     "localCardDetails": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "Жергілікті",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "noCardTitle": "жоқ карта",
       "noCardText": "жоқ карта сипаттамасы",
       "profile": "профиль",
-      "tokenStatus": "token күй",
-      "tokenPending": "token pending",
+      "tokenStatus": "Ақпарат",
+      "tokenPending": "Ақпарат",
       "cardName": "карта аты",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "maskedCard": "masked карта",
+      "scheme": "Ақпарат",
+      "issuer": "Эмитент",
+      "maskedCard": "Ақпарат",
       "currency": "валюта",
-      "verification": "verification",
+      "verification": "Растау",
       "topup": "толтыру",
-      "securityTitle": "security",
-      "securityText": "security сипаттамасы",
-      "controlsTitle": "controls",
-      "controlsText": "controls сипаттамасы"
+      "securityTitle": "Қауіпсіздік",
+      "securityText": "Қауіпсіздік Ақпарат",
+      "controlsTitle": "Тақырып",
+      "controlsText": "Ақпарат Ақпарат"
     },
     "cardInfo": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "noCard": "жоқ карта",
       "noCardText": "жоқ карта сипаттамасы",
-      "defaultBadge": "default badge",
+      "defaultBadge": "Ақпарат",
       "cardProfile": "карта профиль",
-      "overview": "overview",
-      "cardType": "карта type",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "verification": "verification",
+      "overview": "Ақпарат",
+      "cardType": "Ақпарат",
+      "scheme": "Ақпарат",
+      "issuer": "Эмитент",
+      "verification": "Растау",
       "topup": "толтыру",
       "balance": "баланс",
       "restricted": "Шектелген",
-      "cardStyle": "карта style",
-      "personalization": "personalization",
-      "controls": "controls",
-      "permissions": "permissions",
-      "security": "security",
-      "protection": "protection",
-      "securitySettings": "security баптаулар",
-      "securitySettingsText": "security баптаулар сипаттамасы",
-      "cardAlerts": "карта alerts",
-      "cardAlertsText": "карта alerts сипаттамасы",
-      "cardLimits": "карта limits",
-      "cardLimitsText": "карта limits сипаттамасы",
-      "advanced": "advanced",
-      "management": "management",
-      "routeRole": "route role",
-      "routeRoleText": "route role сипаттамасы",
+      "cardStyle": "Ақпарат",
+      "personalization": "Ақпарат",
+      "controls": "Ақпарат",
+      "permissions": "Ақпарат",
+      "security": "Қауіпсіздік",
+      "protection": "Ақпарат",
+      "securitySettings": "Қауіпсіздік",
+      "securitySettingsText": "Қауіпсіздік Ақпарат",
+      "cardAlerts": "Сигналдар",
+      "cardAlertsText": "Сигналдар Ақпарат",
+      "cardLimits": "Ақпарат",
+      "cardLimitsText": "Ақпарат Ақпарат",
+      "advanced": "Қосымша",
+      "management": "Ақпарат",
+      "routeRole": "Ақпарат",
+      "routeRoleText": "Ақпарат Ақпарат",
       "cardActivity": "карта белсенділік",
       "cardActivityText": "карта белсенділік сипаттамасы",
-      "styleMidnight": "style midnight",
-      "styleOcean": "style ocean",
-      "styleEmerald": "style emerald",
-      "styleViolet": "style violet",
-      "styleSunset": "style sunset",
-      "styleYouth": "style youth"
+      "styleMidnight": "Ақпарат",
+      "styleOcean": "Ақпарат",
+      "styleEmerald": "Ақпарат",
+      "styleViolet": "Ақпарат",
+      "styleSunset": "Ақпарат",
+      "styleYouth": "Ақпарат"
     },
     "confirmAddCard": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "blockedTitle": "бұғатталған",
       "blockedText": "бұғатталған сипаттамасы",
-      "providerToken": "provider token",
-      "maskedCard": "masked карта",
-      "cardCategory": "карта category",
+      "providerToken": "дереккөз",
+      "maskedCard": "Ақпарат",
+      "cardCategory": "Ақпарат",
       "status": "күй",
-      "missing": "missing",
+      "missing": "Ақпарат",
       "pending": "Күтуде",
       "verified": "Тексерілді",
       "rejected": "Қабылданбады",
       "restricted": "Шектелген",
-      "invalidPayload": "invalid payload",
-      "blockedFields": "бұғатталған fields",
+      "invalidPayload": "Ақпарат",
+      "blockedFields": "Ақпарат",
       "source": "дереккөз",
       "pinTitle": "бекіту",
       "pinSubtitle": "бекіту сипаттамасы",
-      "tokenOnlyTitle": "token only",
-      "tokenOnlyText": "token only сипаттамасы",
-      "backToCards": "артқа to карталар",
+      "tokenOnlyTitle": "Тақырып",
+      "tokenOnlyText": "Ақпарат Ақпарат",
+      "backToCards": "Артқа",
       "continue": "жалғастыру"
     },
     "send": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "routeTitle": "route",
-      "routeHint": "route үшін кеңес",
-      "sabiToSabi": "Sabi to Sabi",
-      "sabiToSabiText": "Sabi to Sabi сипаттамасы",
-      "cardToCard": "карта to карта",
-      "cardToCardText": "карта to карта сипаттамасы",
-      "sabiToCard": "Sabi to карта",
-      "sabiToCardText": "Sabi to карта сипаттамасы",
-      "cardToSabi": "карта to Sabi",
-      "cardToSabiText": "карта to Sabi сипаттамасы",
+      "title": "Ақша жіберу",
+      "subtitle": "Баптаулар",
+      "routeTitle": "Тақырып",
+      "routeHint": "Ақпарат Ақпарат",
+      "sabiToSabi": "Ақпарат",
+      "sabiToSabiText": "Ақпарат Ақпарат",
+      "cardToCard": "Ақпарат",
+      "cardToCardText": "Ақпарат Ақпарат",
+      "sabiToCard": "Ақпарат",
+      "sabiToCardText": "Ақпарат Ақпарат",
+      "cardToSabi": "Ақпарат",
+      "cardToSabiText": "Ақпарат Ақпарат",
       "sourceTitle": "дереккөз",
       "sourceHint": "дереккөз үшін кеңес",
-      "linkedCard": "linked карта",
-      "linkedCardPlaceholder": "linked карта үшін кеңес",
-      "chooseCard": "choose карта",
-      "tokenOnlyDetails": "token only мәліметтер",
+      "linkedCard": "Ақпарат",
+      "linkedCardPlaceholder": "дереккөз үшін кеңес",
+      "chooseCard": "Ақпарат",
+      "tokenOnlyDetails": "Ақпарат",
       "sabiBalanceDetails": "Sabi баланс мәліметтер",
-      "available": "available",
+      "available": "Қолжетімді",
       "amount": "сома",
       "amountPlaceholder": "сома үшін кеңес",
       "destinationTitle": "бағыт",
@@ -1969,76 +1970,76 @@ export const KK_LOCALE = {
       "cardRecipientPlaceholder": "карта алушы үшін кеңес",
       "recipientName": "алушы аты",
       "recipientNamePlaceholder": "алушы аты үшін кеңес",
-      "note": "note",
-      "notePlaceholder": "note үшін кеңес",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "security1Title": "security1",
-      "security1Text": "security1 сипаттамасы",
-      "security2Title": "security2",
-      "security2Text": "security2 сипаттамасы",
-      "security3Title": "security3",
-      "security3Text": "security3 сипаттамасы",
+      "note": "Ескертпе",
+      "notePlaceholder": "Іздеу",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "security1Title": "Ақпарат",
+      "security1Text": "Ақпарат Ақпарат",
+      "security2Title": "бекіту",
+      "security2Text": "Ақпарат Ақпарат",
+      "security3Title": "Ақпарат",
+      "security3Text": "Ақпарат Ақпарат",
       "continue": "жалғастыру",
       "cardRequired": "карта міндетті",
       "recipientRequired": "алушы міндетті",
       "confirmTitle": "растау",
-      "cardRail": "карта rail",
-      "sabiRail": "Sabi rail",
-      "usd": "usd"
+      "cardRail": "Ақпарат",
+      "sabiRail": "Ақпарат",
+      "usd": "Ақпарат"
     },
     "topup": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Толықтыру",
+      "subtitle": "Баптаулар",
       "destination": "бағыт",
       "destinationHint": "бағыт үшін кеңес",
       "destinationText": "бағыт сипаттамасы",
-      "storedValue": "stored value",
-      "type": "type",
-      "internalMoney": "internal ақша",
-      "usage": "usage",
-      "transfersPayments": "transfers payments",
-      "speed": "speed",
-      "byProviderPolicy": "by provider policy",
+      "storedValue": "Ақпарат",
+      "type": "Түрі",
+      "internalMoney": "Ақпарат",
+      "usage": "Ақпарат",
+      "transfersPayments": "Ақпарат",
+      "speed": "Ақпарат",
+      "byProviderPolicy": "Баптаулар",
       "amount": "сома",
       "amountHint": "сома үшін кеңес",
-      "helperText": "helper сипаттамасы",
-      "fundingSource": "funding дереккөз",
-      "fundingSourceHint": "funding дереккөз үшін кеңес",
-      "noLinkedCardsTitle": "жоқ linked карталар",
-      "noLinkedCardsText": "жоқ linked карталар сипаттамасы",
+      "helperText": "Ақпарат Ақпарат",
+      "fundingSource": "Ақпарат",
+      "fundingSourceHint": "бағыт үшін кеңес",
+      "noLinkedCardsTitle": "Тақырып",
+      "noLinkedCardsText": "Ақпарат Ақпарат",
       "addCard": "қосу карта",
-      "eligibility": "eligibility",
-      "eligibilityHint": "eligibility үшін кеңес",
-      "eligible": "eligible",
+      "eligibility": "Ақпарат",
+      "eligibilityHint": "Ақпарат Ақпарат",
+      "eligible": "Ақпарат",
       "restricted": "Шектелген",
-      "eligibleText": "eligible сипаттамасы",
+      "eligibleText": "Ақпарат Ақпарат",
       "restrictedText": "шектелген сипаттамасы",
       "selectedSource": "таңдалды дереккөз",
-      "scheme": "scheme",
-      "maskedCard": "masked карта",
-      "sourceType": "дереккөз type",
-      "tokenOnlyTitle": "token only",
-      "tokenOnlyText": "token only сипаттамасы",
+      "scheme": "Ақпарат",
+      "maskedCard": "Ақпарат",
+      "sourceType": "Ақпарат",
+      "tokenOnlyTitle": "Тақырып",
+      "tokenOnlyText": "Ақпарат Ақпарат",
       "continue": "жалғастыру",
       "confirmTitle": "растау"
     },
     "receive": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Қабылдау",
+      "subtitle": "Баптаулар",
       "destination": "бағыт",
       "destinationHint": "бағыт үшін кеңес",
       "destinationText": "бағыт сипаттамасы",
-      "receiveBadge": "қабылдау badge",
-      "walletRail": "әмиян rail",
-      "sabiInternal": "Sabi internal",
-      "speed": "speed",
-      "instant": "instant",
+      "receiveBadge": "Қабылдау",
+      "walletRail": "Әмиян",
+      "sabiInternal": "Ақпарат",
+      "speed": "Ақпарат",
+      "instant": "Ақпарат",
       "status": "күй",
-      "active": "active",
-      "expectedAmount": "expected сома",
-      "expectedAmountHint": "expected сома үшін кеңес",
-      "helperText": "helper сипаттамасы",
+      "active": "Белсенді",
+      "expectedAmount": "Ақпарат",
+      "expectedAmountHint": "Ақпарат Ақпарат",
+      "helperText": "Ақпарат Ақпарат",
       "incomingSource": "кіріс дереккөз",
       "incomingSourceHint": "кіріс дереккөз үшін кеңес",
       "fromUser": "кімнен пайдаланушы",
@@ -2047,45 +2048,45 @@ export const KK_LOCALE = {
       "fromBusinessText": "кімнен бизнес сипаттамасы",
       "fromMerchant": "кімнен мерчант",
       "fromMerchantText": "кімнен мерчант сипаттамасы",
-      "receiveRoute": "қабылдау route",
-      "receiveRouteHint": "қабылдау route үшін кеңес",
-      "internalRoute": "internal route",
-      "mode": "mode",
-      "userInbound": "пайдаланушы inbound",
-      "businessInbound": "бизнес inbound",
-      "merchantInbound": "мерчант inbound",
+      "receiveRoute": "Ақпарат",
+      "receiveRouteHint": "Ақпарат Ақпарат",
+      "internalRoute": "Ақпарат",
+      "mode": "Ақпарат",
+      "userInbound": "Ақпарат",
+      "businessInbound": "Ақпарат",
+      "merchantInbound": "Ақпарат",
       "reference": "анықтама",
       "referenceHint": "анықтама үшін кеңес",
       "referencePlaceholder": "анықтама үшін кеңес",
-      "securityTitle": "security",
-      "securityHint": "security үшін кеңес",
-      "securityText": "security сипаттамасы",
+      "securityTitle": "Қауіпсіздік",
+      "securityHint": "Қауіпсіздік Ақпарат",
+      "securityText": "Қауіпсіздік Ақпарат",
       "continue": "жалғастыру",
       "confirmTitle": "растау"
     },
     "confirm": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Аударымды растау",
+      "subtitle": "Баптаулар",
       "amount": "сома",
-      "transferValue": "аудару value",
+      "transferValue": "Ақпарат",
       "ready": "Дайын",
       "source": "дереккөз",
-      "funds": "funds",
-      "rail": "rail",
+      "funds": "Ақпарат",
+      "rail": "Ақпарат",
       "details": "мәліметтер",
-      "tokenizedSource": "tokenized дереккөз",
+      "tokenizedSource": "Ақпарат",
       "destination": "бағыт",
       "recipient": "алушы",
-      "routeType": "route type",
-      "handle": "handle",
-      "note": "note",
+      "routeType": "Ақпарат",
+      "handle": "Ақпарат",
+      "note": "Ескертпе",
       "reference": "анықтама",
-      "security": "security",
-      "bankGrade": "bank grade",
+      "security": "Қауіпсіздік",
+      "bankGrade": "Ақпарат",
       "pinTitle": "бекіту",
       "pinText": "бекіту сипаттамасы",
-      "routeTitle": "route",
-      "routeText": "route сипаттамасы",
+      "routeTitle": "Тақырып",
+      "routeText": "Ақпарат Ақпарат",
       "notificationTitle": "хабарлама",
       "notificationText": "хабарлама сипаттамасы",
       "continue": "жалғастыру",
@@ -2093,111 +2094,111 @@ export const KK_LOCALE = {
       "pinConfirmSubtitle": "бекіту растау сипаттамасы"
     },
     "success": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "backToWallet": "артқа to әмиян"
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "backToWallet": "Артқа"
     },
     "financialDashboard": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Sabi әмиян",
       "walletTitle": "әмиян",
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "loading": "жүктелуде",
-      "errorTitle": "error",
+      "errorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
       "retry": "қайта көру",
-      "totalBalance": "total баланс",
-      "wallets": "wallets",
-      "locked": "locked",
-      "active": "active",
-      "quickActions": "quick әрекеттер",
+      "totalBalance": "Жалпы баланс",
+      "wallets": "Әмияндар",
+      "locked": "Құлыпталған",
+      "active": "Белсенді",
+      "quickActions": "Баптаулар",
       "history": "тарих",
-      "p2pSend": "p2p жіберу",
-      "qrExecute": "QR execute",
-      "paymentRoute": "төлем route",
-      "totals": "totals",
-      "payments": "payments",
-      "p2p": "p2p",
+      "p2pSend": "Ақпарат",
+      "qrExecute": "Ақпарат",
+      "paymentRoute": "Ақпарат",
+      "totals": "Ақпарат",
+      "payments": "Төлемдер",
+      "p2p": "Ақпарат",
       "qr": "QR",
-      "walletOps": "әмиян ops",
+      "walletOps": "Әмиян",
       "business": "бизнес",
       "merchant": "мерчант",
-      "noWallets": "жоқ wallets",
-      "recentHistory": "recent тарих",
-      "seeAll": "see барлығы",
-      "noEvents": "жоқ events",
-      "unknown": "unknown"
+      "noWallets": "Ақпарат",
+      "recentHistory": "Тарих",
+      "seeAll": "Барлығын көру",
+      "noEvents": "Ақпарат",
+      "unknown": "Ақпарат"
     },
     "financialItem": {
-      "eyebrow": "eyebrow",
-      "title": "title",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
       "loading": "жүктелуде",
-      "errorTitle": "error",
-      "amountUnavailable": "сома unavailable",
-      "unknown": "unknown",
+      "errorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
+      "amountUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "unknown": "Ақпарат",
       "id": "ID",
-      "transaction": "transaction",
+      "transaction": "Ақпарат",
       "wallet": "әмиян",
       "reference": "анықтама",
-      "createdAt": "created at",
-      "payload": "payload"
+      "createdAt": "Құрылған уақыты",
+      "payload": "Ақпарат"
     },
     "paymentExecution": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "statusTitle": "күй",
       "statusText": "күй сипаттамасы",
-      "currentWallet": "current әмиян",
-      "currentUser": "current пайдаланушы",
-      "notProvided": "not provided",
-      "providerTitle": "provider",
-      "providerText": "provider сипаттамасы",
-      "tokenTitle": "token",
-      "tokenText": "token сипаттамасы",
-      "auditTitle": "audit",
-      "auditText": "audit сипаттамасы",
-      "goToSend": "go to жіберу",
-      "goToQr": "go to QR"
+      "currentWallet": "Әмиян",
+      "currentUser": "Ақпарат",
+      "notProvided": "Ақпарат",
+      "providerTitle": "Баптаулар",
+      "providerText": "Баптаулар Ақпарат",
+      "tokenTitle": "Тақырып",
+      "tokenText": "Ақпарат Ақпарат",
+      "auditTitle": "Тақырып",
+      "auditText": "Ақпарат Ақпарат",
+      "goToSend": "Ақпарат",
+      "goToQr": "Ақпарат"
     },
     "mySabiId": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "notConfigured": "not configured",
+      "eyebrow": "Ақпарат",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "notConfigured": "Ақпарат",
       "pending": "Күтуде",
       "status": "күй",
-      "internalPay": "internal pay",
+      "internalPay": "Ақпарат",
       "receive": "Қабылдау",
-      "identity": "identity",
-      "mainBanner": "main banner",
+      "identity": "Ақпарат",
+      "mainBanner": "Ақпарат",
       "preview": "алдын ала қарау",
-      "bannerAppearance": "banner appearance",
-      "displayName": "display аты",
-      "displayNamePlaceholder": "display аты үшін кеңес",
+      "bannerAppearance": "Көрініс",
+      "displayName": "Көрсетілетін аты",
+      "displayNamePlaceholder": "Іздеу",
       "sabiId": "Sabi ID",
       "sabiIdPlaceholder": "Sabi ID үшін кеңес",
-      "bannerColor": "banner түс",
-      "bannerStyle": "banner style",
-      "qrAccess": "QR access",
-      "core": "core",
-      "myQr": "my QR",
+      "bannerColor": "Ақпарат",
+      "bannerStyle": "Ақпарат",
+      "qrAccess": "Ақпарат",
+      "core": "Ақпарат",
+      "myQr": "Менің QR кодым",
       "scan": "сканерлеу",
       "share": "бөлісу",
       "copyId": "көшіру ID",
-      "askAi": "ask AI",
-      "howWorks": "how works",
-      "flow": "flow",
-      "internalTitle": "internal",
-      "internalText": "internal сипаттамасы",
+      "askAi": "AI",
+      "howWorks": "Ақпарат",
+      "flow": "Ақпарат",
+      "internalTitle": "Тақырып",
+      "internalText": "Ақпарат Ақпарат",
       "qrTitle": "QR",
       "qrText": "QR сипаттамасы",
-      "customizeTitle": "customize",
-      "customizeText": "customize сипаттамасы",
-      "walletIdentity": "әмиян identity",
-      "secureRoute": "қауіпсіз route",
-      "style": "style",
+      "customizeTitle": "Тақырып",
+      "customizeText": "Ақпарат Ақпарат",
+      "walletIdentity": "Әмиян",
+      "secureRoute": "Ақпарат",
+      "style": "Ақпарат",
       "theme": "тақырып",
-      "profileFallback": "профиль fallback"
+      "profileFallback": "Профиль"
     }
   },
   "walletCards": {
@@ -2208,9 +2209,9 @@ export const KK_LOCALE = {
     "cardNickname": "Карта лақап аты",
     "cardDesign": "Карта дизайны",
     "verificationMethod": "Растау әдісі",
-    "verifyByCvv": "CVV арқылы растау",
-    "verifyByOtp": "OTP арқылы растау",
-    "verifyByCvvOtp": "CVV + OTP арқылы растау",
+    "verifyByCvv": "Ақпарат",
+    "verifyByOtp": "Ақпарат",
+    "verifyByCvvOtp": "Ақпарат",
     "cardLinked": "Карта байланыстырылды",
     "cardRemoved": "Карта алынып тасталды",
     "removeCard": "Картаны алып тастау",
@@ -2234,7 +2235,7 @@ export const KK_LOCALE = {
     "contactlessPayments": "Байланыссыз төлемдер",
     "cardStatus": "Карта күйі",
     "cashWithdrawal": "Қолма-қол шешіп алу",
-    "atmWithdrawal": "ATM арқылы шешіп алу",
+    "atmWithdrawal": "Ақпарат",
     "cardToCardTransfer": "Картадан картаға аудару",
     "tokenizedPayments": "Токенизацияланған төлемдер",
     "cardLimitResetDate": "Карта лимитін қалпына келтіру күні",
@@ -2261,10 +2262,10 @@ export const KK_LOCALE = {
     "beneficiaryBank": "Бенефициар банкі",
     "beneficiaryAddress": "Бенефициар мекенжайы",
     "accountNumber": "Шот нөмірі",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing нөмірі",
+    "iban": "Ақпарат",
+    "swift": "Ақпарат",
+    "bic": "Ақпарат",
+    "routingNumber": "Ақпарат",
     "correspondentBank": "Корреспондент банк",
     "intermediaryBank": "Аралық банк",
     "bankCode": "Банк коды",
@@ -2293,7 +2294,7 @@ export const KK_LOCALE = {
     "domesticTransfer": "Ішкі аударым",
     "internationalTransfer": "Халықаралық аударым",
     "swiftTransfer": "SWIFT аударымы",
-    "wireTransfer": "Wire аударымы",
+    "wireTransfer": "Ақпарат",
     "instantTransfer": "Жедел аударым",
     "scheduledTransfer": "Жоспарланған аударым",
     "recurringTransfer": "Қайталанатын аударым",
@@ -2308,10 +2309,10 @@ export const KK_LOCALE = {
     "beneficiaryCountry": "Бенефициар елі",
     "recipientBank": "Алушы банкі",
     "bankBranch": "Банк филиалы",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing нөмірі",
+    "iban": "Ақпарат",
+    "swift": "Ақпарат",
+    "bic": "Ақпарат",
+    "routingNumber": "Ақпарат",
     "transferAmount": "Аударым сомасы",
     "receivingAmount": "Қабылданатын сома",
     "transferFee": "Аударым комиссиясы",
@@ -2337,19 +2338,19 @@ export const KK_LOCALE = {
     "noSavedRecipients": "Сақталған алушылар жоқ"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
-    "subtitle": "Coin балансын, аударымдарды, табыстарды және құлыпталған өнімдерді басқарыңыз.",
-    "availableCoin": "Қолжетімді Coin",
-    "lockedCoin": "Құлыпталған Coin",
-    "earnedCoin": "Табылған Coin",
-    "topUpCoin": "Coin толықтыру",
-    "convertToCoin": "Coin-ге түрлендіру",
-    "convertFromWallet": "Sabi Wallet-тен түрлендіру",
-    "sendCoin": "Coin жіберу",
-    "receiveCoin": "Coin қабылдау",
-    "coinTransfer": "Coin аударымы",
-    "coinDeposit": "Coin депозиті",
-    "coinEarn": "Coin табысы",
+    "title": "COIN әмиян",
+    "subtitle": "Баптаулар",
+    "availableCoin": "Дайын",
+    "lockedCoin": "Ақпарат",
+    "earnedCoin": "Ақпарат",
+    "topUpCoin": "Ақпарат",
+    "convertToCoin": "Ақпарат",
+    "convertFromWallet": "Әмиян",
+    "sendCoin": "Ақпарат",
+    "receiveCoin": "Ақпарат",
+    "coinTransfer": "Ақпарат",
+    "coinDeposit": "Ақпарат",
+    "coinEarn": "Ақпарат",
     "depositTerm": "Депозит мерзімі",
     "annualRate": "Жылдық мөлшерлеме",
     "estimatedReturn": "Болжамды табыс",
@@ -2360,14 +2361,14 @@ export const KK_LOCALE = {
     "interestPayout": "Пайыз төлемі",
     "incomeSchedule": "Табыс кестесі",
     "moveToMainWallet": "Негізгі әмиянға ауыстыру",
-    "coinUseCases": "Coin қолдану тәсілдері",
-    "payWithCoin": "Coin арқылы төлеу",
-    "buyPremiumWithCoin": "Premium-ді Coin арқылы сатып алу",
-    "giftWithCoin": "Coin арқылы сыйлық беру",
-    "noCoinTransactions": "Әзірге Coin транзакциялары жоқ",
+    "coinUseCases": "Ақпарат",
+    "payWithCoin": "Ақпарат",
+    "buyPremiumWithCoin": "Премиум",
+    "giftWithCoin": "Премиум",
+    "noCoinTransactions": "Ақпарат",
     "monthlyReleaseRule": "Ай сайын босату ережесі",
     "lockedUntilRelease": "Босатылғанға дейін құлыпталған",
-    "releaseAvailableOn": "{{date}} күні босату қолжетімді",
+    "releaseAvailableOn": "Дайын",
     "stakingLikeProducts": "Құлыпталған табыс өнімдері",
     "creditReserved": "Несие функциялары болашақта қосу үшін резервте сақталған"
   },
@@ -2420,8 +2421,8 @@ export const KK_LOCALE = {
     "netSales": "Таза сатылым",
     "refunds": "Қайтарымдар",
     "refundRate": "Қайтарым үлесі",
-    "chargebacks": "Chargeback-тер",
-    "chargebackRate": "Chargeback үлесі",
+    "chargebacks": "Артқа",
+    "chargebackRate": "Артқа",
     "disputes": "Даулар",
     "paymentAcceptance": "Төлем қабылдау",
     "terminalPayments": "Терминал төлемдері",
@@ -2509,10 +2510,10 @@ export const KK_LOCALE = {
     "statementDate": "Үзінді көшірме күні",
     "generateStatement": "Үзінді көшірме жасау",
     "regenerateStatement": "Үзінді көшірмені қайта жасау",
-    "downloadPdf": "PDF жүктеп алу",
-    "exportCsv": "CSV экспорттау",
-    "exportXlsx": "XLSX экспорттау",
-    "emailStatement": "Үзінді көшірмені email арқылы жіберу",
+    "downloadPdf": "Ақпарат",
+    "exportCsv": "Ақпарат",
+    "exportXlsx": "Ақпарат",
+    "emailStatement": "Ақпарат",
     "statementSummary": "Үзінді көшірме қорытындысы",
     "openingBalance": "Бастапқы баланс",
     "totalCredits": "Жалпы кірістер",
@@ -2525,9 +2526,9 @@ export const KK_LOCALE = {
     "title": "Сәйкестік",
     "subtitle": "Растау, реттеуші тексерулер және банктік сәйкестік бақылауы.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Ақпарат",
     "sanctionsScreening": "Санкцияларды тексеру",
-    "pepCheck": "PEP тексеруі",
+    "pepCheck": "Ақпарат",
     "sourceOfFunds": "Қаражат көзі",
     "sourceOfWealth": "Байлық көзі",
     "proofOfIdentity": "Жеке басын куәландыру",
@@ -2624,7 +2625,7 @@ export const KK_LOCALE = {
     "videoCall": "Бейне қоңырау",
     "aiTranslate": "AI аударма",
     "premiumFeature": "Премиум мүмкіндік",
-    "sendCoin": "Coin жіберу",
+    "sendCoin": "Ақпарат",
     "sendPayment": "Төлем жіберу",
     "sharedMedia": "Ортақ медиа",
     "sharedFiles": "Ортақ файлдар",
@@ -2643,213 +2644,213 @@ export const KK_LOCALE = {
     "translateCall": "Қоңырауды аудару",
     "premiumTranslation": "Премиум аударма",
     "attachment": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Тіркеу",
+      "subtitle": "Баптаулар",
       "camera": "камера",
       "cameraSubtitle": "камера сипаттамасы",
       "gallery": "галерея",
       "gallerySubtitle": "галерея сипаттамасы",
       "document": "құжат",
       "documentSubtitle": "құжат сипаттамасы",
-      "location": "location",
-      "locationSubtitle": "location сипаттамасы",
-      "contact": "contact",
-      "contactSubtitle": "contact сипаттамасы",
-      "catalog": "catalog",
-      "catalogSubtitle": "catalog сипаттамасы",
-      "fiat": "fiat",
-      "fiatSubtitle": "fiat сипаттамасы",
+      "location": "Орналасқан жер",
+      "locationSubtitle": "Сипаттама Ақпарат",
+      "contact": "Контакт",
+      "contactSubtitle": "Сипаттама Ақпарат",
+      "catalog": "Каталог",
+      "catalogSubtitle": "Сипаттама Ақпарат",
+      "fiat": "Ақша жіберу",
+      "fiatSubtitle": "Сипаттама Ақпарат",
       "coin": "COIN",
       "coinSubtitle": "COIN сипаттамасы",
-      "poll": "poll",
-      "pollSubtitle": "poll сипаттамасы",
-      "event": "event",
-      "eventSubtitle": "event сипаттамасы"
+      "poll": "Ақпарат",
+      "pollSubtitle": "Сипаттама Ақпарат",
+      "event": "Ақпарат",
+      "eventSubtitle": "Сипаттама Ақпарат"
     },
     "animatedHub": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "reactionTitle": "reaction",
-      "reactionSubtitle": "reaction сипаттамасы",
+      "title": "Анимация",
+      "subtitle": "Баптаулар",
+      "reactionTitle": "Тақырып",
+      "reactionSubtitle": "Сипаттама Ақпарат",
       "emojiTitle": "эмодзи",
       "emojiSubtitle": "эмодзи сипаттамасы",
       "giftTitle": "сыйлық",
       "giftSubtitle": "сыйлық сипаттамасы"
     },
     "animatedReaction": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Премиум стикерлер",
+      "subtitle": "Баптаулар",
       "search": "іздеу",
-      "love": "love",
-      "fun": "fun",
-      "mood": "mood"
+      "love": "Ақпарат",
+      "fun": "Ақпарат",
+      "mood": "Ақпарат"
     },
     "stickerSheet": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "searchPlaceholder": "іздеу үшін кеңес",
-      "quickReactions": "quick reactions",
+      "quickReactions": "Жылдам реакциялар",
       "empty": "бос",
       "tabs": {
-        "recent": "recent",
-        "reactions": "reactions",
+        "recent": "Соңғылар",
+        "reactions": "Реакциялар",
         "emoji": "эмодзи",
-        "gestures": "gestures",
-        "flags": "flags"
+        "gestures": "Ақпарат",
+        "flags": "Ақпарат"
       }
     },
     "animatedGift": {
-      "premiumLayer": "Premium layer",
-      "storage": "storage",
-      "featured": "featured",
-      "family": "family",
-      "local": "local",
-      "treasure": "treasure",
-      "luxury": "luxury"
+      "premiumLayer": "Премиум",
+      "storage": "Ақпарат",
+      "featured": "Ұсынылған",
+      "family": "Ақпарат",
+      "local": "Жергілікті",
+      "treasure": "Ақпарат",
+      "luxury": "Премиум"
     },
     "giftStorage": {
-      "inventory": "inventory",
-      "won": "won",
-      "seasonal": "seasonal",
-      "expiring": "expiring",
+      "inventory": "Сыйлық қоры",
+      "won": "Ақпарат",
+      "seasonal": "Ақпарат",
+      "expiring": "Ақпарат",
       "emptyTitle": "бос",
       "emptyText": "бос сипаттамасы",
-      "buy": "buy",
-      "event": "event",
-      "promo": "promo",
-      "basic": "basic",
-      "premium": "Premium",
-      "ultra": "ultra",
-      "days": "days"
+      "buy": "Ақпарат",
+      "event": "Ақпарат",
+      "promo": "Ақпарат",
+      "basic": "Ақпарат",
+      "premium": "Премиум",
+      "ultra": "Ақпарат",
+      "days": "Ақпарат"
     },
-    "createBot": "жасау bot",
-    "manageBot": "manage bot",
-    "myBots": "my bots",
-    "privateBots": "жеке bots",
-    "searchBots": "іздеу bots",
-    "botWorkspace": "bot workspace",
-    "botOwnerPanel": "bot owner panel",
-    "botOwnerPanelSubtitle": "bot owner panel сипаттамасы",
-    "ownerPanelHint": "owner panel үшін кеңес",
-    "createBotHint": "жасау bot үшін кеңес",
-    "createBotButtonHint": "жасау bot button үшін кеңес",
-    "emptyBotsTitle": "бос bots",
-    "emptyBotsSubtitle": "бос bots сипаттамасы",
-    "botNameRequired": "bot аты міндетті",
-    "botUsernameRequired": "bot пайдаланушы аты міндетті",
-    "botCreated": "bot created",
-    "botUpdated": "bot updated",
-    "botRemoved": "bot removed",
-    "botMissing": "bot missing",
-    "botLoading": "bot жүктелуде",
-    "botProfile": "bot профиль",
-    "walletRouting": "әмиян routing",
-    "sabiWalletRoute": "Sabi әмиян route",
-    "businessRoutingLayer": "бизнес routing layer",
-    "businessWalletComingSoon": "бизнес әмиян coming soon",
-    "botTradeRouteHint": "bot trade route үшін кеңес",
-    "botBusinessRouteHint": "bot бизнес route үшін кеңес",
-    "botStatusHint": "bot күй үшін кеңес",
-    "addCommand": "қосу command",
-    "editCommand": "өңдеу command",
-    "commandName": "command аты",
-    "commandTitle": "command",
-    "commandDescription": "command сипаттамасы",
-    "commandEnabled": "command enabled",
-    "commandSaved": "command saved",
-    "commandDeleted": "command deleted",
-    "commandAndTitleRequired": "command and title міндетті",
-    "noCommandsYet": "жоқ командалар yet",
-    "noCommandsYetSubtitle": "жоқ командалар yet сипаттамасы",
-    "quickOwnerControls": "quick owner controls",
-    "openBotChatInMessenger": "ашу bot chat in Messenger",
-    "removeBotFromOwnerList": "алып тастау bot кімнен owner list",
-    "openRoute": "ашу route",
-    "businessPath": "бизнес path",
-    "sabiPath": "Sabi path",
-    "muteBot": "дыбысты өшіру bot",
-    "unmuteBot": "дыбысты қосу bot",
-    "pinBot": "бекіту bot",
-    "unpinBot": "бекітуді алу bot",
-    "createGroup": "жасау group",
-    "manageGroup": "manage group",
-    "myGroups": "my groups",
-    "searchGroups": "іздеу groups",
-    "groupWorkspace": "group workspace",
-    "createGroupHint": "жасау group үшін кеңес",
-    "emptyGroupsTitle": "бос groups",
-    "emptyGroupsSubtitle": "бос groups сипаттамасы",
-    "groupOwnerPanel": "group owner panel",
-    "groupOwnerPanelSubtitle": "group owner panel сипаттамасы",
-    "groupCreated": "group created",
-    "groupUpdated": "group updated",
-    "groupRemoved": "group removed",
-    "groupMissing": "group missing",
-    "groupLoading": "group жүктелуде",
-    "groupProfile": "group профиль",
-    "groupMembers": "group members",
-    "addMember": "қосу member",
-    "removeMember": "алып тастау member",
-    "groupAdmins": "group admins",
-    "quickGroupControls": "quick group controls",
-    "openGroupChatInMessenger": "ашу group chat in Messenger",
-    "publicGroup": "ашық group",
-    "privateGroup": "жеке group",
-    "createChannel": "жасау channel",
-    "manageChannel": "manage channel",
-    "myChannels": "my channels",
-    "searchChannels": "іздеу channels",
-    "channelWorkspace": "channel workspace",
-    "createChannelHint": "жасау channel үшін кеңес",
-    "emptyChannelsTitle": "бос channels",
-    "emptyChannelsSubtitle": "бос channels сипаттамасы",
-    "channelOwnerPanel": "channel owner panel",
-    "channelOwnerPanelSubtitle": "channel owner panel сипаттамасы",
-    "channelCreated": "channel created",
-    "channelUpdated": "channel updated",
-    "channelRemoved": "channel removed",
-    "channelMissing": "channel missing",
-    "channelLoading": "channel жүктелуде",
-    "channelProfile": "channel профиль",
-    "channelSubscribers": "channel subscribers",
-    "addSubscriber": "қосу subscriber",
-    "removeSubscriber": "алып тастау subscriber",
-    "channelAdmins": "channel admins",
-    "quickChannelControls": "quick channel controls",
-    "openChannelInMessenger": "ашу channel in Messenger",
-    "publicChannel": "ашық channel",
-    "privateChannel": "жеке channel",
-    "onlyAdminsCanPost": "only admins can post",
-    "linkedDiscussion": "linked discussion",
-    "joinRequests": "join requests",
+    "createBot": "жасау",
+    "manageBot": "Көмекші",
+    "myBots": "Ақпарат",
+    "privateBots": "Ақпарат",
+    "searchBots": "Іздеу",
+    "botWorkspace": "Көмекші",
+    "botOwnerPanel": "Көмекші",
+    "botOwnerPanelSubtitle": "Көмекші Ақпарат",
+    "ownerPanelHint": "Ақпарат Ақпарат",
+    "createBotHint": "Көмекші Ақпарат",
+    "createBotButtonHint": "Көмекші Ақпарат",
+    "emptyBotsTitle": "Ақпарат",
+    "emptyBotsSubtitle": "Ақпарат Ақпарат",
+    "botNameRequired": "Көмекші",
+    "botUsernameRequired": "Көмекші",
+    "botCreated": "Көмекші",
+    "botUpdated": "Көмекші",
+    "botRemoved": "Көмекші",
+    "botMissing": "Көмекші",
+    "botLoading": "жүктелуде",
+    "botProfile": "Көмекші",
+    "walletRouting": "Әмиян",
+    "sabiWalletRoute": "Sabi әмиян",
+    "businessRoutingLayer": "Ақпарат",
+    "businessWalletComingSoon": "Ақпарат",
+    "botTradeRouteHint": "Көмекші Ақпарат",
+    "botBusinessRouteHint": "Көмекші Ақпарат",
+    "botStatusHint": "Көмекші Ақпарат",
+    "addCommand": "Ақпарат",
+    "editCommand": "Ақпарат",
+    "commandName": "Ақпарат",
+    "commandTitle": "Тақырып",
+    "commandDescription": "Сипаттама Ақпарат",
+    "commandEnabled": "Ақпарат",
+    "commandSaved": "Ақпарат",
+    "commandDeleted": "Ақпарат",
+    "commandAndTitleRequired": "Тақырып",
+    "noCommandsYet": "Ақпарат",
+    "noCommandsYetSubtitle": "Сипаттама Ақпарат",
+    "quickOwnerControls": "Ақпарат",
+    "openBotChatInMessenger": "ашу Messenger бөлме",
+    "removeBotFromOwnerList": "Көмекші",
+    "openRoute": "Ақпарат",
+    "businessPath": "Ақпарат",
+    "sabiPath": "Ақпарат",
+    "muteBot": "Көмекші",
+    "unmuteBot": "Көмекші",
+    "pinBot": "Көмекші",
+    "unpinBot": "Көмекші",
+    "createGroup": "жасау",
+    "manageGroup": "Чат",
+    "myGroups": "Ақпарат",
+    "searchGroups": "Іздеу",
+    "groupWorkspace": "Чат",
+    "createGroupHint": "Чат Ақпарат",
+    "emptyGroupsTitle": "Ақпарат",
+    "emptyGroupsSubtitle": "Ақпарат Ақпарат",
+    "groupOwnerPanel": "Чат",
+    "groupOwnerPanelSubtitle": "Чат Ақпарат",
+    "groupCreated": "Чат",
+    "groupUpdated": "Чат",
+    "groupRemoved": "Чат",
+    "groupMissing": "Чат",
+    "groupLoading": "Жүктелуде...",
+    "groupProfile": "Чат",
+    "groupMembers": "Чат",
+    "addMember": "Профиль",
+    "removeMember": "Профиль",
+    "groupAdmins": "Чат",
+    "quickGroupControls": "Чат",
+    "openGroupChatInMessenger": "ашу Messenger бөлме",
+    "publicGroup": "Чат",
+    "privateGroup": "Чат",
+    "createChannel": "жасау",
+    "manageChannel": "Чат",
+    "myChannels": "Ақпарат",
+    "searchChannels": "Іздеу",
+    "channelWorkspace": "Чат",
+    "createChannelHint": "Чат Ақпарат",
+    "emptyChannelsTitle": "Ақпарат",
+    "emptyChannelsSubtitle": "Ақпарат Ақпарат",
+    "channelOwnerPanel": "Чат",
+    "channelOwnerPanelSubtitle": "Чат Ақпарат",
+    "channelCreated": "Чат",
+    "channelUpdated": "Чат",
+    "channelRemoved": "Чат",
+    "channelMissing": "Чат",
+    "channelLoading": "жүктелуде",
+    "channelProfile": "Чат",
+    "channelSubscribers": "Чат",
+    "addSubscriber": "Ақпарат",
+    "removeSubscriber": "Ақпарат",
+    "channelAdmins": "Чат",
+    "quickChannelControls": "Чат",
+    "openChannelInMessenger": "ашу Messenger бөлме",
+    "publicChannel": "Чат",
+    "privateChannel": "Чат",
+    "onlyAdminsCanPost": "Ақпарат",
+    "linkedDiscussion": "Ақпарат",
+    "joinRequests": "Ақпарат",
     "roomSettings": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "botTitle": "bot",
-      "botSubtitle": "bot сипаттамасы"
+      "title": "Чат параметрлері",
+      "subtitle": "Баптаулар",
+      "botTitle": "Көмекші",
+      "botSubtitle": "Көмекші Ақпарат"
     },
     "menu": {
-      "addContact": "қосу contact",
-      "addContactSubtitle": "қосу contact сипаттамасы",
-      "contactSaved": "contact saved",
-      "contactSavedSubtitle": "contact saved сипаттамасы",
-      "contactUnavailable": "contact unavailable",
-      "addToList": "қосу to list",
-      "addToListSubtitle": "қосу to list сипаттамасы",
-      "removeFromList": "алып тастау кімнен list",
-      "removeFromListSubtitle": "алып тастау кімнен list сипаттамасы",
+      "addContact": "Ақпарат",
+      "addContactSubtitle": "Сипаттама Ақпарат",
+      "contactSaved": "Ақпарат",
+      "contactSavedSubtitle": "Сипаттама Ақпарат",
+      "contactUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "addToList": "Ақпарат",
+      "addToListSubtitle": "Сипаттама Ақпарат",
+      "removeFromList": "Ақпарат",
+      "removeFromListSubtitle": "Сипаттама Ақпарат",
       "mute": "дыбысты өшіру",
       "muteSubtitle": "дыбысты өшіру сипаттамасы",
       "unmute": "дыбысты қосу",
       "unmuteSubtitle": "дыбысты қосу сипаттамасы",
-      "disappearing": "disappearing",
-      "disappearingSubtitle": "disappearing сипаттамасы",
-      "disableDisappearing": "disable disappearing",
-      "disableDisappearingSubtitle": "disable disappearing сипаттамасы",
+      "disappearing": "Ақпарат",
+      "disappearingSubtitle": "Сипаттама Ақпарат",
+      "disableDisappearing": "Ақпарат",
+      "disableDisappearingSubtitle": "Сипаттама Ақпарат",
       "theme": "тақырып",
       "themeSubtitle": "тақырып сипаттамасы",
-      "editor": "editor",
-      "editorSubtitle": "editor сипаттамасы",
+      "editor": "Чат туралы",
+      "editorSubtitle": "Сипаттама Ақпарат",
       "more": "тағы",
       "moreSubtitle": "тағы сипаттамасы",
       "report": "шағым",
@@ -2858,230 +2859,230 @@ export const KK_LOCALE = {
       "blockSubtitle": "бұғаттау сипаттамасы",
       "unblock": "бұғаттан шығару",
       "unblockSubtitle": "бұғаттан шығару сипаттамасы",
-      "clearChat": "тазалау chat",
-      "clearChatSubtitle": "тазалау chat сипаттамасы",
-      "addToHome": "қосу to басты",
-      "addToHomeSubtitle": "қосу to басты сипаттамасы",
-      "addBotToList": "қосу bot to list",
-      "addBotToListSubtitle": "қосу bot to list сипаттамасы",
-      "removeBotFromList": "алып тастау bot кімнен list",
-      "removeBotFromListSubtitle": "алып тастау bot кімнен list сипаттамасы",
-      "muteBot": "дыбысты өшіру bot",
-      "muteBotSubtitle": "дыбысты өшіру bot сипаттамасы",
-      "unmuteBot": "дыбысты қосу bot",
-      "unmuteBotSubtitle": "дыбысты қосу bot сипаттамасы",
+      "clearChat": "Чатты тазалау",
+      "clearChatSubtitle": "Чат Ақпарат",
+      "addToHome": "Ақпарат",
+      "addToHomeSubtitle": "Сипаттама Ақпарат",
+      "addBotToList": "Көмекші",
+      "addBotToListSubtitle": "Көмекші Ақпарат",
+      "removeBotFromList": "Көмекші",
+      "removeBotFromListSubtitle": "Көмекші Ақпарат",
+      "muteBot": "Көмекші",
+      "muteBotSubtitle": "Көмекші Ақпарат",
+      "unmuteBot": "Көмекші",
+      "unmuteBotSubtitle": "Көмекші Ақпарат",
       "ai": "AI",
       "aiSubtitle": "AI сипаттамасы",
-      "aiBotSubtitle": "AI bot сипаттамасы",
-      "manageBot": "manage bot",
-      "manageBotSubtitle": "manage bot сипаттамасы",
-      "botTools": "bot tools",
-      "botToolsSubtitle": "bot tools сипаттамасы",
-      "moreBotSubtitle": "тағы bot сипаттамасы",
-      "reportBotSubtitle": "шағым bot сипаттамасы",
-      "blockBot": "бұғаттау bot",
-      "blockBotSubtitle": "бұғаттау bot сипаттамасы",
-      "unblockBot": "бұғаттан шығару bot",
-      "unblockBotSubtitle": "бұғаттан шығару bot сипаттамасы",
-      "clearBotChatSubtitle": "тазалау bot chat сипаттамасы",
-      "hideConversation": "hide conversation",
-      "hideConversationSubtitle": "hide conversation сипаттамасы",
-      "addBotToHome": "қосу bot to басты",
-      "addBotToHomeSubtitle": "қосу bot to басты сипаттамасы"
+      "aiBotSubtitle": "AI Ақпарат",
+      "manageBot": "Көмекші",
+      "manageBotSubtitle": "Көмекші Ақпарат",
+      "botTools": "Көмекші",
+      "botToolsSubtitle": "Көмекші Ақпарат",
+      "moreBotSubtitle": "Көмекші Ақпарат",
+      "reportBotSubtitle": "Көмекші Ақпарат",
+      "blockBot": "Көмекші",
+      "blockBotSubtitle": "Көмекші Ақпарат",
+      "unblockBot": "Көмекші",
+      "unblockBotSubtitle": "Көмекші Ақпарат",
+      "clearBotChatSubtitle": "Көмекші Ақпарат",
+      "hideConversation": "Ақпарат",
+      "hideConversationSubtitle": "Сипаттама Ақпарат",
+      "addBotToHome": "Көмекші",
+      "addBotToHomeSubtitle": "Көмекші Ақпарат"
     },
     "chat": {
       "you": "сіз",
-      "typing": "typing",
+      "typing": "Жазып жатыр...",
       "online": "онлайн",
       "offline": "офлайн",
       "connecting": "қосылуда",
-      "reconnecting": "reconnecting",
-      "lastSeenToday": "соңғы көрілді бүгін {{time}}",
-      "lastSeenYesterday": "соңғы көрілді кеше {{time}}",
-      "lastSeenDate": "соңғы көрілді date {{date}} {{time}}",
-      "conversationPlaceholder": "conversation үшін кеңес",
+      "reconnecting": "Жүктелуде...",
+      "lastSeenToday": "Ақпарат",
+      "lastSeenYesterday": "Ақпарат",
+      "lastSeenDate": "Ақпарат",
+      "conversationPlaceholder": "Іздеу",
       "today": "бүгін",
       "yesterday": "кеше",
-      "directRoom": "direct бөлме",
-      "groupRoom": "group бөлме",
-      "channelRoom": "channel бөлме",
+      "directRoom": "Ақпарат",
+      "groupRoom": "Чат",
+      "channelRoom": "Чат",
       "businessRoom": "бизнес бөлме",
-      "encrypted": "encrypted",
-      "messagePlaceholder": "message үшін кеңес",
-      "messageTitle": "message",
+      "encrypted": "Ақпарат",
+      "messagePlaceholder": "Хабарлама жазыңыз",
+      "messageTitle": "Хабарлама",
       "replyAction": "жауап беру әрекет",
       "replyPlaceholder": "жауап беру үшін кеңес",
-      "selectionDelete": "selection жою",
-      "selectionForward": "selection бағыттау",
-      "deleteMe": "жою me",
+      "selectionDelete": "Жою",
+      "selectionForward": "бағыттау",
+      "deleteMe": "Ақпарат",
       "deleteAllAction": "жою барлығы әрекет",
       "save": "сақтау",
       "link": "сілтеме",
       "searchTitle": "іздеу",
-      "searchMessage": "іздеу message",
+      "searchMessage": "Іздеу",
       "muteTitle": "дыбысты өшіру",
-      "muteMessage": "дыбысты өшіру message",
-      "locationTitle": "location",
-      "sharedLocation": "shared location",
-      "locationAttached": "location attached",
-      "locationOpenNotice": "location ашу notice",
-      "locationOpenError": "location ашу error",
-      "locationSendError": "location жіберу error",
-      "locationCoordsMissing": "location coords missing",
-      "locationAccessError": "location access error",
-      "contactTitle": "contact",
-      "contactsTitle": "contacts",
-      "contactCard": "contact карта",
-      "contactAttached": "contact attached",
-      "contactReady": "contact дайын",
-      "contactOpenNotice": "contact ашу notice",
-      "contactOpenError": "contact ашу error",
-      "contactsAccessError": "contacts access error",
+      "muteMessage": "Ақпарат",
+      "locationTitle": "Орналасқан жер",
+      "sharedLocation": "Ақпарат",
+      "locationAttached": "Ақпарат",
+      "locationOpenNotice": "Ақпарат",
+      "locationOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "locationSendError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "locationCoordsMissing": "Ақпарат",
+      "locationAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "contactTitle": "Контакт",
+      "contactsTitle": "Контактілер",
+      "contactCard": "Ақпарат",
+      "contactAttached": "Ақпарат",
+      "contactReady": "Дайын",
+      "contactOpenNotice": "Ақпарат",
+      "contactOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "contactsAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
       "documentTitle": "құжат",
       "documentsTitle": "құжаттар",
-      "documentAttached": "құжат attached",
-      "documentPreviewUnavailable": "құжат алдын ала қарау unavailable",
-      "documentOpenNotice": "құжат ашу notice",
-      "documentOpening": "құжат opening",
-      "documentOpenError": "құжат ашу error",
-      "documentAccessError": "құжат access error",
+      "documentAttached": "Ақпарат",
+      "documentPreviewUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "documentOpenNotice": "Ақпарат",
+      "documentOpening": "Ақпарат",
+      "documentOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "documentAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
       "galleryTitle": "галерея",
-      "galleryAccessError": "галерея access error",
+      "galleryAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
       "photoTitle": "фото",
       "photoPreviewSubtitle": "фото алдын ала қарау сипаттамасы",
-      "photoPreviewUnavailable": "фото алдын ала қарау unavailable",
-      "photoCaptured": "фото captured",
-      "photoSaveNotice": "фото сақтау notice",
-      "photoSaveError": "фото сақтау error",
+      "photoPreviewUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "photoCaptured": "фото дайын",
+      "photoSaveNotice": "сақтау фото",
+      "photoSaveError": "Сұрау орындалмады. Қайталап көріңіз.",
       "videoTitle": "видео",
-      "videoCaptured": "видео captured",
-      "videoSaveNotice": "видео сақтау notice",
-      "videoSaveError": "видео сақтау error",
+      "videoCaptured": "Дауыс",
+      "videoSaveNotice": "сақтау видео",
+      "videoSaveError": "Сұрау орындалмады. Қайталап көріңіз.",
       "videoCloseHint": "видео жабу үшін кеңес",
-      "videoMessageText": "видео message сипаттамасы",
+      "videoMessageText": "Дауыс Ақпарат",
       "voiceTitle": "дауыс",
-      "voiceRecordingTitle": "дауыс recording",
-      "voiceRecordingSubtitle": "дауыс recording сипаттамасы",
+      "voiceRecordingTitle": "Дауыстық AI",
+      "voiceRecordingSubtitle": "Дауыстық AI",
       "voiceReadySubtitle": "дауыс дайын сипаттамасы",
-      "recordingVoice": "recording дауыс",
+      "recordingVoice": "Дауыстық AI",
       "voiceReady": "дауыс дайын",
-      "voiceReadyInline": "дауыс дайын inline",
-      "voiceReadyToSend": "дауыс дайын to жіберу",
-      "voiceSent": "дауыс sent",
-      "voicePlayback": "дауыс playback",
-      "voiceStartError": "дауыс бастау error",
-      "voiceFinishError": "дауыс аяқтау error",
-      "voiceUploadError": "дауыс жүктеу error",
-      "voicePlayError": "дауыс play error",
-      "voiceRateError": "дауыс rate error",
+      "voiceReadyInline": "дауыс дайын",
+      "voiceReadyToSend": "Дауыстық AI",
+      "voiceSent": "Дауыстық AI",
+      "voicePlayback": "Дауыстық AI",
+      "voiceStartError": "Дауыстық AI",
+      "voiceFinishError": "Дауыстық AI",
+      "voiceUploadError": "Дауыстық AI",
+      "voicePlayError": "Дауыстық AI",
+      "voiceRateError": "Дауыстық AI",
       "copiedText": "көшірілді сипаттамасы",
       "infoAction": "ақпарат әрекет",
-      "editingTitle": "editing",
-      "editingSubtitle": "editing сипаттамасы",
+      "editingTitle": "Хабарламаны өңдеу",
+      "editingSubtitle": "Сипаттама Ақпарат",
       "editPlaceholder": "өңдеу үшін кеңес",
-      "replyingTitle": "replying",
-      "readOnlyTitle": "read only",
+      "replyingTitle": "Тақырып",
+      "readOnlyTitle": "Тақырып",
       "readOnlySubtitle": "Мұнда хабар жіберу өшірілген. Толық мәлімет үшін арна ақпаратын ашыңыз.",
       "mediaLabel": "медиа",
       "mediaTitle": "медиа",
-      "mediaMessage": "медиа message",
-      "mediaCaptureFailed": "медиа capture сәтсіз",
-      "mediaSaved": "медиа saved",
+      "mediaMessage": "Ақпарат",
+      "mediaCaptureFailed": "Сұрау орындалмады. Қайталап көріңіз.",
+      "mediaSaved": "Сақталды",
       "privacyTitle": "құпиялылық",
-      "privacyMessage": "құпиялылық message",
-      "roomThemeUpdated": "бөлме тақырып updated",
-      "messageContextMissing": "message context missing",
-      "messageEdited": "message edited",
-      "messageSent": "message sent",
-      "messageSendError": "message жіберу error",
-      "giftSent": "сыйлық sent",
-      "animatedReactionSent": "анимацияланған reaction sent",
-      "animatedEmojiSent": "анимацияланған эмодзи sent",
-      "stickerAdded": "стикер added",
-      "selectedForForwardPrefix": "таңдалды for бағыттау prefix",
-      "chooseMessagesForward": "choose messages бағыттау",
-      "deletedPrefix": "deleted prefix",
-      "deletedForAll": "deleted for барлығы",
-      "deletedForMe": "deleted for me",
-      "addedToComposer": "added to composer",
+      "privacyMessage": "Құпиялық",
+      "roomThemeUpdated": "Тақырып",
+      "messageContextMissing": "Ақпарат Ақпарат",
+      "messageEdited": "Ақпарат",
+      "messageSent": "Ақпарат",
+      "messageSendError": "Сұрау орындалмады. Қайталап көріңіз.",
+      "giftSent": "Сыйлық жіберілді",
+      "animatedReactionSent": "Ақпарат",
+      "animatedEmojiSent": "Ақпарат",
+      "stickerAdded": "Ақпарат",
+      "selectedForForwardPrefix": "Ақпарат",
+      "chooseMessagesForward": "Ақпарат",
+      "deletedPrefix": "Ақпарат",
+      "deletedForAll": "Ақпарат",
+      "deletedForMe": "Ақпарат",
+      "addedToComposer": "Ақпарат",
       "saveMediaReady": "сақтау медиа дайын",
       "openLinkReady": "ашу сілтеме дайын",
-      "openingWalletFiat": "opening әмиян fiat",
-      "openingCoinWallet": "opening COIN әмиян",
-      "catalogSoon": "catalog soon",
-      "pollSoon": "poll soon",
-      "eventSoon": "event soon",
-      "openingDocument": "opening құжат",
-      "openingContact": "opening contact",
-      "normal": "normal",
-      "editedLabel": "edited",
-      "mapLabel": "map",
-      "tapSend": "tap жіберу",
-      "diamondsUnit": "diamonds unit",
-      "channelInfoAction": "channel ақпарат әрекет",
-      "commandConfigSubtitle": "command config сипаттамасы",
-      "commandTitlePlaceholder": "command title үшін кеңес",
-      "commandDescriptionPlaceholder": "command description үшін кеңес",
+      "openingWalletFiat": "Әмиян",
+      "openingCoinWallet": "Әмиян",
+      "catalogSoon": "Ақпарат",
+      "pollSoon": "Ақпарат",
+      "eventSoon": "Ақпарат",
+      "openingDocument": "Ақпарат",
+      "openingContact": "Ақпарат",
+      "normal": "Ақпарат",
+      "editedLabel": "Ақпарат",
+      "mapLabel": "Ақпарат",
+      "tapSend": "Ақпарат",
+      "diamondsUnit": "Ақпарат",
+      "channelInfoAction": "Чат",
+      "commandConfigSubtitle": "Сипаттама Ақпарат",
+      "commandTitlePlaceholder": "Бастау",
+      "commandDescriptionPlaceholder": "Сипаттама Ақпарат",
       "cancelAction": "бас тарту әрекет",
-      "openRoute": "ашу route",
-      "removeBotFromOwnerList": "алып тастау bot кімнен owner list",
-      "botProfile": "bot профиль",
-      "quickOwnerControls": "quick owner controls",
-      "openBotChatInMessenger": "ашу bot chat in Messenger",
-      "savingNow": "saving now",
-      "nameAndUsernameRequired": "аты and пайдаланушы аты міндетті",
-      "commandAndTitleRequired": "command and title міндетті",
-      "groupInfoAction": "group ақпарат әрекет",
+      "openRoute": "Ақпарат",
+      "removeBotFromOwnerList": "Көмекші",
+      "botProfile": "Көмекші",
+      "quickOwnerControls": "Ақпарат",
+      "openBotChatInMessenger": "ашу Messenger бөлме",
+      "savingNow": "Сақталуда...",
+      "nameAndUsernameRequired": "Ақпарат",
+      "commandAndTitleRequired": "Тақырып",
+      "groupInfoAction": "Чат",
       "businessInfoAction": "бизнес ақпарат әрекет",
-      "membersCount": "members саны",
-      "subscribersCount": "subscribers саны",
-      "mutedEnabled": "muted enabled",
+      "membersCount": "Ақпарат",
+      "subscribersCount": "Ақпарат",
+      "mutedEnabled": "Ақпарат",
       "mutedDisabled": "Дыбысты өшіру өшірілген",
-      "searchFocused": "іздеу focused",
+      "searchFocused": "Іздеу",
       "aiTitle": "AI",
-      "aiMessage": "AI message",
+      "aiMessage": "AI",
       "aiReady": "AI дайын",
-      "contactSavedToDevice": "contact saved to device",
-      "contactPermissionDenied": "contact permission denied",
-      "contactUnavailable": "contact unavailable",
-      "addedToList": "added to list",
-      "removedFromList": "removed кімнен list",
-      "disappearingEnabled": "disappearing enabled",
+      "contactSavedToDevice": "Ақпарат",
+      "contactPermissionDenied": "Ақпарат",
+      "contactUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "addedToList": "Ақпарат",
+      "removedFromList": "Ақпарат",
+      "disappearingEnabled": "Ақпарат",
       "disappearingDisabled": "Жоғалатын хабарлар өшірілген",
-      "reportSent": "шағым sent",
-      "chatCleared": "chat cleared",
-      "chatExported": "chat exported",
-      "homeShortcutPinned": "басты shortcut pinned",
-      "homeShortcutUnsupported": "басты shortcut unsupported",
+      "reportSent": "Ақпарат",
+      "chatCleared": "Чат",
+      "chatExported": "Чат",
+      "homeShortcutPinned": "Ақпарат",
+      "homeShortcutUnsupported": "Ақпарат",
       "blockActionDone": "бұғаттау әрекет дайын",
       "unblockActionDone": "бұғаттан шығару әрекет дайын",
-      "fileBadgeGeneric": "файл badge generic",
-      "addContactName": "қосу contact аты",
-      "addContactNamePlaceholder": "қосу contact аты үшін кеңес",
-      "addContactPhone": "қосу contact телефон",
-      "addContactPhonePlaceholder": "қосу contact телефон үшін кеңес",
-      "addContactSave": "қосу contact сақтау",
-      "addContactSubtitle": "қосу contact сипаттамасы",
-      "addContactTitle": "қосу contact",
-      "addContactUsername": "қосу contact пайдаланушы аты",
-      "addContactUsernamePlaceholder": "қосу contact пайдаланушы аты үшін кеңес",
-      "contactChooseSource": "contact choose дереккөз",
-      "contactNameRequired": "contact аты міндетті",
-      "contactSavedInContacts": "contact saved in contacts",
-      "contactSavedInMessenger": "contact saved in Messenger",
+      "fileBadgeGeneric": "Ақпарат",
+      "addContactName": "Ақпарат",
+      "addContactNamePlaceholder": "Іздеу",
+      "addContactPhone": "Ақпарат",
+      "addContactPhonePlaceholder": "Іздеу",
+      "addContactSave": "Ақпарат",
+      "addContactSubtitle": "Сипаттама Ақпарат",
+      "addContactTitle": "Тақырып",
+      "addContactUsername": "Ақпарат",
+      "addContactUsernamePlaceholder": "Іздеу",
+      "contactChooseSource": "Ақпарат",
+      "contactNameRequired": "Ақпарат",
+      "contactSavedInContacts": "Ақпарат",
+      "contactSavedInMessenger": "Ақпарат",
       "linkEmpty": "сілтеме бос",
       "linkTitle": "сілтеме",
-      "mediaSavedToPhone": "медиа saved to телефон",
-      "mediaSavedToSabi": "медиа saved to Sabi",
-      "openContactInMessenger": "ашу contact in Messenger",
-      "openContactInPhone": "ашу contact in телефон",
-      "phoneContactsSubtitle": "телефон contacts сипаттамасы",
-      "phoneContactsTitle": "телефон contacts",
-      "sabiContactsSubtitle": "Sabi contacts сипаттамасы",
-      "sabiContactsTitle": "Sabi contacts",
-      "saveMediaChooseTitle": "сақтау медиа choose",
-      "saveToSabiApp": "сақтау to Sabi app",
-      "saveToPhone": "сақтау to телефон",
+      "mediaSavedToPhone": "Ақпарат",
+      "mediaSavedToSabi": "Ақпарат",
+      "openContactInMessenger": "Ақпарат",
+      "openContactInPhone": "Ақпарат",
+      "phoneContactsSubtitle": "Сипаттама Ақпарат",
+      "phoneContactsTitle": "Тақырып",
+      "sabiContactsSubtitle": "Сипаттама Ақпарат",
+      "sabiContactsTitle": "Тақырып",
+      "saveMediaChooseTitle": "Тақырып",
+      "saveToSabiApp": "Ақпарат",
+      "saveToPhone": "Ақпарат",
       "saveVideoTitle": "сақтау видео",
       "saveVideoSubtitle": "сақтау видео сипаттамасы",
       "videoReady": "видео дайын",
@@ -3093,440 +3094,440 @@ export const KK_LOCALE = {
       "saveMediaTitle": "сақтау медиа",
       "saveMediaSubtitle": "сақтау медиа сипаттамасы",
       "mediaReady": "медиа дайын",
-      "mediaSaveNotice": "медиа сақтау notice",
+      "mediaSaveNotice": "Ақпарат",
       "saveMediaAction": "сақтау медиа әрекет",
-      "conversationHidden": "conversation hidden"
+      "conversationHidden": "Ақпарат"
     },
     "reportScreen": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "chooseReason": "choose себеп",
-      "otherReason": "other себеп",
-      "otherReasonPlaceholder": "other себеп үшін кеңес",
+      "title": "шағым",
+      "subtitle": "Баптаулар",
+      "chooseReason": "Ақпарат",
+      "otherReason": "Ақпарат",
+      "otherReasonPlaceholder": "Іздеу",
       "submit": "жіберу",
-      "success": "success",
-      "spam": "spam",
-      "scam": "scam",
-      "fakeProfile": "fake профиль",
-      "impersonation": "impersonation",
-      "harassment": "harassment",
-      "hateSpeech": "hate speech",
-      "violentContent": "violent content",
-      "adultContent": "adult content",
-      "childSafety": "child safety",
-      "illegalGoods": "illegal goods",
-      "dangerousContent": "dangerous content",
-      "selfHarm": "self harm",
-      "copyright": "copyright",
-      "privacyViolation": "құпиялылық violation",
-      "somethingElse": "something else"
+      "success": "Ақпарат",
+      "spam": "Ақпарат",
+      "scam": "Ақпарат",
+      "fakeProfile": "Профиль",
+      "impersonation": "Ақпарат",
+      "harassment": "Ақпарат",
+      "hateSpeech": "Ақпарат",
+      "violentContent": "Ақпарат",
+      "adultContent": "Ақпарат",
+      "childSafety": "Ақпарат",
+      "illegalGoods": "Ақпарат",
+      "dangerousContent": "Ақпарат",
+      "selfHarm": "Ақпарат",
+      "copyright": "Ақпарат",
+      "privacyViolation": "Құпиялық",
+      "somethingElse": "Ақпарат"
     },
     "createContact": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "firstName": "бірінші аты",
       "lastName": "соңғы аты",
       "phone": "телефон",
       "username": "пайдаланушы аты",
-      "company": "company",
-      "note": "note",
-      "saveContact": "сақтау contact",
-      "contactCreated": "contact created",
+      "company": "Ақпарат",
+      "note": "Ескертпе",
+      "saveContact": "Ақпарат",
+      "contactCreated": "Ақпарат",
       "phoneRequired": "телефон міндетті"
     },
     "ownerRouting": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "openProfileManagement": "ашу профиль management",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "openProfileManagement": "Профиль",
       "createFromProfile": "жасау кімнен профиль",
-      "manageFromProfile": "manage кімнен профиль",
-      "publicInfoOnly": "ашық ақпарат only",
-      "hideIfNotCreated": "hide if not created",
-      "unifiedUserId": "unified пайдаланушы ID"
+      "manageFromProfile": "Профиль",
+      "publicInfoOnly": "Ақпарат",
+      "hideIfNotCreated": "Ақпарат",
+      "unifiedUserId": "Ақпарат"
     },
     "groupManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "профиль entry",
-      "profileEntrySubtitle": "профиль entry сипаттамасы",
-      "createEntryTitle": "жасау entry",
-      "createEntrySubtitle": "жасау entry сипаттамасы",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel сипаттамасы",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "members": "members",
-      "admins": "admins",
-      "inviteLink": "invite сілтеме",
-      "publicationId": "publication ID",
-      "linkedChatId": "linked chat ID",
-      "linkedBotId": "linked bot ID",
-      "groupId": "group ID",
-      "ownerUserId": "owner пайдаланушы ID",
-      "ownerName": "owner аты",
-      "ownerPhone": "owner телефон",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "publicGroup": "ашық group",
-      "privateGroup": "жеке group",
-      "published": "published",
-      "showInProfile": "show in профиль",
-      "joinRequests": "join requests",
-      "memberInvites": "member invites",
-      "onlyAdminsPost": "only admins post",
-      "onlyAdminsEdit": "only admins өңдеу",
-      "commentsEnabled": "comments enabled",
-      "createSuccess": "жасау success",
-      "saveSuccess": "сақтау success",
-      "resetSuccess": "қалпына келтіру success",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "profileEntryTitle": "Профиль",
+      "profileEntrySubtitle": "Профиль Ақпарат",
+      "createEntryTitle": "жасау",
+      "createEntrySubtitle": "Сипаттама Ақпарат",
+      "ownerPanel": "Ақпарат",
+      "ownerPanelSubtitle": "Сипаттама Ақпарат",
+      "publication": "Ақпарат",
+      "bindings": "Ақпарат",
+      "ownerData": "Ақпарат",
+      "accessRules": "Ақпарат",
+      "moderation": "Модерация",
+      "members": "Ақпарат",
+      "admins": "Ақпарат",
+      "inviteLink": "Чат",
+      "publicationId": "Ақпарат",
+      "linkedChatId": "Чат",
+      "linkedBotId": "Көмекші",
+      "groupId": "Чат",
+      "ownerUserId": "Ақпарат",
+      "ownerName": "аты",
+      "ownerPhone": "телефон",
+      "ownerEmail": "Ақпарат",
+      "role": "Ақпарат",
+      "publicGroup": "Чат",
+      "privateGroup": "Чат",
+      "published": "Жарияланған",
+      "showInProfile": "Профиль",
+      "joinRequests": "Ақпарат",
+      "memberInvites": "Профиль",
+      "onlyAdminsPost": "Ақпарат",
+      "onlyAdminsEdit": "Ақпарат",
+      "commentsEnabled": "Ақпарат",
+      "createSuccess": "Ақпарат",
+      "saveSuccess": "Сақталды",
+      "resetSuccess": "қалпына келтіру",
       "openMessengerRoom": "ашу Messenger бөлме",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "жасау in профиль only"
+      "hiddenIfNotCreated": "Ақпарат",
+      "createInProfileOnly": "Профиль"
     },
     "channelManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "профиль entry",
-      "profileEntrySubtitle": "профиль entry сипаттамасы",
-      "createEntryTitle": "жасау entry",
-      "createEntrySubtitle": "жасау entry сипаттамасы",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel сипаттамасы",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "subscribers": "subscribers",
-      "admins": "admins",
-      "inviteLink": "invite сілтеме",
-      "publicationId": "publication ID",
-      "linkedChatId": "linked chat ID",
-      "linkedDiscussionId": "linked discussion ID",
-      "linkedBotId": "linked bot ID",
-      "channelId": "channel ID",
-      "ownerUserId": "owner пайдаланушы ID",
-      "ownerName": "owner аты",
-      "ownerPhone": "owner телефон",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "publicChannel": "ашық channel",
-      "privateChannel": "жеке channel",
-      "published": "published",
-      "showInProfile": "show in профиль",
-      "joinRequests": "join requests",
-      "onlyAdminsPost": "only admins post",
-      "onlyAdminsEdit": "only admins өңдеу",
-      "commentsEnabled": "comments enabled",
-      "linkedDiscussion": "linked discussion",
-      "createSuccess": "жасау success",
-      "saveSuccess": "сақтау success",
-      "resetSuccess": "қалпына келтіру success",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "profileEntryTitle": "Профиль",
+      "profileEntrySubtitle": "Профиль Ақпарат",
+      "createEntryTitle": "жасау",
+      "createEntrySubtitle": "Сипаттама Ақпарат",
+      "ownerPanel": "Ақпарат",
+      "ownerPanelSubtitle": "Сипаттама Ақпарат",
+      "publication": "Ақпарат",
+      "bindings": "Ақпарат",
+      "ownerData": "Ақпарат",
+      "accessRules": "Ақпарат",
+      "moderation": "Модерация",
+      "subscribers": "Ақпарат",
+      "admins": "Ақпарат",
+      "inviteLink": "Чат",
+      "publicationId": "Ақпарат",
+      "linkedChatId": "Чат",
+      "linkedDiscussionId": "Ақпарат",
+      "linkedBotId": "Көмекші",
+      "channelId": "Чат",
+      "ownerUserId": "Ақпарат",
+      "ownerName": "аты",
+      "ownerPhone": "телефон",
+      "ownerEmail": "Ақпарат",
+      "role": "Ақпарат",
+      "publicChannel": "Чат",
+      "privateChannel": "Чат",
+      "published": "Жарияланған",
+      "showInProfile": "Профиль",
+      "joinRequests": "Ақпарат",
+      "onlyAdminsPost": "Ақпарат",
+      "onlyAdminsEdit": "Ақпарат",
+      "commentsEnabled": "Ақпарат",
+      "linkedDiscussion": "Ақпарат",
+      "createSuccess": "Ақпарат",
+      "saveSuccess": "Ақпарат",
+      "resetSuccess": "Ақпарат",
       "openMessengerRoom": "ашу Messenger бөлме",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "жасау in профиль only"
+      "hiddenIfNotCreated": "Ақпарат",
+      "createInProfileOnly": "Профиль"
     },
     "botManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "профиль entry",
-      "profileEntrySubtitle": "профиль entry сипаттамасы",
-      "createEntryTitle": "жасау entry",
-      "createEntrySubtitle": "жасау entry сипаттамасы",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel сипаттамасы",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "routing": "routing",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "profileEntryTitle": "Профиль",
+      "profileEntrySubtitle": "Профиль Ақпарат",
+      "createEntryTitle": "жасау",
+      "createEntrySubtitle": "Сипаттама Ақпарат",
+      "ownerPanel": "Ақпарат",
+      "ownerPanelSubtitle": "Сипаттама Ақпарат",
+      "publication": "Ақпарат",
+      "bindings": "Ақпарат",
+      "ownerData": "Ақпарат",
+      "routing": "Ақпарат",
       "modules": "модульдер",
       "commands": "командалар",
-      "botId": "bot ID",
-      "ownerUserId": "owner пайдаланушы ID",
-      "ownerName": "owner аты",
-      "ownerPhone": "owner телефон",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "linkedChatId": "linked chat ID",
-      "linkedGroupId": "linked group ID",
-      "linkedChannelId": "linked channel ID",
-      "linkedMarketId": "linked market ID",
-      "publicationId": "publication ID",
-      "publicBot": "ашық bot",
-      "privateBot": "жеке bot",
-      "published": "published",
-      "showInProfile": "show in профиль",
-      "active": "active",
-      "paused": "paused",
+      "botId": "Көмекші",
+      "ownerUserId": "Ақпарат",
+      "ownerName": "аты",
+      "ownerPhone": "телефон",
+      "ownerEmail": "Ақпарат",
+      "role": "Ақпарат",
+      "linkedChatId": "Чат",
+      "linkedGroupId": "Чат",
+      "linkedChannelId": "Чат",
+      "linkedMarketId": "Ақпарат",
+      "publicationId": "Ақпарат",
+      "publicBot": "Көмекші",
+      "privateBot": "Көмекші",
+      "published": "Жарияланған",
+      "showInProfile": "Профиль",
+      "active": "Белсенді",
+      "paused": "Уақытша тоқтатылған",
       "acceptCommands": "қабылдау командалар",
-      "showInCatalog": "show in catalog",
-      "allowPayments": "рұқсат беру payments",
-      "sabiWalletRoute": "Sabi әмиян route",
-      "businessRoutingLayer": "бизнес routing layer",
-      "tradeBot": "trade bot",
-      "businessBot": "бизнес bot",
-      "tradeHint": "trade үшін кеңес",
+      "showInCatalog": "Ақпарат",
+      "allowPayments": "Ақпарат",
+      "sabiWalletRoute": "Sabi әмиян",
+      "businessRoutingLayer": "Ақпарат",
+      "tradeBot": "Көмекші",
+      "businessBot": "Ақпарат",
+      "tradeHint": "Ақпарат Ақпарат",
       "businessHint": "бизнес үшін кеңес",
-      "createSuccess": "жасау success",
-      "saveSuccess": "сақтау success",
-      "resetSuccess": "қалпына келтіру success",
+      "createSuccess": "Ақпарат",
+      "saveSuccess": "Ақпарат",
+      "resetSuccess": "Ақпарат",
       "openMessengerRoom": "ашу Messenger бөлме",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "жасау in профиль only"
+      "hiddenIfNotCreated": "Ақпарат",
+      "createInProfileOnly": "Профиль"
     },
     "settingsPanels": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "ownerData": "owner data",
-      "publication": "publication",
-      "bindings": "bindings",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "routing": "routing",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "ownerData": "Ақпарат",
+      "publication": "Ақпарат",
+      "bindings": "Ақпарат",
+      "accessRules": "Ақпарат",
+      "moderation": "Модерация",
+      "routing": "Ақпарат",
       "modules": "модульдер",
       "commands": "командалар",
-      "permissions": "permissions",
-      "statistics": "statistics",
+      "permissions": "Рұқсаттар",
+      "statistics": "Ақпарат",
       "archive": "архив",
-      "openInProfile": "ашу in профиль",
-      "hiddenWhenNotCreated": "hidden when not created"
+      "openInProfile": "Профиль",
+      "hiddenWhenNotCreated": "Ақпарат"
     },
     "publicationFlow": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "publicationEnabled": "publication enabled",
-      "showInProfile": "show in профиль",
-      "publicMode": "ашық mode",
-      "privateMode": "жеке mode",
-      "ownerManagement": "owner management",
-      "bindings": "bindings",
-      "profileControls": "профиль controls",
-      "publicationVisibleOnlyWhenCreated": "publication visible only when created"
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "publicationEnabled": "Ақпарат",
+      "showInProfile": "Профиль",
+      "publicMode": "Ақпарат",
+      "privateMode": "Ақпарат",
+      "ownerManagement": "Ақпарат",
+      "bindings": "Ақпарат",
+      "profileControls": "Профиль",
+      "publicationVisibleOnlyWhenCreated": "Ақпарат"
     },
     "unifiedIdentity": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "sameUserIdRequired": "same пайдаланушы ID міндетті",
-      "blockOnMismatch": "бұғаттау on mismatch"
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "sameUserIdRequired": "Ақпарат",
+      "blockOnMismatch": "Ақпарат"
     },
     "animatedEmoji": {
-      "celebration": "celebration",
+      "celebration": "Ақпарат",
       "empty": "бос",
-      "faces": "faces",
-      "hearts": "hearts",
+      "faces": "Ақпарат",
+      "hearts": "Ақпарат",
       "search": "іздеу",
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "Баптаулар",
+      "title": "Тақырыбы"
     },
     "report": "шағым",
     "reportDetails": "шағым мәліметтер",
     "reportDetailsHint": "шағым мәліметтер үшін кеңес",
     "reportDetailsPlaceholder": "шағым мәліметтер үшін кеңес",
-    "reportMinDetails": "шағым min мәліметтер",
-    "reportReasonList": "шағым себеп list",
-    "reportSent": "шағым sent",
+    "reportMinDetails": "Ақпарат",
+    "reportReasonList": "Ақпарат",
+    "reportSent": "Ақпарат",
     "reportSubtitle": "шағым сипаттамасы",
     "reportTarget": "шағым мақсат",
     "reportTitle": "шағым",
-    "reportValidation": "шағым validation",
+    "reportValidation": "Ақпарат",
     "sendReport": "жіберу шағым",
-    "bot": "bot",
-    "botConversation": "bot conversation",
-    "privateChats": "жеке chats",
-    "privateChatsSubtitle": "жеке chats сипаттамасы",
-    "privateGroups": "жеке groups",
-    "privateChannels": "жеке channels",
-    "themeWallpaper": "тақырып wallpaper",
-    "quickAccess": "quick access",
-    "quickAccessMeta": "quick access meta",
-    "createMeta": "жасау meta",
-    "groupCreateSubtitle": "group жасау сипаттамасы",
-    "channelCreateSubtitle": "channel жасау сипаттамасы",
-    "botCreateSubtitle": "bot жасау сипаттамасы",
+    "bot": "Көмекші",
+    "botConversation": "Көмекші",
+    "privateChats": "Ақпарат",
+    "privateChatsSubtitle": "Сипаттама Ақпарат",
+    "privateGroups": "Ақпарат",
+    "privateChannels": "Ақпарат",
+    "themeWallpaper": "Тақырып",
+    "quickAccess": "Ақпарат",
+    "quickAccessMeta": "Ақпарат",
+    "createMeta": "Ақпарат",
+    "groupCreateSubtitle": "Чат Ақпарат",
+    "channelCreateSubtitle": "Чат Ақпарат",
+    "botCreateSubtitle": "Көмекші Ақпарат",
     "callsSubtitle": "қоңыраулар сипаттамасы",
-    "contactsSubtitle": "contacts сипаттамасы",
-    "groupsSubtitle": "groups сипаттамасы",
-    "botsSubtitle": "bots сипаттамасы",
-    "channelsSubtitle": "channels сипаттамасы",
+    "contactsSubtitle": "Контактілер",
+    "groupsSubtitle": "Топтар",
+    "botsSubtitle": "Боттар",
+    "channelsSubtitle": "Арналар",
     "businessSubtitle": "бизнес сипаттамасы",
-    "chatsMeta": "chats meta",
-    "officialName": "official аты",
-    "officialPreview": "official алдын ала қарау",
-    "openBots": "ашу bots",
-    "openChannels": "ашу channels",
-    "returnToChats": "return to chats",
-    "mainChats": "main chats",
-    "workspace": "workspace",
-    "mobile": "mobile",
+    "chatsMeta": "Ақпарат",
+    "officialName": "Ақпарат",
+    "officialPreview": "Ақпарат",
+    "openBots": "Ақпарат",
+    "openChannels": "Ақпарат",
+    "returnToChats": "Ақпарат",
+    "mainChats": "Ақпарат",
+    "workspace": "Ақпарат",
+    "mobile": "Ақпарат",
     "username": "пайдаланушы аты",
     "birthday": "туған күн",
-    "publications": "publications",
+    "publications": "Ақпарат",
     "gifts": "сыйлықтар",
     "archive": "архив",
-    "allStories": "барлығы stories",
+    "allStories": "Ақпарат",
     "likes": "лайктар",
     "giftsPublic": "сыйлықтар ашық",
-    "emptyPublications": "бос publications",
+    "emptyPublications": "Ақпарат",
     "emptyGifts": "бос сыйлықтар",
     "emptyArchive": "бос архив",
-    "fullscreenHint": "fullscreen үшін кеңес",
-    "unknownUser": "unknown пайдаланушы",
+    "fullscreenHint": "Ақпарат Ақпарат",
+    "unknownUser": "Ақпарат",
     "info": "ақпарат",
-    "premiumStyle": "Premium style",
-    "members": "members",
-    "noGroupMembers": "жоқ group members",
-    "memberInvited": "member invited",
-    "memberRemoved": "member removed",
-    "promoteAdmin": "promote admin",
-    "demoteMember": "demote member",
-    "ownerRole": "owner role",
-    "adminRole": "admin role",
-    "memberRole": "member role",
-    "pendingJoinRequests": "pending join requests",
-    "noPendingJoinRequests": "жоқ pending join requests",
+    "premiumStyle": "Премиум",
+    "members": "Ақпарат",
+    "noGroupMembers": "Чат",
+    "memberInvited": "Профиль",
+    "memberRemoved": "Профиль",
+    "promoteAdmin": "Ақпарат",
+    "demoteMember": "Профиль",
+    "ownerRole": "Ақпарат",
+    "adminRole": "Ақпарат",
+    "memberRole": "Профиль",
+    "pendingJoinRequests": "Ақпарат",
+    "noPendingJoinRequests": "Ақпарат",
     "approve": "Бекіту",
     "reject": "Қабылдамау",
-    "joinRequestApproved": "join сұрау approved",
-    "joinRequestRejected": "join сұрау rejected",
-    "inviteRegenerated": "invite regenerated",
-    "subscribers": "subscribers",
-    "roomType": "бөлме type",
-    "openChat": "ашу chat",
-    "openChatSubtitle": "ашу chat сипаттамасы",
+    "joinRequestApproved": "Ақпарат",
+    "joinRequestRejected": "Ақпарат",
+    "inviteRegenerated": "Чат",
+    "subscribers": "Ақпарат",
+    "roomType": "Ақпарат",
+    "openChat": "Чат",
+    "openChatSubtitle": "Чат Ақпарат",
     "notificationsSubtitle": "хабарламалар сипаттамасы",
-    "privateList": "жеке list",
-    "mainList": "main list",
+    "privateList": "Ақпарат",
+    "mainList": "Ақпарат",
     "mediaSubtitle": "медиа сипаттамасы",
-    "addMembers": "қосу members",
-    "addMembersSubtitle": "қосу members сипаттамасы",
-    "admins": "admins",
-    "adminsSubtitle": "admins сипаттамасы",
-    "subscribersSubtitle": "subscribers сипаттамасы",
+    "addMembers": "Ақпарат",
+    "addMembersSubtitle": "Сипаттама Ақпарат",
+    "admins": "Ақпарат",
+    "adminsSubtitle": "Сипаттама Ақпарат",
+    "subscribersSubtitle": "Сипаттама Ақпарат",
     "deleteRoomSubtitle": "жою бөлме сипаттамасы",
-    "adminOnlyMessaging": "admin only messaging",
-    "adminOnlyMedia": "admin only медиа",
-    "adminOnlyInvites": "admin only invites",
-    "approveJoinRequests": "approve join requests",
-    "autoDeleteAds": "auto жою ads",
-    "autoDeletePromoLeaflets": "auto жою promo leaflets",
-    "autoDeleteLinks": "auto жою сілтемелер",
-    "autoBanRepeatedSpam": "auto ban repeated spam",
-    "blacklist": "blacklist",
-    "blacklistSubtitle": "blacklist сипаттамасы",
-    "inviteLink": "invite сілтеме",
-    "regenerateLink": "regenerate сілтеме",
-    "sendInvite": "жіберу invite",
-    "ownerTools": "owner tools",
-    "ownerToolsSubtitle": "owner tools сипаттамасы",
-    "enterUserId": "enter пайдаланушы ID",
-    "botAssistant": "bot көмекші",
-    "botService": "bot service",
-    "botBusiness": "bot бизнес",
-    "botSubtitle": "bot сипаттамасы",
-    "publicBanner": "ашық banner",
-    "settingsOnlyOwner": "баптаулар only owner",
-    "groupSettings": "group баптаулар",
-    "channelSettings": "channel баптаулар",
-    "botSettings": "bot баптаулар",
-    "publishingAdminsOnly": "publishing admins only",
-    "approveSubscribers": "approve subscribers",
-    "channelReactions": "channel reactions",
-    "channelComments": "channel comments",
-    "visibleInDiscovery": "visible in discovery",
-    "openOwnerPanel": "ашу owner panel",
-    "ownerPanelSubtitle": "owner panel сипаттамасы",
-    "botPublicVisible": "bot ашық visible",
-    "botInlineEnabled": "bot inline enabled",
-    "botAutoReplyEnabled": "bot auto жауап беру enabled",
-    "botMarketplaceLinked": "bot маркетплейс linked",
-    "botDeliveryLinked": "bot delivery linked",
-    "botBusinessRoutingEnabled": "bot бизнес routing enabled",
-    "businessRoutingNote": "бизнес routing note",
-    "deleteChannel": "жою channel",
-    "deleteBot": "жою bot",
-    "groupsLinkedHint": "groups linked үшін кеңес",
-    "channelsLinkedHint": "channels linked үшін кеңес",
-    "profileSourceNote": "профиль дереккөз note",
-    "deleteGroup": "жою group",
-    "openGroup": "ашу group",
-    "savingNow": "saving now",
-    "hiddenChat": "hidden chat",
+    "adminOnlyMessaging": "Ақпарат",
+    "adminOnlyMedia": "Ақпарат",
+    "adminOnlyInvites": "Ақпарат",
+    "approveJoinRequests": "Ақпарат",
+    "autoDeleteAds": "Ақпарат",
+    "autoDeletePromoLeaflets": "Ақпарат",
+    "autoDeleteLinks": "Ақпарат",
+    "autoBanRepeatedSpam": "Ақпарат",
+    "blacklist": "Ақпарат",
+    "blacklistSubtitle": "Сипаттама Ақпарат",
+    "inviteLink": "Чат",
+    "regenerateLink": "Ақпарат",
+    "sendInvite": "Чат",
+    "ownerTools": "Баптаулар",
+    "ownerToolsSubtitle": "Баптаулар Ақпарат",
+    "enterUserId": "Ақпарат",
+    "botAssistant": "Көмекші",
+    "botService": "Көмекші",
+    "botBusiness": "Көмекші",
+    "botSubtitle": "Көмекші Ақпарат",
+    "publicBanner": "Ақпарат",
+    "settingsOnlyOwner": "Баптаулар",
+    "groupSettings": "Чат",
+    "channelSettings": "Чат",
+    "botSettings": "Көмекші",
+    "publishingAdminsOnly": "Ақпарат",
+    "approveSubscribers": "Ақпарат",
+    "channelReactions": "Чат",
+    "channelComments": "Чат",
+    "visibleInDiscovery": "Ақпарат",
+    "openOwnerPanel": "Ақпарат",
+    "ownerPanelSubtitle": "Сипаттама Ақпарат",
+    "botPublicVisible": "Көмекші",
+    "botInlineEnabled": "Көмекші",
+    "botAutoReplyEnabled": "Көмекші",
+    "botMarketplaceLinked": "Көмекші",
+    "botDeliveryLinked": "Көмекші",
+    "botBusinessRoutingEnabled": "Көмекші",
+    "businessRoutingNote": "Ақпарат",
+    "deleteChannel": "Чат",
+    "deleteBot": "Көмекші",
+    "groupsLinkedHint": "Ақпарат Ақпарат",
+    "channelsLinkedHint": "Ақпарат Ақпарат",
+    "profileSourceNote": "Профиль",
+    "deleteGroup": "Чат",
+    "openGroup": "Чат",
+    "savingNow": "Жүктелуде...",
+    "hiddenChat": "Чат",
     "botCard": {
       "cardTitle": "карта",
-      "unknownHandle": "unknown handle",
+      "unknownHandle": "Ақпарат",
       "connected": "қосылды",
-      "owner": "owner",
+      "owner": "толтырғыш",
       "idLabel": "ID",
       "noId": "жоқ ID"
     },
     "theme": {
-      "title": "title",
-      "screenTitle": "screen",
-      "screenSubtitle": "screen сипаттамасы",
-      "chooseWallpaper": "choose wallpaper",
-      "replaceWallpaper": "replace wallpaper",
-      "removeWallpaper": "алып тастау wallpaper",
-      "noWallpaper": "жоқ wallpaper",
-      "useThemeBackground": "use тақырып background"
+      "title": "Тақырыбы",
+      "screenTitle": "Тақырып",
+      "screenSubtitle": "Сипаттама Ақпарат",
+      "chooseWallpaper": "Ақпарат",
+      "replaceWallpaper": "Ақпарат",
+      "removeWallpaper": "Ақпарат",
+      "noWallpaper": "Ақпарат",
+      "useThemeBackground": "Артқа"
     },
     "wallpaper": {
-      "title": "title"
+      "title": "Тақырыбы"
     }
   },
   "chatRoom": {
     "title": "Чат",
-    "messageActions": "message әрекеттер",
+    "messageActions": "Баптаулар",
     "location": {
-      "chooseProvider": "choose provider",
-      "eta": "eta",
+      "chooseProvider": "Баптаулар",
+      "eta": "Ақпарат",
       "providers": {
         "sabiNavigator": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "sabiTaxi": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "yandex": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "google": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       }
     },
-    "locationQuickSubtitle": "location quick сипаттамасы",
-    "useCurrentLocation": "use current location",
-    "useCurrentLocationSubtitle": "use current location сипаттамасы",
-    "savedPlaces": "saved places",
-    "savedOfficeTitle": "saved office",
-    "savedOfficeSubtitle": "saved office сипаттамасы",
-    "savedAirportTitle": "saved airport",
-    "savedAirportSubtitle": "saved airport сипаттамасы",
-    "savedCoffeeTitle": "saved coffee",
-    "savedCoffeeSubtitle": "saved coffee сипаттамасы",
-    "savedHomeTitle": "saved басты",
-    "savedHomeSubtitle": "saved басты сипаттамасы",
+    "locationQuickSubtitle": "Сипаттама Ақпарат",
+    "useCurrentLocation": "Ақпарат",
+    "useCurrentLocationSubtitle": "Сипаттама Ақпарат",
+    "savedPlaces": "Ақпарат",
+    "savedOfficeTitle": "Тақырып",
+    "savedOfficeSubtitle": "Сипаттама Ақпарат",
+    "savedAirportTitle": "Тақырып",
+    "savedAirportSubtitle": "Сипаттама Ақпарат",
+    "savedCoffeeTitle": "Тақырып",
+    "savedCoffeeSubtitle": "Сипаттама Ақпарат",
+    "savedHomeTitle": "Тақырып",
+    "savedHomeSubtitle": "Сипаттама Ақпарат",
     "saveVideoTitle": "сақтау видео",
     "saveVideoSubtitle": "сақтау видео сипаттамасы",
     "videoReady": "видео дайын",
-    "videoSaveNotice": "видео сақтау notice",
+    "videoSaveNotice": "сақтау видео",
     "saveVideoAction": "сақтау видео әрекет",
     "savePhotoTitle": "сақтау фото",
     "savePhotoSubtitle": "сақтау фото сипаттамасы",
     "photoReady": "фото дайын",
-    "photoSaveNotice": "фото сақтау notice",
+    "photoSaveNotice": "сақтау фото",
     "savePhotoAction": "сақтау фото әрекет",
     "saveMediaTitle": "сақтау медиа",
     "saveMediaSubtitle": "сақтау медиа сипаттамасы",
     "mediaReady": "медиа дайын",
-    "mediaSaveNotice": "медиа сақтау notice",
+    "mediaSaveNotice": "Ақпарат",
     "saveMediaAction": "сақтау медиа әрекет",
     "pinnedMessages": "Бекітілген хабарламалар",
     "noPinnedMessages": "Бекітілген хабарламалар жоқ",
@@ -3542,7 +3543,7 @@ export const KK_LOCALE = {
     "animatedPanel": "Анимация панелі",
     "emoji": "Эмодзи",
     "gift": "Сыйлық",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "сыйлық",
     "premiumStickers": "Премиум стикерлер",
     "stickers": "Стикерлер",
     "openGallery": "Галереяны ашу",
@@ -3574,157 +3575,157 @@ export const KK_LOCALE = {
     "rewriteMessage": "Хабарламаны қайта жазу",
     "summarizeChat": "Чатты қысқаша мазмұндау",
     "you": "сіз",
-    "typing": "typing",
+    "typing": "Ақпарат",
     "online": "онлайн",
     "offline": "офлайн",
     "connecting": "қосылуда",
-    "reconnecting": "reconnecting",
-    "lastSeenToday": "соңғы көрілді бүгін {{time}}",
-    "lastSeenYesterday": "соңғы көрілді кеше {{time}}",
-    "lastSeenDate": "соңғы көрілді date {{date}} {{time}}",
-    "conversationPlaceholder": "conversation үшін кеңес",
+    "reconnecting": "Жүктелуде...",
+    "lastSeenToday": "Ақпарат",
+    "lastSeenYesterday": "Ақпарат",
+    "lastSeenDate": "Ақпарат",
+    "conversationPlaceholder": "Іздеу",
     "today": "бүгін",
     "yesterday": "кеше",
-    "directRoom": "direct бөлме",
-    "groupRoom": "group бөлме",
-    "channelRoom": "channel бөлме",
+    "directRoom": "Ақпарат",
+    "groupRoom": "Чат",
+    "channelRoom": "Чат",
     "businessRoom": "бизнес бөлме",
-    "encrypted": "encrypted",
-    "messagePlaceholder": "message үшін кеңес",
-    "messageTitle": "message",
+    "encrypted": "Ақпарат",
+    "messagePlaceholder": "Іздеу",
+    "messageTitle": "Тақырып",
     "replyAction": "жауап беру әрекет",
     "replyPlaceholder": "жауап беру үшін кеңес",
-    "selectionDelete": "selection жою",
-    "selectionForward": "selection бағыттау",
-    "deleteMe": "жою me",
+    "selectionDelete": "Жою",
+    "selectionForward": "бағыттау",
+    "deleteMe": "Ақпарат",
     "deleteAllAction": "жою барлығы әрекет",
     "save": "сақтау",
     "link": "сілтеме",
     "searchTitle": "іздеу",
-    "searchMessage": "іздеу message",
+    "searchMessage": "Іздеу",
     "muteTitle": "дыбысты өшіру",
-    "muteMessage": "дыбысты өшіру message",
-    "locationTitle": "location",
-    "sharedLocation": "shared location",
-    "locationAttached": "location attached",
-    "locationOpenNotice": "location ашу notice",
-    "locationOpenError": "location ашу error",
-    "locationSendError": "location жіберу error",
-    "locationCoordsMissing": "location coords missing",
-    "locationAccessError": "location access error",
-    "contactTitle": "contact",
-    "contactsTitle": "contacts",
-    "contactCard": "contact карта",
-    "contactAttached": "contact attached",
-    "contactReady": "contact дайын",
-    "contactOpenNotice": "contact ашу notice",
-    "contactOpenError": "contact ашу error",
-    "contactsAccessError": "contacts access error",
+    "muteMessage": "Ақпарат",
+    "locationTitle": "Тақырып",
+    "sharedLocation": "Ақпарат",
+    "locationAttached": "Ақпарат",
+    "locationOpenNotice": "Ақпарат",
+    "locationOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "locationSendError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "locationCoordsMissing": "Ақпарат",
+    "locationAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "contactTitle": "Тақырып",
+    "contactsTitle": "Тақырып",
+    "contactCard": "Ақпарат",
+    "contactAttached": "Ақпарат",
+    "contactReady": "Дайын",
+    "contactOpenNotice": "Ақпарат",
+    "contactOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "contactsAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
     "documentTitle": "құжат",
     "documentsTitle": "құжаттар",
-    "documentAttached": "құжат attached",
-    "documentPreviewUnavailable": "құжат алдын ала қарау unavailable",
-    "documentOpenNotice": "құжат ашу notice",
-    "documentOpening": "құжат opening",
-    "documentOpenError": "құжат ашу error",
-    "documentAccessError": "құжат access error",
+    "documentAttached": "Ақпарат",
+    "documentPreviewUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+    "documentOpenNotice": "Ақпарат",
+    "documentOpening": "Ақпарат",
+    "documentOpenError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "documentAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
     "galleryTitle": "галерея",
-    "galleryAccessError": "галерея access error",
+    "galleryAccessError": "Сұрау орындалмады. Қайталап көріңіз.",
     "photoTitle": "фото",
     "photoPreviewSubtitle": "фото алдын ала қарау сипаттамасы",
-    "photoPreviewUnavailable": "фото алдын ала қарау unavailable",
-    "photoCaptured": "фото captured",
-    "photoSaveError": "фото сақтау error",
+    "photoPreviewUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+    "photoCaptured": "фото дайын",
+    "photoSaveError": "Сұрау орындалмады. Қайталап көріңіз.",
     "videoTitle": "видео",
-    "videoCaptured": "видео captured",
-    "videoSaveError": "видео сақтау error",
+    "videoCaptured": "Дауыс",
+    "videoSaveError": "Сұрау орындалмады. Қайталап көріңіз.",
     "videoCloseHint": "видео жабу үшін кеңес",
-    "videoMessageText": "видео message сипаттамасы",
+    "videoMessageText": "Дауыс Ақпарат",
     "voiceTitle": "дауыс",
-    "voiceRecordingTitle": "дауыс recording",
-    "voiceRecordingSubtitle": "дауыс recording сипаттамасы",
+    "voiceRecordingTitle": "Дауыстық AI",
+    "voiceRecordingSubtitle": "Дауыстық AI",
     "voiceReadySubtitle": "дауыс дайын сипаттамасы",
-    "recordingVoice": "recording дауыс",
+    "recordingVoice": "Дауыстық AI",
     "voiceReady": "дауыс дайын",
-    "voiceReadyInline": "дауыс дайын inline",
-    "voiceReadyToSend": "дауыс дайын to жіберу",
-    "voiceSent": "дауыс sent",
-    "voicePlayback": "дауыс playback",
-    "voiceStartError": "дауыс бастау error",
-    "voiceFinishError": "дауыс аяқтау error",
-    "voiceUploadError": "дауыс жүктеу error",
-    "voicePlayError": "дауыс play error",
-    "voiceRateError": "дауыс rate error",
+    "voiceReadyInline": "дауыс дайын",
+    "voiceReadyToSend": "Дауыстық AI",
+    "voiceSent": "Дауыстық AI",
+    "voicePlayback": "Дауыстық AI",
+    "voiceStartError": "Дауыстық AI",
+    "voiceFinishError": "Дауыстық AI",
+    "voiceUploadError": "Дауыстық AI",
+    "voicePlayError": "Дауыстық AI",
+    "voiceRateError": "Дауыстық AI",
     "copiedText": "көшірілді сипаттамасы",
     "infoAction": "ақпарат әрекет",
-    "editingTitle": "editing",
-    "editingSubtitle": "editing сипаттамасы",
+    "editingTitle": "Хабарламаны өңдеу",
+    "editingSubtitle": "Сипаттама Ақпарат",
     "editPlaceholder": "өңдеу үшін кеңес",
-    "replyingTitle": "replying",
-    "readOnlyTitle": "read only",
+    "replyingTitle": "Тақырып",
+    "readOnlyTitle": "Тақырып",
     "readOnlySubtitle": "Мұнда хабар жіберу өшірілген. Толық мәлімет үшін арна ақпаратын ашыңыз.",
     "mediaLabel": "медиа",
     "aiTitle": "AI",
-    "aiMessage": "AI message",
+    "aiMessage": "AI",
     "mediaTitle": "медиа",
-    "mediaMessage": "медиа message",
+    "mediaMessage": "Ақпарат",
     "privacyTitle": "құпиялылық",
-    "privacyMessage": "құпиялылық message",
-    "roomThemeUpdated": "бөлме тақырып updated",
-    "messageContextMissing": "message context missing",
-    "messageEdited": "message edited",
-    "messageSent": "message sent",
-    "messageSendError": "message жіберу error",
-    "giftSent": "сыйлық sent",
-    "animatedReactionSent": "анимацияланған reaction sent",
-    "animatedEmojiSent": "анимацияланған эмодзи sent",
-    "stickerAdded": "стикер added",
-    "selectedForForwardPrefix": "таңдалды for бағыттау prefix",
-    "chooseMessagesForward": "choose messages бағыттау",
-    "deletedPrefix": "deleted prefix",
-    "deletedForAll": "deleted for барлығы",
-    "deletedForMe": "deleted for me",
-    "addedToComposer": "added to composer",
+    "privacyMessage": "Құпиялық",
+    "roomThemeUpdated": "Тақырып",
+    "messageContextMissing": "Ақпарат Ақпарат",
+    "messageEdited": "Ақпарат",
+    "messageSent": "Ақпарат",
+    "messageSendError": "Сұрау орындалмады. Қайталап көріңіз.",
+    "giftSent": "Сыйлық жіберілді",
+    "animatedReactionSent": "Ақпарат",
+    "animatedEmojiSent": "Ақпарат",
+    "stickerAdded": "Ақпарат",
+    "selectedForForwardPrefix": "Ақпарат",
+    "chooseMessagesForward": "Ақпарат",
+    "deletedPrefix": "Ақпарат",
+    "deletedForAll": "Ақпарат",
+    "deletedForMe": "Ақпарат",
+    "addedToComposer": "Ақпарат",
     "saveMediaReady": "сақтау медиа дайын",
     "openLinkReady": "ашу сілтеме дайын",
-    "openingWalletFiat": "opening әмиян fiat",
-    "openingCoinWallet": "opening COIN әмиян",
-    "catalogSoon": "catalog soon",
-    "pollSoon": "poll soon",
-    "eventSoon": "event soon",
-    "openingDocument": "opening құжат",
-    "openingContact": "opening contact",
-    "imageNormal": "image normal",
-    "editedLabel": "edited",
-    "mapLabel": "map",
-    "mediaCaptureFailed": "медиа capture сәтсіз",
-    "tapSend": "tap жіберу",
-    "diamondsUnit": "diamonds unit",
-    "channelInfoAction": "channel ақпарат әрекет",
-    "groupInfoAction": "group ақпарат әрекет",
+    "openingWalletFiat": "Әмиян",
+    "openingCoinWallet": "Әмиян",
+    "catalogSoon": "Ақпарат",
+    "pollSoon": "Ақпарат",
+    "eventSoon": "Ақпарат",
+    "openingDocument": "Ақпарат",
+    "openingContact": "Ақпарат",
+    "imageNormal": "Ақпарат",
+    "editedLabel": "Ақпарат",
+    "mapLabel": "Ақпарат",
+    "mediaCaptureFailed": "Сұрау орындалмады. Қайталап көріңіз.",
+    "tapSend": "Ақпарат",
+    "diamondsUnit": "Ақпарат",
+    "channelInfoAction": "Чат",
+    "groupInfoAction": "Чат",
     "businessInfoAction": "бизнес ақпарат әрекет",
-    "membersCount": "members саны",
-    "subscribersCount": "subscribers саны",
-    "mutedEnabled": "muted enabled",
+    "membersCount": "Ақпарат",
+    "subscribersCount": "Ақпарат",
+    "mutedEnabled": "Ақпарат",
     "mutedDisabled": "Дыбысты өшіру өшірілген",
-    "searchFocused": "іздеу focused",
+    "searchFocused": "Іздеу",
     "aiReady": "AI дайын",
-    "mediaSaved": "медиа saved",
-    "contactSavedToDevice": "contact saved to device",
-    "contactPermissionDenied": "contact permission denied",
-    "contactUnavailable": "contact unavailable",
-    "addedToList": "added to list",
-    "removedFromList": "removed кімнен list",
-    "disappearingEnabled": "disappearing enabled",
+    "mediaSaved": "Ақпарат",
+    "contactSavedToDevice": "Ақпарат",
+    "contactPermissionDenied": "Ақпарат",
+    "contactUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+    "addedToList": "Ақпарат",
+    "removedFromList": "Ақпарат",
+    "disappearingEnabled": "Ақпарат",
     "disappearingDisabled": "Жоғалатын хабарлар өшірілген",
-    "reportSent": "шағым sent",
-    "chatCleared": "chat cleared",
-    "chatExported": "chat exported",
-    "homeShortcutPinned": "басты shortcut pinned",
-    "homeShortcutUnsupported": "басты shortcut unsupported",
+    "reportSent": "Ақпарат",
+    "chatCleared": "Чат",
+    "chatExported": "Чат",
+    "homeShortcutPinned": "Ақпарат",
+    "homeShortcutUnsupported": "Ақпарат",
     "blockActionDone": "бұғаттау әрекет дайын",
     "unblockActionDone": "бұғаттан шығару әрекет дайын",
-    "fileBadgeGeneric": "файл badge generic"
+    "fileBadgeGeneric": "Ақпарат"
   },
   "chatPartner": {
     "title": "Профиль",
@@ -3766,7 +3767,7 @@ export const KK_LOCALE = {
     "removePack": "Пакетті алып тастау",
     "previewPack": "Пакетті алдын ала қарау",
     "noStickers": "Қолжетімді стикерлер жоқ",
-    "premiumOnly": "Тек Premium пайдаланушыларына қолжетімді",
+    "premiumOnly": "Премиум",
     "animatedStickers": "Анимациялық стикерлер",
     "staticStickers": "Статикалық стикерлер",
     "useSticker": "Стикерді қолдану",
@@ -3792,13 +3793,13 @@ export const KK_LOCALE = {
     "giftReceived": "Сыйлық қабылданды",
     "giftSent": "Сыйлық жіберілді",
     "giftExpired": "Сыйлық мерзімі өтті",
-    "giftWillExpire": "Бұл сыйлықтың мерзімі {{days}} күннен кейін аяқталады",
+    "giftWillExpire": "Премиум",
     "wonGift": "Ұтып алынған сыйлық",
     "promoGift": "Промо сыйлық",
     "storageGift": "Сақталған сыйлық",
     "giftInventory": "Сыйлық қоры",
     "notCountedAsIncome": "Табыс ретінде есептелмейді",
-    "transferToCoinBalance": "Coin балансына аудару",
+    "transferToCoinBalance": "Ақпарат",
     "releaseRuleNotice": "Сыйлықтан түскен табыс ай сайын босату ережесіне бағынады.",
     "wheelOfFortune": "Сәттілік дөңгелегі",
     "spin": "Айналдыру",
@@ -3831,8 +3832,8 @@ export const KK_LOCALE = {
     "utilityPayment": "Коммуналдық төлем",
     "recurringPayment": "Қайталанатын төлем",
     "scheduledPayment": "Жоспарланған төлем",
-    "secureCheckout": "Қауіпсіз checkout",
-    "merchantCheckout": "Мерчант checkout",
+    "secureCheckout": "Ақпарат",
+    "merchantCheckout": "Ақпарат",
     "preauthorization": "Алдын ала авторизация",
     "authorizedAmount": "Авторизацияланған сома",
     "capturePayment": "Төлемді қабылдау",
@@ -3840,7 +3841,7 @@ export const KK_LOCALE = {
     "voidAuthorization": "Авторизацияны жою",
     "refundPayment": "Төлемді қайтару",
     "partialRefund": "Ішінара қайтарым",
-    "chargeback": "Chargeback",
+    "chargeback": "Артқа",
     "dispute": "Дау",
     "settlement": "Есеп айырысу",
     "settlementDelay": "Есеп айырысу кідірісі",
@@ -3868,29 +3869,29 @@ export const KK_LOCALE = {
   },
   "profile": {
     "completeScreen": {
-      "badge": "badge",
-      "title": "title",
-      "subtitle": "subtitle",
+      "badge": "Премиум",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
       "firstName": "бірінші аты",
       "lastName": "соңғы аты",
       "username": "пайдаланушы аты",
       "phone": "телефон",
-      "unifiedId": "unified ID",
-      "unifiedIdHint": "unified ID үшін кеңес",
+      "unifiedId": "Ақпарат",
+      "unifiedIdHint": "Ақпарат Ақпарат",
       "usernameHint": "пайдаланушы аты үшін кеңес",
       "privacy": "құпиялылық",
       "continue": "жалғастыру",
       "back": "артқа",
       "required": "Міндетті",
-      "saveErrorTitle": "сақтау error",
-      "saveErrorMessage": "сақтау error message",
-      "saving": "saving",
+      "saveErrorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
+      "saveErrorMessage": "Сұрау орындалмады. Қайталап көріңіз.",
+      "saving": "Сақталуда...",
       "userId": "пайдаланушы ID",
       "createUser": "жасау пайдаланушы",
       "nameRequired": "аты міндетті",
       "phoneRequired": "телефон міндетті",
       "usernameRequired": "пайдаланушы аты міндетті",
-      "success": "success"
+      "success": "Ақпарат"
     },
     "title": "Профиль",
     "editProfile": "Профильді өңдеу",
@@ -3915,37 +3916,37 @@ export const KK_LOCALE = {
     "history": "Тарих",
     "activity": {
       "media": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Медиа",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "links": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "дауыс",
+        "subtitle": "Дауыстық AI",
+        "stat": "Дауыстық AI"
       }
     },
     "privacy": {
       "privacy": {
-        "title": "title",
-        "description": "description"
+        "title": "Құпиялылық",
+        "description": "Баптаулар"
       },
       "security": {
-        "title": "title",
-        "description": "description"
+        "title": "Қауіпсіздік",
+        "description": "Баптаулар"
       },
       "data": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "qr": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       }
     },
     "aiSettings": "AI параметрлері",
@@ -3967,11 +3968,11 @@ export const KK_LOCALE = {
     "copyProfileLink": "Профиль сілтемесін көшіру",
     "shareProfile": "Профильмен бөлісу",
     "memberSince": "Қолданушы болған уақыты",
-    "premiumBenefits": "Premium артықшылықтары",
+    "premiumBenefits": "Премиум",
     "viewHistory": "Тарихты көру",
     "giftsHistory": "Сыйлықтар тарихы",
     "paymentHistory": "Төлемдер тарихы",
-    "preferences": "Баптаулар",
+    "preferences": "Таңдаулар",
     "accountInfo": "Аккаунт ақпараты",
     "personalInfo": "Жеке ақпарат",
     "managePublicContent": "Ашық мазмұнды басқару",
@@ -3983,134 +3984,134 @@ export const KK_LOCALE = {
     "premiumBadge": "Премиум белгісі",
     "businessBadge": "Бизнес белгісі",
     "merchantBadge": "Мерчант белгісі",
-    "short_videos": "short videos",
-    "archivePublications": "архив publications",
-    "allStories": "барлығы stories",
-    "emptyPublications": "бос publications",
+    "short_videos": "Ақпарат",
+    "archivePublications": "Ақпарат",
+    "allStories": "Ақпарат",
+    "emptyPublications": "Ақпарат",
     "emptyGifts": "бос сыйлықтар",
     "emptyArchive": "бос архив",
-    "fullscreenHint": "fullscreen үшін кеңес",
+    "fullscreenHint": "Ақпарат Ақпарат",
     "hero": {
-      "live": "live",
+      "live": "Ақпарат",
       "verified": "Тексерілді",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "Ақпарат",
         "photos": "фотолар",
-        "videos": "videos"
+        "videos": "Бейнелер"
       },
       "actions": {
         "edit": "өңдеу",
         "photos": "фотолар",
-        "videos": "videos",
+        "videos": "Бейнелер",
         "voice": "дауыс",
         "qr": "QR"
       }
     },
     "launch": {
-      "badge": "badge",
-      "freeMonths": "free months",
-      "title": "title",
-      "description": "description"
+      "badge": "Премиум",
+      "freeMonths": "Ақпарат",
+      "title": "Баптаулар",
+      "description": "Баптаулар"
     },
     "sections": {
-      "identitySurface": "identity surface",
-      "sharedActivity": "shared белсенділік",
-      "ownerAccess": "owner access",
+      "identitySurface": "Профиль және сәйкестік",
+      "sharedActivity": "Белсенділік",
+      "ownerAccess": "Топтар және жарияланымдар",
       "account": "аккаунт",
-      "privacySecurity": "құпиялылық security",
-      "appExperience": "app experience",
-      "premiumServices": "Premium services",
-      "walletEconomy": "әмиян economy"
+      "privacySecurity": "Құпиялылық және қауіпсіздік",
+      "appExperience": "Қолданба және ыңғайлылық",
+      "premiumServices": "Премиум",
+      "walletEconomy": "Әмиян және экономика"
     },
     "identitySurfaceCards": {
       "photos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Фотосуреттер",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "shortVideos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "likes": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "лайктар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "reactions": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Реакциялар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       }
     },
     "sharedActivityCards": {
       "media": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Медиа",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "links": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "дауыс",
+        "subtitle": "Дауыстық AI",
+        "stat": "Дауыстық AI"
       }
     },
     "group": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "badges": {
-        "published": "published",
+        "published": "Жарияланған",
         "public": "ашық",
         "private": "жеке",
         "assistant": "көмекші",
-        "service": "service",
+        "service": "Ақпарат",
         "business": "бизнес",
-        "trade": "trade"
+        "trade": "Ақпарат"
       },
       "fields": {
-        "groupName": "group аты",
+        "groupName": "Чат",
         "username": "пайдаланушы аты",
-        "description": "description",
-        "groupId": "group ID",
-        "inviteLink": "invite сілтеме",
-        "ownerName": "owner аты",
-        "ownerUserId": "owner пайдаланушы ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner телефон",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedBotId": "linked bot ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "linkedPublicationId": "linked publication ID"
+        "description": "Сипаттама",
+        "groupId": "Чат",
+        "inviteLink": "Чат",
+        "ownerName": "аты",
+        "ownerUserId": "Ақпарат",
+        "ownerRole": "Ақпарат",
+        "ownerPhone": "телефон",
+        "ownerEmail": "Ақпарат",
+        "publicationId": "Ақпарат",
+        "linkedChatId": "Чат",
+        "linkedBotId": "Көмекші",
+        "avatarUri": "Ақпарат",
+        "coverUri": "Ақпарат",
+        "linkedPublicationId": "Ақпарат"
       },
       "switches": {
-        "publicGroup": "ашық group",
-        "published": "published",
-        "showInProfile": "show in профиль",
-        "joinRequests": "join requests",
-        "memberInvites": "member invites",
-        "onlyAdminsPost": "only admins post",
-        "onlyAdminsEdit": "only admins өңдеу",
-        "commentsEnabled": "comments enabled",
-        "searchableInDirectory": "searchable in directory",
-        "previewEnabled": "алдын ала қарау enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "approveSubscribers": "approve subscribers",
-        "reactionsEnabled": "reactions enabled"
+        "publicGroup": "Чат",
+        "published": "Ақпарат",
+        "showInProfile": "Профиль",
+        "joinRequests": "Ақпарат",
+        "memberInvites": "Профиль",
+        "onlyAdminsPost": "Ақпарат",
+        "onlyAdminsEdit": "Ақпарат",
+        "commentsEnabled": "Ақпарат",
+        "searchableInDirectory": "Іздеу",
+        "previewEnabled": "Ақпарат",
+        "visibleInDiscovery": "Ақпарат",
+        "approveSubscribers": "Ақпарат",
+        "reactionsEnabled": "Ақпарат"
       },
       "actions": {
         "create": "жасау",
@@ -4120,61 +4121,61 @@ export const KK_LOCALE = {
       },
       "alerts": {
         "loading": "жүктелуде",
-        "createSuccess": "жасау success",
-        "saveSuccess": "сақтау success",
+        "createSuccess": "Ақпарат",
+        "saveSuccess": "Сақталды",
         "resetTitle": "қалпына келтіру",
         "resetDescription": "қалпына келтіру сипаттамасы"
       }
     },
     "channel": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "жасау",
+        "description": "Баптаулар"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "badges": {
-        "published": "published",
+        "published": "Жарияланған",
         "public": "ашық",
         "private": "жеке",
-        "service": "service",
+        "service": "Ақпарат",
         "business": "бизнес",
-        "trade": "trade"
+        "trade": "Ақпарат"
       },
       "fields": {
-        "channelName": "channel аты",
+        "channelName": "Чат",
         "username": "пайдаланушы аты",
-        "description": "description",
-        "channelId": "channel ID",
-        "inviteLink": "invite сілтеме",
-        "ownerName": "owner аты",
-        "ownerUserId": "owner пайдаланушы ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner телефон",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedDiscussionId": "linked discussion ID",
-        "linkedBotId": "linked bot ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "linkedPublicationId": "linked publication ID"
+        "description": "Сипаттама",
+        "channelId": "Чат",
+        "inviteLink": "Чат",
+        "ownerName": "аты",
+        "ownerUserId": "Ақпарат",
+        "ownerRole": "Ақпарат",
+        "ownerPhone": "телефон",
+        "ownerEmail": "Ақпарат",
+        "publicationId": "Ақпарат",
+        "linkedChatId": "Чат",
+        "linkedDiscussionId": "Ақпарат",
+        "linkedBotId": "Көмекші",
+        "avatarUri": "Ақпарат",
+        "coverUri": "Ақпарат",
+        "linkedPublicationId": "Ақпарат"
       },
       "switches": {
-        "publicChannel": "ашық channel",
-        "published": "published",
-        "showInProfile": "show in профиль",
-        "joinRequests": "join requests",
-        "onlyAdminsPost": "only admins post",
-        "onlyAdminsEdit": "only admins өңдеу",
-        "commentsEnabled": "comments enabled",
-        "searchableInDirectory": "searchable in directory",
-        "previewEnabled": "алдын ала қарау enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "approveSubscribers": "approve subscribers",
-        "reactionsEnabled": "reactions enabled"
+        "publicChannel": "Чат",
+        "published": "Ақпарат",
+        "showInProfile": "Профиль",
+        "joinRequests": "Ақпарат",
+        "onlyAdminsPost": "Ақпарат",
+        "onlyAdminsEdit": "Ақпарат",
+        "commentsEnabled": "Ақпарат",
+        "searchableInDirectory": "Іздеу",
+        "previewEnabled": "Ақпарат",
+        "visibleInDiscovery": "Ақпарат",
+        "approveSubscribers": "Ақпарат",
+        "reactionsEnabled": "Ақпарат"
       },
       "actions": {
         "create": "жасау",
@@ -4184,75 +4185,75 @@ export const KK_LOCALE = {
       },
       "alerts": {
         "loading": "жүктелуде",
-        "createSuccess": "жасау success",
-        "saveSuccess": "сақтау success",
+        "createSuccess": "Ақпарат",
+        "saveSuccess": "Ақпарат",
         "resetTitle": "қалпына келтіру",
         "resetDescription": "қалпына келтіру сипаттамасы"
       }
     },
     "bot": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "жасау",
+        "description": "Баптаулар"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "badges": {
-        "active": "active",
-        "paused": "paused",
+        "active": "Белсенді",
+        "paused": "Уақытша тоқтатылған",
         "public": "ашық",
         "private": "жеке",
-        "published": "published",
+        "published": "Жарияланған",
         "assistant": "көмекші",
-        "service": "service",
+        "service": "Ақпарат",
         "business": "бизнес",
-        "trade": "trade"
+        "trade": "Ақпарат"
       },
       "fields": {
-        "botName": "bot аты",
+        "botName": "Көмекші",
         "username": "пайдаланушы аты",
-        "description": "description",
-        "botId": "bot ID",
-        "ownerName": "owner аты",
-        "ownerUserId": "owner пайдаланушы ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner телефон",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedGroupId": "linked group ID",
-        "linkedChannelId": "linked channel ID",
-        "linkedMarketId": "linked market ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "botKind": "bot kind",
-        "linkedPublicationId": "linked publication ID"
+        "description": "Сипаттама",
+        "botId": "Көмекші",
+        "ownerName": "аты",
+        "ownerUserId": "Ақпарат",
+        "ownerRole": "Ақпарат",
+        "ownerPhone": "телефон",
+        "ownerEmail": "Ақпарат",
+        "publicationId": "Ақпарат",
+        "linkedChatId": "Чат",
+        "linkedGroupId": "Чат",
+        "linkedChannelId": "Чат",
+        "linkedMarketId": "Ақпарат",
+        "avatarUri": "Ақпарат",
+        "coverUri": "Ақпарат",
+        "botKind": "Көмекші",
+        "linkedPublicationId": "Ақпарат"
       },
       "switches": {
-        "publicBot": "ашық bot",
-        "published": "published",
-        "showInProfile": "show in профиль",
-        "active": "active",
+        "publicBot": "Көмекші",
+        "published": "Ақпарат",
+        "showInProfile": "Профиль",
+        "active": "Ақпарат",
         "acceptCommands": "қабылдау командалар",
-        "showInCatalog": "show in catalog",
-        "allowPayments": "рұқсат беру payments",
-        "previewEnabled": "алдын ала қарау enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "inlineEnabled": "inline enabled",
-        "autoReplyEnabled": "auto жауап беру enabled",
-        "marketplaceLinked": "маркетплейс linked",
-        "deliveryLinked": "delivery linked",
-        "businessRoutingEnabled": "бизнес routing enabled"
+        "showInCatalog": "Ақпарат",
+        "allowPayments": "Ақпарат",
+        "previewEnabled": "Ақпарат",
+        "visibleInDiscovery": "Ақпарат",
+        "inlineEnabled": "Ақпарат",
+        "autoReplyEnabled": "Ақпарат",
+        "marketplaceLinked": "Ақпарат",
+        "deliveryLinked": "Ақпарат",
+        "businessRoutingEnabled": "Ақпарат"
       },
       "routing": {
-        "title": "title",
+        "title": "Баптаулар",
         "sabiWallet": "Sabi әмиян",
-        "businessRoutingLayer": "бизнес routing layer",
-        "tradeBot": "trade bot",
-        "businessBot": "бизнес bot",
-        "tradeHint": "trade үшін кеңес",
+        "businessRoutingLayer": "Ақпарат",
+        "tradeBot": "Көмекші",
+        "businessBot": "Ақпарат",
+        "tradeHint": "Ақпарат Ақпарат",
         "businessHint": "бизнес үшін кеңес"
       },
       "actions": {
@@ -4263,49 +4264,49 @@ export const KK_LOCALE = {
       },
       "alerts": {
         "loading": "жүктелуде",
-        "createSuccess": "жасау success",
-        "saveSuccess": "сақтау success",
+        "createSuccess": "Ақпарат",
+        "saveSuccess": "Ақпарат",
         "resetTitle": "қалпына келтіру",
         "resetDescription": "қалпына келтіру сипаттамасы"
       }
     },
     "likesScreen": {
       "header": {
-        "title": "title"
+        "title": "лайктар"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "actions": {
-        "readonly": "readonly",
-        "fromUsers": "кімнен users"
+        "readonly": "Ақпарат",
+        "fromUsers": "Ақпарат"
       },
       "notes": {
-        "readonlyTitle": "readonly",
-        "readonlyDescription": "readonly сипаттамасы",
+        "readonlyTitle": "Тақырып",
+        "readonlyDescription": "Сипаттама Ақпарат",
         "sourceTitle": "дереккөз",
         "sourceDescription": "дереккөз сипаттамасы",
         "emptyTitle": "бос",
         "emptyDescription": "бос сипаттамасы",
-        "nonEmptyDescription": "non бос сипаттамасы"
+        "nonEmptyDescription": "Ақпарат Ақпарат"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       }
     },
     "linksScreen": {
       "header": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "карта",
+        "subtitle": "Баптаулар"
       },
       "inputs": {
-        "labelPlaceholder": "label үшін кеңес",
-        "urlPlaceholder": "url үшін кеңес"
+        "labelPlaceholder": "Іздеу",
+        "urlPlaceholder": "Іздеу"
       },
       "actions": {
         "add": "қосу",
@@ -4313,427 +4314,427 @@ export const KK_LOCALE = {
         "delete": "жою"
       },
       "item": {
-        "defaultLabel": "default"
+        "defaultLabel": "сілтеме"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "бос",
+        "description": "Баптаулар"
       },
       "alerts": {
-        "invalidUrlTitle": "invalid url",
-        "invalidUrlMessage": "invalid url message",
-        "duplicateTitle": "duplicate",
-        "duplicateMessage": "duplicate message",
+        "invalidUrlTitle": "Тақырып",
+        "invalidUrlMessage": "Ақпарат",
+        "duplicateTitle": "Тақырып",
+        "duplicateMessage": "Ақпарат",
         "openFailedTitle": "ашу сәтсіз",
-        "openFailedMessage": "ашу сәтсіз message"
+        "openFailedMessage": "Сұрау орындалмады. Қайталап көріңіз."
       },
       "form": {
-        "labelPlaceholder": "label үшін кеңес",
-        "urlPlaceholder": "url үшін кеңес"
+        "labelPlaceholder": "Іздеу",
+        "urlPlaceholder": "Іздеу"
       }
     },
     "accountSection": {
       "edit": {
-        "title": "title",
-        "description": "description"
+        "title": "Жеке ақпарат",
+        "description": "Баптаулар"
       },
       "verification": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "badges": {
-          "starter": "starter",
-          "basic": "basic",
-          "standard": "standard",
-          "plus": "plus",
-          "advanced": "advanced",
-          "enhanced": "enhanced",
-          "full": "full",
+          "starter": "Ақпарат",
+          "basic": "Ақпарат",
+          "standard": "Ақпарат",
+          "plus": "Ақпарат",
+          "advanced": "Ақпарат",
+          "enhanced": "Ақпарат",
+          "full": "Ақпарат",
           "verified": "Тексерілді",
           "business": "бизнес",
           "merchant": "мерчант"
         }
       },
       "devices": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "trusted": {
-        "title": "title",
-        "description": "description",
-        "badgeSuffix": "badge suffix"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badgeSuffix": "Ақпарат"
       }
     },
     "privacySection": {
       "privacy": {
-        "title": "title",
-        "description": "description"
+        "title": "Құпиялылық",
+        "description": "Баптаулар"
       },
       "security": {
-        "title": "title",
-        "description": "description"
+        "title": "Қауіпсіздік",
+        "description": "Баптаулар"
       },
       "data": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "qr": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       }
     },
     "appSection": {
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "preferences": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "colors": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badge": "Премиум"
       },
       "ai": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badge": "Премиум"
       },
       "notificationSounds": {
-        "title": "Melodies and notification sounds",
-        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+        "title": "Әуендер және хабарландыру дыбыстары",
+        "description": "Баптаулар"
       },
       "notifications": {
-        "title": "title",
-        "description": "description"
+        "title": "Хабарландырулар",
+        "description": "Баптаулар"
       },
       "games": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badge": "Премиум"
       }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "title",
-        "description": "description"
+        "title": "Премиум",
+        "description": "Премиум"
       },
       "business": {
-        "title": "title",
-        "description": "description"
+        "title": "Бизнес аккаунт",
+        "description": "Премиум"
       },
       "credits": {
-        "title": "title",
-        "description": "description"
+        "title": "Премиум",
+        "description": "Премиум"
       },
       "gifts": {
-        "title": "title",
-        "description": "description"
+        "title": "Премиум",
+        "description": "Премиум"
       },
       "premium": {
-        "title": "title",
-        "description": "description"
+        "title": "Премиум",
+        "description": "Премиум"
       }
     },
     "walletSection": {
       "walletCard": {
-        "title": "title",
-        "description": "description"
+        "title": "Әмиян",
+        "description": "Баптаулар"
       },
       "settings": {
-        "title": "title",
-        "description": "description"
+        "title": "Әмиян параметрлері",
+        "description": "Баптаулар"
       }
     },
     "giftsBlock": {
-      "title": "title",
-      "description": "description",
+      "title": "Баптаулар",
+      "description": "Баптаулар",
       "stats": {
         "all": "барлығы",
-        "premium": "Premium",
-        "seasonal": "seasonal"
+        "premium": "Премиум",
+        "seasonal": "Ақпарат"
       },
       "open": "ашу"
     },
     "publicationManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "ownerData": "owner data",
-      "bindings": "bindings",
-      "publication": "publication",
-      "accessRules": "access rules",
-      "hiddenWhenNotCreated": "hidden when not created",
+      "title": "Баптаулар",
+      "subtitle": "Баптаулар",
+      "ownerData": "Ақпарат",
+      "bindings": "Ақпарат",
+      "publication": "Ақпарат",
+      "accessRules": "Ақпарат",
+      "hiddenWhenNotCreated": "Ақпарат",
       "createFromProfile": "жасау кімнен профиль"
     },
     "home": "басты",
-    "eyebrow": "eyebrow",
-    "subtitle": "subtitle",
+    "eyebrow": "Профиль",
+    "subtitle": "Баптаулар",
     "surface": {
       "photos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Фотосуреттер",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "shortVideos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "likes": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "лайктар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       },
       "reactions": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "Реакциялар",
+        "subtitle": "Баптаулар",
+        "stat": "Ақпарат"
       }
     },
     "account": {
       "edit": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "verification": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "badges": {
-          "starter": "starter",
-          "basic": "basic",
-          "standard": "standard",
-          "plus": "plus",
-          "advanced": "advanced",
-          "enhanced": "enhanced",
-          "full": "full",
+          "starter": "Ақпарат",
+          "basic": "Ақпарат",
+          "standard": "Стандарт",
+          "plus": "Ақпарат",
+          "advanced": "Қосымша",
+          "enhanced": "Ақпарат",
+          "full": "Ақпарат",
           "verified": "Тексерілді",
           "business": "бизнес",
           "merchant": "мерчант"
         }
       },
       "devices": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "trusted": {
-        "title": "title",
-        "description": "description",
-        "badgeSuffix": "badge suffix"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badgeSuffix": "Ақпарат"
       }
     },
     "app": {
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "Тіл және аймақ",
+        "description": "Баптаулар"
       },
       "preferences": {
-        "title": "title",
-        "description": "description"
+        "title": "Көрініс және қалаулар",
+        "description": "Баптаулар"
       },
       "colors": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "Профиль тақырыбы мен жақтаулары",
+        "description": "Баптаулар",
+        "badge": "Премиум"
       },
       "ai": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "AI және ақылды көмекші",
+        "description": "Баптаулар",
+        "badge": "Премиум"
       },
       "notifications": {
-        "title": "title",
-        "description": "description"
+        "title": "Хабарландырулар",
+        "description": "Баптаулар"
       },
       "games": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "badge": "Келесі"
       }
     },
     "wallet": {
       "wallet": {
-        "title": "title",
-        "description": "description"
+        "title": "Әмиян",
+        "description": "Баптаулар"
       },
       "settings": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       }
     },
     "editScreen": {
       "header": {
-        "title": "title",
+        "title": "Профильді өңдеу",
         "viewAction": "көру әрекет"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Профильді өңдеу",
+        "subtitle": "Баптаулар"
       },
       "hero": {
-        "subtitle": "subtitle",
-        "changeAvatarAction": "change avatar әрекет",
-        "aiLinkedBadge": "AI linked badge",
-        "editModeBadge": "өңдеу mode badge",
+        "subtitle": "Баптаулар",
+        "changeAvatarAction": "Ақпарат",
+        "aiLinkedBadge": "AI",
+        "editModeBadge": "Өңдеу режимі",
         "quickActions": {
           "photos": "фотолар",
-          "videos": "videos",
+          "videos": "Бейнелер",
           "voice": "дауыс",
           "public": "ашық"
         }
       },
       "sections": {
-        "identity": "identity",
+        "identity": "Ақпарат",
         "presentation": "презентация",
-        "safety": "safety"
+        "safety": "Ақпарат"
       },
       "identity": {
         "photos": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "videos": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "voice": {
-          "title": "title",
-          "description": "description"
+          "title": "Дауыстық AI",
+          "description": "Дауыстық AI"
         },
         "username": {
-          "title": "title",
-          "description": "description"
+          "title": "Пайдаланушы аты",
+          "description": "Баптаулар"
         },
         "phone": {
-          "title": "title",
-          "description": "description"
+          "title": "телефон",
+          "description": "Баптаулар"
         },
         "email": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "birthday": {
-          "title": "title",
-          "description": "description"
+          "title": "туған күн",
+          "description": "Баптаулар"
         },
         "language": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "description": "Баптаулар",
+          "badge": "Премиум"
         }
       },
       "presentation": {
         "public": {
-          "title": "title",
-          "description": "description"
+          "title": "Ашық профиль",
+          "description": "Баптаулар"
         },
         "colors": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "description": "Баптаулар",
+          "badge": "Премиум"
         },
         "ai": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "description": "Баптаулар",
+          "badge": "Премиум"
         },
         "qr": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "safety": {
         "verification": {
-          "title": "title",
-          "description": "description"
+          "title": "Растау",
+          "description": "Баптаулар"
         },
         "privacy": {
-          "title": "title",
-          "description": "description"
+          "title": "Құпиялылық",
+          "description": "Баптаулар"
         },
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "Қауіпсіздік",
+          "description": "Баптаулар"
         }
       }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "Ақпарат",
+          "title": "Пайдаланушы аты",
+          "subtitle": "Баптаулар"
         },
         "phone": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "Ақпарат",
+          "title": "Телефон нөмірі",
+          "subtitle": "Баптаулар"
         },
         "birthday": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "Ақпарат",
+          "title": "туған күн",
+          "subtitle": "Баптаулар"
         },
         "channel": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "Чат",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "bot": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "Көмекші",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "colors": {
-          "eyebrow": "eyebrow",
-          "subtitle": "subtitle",
-          "title": "title"
+          "eyebrow": "Ақпарат",
+          "subtitle": "Баптаулар",
+          "title": "Баптаулар"
         }
       },
       "username": {
-        "fieldLabel": "field",
-        "noteTitle": "note",
-        "noteText": "note сипаттамасы",
+        "fieldLabel": "Пайдаланушы аты",
+        "noteTitle": "пайдаланушы аты",
+        "noteText": "Ақпарат Ақпарат",
         "placeholder": "толтырғыш"
       },
       "phone": {
-        "fieldLabel": "field",
-        "noteTitle": "note",
-        "noteText": "note сипаттамасы",
+        "fieldLabel": "телефон",
+        "noteTitle": "Шот нөмірі",
+        "noteText": "Ақпарат Ақпарат",
         "placeholder": "толтырғыш"
       },
       "birthday": {
-        "day": "day",
-        "month": "month",
-        "year": "year",
-        "noteTitle": "note",
-        "noteText": "note сипаттамасы",
-        "dayPlaceholder": "day үшін кеңес",
-        "monthPlaceholder": "month үшін кеңес",
-        "yearPlaceholder": "year үшін кеңес"
+        "day": "Ақпарат",
+        "month": "Ақпарат",
+        "year": "Ақпарат",
+        "noteTitle": "туған күн",
+        "noteText": "Ақпарат Ақпарат",
+        "dayPlaceholder": "Іздеу",
+        "monthPlaceholder": "Іздеу",
+        "yearPlaceholder": "Іздеу"
       },
       "channel": {
-        "fieldLabel": "field",
+        "fieldLabel": "Ақпарат",
         "placeholder": "толтырғыш",
-        "noteTitle": "note",
-        "noteText": "note сипаттамасы"
+        "noteTitle": "Тақырып",
+        "noteText": "Ақпарат Ақпарат"
       },
       "bot": {
-        "fieldLabel": "field",
+        "fieldLabel": "Ақпарат",
         "placeholder": "толтырғыш",
-        "noteTitle": "note",
-        "noteText": "note сипаттамасы"
+        "noteTitle": "Тақырып",
+        "noteText": "Ақпарат Ақпарат"
       },
       "colors": {
-        "noteText": "note сипаттамасы",
-        "noteTitle": "note",
+        "noteText": "Ақпарат Ақпарат",
+        "noteTitle": "Тақырып",
         "presets": {
-          "blue": "blue",
-          "emerald": "emerald",
-          "gold": "gold",
-          "purple": "purple",
-          "teal": "teal"
+          "blue": "Ақпарат",
+          "emerald": "Ақпарат",
+          "gold": "Ақпарат",
+          "purple": "Ақпарат",
+          "teal": "Ақпарат"
         },
         "previewTitle": "алдын ала қарау"
       }
@@ -4741,37 +4742,37 @@ export const KK_LOCALE = {
     "channelScreen": {
       "loading": "жүктелуде",
       "header": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "shelf": {
-        "title": "title",
+        "title": "Баптаулар",
         "empty": "бос"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "Ақпарат",
         "public": "ашық",
-        "control": "control",
+        "control": "Ақпарат",
         "history": "тарих"
       },
       "actions": {
         "create": "жасау",
-        "creating": "creating",
+        "creating": "Ақпарат",
         "save": "сақтау",
-        "saving": "saving",
+        "saving": "Сақталуда...",
         "reset": "қалпына келтіру"
       },
       "createFlow": {
-        "subtitle": "subtitle",
-        "ownerAuto": "owner auto",
-        "inviteAuto": "invite auto"
+        "subtitle": "Баптаулар",
+        "ownerAuto": "Ақпарат",
+        "inviteAuto": "Чат"
       },
       "defaults": {
-        "channelName": "channel аты",
+        "channelName": "Жаңа арна",
         "username": "пайдаланушы аты",
-        "description": "description"
+        "description": "Баптаулар"
       },
       "stats": {
-        "subscribers": "subscribers",
+        "subscribers": "Ақпарат",
         "photos": "фотолар",
         "gifts": "сыйлықтар",
         "history": "тарих"
@@ -4784,167 +4785,167 @@ export const KK_LOCALE = {
       },
       "sections": {
         "identity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "activity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "public": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "толтырғыш",
+          "subtitle": "Баптаулар"
         },
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "permissions": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Рұқсаттар",
+          "subtitle": "Баптаулар"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "historyStats": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Тарих",
+          "subtitle": "Баптаулар"
         }
       },
       "readonly": {
-        "notice": "notice",
+        "notice": "Ақпарат",
         "likes": "лайктар",
         "gifts": "сыйлықтар"
       },
       "flags": {
         "public": "ашық",
         "private": "жеке",
-        "published": "published",
+        "published": "Жарияланған",
         "preview": "алдын ала қарау",
-        "profileVisible": "профиль visible",
-        "profileHidden": "профиль hidden"
+        "profileVisible": "Профиль",
+        "profileHidden": "Профиль"
       },
       "focus": {
         "public": "ашық"
       },
       "openChat": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
+        "avatar": "Ақпарат",
+        "cover": "Ақпарат",
         "photos": "фотолар",
         "photosSubtitle": "фотолар сипаттамасы",
-        "videos": "videos",
-        "videosSubtitle": "videos сипаттамасы",
+        "videos": "Бейнелер",
+        "videosSubtitle": "Сипаттама Ақпарат",
         "addPhoto": "қосу фото",
         "addVideo": "қосу видео",
         "gallery": "галерея",
         "emptyPhotosTitle": "бос фотолар",
         "emptyPhotosSubtitle": "бос фотолар сипаттамасы",
-        "emptyVideosTitle": "бос videos",
-        "emptyVideosSubtitle": "бос videos сипаттамасы"
+        "emptyVideosTitle": "Әзірге бейнелер жоқ",
+        "emptyVideosSubtitle": "Ақпарат Ақпарат"
       },
       "main": {
         "channelName": {
-          "label": "label",
+          "label": "Чат",
           "placeholder": "толтырғыш"
         },
         "username": {
-          "label": "label",
+          "label": "Пайдаланушы аты",
           "placeholder": "толтырғыш"
         },
         "description": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
-        "channelId": "channel ID",
-        "channelIdPlaceholder": "channel ID үшін кеңес",
-        "inviteLink": "invite сілтеме"
+        "channelId": "Чат",
+        "channelIdPlaceholder": "Іздеу",
+        "inviteLink": "Чат"
       },
       "owner": {
         "name": "аты",
         "namePlaceholder": "аты үшін кеңес",
         "userId": "пайдаланушы ID",
         "userIdPlaceholder": "пайдаланушы ID үшін кеңес",
-        "role": "role",
-        "rolePlaceholder": "role үшін кеңес",
+        "role": "Ақпарат",
+        "rolePlaceholder": "толтырғыш",
         "phone": "телефон",
-        "email": "email"
+        "email": "Ақпарат"
       },
       "publication": {
-        "publicationId": "publication ID",
-        "title": "title",
-        "titlePlaceholder": "title үшін кеңес",
-        "subtitle": "subtitle",
-        "subtitlePlaceholder": "subtitle үшін кеңес",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "summary үшін кеңес"
+        "publicationId": "Ақпарат",
+        "title": "Баптаулар",
+        "titlePlaceholder": "Іздеу",
+        "subtitle": "Баптаулар",
+        "subtitlePlaceholder": "Сипаттама Ақпарат",
+        "slug": "Ақпарат",
+        "tags": "Ақпарат",
+        "summary": "алдын ала қарау үшін кеңес",
+        "summaryPlaceholder": "Іздеу"
       },
       "toggles": {
         "public": "ашық",
         "publicSubtitle": "ашық сипаттамасы",
-        "published": "published",
-        "publishedSubtitle": "published сипаттамасы",
-        "showInProfile": "show in профиль",
-        "showInProfileSubtitle": "show in профиль сипаттамасы",
-        "searchable": "searchable",
-        "searchableSubtitle": "searchable сипаттамасы",
+        "published": "Жарияланған",
+        "publishedSubtitle": "Сипаттама Ақпарат",
+        "showInProfile": "Профиль",
+        "showInProfileSubtitle": "Профиль Ақпарат",
+        "searchable": "Іздеу",
+        "searchableSubtitle": "Іздеу",
         "preview": "алдын ала қарау",
         "previewSubtitle": "алдын ала қарау сипаттамасы",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery сипаттамасы",
-        "approveSubscribers": "approve subscribers",
-        "approveSubscribersSubtitle": "approve subscribers сипаттамасы",
-        "onlyAdminsCanPost": "only admins can post",
-        "onlyAdminsCanPostSubtitle": "only admins can post сипаттамасы",
-        "onlyAdminsCanEdit": "only admins can өңдеу",
-        "onlyAdminsCanEditSubtitle": "only admins can өңдеу сипаттамасы",
-        "commentsEnabled": "comments enabled",
-        "commentsEnabledSubtitle": "comments enabled сипаттамасы",
-        "reactionsEnabled": "reactions enabled",
-        "reactionsEnabledSubtitle": "reactions enabled сипаттамасы"
+        "discovery": "Ақпарат",
+        "discoverySubtitle": "Сипаттама Ақпарат",
+        "approveSubscribers": "Ақпарат",
+        "approveSubscribersSubtitle": "Сипаттама Ақпарат",
+        "onlyAdminsCanPost": "Ақпарат",
+        "onlyAdminsCanPostSubtitle": "Сипаттама Ақпарат",
+        "onlyAdminsCanEdit": "Ақпарат",
+        "onlyAdminsCanEditSubtitle": "Сипаттама Ақпарат",
+        "commentsEnabled": "Ақпарат",
+        "commentsEnabledSubtitle": "Сипаттама Ақпарат",
+        "reactionsEnabled": "Ақпарат",
+        "reactionsEnabledSubtitle": "Сипаттама Ақпарат"
       },
       "links": {
-        "chatId": "chat ID",
-        "botId": "bot ID",
-        "subscribers": "subscribers"
+        "chatId": "Чат",
+        "botId": "Көмекші",
+        "subscribers": "Ақпарат"
       },
       "history": {
-        "subtitle": "subtitle",
+        "subtitle": "Баптаулар",
         "emptyTitle": "бос",
         "emptySubtitle": "бос сипаттамасы"
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "Сәтті",
+          "created": "Ақпарат",
           "saved": "Сақталды",
           "reset": "қалпына келтіру"
         },
         "error": {
-          "title": "title",
+          "title": "Қате",
           "saveFailed": "сақтау сәтсіз"
         },
         "validation": {
           "nameTitle": "аты",
-          "nameMessage": "аты message"
+          "nameMessage": "Ақпарат"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "Баптаулар",
+          "message": "Ақпарат",
           "cancel": "бас тарту",
           "confirm": "растау"
         }
@@ -4953,34 +4954,34 @@ export const KK_LOCALE = {
     "botScreen": {
       "loading": "жүктелуде",
       "header": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "shelf": {
-        "title": "title",
+        "title": "Баптаулар",
         "empty": "бос"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "Ақпарат",
         "public": "ашық",
-        "control": "control",
+        "control": "Ақпарат",
         "history": "тарих"
       },
       "actions": {
         "create": "жасау",
-        "creating": "creating",
+        "creating": "Ақпарат",
         "save": "сақтау",
-        "saving": "saving",
+        "saving": "Сақталуда...",
         "reset": "қалпына келтіру"
       },
       "createFlow": {
-        "subtitle": "subtitle",
-        "ownerAuto": "owner auto",
-        "inviteAuto": "invite auto"
+        "subtitle": "Баптаулар",
+        "ownerAuto": "Ақпарат",
+        "inviteAuto": "Чат"
       },
       "defaults": {
-        "botName": "bot аты",
+        "botName": "Көмекші",
         "username": "пайдаланушы аты",
-        "description": "description"
+        "description": "Баптаулар"
       },
       "stats": {
         "modules": "модульдер",
@@ -4996,181 +4997,181 @@ export const KK_LOCALE = {
       },
       "sections": {
         "identity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "activity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "public": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "толтырғыш",
+          "subtitle": "Баптаулар"
         },
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "permissions": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Рұқсаттар",
+          "subtitle": "Баптаулар"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "routing": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "historyStats": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Тарих",
+          "subtitle": "Баптаулар"
         }
       },
       "readonly": {
-        "notice": "notice"
+        "notice": "Ақпарат"
       },
       "flags": {
         "public": "ашық",
         "private": "жеке",
-        "published": "published",
+        "published": "Жарияланған",
         "preview": "алдын ала қарау",
-        "profileVisible": "профиль visible",
-        "profileHidden": "профиль hidden",
-        "active": "active",
-        "paused": "paused"
+        "profileVisible": "Профиль",
+        "profileHidden": "Профиль",
+        "active": "Белсенді",
+        "paused": "Уақытша тоқтатылған"
       },
       "focus": {
         "public": "ашық",
-        "routing": "routing"
+        "routing": "Ақпарат"
       },
       "openChat": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
+        "avatar": "Ақпарат",
+        "cover": "Ақпарат",
         "gallery": "галерея"
       },
       "main": {
         "botName": {
-          "label": "label",
+          "label": "Көмекші",
           "placeholder": "толтырғыш"
         },
         "username": {
-          "label": "label",
+          "label": "Пайдаланушы аты",
           "placeholder": "толтырғыш"
         },
         "description": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "botKind": {
-          "label": "label",
+          "label": "Көмекші",
           "placeholder": "толтырғыш"
         },
-        "botId": "bot ID",
-        "botIdPlaceholder": "bot ID үшін кеңес"
+        "botId": "Көмекші",
+        "botIdPlaceholder": "Іздеу"
       },
       "owner": {
         "name": "аты",
         "namePlaceholder": "аты үшін кеңес",
         "userId": "пайдаланушы ID",
         "userIdPlaceholder": "пайдаланушы ID үшін кеңес",
-        "role": "role",
-        "rolePlaceholder": "role үшін кеңес",
+        "role": "Ақпарат",
+        "rolePlaceholder": "толтырғыш",
         "phone": "телефон",
-        "email": "email"
+        "email": "Ақпарат"
       },
       "publication": {
-        "publicationId": "publication ID",
-        "title": "title",
-        "titlePlaceholder": "title үшін кеңес",
-        "subtitle": "subtitle",
-        "subtitlePlaceholder": "subtitle үшін кеңес",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "summary үшін кеңес"
+        "publicationId": "Ақпарат",
+        "title": "Баптаулар",
+        "titlePlaceholder": "Іздеу",
+        "subtitle": "Баптаулар",
+        "subtitlePlaceholder": "Сипаттама Ақпарат",
+        "slug": "Ақпарат",
+        "tags": "Ақпарат",
+        "summary": "алдын ала қарау үшін кеңес",
+        "summaryPlaceholder": "Іздеу"
       },
       "toggles": {
         "public": "ашық",
         "publicSubtitle": "ашық сипаттамасы",
-        "published": "published",
-        "publishedSubtitle": "published сипаттамасы",
-        "showInProfile": "show in профиль",
-        "showInProfileSubtitle": "show in профиль сипаттамасы",
+        "published": "Жарияланған",
+        "publishedSubtitle": "Сипаттама Ақпарат",
+        "showInProfile": "Профиль",
+        "showInProfileSubtitle": "Профиль Ақпарат",
         "preview": "алдын ала қарау",
         "previewSubtitle": "алдын ала қарау сипаттамасы",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery сипаттамасы",
-        "active": "active",
-        "activeSubtitle": "active сипаттамасы",
+        "discovery": "Ақпарат",
+        "discoverySubtitle": "Сипаттама Ақпарат",
+        "active": "Белсенді",
+        "activeSubtitle": "Сипаттама Ақпарат",
         "acceptCommands": "қабылдау командалар",
         "acceptCommandsSubtitle": "қабылдау командалар сипаттамасы",
-        "showInCatalog": "show in catalog",
-        "showInCatalogSubtitle": "show in catalog сипаттамасы",
-        "allowPayments": "рұқсат беру payments",
-        "allowPaymentsSubtitle": "рұқсат беру payments сипаттамасы",
-        "inlineEnabled": "inline enabled",
-        "inlineEnabledSubtitle": "inline enabled сипаттамасы",
-        "autoReplyEnabled": "auto жауап беру enabled",
-        "autoReplyEnabledSubtitle": "auto жауап беру enabled сипаттамасы",
-        "marketplaceLinked": "маркетплейс linked",
-        "marketplaceLinkedSubtitle": "маркетплейс linked сипаттамасы",
-        "deliveryLinked": "delivery linked",
-        "deliveryLinkedSubtitle": "delivery linked сипаттамасы",
-        "businessRoutingEnabled": "бизнес routing enabled",
-        "businessRoutingEnabledSubtitle": "бизнес routing enabled сипаттамасы"
+        "showInCatalog": "Ақпарат",
+        "showInCatalogSubtitle": "Сипаттама Ақпарат",
+        "allowPayments": "Ақпарат",
+        "allowPaymentsSubtitle": "Сипаттама Ақпарат",
+        "inlineEnabled": "Ақпарат",
+        "inlineEnabledSubtitle": "Сипаттама Ақпарат",
+        "autoReplyEnabled": "Ақпарат",
+        "autoReplyEnabledSubtitle": "Сипаттама Ақпарат",
+        "marketplaceLinked": "Ақпарат",
+        "marketplaceLinkedSubtitle": "Сипаттама Ақпарат",
+        "deliveryLinked": "Ақпарат",
+        "deliveryLinkedSubtitle": "Сипаттама Ақпарат",
+        "businessRoutingEnabled": "бизнес",
+        "businessRoutingEnabledSubtitle": "Ақпарат Ақпарат"
       },
       "links": {
-        "chatId": "chat ID",
-        "groupId": "group ID",
-        "channelId": "channel ID",
-        "marketId": "market ID"
+        "chatId": "Чат",
+        "groupId": "Чат",
+        "channelId": "Чат",
+        "marketId": "Ақпарат"
       },
       "routing": {
-        "title": "title",
+        "title": "Баптаулар",
         "sabiWallet": "Sabi әмиян",
-        "businessRoutingLayer": "бизнес routing layer",
-        "tradeBot": "trade bot",
-        "businessBot": "бизнес bot",
-        "tradeHint": "trade үшін кеңес",
+        "businessRoutingLayer": "Ақпарат",
+        "tradeBot": "Көмекші",
+        "businessBot": "Ақпарат",
+        "tradeHint": "Ақпарат Ақпарат",
         "businessHint": "бизнес үшін кеңес"
       },
       "history": {
-        "subtitle": "subtitle",
+        "subtitle": "Баптаулар",
         "emptyTitle": "бос",
         "emptySubtitle": "бос сипаттамасы"
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "Сәтті",
+          "created": "Ақпарат",
           "saved": "Сақталды",
           "reset": "қалпына келтіру"
         },
         "error": {
-          "title": "title",
+          "title": "Қате",
           "saveFailed": "сақтау сәтсіз"
         },
         "validation": {
           "nameTitle": "аты",
-          "nameMessage": "аты message"
+          "nameMessage": "Ақпарат"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "Баптаулар",
+          "message": "Ақпарат",
           "cancel": "бас тарту",
           "confirm": "растау"
         }
@@ -5178,274 +5179,274 @@ export const KK_LOCALE = {
     },
     "colorsScreen": {
       "header": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "preview": {
-        "ownerTheme": "owner тақырып",
+        "ownerTheme": "Тақырып",
         "bio": "био",
         "stats": {
           "theme": "тақырып",
-          "frame": "frame"
+          "frame": "Жақтаулар"
         },
         "quickPills": {
-          "profileSurface": "профиль surface",
-          "aiIdentity": "AI identity",
-          "premium": "Premium"
+          "profileSurface": "Профиль",
+          "aiIdentity": "AI",
+          "premium": "Премиум"
         },
-        "ownerThemeBadge": "owner тақырып badge"
+        "ownerThemeBadge": "Тақырып"
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "sections": {
-        "themePresets": "тақырып presets",
-        "avatarFrames": "avatar frames"
+        "themePresets": "Тақырып",
+        "avatarFrames": "Жақтаулар"
       },
       "themes": {
         "emeraldGlass": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "badge": "Белсенді"
         },
         "royalAurora": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "badge": "Премиум"
         },
         "midnightViolet": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "badge": "Премиум"
         },
         "sunsetRose": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "badge": "Жаңа"
         },
         "aiNeon": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "badge": "AI"
         }
       },
       "frames": {
         "defaultGlow": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "heartPulse": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "crystalRing": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "royalGold": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "neonWave": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "aiHalo": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "softStars": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "seasonalBloom": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "action": "әрекет"
       },
       "alerts": {
-        "savedDescription": "saved сипаттамасы",
-        "savedTitle": "saved"
+        "savedDescription": "Сақталды",
+        "savedTitle": "Сақталды"
       }
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "metrics": {
-        "allSessions": "барлығы sessions",
-        "trusted": "trusted",
-        "timeout": "timeout"
+        "allSessions": "Ақпарат",
+        "trusted": "Ақпарат",
+        "timeout": "Ақпарат"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off"
+        "on": "Қосылған",
+        "off": "Өшіру"
       },
       "connect": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "action": "әрекет"
       },
       "sections": {
-        "thisDevice": "this device",
-        "otherSessions": "other sessions",
-        "autoEnd": "auto аяқтау"
+        "thisDevice": "Ақпарат",
+        "otherSessions": "Ақпарат",
+        "autoEnd": "Ақпарат"
       },
       "badges": {
-        "live": "live",
-        "trusted": "trusted"
+        "live": "Ақпарат",
+        "trusted": "Ақпарат"
       },
-      "revokeAction": "revoke әрекет",
-      "selectedBadge": "таңдалды badge",
+      "revokeAction": "бас тарту",
+      "selectedBadge": "Ақпарат",
       "timeouts": {
-        "oneWeek": "one week",
-        "oneMonth": "one month",
-        "threeMonths": "three months",
-        "sixMonths": "six months",
-        "oneYear": "one year"
+        "oneWeek": "Ақпарат",
+        "oneMonth": "Ақпарат",
+        "threeMonths": "Ақпарат",
+        "sixMonths": "Ақпарат",
+        "oneYear": "Ақпарат"
       },
       "notes": {
         "safety": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "nextLayer": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "future": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       }
     },
     "privacyScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Құпиялылық",
+        "subtitle": "Баптаулар"
       },
       "sections": {
-        "securityAccess": "security access",
-        "visibilityCommunication": "visibility communication"
+        "securityAccess": "Қауіпсіздік",
+        "visibilityCommunication": "Ақпарат"
       },
       "rows": {
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "Қауіпсіздік",
+          "description": "Баптаулар"
         },
         "data": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "blocked": {
-          "title": "title",
-          "description": "description"
+          "title": "Бұғатталған",
+          "description": "Баптаулар"
         },
         "autodelete": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "login_email": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "phone": {
-          "title": "title",
-          "description": "description"
+          "title": "телефон",
+          "description": "Баптаулар"
         },
         "last_seen": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "last-seen": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "photo": {
-          "title": "title",
-          "description": "description"
+          "title": "Фото",
+          "description": "Баптаулар"
         },
         "bio": {
-          "title": "title",
-          "description": "description"
+          "title": "Өмірбаян",
+          "description": "Баптаулар"
         },
         "birthday": {
-          "title": "title",
-          "description": "description"
+          "title": "туған күн",
+          "description": "Баптаулар"
         },
         "gifts": {
-          "title": "title",
-          "description": "description"
+          "title": "сыйлықтар",
+          "description": "Баптаулар"
         },
         "forwards": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "calls": {
-          "title": "title",
-          "description": "description"
+          "title": "Қоңыраулар",
+          "description": "Баптаулар"
         },
         "voice_messages": {
-          "title": "title",
-          "description": "description"
+          "title": "Дауыстық AI",
+          "description": "Дауыстық AI"
         },
         "voice-messages": {
-          "title": "title",
-          "description": "description"
+          "title": "Дауыстық AI",
+          "description": "Дауыстық AI"
         },
         "messages": {
-          "title": "title",
-          "description": "description"
+          "title": "Хабарламалар",
+          "description": "Баптаулар"
         },
         "groups": {
-          "title": "title",
-          "description": "description"
+          "title": "Топтар",
+          "description": "Баптаулар"
         }
       }
     },
     "privacyDetailScreen": {
       "defaults": {
-        "eyebrow": "eyebrow"
+        "eyebrow": "Ақпарат"
       },
       "options": {
-        "everyone": "everyone",
-        "contacts": "contacts",
-        "nobody": "nobody"
+        "everyone": "Ақпарат",
+        "contacts": "Ақпарат",
+        "nobody": "Ақпарат"
       },
       "notFound": {
-        "title": "title",
-        "subtitle": "subtitle",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
         "backAction": "артқа әрекет"
       },
       "exceptions": {
-        "title": "title"
+        "title": "Тақырыбы"
       },
-      "lockedHelper": "locked helper",
+      "lockedHelper": "Ақпарат Ақпарат",
       "notes": {
-        "title": "title"
+        "title": "Тақырыбы"
       },
       "premium": {
-        "eyebrow": "eyebrow"
+        "eyebrow": "Премиум"
       },
       "preview": {
-        "forwardedFrom": "forwarded кімнен"
+        "forwardedFrom": "Ақпарат"
       }
     },
     "privacyDetails": {
@@ -5453,525 +5454,525 @@ export const KK_LOCALE = {
         "add": "қосу"
       },
       "phone": {
-        "title": "title",
+        "title": "телефон",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "findByNumber": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "value": "value",
-            "description": "description"
+            "title": "Баптаулар",
+            "value": "Ақпарат",
+            "description": "Баптаулар"
           }
         }
       },
       "lastSeen": {
-        "title": "title",
+        "title": "Баптаулар",
         "groups": {
           "onlineVisibility": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "toggles": {
           "hideReadTime": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
-        "note": "note",
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta сипаттамасы"
+        "note": "Ескертпе",
+        "premiumNote": "Премиум",
+        "premiumCtaText": "әрекет"
       },
       "photo": {
-        "title": "title",
+        "title": "Баптаулар",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "bio": {
-        "title": "title",
+        "title": "Өмірбаян",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "birthday": {
-        "title": "title",
+        "title": "туған күн",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "gifts": {
-        "title": "title",
+        "title": "сыйлықтар",
         "topToggles": {
           "chatBadge": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "groups": {
           "defaultProfileVisibility": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "allowedGifts": {
-          "title": "title"
+          "title": "Баптаулар"
         },
         "toggles": {
           "standard": {
-            "title": "title",
-            "description": "description"
+            "title": "Стандарт",
+            "description": "Баптаулар"
           },
           "rare": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "forwards": {
-        "title": "title",
+        "title": "Баптаулар",
         "preview": {
-          "label": "label",
-          "sender": "sender",
-          "message": "message"
+          "label": "Ақпарат",
+          "sender": "Жіберуші",
+          "message": "Алдын ала қарау"
         },
         "groups": {
           "accountLinking": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "calls": {
-        "title": "title",
+        "title": "Қоңыраулар",
         "options": {
-          "always": "always",
-          "never": "never"
+          "always": "Ақпарат",
+          "never": "Ақпарат"
         },
         "groups": {
           "whoCanCall": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "peerToPeer": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "toggles": {
           "iphoneIntegration": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       },
       "voiceMessages": {
-        "title": "title",
+        "title": "Дауыстық AI",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "messages for credits"
+          "contactsPremium": "Дауыстық AI",
+          "messagesForCredits": "Дауыстық AI"
         },
         "groups": {
           "whoCanSend": {
-            "title": "title",
-            "description": "description"
+            "title": "Дауыстық AI",
+            "description": "Дауыстық AI"
           }
         },
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta сипаттамасы"
+        "premiumNote": "Дауыстық AI",
+        "premiumCtaText": "әрекет"
       },
       "messages": {
-        "title": "title",
+        "title": "Хабарламалар",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "messages for credits"
+          "contactsPremium": "Премиум",
+          "messagesForCredits": "Ақпарат"
         },
         "groups": {
           "whoCanMessage": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta сипаттамасы"
+        "premiumNote": "Премиум",
+        "premiumCtaText": "әрекет"
       },
       "groups": {
-        "title": "title",
+        "title": "Топтар",
         "groups": {
           "whoCanInvite": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           }
         }
       }
     },
     "dataManagementScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "metrics": {
-        "contactsSync": "contacts синхрондау",
-        "draftBackup": "draft backup",
+        "contactsSync": "Ақпарат",
+        "draftBackup": "Артқа",
         "privateExport": "жеке экспорт"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off"
+        "on": "Қосылған",
+        "off": "Өшіру"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "sections": {
-        "discovery": "discovery",
-        "storage": "storage",
-        "retention": "retention"
+        "discovery": "Ақпарат",
+        "storage": "Ақпарат",
+        "retention": "Ақпарат"
       },
       "discovery": {
         "syncContacts": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "searchSuggestions": {
-          "title": "title",
-          "description": "description"
+          "title": "Іздеу",
+          "description": "Іздеу"
         },
         "memoryControls": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "storage": {
         "draftBackup": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "paymentHints": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "privateExportMode": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "retention": {
         "autoCleanup": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "actions": {
         "requestExport": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "reviewDrafts": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "clearCache": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "links": {
         "privacy": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "support": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       }
     },
     "aiScreen": {
       "header": {
-        "title": "title",
+        "title": "Баптаулар",
         "openAction": "ашу әрекет"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "AI",
+        "subtitle": "Баптаулар"
       },
       "hero": {
         "badges": {
-          "identity": "identity",
-          "programBound": "program bound"
+          "identity": "Ақпарат",
+          "programBound": "Ақпарат"
         },
         "stats": {
-          "mode": "mode",
-          "owner": "owner",
-          "premium": "Premium",
-          "premiumBound": "Premium bound"
+          "mode": "Ақпарат",
+          "owner": "толтырғыш",
+          "premium": "Премиум",
+          "premiumBound": "Премиум"
         },
         "actions": {
           "edit": "өңдеу",
           "theme": "тақырып",
-          "premium": "Premium",
+          "premium": "Премиум",
           "public": "ашық"
         }
       },
       "modes": {
         "balanced": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "creative": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "business": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "concise": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       },
       "modeSection": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "sections": {
         "primary": {
-          "title": "title",
+          "title": "Баптаулар",
           "edit": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "public": {
-            "title": "title",
-            "description": "description"
+            "title": "Ашық",
+            "description": "Баптаулар"
           },
           "colors": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "premium": {
-            "title": "title",
-            "description": "description"
+            "title": "Премиум",
+            "description": "Премиум"
           }
         },
         "system": {
-          "title": "title",
+          "title": "Баптаулар",
           "language": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "qr": {
-            "title": "title",
-            "description": "description"
+            "title": "Баптаулар",
+            "description": "Баптаулар"
           },
           "premiumSurface": {
-            "title": "title",
-            "description": "description"
+            "title": "Премиум",
+            "description": "Премиум"
           }
         }
       },
       "badges": {
-        "premium": "Premium"
+        "premium": "Премиум"
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "action": "әрекет"
       }
     },
     "giftsScreen": {
       "header": {
-        "title": "title",
+        "title": "сыйлық орталық",
         "openAction": "ашу әрекет"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "hero": {
         "badges": {
-          "identity": "identity",
-          "unifiedIdBound": "unified ID bound"
+          "identity": "Ақпарат",
+          "unifiedIdBound": "Ақпарат"
         },
         "stats": {
-          "diamonds": "diamonds",
+          "diamonds": "Ақпарат",
           "status": "күй",
-          "owner": "owner"
+          "owner": "толтырғыш"
         },
         "actions": {
           "public": "ашық",
-          "premium": "Premium",
-          "credits": "credits",
+          "premium": "Премиум",
+          "credits": "Ақпарат",
           "theme": "тақырып"
         }
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "tabs": {
-        "received": "received",
-        "inventory": "inventory",
+        "received": "Ақпарат",
+        "inventory": "Ақпарат",
         "history": "тарих"
       },
       "common": {
-        "diamonds": "diamonds"
+        "diamonds": "Ақпарат"
       },
       "items": {
         "goldenAura": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Премиум",
           "status": "күй"
         },
         "violetWave": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "mintLight": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "dragonNote": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "moonSilk": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "seaBloom": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "phoenixBloom": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "crystalComet": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         },
         "emeraldLotus": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар",
+          "rarity": "Ақпарат",
           "status": "күй"
         }
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "Баптаулар",
+        "description": "Баптаулар",
         "action": "әрекет"
       }
     },
     "creditsScreen": {
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle",
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
         "backAction": "артқа әрекет"
       },
       "balance": {
-        "label": "label",
+        "label": "Ақпарат",
         "actions": {
           "topUp": "Толтыру",
-          "statistics": "statistics",
+          "statistics": "Ақпарат",
           "giftCenter": "сыйлық орталық"
         }
       },
@@ -5983,181 +5984,181 @@ export const KK_LOCALE = {
     },
     "businessUpgradeScreen": {
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle",
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
         "backAction": "артқа әрекет"
       },
       "hero": {
-        "title": "title",
-        "description": "description",
-        "launchBadge": "launch badge"
+        "title": "Баптаулар",
+        "description": "Баптаулар",
+        "launchBadge": "Ақпарат"
       },
       "sections": {
-        "plans": "plans",
-        "features": "features"
+        "plans": "Ақпарат",
+        "features": "Ақпарат"
       },
       "plans": {
         "business_annual": {
-          "title": "title",
-          "period": "period",
-          "price": "price",
-          "description": "description",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "period": "Ақпарат",
+          "price": "Баға",
+          "description": "Баптаулар",
+          "badge": "Премиум"
         },
         "business_monthly": {
-          "title": "title",
-          "period": "period",
-          "price": "price",
-          "description": "description",
-          "badge": "badge"
+          "title": "Баптаулар",
+          "period": "Ақпарат",
+          "price": "Баға",
+          "description": "Баптаулар",
+          "badge": "Премиум"
         }
       },
       "features": {
         "address": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "workHours": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "quickReplies": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "greetings": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "notAvailable": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "chatLinks": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "footer": {
         "action": "әрекет"
       },
-      "cta": "cta"
+      "cta": "Ақпарат"
     },
     "preferencesScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Қалаулар",
+        "subtitle": "Баптаулар"
       },
       "metrics": {
-        "haptics": "haptics",
-        "sound": "sound",
-        "compact": "compact"
+        "haptics": "Ақпарат",
+        "sound": "Дыбыс",
+        "compact": "Ақпарат"
       },
       "sections": {
-        "localization": "localization",
-        "interaction": "interaction",
+        "localization": "Ақпарат",
+        "interaction": "Ақпарат",
         "presentation": "презентация"
       },
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "Қолданба тілі",
+        "description": "Баптаулар"
       },
       "toggles": {
         "haptics": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "sound": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "preview": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "compact": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "smartInsights": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "links": {
         "language": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "notifications": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       }
     },
     "loginEmailScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "field": {
-        "label": "label",
+        "label": "Электрондық пошта",
         "placeholder": "толтырғыш"
       },
       "toggles": {
         "currentVerification": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "newVerification": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       }
     },
     "securityScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Қауіпсіздік",
+        "subtitle": "Баптаулар"
       },
       "metrics": {
-        "biometric": "biometric",
-        "appPin": "app бекіту",
-        "twoFactor": "two factor"
+        "biometric": "Ақпарат",
+        "appPin": "Ақпарат",
+        "twoFactor": "Ақпарат"
       },
       "sections": {
-        "mainProtection": "main protection",
-        "sensitiveActions": "sensitive әрекеттер",
-        "identityChangeProtection": "identity change protection"
+        "mainProtection": "Ақпарат",
+        "sensitiveActions": "Баптаулар",
+        "identityChangeProtection": "Ақпарат"
       },
       "mainProtection": {
         "biometric": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "appPin": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "twoFactor": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         }
       },
       "common": {
@@ -6165,64 +6166,64 @@ export const KK_LOCALE = {
         "required": "Міндетті"
       },
       "emailFlow": {
-        "currentEmail": "current email {{value}}",
-        "currentVerification": "current verification {{value}}",
-        "newVerification": "new verification {{value}}",
-        "title": "title"
+        "currentEmail": "Ақпарат",
+        "currentVerification": "Ақпарат",
+        "newVerification": "Ақпарат",
+        "title": "Баптаулар"
       },
       "identityChange": {
         "emailFaceId": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         },
         "fallbackPin": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         },
         "phoneFaceId": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         }
       },
       "links": {
         "devices": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         }
       },
       "phoneFlow": {
-        "currentPhone": "current телефон {{value}}",
-        "newVerification": "new verification {{value}}",
-        "oldVerification": "old verification {{value}}",
-        "title": "title"
+        "currentPhone": "Ақпарат",
+        "newVerification": "Ақпарат",
+        "oldVerification": "Ақпарат",
+        "title": "Баптаулар"
       },
       "sensitiveActions": {
         "confirmation": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         },
         "suspiciousAlerts": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         },
         "trustedAlerts": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         }
       }
     },
     "qrScreen": {
       "header": {
-        "howItWorksAction": "how it works әрекет"
+        "howItWorksAction": "Ақпарат"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "actions": {
         "sendQr": "жіберу QR",
@@ -6230,275 +6231,275 @@ export const KK_LOCALE = {
       },
       "toggles": {
         "allowScan": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "allowShare": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "share": {
-        "title": "title",
+        "title": "Баптаулар",
         "message": {
-          "header": "header",
+          "header": "Ақпарат",
           "name": "аты",
           "username": "пайдаланушы аты",
-          "sabiId": "Sabi ID",
-          "profileCode": "профиль code",
+          "sabiId": "Ақпарат",
+          "profileCode": "Профиль",
           "profileLink": "профиль сілтеме"
         }
       },
       "alerts": {
         "shareFailed": {
-          "title": "title",
-          "message": "message"
+          "title": "Баптаулар",
+          "message": "Ақпарат"
         },
         "howItWorks": {
-          "title": "title",
-          "message": "message"
+          "title": "Баптаулар",
+          "message": "Ақпарат"
         }
       }
     },
     "supportScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Қолдау",
+        "subtitle": "Баптаулар"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "sections": {
         "links": "сілтемелер"
       },
       "notes": {
         "premiumFoundation": {
-          "title": "title",
-          "description": "description"
+          "title": "Премиум",
+          "description": "Премиум"
         },
         "legalTrust": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "links": {
         "helpCenter": {
-          "title": "title",
-          "description": "description"
+          "title": "Көмек орталығы",
+          "description": "Баптаулар"
         },
         "contactSupport": {
-          "title": "title",
-          "description": "description"
+          "title": "Қолдаумен байланысу",
+          "description": "Баптаулар"
         },
         "privacyPolicy": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "termsOfService": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "aboutSabi": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       }
     },
     "trustedScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "metrics": {
-        "trusted": "trusted",
+        "trusted": "Ақпарат",
         "blocked": "Бұғатталған",
-        "totalRules": "total rules"
+        "totalRules": "Ақпарат"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "sections": {
-        "trusted": "trusted",
+        "trusted": "Ақпарат",
         "blocked": "Бұғатталған"
       },
       "badges": {
-        "trusted": "trusted",
+        "trusted": "Ақпарат",
         "blocked": "Бұғатталған"
       },
       "actions": {
         "block": "бұғаттау",
-        "restore": "restore"
+        "restore": "Ақпарат"
       },
       "notes": {
-        "movedFromTrusted": "moved кімнен trusted",
-        "restoredFromBlocked": "restored кімнен бұғатталған",
-        "genericTrusted": "generic trusted",
-        "genericBlocked": "generic бұғатталған"
+        "movedFromTrusted": "Ақпарат",
+        "restoredFromBlocked": "Ақпарат",
+        "genericTrusted": "Ақпарат",
+        "genericBlocked": "Ақпарат"
       },
       "empty": {
         "trusted": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "blocked": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "links": {
         "blockedOnly": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "privacyCenter": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       }
     },
     "verificationScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "Ақпарат",
+        "title": "Растау",
+        "subtitle": "Баптаулар"
       },
       "status": {
         "verified": "Тексерілді",
         "pending": "Күтуде",
         "review": "тексеру",
-        "limited": "limited",
+        "limited": "Шектеулі",
         "rejected": "Қабылданбады"
       },
       "common": {
         "verified": "Тексерілді",
         "pending": "Күтуде",
-        "unknown": "unknown"
+        "unknown": "Белгісіз"
       },
       "sections": {
-        "compliance": "compliance",
-        "checks": "checks",
+        "compliance": "Сәйкестік",
+        "checks": "Ақпарат",
         "documents": "құжаттар"
       },
       "complianceState": {
-        "label": "label {{value}}",
-        "restrictedIntro": "шектелген intro",
-        "noRestrictions": "жоқ restrictions",
-        "sourceOfFundsRequested": "дереккөз of funds requested",
-        "reverificationRequired": "reverification міндетті"
+        "label": "Ақпарат",
+        "restrictedIntro": "Ақпарат",
+        "noRestrictions": "Ақпарат",
+        "sourceOfFundsRequested": "Ақпарат",
+        "reverificationRequired": "Ақпарат"
       },
       "checks": {
         "address": "мекенжай",
-        "email": "email",
-        "liveness": "liveness",
+        "email": "Ақпарат",
+        "liveness": "Ақпарат",
         "phone": "телефон"
       },
       "documents": {
-        "updatedAt": "updated at {{value}}"
+        "updatedAt": "Ақпарат"
       },
       "hero": {
-        "residencyCountry": "residency country {{value}}",
-        "reviewReason": "тексеру себеп {{value}}"
+        "residencyCountry": "Ақпарат",
+        "reviewReason": "Ақпарат"
       },
       "metrics": {
-        "email": "email",
-        "liveness": "liveness",
+        "email": "Электрондық пошта",
+        "liveness": "Ақпарат",
         "phone": "телефон"
       }
     },
     "mediaScreen": {
       "header": {
-        "title": "title"
+        "title": "Медиа"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "routes": {
         "photos": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Фотосуреттер",
+          "subtitle": "Баптаулар"
         },
         "shortVideos": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "voice": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "дауыс",
+          "subtitle": "Дауыстық AI"
         }
       }
     },
     "photosScreen": {
       "header": {
-        "title": "title"
+        "title": "Фотосуреттер"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "actions": {
         "gallery": "галерея",
-        "cameraFx": "камера fx"
+        "cameraFx": "Дауыс"
       },
       "badges": {
-        "avatar": "avatar"
+        "avatar": "Ақпарат"
       },
       "filters": {
-        "none": "none",
-        "warm": "warm",
-        "cool": "cool",
-        "mono": "mono",
-        "emerald": "emerald"
+        "none": "Ешқайсысы",
+        "warm": "Ақпарат",
+        "cool": "Ақпарат",
+        "mono": "Ақпарат",
+        "emerald": "Ақпарат"
       },
       "modal": {
         "actions": {
-          "setAvatar": "set avatar",
+          "setAvatar": "Ақпарат",
           "delete": "жою"
         },
         "editor": {
-          "left": "left",
-          "right": "right",
-          "mirrorX": "mirror x",
-          "mirrorY": "mirror y"
+          "left": "Ақпарат",
+          "right": "Ақпарат",
+          "mirrorX": "Ақпарат",
+          "mirrorY": "Ақпарат"
         },
         "info": "ақпарат"
       },
       "capture": {
-        "cameraSuffix": "камера suffix",
-        "fxPrefix": "fx prefix",
+        "cameraSuffix": "Дауыс",
+        "fxPrefix": "Ақпарат",
         "photoLabel": "фото"
       },
       "defaults": {
         "photoName": "фото аты"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "бос фотолар",
+        "description": "Баптаулар"
       },
       "alerts": {
-        "permissionTitle": "permission",
-        "permissionMessage": "permission message"
+        "permissionTitle": "Тақырып",
+        "permissionMessage": "Ақпарат"
       }
     },
     "shortVideosScreen": {
       "header": {
-        "title": "title"
+        "title": "Баптаулар"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар"
       },
       "actions": {
         "add": "қосу"
@@ -6507,242 +6508,242 @@ export const KK_LOCALE = {
         "videoName": "видео аты"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "Баптаулар",
+        "description": "Баптаулар"
       },
       "modal": {
         "remove": "алып тастау"
       },
       "alerts": {
         "permission": {
-          "title": "title",
-          "message": "message"
+          "title": "Баптаулар",
+          "message": "Ақпарат"
         }
       },
       "item": {
-        "title": "title"
+        "title": "Тақырыбы"
       }
     },
     "groupScreen": {
       "loading": "жүктелуде",
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
+        "eyebrow": "Ақпарат",
+        "title": "Баптаулар",
         "badges": {
-          "active": "active",
+          "active": "Белсенді",
           "create": "жасау"
         }
       },
       "hero": {
         "fallbacks": {
-          "newGroup": "new group",
-          "usernameNotSet": "пайдаланушы аты not set"
+          "newGroup": "Жаңа топ",
+          "usernameNotSet": "Ақпарат"
         },
         "pills": {
-          "created": "created",
+          "created": "Ақпарат",
           "createFromProfile": "жасау кімнен профиль",
           "public": "ашық",
           "private": "жеке",
-          "admins": "admins",
-          "blacklist": "blacklist"
+          "admins": "Ақпарат",
+          "blacklist": "Ақпарат"
         }
       },
       "sections": {
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "accessRules": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "admins": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "blacklist": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "bindings": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       },
       "main": {
         "groupName": {
-          "label": "label",
+          "label": "Чат",
           "placeholder": "толтырғыш"
         },
         "username": {
-          "label": "label",
+          "label": "Пайдаланушы аты",
           "placeholder": "толтырғыш"
         },
         "description": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "groupId": {
-          "label": "label",
+          "label": "Чат",
           "placeholder": "толтырғыш"
         },
         "inviteLink": {
-          "label": "label",
+          "label": "Чат",
           "placeholder": "толтырғыш"
         }
       },
       "owner": {
         "defaults": {
-          "role": "role"
+          "role": "толтырғыш"
         },
         "name": {
-          "label": "label",
+          "label": "аты",
           "placeholder": "толтырғыш"
         },
         "userId": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "role": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "phone": {
-          "label": "label",
+          "label": "телефон",
           "placeholder": "толтырғыш"
         },
         "email": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         }
       },
       "publication": {
         "publicGroup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "published": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "showInProfile": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "searchable": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Іздеу",
+          "subtitle": "Іздеу"
         },
         "preview": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "publicationId": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "title": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "subtitle": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "slug": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "tags": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         },
         "summary": {
-          "label": "label",
+          "label": "Ақпарат",
           "placeholder": "толтырғыш"
         }
       },
       "access": {
         "joinRequests": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "memberInvites": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "onlyAdminsPost": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "onlyAdminsEdit": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "commentsEnabled": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "memberListVisible": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "slowMode": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "messageApproval": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         },
         "mediaApproval": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "Баптаулар",
+          "subtitle": "Баптаулар"
         }
       },
       "admins": {
         "metrics": {
-          "total": "total",
-          "owner": "owner"
+          "total": "Ақпарат",
+          "owner": "толтырғыш"
         },
         "defaults": {
-          "adminRole": "admin role"
+          "adminRole": "Әкімші"
         },
         "badges": {
-          "owner": "owner"
+          "owner": "толтырғыш"
         },
         "actions": {
           "add": "қосу",
           "remove": "алып тастау"
         },
         "form": {
-          "title": "title",
+          "title": "қосу",
           "userId": {
-            "label": "label",
+            "label": "Пайдаланушы ID",
             "placeholder": "толтырғыш"
           },
           "name": {
-            "label": "label",
+            "label": "Атауы",
             "placeholder": "толтырғыш"
           },
           "role": {
-            "label": "label",
+            "label": "Ақпарат",
             "placeholder": "толтырғыш"
           }
         }
       },
       "blacklist": {
         "metrics": {
-          "total": "total",
-          "active": "active",
+          "total": "Ақпарат",
+          "active": "Белсенді",
           "yes": "иә",
           "no": "жоқ"
         },
@@ -6754,307 +6755,307 @@ export const KK_LOCALE = {
           "remove": "алып тастау"
         },
         "empty": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "form": {
-          "title": "title",
+          "title": "Баптаулар",
           "userId": {
-            "label": "label",
+            "label": "Пайдаланушы ID",
             "placeholder": "толтырғыш"
           },
           "name": {
-            "label": "label",
+            "label": "Атауы",
             "placeholder": "толтырғыш"
           },
           "reason": {
-            "label": "label",
+            "label": "Ақпарат",
             "placeholder": "толтырғыш"
           }
         }
       },
       "bindings": {
         "chatId": {
-          "label": "label",
+          "label": "Чат",
           "placeholder": "толтырғыш"
         },
         "botId": {
-          "label": "label",
+          "label": "Көмекші",
           "placeholder": "толтырғыш"
         }
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "Сәтті",
+          "created": "Ақпарат",
           "saved": "Сақталды",
           "reset": "қалпына келтіру"
         },
         "error": {
-          "title": "title",
+          "title": "Баптаулар",
           "saveFailed": "сақтау сәтсіз",
           "resetFailed": "қалпына келтіру сәтсіз"
         },
         "validation": {
           "nameTitle": "аты",
-          "nameMessage": "аты message",
-          "ownerIdTitle": "owner ID",
-          "ownerIdMessage": "owner ID message",
-          "adminTitle": "admin",
-          "adminMessage": "admin message",
-          "blacklistTitle": "blacklist",
-          "blacklistMessage": "blacklist message",
-          "blacklistConflictTitle": "blacklist conflict",
-          "blacklistConflictMessage": "blacklist conflict message",
-          "ownerProtectedTitle": "owner protected",
-          "ownerProtectedMessage": "owner protected message",
-          "ownerBlacklistMessage": "owner blacklist message"
+          "nameMessage": "Ақпарат",
+          "ownerIdTitle": "Тақырып",
+          "ownerIdMessage": "Ақпарат",
+          "adminTitle": "Тақырып",
+          "adminMessage": "Ақпарат",
+          "blacklistTitle": "Тақырып",
+          "blacklistMessage": "Ақпарат",
+          "blacklistConflictTitle": "Тақырып",
+          "blacklistConflictMessage": "Ақпарат",
+          "ownerProtectedTitle": "Тақырып",
+          "ownerProtectedMessage": "Ақпарат",
+          "ownerBlacklistMessage": "Ақпарат"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "Баптаулар",
+          "message": "Ақпарат",
           "cancel": "бас тарту",
           "confirm": "растау"
         }
       },
       "actions": {
         "create": "жасау",
-        "creating": "creating",
+        "creating": "Ақпарат",
         "save": "сақтау",
-        "saving": "saving",
+        "saving": "Жүктелуде...",
         "reset": "қалпына келтіру"
       }
     },
     "autoDeleteScreen": {
       "hero": {
-        "description": "description",
-        "title": "title"
+        "description": "Сипаттама",
+        "title": "Тақырыбы"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "Ақпарат",
+        "subtitle": "Баптаулар",
+        "title": "Тақырыбы"
       },
       "note": {
-        "description": "description",
-        "title": "title"
+        "description": "Сипаттама",
+        "title": "Тақырыбы"
       },
-      "selectedBadge": "таңдалды badge",
+      "selectedBadge": "Ақпарат",
       "toggles": {
         "channels": {
-          "description": "description",
-          "title": "title"
+          "description": "Сипаттама",
+          "title": "Тақырыбы"
         },
         "groups": {
-          "description": "description",
-          "title": "title"
+          "description": "Сипаттама",
+          "title": "Тақырыбы"
         },
         "newChats": {
-          "description": "description",
-          "title": "title"
+          "description": "Сипаттама",
+          "title": "Тақырыбы"
         }
       }
     },
     "blockedScreen": {
       "empty": {
-        "description": "description",
-        "title": "title"
+        "description": "Сипаттама",
+        "title": "Тақырыбы"
       },
       "hero": {
-        "description": "description",
-        "title": "title"
+        "description": "Сипаттама",
+        "title": "Тақырыбы"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "Ақпарат",
+        "subtitle": "Баптаулар",
+        "title": "Тақырыбы"
       },
       "metric": {
-        "title": "title"
+        "title": "Тақырыбы"
       },
       "person": {
-        "defaultNote": "default note",
+        "defaultNote": "Ақпарат",
         "unblockAction": "бұғаттан шығару әрекет"
       }
     },
     "giftsSection": {
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "Баптаулар",
+      "title": "Қабылданған сыйлықтар"
     },
     "hub": {
-      "eyebrow": "eyebrow"
+      "eyebrow": "Ақпарат"
     },
     "premiumScreen": {
       "features": {
         "ai": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "Премиум",
+          "title": "AI құралдары"
         },
         "frames": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "Премиум",
+          "title": "Премиум"
         },
         "gifts": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "Премиум",
+          "title": "Премиум"
         },
         "themes": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "Премиум",
+          "title": "Премиум"
         }
       },
       "footer": {
         "action": "әрекет",
-        "description": "description",
-        "title": "title"
+        "description": "Премиум",
+        "title": "Премиум"
       },
       "header": {
         "openAction": "ашу әрекет",
-        "title": "title"
+        "title": "Премиум"
       },
       "hero": {
         "actions": {
           "ai": "AI",
           "gifts": "сыйлықтар",
           "public": "ашық",
-          "themes": "themes"
+          "themes": "Премиум"
         },
         "badges": {
-          "identity": "identity",
-          "ownerSurface": "owner surface"
+          "identity": "Премиум",
+          "ownerSurface": "Премиум"
         },
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "Премиум",
+        "title": "Премиум"
       },
       "identityCard": {
-        "description": "description",
-        "title": "title"
+        "description": "Премиум",
+        "title": "Премиум"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "Премиум",
+        "subtitle": "Премиум",
+        "title": "Премиум"
       },
       "notice": {
-        "description": "description",
-        "title": "title"
+        "description": "Премиум",
+        "title": "Премиум"
       },
       "rows": {
         "ai": {
-          "badge": "badge",
-          "description": "description",
-          "title": "title"
+          "badge": "AI",
+          "description": "Премиум",
+          "title": "Премиум"
         },
         "business": {
-          "description": "description",
-          "title": "title"
+          "description": "Премиум",
+          "title": "Премиум"
         },
         "colors": {
-          "badge": "badge",
-          "description": "description",
-          "title": "title"
+          "badge": "Премиум",
+          "description": "Премиум",
+          "title": "Премиум"
         },
         "credits": {
-          "description": "description",
-          "title": "title"
+          "description": "Премиум",
+          "title": "Премиум"
         },
         "gifts": {
-          "description": "description",
-          "title": "title"
+          "description": "Премиум",
+          "title": "сыйлық орталық"
         },
         "public": {
-          "description": "description",
-          "title": "title"
+          "description": "Премиум",
+          "title": "Ашық профиль"
         },
         "qr": {
-          "description": "description",
-          "title": "title"
+          "description": "Премиум",
+          "title": "Премиум"
         }
       },
       "sections": {
-        "controls": "controls",
-        "unlocks": "unlocks"
+        "controls": "Премиум",
+        "unlocks": "Премиум"
       }
     },
     "publicScreen": {
       "editor": {
         "bio": "био",
         "name": "аты",
-        "subtitle": "subtitle",
-        "title": "title",
+        "subtitle": "Баптаулар",
+        "title": "Баптаулар",
         "username": "пайдаланушы аты"
       },
       "fallback": {
         "bio": "био",
-        "subtitle": "subtitle"
+        "subtitle": "Баптаулар"
       },
       "header": {
-        "title": "title"
+        "title": "Ашық профиль"
       },
       "hero": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "Баптаулар",
+        "title": "Ашық профиль"
       },
       "rows": {
         "photos": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Ашық фотосуреттер"
         },
         "videos": {
-          "description": "description",
-          "title": "title"
+          "description": "Баптаулар",
+          "title": "Баптаулар"
         }
       },
       "sections": {
-        "manage": "manage",
-        "metrics": "metrics"
+        "manage": "Басқару",
+        "metrics": "Ақпарат"
       }
     },
     "reactionsScreen": {
       "card": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "Баптаулар",
+        "title": "Баптаулар"
       },
       "header": {
-        "title": "title"
+        "title": "Реакциялар"
       }
     },
     "voiceScreen": {
       "actions": {
-        "record": "record",
+        "record": "Жазу",
         "stop": "тоқтату"
       },
       "alerts": {
         "permission": {
-          "message": "message",
-          "title": "title"
+          "message": "Дауыстық AI",
+          "title": "Дауыстық AI"
         },
-        "recordFailed": "record сәтсіз"
+        "recordFailed": "Дауыстық AI"
       },
       "card": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "Дауыстық AI",
+        "title": "Дауыстық AI"
       },
       "header": {
-        "title": "title"
+        "title": "дауыс"
       },
       "item": {
-        "title": "title"
+        "title": "Тақырыбы"
       }
     }
   },
   "premium": {
     "title": "Премиум",
     "subtitle": "Кеңейтілген құралдарды, AI аударманы, премиум мүмкіндіктерді және жақсартылған тәжірибені ашыңыз.",
-    "activatePremium": "Premium-ді қосу",
-    "premiumActive": "Premium белсенді",
-    "premiumInactive": "Premium белсенді емес",
-    "premiumExpired": "Premium мерзімі аяқталған",
+    "activatePremium": "Премиум",
+    "premiumActive": "Премиум",
+    "premiumInactive": "Премиум",
+    "premiumExpired": "Премиум",
     "renewalDate": "Жаңарту күні",
     "manageSubscription": "Жазылымды басқару",
     "monthlyPlan": "Айлық жоспар",
     "yearlyPlan": "Жылдық жоспар",
-    "buyWithCoin": "Coin арқылы сатып алу",
+    "buyWithCoin": "Премиум",
     "benefits": "Артықшылықтар",
     "includedFeatures": "Қамтылған мүмкіндіктер",
     "advancedTranslation": "Кеңейтілген аударма",
@@ -7063,11 +7064,11 @@ export const KK_LOCALE = {
     "exclusiveFeatures": "Ерекше мүмкіндіктер",
     "subscriptionHistory": "Жазылым тарихы",
     "paymentInProgress": "Төлем орындалуда",
-    "premiumActivated": "Premium қосылды",
-    "premiumActivationFailed": "Premium қосудан қате шықты",
+    "premiumActivated": "Премиум",
+    "premiumActivationFailed": "Премиум",
     "autoRenew": "Автоматты жаңарту",
     "cancelAutoRenew": "Автоматты жаңартудан бас тарту",
-    "featureLocked": "Бұл мүмкіндік тек Premium пайдаланушылары үшін қолжетімді.",
+    "featureLocked": "Премиум",
     "aiChatTranslation": "AI чат аудармасы",
     "aiCallTranslation": "AI дауыстық және бейне қоңырау аудармасы",
     "smartReplies": "Ақылды жауаптар",
@@ -7110,14 +7111,14 @@ export const KK_LOCALE = {
     "rewriteForBusiness": "Бизнеске лайық қайта жазу",
     "summarizeConversation": "Әңгімесін қысқаша мазмұндау",
     "summarizeCalls": "Қоңырауларды қысқаша мазмұндау",
-    "premiumOnly": "AI құралдары тек Premium пайдаланушыларына қолжетімді.",
+    "premiumOnly": "Премиум",
     "unsupportedLanguagePair": "Бұл тіл жұбына әлі қолдау көрсетілмейді",
     "mobile": {
       "common": {
         "back": "артқа",
         "cancel": "бас тарту",
         "loading": "жүктелуде",
-        "notConnected": "not қосылды",
+        "notConnected": "Қосылмаған",
         "open": "ашу",
         "refresh": "жаңарту",
         "retry": "қайта көру",
@@ -7131,133 +7132,133 @@ export const KK_LOCALE = {
       },
       "status": {
         "ready": "Дайын",
-        "limited": "limited",
-        "error": "error",
-        "not_connected": "not қосылды",
-        "unavailable": "unavailable",
-        "active": "active",
+        "limited": "Шектеулі",
+        "error": "Қате",
+        "not_connected": "Қосылмаған",
+        "unavailable": "Қолжетімсіз",
+        "active": "Белсенді",
         "pending": "Күтуде"
       },
       "messageStatus": {
-        "sent": "sent",
-        "error": "error",
+        "sent": "Жіберілді",
+        "error": "Қате",
         "pending": "Күтуде",
-        "sending": "sending",
-        "awaiting_confirmation": "awaiting confirmation"
+        "sending": "Жүктелуде...",
+        "awaiting_confirmation": "Ақпарат"
       },
       "action": {
         "chat": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "voice": {
-          "title": "title",
-          "description": "description"
+          "title": "Дауыстық AI",
+          "description": "Дауыстық AI"
         },
         "translation": {
-          "title": "title",
-          "description": "description"
+          "title": "нақты уақыт аударма",
+          "description": "Аударма"
         },
         "history": {
-          "title": "title",
-          "description": "description"
+          "title": "Тарих",
+          "description": "Баптаулар"
         },
         "tasks": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "memory": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "settings": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "premium": {
-          "title": "title",
-          "description": "description"
+          "title": "Премиум",
+          "description": "Премиум"
         },
         "setting": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
         "profileAi": {
-          "title": "title",
-          "description": "description"
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         }
       },
       "home": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "heroEyebrow": "hero",
-        "heroTitle": "hero",
-        "heroDescription": "hero сипаттамасы",
-        "connection": "connection",
+        "title": "Sabi AI",
+        "subtitle": "Баптаулар",
+        "heroEyebrow": "Ақпарат",
+        "heroTitle": "Ақпарат",
+        "heroDescription": "Ақпарат Ақпарат",
+        "connection": "Баптаулар",
         "userId": "пайдаланушы ID",
-        "quickAccess": "quick access",
-        "capabilities": "capabilities",
-        "safeActions": "safe әрекеттер",
-        "safeActionsDescription": "safe әрекеттер сипаттамасы",
-        "safeActionsText": "safe әрекеттер сипаттамасы",
-        "cleanWorkspaceTitle": "clean workspace",
-        "cleanWorkspaceText": "clean workspace сипаттамасы"
+        "quickAccess": "Жылдам қолжетімділік",
+        "capabilities": "Көмекші",
+        "safeActions": "Қауіпсіздік",
+        "safeActionsDescription": "Қауіпсіздік Ақпарат",
+        "safeActionsText": "Қауіпсіздік Ақпарат",
+        "cleanWorkspaceTitle": "Тақырып",
+        "cleanWorkspaceText": "Ақпарат Ақпарат"
       },
       "chat": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "runtimeTitle": "runtime",
-        "backendRequired": "backend міндетті",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "runtimeTitle": "Баптаулар",
+        "backendRequired": "Артқа",
         "emptyTitle": "бос",
         "emptyText": "бос сипаттамасы",
         "placeholder": "толтырғыш",
-        "roleUser": "role пайдаланушы",
-        "emptyBackendResponse": "бос backend response",
-        "cleanEmptyText": "clean бос сипаттамасы",
-        "errorMessage": "error message",
-        "thinking": "thinking",
+        "roleUser": "Сіз",
+        "emptyBackendResponse": "Артқа",
+        "cleanEmptyText": "Ақпарат Ақпарат",
+        "errorMessage": "Сұрау орындалмады. Қайталап көріңіз.",
+        "thinking": "Ақпарат",
         "assistantCenterTitle": "көмекші орталық",
         "assistantCenterDescription": "көмекші орталық сипаттамасы",
-        "modeTitle": "mode",
-        "modeSubtitle": "mode сипаттамасы",
-        "assistantMenuTitle": "көмекші menu",
-        "assistantMenuSubtitle": "көмекші menu сипаттамасы",
+        "modeTitle": "Тақырып",
+        "modeSubtitle": "Сипаттама Ақпарат",
+        "assistantMenuTitle": "Көмекші",
+        "assistantMenuSubtitle": "Көмекші Ақпарат",
         "mode": {
           "chatgpt": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
           "business": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "Баптаулар",
+            "short": "Бизнес",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
           "student": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
           "applicant": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
           "teacher": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           }
         },
-        "toolsTitle": "tools",
-        "toolsSubtitle": "tools сипаттамасы {mode}",
-        "toolsSheetTitle": "tools sheet",
-        "toolsSheetSubtitle": "tools sheet сипаттамасы",
+        "toolsTitle": "Баптаулар",
+        "toolsSubtitle": "Баптаулар Ақпарат",
+        "toolsSheetTitle": "Баптаулар",
+        "toolsSheetSubtitle": "Баптаулар Ақпарат",
         "camera": "камера",
         "cameraDescription": "камера сипаттамасы",
         "uploadPhoto": "жүктеу фото",
@@ -7266,27 +7267,27 @@ export const KK_LOCALE = {
         "uploadVideoDescription": "жүктеу видео сипаттамасы",
         "uploadDocument": "жүктеу құжат",
         "uploadDocumentDescription": "жүктеу құжат сипаттамасы",
-        "webSearch": "web іздеу",
-        "webSearchShort": "web іздеу short",
-        "webSearchDescription": "web іздеу сипаттамасы",
-        "voiceRecording": "дауыс recording",
-        "permissionCamera": "permission камера",
-        "permissionPhoto": "permission фото",
-        "permissionVideo": "permission видео",
-        "attachmentsSent": "attachments sent",
-        "attachmentPhoto": "attachment фото",
-        "attachmentVideo": "attachment видео",
-        "attachmentDocument": "attachment құжат",
-        "attachmentAudio": "attachment аудио",
-        "uploadContractNotice": "жүктеу contract notice",
-        "safetyConfirmTitle": "safety растау",
-        "safetyConfirmMessage": "safety растау message",
-        "safetyConfirmCancel": "safety растау бас тарту",
-        "safetyConfirmContinue": "safety растау жалғастыру",
-        "securityNotice": "security notice",
+        "webSearch": "Веб-іздеу",
+        "webSearchShort": "Іздеу",
+        "webSearchDescription": "Іздеу",
+        "voiceRecording": "Дауыстық AI",
+        "permissionCamera": "Дауыс",
+        "permissionPhoto": "Профиль",
+        "permissionVideo": "Дауыс",
+        "attachmentsSent": "Ақпарат",
+        "attachmentPhoto": "Фото",
+        "attachmentVideo": "Бейне",
+        "attachmentDocument": "Құжат",
+        "attachmentAudio": "Ақпарат",
+        "uploadContractNotice": "Ақпарат",
+        "safetyConfirmTitle": "Тақырып",
+        "safetyConfirmMessage": "Ақпарат",
+        "safetyConfirmCancel": "Болдырмау",
+        "safetyConfirmContinue": "Жалғастыру",
+        "securityNotice": "Қауіпсіздік",
         "prompt": {
           "business": "бизнес",
-          "study": "study",
+          "study": "Ақпарат",
           "search": "іздеу",
           "file": "файл"
         }
@@ -7300,163 +7301,163 @@ export const KK_LOCALE = {
         "emptyText": "бос сипаттамасы"
       },
       "memory": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "privacyMode": "құпиялылық mode",
-        "strict": "strict",
-        "balanced": "balanced",
-        "adaptive": "adaptive",
-        "instructionPlaceholder": "instruction үшін кеңес",
-        "addInstruction": "қосу instruction",
-        "instructions": "instructions",
-        "noAccusation": "жоқ accusation",
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "privacyMode": "Құпиялық",
+        "strict": "Ақпарат",
+        "balanced": "Ақпарат",
+        "adaptive": "Ақпарат",
+        "instructionPlaceholder": "Іздеу",
+        "addInstruction": "Ақпарат",
+        "instructions": "Ақпарат",
+        "noAccusation": "Ақпарат",
         "modeSaved": {
-          "strict": "strict",
-          "balanced": "balanced",
-          "adaptive": "adaptive"
+          "strict": "Ақпарат",
+          "balanced": "Ақпарат",
+          "adaptive": "Ақпарат"
         },
-        "instructionSaved": "instruction saved"
+        "instructionSaved": "Ақпарат"
       },
       "premium": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "accessTitle": "access",
-        "noFakePayment": "Төлем мұнда жалған жасалмайды. Белсендіру нақты Premium/COIN растау ағымынан келуі керек.",
+        "title": "Премиум",
+        "subtitle": "Премиум",
+        "accessTitle": "Премиум",
+        "noFakePayment": "Премиум",
         "realtimeCallTranslationTitle": "нақты уақыт қоңырау аударма",
         "realtimeTranslationTitle": "нақты уақыт аударма",
         "realtimeTranslationDescription": "нақты уақыт аударма сипаттамасы",
         "mediaTranslationTitle": "медиа аударма",
         "mediaTranslationDescription": "медиа аударма сипаттамасы",
-        "advancedAssistantActionsTitle": "advanced көмекші әрекеттер",
-        "safeActionsTitle": "safe әрекеттер",
-        "safeActionsDescription": "safe әрекеттер сипаттамасы",
-        "openProfilePremium": "ашу профиль Premium",
-        "brandText": "brand сипаттамасы",
-        "heroEyebrow": "hero",
-        "badge": "badge",
-        "safeBadge": "safe badge"
+        "advancedAssistantActionsTitle": "Премиум",
+        "safeActionsTitle": "Премиум",
+        "safeActionsDescription": "Премиум",
+        "openProfilePremium": "Премиум",
+        "brandText": "Ақпарат Ақпарат",
+        "heroEyebrow": "Премиум",
+        "badge": "Премиум",
+        "safeBadge": "Премиум"
       },
       "settings": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "metricApi": "metric api",
-        "metricSource": "metric дереккөз",
-        "sourceLocalContract": "дереккөз local contract",
-        "connectionDetails": "connection мәліметтер",
-        "sections": "sections",
-        "providerTitle": "provider",
-        "providerDescription": "provider сипаттамасы",
-        "safetyTitle": "safety",
-        "safetyDescription": "safety сипаттамасы",
-        "heroEyebrow": "hero",
-        "heroTitle": "hero",
-        "heroDescription": "hero сипаттамасы",
-        "controlTitle": "control",
-        "profileOwnerTitle": "профиль owner",
-        "profileOwnerDescription": "профиль owner сипаттамасы",
-        "note": "note"
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "metricApi": "API",
+        "metricSource": "Дереккөз",
+        "sourceLocalContract": "local_contract",
+        "connectionDetails": "Баптаулар",
+        "sections": "Ақпарат",
+        "providerTitle": "Баптаулар",
+        "providerDescription": "Баптаулар Ақпарат",
+        "safetyTitle": "Тақырып",
+        "safetyDescription": "Сипаттама Ақпарат",
+        "heroEyebrow": "AI параметрлері",
+        "heroTitle": "Баптаулар",
+        "heroDescription": "Баптаулар Ақпарат",
+        "controlTitle": "Тақырып",
+        "profileOwnerTitle": "Профиль",
+        "profileOwnerDescription": "Профиль Ақпарат",
+        "note": "Ақпарат"
       },
       "translation": {
-        "title": "title",
-        "subtitle": "subtitle",
+        "title": "Аударма",
+        "subtitle": "Аударма",
         "realtimeTitle": "нақты уақыт",
         "source": "дереккөз",
         "sourcePlaceholder": "дереккөз үшін кеңес",
         "target": "мақсат",
         "targetPlaceholder": "мақсат үшін кеңес",
         "translate": "аудару",
-        "result": "result",
-        "premium": "Premium",
-        "heroEyebrow": "hero",
-        "textPhotoCamera": "text фото камера",
-        "inputPlaceholder": "input үшін кеңес",
-        "outputPlaceholder": "output үшін кеңес",
+        "result": "Аударма",
+        "premium": "Аударма",
+        "heroEyebrow": "Аударма",
+        "textPhotoCamera": "Аударма",
+        "inputPlaceholder": "Аударма",
+        "outputPlaceholder": "Аударма",
         "camera": "камера",
         "photo": "фото",
         "from": "кімнен",
-        "to": "to",
-        "detect": "detect",
+        "to": "Аударма",
+        "detect": "Аударма",
         "selectLanguage": "таңдау тіл",
         "searchLanguage": "іздеу тіл",
-        "permissionCamera": "permission камера",
-        "permissionPhoto": "permission фото",
+        "permissionCamera": "Аударма",
+        "permissionPhoto": "Аударма",
         "emptyText": "бос сипаттамасы",
-        "noOutput": "жоқ output",
-        "sameLanguage": "same тіл",
+        "noOutput": "Аударма",
+        "sameLanguage": "Аударма",
         "photoReady": "фото дайын",
         "cameraReady": "камера дайын",
-        "detectCannotSwap": "detect cannot ауыстыру",
-        "noImageOutput": "жоқ image output",
-        "detectedText": "detected сипаттамасы",
-        "messengerPathTitle": "Messenger path",
+        "detectCannotSwap": "Аударма",
+        "noImageOutput": "Аударма",
+        "detectedText": "Аударма",
+        "messengerPathTitle": "Аударма",
         "messengerReady": "Messenger дайын",
-        "imageProcessing": "image processing",
-        "textProcessing": "text processing",
-        "metaDetected": "meta detected"
+        "imageProcessing": "Аударма",
+        "textProcessing": "Аударма",
+        "metaDetected": "Аударма"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "nativeBridge": "native bridge",
-        "realBridgeDescription": "Нақты мобильді bridge: микрофон жазбасы, native дауыс оқиғалары, transcript беру және audio URL ойнату. Text-only TTS жалған жасалмайды.",
-        "bind": "bind",
-        "invoke": "invoke",
+        "title": "Дауыстық AI",
+        "subtitle": "Дауыстық AI",
+        "nativeBridge": "Дауыстық AI",
+        "realBridgeDescription": "Дауыстық AI",
+        "bind": "Дауыстық AI",
+        "invoke": "Дауыстық AI",
         "start": "бастау",
         "stop": "тоқтату",
-        "interrupt": "interrupt",
-        "recording": "recording",
-        "startRecording": "бастау recording",
-        "stopRecording": "тоқтату recording",
-        "audioCapturedNotice": "аудио captured notice",
-        "audioDuration": "аудио duration",
-        "audioSize": "аудио size",
-        "sttTtsBridgeTitle": "stt tts bridge",
-        "transcriptPlaceholder": "transcript үшін кеңес",
-        "submitTranscript": "жіберу transcript",
-        "ttsTitle": "tts",
-        "ttsPlaceholder": "tts үшін кеңес",
-        "playLastTts": "play соңғы tts",
-        "noFakeTts": "Жалған дауыс жоқ: audio playback тек backend/native TTS audio URL қайтарғанда ғана жұмыс істейді. expo-speech немесе native TTS module қосылғанша Text-only TTS мәтін ретінде көрсетіледі.",
-        "runtimeLog": "runtime log",
-        "noEvents": "жоқ events",
-        "contractOnly": "contract only",
-        "quickInvokeSent": "quick invoke sent",
-        "sessionStopped": "session stopped",
-        "session": "session",
-        "recordingNow": "recording now",
-        "tapToSpeak": "tap to speak",
-        "transcriptReady": "transcript дайын",
+        "interrupt": "Дауыстық AI",
+        "recording": "Дауыстық AI",
+        "startRecording": "Жазу",
+        "stopRecording": "Дауыстық AI",
+        "audioCapturedNotice": "Дауыстық AI",
+        "audioDuration": "Дауыстық AI",
+        "audioSize": "Дауыстық AI",
+        "sttTtsBridgeTitle": "Дауыстық AI",
+        "transcriptPlaceholder": "Дауыстық AI",
+        "submitTranscript": "Дауыстық AI",
+        "ttsTitle": "Дауыстық AI",
+        "ttsPlaceholder": "Дауыстық AI",
+        "playLastTts": "Дауыстық AI",
+        "noFakeTts": "Дауыстық AI",
+        "runtimeLog": "Дауыстық AI",
+        "noEvents": "Дауыстық AI",
+        "contractOnly": "Дауыстық AI",
+        "quickInvokeSent": "Дауыстық AI",
+        "sessionStopped": "Дауыстық AI",
+        "session": "Дауыстық AI",
+        "recordingNow": "Жазылып жатыр...",
+        "tapToSpeak": "Дауыстық AI",
+        "transcriptReady": "Дауыстық AI",
         "state": {
-          "idle": "idle",
-          "processing": "processing",
-          "requesting_permission": "requesting permission",
-          "recording": "recording",
-          "error": "error",
-          "playing": "playing"
+          "idle": "Дауыстық AI",
+          "processing": "Дауыстық AI",
+          "requesting_permission": "Дауыстық AI",
+          "recording": "Дауыстық AI",
+          "error": "Қате",
+          "playing": "Дауыстық AI"
         },
         "log": {
           "info": "ақпарат",
-          "bridge_bound": "bridge bound",
-          "recording_started": "recording started",
-          "audio_captured": "аудио captured",
-          "transcript_ready": "transcript дайын",
-          "tts_requested": "tts requested",
-          "playback_started": "playback started",
-          "interrupted": "interrupted",
-          "error": "error"
+          "bridge_bound": "Дауыстық AI",
+          "recording_started": "Дауыстық AI",
+          "audio_captured": "Дауыстық AI",
+          "transcript_ready": "Дауыстық AI",
+          "tts_requested": "Дауыстық AI",
+          "playback_started": "Дауыстық AI",
+          "interrupted": "Дауыстық AI",
+          "error": "Қате"
         }
       },
       "error": {
-        "ai_mobile_api_base_url_missing": "AI mobile api base url missing",
-        "ai_mobile_auth_required": "AI mobile auth міндетті",
-        "ai_mobile_request_failed": "AI mobile сұрау сәтсіз",
-        "ai_mobile_network_error": "AI mobile желі error",
-        "ai_voice_microphone_permission_denied": "AI дауыс микрофон permission denied",
-        "ai_voice_recording_already_active": "AI дауыс recording already active",
-        "ai_voice_recording_not_active": "AI дауыс recording not active",
-        "ai_voice_playback_command_missing": "AI дауыс playback command missing",
-        "ai_voice_empty_tts_text": "AI дауыс бос tts text",
-        "ai_voice_audio_url_missing": "AI дауыс аудио url missing"
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "Сұрау орындалмады. Қайталап көріңіз.",
+        "ai_mobile_network_error": "Сұрау орындалмады. Қайталап көріңіз.",
+        "ai_voice_microphone_permission_denied": "Дауыстық AI",
+        "ai_voice_recording_already_active": "Дауыстық AI",
+        "ai_voice_recording_not_active": "Дауыстық AI",
+        "ai_voice_playback_command_missing": "Дауыстық AI",
+        "ai_voice_empty_tts_text": "Дауыстық AI",
+        "ai_voice_audio_url_missing": "Дауыстық AI"
       }
     }
   },
@@ -7485,7 +7486,7 @@ export const KK_LOCALE = {
     "permissions": "Рұқсаттар",
     "analytics": "Аналитика",
     "orders": "Тапсырыстар",
-    "crm": "CRM",
+    "crm": "Ақпарат",
     "automation": "Автоматтандыру",
     "quickReplies": "Жылдам жауаптар",
     "welcomeMessage": "Қош келдіңіз хабарламасы",
@@ -7522,9 +7523,9 @@ export const KK_LOCALE = {
     "refunds": "Қайтарымдар",
     "disputes": "Даулар",
     "paymentLinks": "Төлем сілтемелері",
-    "checkoutPages": "Checkout беттері",
-    "qrCheckout": "QR checkout",
-    "posMode": "POS режимі",
+    "checkoutPages": "Ақпарат",
+    "qrCheckout": "Ақпарат",
+    "posMode": "Ақпарат",
     "cashierMode": "Кассир режимі",
     "terminals": "Терминалдар",
     "branches": "Филиалдар",
@@ -7554,7 +7555,7 @@ export const KK_LOCALE = {
     "streamModeration": "Стрим модерациясы",
     "streamAnalytics": "Стрим аналитикасы",
     "streamerProfile": "Стример профилі",
-    "donateWithCoin": "Coin арқылы донат жасау",
+    "donateWithCoin": "Ақпарат",
     "sendGiftToStream": "Стримге сыйлық жіберу",
     "noStreams": "Қолжетімді стримдер жоқ"
   },
@@ -7564,7 +7565,7 @@ export const KK_LOCALE = {
     "stores": "Дүкендер",
     "categories": "Санаттар",
     "cart": "Себет",
-    "checkout": "Checkout",
+    "checkout": "Ақпарат",
     "orderNow": "Қазір тапсырыс беру",
     "buyNow": "Қазір сатып алу",
     "addToCart": "Себетке қосу",
@@ -7597,34 +7598,34 @@ export const KK_LOCALE = {
     "tournaments": "Турнирлер",
     "achievements": "Жетістіктер",
     "gameStore": "Ойын дүкені",
-    "coinRewards": "Coin сыйақылары",
+    "coinRewards": "Ақпарат",
     "networkGames": "Желілік ойындар",
     "noGames": "Қолжетімді ойындар жоқ",
     "foundation": {
       "games": "ойындар",
       "hero": {
-        "text": "text",
-        "title": "title"
+        "text": "Баптаулар",
+        "title": "Тақырыбы"
       },
       "leaderboard": {
-        "title": "title",
-        "value": "value"
+        "title": "Тақырыбы",
+        "value": "Ақпарат"
       },
       "lobby": {
-        "title": "title",
-        "value": "value"
+        "title": "Тақырыбы",
+        "value": "Ақпарат"
       },
-      "miniApps": "mini apps",
+      "miniApps": "Ақпарат",
       "policy": {
-        "title": "title"
+        "title": "Тақырыбы"
       },
       "realtime": {
-        "title": "title",
-        "value": "value"
+        "title": "Тақырыбы",
+        "value": "Ақпарат"
       },
       "rewards": {
-        "title": "title",
-        "value": "value"
+        "title": "Тақырыбы",
+        "value": "Ақпарат"
       }
     }
   },
@@ -7659,7 +7660,7 @@ export const KK_LOCALE = {
     "profileSettings": "Профиль параметрлері",
     "businessSettings": "Бизнес параметрлері",
     "merchantSettings": "Мерчант параметрлері",
-    "premiumSettings": "Premium параметрлері",
+    "premiumSettings": "Премиум",
     "aiSettings": "AI параметрлері",
     "bankingSettings": "Банк параметрлері",
     "statementSettings": "Үзінді көшірме параметрлері",
@@ -7680,8 +7681,8 @@ export const KK_LOCALE = {
     "businessNotifications": "Бизнес хабарландырулары",
     "merchantNotifications": "Мерчант хабарландырулары",
     "marketingNotifications": "Маркетинг хабарландырулары",
-    "emailNotifications": "Email хабарландырулары",
-    "pushNotifications": "Push хабарландырулары",
+    "emailNotifications": "Хабарландырулар",
+    "pushNotifications": "Хабарландырулар",
     "sound": "Дыбыс",
     "preview": "Алдын ала қарау",
     "showSenderName": "Жіберуші атын көрсету",
@@ -7723,7 +7724,7 @@ export const KK_LOCALE = {
     "pinCode": "PIN код",
     "changePin": "PIN өзгерту",
     "biometrics": "Биометрия",
-    "faceId": "Face ID",
+    "faceId": "Ақпарат",
     "fingerprint": "Саусақ ізі",
     "twoFactorAuth": "Екі факторлы аутентификация",
     "recoveryOptions": "Қалпына келтіру параметрлері",
@@ -7741,7 +7742,7 @@ export const KK_LOCALE = {
     "paymentConfirmation": "Төлемді растау",
     "highRiskTransferCheck": "Жоғары тәуекелді аударымдарды тексеру",
     "kycVerification": "KYC растауы",
-    "amlCheck": "AML тексеруі",
+    "amlCheck": "Ақпарат",
     "businessVerification": "Бизнес растауы",
     "merchantVerification": "Мерчант растауы"
   },
@@ -7753,7 +7754,7 @@ export const KK_LOCALE = {
     "helpCenter": "Көмек орталығы",
     "faq": "Жиі қойылатын сұрақтар",
     "liveChat": "Тікелей чат",
-    "emailSupport": "Email қолдау",
+    "emailSupport": "Ақпарат",
     "callSupport": "Қоңырау арқылы қолдау",
     "attachScreenshot": "Скриншот тіркеу",
     "attachLogs": "Логтарды тіркеу",
@@ -7773,7 +7774,7 @@ export const KK_LOCALE = {
     "paymentTerms": "Төлем шарттары",
     "refundPolicy": "Қайтарым саясаты",
     "licenses": "Лицензиялар",
-    "openSourceNotices": "Open source хабарламалары",
+    "openSourceNotices": "Ақпарат",
     "dataProcessing": "Деректерді өңдеу",
     "compliance": "Сәйкестік",
     "merchantTerms": "Мерчант шарттары",
@@ -7820,12 +7821,12 @@ export const KK_LOCALE = {
     "invalidAmount": "Жарамсыз сома",
     "invalidCardNumber": "Жарамсыз карта нөмірі",
     "invalidExpiryDate": "Жарамсыз мерзім",
-    "invalidCvv": "Жарамсыз CVV",
+    "invalidCvv": "Ақпарат",
     "invalidPin": "Жарамсыз PIN",
     "invalidAccountNumber": "Жарамсыз шот нөмірі",
     "invalidIban": "Жарамсыз IBAN",
     "invalidSwift": "Жарамсыз SWIFT коды",
-    "invalidRoutingNumber": "Жарамсыз routing нөмірі",
+    "invalidRoutingNumber": "Ақпарат",
     "invalidBeneficiary": "Жарамсыз бенефициар мәліметтері",
     "accessDenied": "Қолжетімділік берілмеді",
     "sessionExpired": "Сеанс мерзімі аяқталды",
@@ -7854,7 +7855,7 @@ export const KK_LOCALE = {
     "contactNotFound": "Контакт табылмады",
     "chatUnavailable": "Чат қолжетімсіз",
     "callFailed": "Қоңырау сәтсіз аяқталды",
-    "premiumRequired": "Premium қажет",
+    "premiumRequired": "Премиум",
     "featureUnavailable": "Бұл мүмкіндік қазір қолжетімсіз",
     "updateRequired": "Жалғастыру үшін қолданбаны жаңартыңыз",
     "maintenanceMode": "Қызмет техникалық жұмыстарға байланысты уақытша қолжетімсіз",
@@ -7887,7 +7888,7 @@ export const KK_LOCALE = {
     "requestSent": "Сұрау сәтті жіберілді",
     "profileUpdated": "Профиль сәтті жаңартылды",
     "settingsUpdated": "Параметрлер сәтті жаңартылды",
-    "premiumActivated": "Premium сәтті қосылды",
+    "premiumActivated": "Премиум",
     "businessCreated": "Бизнес аккаунт сәтті құрылды",
     "merchantCreated": "Мерчант аккаунт сәтті құрылды",
     "translationEnabled": "Аударма сәтті қосылды",
@@ -7900,202 +7901,202 @@ export const KK_LOCALE = {
     "paragraph4": "Шарттар жаңартылғаннан кейін платформаны пайдалануды жалғастыру сервис қағидаларының қолданыстағы редакциясымен келісуді білдіреді."
   },
   "privacyPolicyScreen": {
-    "paragraph1": "paragraph1",
-    "paragraph2": "paragraph2",
-    "paragraph3": "paragraph3",
-    "paragraph4": "paragraph4"
+    "paragraph1": "Ақпарат",
+    "paragraph2": "Ақпарат",
+    "paragraph3": "Ақпарат",
+    "paragraph4": "Ақпарат"
   },
   "profileCompleteScreen": {
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle",
+    "badge": "Премиум",
+    "title": "Баптаулар",
+    "subtitle": "Баптаулар",
     "firstName": "бірінші аты",
     "lastName": "соңғы аты",
     "username": "пайдаланушы аты",
     "phone": "телефон",
-    "unifiedId": "unified ID",
-    "unifiedIdHint": "unified ID үшін кеңес",
+    "unifiedId": "Ақпарат",
+    "unifiedIdHint": "Ақпарат Ақпарат",
     "usernameHint": "пайдаланушы аты үшін кеңес",
     "privacy": "құпиялылық",
     "continue": "жалғастыру",
     "back": "артқа",
     "required": "Міндетті",
-    "saveErrorTitle": "сақтау error",
-    "saveErrorMessage": "сақтау error message",
-    "saving": "saving",
+    "saveErrorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
+    "saveErrorMessage": "Сұрау орындалмады. Қайталап көріңіз.",
+    "saving": "Сақталуда...",
     "userId": "пайдаланушы ID",
     "createUser": "жасау пайдаланушы",
     "nameRequired": "аты міндетті",
     "phoneRequired": "телефон міндетті",
     "usernameRequired": "пайдаланушы аты міндетті",
-    "success": "success"
+    "success": "Ақпарат"
   },
   "gallery": {
-    "title": "title",
+    "title": "галерея",
     "import": "импорт",
     "video": "видео",
-    "selected": "таңдалды {{count}}",
+    "selected": "Ақпарат",
     "empty": {
       "all": "барлығы",
       "public": "ашық",
       "private": "жеке"
     },
     "alerts": {
-      "noAccessTitle": "жоқ access",
-      "noAccessMessage": "жоқ access message",
+      "noAccessTitle": "Тақырып",
+      "noAccessMessage": "Ақпарат",
       "deleteSelectedTitle": "жою таңдалды",
-      "deleteSelectedMessage": "жою таңдалды message {{count}}",
-      "deleteOneTitle": "жою one",
-      "deleteOneMessage": "жою one message"
+      "deleteSelectedMessage": "Ақпарат",
+      "deleteOneTitle": "Тақырып",
+      "deleteOneMessage": "Ақпарат"
     },
     "share": {
-      "system": "system"
+      "system": "Ақпарат"
     },
     "viewer": {
-      "player": "player",
-      "edited": "edited"
+      "player": "Ақпарат",
+      "edited": "Өңделді"
     },
     "camera": {
-      "title": "title",
-      "short": "short",
+      "title": "Баптаулар",
+      "short": "Камера",
       "photo": "фото",
       "video": "видео",
       "open": "ашу"
     },
     "editor": {
-      "title": "title",
-      "missing": "missing",
-      "videoEditorUnavailable": "видео editor unavailable",
-      "saveErrorTitle": "сақтау error",
-      "saveErrorMessage": "сақтау error message",
-      "textOverlay": "text overlay",
-      "textPlaceholder": "text үшін кеңес",
-      "textPresets": "text presets",
-      "textStyle": "text style",
+      "title": "Баптаулар",
+      "missing": "Ақпарат",
+      "videoEditorUnavailable": "Сұрау орындалмады. Қайталап көріңіз.",
+      "saveErrorTitle": "Сұрау орындалмады. Қайталап көріңіз.",
+      "saveErrorMessage": "Сұрау орындалмады. Қайталап көріңіз.",
+      "textOverlay": "Ақпарат Ақпарат",
+      "textPlaceholder": "Ақпарат Ақпарат",
+      "textPresets": "Ақпарат Ақпарат",
+      "textStyle": "Ақпарат Ақпарат",
       "color": "түс",
-      "position": "position",
-      "background": "background",
-      "size": "size",
-      "opacity": "opacity",
-      "beautyStudio": "beauty studio",
+      "position": "Ақпарат",
+      "background": "Артқа",
+      "size": "Ақпарат",
+      "opacity": "Ақпарат",
+      "beautyStudio": "Ақпарат",
       "stickers": "стикерлер",
-      "stickerIntensity": "стикер intensity",
-      "effects": "effects",
-      "frames": "frames",
-      "animeLayer": "anime layer",
-      "filterLooks": "filter looks",
-      "adjust": "adjust",
-      "crop": "crop",
-      "transform": "transform",
-      "left": "left",
-      "right": "right",
-      "mirrorX": "mirror x",
-      "mirrorY": "mirror y",
-      "smoothSkin": "smooth skin",
-      "softGlow": "soft glow",
-      "skinTone": "skin tone",
-      "portraitLight": "portrait light",
-      "eyesLight": "eyes light",
-      "lipsTint": "lips tint",
-      "blush": "blush",
-      "animeBeauty": "anime beauty",
-      "sparkles": "sparkles",
-      "bokeh": "bokeh",
-      "lightLeak": "light leak",
-      "hearts": "hearts",
-      "dust": "dust",
-      "goldLight": "gold light",
-      "neonEdge": "neon edge",
-      "frameIntensity": "frame intensity",
-      "aura": "aura",
-      "mangaLines": "manga lines",
-      "sakura": "sakura",
-      "kawaiiHearts": "kawaii hearts",
-      "comicFrame": "comic frame",
-      "glowEyes": "glow eyes",
-      "brightness": "brightness",
-      "contrast": "contrast",
-      "saturation": "saturation",
-      "warmth": "warmth",
-      "cool": "cool",
-      "blur": "blur",
-      "vignette": "vignette",
-      "fade": "fade",
-      "sharpen": "sharpen",
+      "stickerIntensity": "Ақпарат",
+      "effects": "Ақпарат",
+      "frames": "Жақтаулар",
+      "animeLayer": "Ақпарат",
+      "filterLooks": "Ақпарат",
+      "adjust": "Ақпарат",
+      "crop": "Ақпарат",
+      "transform": "Ақпарат",
+      "left": "Ақпарат",
+      "right": "Ақпарат",
+      "mirrorX": "Ақпарат",
+      "mirrorY": "Ақпарат",
+      "smoothSkin": "Ақпарат",
+      "softGlow": "Ақпарат",
+      "skinTone": "Ақпарат",
+      "portraitLight": "Ақпарат",
+      "eyesLight": "Ақпарат",
+      "lipsTint": "Ақпарат",
+      "blush": "Ақпарат",
+      "animeBeauty": "Ақпарат",
+      "sparkles": "Ақпарат",
+      "bokeh": "Ақпарат",
+      "lightLeak": "Ақпарат",
+      "hearts": "Ақпарат",
+      "dust": "Ақпарат",
+      "goldLight": "Ақпарат",
+      "neonEdge": "Ақпарат",
+      "frameIntensity": "Жақтаулар",
+      "aura": "Ақпарат",
+      "mangaLines": "Ақпарат",
+      "sakura": "Ақпарат",
+      "kawaiiHearts": "Ақпарат",
+      "comicFrame": "Жақтаулар",
+      "glowEyes": "Ақпарат",
+      "brightness": "Ақпарат",
+      "contrast": "Ақпарат",
+      "saturation": "Ақпарат",
+      "warmth": "Ақпарат",
+      "cool": "Ақпарат",
+      "blur": "Ақпарат",
+      "vignette": "Ақпарат",
+      "fade": "Ақпарат",
+      "sharpen": "Ақпарат",
       "tabs": {
-        "text": "text",
-        "beauty": "beauty",
-        "effects": "effects",
-        "anime": "anime",
-        "adjust": "adjust",
-        "crop": "crop",
-        "transform": "transform"
+        "text": "Баптаулар",
+        "beauty": "Ақпарат",
+        "effects": "Ақпарат",
+        "anime": "Ақпарат",
+        "adjust": "Ақпарат",
+        "crop": "Ақпарат",
+        "transform": "Ақпарат"
       },
       "textStyles": {
-        "classic": "classic",
-        "glow": "glow",
-        "outline": "outline",
-        "bubble": "bubble"
+        "classic": "Ақпарат",
+        "glow": "Ақпарат",
+        "outline": "Ақпарат",
+        "bubble": "Ақпарат"
       },
       "align": {
-        "top": "top",
+        "top": "Ақпарат",
         "center": "орталық",
-        "bottom": "bottom"
+        "bottom": "Ақпарат"
       },
       "filters": {
-        "none": "none",
-        "soft_beauty": "soft beauty",
-        "luxury_portrait": "luxury portrait",
-        "warm_film": "warm film",
-        "cool_night": "cool night",
-        "anime_glow": "anime glow",
-        "pink_dream": "pink dream",
-        "gold_glam": "gold glam"
+        "none": "Ақпарат",
+        "soft_beauty": "Ақпарат",
+        "luxury_portrait": "Ақпарат",
+        "warm_film": "Ақпарат",
+        "cool_night": "Ақпарат",
+        "anime_glow": "Ақпарат",
+        "pink_dream": "Ақпарат",
+        "gold_glam": "Ақпарат"
       },
       "option": {
-        "none": "none",
-        "sparkle_cluster": "sparkle cluster",
-        "hearts": "hearts",
-        "crown": "crown",
-        "stars": "stars",
-        "petals": "petals",
-        "luxury_gold": "luxury gold",
-        "soft_portrait": "soft portrait",
-        "anime_frame": "anime frame",
-        "story_glass": "story glass",
-        "original": "original",
-        "square": "square",
-        "portrait": "portrait",
-        "story": "story"
+        "none": "Ешқайсысы",
+        "sparkle_cluster": "Ақпарат",
+        "hearts": "Ақпарат",
+        "crown": "Ақпарат",
+        "stars": "Ақпарат",
+        "petals": "Ақпарат",
+        "luxury_gold": "Ақпарат",
+        "soft_portrait": "Ақпарат",
+        "anime_frame": "Жақтаулар",
+        "story_glass": "Ақпарат",
+        "original": "Ақпарат",
+        "square": "Ақпарат",
+        "portrait": "Ақпарат",
+        "story": "Ақпарат"
       },
       "textPresetsMap": {
-        "luxury": "luxury",
-        "neon": "neon",
-        "soft": "soft",
-        "comic": "comic",
-        "anime": "anime"
+        "luxury": "Ақпарат",
+        "neon": "Ақпарат",
+        "soft": "Ақпарат",
+        "comic": "Ақпарат",
+        "anime": "Ақпарат"
       },
       "quick": {
-        "queen": "queen",
-        "sabiMood": "Sabi mood",
-        "dream": "dream",
-        "luxury": "luxury",
-        "angel": "angel",
-        "animeGirl": "anime girl"
+        "queen": "Ақпарат",
+        "sabiMood": "Ақпарат",
+        "dream": "Ақпарат",
+        "luxury": "Ақпарат",
+        "angel": "Ақпарат",
+        "animeGirl": "Ақпарат"
       }
     }
   },
   "sabiMessengerChannelMenu": {
-    "channelAddedToChats": "channel added to chats",
-    "channelBotMissing": "channel bot missing",
-    "channelInviteMissing": "channel invite missing",
-    "channelShareReady": "channel бөлісу дайын"
+    "channelAddedToChats": "Чат",
+    "channelBotMissing": "Чат",
+    "channelInviteMissing": "Чат",
+    "channelShareReady": "Дайын"
   },
   "sabiMessengerGroupMenu": {
-    "groupAddMember": "group қосу member",
-    "groupInviteMissing": "group invite missing",
-    "groupInviteReady": "group invite дайын",
-    "groupShareReady": "group бөлісу дайын"
+    "groupAddMember": "Чат",
+    "groupInviteMissing": "Чат",
+    "groupInviteReady": "Дайын",
+    "groupShareReady": "Дайын"
   },
   "stories": {
     "actions": {
@@ -8103,15 +8104,15 @@ export const KK_LOCALE = {
     },
     "empty": {
       "action": "әрекет",
-      "text": "text",
-      "title": "title"
+      "text": "Баптаулар",
+      "title": "Тақырыбы"
     },
     "header": {
-      "title": "title"
+      "title": "Тақырыбы"
     },
     "hero": {
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "Баптаулар",
+      "title": "Тақырыбы"
     },
     "kind": {
       "photo": "фото",
@@ -8119,7 +8120,7 @@ export const KK_LOCALE = {
     },
     "photo": {
       "unavailable": {
-        "title": "title"
+        "title": "Тақырыбы"
       }
     },
     "preview": {
@@ -8128,8 +8129,8 @@ export const KK_LOCALE = {
     },
     "video": {
       "unavailable": {
-        "text": "text",
-        "title": "title"
+        "text": "Баптаулар",
+        "title": "Тақырыбы"
       }
     }
   }

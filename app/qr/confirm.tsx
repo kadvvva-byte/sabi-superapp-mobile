@@ -13,8 +13,13 @@ import {
   buildSabiQrStrictExecuteParams,
 } from "../../src/modules/qr/runtime/qrScanPipeline";
 import { recordSabiQrModuleStatusFromResult } from "../../src/modules/qr/runtime/qrModuleIntegration";
-import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-hooks";
 import { buildWalletQrExecuteMetadata, buildWalletQrResultParams } from "../../src/shared/wallet/wallet-qr-integration";
+import { tryOpenResolvedSabiQrAction } from "../../src/modules/qr/runtime/qrActionRouter";
+import {
+  cleanSabiQrReceiptValue,
+  cleanSabiQrUserDisplayValue,
+} from "../../src/modules/qr/runtime/qrDisplaySanitizer";
 import type { SabiQrExecuteResponse, SabiQrFunctionDefinition, SabiQrTokenRecord } from "../../src/modules/qr/contracts/universalQr.contracts";
 
 function firstString(value: string | string[] | undefined): string | undefined {
@@ -25,24 +30,139 @@ function replaceQr(href: { pathname: string; params?: Record<string, string> }) 
   (router.replace as unknown as (nextHref: typeof href) => void)(href);
 }
 
+function cleanString(value: unknown): string {
+  return typeof value === "string" ? value.trim() : String(value ?? "").trim();
+}
+
+function metadataString(token: SabiQrTokenRecord, keys: string[]): string {
+  const metadata = token.metadata;
+  if (!metadata || typeof metadata !== "object") return "";
+  const record = metadata as Record<string, unknown>;
+  for (const key of keys) {
+    const value = cleanString(record[key]);
+    if (value) return value;
+  }
+  return "";
+}
+
+function resultTitleKey(token: SabiQrTokenRecord): string {
+  switch (token.functionCode) {
+    case "wallet_receive":
+    case "wallet_user_payment":
+    case "messenger_payment":
+    case "merchant_static_entry":
+    case "merchant_dynamic_order":
+    case "business_invoice":
+    case "marketplace_order":
+    case "stream_donation":
+    case "taxi_trip_payment":
+    case "delivery_order":
+    case "virtual_card_payment":
+      return "qr.mobile.result.action.paymentSuccess.title";
+    case "coin_wallet_receive":
+    case "coin_wallet_transfer":
+      return "qr.mobile.result.action.coinSuccess.title";
+    case "school_check_in":
+    case "school_check_out":
+    case "work_check_in":
+    case "work_check_out":
+      return "qr.mobile.result.action.attendanceSuccess.title";
+    case "crypto_wallet_receive":
+      return "qr.mobile.result.action.cryptoOpened.title";
+    case "virtual_card_issuance":
+      return "qr.mobile.result.action.cardSuccess.title";
+    default:
+      return "qr.mobile.result.success.title";
+  }
+}
+
+function resultDescriptionKey(token: SabiQrTokenRecord): string {
+  switch (token.functionCode) {
+    case "wallet_receive":
+    case "wallet_user_payment":
+    case "messenger_payment":
+    case "merchant_static_entry":
+    case "merchant_dynamic_order":
+    case "business_invoice":
+    case "marketplace_order":
+    case "stream_donation":
+    case "taxi_trip_payment":
+    case "delivery_order":
+    case "virtual_card_payment":
+      return "qr.mobile.result.action.paymentSuccess.description";
+    case "coin_wallet_receive":
+    case "coin_wallet_transfer":
+      return "qr.mobile.result.action.coinSuccess.description";
+    case "school_check_in":
+    case "school_check_out":
+    case "work_check_in":
+    case "work_check_out":
+      return "qr.mobile.result.action.attendanceSuccess.description";
+    case "crypto_wallet_receive":
+      return "qr.mobile.result.action.cryptoOpened.description";
+    case "virtual_card_issuance":
+      return "qr.mobile.result.action.cardSuccess.description";
+    default:
+      return "qr.mobile.result.success.description";
+  }
+}
+
 function cleanResultParams(token: SabiQrTokenRecord, result: SabiQrExecuteResponse): Record<string, string> {
   const params: Record<string, string> = {
     functionCode: token.functionCode,
     status: result.status,
     ok: result.ok ? "1" : "0",
+    surface: token.surface,
+    rail: token.rail,
+    actionTitleKey: result.ok ? resultTitleKey(token) : "",
+    actionDescriptionKey: result.ok ? resultDescriptionKey(token) : "",
   };
 
-  params.tokenId = token.tokenId;
-  params.surface = token.surface;
-  params.rail = token.rail;
-  if (result.transactionId) params.transactionId = result.transactionId;
-  if (result.attendanceRecordId) params.attendanceRecordId = result.attendanceRecordId;
-  if (result.reviewId) params.reviewId = result.reviewId;
+  const targetName =
+    cleanString(token.verifiedIdentity?.displayName) ||
+    [token.verifiedIdentity?.firstName, token.verifiedIdentity?.lastName].map(cleanString).filter(Boolean).join(" ") ||
+    metadataString(token, ["displayName", "name", "merchantName", "businessName", "title"]);
+  const username = cleanString(token.verifiedIdentity?.username) || metadataString(token, ["username", "handle", "publicUsername"]);
+
+  const safeReference = cleanSabiQrUserDisplayValue(token.reference, {
+    kind: "reference",
+    maxLength: 56,
+  });
+  const safeCounterparty = cleanSabiQrUserDisplayValue(token.counterpartyId, {
+    kind: "human",
+    maxLength: 56,
+  });
+  const safeOrganization = cleanSabiQrUserDisplayValue(token.organizationId, {
+    kind: "human",
+    maxLength: 56,
+  });
+  const safeTargetName = cleanSabiQrUserDisplayValue(targetName, {
+    kind: "human",
+    maxLength: 56,
+  });
+  const safeUsername = cleanSabiQrUserDisplayValue(username.replace(/^@+/, ""), {
+    kind: "human",
+    maxLength: 32,
+  });
+  const safeTransactionReference = cleanSabiQrReceiptValue(result.transactionId);
+  const safeAttendanceReference = cleanSabiQrReceiptValue(result.attendanceRecordId);
+  const safeReviewReference = cleanSabiQrReceiptValue(result.reviewId);
+
+  if (token.amount) params.amount = token.amount;
+  if (token.currency) params.currency = token.currency;
+  if (safeReference) params.reference = safeReference;
+  if (safeCounterparty) params.counterpartyId = safeCounterparty;
+  if (safeOrganization) params.organizationId = safeOrganization;
+  if (safeTargetName) params.targetName = safeTargetName;
+  if (safeUsername) params.username = safeUsername;
+  if (safeTransactionReference) params.transactionId = safeTransactionReference;
+  if (safeAttendanceReference) params.attendanceRecordId = safeAttendanceReference;
+  if (safeReviewReference) params.reviewId = safeReviewReference;
   if (result.reason) params.reason = result.reason;
 
   return {
-    ...params,
     ...buildWalletQrResultParams(token, result),
+    ...params,
   };
 }
 
@@ -85,6 +205,9 @@ export default function SabiQrConfirmScreen() {
           token: validated.token ?? resolved.token,
           definition: validated.function ?? resolved.function,
         });
+
+        const actionOpened = await tryOpenResolvedSabiQrAction(strictPayload);
+        if (actionOpened) return;
 
         if (!mounted) return;
         setToken(strictPayload.token);

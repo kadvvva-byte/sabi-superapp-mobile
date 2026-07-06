@@ -1,0 +1,77 @@
+{
+  "version": "STREAM-GAME-GIFTS-197D",
+  "pack": "197d-pack-6-royal-mythic",
+  "giftCount": 8,
+  "diamondPriceMin": 2,
+  "diamondPriceMax": 9999,
+  "minimumTopUpCoins": 10,
+  "minimumTopUpUsd": 10,
+  "userFacingOnly": true,
+  "runtime": {
+    "backend": false,
+    "payment": false,
+    "provider": false,
+    "walletMutation": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "jade-like-spark",
+      "displayNameRu": "Нефритовый Лайк",
+      "diamondPrice": 2,
+      "poster": "posters/jade-like-spark.svg",
+      "soundCue": "sound-cues/jade-like-spark-cue.wav"
+    },
+    {
+      "id": "sakura-melody-shell",
+      "displayNameRu": "Сакура Мелодия",
+      "diamondPrice": 15,
+      "poster": "posters/sakura-melody-shell.svg",
+      "soundCue": "sound-cues/sakura-melody-shell-cue.wav"
+    },
+    {
+      "id": "moon-bunny-crown",
+      "displayNameRu": "Лунный Зайчик",
+      "diamondPrice": 50,
+      "poster": "posters/moon-bunny-crown.svg",
+      "soundCue": "sound-cues/moon-bunny-crown-cue.wav"
+    },
+    {
+      "id": "amber-phoenix-wing",
+      "displayNameRu": "Янтарный Феникс",
+      "diamondPrice": 150,
+      "poster": "posters/amber-phoenix-wing.svg",
+      "soundCue": "sound-cues/amber-phoenix-wing-cue.wav"
+    },
+    {
+      "id": "emerald-supercar-glide",
+      "displayNameRu": "Изумрудный Автомобиль",
+      "diamondPrice": 500,
+      "poster": "posters/emerald-supercar-glide.svg",
+      "soundCue": "sound-cues/emerald-supercar-glide-cue.wav"
+    },
+    {
+      "id": "atlantis-crown-wave",
+      "displayNameRu": "Корона Атлантиды",
+      "diamondPrice": 1500,
+      "poster": "posters/atlantis-crown-wave.svg",
+      "soundCue": "sound-cues/atlantis-crown-wave-cue.wav"
+    },
+    {
+      "id": "cosmic-castle-orbit",
+      "displayNameRu": "Космический Замок",
+      "diamondPrice": 5000,
+      "poster": "posters/cosmic-castle-orbit.svg",
+      "soundCue": "sound-cues/cosmic-castle-orbit-cue.wav"
+    },
+    {
+      "id": "sultan-universe-throne",
+      "displayNameRu": "Султанская Вселенная",
+      "diamondPrice": 9999,
+      "poster": "posters/sultan-universe-throne.svg",
+      "soundCue": "sound-cues/sultan-universe-throne-cue.wav"
+    }
+  ]
+}

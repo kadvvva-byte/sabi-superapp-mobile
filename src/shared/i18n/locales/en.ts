@@ -1,4 +1,5 @@
-export const EN_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const EN_LOCALE = {
   "calls": {
     "audio": "Sabi Audio",
     "video": "Sabi Video",
@@ -4563,171 +4564,171 @@ export const EN_LOCALE = {
     },
     "editScreen": {
       "header": {
-        "title": "Profilni edit",
-        "viewAction": "View Action"
+        "title": "Edit profile",
+        "viewAction": "View"
       },
       "intro": {
-        "eyebrow": "PROFILNI BOSHQARISH",
-        "title": "Profilni edit",
-        "subtitle": "Manage intro."
+        "eyebrow": "PROFILE",
+        "title": "Edit profile",
+        "subtitle": "Manage personal details, public profile, media, privacy and security."
       },
       "hero": {
-        "subtitle": "Manage hero.",
-        "changeAvatarAction": "Avatarni almashtirish",
-        "aiLinkedBadge": "AI Linked Badge",
-        "editModeBadge": "Edit rejimi",
+        "subtitle": "Photos, videos, voice, username and public profile are linked to your verified account.",
+        "changeAvatarAction": "Change avatar",
+        "aiLinkedBadge": "AI linked",
+        "editModeBadge": "Edit mode",
         "quickActions": {
           "photos": "Photos",
-          "videos": "Videolar",
+          "videos": "Videos",
           "voice": "Voice",
-          "public": "Public"
+          "public": "Public profile"
         }
       },
       "sections": {
-        "identity": "Identitet",
-        "presentation": "Presentation",
-        "safety": "Security"
+        "identity": "Identity",
+        "presentation": "Public profile",
+        "safety": "Safety"
       },
       "identity": {
         "photos": {
-          "title": "Photos",
-          "description": "Manage photos."
+          "title": "Profile photos",
+          "description": "Add, change and manage profile photos."
         },
         "videos": {
-          "title": "Videolar",
-          "description": "Qisqa videolarni boshqarish and profil qatlamiga biriktirish."
+          "title": "Short videos",
+          "description": "Manage short videos visible on the profile."
         },
         "voice": {
-          "title": "Voice",
-          "description": "Manage voice."
+          "title": "Profile voice",
+          "description": "Record or update the profile voice intro."
         },
         "username": {
           "title": "Username",
-          "description": "Manage username."
+          "description": "Change the public @username for search and profile."
         },
         "phone": {
           "title": "Phone",
-          "description": "Manage phone."
+          "description": "Account phone number and profile binding."
         },
         "email": {
-          "title": "Kirish emaili",
-          "description": "Manage email."
+          "title": "Login email",
+          "description": "Email for login, recovery and security notifications."
         },
         "birthday": {
           "title": "Birthday",
-          "description": "Manage birthday."
+          "description": "Birthday for profile and age-related rules."
         },
         "language": {
-          "title": "Language & region",
-          "description": "Manage language.",
+          "title": "Language and region",
+          "description": "Language changes should apply to the whole app.",
           "badge": "Global"
         }
       },
       "presentation": {
         "public": {
-          "title": "Public",
-          "description": "Manage public."
+          "title": "Public profile",
+          "description": "Open and configure the page other users can see."
         },
         "colors": {
-          "title": "Theme and ramkalar",
-          "description": "Owner nazoratidagi theme, premium ranglar and avatar ramkalari.",
+          "title": "Colors and frames",
+          "description": "Configure public profile theme, colors and frames.",
           "badge": "Premium"
         },
         "ai": {
-          "title": "AI profil qatlami",
-          "description": "Manage ai.",
+          "title": "Profile AI",
+          "description": "AI assistant, smart hints and future AI profile features.",
           "badge": "Smart"
         },
         "qr": {
           "title": "Profile QR",
-          "description": "Manage qr."
+          "description": "QR for opening profile, adding contact and safe sharing."
         }
       },
       "safety": {
         "verification": {
           "title": "Verification",
-          "description": "KYC holati, hujjatlar and akkaunt ishonch signallari."
+          "description": "Account verification status and verified data."
         },
         "privacy": {
           "title": "Privacy",
-          "description": "Manage privacy."
+          "description": "Who can see phone, activity, status and public profile."
         },
         "security": {
           "title": "Security",
-          "description": "Manage security."
+          "description": "PIN, biometrics, trusted devices and sign-in protection."
         }
       }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "Username",
+          "eyebrow": "USERNAME",
           "title": "Username",
-          "subtitle": "Manage username."
+          "subtitle": "Change the public @username for search, profile and Messenger."
         },
         "phone": {
-          "eyebrow": "Phone",
-          "title": "Phone",
-          "subtitle": "Manage phone."
+          "eyebrow": "PHONE",
+          "title": "Phone number",
+          "subtitle": "Update the phone number linked to your account."
         },
         "birthday": {
           "eyebrow": "BIRTHDAY",
           "title": "Birthday",
-          "subtitle": "Manage birthday."
+          "subtitle": "Set the birthday for profile and age rules."
         },
         "channel": {
           "eyebrow": "CHANNEL",
-          "title": "Channel identity",
-          "subtitle": "Public channel identity and profile connection."
+          "title": "Profile channel",
+          "subtitle": "Channels are created and managed from the owner profile."
         },
         "bot": {
           "eyebrow": "BOT",
-          "title": "Bot identity",
-          "subtitle": "Public bot identity and assistant connection."
+          "title": "Profile bot",
+          "subtitle": "Bot public data and AI access are managed from Profile."
         },
         "colors": {
-          "eyebrow": "Eyebrow",
-          "subtitle": "Subtitle",
-          "title": "Title"
+          "eyebrow": "COLORS",
+          "subtitle": "Choose a theme and frame for the public profile.",
+          "title": "Colors and frames"
         }
       },
       "username": {
         "fieldLabel": "Username",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "placeholder": "Placeholder"
+        "noteTitle": "Public username",
+        "noteText": "Username is used for search, profile, QR and Messenger. It must be unique.",
+        "placeholder": "Enter username"
       },
       "phone": {
-        "fieldLabel": "Phone raqami",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "placeholder": "Placeholder"
+        "fieldLabel": "Phone",
+        "noteTitle": "Account number",
+        "noteText": "Phone is used for sign-in, recovery, search and security checks.",
+        "placeholder": "+998..."
       },
       "birthday": {
-        "day": "Kun",
-        "month": "Oy",
-        "year": "Yil",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "dayPlaceholder": "Day Placeholder",
-        "monthPlaceholder": "Month Placeholder",
-        "yearPlaceholder": "Year Placeholder"
+        "day": "Day",
+        "month": "Month",
+        "year": "Year",
+        "noteTitle": "Birthday",
+        "noteText": "Birthday is used for profile and age-related features.",
+        "dayPlaceholder": "DD",
+        "monthPlaceholder": "MM",
+        "yearPlaceholder": "YYYY"
       },
       "channel": {
         "fieldLabel": "Channel",
         "placeholder": "Select channel",
-        "noteTitle": "Channel profile",
-        "noteText": "Channel public data is managed from Profile."
+        "noteTitle": "Profile channel",
+        "noteText": "Channel public data is managed from the owner profile."
       },
       "bot": {
         "fieldLabel": "Bot",
         "placeholder": "Select bot",
-        "noteTitle": "Bot profile",
+        "noteTitle": "Profile bot",
         "noteText": "Bot public data, AI access and routing are managed from Profile."
       },
       "colors": {
-        "noteText": "Note Text",
-        "noteTitle": "Note",
+        "noteText": "Colors apply to the public profile and visual cards.",
+        "noteTitle": "Profile theme",
         "presets": {
           "blue": "Blue",
           "emerald": "Emerald",
@@ -6979,30 +6980,30 @@ export const EN_LOCALE = {
     "publicScreen": {
       "editor": {
         "bio": "Bio",
-        "name": "Name",
+        "name": "Public name",
         "subtitle": "Subtitle",
-        "title": "Title",
-        "username": "Username"
+        "title": "Edit public profile",
+        "username": "Public username"
       },
       "fallback": {
-        "bio": "Bio",
-        "subtitle": "Subtitle"
+        "bio": "Public bio is not filled yet.",
+        "subtitle": "Public profile is linked to your verified account."
       },
       "header": {
         "title": "Public profile"
       },
       "hero": {
-        "subtitle": "Public identity is fully tied to your profile layer and follows the same owner data, premium state, and visibility rules.",
-        "title": "Title"
+        "subtitle": "The page other Sabi users can see.",
+        "title": "Public profile"
       },
       "rows": {
         "photos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Manage photos visible on the profile.",
+          "title": "Public photos"
         },
         "videos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Manage public profile short videos.",
+          "title": "Public videos"
         }
       },
       "sections": {

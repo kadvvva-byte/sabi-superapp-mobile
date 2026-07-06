@@ -1,0 +1,35 @@
+export const stream108zMediaDevicePreviewPlan = {
+  version: "STREAM-108Z",
+  stage: "media-device-controls-preview-quality-state-depth",
+  scope: "stream-only-mobile-source",
+  runtimeTouched: [
+    "src/modules/stream/mobile/streamMediaDevicePreviewRuntime.ts",
+    "src/modules/stream/mobile/StreamRoomRuntimePanel.tsx",
+  ],
+  walletTouched: false,
+  messengerTouched: false,
+  callsTouched: false,
+  serverTouched: false,
+  foundationTouched: false,
+  backendFinanceTouched: false,
+  paymentsTouched: false,
+  giftsTouched: false,
+  monetizationTouched: false,
+  fakeLiveAllowed: false,
+  fakeOnAirAllowed: false,
+  fakeProviderAllowed: false,
+  fakePaymentAllowed: false,
+  fakeGiftAllowed: false,
+  fakeLaunchCompleteAllowed: false,
+  features: [
+    "Local media device preview runtime for camera, microphone, screen, game, video file, and RTMP source readiness",
+    "Quality presets for low data, mobile balanced, HD preview, game low latency, and cinema/video upload-ready intent",
+    "Local diagnostics state for device list, camera, microphone, and network checks",
+    "Local preview controls for enable/disable, audio mute, camera mirror, and orientation",
+    "Provider handoff remains blocked until real backend room contract, realtime provider, media provider, and Admin launch approval are connected",
+    "Evidence snapshot is ready for future backend/Admin union without fake device provider or fake media preview success",
+  ],
+  nextRecommendedStep: "STREAM-109A-room-runtime-clean-pass-and-mode-specific-room-polish",
+} as const;
+
+export type Stream108zMediaDevicePreviewPlan = typeof stream108zMediaDevicePreviewPlan;

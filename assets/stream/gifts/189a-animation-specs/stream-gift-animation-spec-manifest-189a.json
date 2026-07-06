@@ -1,0 +1,27 @@
+{
+  "version": "STREAM-GAME-GIFTS-189A",
+  "assetPack": "premium-animation-asset-production-specs",
+  "giftCount": 16,
+  "files": [
+    "sakura-heart-burst-animation-spec-189a.json",
+    "koi-luck-splash-animation-spec-189a.json",
+    "neon-fox-tail-animation-spec-189a.json",
+    "moon-cat-guard-animation-spec-189a.json",
+    "dj-star-drop-animation-spec-189a.json",
+    "golden-lion-roar-animation-spec-189a.json",
+    "royal-rose-stage-animation-spec-189a.json",
+    "cosmic-dragon-gate-animation-spec-189a.json",
+    "phoenix-crown-burst-animation-spec-189a.json",
+    "crystal-whale-wave-animation-spec-189a.json",
+    "cyber-panda-beat-animation-spec-189a.json",
+    "velvet-butterfly-storm-animation-spec-189a.json",
+    "thunder-tiger-flash-animation-spec-189a.json",
+    "aurora-unicorn-ride-animation-spec-189a.json",
+    "diamond-genie-lamp-animation-spec-189a.json",
+    "galaxy-idol-stage-animation-spec-189a.json"
+  ],
+  "runtimeIncludedNow": false,
+  "backendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "sendRuntimeIncludedNow": false
+}

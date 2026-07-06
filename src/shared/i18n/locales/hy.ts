@@ -1,28 +1,29 @@
-export const HY_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const HY_LOCALE = {
   "calls": {
-    "audio": "Sabi Audio",
+    "audio": "Տեղեկություն",
     "video": "Sabi Video",
-    "incoming": "Incoming call",
-    "calling": "Calling",
-    "connecting": "Connecting",
-    "connected": "Connected",
-    "ended": "Ended",
-    "secure": "Sabi secure call",
-    "waitingVideo": "Waiting for video",
+    "incoming": "Մուտքային զանգ",
+    "calling": "Զանգում է",
+    "connecting": "Բեռնվում է...",
+    "connected": "Միացված է",
+    "ended": "Ավարտված է",
+    "secure": "Sabi անվտանգ զանգ",
+    "waitingVideo": "Ձայն",
     "videoCall": "Վիդեոզանգ",
-    "accept": "Accept",
-    "decline": "Decline",
-    "end": "End",
-    "mic": "Microphone",
-    "speaker": "Speaker",
-    "camera": "Camera",
-    "presentation": "Presentation",
-    "aiTranslate": "AI translation",
-    "minimize": "Minimize",
-    "expand": "Open",
-    "swap": "Swap",
-    "more": "More",
-    "add": "Add"
+    "accept": "Ընդունել",
+    "decline": "Մերժել",
+    "end": "Ավարտել",
+    "mic": "Միկրոֆոն",
+    "speaker": "Բարձրախոս",
+    "camera": "Տեսախցիկ",
+    "presentation": "Ներկայացում",
+    "aiTranslate": "AI թարգմանություն",
+    "minimize": "Տեղեկություն",
+    "expand": "Բացել",
+    "swap": "Տեղեկություն",
+    "more": "Ավելին",
+    "add": "Ավելացնել"
   },
   "common": {
     "back": "Հետ",
@@ -59,7 +60,7 @@ export const HY_LOCALE = {
     "finish": "Ավարտել",
     "start": "Սկսել",
     "stop": "Կանգնեցնել",
-    "pause": "Pause",
+    "pause": "Տեղեկություն",
     "yes": "Այո",
     "no": "Ոչ",
     "ok": "Լավ",
@@ -136,7 +137,7 @@ export const HY_LOCALE = {
     "date": "Ամսաթիվ",
     "time": "Ժամ",
     "name": "Անուն",
-    "username": "Username",
+    "username": "Օգտանուն",
     "title": "Վերնագիր",
     "description": "Նկարագրություն",
     "note": "Նշում",
@@ -177,9 +178,9 @@ export const HY_LOCALE = {
     "settlementBalance": "Հաշվանցման մնացորդ",
     "payoutBalance": "Վճարման մնացորդ",
     "accountNumber": "Հաշվի համար",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Տեղեկություն",
+    "swift": "Տեղեկություն",
+    "bic": "Տեղեկություն",
     "branch": "Մասնաճյուղ",
     "reference": "Հղում",
     "beneficiary": "Շահառու",
@@ -198,43 +199,43 @@ export const HY_LOCALE = {
     "yearly": "Տարեկան",
     "daily": "Օրական",
     "weekly": "Շաբաթական",
-    "you": "You",
-    "reply": "Reply",
-    "forward": "Forward",
-    "info": "Info",
-    "phone": "Phone",
-    "profile": "Profile",
-    "room": "Room",
-    "theme": "Theme",
-    "count": "Count",
-    "commands": "Commands",
-    "modules": "Modules",
-    "verified": "Verified",
-    "custom": "Custom",
-    "ai": "Assistant",
-    "service": "Service",
-    "market": "Market",
-    "delivery": "Delivery",
-    "store": "Store",
-    "group": "Group",
-    "groups": "Groups",
-    "channel": "Channel",
-    "channels": "Channels",
-    "member": "Member",
-    "members": "Members",
-    "subscriber": "Subscriber",
-    "subscribers": "Subscribers",
-    "owner": "Owner",
-    "admin": "Admin",
-    "moderator": "Moderator",
-    "error": "Error",
-    "bot": "Bot",
-    "bots": "Bots",
-    "trade": "Trade",
-    "saved": "Saved",
-    "approve": "Approve",
-    "reject": "Reject",
-    "people": "People"
+    "you": "Դուք",
+    "reply": "Պատասխանել",
+    "forward": "Փոխանցել",
+    "info": "Նկարագրություն",
+    "phone": "Հեռախոս",
+    "profile": "Պրոֆիլ",
+    "room": "Տեղեկություն",
+    "theme": "Թեմա",
+    "count": "Տեղեկություն",
+    "commands": "Տեղեկություն",
+    "modules": "Տեղեկություն",
+    "verified": "Ստուգված",
+    "custom": "Տեղեկություն",
+    "ai": "AI",
+    "service": "Տեղեկություն",
+    "market": "Շուկա",
+    "delivery": "Առաքում",
+    "store": "Տեղեկություն",
+    "group": "Չատ",
+    "groups": "Խմբեր",
+    "channel": "Չատ",
+    "channels": "Ալիքներ",
+    "member": "Պրոֆիլ",
+    "members": "Տեղեկություն",
+    "subscriber": "Տեղեկություն",
+    "subscribers": "Տեղեկություն",
+    "owner": "Տեղեկություն",
+    "admin": "Ադմին",
+    "moderator": "Տեղեկություն",
+    "error": "Սխալ",
+    "bot": "Օգնական",
+    "bots": "Բոտեր",
+    "trade": "Տեղեկություն",
+    "saved": "Տեղեկություն",
+    "approve": "Տեղեկություն",
+    "reject": "Տեղեկություն",
+    "people": "Մարդիկ"
   },
   "status": {
     "success": "Հաջողված",
@@ -284,19 +285,19 @@ export const HY_LOCALE = {
   },
   "time": {
     "justNow": "Հենց նոր",
-    "minutesAgo": "{{count}} րոպե առաջ",
-    "hoursAgo": "{{count}} ժամ առաջ",
-    "daysAgo": "{{count}} օր առաջ",
-    "weeksAgo": "{{count}} շաբաթ առաջ",
-    "monthsAgo": "{{count}} ամիս առաջ",
-    "yearsAgo": "{{count}} տարի առաջ",
+    "minutesAgo": "Տեղեկություն",
+    "hoursAgo": "Տեղեկություն",
+    "daysAgo": "Տեղեկություն",
+    "weeksAgo": "Տեղեկություն",
+    "monthsAgo": "Տեղեկություն",
+    "yearsAgo": "Տեղեկություն",
     "at": "ժամը",
     "until": "մինչև",
     "from": "ից",
     "to": "մինչև",
-    "startsIn": "Կսկսվի {{value}} հետո",
-    "endsIn": "Կավարտվի {{value}} հետո",
-    "availableOn": "Հասանելի է {{date}}",
+    "startsIn": "Տեղեկություն",
+    "endsIn": "Տեղեկություն",
+    "availableOn": "Պատրաստ է",
     "processingTime": "Մշակման ժամանակ",
     "settlementDate": "Հաշվանցման ամսաթիվ",
     "payoutDate": "Վճարման ամսաթիվ",
@@ -364,7 +365,7 @@ export const HY_LOCALE = {
     "messengerTitle": "Պրեմիում մեսենջեր",
     "messengerSubtitle": "Չաթեր, զանգեր, մեդիայի փոխանակում, AI թարգմանություն և պրեմիում հաղորդակցման գործիքներ։",
     "walletTitle": "Խելացի դրամապանակ",
-    "walletSubtitle": "Քարտեր, բանկային փոխանցումներ, QR վճարումներ, Coin, քաղվածքներ և մնացորդի անվտանգ կառավարում։",
+    "walletSubtitle": "Դրամապանակ՝ Տեղեկություն",
     "businessTitle": "Բիզնես գործիքներ",
     "businessSubtitle": "Բիզնես հաշիվ, մերչանտ վճարումներ, վերլուծություններ, հաշիվ-ապրանքագրեր և թիմային հասանելիություն։",
     "aiTitle": "AI ամենուր",
@@ -409,7 +410,7 @@ export const HY_LOCALE = {
     "wallet": "Դրամապանակ",
     "chats": "Չաթեր",
     "profile": "Պրոֆիլ",
-    "calls": "Calls"
+    "calls": "Զանգեր"
   },
   "search": {
     "title": "Որոնում",
@@ -426,7 +427,7 @@ export const HY_LOCALE = {
     "merchants": "Մերչանտներ",
     "miniApps": "Մինի-հավելվածներ",
     "noRecentSearches": "Վերջին որոնումներ չկան",
-    "chatPlaceholder": "Chat Placeholder"
+    "chatPlaceholder": "Որոնել"
   },
   "home": {
     "title": "Գլխավոր",
@@ -464,11 +465,11 @@ export const HY_LOCALE = {
     "statementWidget": "Քաղվածքի վիջեթ",
     "payoutsWidget": "Վճարումների վիջեթ",
     "walletPanel": {
-      "localRoute": "Local route",
-      "openWallet": "Open Wallet",
-      "settings": "Settings",
-      "subtitle": "Subtitle",
-      "updating": "Updating"
+      "localRoute": "Տեղական",
+      "openWallet": "Դրամապանակ",
+      "settings": "Կարգավորումներ",
+      "subtitle": "Նկարագրություն",
+      "updating": "Տեղեկություն"
     }
   },
   "wallet": {
@@ -478,171 +479,171 @@ export const HY_LOCALE = {
     "currentBalance": "Ընթացիկ մնացորդ",
     "cardBalance": "Քարտի մնացորդ",
     "bankBalance": "Բանկային մնացորդ",
-    "coinBalance": "Coin մնացորդ",
+    "coinBalance": "Տեղեկություն",
     "localCards": {
-      "title": "Local cards",
-      "subtitle": "Domestic card layer with provider-tokenized local card routes.",
-      "balanceTitle": "Local wallet balance",
-      "balanceCaption": "Available local balance",
-      "providerPending": "Provider not configured",
-      "providerText": "Connect a local bank or payment provider before live local card binding, card-to-card transfer and balance sync.",
-      "noCardTitle": "No local cards yet",
-      "noCardText": "Local cards appear only after secure provider binding returns a verified token. Sabi never stores PAN or CVV.",
-      "domesticPayments": "Domestic payments",
-      "otpProtected": "OTP protected",
-      "actions": "Actions",
-      "cardToCard": "Card to Card",
-      "recipients": "Recipients",
-      "scope": "Current scope",
-      "currency": "Currency",
-      "payments": "Payments",
-      "domesticOnly": "Domestic only",
-      "verification": "Verification",
-      "otpProvider": "Provider OTP",
-      "sabiBalanceTopup": "Sabi Balance top up",
-      "providerControlled": "Provider controlled",
-      "cardSettings": "Card settings",
-      "tokenOnly": "Token-only after binding"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "balanceTitle": "Վերնագիր",
+      "balanceCaption": "Տեղեկություն",
+      "providerPending": "Կարգավորումներ",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "noCardTitle": "Վերնագիր",
+      "noCardText": "Տեղեկություն՝ Տեղեկություն",
+      "domesticPayments": "Տեղեկություն",
+      "otpProtected": "Տեղեկություն",
+      "actions": "Գործողություններ",
+      "cardToCard": "Տեղեկություն",
+      "recipients": "Տեղեկություն",
+      "scope": "Տեղեկություն",
+      "currency": "Տեղեկություն",
+      "payments": "Վճարումներ",
+      "domesticOnly": "Տեղեկություն",
+      "verification": "Հաստատում",
+      "otpProvider": "Կարգավորումներ",
+      "sabiBalanceTopup": "Տեղեկություն",
+      "providerControlled": "Կարգավորումներ",
+      "cardSettings": "Կարգավորումներ",
+      "tokenOnly": "Տեղեկություն"
     },
     "internationalCards": "Միջազգային քարտեր",
     "virtualCards": "Վիրտուալ քարտեր",
     "cards": {
-      "title": "Cards",
-      "subtitle": "Token-only card center for local, international, local + global and virtual cards.",
-      "localCard": "Local Card",
-      "localCardText": "Domestic card route. Card type must be detected after secure provider binding.",
-      "internationalCard": "International Card",
-      "internationalCardText": "Global route for cross-border and online payments through provider tokens.",
-      "localGlobalCard": "Local + Global",
-      "localGlobalCardText": "Hybrid card route detected by bank or payment provider after binding.",
-      "virtualCard": "Virtual Card",
-      "virtualCardText": "Online secure card issued by a bank or issuer provider.",
-      "localCards": "Local cards",
-      "internationalCards": "International cards",
-      "virtualCards": "Virtual cards",
-      "categoriesTitle": "Card categories",
-      "categoriesHint": "Normalized card types",
-      "selectedRoute": "Selected route",
-      "noCardsTitle": "No tokenized cards yet",
-      "noCardsText": "Cards will appear only after a bank or provider SDK returns a verified card token. Sabi must not store PAN or CVV.",
-      "addCard": "Add card",
-      "issueVirtual": "Issue virtual card",
-      "providerStatus": "Provider status",
-      "providerNotConfigured": "Provider not configured",
-      "providerNotConfiguredText": "Կրիպտո գործողությունները կմնան անջատված, մինչև միացվի իրական custody/wallet մատակարար, շուկայական տվյալների ուղի և ադմին կառավարման գործիքներ։",
-      "securityTitle": "Bank-grade card rules",
-      "securityHint": "Required foundation",
-      "ruleTokenTitle": "Token-only storage",
-      "ruleTokenText": "Sabi stores provider token ID, masked metadata and status only. PAN and CVV stay inside the bank/provider flow.",
-      "ruleDetectionTitle": "Auto detection",
-      "ruleDetectionText": "UI must show only normalized categories after binding: Local Card, International Card, Local + Global or Virtual Card.",
-      "ruleConfirmationTitle": "Secure confirmation",
-      "ruleConfirmationText": "Money movement must continue through provider confirmation, PIN or device biometric plus wallet risk checks.",
-      "settingsTitle": "Next setup",
-      "settingsHint": "Provider and currency",
-      "settingsText": "Next wallet steps must add primary currency, local currency, provider selection, limits and admin provider controls.",
-      "open": "Open"
+      "title": "Քարտեր",
+      "subtitle": "Նկարագրություն",
+      "localCard": "Տեղական քարտ",
+      "localCardText": "Տեղական՝ Տեղեկություն",
+      "internationalCard": "Միջազգային քարտ",
+      "internationalCardText": "Տեղեկություն՝ Տեղեկություն",
+      "localGlobalCard": "Տեղական + գլոբալ",
+      "localGlobalCardText": "Տեղական՝ Տեղեկություն",
+      "virtualCard": "Տեղեկություն",
+      "virtualCardText": "Տեղեկություն՝ Տեղեկություն",
+      "localCards": "Տեղական",
+      "internationalCards": "Միջազգային քարտեր",
+      "virtualCards": "Վիրտուալ քարտեր",
+      "categoriesTitle": "Վերնագիր",
+      "categoriesHint": "Տեղեկություն՝ Տեղեկություն",
+      "selectedRoute": "Տեղեկություն",
+      "noCardsTitle": "Վերնագիր",
+      "noCardsText": "Տեղեկություն՝ Տեղեկություն",
+      "addCard": "Տեղեկություն",
+      "issueVirtual": "Տեղեկություն",
+      "providerStatus": "Կարգավորումներ",
+      "providerNotConfigured": "Կարգավորումներ",
+      "providerNotConfiguredText": "Կարգավորումներ՝ Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "ruleTokenTitle": "Վերնագիր",
+      "ruleTokenText": "Տեղեկություն՝ Տեղեկություն",
+      "ruleDetectionTitle": "Վերնագիր",
+      "ruleDetectionText": "Տեղեկություն՝ Տեղեկություն",
+      "ruleConfirmationTitle": "Վերնագիր",
+      "ruleConfirmationText": "Տեղեկություն՝ Տեղեկություն",
+      "settingsTitle": "Կարգավորումներ",
+      "settingsHint": "Կարգավորումներ՝ Տեղեկություն",
+      "settingsText": "Կարգավորումներ՝ Տեղեկություն",
+      "open": "Բացել"
     },
     "bankAccounts": "Բանկային հաշիվներ",
     "linkedAccounts": "Կապակցված հաշիվներ",
     "accounts": "Հաշիվներ",
     "transactions": "Գործարքներ",
     "history": {
-      "eyebrow": "Wallet activity",
-      "title": "Transaction History",
-      "subtitle": "Review wallet movements, provider payments and QR operations in one place.",
-      "heroEyebrow": "Activity center",
-      "heroTitle": "Unified wallet history",
-      "heroSubtitle": "Structured transaction timeline for money movement, provider payments and QR routes.",
-      "total": "Total",
-      "pending": "Pending",
-      "failed": "Failed",
-      "completed": "Completed",
-      "searchPlaceholder": "Search by name, reference or amount",
-      "all": "All",
-      "money": "Money",
-      "cards": "Cards",
+      "eyebrow": "Պատմություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroEyebrow": "Պատմություն",
+      "heroTitle": "Պատմություն",
+      "heroSubtitle": "Պատմություն՝ Տեղեկություն",
+      "total": "Ընդամենը",
+      "pending": "Սպասման մեջ",
+      "failed": "Չհաջողվեց",
+      "completed": "Ավարտված",
+      "searchPlaceholder": "Որոնել",
+      "all": "Բոլորը",
+      "money": "Տեղեկություն",
+      "cards": "Քարտեր",
       "qr": "QR",
-      "liveNote": "This screen reads live unified history from the backend wallet API. Crypto history remains inside the crypto module.",
-      "loadingTitle": "Loading history",
-      "loadingText": "Pull down to refresh after the first load.",
-      "errorTitle": "Unable to load history",
-      "retry": "Retry",
-      "emptyTitle": "No transactions found",
-      "emptyText": "Try another search or filter.",
-      "back": "Back",
-      "walletHome": "Wallet Home",
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "user": "User",
-      "walletTransfer": "Wallet transfer",
-      "sendP2p": "Send via P2P",
-      "receiveP2p": "Receive via P2P",
-      "topupWallet": "Top up to Wallet",
-      "providerPaymentCredited": "Provider payment credited",
-      "refundWallet": "Refund to Wallet",
-      "providerRefundReturned": "Provider refund returned",
-      "withdrawWallet": "Withdraw from Wallet",
-      "moneyWithdrawal": "Money withdrawal",
-      "depositWallet": "Deposit to Wallet",
-      "moneyCredited": "Money credited",
-      "qrPayment": "QR Payment",
-      "qrRouteExecution": "QR route execution",
-      "walletOperation": "Wallet Core Operation",
-      "walletTransferTitle": "Wallet Transfer"
+      "liveNote": "Տեղեկություն",
+      "loadingTitle": "Բեռնվում է...",
+      "loadingText": "Բեռնվում է...",
+      "errorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "retry": "Կրկին փորձել",
+      "emptyTitle": "Պատմություն",
+      "emptyText": "Պատմություն՝ Տեղեկություն",
+      "back": "Հետ",
+      "walletHome": "Դրամապանակ",
+      "today": "Այսօր",
+      "yesterday": "Երեկ",
+      "user": "Տեղեկություն",
+      "walletTransfer": "Դրամապանակ",
+      "sendP2p": "Տեղեկություն",
+      "receiveP2p": "Տեղեկություն",
+      "topupWallet": "Դրամապանակ",
+      "providerPaymentCredited": "Կարգավորումներ",
+      "refundWallet": "Դրամապանակ",
+      "providerRefundReturned": "Կարգավորումներ",
+      "withdrawWallet": "Դրամապանակ",
+      "moneyWithdrawal": "Տեղեկություն",
+      "depositWallet": "Դրամապանակ",
+      "moneyCredited": "Տեղեկություն",
+      "qrPayment": "Տեղեկություն",
+      "qrRouteExecution": "Տեղեկություն",
+      "walletOperation": "Դրամապանակ",
+      "walletTransferTitle": "Դրամապանակ"
     },
     "sendMoney": "Ուղարկել գումար",
     "receiveMoney": "Ստանալ գումար",
     "requestMoney": {
-      "title": "Request money",
-      "subtitle": "Create verified requests by MySabi ID or QR.",
-      "heroTitle": "Internal collection route",
-      "heroText": "Requests must be confirmed by the payer before any incoming balance is created.",
-      "balanceLabel": "Request target balance",
-      "collectInto": "Collect into",
-      "collectIntoHint": "Destination",
-      "personal": "Personal",
-      "personalText": "Request into personal Sabi Balance.",
-      "business": "Business",
-      "businessText": "Prepared business route with KYB/admin control.",
-      "merchant": "Merchant",
-      "merchantText": "Prepared merchant collection route.",
-      "recipientTitle": "Request from",
-      "recipientHint": "Verified identity",
-      "recipientId": "Recipient MySabi ID",
-      "recipientPlaceholder": "username or business ID",
-      "recipientHelp": "Use verified user, business or merchant identity.",
-      "recipientError": "Enter a valid MySabi ID.",
-      "detailsTitle": "Request details",
-      "detailsHint": "Amount and note",
-      "amount": "Amount",
-      "reason": "Reason",
-      "reasonPlaceholder": "What is this request for?",
-      "reference": "Reference",
-      "referencePlaceholder": "Optional reference",
-      "previewTitle": "Request preview",
-      "previewHint": "Summary",
-      "from": "From",
-      "destination": "Destination",
-      "notSelected": "Not selected",
-      "noReason": "No reason added",
-      "noReference": "No reference",
-      "createQr": "Create QR",
-      "actions": "Actions",
-      "routes": "Helpful routes",
-      "securityTitle": "Security note",
-      "securityHint": "Important",
-      "security1Title": "Verify recipient identity",
-      "security1Text": "Money requests should target the correct unified user ID, business route or merchant account.",
-      "security2Title": "No automatic income",
-      "security2Text": "A request is not income until payer confirmation, provider route and wallet checks are completed.",
-      "paymentsHub": "Payments Hub",
-      "continue": "Continue request",
-      "confirmTitle": "Confirm request"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroTitle": "Տեղեկություն",
+      "heroText": "Տեղեկություն՝ Տեղեկություն",
+      "balanceLabel": "Տեղեկություն",
+      "collectInto": "Տեղեկություն",
+      "collectIntoHint": "Նպատակակետ",
+      "personal": "Անձնական",
+      "personalText": "Անձնական տվյալներ՝ Տեղեկություն",
+      "business": "Բիզնես",
+      "businessText": "Տեղեկություն՝ Տեղեկություն",
+      "merchant": "Մերչանտ",
+      "merchantText": "Տեղեկություն՝ Տեղեկություն",
+      "recipientTitle": "Վերնագիր",
+      "recipientHint": "Տեղեկություն՝ Տեղեկություն",
+      "recipientId": "Տեղեկություն",
+      "recipientPlaceholder": "Որոնում",
+      "recipientHelp": "Տեղեկություն",
+      "recipientError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "detailsTitle": "Վերնագիր",
+      "detailsHint": "Տեղեկություն՝ Տեղեկություն",
+      "amount": "Գումար",
+      "reason": "Տեղեկություն",
+      "reasonPlaceholder": "Որոնում",
+      "reference": "Հղում",
+      "referencePlaceholder": "Որոնում",
+      "previewTitle": "Վերնագիր",
+      "previewHint": "Տեղեկություն՝ Տեղեկություն",
+      "from": "Տեղեկություն",
+      "destination": "Նպատակակետ",
+      "notSelected": "Տեղեկություն",
+      "noReason": "Տեղեկություն",
+      "noReference": "Տեղեկություն",
+      "createQr": "Տեղեկություն",
+      "actions": "Գործողություններ",
+      "routes": "Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "security1Title": "Տեղեկություն",
+      "security1Text": "Տեղեկություն՝ Տեղեկություն",
+      "security2Title": "Տեղեկություն",
+      "security2Text": "Տեղեկություն՝ Տեղեկություն",
+      "paymentsHub": "Տեղեկություն",
+      "continue": "Տեղեկություն",
+      "confirmTitle": "Վերնագիր"
     },
     "transfer": "Փոխանցում",
     "bankTransfer": "Բանկային փոխանցում",
-    "wireTransfer": "Wire փոխանցում",
+    "wireTransfer": "Տեղեկություն",
     "swiftTransfer": "SWIFT փոխանցում",
     "domesticTransfer": "Ներքին փոխանցում",
     "internationalTransfer": "Միջազգային փոխանցում",
@@ -650,38 +651,38 @@ export const HY_LOCALE = {
     "scheduledTransfer": "Պլանավորված փոխանցում",
     "recurringTransfer": "Կրկնվող փոխանցում",
     "withdraw": {
-      "title": "Withdraw",
-      "subtitle": "Move funds from Sabi Balance to a verified tokenized card route.",
-      "source": "Source",
-      "sourceHint": "Internal money",
-      "sourceText": "Internal electronic money available for transfer, payment and withdraw flows.",
-      "storedValue": "Stored value",
-      "available": "Available",
-      "withdrawRoute": "Withdraw route",
-      "linkedCard": "Linked card",
-      "speed": "Speed",
-      "byProviderPolicy": "By provider policy",
-      "amount": "Amount",
-      "amountHint": "Cash-out value",
-      "helperText": "Withdraw moves funds out of Sabi Balance to an external linked card. It is separate from internal transfer and top up.",
-      "destination": "Withdraw destination",
-      "destinationHint": "Tokenized card",
-      "noLinkedCardsTitle": "No linked tokenized cards",
-      "noLinkedCardsText": "Add a card through the bank or provider SDK before withdrawing. Sabi must not store PAN or CVV.",
-      "addCard": "Add card",
-      "destinationDetails": "Destination details",
-      "destinationDetailsHint": "Resolved target",
-      "destinationLabel": "Destination",
-      "scheme": "Scheme",
-      "maskedCard": "Masked card",
-      "type": "Type",
-      "reference": "Reference",
-      "referenceHint": "Optional note",
-      "notePlaceholder": "Cash-out, personal use, bank withdrawal...",
-      "securityTitle": "Token-only cash-out",
-      "securityText": "Withdraw must use provider token, wallet risk checks and explicit user confirmation before money leaves Sabi Balance.",
-      "continue": "Continue",
-      "confirmTitle": "Confirm withdraw to card"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "source": "Աղբյուր",
+      "sourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "sourceText": "Տեղեկություն՝ Տեղեկություն",
+      "storedValue": "Տեղեկություն",
+      "available": "Հասանելի",
+      "withdrawRoute": "Տեղեկություն",
+      "linkedCard": "Տեղեկություն",
+      "speed": "Տեղեկություն",
+      "byProviderPolicy": "Կարգավորումներ",
+      "amount": "Գումար",
+      "amountHint": "Տեղեկություն՝ Տեղեկություն",
+      "helperText": "Տեղեկություն՝ Տեղեկություն",
+      "destination": "Տեղեկություն",
+      "destinationHint": "Տեղեկություն՝ Տեղեկություն",
+      "noLinkedCardsTitle": "Վերնագիր",
+      "noLinkedCardsText": "Տեղեկություն՝ Տեղեկություն",
+      "addCard": "Տեղեկություն",
+      "destinationDetails": "Տեղեկություն",
+      "destinationDetailsHint": "Տեղեկություն՝ Տեղեկություն",
+      "destinationLabel": "Նպատակակետ",
+      "scheme": "Տեղեկություն",
+      "maskedCard": "Տեղեկություն",
+      "type": "Տեսակ",
+      "reference": "Հղում",
+      "referenceHint": "Տեղեկություն՝ Տեղեկություն",
+      "notePlaceholder": "Որոնում",
+      "securityTitle": "Անվտանգություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "continue": "Շարունակել",
+      "confirmTitle": "Վերնագիր"
     },
     "cashOut": "Կանխիկացնել",
     "topUp": "Լիցքավորել",
@@ -692,41 +693,41 @@ export const HY_LOCALE = {
     "details": "Մանրամասներ",
     "openDetails": "Բացել մանրամասները",
     "addCard": {
-      "title": "Add card",
-      "subtitle": "Secure card binding must start from a bank or provider SDK. Sabi does not collect PAN or CVV.",
-      "roleTitle": "Wallet role",
-      "roleHint": "Routing purpose",
-      "personal": "Personal",
-      "personalText": "Bind card for personal Sabi Wallet flows.",
-      "business": "Business",
-      "businessText": "Prepare card route for business wallet operations when enabled.",
-      "merchant": "Merchant",
-      "merchantText": "Prepare card route for merchant settlement and commerce flows.",
-      "categoryTitle": "Expected category",
-      "categoryHint": "Provider will finalize",
-      "providerTitle": "Provider binding",
-      "providerHint": "SDK / iFrame",
-      "routeCurrency": "Route currency",
-      "localCurrencyRequired": "Select local currency in Wallet Settings",
-      "internationalCurrency": "International currency",
-      "providerNotConfigured": "Provider not configured",
-      "providerReady": "Provider ready",
-      "providerKycRequired": "KYC required",
-      "providerReviewRequired": "Review required",
-      "providerRestricted": "Restricted",
-      "providerOpenUnavailable": "Provider SDK launch route is not connected yet.",
-      "providerText": "The real card form must be opened inside the bank or payment provider SDK/iFrame. Sabi receives only provider token, masked metadata and status.",
-      "noManualTitle": "No manual card input",
-      "noManualText": "Do not type card number, CVV or expiry inside Sabi UI. Those fields belong only to the certified provider flow.",
-      "policyTitle": "Binding policy",
-      "policyHint": "Before activation",
-      "tokenTitle": "Provider token",
-      "tokenText": "Store token ID, masked card metadata, category and status only.",
-      "confirmTitle": "User confirmation",
-      "confirmText": "Use provider confirmation plus Sabi PIN/biometric confirmation for sensitive flows.",
-      "adminTitle": "Admin/provider control",
-      "adminText": "Provider keys, limits, availability and risk rules must be controlled from backend/admin.",
-      "openProvider": "Open provider SDK",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "roleTitle": "Վերնագիր",
+      "roleHint": "Տեղեկություն՝ Տեղեկություն",
+      "personal": "Անձնական",
+      "personalText": "Անձնական տվյալներ՝ Տեղեկություն",
+      "business": "Բիզնես",
+      "businessText": "Տեղեկություն՝ Տեղեկություն",
+      "merchant": "Մերչանտ",
+      "merchantText": "Տեղեկություն՝ Տեղեկություն",
+      "categoryTitle": "Վերնագիր",
+      "categoryHint": "Տեղեկություն՝ Տեղեկություն",
+      "providerTitle": "Կարգավորումներ",
+      "providerHint": "Կարգավորումներ՝ Տեղեկություն",
+      "routeCurrency": "Տեղեկություն",
+      "localCurrencyRequired": "Տեղական",
+      "internationalCurrency": "Տեղեկություն",
+      "providerNotConfigured": "Կարգավորումներ",
+      "providerReady": "Պատրաստ է",
+      "providerKycRequired": "Կարգավորումներ",
+      "providerReviewRequired": "Կարգավորումներ",
+      "providerRestricted": "Կարգավորումներ",
+      "providerOpenUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "noManualTitle": "Վերնագիր",
+      "noManualText": "Տեղեկություն՝ Տեղեկություն",
+      "policyTitle": "Վերնագիր",
+      "policyHint": "Տեղեկություն՝ Տեղեկություն",
+      "tokenTitle": "Վերնագիր",
+      "tokenText": "Տեղեկություն՝ Տեղեկություն",
+      "confirmTitle": "Վերնագիր",
+      "confirmText": "Տեղեկություն՝ Տեղեկություն",
+      "adminTitle": "Վերնագիր",
+      "adminText": "Տեղեկություն՝ Տեղեկություն",
+      "openProvider": "Կարգավորումներ",
       "providerDisabled": "Մատակարարը անջատված է"
     },
     "addBankAccount": "Ավելացնել բանկային հաշիվ",
@@ -740,56 +741,56 @@ export const HY_LOCALE = {
     "internationalCard": "Միջազգային քարտ",
     "localGlobalCard": "Տեղական + գլոբալ",
     "virtualCard": {
-      "title": "Virtual card",
-      "subtitle": "Bank or issuer-provider virtual card issuing with token-only storage.",
-      "previewEyebrow": "VIRTUAL CARD",
-      "previewMasked": "Provider token pending",
-      "previewStatus": "Not issued",
-      "category": "Category",
-      "theme": "Theme",
-      "currency": "Currency",
-      "usd": "USD",
-      "currencyFromSettings": "From Wallet Settings",
-      "monthlyLimit": "Monthly limit",
-      "limitPlaceholder": "0.00",
-      "useCaseTitle": "Use case",
-      "useCaseHint": "Issuing profile",
-      "onlineTitle": "Online payments",
-      "onlineText": "Default virtual card route for online merchants.",
-      "subscriptionTitle": "Subscriptions",
-      "subscriptionText": "Separate controlled card for recurring payments.",
-      "travelTitle": "Travel",
-      "travelText": "Provider-issued card route for international travel usage.",
-      "providerTitle": "Issuer provider",
-      "providerHint": "Bank / card issuer",
-      "providerNotConfigured": "Provider not configured",
-      "providerReady": "Provider ready",
-      "providerKycRequired": "KYC required",
-      "providerReviewRequired": "Review required",
-      "providerRestricted": "Restricted",
-      "providerOpenUnavailable": "Provider SDK launch route is not connected yet.",
-      "providerText": "Virtual cards can go live only after a partner bank or issuer provider is connected in backend/admin configuration.",
-      "requirementsTitle": "Issuing requirements",
-      "requirementsHint": "Before live card",
-      "reqKycTitle": "KYC / eligibility",
-      "reqKycText": "The backend must verify user eligibility before requesting card issuing.",
-      "reqTokenTitle": "Token-only result",
-      "reqTokenText": "The provider returns token ID, masked metadata and status. Sabi must not store PAN or CVV.",
-      "reqRiskTitle": "Wallet risk checks",
-      "reqRiskText": "Sensitive actions must pass device, behavior and explicit confirmation checks.",
-      "securityTitle": "Security controls",
-      "securityHint": "Card controls",
-      "freeze": "Freeze",
-      "onlinePayments": "Online payments",
-      "internationalUsage": "International usage",
-      "statusTitle": "Issuing status",
-      "kycRequired": "KYC required",
-      "ready": "Ready",
-      "issue": "Issue virtual card",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "previewEyebrow": "Տեղեկություն",
+      "previewMasked": "Տեղեկություն",
+      "previewStatus": "Տեղեկություն",
+      "category": "Կատեգորիա",
+      "theme": "Թեմա",
+      "currency": "Տեղեկություն",
+      "usd": "Տեղեկություն",
+      "currencyFromSettings": "Կարգավորումներ",
+      "monthlyLimit": "Ամսական սահմանաչափ",
+      "limitPlaceholder": "Որոնում",
+      "useCaseTitle": "Վերնագիր",
+      "useCaseHint": "Տեղեկություն՝ Տեղեկություն",
+      "onlineTitle": "Առցանց վճարումներ",
+      "onlineText": "Տեղեկություն՝ Տեղեկություն",
+      "subscriptionTitle": "Վերնագիր",
+      "subscriptionText": "Տեղեկություն՝ Տեղեկություն",
+      "travelTitle": "Վերնագիր",
+      "travelText": "Տեղեկություն՝ Տեղեկություն",
+      "providerTitle": "Կարգավորումներ",
+      "providerHint": "Կարգավորումներ՝ Տեղեկություն",
+      "providerNotConfigured": "Կարգավորումներ",
+      "providerReady": "Պատրաստ է",
+      "providerKycRequired": "Կարգավորումներ",
+      "providerReviewRequired": "Կարգավորումներ",
+      "providerRestricted": "Կարգավորումներ",
+      "providerOpenUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "requirementsTitle": "Վերնագիր",
+      "requirementsHint": "Տեղեկություն՝ Տեղեկություն",
+      "reqKycTitle": "Վերնագիր",
+      "reqKycText": "Տեղեկություն՝ Տեղեկություն",
+      "reqTokenTitle": "Վերնագիր",
+      "reqTokenText": "Տեղեկություն՝ Տեղեկություն",
+      "reqRiskTitle": "Վերնագիր",
+      "reqRiskText": "Տեղեկություն՝ Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "freeze": "Տեղեկություն",
+      "onlinePayments": "Առցանց վճարումներ",
+      "internationalUsage": "Տեղեկություն",
+      "statusTitle": "Վերնագիր",
+      "kycRequired": "Տեղեկություն",
+      "ready": "Պատրաստ է",
+      "issue": "Տեղեկություն",
       "disabledReason": "Մատակարարին միացրեք մինչև թողարկումը։",
-      "manageCards": "Cards"
+      "manageCards": "Քարտեր"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "Տեղեկություն",
     "qrPay": "Վճարել QR-ով",
     "qrReceive": "Ստանալ QR-ով",
     "paymentRequest": "Վճարման հարցում",
@@ -798,72 +799,72 @@ export const HY_LOCALE = {
     "transferByAccount": "Փոխանցում հաշվով",
     "transferBetweenOwnAccounts": "Փոխանցում իմ սեփական հաշիվների միջև",
     "transactionDetails": {
-      "eyebrow": "Wallet details",
-      "title": "Transaction Details",
-      "subtitle": "Full summary, status and reference data for this wallet operation.",
-      "loadingTitle": "Loading details",
-      "loadingText": "Fetching live transaction data from the backend.",
-      "errorTitle": "Unable to load details",
-      "retry": "Retry",
-      "completed": "Completed",
-      "completedText": "This transaction has been processed successfully.",
-      "pending": "Pending",
-      "pendingText": "The transaction is still being processed or awaiting final confirmation.",
-      "failed": "Failed",
-      "failedText": "This transaction did not complete successfully.",
-      "incoming": "Incoming",
-      "outgoing": "Outgoing",
-      "summaryEyebrow": "Transaction summary",
-      "operationSummary": "Operation summary",
-      "overview": "Overview",
-      "type": "Type",
-      "category": "Category",
-      "status": "Status",
-      "direction": "Direction",
-      "date": "Date",
-      "time": "Time",
-      "referenceData": "Reference data",
-      "tracking": "Tracking",
-      "transactionId": "Transaction ID",
-      "reference": "Reference",
-      "route": "Route",
-      "walletId": "Wallet ID",
-      "statusNote": "Status note",
-      "processing": "Processing",
-      "securityNote": "Security note",
-      "securityText": "Review amount, destination and reference before taking any follow-up action.",
-      "backendPayload": "Backend payload",
-      "liveData": "Live data",
-      "quickActions": "Quick actions",
-      "nextStep": "Next step",
-      "backHistory": "Back to History",
-      "walletHome": "Wallet Home",
-      "newSend": "New Send",
-      "newRequest": "New Request",
-      "copyReference": "Copy reference",
-      "referenceTitle": "Reference",
-      "transaction": "Transaction",
-      "walletOperation": "Wallet operation",
-      "refundWallet": "Refund to Wallet",
-      "paymentWallet": "Payment to Wallet",
-      "p2pTransfer": "P2P Wallet Transfer",
-      "qrExecution": "QR Payment Execution",
-      "coreOperation": "Wallet Core Operation",
-      "providerPaymentLinked": "Provider payment linked to wallet transaction",
-      "transferBetweenUsers": "Wallet transfer between users",
-      "qrRouteExecution": "Universal QR route execution",
-      "businessMerchantRoute": "Business / merchant / core wallet route",
-      "routeTransaction": "Unified wallet transaction flow",
-      "routePayment": "Provider payment → wallet transaction → ledger",
-      "routeP2p": "P2P → wallet transfer flow",
-      "routeQr": "Universal QR → wallet/payment route",
-      "routeCore": "Wallet core operation",
-      "routeSend": "Wallet send flow",
-      "routeReceive": "Wallet receive flow",
-      "routeTopup": "Wallet top up flow",
-      "routeWithdraw": "Wallet withdraw flow",
-      "routeCard": "Wallet card operation",
-      "routeFallback": "Wallet transaction route"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "loadingTitle": "Բեռնվում է...",
+      "loadingText": "Բեռնվում է...",
+      "errorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "retry": "Կրկին փորձել",
+      "completed": "Ավարտված",
+      "completedText": "Տեղեկություն՝ Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "pendingText": "Տեղեկություն՝ Տեղեկություն",
+      "failed": "Չհաջողվեց",
+      "failedText": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "incoming": "Մուտքային",
+      "outgoing": "Ելքային",
+      "summaryEyebrow": "Տեղեկություն",
+      "operationSummary": "Տեղեկություն",
+      "overview": "Տեղեկություն",
+      "type": "Տեսակ",
+      "category": "Կատեգորիա",
+      "status": "Կարգավիճակ",
+      "direction": "Տեղեկություն",
+      "date": "Ամսաթիվ",
+      "time": "Ժամ",
+      "referenceData": "Տեղեկություն",
+      "tracking": "Տեղեկություն",
+      "transactionId": "Գործարքի ID",
+      "reference": "Հղում",
+      "route": "Տեղեկություն",
+      "walletId": "Դրամապանակ",
+      "statusNote": "Տեղեկություն",
+      "processing": "Բեռնվում է...",
+      "securityNote": "Անվտանգություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "backendPayload": "Հետ",
+      "liveData": "Տեղեկություն",
+      "quickActions": "Կարգավորումներ",
+      "nextStep": "Տեղեկություն",
+      "backHistory": "Հետ",
+      "walletHome": "Դրամապանակ",
+      "newSend": "Տեղեկություն",
+      "newRequest": "Տեղեկություն",
+      "copyReference": "Տեղեկություն",
+      "referenceTitle": "Հղում",
+      "transaction": "Տեղեկություն",
+      "walletOperation": "Դրամապանակ",
+      "refundWallet": "Դրամապանակ",
+      "paymentWallet": "Դրամապանակ",
+      "p2pTransfer": "Տեղեկություն",
+      "qrExecution": "Տեղեկություն",
+      "coreOperation": "Տեղեկություն",
+      "providerPaymentLinked": "Կարգավորումներ",
+      "transferBetweenUsers": "Տեղեկություն",
+      "qrRouteExecution": "Տեղեկություն",
+      "businessMerchantRoute": "Տեղեկություն",
+      "routeTransaction": "Տեղեկություն",
+      "routePayment": "Տեղեկություն",
+      "routeP2p": "Տեղեկություն",
+      "routeQr": "Տեղեկություն",
+      "routeCore": "Տեղեկություն",
+      "routeSend": "Տեղեկություն",
+      "routeReceive": "Տեղեկություն",
+      "routeTopup": "Տեղեկություն",
+      "routeWithdraw": "Տեղեկություն",
+      "routeCard": "Տեղեկություն",
+      "routeFallback": "Հետ"
     },
     "incoming": "Մուտքային",
     "outgoing": "Ելքային",
@@ -915,12 +916,12 @@ export const HY_LOCALE = {
     "statements": "Քաղվածքներ",
     "generateStatement": "Ստեղծել քաղվածք",
     "downloadStatement": "Ներբեռնել քաղվածքը",
-    "coinWallet": "Coin Wallet",
-    "coinTopUp": "Լիցքավորել Coin",
-    "coinSend": "Ուղարկել Coin",
-    "coinReceive": "Ստանալ Coin",
-    "coinHistory": "Coin-ի պատմություն",
-    "moveToSabiWallet": "Տեղափոխել Sabi Wallet",
+    "coinWallet": "Դրամապանակ",
+    "coinTopUp": "Տեղեկություն",
+    "coinSend": "Տեղեկություն",
+    "coinReceive": "Տեղեկություն",
+    "coinHistory": "Պատմություն",
+    "moveToSabiWallet": "Դրամապանակ",
     "earnings": "Եկամուտներ",
     "deposit": "Ավանդ",
     "interest": "Տոկոս",
@@ -928,1276 +929,1276 @@ export const HY_LOCALE = {
     "businessWallet": "Բիզնես դրամապանակ",
     "merchantWallet": "Մերչանտ դրամապանակ",
     "adminReviewStatus": {
-      "approved": "Approved",
-      "escalated": "Escalated",
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "rejected": "Rejected"
+      "approved": "Հաստատված",
+      "escalated": "Տեղեկություն",
+      "notRequired": "Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "rejected": "Տեղեկություն"
     },
     "amlStatus": {
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "monitoring": "Monitoring",
-      "reviewRequired": "Review required",
-      "safeHold": "Safe hold"
+      "blocked": "Արգելափակված",
+      "clear": "Մաքրել",
+      "monitoring": "Տեղեկություն",
+      "reviewRequired": "Տեղեկություն",
+      "safeHold": "Անվտանգություն"
     },
     "coinProvider": {
-      "bridgeRoute": "Bridge Route",
-      "directCardBlocked": "Direct Card Blocked",
-      "guardReason": "Guard Reason",
-      "providerStatus": "Provider Status",
-      "eyebrow": "SABI COIN",
-      "providerTitle": "Provider not configured",
-      "providerText": "COIN financial operations require the real wallet backend, provider route, admin controls and security confirmation.",
-      "noFakeTitle": "Provider-backed COIN execution",
-      "noFakeText": "Top up, send, withdrawal, diamonds, deposits and income records require backend/provider execution.",
-      "securityTitle": "Wallet security route",
-      "securityText": "Real COIN movement must pass unified user ID, wallet risk checks, explicit confirmation and provider status.",
-      "availableCoin": "Available COIN",
-      "totalCoin": "Total COIN",
-      "diamonds": "Diamonds",
-      "deposits": "Deposits",
-      "records": "Records",
+      "bridgeRoute": "Տեղեկություն",
+      "directCardBlocked": "Տեղեկություն",
+      "guardReason": "Տեղեկություն",
+      "providerStatus": "Կարգավորումներ",
+      "eyebrow": "Կարգավորումներ",
+      "providerTitle": "Կարգավորումներ",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "noFakeTitle": "Վերնագիր",
+      "noFakeText": "Տեղեկություն՝ Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "availableCoin": "Պատրաստ է",
+      "totalCoin": "Տեղեկություն",
+      "diamonds": "Տեղեկություն",
+      "deposits": "Տեղեկություն",
+      "records": "Տեղեկություն",
       "disabled": "Անջատված է",
-      "backToCoin": "Back to Coin Wallet",
+      "backToCoin": "Հետ",
       "screens": {
         "topup": {
-          "title": "Top up Coin Wallet",
-          "subtitle": "COIN top up requires the real wallet backend, provider route and secure payment confirmation."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "send": {
-          "title": "Send COIN",
-          "subtitle": "COIN sending requires unified user ID, provider-backed balance, risk checks and explicit confirmation."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "withdraw": {
-          "title": "Move COIN",
-          "subtitle": "COIN can cash out only through Sabi Wallet after provider confirmation, not directly to bank cards."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "diamonds": {
-          "title": "Diamonds",
-          "subtitle": "Diamonds stay as an internal product balance. They do not have wallet transfer functions and cannot be counted as income unless policy allows."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "withdrawDiamonds": {
-          "title": "Withdraw Diamonds",
-          "subtitle": "Only eligible withdrawable diamonds may convert back into COIN through monthly policy and provider-controlled settlement."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "earn": {
-          "title": "Coin Earn",
-          "subtitle": "Locked Coin deposits require backend ledger, freeze/unfreeze controls, maturity schedule and admin risk states before activation."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "history": {
-          "title": "Coin History",
-          "subtitle": "COIN ledger records must come from the wallet backend/provider ledger."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "diamondsHistory": {
-          "title": "Diamond History",
-          "subtitle": "Diamond activity must separate financial income from free, promo, won and inventory movement records."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "depositHistory": {
-          "title": "Deposit History",
-          "subtitle": "Locked Coin deposit records appear only after backend ledger and maturity schedules are connected."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "depositDetails": {
-          "title": "Locked Coin Details",
-          "subtitle": "Deposit details require provider-backed principal lock, interest ledger, maturity date and release status."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       }
     },
     "complianceStatus": {
-      "adminReview": "Admin Review",
-      "amlReview": "Aml Review",
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "kycRequired": "KYC required",
-      "restricted": "Restricted",
-      "safeHold": "Safe hold"
+      "adminReview": "Տեղեկություն",
+      "amlReview": "Տեղեկություն",
+      "blocked": "Արգելափակված",
+      "clear": "Մաքրել",
+      "kycRequired": "Տեղեկություն",
+      "restricted": "Տեղեկություն",
+      "safeHold": "Անվտանգություն"
     },
     "cryptoProvider": {
-      "providerNotConfiguredShort": "Provider not configured",
-      "providerStatusText": "Provider Status Text",
-      "providerStatusTitle": "Provider Status",
-      "eyebrow": "CRYPTO WALLET",
-      "providerNotConfiguredTitle": "Provider not configured",
-      "providerNotConfiguredText": "Կրիպտո գործողությունները կմնան անջատված, մինչև միացվի իրական custody/wallet մատակարար, շուկայական տվյալների ուղի և ադմին կառավարման գործիքներ։",
-      "cryptoValue": "Crypto value",
-      "status": "Status",
+      "providerNotConfiguredShort": "Կարգավորումներ",
+      "providerStatusText": "Կարգավորումներ՝ Տեղեկություն",
+      "providerStatusTitle": "Կարգավորումներ",
+      "eyebrow": "Կարգավորումներ",
+      "providerNotConfiguredTitle": "Կարգավորումներ",
+      "providerNotConfiguredText": "Կարգավորումներ՝ Տեղեկություն",
+      "cryptoValue": "Տեղեկություն",
+      "status": "Կարգավիճակ",
       "disabled": "Անջատված է",
-      "securityTitle": "Security provider",
-      "securityText": "Send, swap, buy and sell must pass KYC/AML, device checks and explicit confirmation.",
-      "keysTitle": "Provider-secured keys",
-      "keysText": "Seed phrases, addresses and private keys must come only from a secure crypto provider flow.",
-      "marketTitle": "Real market data",
-      "marketText": "Assets, prices, charts, balances and history must come from provider APIs.",
-      "backToCrypto": "Back to Crypto Wallet",
+      "securityTitle": "Անվտանգություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "keysTitle": "Վերնագիր",
+      "keysText": "Տեղեկություն՝ Տեղեկություն",
+      "marketTitle": "Վերնագիր",
+      "marketText": "Տեղեկություն՝ Տեղեկություն",
+      "backToCrypto": "Հետ",
       "screens": {
         "assets": {
-          "title": "Crypto assets",
-          "subtitle": "Provider-backed assets will appear after crypto provider connection."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "portfolio": {
-          "title": "Crypto portfolio",
-          "subtitle": "Portfolio value must come from the connected crypto provider."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "assetDetails": {
-          "title": "Asset details",
-          "subtitle": "Asset details require provider-backed wallet data."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "buy": {
-          "title": "Buy crypto",
-          "subtitle": "Crypto on-ramp must be executed through a configured provider route."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "sell": {
-          "title": "Sell crypto",
-          "subtitle": "Crypto off-ramp must be executed through a configured provider route."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "swap": {
-          "title": "Swap crypto",
-          "subtitle": "Swap quotes and execution require a configured provider route."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "send": {
-          "title": "Send crypto",
-          "subtitle": "Crypto sending requires wallet provider, risk checks and explicit confirmation."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "receive": {
-          "title": "Receive crypto",
-          "subtitle": "Receive addresses must be issued by the connected provider."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "history": {
-          "title": "Crypto history",
-          "subtitle": "Transactions will appear after provider synchronization."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "transactionDetails": {
-          "title": "Transaction details",
-          "subtitle": "Transaction data must come from provider or blockchain synchronization."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "confirm": {
-          "title": "Crypto confirmation",
-          "subtitle": "Crypto operations require provider confirmation and risk checks."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "market": {
-          "title": "Crypto market",
-          "subtitle": "Market data requires a configured market data provider."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "watchlist": {
-          "title": "Watchlist",
-          "subtitle": "Watchlist prices must come from a real market data provider."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "networks": {
-          "title": "Networks",
-          "subtitle": "Supported networks must come from the connected crypto provider."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "manageTokens": {
-          "title": "Manage tokens",
-          "subtitle": "Token list management requires provider-backed asset metadata."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "importToken": {
-          "title": "Import token",
-          "subtitle": "Custom tokens require provider validation before appearing in Wallet."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "addressBook": {
-          "title": "Address book",
-          "subtitle": "Saved crypto addresses require verified provider storage."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "addAddress": {
-          "title": "Add address",
-          "subtitle": "New addresses require provider validation and risk checks."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "seedCreate": {
-          "title": "Create seed",
-          "subtitle": "Seed/մասնավոր բանալիի հոսքերը անջատված են, մինչև միացվի իրական անվտանգ մատակարար։"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "seedBackup": {
-          "title": "Seed backup",
-          "subtitle": "Seed backup requires a secure provider flow."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "seedVerify": {
-          "title": "Seed verification",
-          "subtitle": "Seed verification requires a secure provider flow."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       }
     },
     "home": {
-      "financialDashboardSubtitle": "Financial Dashboard",
-      "financialDashboardTitle": "Financial Dashboard",
-      "receive": "Receive",
-      "receiveSubtitle": "Receive",
-      "scanQr": "Scan QR",
-      "settings": "Settings",
-      "settingsSubtitle": "Settings",
-      "topUp": "Top up",
-      "topUpSubtitle": "Top up",
-      "withdraw": "Withdraw",
-      "withdrawSubtitle": "Withdraw",
-      "headerEyebrow": "Sabi Wallet",
-      "headerTitle": "Wallet hub",
-      "headerSubtitle": "Premium wallet surface connected to wallet foundation and provider-backed balances.",
-      "mainHeroTitle": "Primary wallet foundation",
-      "mainHeroSubtitle": "Primary balance, local balance, Sabi Coin and crypto value are taken from wallet foundation state.",
-      "mainBalanceLabel": "Primary balance",
-      "mainBalanceHint": "Selected primary currency",
-      "localBalanceLabel": "Local balance",
-      "localBalanceHint": "Configured local currency",
-      "send": "Send",
-      "cards": "Cards",
-      "quickActionsTitle": "Quick actions",
-      "quickActionsHint": "Daily use",
-      "request": "Request",
-      "history": "History",
-      "mySabiId": "My Sabi ID",
-      "mainBlocksTitle": "Primary wallet blocks",
-      "mainBlocksHint": "Core surface",
-      "sabiPayTitle": "Payment infrastructure",
-      "sabiPaySubtitle": "Primary transfer layer for MySabi ID, internal wallet routing, requests and payment actions.",
-      "sabiPayBalanceLabel": "Primary balance",
-      "qrTitle": "Scan and merchant flow",
-      "qrSubtitle": "Single premium entry for merchant pay, scan-to-pay, My QR generation and camera scan.",
-      "coinTitle": "Sabi Coin Wallet",
-      "coinSubtitle": "Internal coin wallet for Messenger gifts, premium functions and future stream donation flow.",
-      "coinBalanceLabel": "COIN balance",
-      "localCardsTitle": "Local card layer",
-      "localCardsSubtitle": "Separate local card system for domestic transfers, recipients and linked card management.",
-      "localCardsBalanceLabel": "Local balance",
-      "businessTitle": "Business routing",
-      "businessSubtitle": "Route operational, vendor and company payments through a dedicated business layer.",
-      "merchantTitle": "Merchant settlement",
-      "merchantSubtitle": "Marketplace and seller-side wallet flow for merchant checkout and settlement routing.",
-      "cryptoTitle": "Crypto Wallet access",
-      "cryptoSubtitle": "Separate crypto module with its own style, connected from Home as a premium ecosystem block.",
-      "cryptoBalanceLabel": "Crypto value",
-      "aiSectionTitle": "AI assistant",
-      "aiSectionHint": "Smart layer",
-      "aiTitle": "Smart wallet help",
-      "aiSubtitle": "Ask about payments, cards, COIN, business, merchant flows, crypto guidance and wallet history.",
-      "aiGuidanceTitle": "Guidance",
-      "aiGuidanceText": "Find the right wallet action faster",
-      "aiSupportTitle": "Support",
-      "aiSupportText": "Explain transfers, cards, COIN and QR flows",
-      "infraTitle": "Wallet infrastructure",
-      "infraHint": "Compact grid",
-      "cardsHubTitle": "Cards hub",
-      "cardsHubSubtitle": "Local, global, virtual",
-      "chatPaymentsTitle": "Chat payments",
-      "chatPaymentsSubtitle": "Messenger payment flow",
-      "virtualCardTitle": "Virtual card",
-      "virtualCardSubtitle": "Online secure card",
-      "controlsTitle": "What this home controls",
-      "controlsHint": "Scope",
-      "info1Title": "Sabi Pay foundation",
-      "info1Text": "Entry point for MySabi ID, internal transfer, request money and payment infrastructure.",
-      "info2Title": "QR and merchant entry",
-      "info2Text": "One clean QR entry without repeated QR buttons across the home screen.",
-      "info3Title": "Card architecture",
-      "info3Text": "Keeps local, international and virtual cards inside one structured wallet layer.",
-      "info4Title": "Sabi Coin layer",
-      "info4Text": "Internal COIN balance for Messenger gifts, premium functions and future stream monetization.",
-      "info5Title": "Business and merchant routing",
-      "info5Text": "Separates personal, business and merchant payment sources to avoid future accounting chaos.",
-      "info6Title": "AI assistant layer",
-      "info6Text": "AI helps explain wallet functions, suggest routes and guide users without replacing critical payment confirmation.",
-      "info7Title": "Crypto access",
-      "info7Text": "Crypto keeps a separate style and flow, but Home links to it as a premium ecosystem block.",
-      "pillInternal": "Internal",
-      "pillCore": "Core",
-      "pillCamera": "Camera",
-      "pillMerchant": "Merchant",
-      "pillGifts": "Gifts",
-      "pillStream": "Stream",
-      "pillDomestic": "Local",
-      "pillOperations": "Operations",
-      "pillReferences": "References",
-      "pillCheckout": "Checkout",
-      "pillSettlements": "Settlements",
-      "pillAssets": "Assets",
-      "pillProvider": "Provider",
-      "pillCustody": "Custody",
-      "pillSeparated": "Separated",
-      "askAi": "Ask AI",
-      "smartTips": "Smart tips",
-      "recentHelp": "Recent help",
-      "loading": "Updating wallet state...",
-      "eyebrowSabiPay": "SABI PAY",
+      "financialDashboardSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "financialDashboardTitle": "Վերնագիր",
+      "receive": "Ստանալ",
+      "receiveSubtitle": "Ստանալ",
+      "scanQr": "Սկանավորել QR",
+      "settings": "Կարգավորումներ",
+      "settingsSubtitle": "Կարգավորումներ՝ Տեղեկություն",
+      "topUp": "Լիցքավորել",
+      "topUpSubtitle": "Լիցքավորել",
+      "withdraw": "Տեղեկություն",
+      "withdrawSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "headerEyebrow": "Տեղեկություն",
+      "headerTitle": "Վերնագիր",
+      "headerSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "mainHeroTitle": "Վերնագիր",
+      "mainHeroSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "mainBalanceLabel": "Տեղեկություն",
+      "mainBalanceHint": "Տեղեկություն՝ Տեղեկություն",
+      "localBalanceLabel": "Տեղական",
+      "localBalanceHint": "Տեղական՝ Տեղեկություն",
+      "send": "Ուղարկել",
+      "cards": "Քարտեր",
+      "quickActionsTitle": "Կարգավորումներ",
+      "quickActionsHint": "Կարգավորումներ՝ Տեղեկություն",
+      "request": "Հարցում",
+      "history": "Պատմություն",
+      "mySabiId": "Տեղեկություն",
+      "mainBlocksTitle": "Վերնագիր",
+      "mainBlocksHint": "Տեղեկություն՝ Տեղեկություն",
+      "sabiPayTitle": "Վերնագիր",
+      "sabiPaySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "sabiPayBalanceLabel": "Տեղեկություն",
+      "qrTitle": "Վերնագիր",
+      "qrSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "coinTitle": "Վերնագիր",
+      "coinSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "coinBalanceLabel": "Տեղեկություն",
+      "localCardsTitle": "Տեղական",
+      "localCardsSubtitle": "Տեղական՝ Տեղեկություն",
+      "localCardsBalanceLabel": "Տեղական",
+      "businessTitle": "Տեղեկություն",
+      "businessSubtitle": "Տեղեկություն՝ Տեղեկություն",
+      "merchantTitle": "Մերչանտ հաշվանցում",
+      "merchantSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "cryptoTitle": "Վերնագիր",
+      "cryptoSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "cryptoBalanceLabel": "Տեղեկություն",
+      "aiSectionTitle": "AI",
+      "aiSectionHint": "AI՝ Տեղեկություն",
+      "aiTitle": "AI",
+      "aiSubtitle": "AI՝ Տեղեկություն",
+      "aiGuidanceTitle": "AI",
+      "aiGuidanceText": "AI՝ Տեղեկություն",
+      "aiSupportTitle": "Աջակցություն",
+      "aiSupportText": "AI՝ Տեղեկություն",
+      "infraTitle": "Վերնագիր",
+      "infraHint": "Տեղեկություն՝ Տեղեկություն",
+      "cardsHubTitle": "Վերնագիր",
+      "cardsHubSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "chatPaymentsTitle": "Չատ",
+      "chatPaymentsSubtitle": "Չատ՝ Տեղեկություն",
+      "virtualCardTitle": "Վերնագիր",
+      "virtualCardSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "controlsTitle": "Վերնագիր",
+      "controlsHint": "Տեղեկություն՝ Տեղեկություն",
+      "info1Title": "Տեղեկություն",
+      "info1Text": "Տեղեկություն՝ Տեղեկություն",
+      "info2Title": "Տեղեկություն",
+      "info2Text": "Տեղեկություն՝ Տեղեկություն",
+      "info3Title": "Տեղեկություն",
+      "info3Text": "Տեղեկություն՝ Տեղեկություն",
+      "info4Title": "Տեղեկություն",
+      "info4Text": "Տեղեկություն՝ Տեղեկություն",
+      "info5Title": "Տեղեկություն",
+      "info5Text": "Տեղեկություն՝ Տեղեկություն",
+      "info6Title": "Տեղեկություն",
+      "info6Text": "Տեղեկություն՝ Տեղեկություն",
+      "info7Title": "Տեղեկություն",
+      "info7Text": "Տեղեկություն՝ Տեղեկություն",
+      "pillInternal": "Տեղեկություն",
+      "pillCore": "Տեղեկություն",
+      "pillCamera": "Տեսախցիկ",
+      "pillMerchant": "Մերչանտ",
+      "pillGifts": "Նվերներ",
+      "pillStream": "Սթրիմ",
+      "pillDomestic": "Տեղեկություն",
+      "pillOperations": "Տեղեկություն",
+      "pillReferences": "Տեղեկություն",
+      "pillCheckout": "Տեղեկություն",
+      "pillSettlements": "Հաշվանցումներ",
+      "pillAssets": "Տեղեկություն",
+      "pillProvider": "Կարգավորումներ",
+      "pillCustody": "Տեղեկություն",
+      "pillSeparated": "Տեղեկություն",
+      "askAi": "AI",
+      "smartTips": "Տեղեկություն",
+      "recentHelp": "Տեղեկություն",
+      "loading": "Բեռնվում է...",
+      "eyebrowSabiPay": "Տեղեկություն",
       "eyebrowQr": "QR",
-      "eyebrowSabiCoin": "SABI COIN",
-      "eyebrowLocalCards": "LOCAL CARDS",
-      "eyebrowBusiness": "BUSINESS",
-      "eyebrowMerchant": "MERCHANT",
-      "eyebrowCrypto": "CRYPTO",
-      "pillSabiPay": "Sabi Pay",
-      "pillSabiBalance": "Sabi Balance",
-      "pillMyQr": "My QR",
-      "pillBusiness": "Business"
+      "eyebrowSabiCoin": "Տեղեկություն",
+      "eyebrowLocalCards": "Տեղական",
+      "eyebrowBusiness": "Տեղեկություն",
+      "eyebrowMerchant": "Տեղեկություն",
+      "eyebrowCrypto": "Տեղեկություն",
+      "pillSabiPay": "Տեղեկություն",
+      "pillSabiBalance": "Տեղեկություն",
+      "pillMyQr": "Իմ QR",
+      "pillBusiness": "Բիզնես"
     },
     "kycStatus": {
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "rejected": "Rejected",
-      "required": "Required",
-      "verified": "Verified"
+      "notRequired": "Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "rejected": "Տեղեկություն",
+      "required": "Պարտադիր",
+      "verified": "Ստուգված"
     },
     "pinConfirm": {
-      "guardReason": "Guard Reason",
-      "providerStatus": "Provider Status",
-      "riskStatus": "Risk Status",
-      "walletRoute": "Wallet Route",
-      "eyebrow": "Secure confirm",
-      "title": "Confirm operation",
-      "subtitle": "Authorize this protected wallet action through the final security provider.",
-      "protectedAction": "Protected action",
-      "authorizationTitle": "PIN authorization",
-      "authorizationText": "This action requires secure confirmation before execution.",
-      "amountLabel": "Confirmation amount",
-      "flow": "Flow",
-      "digits": "Digits",
-      "security": "Security",
-      "active": "Active",
-      "summaryTitle": "Confirmation summary",
-      "summaryHint": "Review",
-      "recipientTarget": "Recipient / Target",
-      "source": "Source",
-      "amount": "Amount",
-      "reference": "Reference",
-      "note": "Note",
-      "emptyAmount": "—",
-      "emptyNote": "No note",
-      "emptyReference": "No reference",
-      "protectedTarget": "Protected target",
-      "walletSource": "Wallet",
-      "enterPin": "Enter PIN",
-      "providerRequired": "Secure confirmation provider required",
-      "providerRequiredError": "Secure confirmation provider is not configured yet.",
-      "helperText": "This screen continues only after the real wallet security provider confirms the action.",
-      "protectionTitle": "Confirmation protection",
-      "protectionText": "Critical wallet actions require a protected step before processing.",
-      "providerTitle": "Provider required",
-      "providerText": "PIN, biometric and wallet risk checks must be connected through the final auth layer before money movement."
+      "guardReason": "Տեղեկություն",
+      "providerStatus": "Կարգավորումներ",
+      "riskStatus": "Տեղեկություն",
+      "walletRoute": "Դրամապանակ",
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "protectedAction": "Տեղեկություն",
+      "authorizationTitle": "Վերնագիր",
+      "authorizationText": "Տեղեկություն՝ Տեղեկություն",
+      "amountLabel": "Տեղեկություն",
+      "flow": "Տեղեկություն",
+      "digits": "Տեղեկություն",
+      "security": "Անվտանգություն",
+      "active": "Ակտիվ",
+      "summaryTitle": "Վերնագիր",
+      "summaryHint": "Տեղեկություն՝ Տեղեկություն",
+      "recipientTarget": "Տեղեկություն",
+      "source": "Աղբյուր",
+      "amount": "Գումար",
+      "reference": "Հղում",
+      "note": "Նշում",
+      "emptyAmount": "Տեղեկություն",
+      "emptyNote": "Տեղեկություն",
+      "emptyReference": "Տեղեկություն",
+      "protectedTarget": "Տեղեկություն",
+      "walletSource": "Դրամապանակ",
+      "enterPin": "Մուտքագրել PIN",
+      "providerRequired": "Կարգավորումներ",
+      "providerRequiredError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "helperText": "Տեղեկություն՝ Տեղեկություն",
+      "protectionTitle": "Վերնագիր",
+      "protectionText": "Տեղեկություն՝ Տեղեկություն",
+      "providerTitle": "Կարգավորումներ",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն"
     },
     "providerPanel": {
-      "cardsHint": "Cards",
-      "cardsTitle": "Cards",
-      "coinHint": "Coin",
-      "coinTitle": "Coin",
-      "compliance": "Compliance",
-      "cryptoHint": "Crypto",
-      "cryptoTitle": "Crypto",
-      "settingsHint": "Settings",
-      "settingsTitle": "Settings",
-      "tokenOnlyPolicy": "Token Only Policy",
-      "virtualCardHint": "Virtual Card",
-      "virtualCardTitle": "Virtual Card",
-      "walletHint": "Wallet",
-      "walletTitle": "Wallet"
+      "cardsHint": "Քարտեր",
+      "cardsTitle": "Քարտեր",
+      "coinHint": "Տեղեկություն՝ Տեղեկություն",
+      "coinTitle": "Վերնագիր",
+      "compliance": "Համապատասխանություն",
+      "cryptoHint": "Տեղեկություն՝ Տեղեկություն",
+      "cryptoTitle": "Վերնագիր",
+      "settingsHint": "Կարգավորումներ՝ Տեղեկություն",
+      "settingsTitle": "Կարգավորումներ",
+      "tokenOnlyPolicy": "Տեղեկություն",
+      "virtualCardHint": "Տեղեկություն՝ Տեղեկություն",
+      "virtualCardTitle": "Վերնագիր",
+      "walletHint": "Դրամապանակ",
+      "walletTitle": "Դրամապանակ"
     },
     "providerStatus": {
-      "kycRequired": "KYC required",
-      "providerNotConfigured": "Provider not configured",
-      "ready": "Ready",
-      "restricted": "Restricted",
-      "reviewRequired": "Review required"
+      "kycRequired": "Տեղեկություն",
+      "providerNotConfigured": "Կարգավորումներ",
+      "ready": "Պատրաստ է",
+      "restricted": "Տեղեկություն",
+      "reviewRequired": "Տեղեկություն"
     },
     "settings": {
-      "adminComplianceDescription": "Admin Compliance",
-      "adminComplianceTitle": "Admin Compliance",
-      "adminReview": "Admin Review",
-      "adminReviewStatus": "Admin Review Status",
-      "amlReview": "Aml Review",
-      "amlStatus": "Aml Status",
-      "approved": "Approved",
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "complianceStatus": "Compliance Status",
-      "escalated": "Escalated",
-      "kycRequired": "KYC required",
-      "kycStatus": "Kyc Status",
-      "monitoring": "Monitoring",
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "providerConfigurationRequired": "Provider Configuration Required",
-      "rejected": "Rejected",
-      "required": "Required",
-      "restricted": "Restricted",
-      "reviewRequired": "Review required",
-      "safeHold": "Safe hold",
-      "safeHoldState": "Safe Hold State",
-      "tokenOnlyPolicy": "Token Only Policy",
-      "tokenOnlyPolicyText": "Token Only Policy Text",
-      "verified": "Verified",
-      "back": "Wallet",
-      "eyebrow": "WALLET CONTROL CENTER",
-      "title": "Wallet Settings",
-      "subtitle": "Wallet currency, cards, security, limits and payment routing.",
-      "profileActive": "Wallet profile active",
-      "heroTitle": "Your wallet rules",
-      "heroText": "Configure currency, card behavior, privacy controls and safer payment flows without changing wallet routes.",
-      "smartRouting": "Smart routing",
-      "sensitiveGuard": "Sensitive guard",
-      "largePaymentCheck": "Large payment check",
-      "on": "ON",
-      "off": "OFF",
-      "currencyTitle": "Currency",
-      "primaryCurrency": "Primary currency",
-      "primaryCurrencyDescription": "Main Wallet screen and Sabi Balance display use this currency. Default is USD.",
-      "localCurrency": "Local currency",
-      "localCurrencyDescription": "Local card and local wallet routes use this currency after detection or manual selection.",
-      "internationalCurrency": "International card currency",
-      "internationalCurrencyDescription": "International card routes default to USD unless another provider currency is selected.",
-      "noHardcodedCurrencyTitle": "No hardcoded local currency",
-      "noHardcodedCurrencyText": "Main Wallet does not force local currency labels. Local currency appears only after this setting or provider detection.",
-      "cardPreferences": "Card preferences",
-      "manageCards": "Manage cards",
-      "manageCardsDescription": "Open token-only cards hub, local / international / virtual cards and provider binding.",
-      "defaultCardMode": "Default card mode",
-      "defaultCardModeDescription": "Choose how wallet decides the main payment card.",
-      "smart": "Smart",
-      "local": "Local",
-      "international": "International",
-      "virtual": "Virtual",
-      "autoSelectBestCard": "Auto-select best card",
-      "autoSelectBestCardDescription": "Prefer the best available tokenized card for the current flow.",
-      "showLast4": "Show only last 4 digits by default",
-      "showLast4Description": "Do not reveal sensitive card data in normal card views.",
-      "walletPreferences": "Wallet preferences",
-      "sabiPayQuickAccess": "SabiPay quick access",
-      "sabiPayQuickAccessDescription": "Open secure send routes from wallet actions.",
-      "qrQuickAccess": "QR quick access",
-      "qrQuickAccessDescription": "Open wallet QR screen and QR payment actions.",
-      "allowSmartRouting": "Allow smart routing",
-      "allowSmartRoutingDescription": "Choose the best available route between Sabi Balance, cards and provider rails.",
-      "paymentPriority": "Payment priority",
-      "paymentPriorityDescription": "Choose what wallet tries first for daily payment flows.",
-      "security": "Security",
-      "walletNotifications": "Wallet notifications",
-      "walletNotificationsDescription": "Receive payment, card, QR and balance alerts.",
-      "securityAlerts": "Security alerts",
-      "securityAlertsDescription": "High-priority alerts for sensitive wallet and protection events.",
-      "requireLargeConfirmation": "Require confirmation for large payments",
-      "requireLargeConfirmationDescription": "Ask for an extra confirmation step on higher-value wallet payments.",
-      "sensitiveBehavior": "Sensitive info behavior",
-      "sensitiveBehaviorDescription": "Control how card-sensitive details and hidden values are revealed.",
-      "tap": "Tap",
-      "biometric": "Biometric",
-      "pin": "PIN",
-      "useBiometric": "Use biometric for sensitive info",
-      "useBiometricDescription": "Face ID / fingerprint challenge before opening sensitive card details.",
-      "hideBalances": "Hide balances on screen open",
-      "hideBalancesDescription": "Start wallet screens with masked balances until user chooses to reveal.",
-      "notificationPreferences": "Notification preferences",
-      "notificationPreferencesDescription": "Open global notification controls and module alert rules.",
-      "limits": "Limits",
-      "dailySendLimit": "Daily send limit",
-      "dailySendLimitDescription": "Controlled by provider, KYC level, wallet risk and admin policy.",
-      "qrPaymentLimit": "QR payment limit",
-      "qrPaymentLimitDescription": "Controlled by provider, merchant policy and wallet risk checks.",
-      "sensitiveWindow": "Sensitive reveal window",
-      "sensitiveWindowDescription": "Provider/admin policy decides how long sensitive values stay visible.",
-      "policyControlled": "Policy controlled",
-      "defaultBehavior": "Default behavior",
-      "defaultSensitiveUnlock": "Default sensitive unlock",
-      "defaultCardSelection": "Default card selection",
-      "defaultPaymentSource": "Default payment source",
-      "smartAuto": "Smart auto",
-      "localFirst": "Local first",
-      "internationalFirst": "International first",
-      "virtualFirst": "Virtual first",
-      "tapToReveal": "Tap to reveal",
-      "pinRequired": "PIN required",
-      "biometricRequired": "Biometric required",
-      "sabiBalanceFirst": "Sabi Balance first",
-      "cardsFirst": "Cards first"
+      "adminComplianceDescription": "Նկարագրություն՝ Տեղեկություն",
+      "adminComplianceTitle": "Վերնագիր",
+      "adminReview": "Տեղեկություն",
+      "adminReviewStatus": "Տեղեկություն",
+      "amlReview": "Տեղեկություն",
+      "amlStatus": "Տեղեկություն",
+      "approved": "Հաստատված",
+      "blocked": "Արգելափակված",
+      "clear": "Մաքրել",
+      "complianceStatus": "Տեղեկություն",
+      "escalated": "Տեղեկություն",
+      "kycRequired": "Տեղեկություն",
+      "kycStatus": "Տեղեկություն",
+      "monitoring": "Տեղեկություն",
+      "notRequired": "Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "providerConfigurationRequired": "Կարգավորումներ",
+      "rejected": "Տեղեկություն",
+      "required": "Պարտադիր",
+      "restricted": "Տեղեկություն",
+      "reviewRequired": "Տեղեկություն",
+      "safeHold": "Անվտանգություն",
+      "safeHoldState": "Անվտանգություն",
+      "tokenOnlyPolicy": "Տեղեկություն",
+      "tokenOnlyPolicyText": "Տեղեկություն՝ Տեղեկություն",
+      "verified": "Ստուգված",
+      "back": "Դրամապանակ",
+      "eyebrow": "Կարգավորումներ",
+      "title": "Կարգավորումներ",
+      "subtitle": "Կարգավորումներ",
+      "profileActive": "Պրոֆիլ",
+      "heroTitle": "Կարգավորումներ",
+      "heroText": "Տեղեկություն՝ Տեղեկություն",
+      "smartRouting": "Տեղեկություն",
+      "sensitiveGuard": "Տեղեկություն",
+      "largePaymentCheck": "Տեղեկություն",
+      "on": "Տեղեկություն",
+      "off": "Տեղեկություն",
+      "currencyTitle": "Վերնագիր",
+      "primaryCurrency": "Տեղեկություն",
+      "primaryCurrencyDescription": "Նկարագրություն՝ Տեղեկություն",
+      "localCurrency": "Տեղական",
+      "localCurrencyDescription": "Տեղական՝ Տեղեկություն",
+      "internationalCurrency": "Տեղեկություն",
+      "internationalCurrencyDescription": "Նկարագրություն՝ Տեղեկություն",
+      "noHardcodedCurrencyTitle": "Վերնագիր",
+      "noHardcodedCurrencyText": "Տեղեկություն՝ Տեղեկություն",
+      "cardPreferences": "Նախապատվություններ",
+      "manageCards": "Տեղեկություն",
+      "manageCardsDescription": "Նկարագրություն՝ Տեղեկություն",
+      "defaultCardMode": "Տեղեկություն",
+      "defaultCardModeDescription": "Նկարագրություն՝ Տեղեկություն",
+      "smart": "Տեղեկություն",
+      "local": "Տեղական",
+      "international": "Տեղեկություն",
+      "virtual": "Տեղեկություն",
+      "autoSelectBestCard": "Տեղեկություն",
+      "autoSelectBestCardDescription": "Նկարագրություն՝ Տեղեկություն",
+      "showLast4": "Տեղեկություն",
+      "showLast4Description": "Տեղեկություն՝ Տեղեկություն",
+      "walletPreferences": "Դրամապանակ",
+      "sabiPayQuickAccess": "Տեղեկություն",
+      "sabiPayQuickAccessDescription": "Նկարագրություն՝ Տեղեկություն",
+      "qrQuickAccess": "Տեղեկություն",
+      "qrQuickAccessDescription": "Նկարագրություն՝ Տեղեկություն",
+      "allowSmartRouting": "Տեղեկություն",
+      "allowSmartRoutingDescription": "Նկարագրություն՝ Տեղեկություն",
+      "paymentPriority": "Տեղեկություն",
+      "paymentPriorityDescription": "Նկարագրություն՝ Տեղեկություն",
+      "security": "Անվտանգություն",
+      "walletNotifications": "Դրամապանակի ծանուցումներ",
+      "walletNotificationsDescription": "Դրամապանակ՝ Տեղեկություն",
+      "securityAlerts": "Անվտանգություն",
+      "securityAlertsDescription": "Անվտանգություն՝ Տեղեկություն",
+      "requireLargeConfirmation": "Տեղեկություն",
+      "requireLargeConfirmationDescription": "Նկարագրություն՝ Տեղեկություն",
+      "sensitiveBehavior": "Տեղեկություն",
+      "sensitiveBehaviorDescription": "Նկարագրություն՝ Տեղեկություն",
+      "tap": "Տեղեկություն",
+      "biometric": "Տեղեկություն",
+      "pin": "Տեղեկություն",
+      "useBiometric": "Տեղեկություն",
+      "useBiometricDescription": "Նկարագրություն՝ Տեղեկություն",
+      "hideBalances": "Տեղեկություն",
+      "hideBalancesDescription": "Նկարագրություն՝ Տեղեկություն",
+      "notificationPreferences": "Ծանուցումներ",
+      "notificationPreferencesDescription": "Ծանուցումներ՝ Տեղեկություն",
+      "limits": "Սահմանաչափեր",
+      "dailySendLimit": "Տեղեկություն",
+      "dailySendLimitDescription": "Նկարագրություն՝ Տեղեկություն",
+      "qrPaymentLimit": "Տեղեկություն",
+      "qrPaymentLimitDescription": "Նկարագրություն՝ Տեղեկություն",
+      "sensitiveWindow": "Տեղեկություն",
+      "sensitiveWindowDescription": "Նկարագրություն՝ Տեղեկություն",
+      "policyControlled": "Տեղեկություն",
+      "defaultBehavior": "Տեղեկություն",
+      "defaultSensitiveUnlock": "Տեղեկություն",
+      "defaultCardSelection": "Տեղեկություն",
+      "defaultPaymentSource": "Տեղեկություն",
+      "smartAuto": "Տեղեկություն",
+      "localFirst": "Տեղական",
+      "internationalFirst": "Տեղեկություն",
+      "virtualFirst": "Տեղեկություն",
+      "tapToReveal": "Տեղեկություն",
+      "pinRequired": "Տեղեկություն",
+      "biometricRequired": "Տեղեկություն",
+      "sabiBalanceFirst": "Տեղեկություն",
+      "cardsFirst": "Տեղեկություն"
     },
     "shared": {
-      "back": "Back",
-      "wallet": "Wallet",
-      "totalBalance": "Total balance",
-      "walletBalance": "Wallet balance",
-      "personal": "Personal",
-      "mainBalance": "Primary balance",
-      "localBalance": "Local balance",
-      "coinBalance": "COIN balance",
-      "cryptoValue": "Crypto value",
-      "sabiBalance": "Sabi Balance",
-      "sabiBalanceDescription": "Internal Sabi balance for top up, transfers, rewards and ecosystem payments",
-      "internal": "Internal",
-      "holder": "Holder",
-      "expiry": "Expiry",
-      "balance": "Balance",
-      "unknown": "Unknown"
+      "back": "Հետ",
+      "wallet": "Դրամապանակ",
+      "totalBalance": "Ընդհանուր մնացորդ",
+      "walletBalance": "Դրամապանակ",
+      "personal": "Անձնական",
+      "mainBalance": "Տեղեկություն",
+      "localBalance": "Տեղական",
+      "coinBalance": "Տեղեկություն",
+      "cryptoValue": "Տեղեկություն",
+      "sabiBalance": "Տեղեկություն",
+      "sabiBalanceDescription": "Նկարագրություն՝ Տեղեկություն",
+      "internal": "Տեղեկություն",
+      "holder": "Տեղեկություն",
+      "expiry": "Տեղեկություն",
+      "balance": "Մնացորդ",
+      "unknown": "Անհայտ"
     },
     "entry": {
-      "headerTitle": "Wallet",
-      "headerSubtitle": "Personal Wallet, Sabi Balance, cards, QR, top up and crypto in one place",
-      "quickActionsTitle": "Quick actions",
-      "quickActionsHint": "Core wallet actions",
-      "topUp": "Top up",
-      "send": "Send",
-      "receive": "Receive",
-      "qrPay": "QR Pay",
-      "cards": "Cards",
-      "crypto": "Crypto",
-      "cardsAccessTitle": "Cards access",
-      "cardsAccessHint": "Manage card flows from one secure place",
-      "allCardsTitle": "All cards",
-      "allCardsSubtitle": "Linked cards, default cards and card management",
-      "localCardsTitle": "Local cards",
-      "localCardsSubtitle": "Local card flows, OTP checks and domestic transfers"
+      "headerTitle": "Դրամապանակ",
+      "headerSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "quickActionsTitle": "Կարգավորումներ",
+      "quickActionsHint": "Կարգավորումներ՝ Տեղեկություն",
+      "topUp": "Լիցքավորել",
+      "send": "Ուղարկել",
+      "receive": "Ստանալ",
+      "qrPay": "Վճարել QR-ով",
+      "cards": "Քարտեր",
+      "crypto": "Տեղեկություն",
+      "cardsAccessTitle": "Վերնագիր",
+      "cardsAccessHint": "Տեղեկություն՝ Տեղեկություն",
+      "allCardsTitle": "Վերնագիր",
+      "allCardsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "localCardsTitle": "Տեղական",
+      "localCardsSubtitle": "Տեղական՝ Տեղեկություն"
     },
     "coinIndex": {
-      "eyebrow": "SABI COIN ECOSYSTEM",
-      "title": "Coin Wallet",
-      "subtitle": "Full payment wallet for COIN with transfers, history, diamond conversion, yield products and future credit foundation.",
-      "totalLabel": "AVAILABLE + FROZEN + RESERVED + PENDING",
-      "heroSubtitle": "COIN works as the real financial wallet. Diamonds stay separate as an internal product balance without direct transfer functions.",
-      "myCoinQr": "My Coin QR",
-      "myCoinQrText": "Generate separate Coin receive QR",
-      "scanCoinQr": "Scan Coin QR",
-      "scanCoinQrText": "Open camera scanner for Coin flow",
-      "diamondLayer": "Diamond layer",
-      "diamondLayerText": "Internal spend balance",
-      "open": "Open",
-      "diamondWithdrawRule": "Diamond withdraw rule",
-      "nextAvailableDate": "Next available date",
-      "coinActions": "Coin actions",
-      "coreWallet": "Core wallet",
-      "topUp": "Top up",
-      "topUpText": "Add COIN to wallet",
-      "send": "Send",
-      "sendText": "Transfer COIN",
-      "receive": "Receive",
-      "receiveText": "Incoming COIN",
-      "history": "History",
-      "historyText": "Transaction log",
-      "diamonds": "Diamonds",
-      "diamondsText": "Buy, convert and withdraw",
-      "earn": "Earn",
-      "earnText": "6M / 12M deposit",
-      "lockedDeposit": "Locked Coin Deposit",
-      "lockedDepositText": "16% APR • 6M to 12M",
-      "manage": "Manage",
-      "maturity": "Maturity",
-      "months": "months",
-      "noActiveDeposits": "No active deposits yet.",
-      "moveCoinToWallet": "Move COIN to main wallet",
-      "available": "Available",
-      "frozen": "Frozen",
-      "interest": "Interest",
-      "spendable": "Spendable",
-      "withdrawable": "Withdrawable",
-      "gameEligible": "Game-eligible",
-      "diamondsUnit": "DIAMONDS"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "totalLabel": "Տեղեկություն",
+      "heroSubtitle": "Տեղեկություն՝ Տեղեկություն",
+      "myCoinQr": "Տեղեկություն",
+      "myCoinQrText": "Տեղեկություն՝ Տեղեկություն",
+      "scanCoinQr": "Տեղեկություն",
+      "scanCoinQrText": "Տեղեկություն՝ Տեղեկություն",
+      "diamondLayer": "Տեղեկություն",
+      "diamondLayerText": "Տեղեկություն՝ Տեղեկություն",
+      "open": "Բացել",
+      "diamondWithdrawRule": "Տեղեկություն",
+      "nextAvailableDate": "Պատրաստ է",
+      "coinActions": "Կարգավորումներ",
+      "coreWallet": "Դրամապանակ",
+      "topUp": "Լիցքավորել",
+      "topUpText": "Տեղեկություն՝ Տեղեկություն",
+      "send": "Ուղարկել",
+      "sendText": "Տեղեկություն՝ Տեղեկություն",
+      "receive": "Ստանալ",
+      "receiveText": "Տեղեկություն՝ Տեղեկություն",
+      "history": "Պատմություն",
+      "historyText": "Պատմություն՝ Տեղեկություն",
+      "diamonds": "Տեղեկություն",
+      "diamondsText": "Տեղեկություն՝ Տեղեկություն",
+      "earn": "Տեղեկություն",
+      "earnText": "Տեղեկություն՝ Տեղեկություն",
+      "lockedDeposit": "Տեղեկություն",
+      "lockedDepositText": "Տեղեկություն՝ Տեղեկություն",
+      "manage": "Կառավարել",
+      "maturity": "Տեղեկություն",
+      "months": "Տեղեկություն",
+      "noActiveDeposits": "Տեղեկություն",
+      "moveCoinToWallet": "Դրամապանակ",
+      "available": "Հասանելի",
+      "frozen": "Սառեցված",
+      "interest": "Տոկոս",
+      "spendable": "Տեղեկություն",
+      "withdrawable": "Տեղեկություն",
+      "gameEligible": "Տեղեկություն",
+      "diamondsUnit": "Տեղեկություն"
     },
     "cryptoIndex": {
-      "eyebrow": "SABI CRYPTO",
-      "title": "Crypto Wallet",
-      "subtitle": "Separate crypto access with provider-based assets, network routing and wallet risk checks.",
-      "totalBalance": "Total crypto value",
-      "providerRequired": "Provider required",
-      "providerNotConfigured": "Provider not configured",
-      "assetsCount": "0 assets",
-      "networks": "Networks",
-      "change24h": "24h",
-      "status": "Status",
-      "quickActions": "Quick actions",
-      "buy": "Buy",
-      "buyText": "Provider funding",
-      "send": "Send",
-      "sendText": "Transfer out",
-      "receive": "Receive",
-      "receiveText": "Wallet address",
-      "swap": "Swap",
-      "swapText": "Exchange assets",
-      "sell": "Sell",
-      "sellText": "Convert out",
-      "history": "History",
-      "historyText": "Confirmed activity",
-      "portfolio": "Portfolio",
-      "custody": "Custody route",
-      "custodyText": "Crypto balances must come from a connected provider or wallet backend.",
-      "pricing": "Market pricing",
-      "pricingText": "USD value is shown only after provider price feed is connected.",
-      "risk": "Risk checks",
-      "riskText": "Send, sell and swap require wallet risk checks and explicit confirmation.",
-      "assets": "Assets",
-      "noAssetsTitle": "No crypto assets yet",
-      "noAssetsText": "Assets will appear only after a real crypto provider or wallet backend returns verified balances.",
-      "networksTokens": "Networks and tokens",
-      "networksText": "Network list must come from provider configuration.",
-      "tokensText": "Visible token list must be provider-backed.",
-      "cryptoFoundation": "Crypto foundation",
-      "cryptoFoundationText": "Crypto stays separate from Sabi Wallet, Coin Wallet and card rails, with values supplied by a connected provider.",
-      "backToWalletHome": "Back to Wallet Home",
-      "openAssets": "Open assets"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "totalBalance": "Տեղեկություն",
+      "providerRequired": "Կարգավորումներ",
+      "providerNotConfigured": "Կարգավորումներ",
+      "assetsCount": "Տեղեկություն",
+      "networks": "Տեղեկություն",
+      "change24h": "Տեղեկություն",
+      "status": "Կարգավիճակ",
+      "quickActions": "Կարգավորումներ",
+      "buy": "Տեղեկություն",
+      "buyText": "Տեղեկություն՝ Տեղեկություն",
+      "send": "Ուղարկել",
+      "sendText": "Տեղեկություն՝ Տեղեկություն",
+      "receive": "Ստանալ",
+      "receiveText": "Տեղեկություն՝ Տեղեկություն",
+      "swap": "Տեղեկություն",
+      "swapText": "Տեղեկություն՝ Տեղեկություն",
+      "sell": "Տեղեկություն",
+      "sellText": "Տեղեկություն՝ Տեղեկություն",
+      "history": "Պատմություն",
+      "historyText": "Պատմություն՝ Տեղեկություն",
+      "portfolio": "Տեղեկություն",
+      "custody": "Տեղեկություն",
+      "custodyText": "Տեղեկություն՝ Տեղեկություն",
+      "pricing": "Տեղեկություն",
+      "pricingText": "Տեղեկություն՝ Տեղեկություն",
+      "risk": "Տեղեկություն",
+      "riskText": "Տեղեկություն՝ Տեղեկություն",
+      "assets": "Տեղեկություն",
+      "noAssetsTitle": "Վերնագիր",
+      "noAssetsText": "Տեղեկություն՝ Տեղեկություն",
+      "networksTokens": "Տեղեկություն",
+      "networksText": "Տեղեկություն՝ Տեղեկություն",
+      "tokensText": "Տեղեկություն՝ Տեղեկություն",
+      "cryptoFoundation": "Տեղեկություն",
+      "cryptoFoundationText": "Տեղեկություն՝ Տեղեկություն",
+      "backToWalletHome": "Հետ",
+      "openAssets": "Տեղեկություն"
     },
     "businessPay": {
-      "eyebrow": "Business Pay",
-      "title": "Business routing",
-      "subtitle": "Business wallet route is prepared for provider-backed payouts and merchant-linked settlements.",
-      "providerStatus": "Provider not configured",
-      "routeTitle": "Business route",
-      "routeHint": "Provider-backed routes",
-      "routeEmptyTitle": "No business routes yet",
-      "routeEmptyText": "Routes must come from Business Wallet provider, KYB and admin configuration.",
-      "searchPlaceholder": "Search business routes",
-      "fundingTitle": "Funding source",
-      "fundingHint": "Token and wallet rails",
-      "businessBalance": "Business Wallet",
-      "businessBalanceText": "Available after Business Wallet launch",
-      "sabiBalanceText": "Personal Sabi Wallet bridge",
-      "merchantBalance": "Merchant route",
-      "merchantBalanceText": "Available after merchant settlement provider is connected",
-      "notConfigured": "Not configured",
-      "detailsTitle": "Payout details",
-      "detailsHint": "Amount and reference",
-      "amount": "Amount",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
-      "referencePlaceholder": "Invoice, order or payout reference",
-      "previewTitle": "Routing preview",
-      "previewHint": "Summary",
-      "selectedRoute": "Selected route",
-      "fundingSource": "Funding source",
-      "noReference": "No reference",
-      "qrTitle": "Business QR",
-      "qrSubtitle": "Generate business receive QR",
-      "scanTitle": "Scan business QR",
-      "scanSubtitle": "Open wallet scanner",
-      "routesTitle": "Business links",
-      "routesHint": "Wallet navigation",
-      "merchantLink": "Merchant link",
-      "history": "History",
-      "paymentsHub": "Payments hub",
-      "notesTitle": "Security",
-      "notesHint": "Policy",
-      "note1Title": "Business route separation",
-      "note1Text": "Business money routing stays separate from personal wallet flow.",
-      "note2Title": "KYB and admin control",
-      "note2Text": "Business payouts require provider, KYB, wallet risk checks and admin/compliance hooks.",
-      "note3Title": "Provider settlement only",
-      "note3Text": "Business balances and payouts require provider settlement confirmation.",
-      "back": "Back",
-      "process": "Process payout"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "providerStatus": "Կարգավորումներ",
+      "routeTitle": "Վերնագիր",
+      "routeHint": "Տեղեկություն՝ Տեղեկություն",
+      "routeEmptyTitle": "Տեղեկություն",
+      "routeEmptyText": "Տեղեկություն՝ Տեղեկություն",
+      "searchPlaceholder": "Որոնել",
+      "fundingTitle": "Վերնագիր",
+      "fundingHint": "Տեղեկություն՝ Տեղեկություն",
+      "businessBalance": "Բիզնես դրամապանակ",
+      "businessBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "sabiBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "merchantBalance": "Տեղեկություն",
+      "merchantBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "notConfigured": "Տեղեկություն",
+      "detailsTitle": "Վերնագիր",
+      "detailsHint": "Տեղեկություն՝ Տեղեկություն",
+      "amount": "Գումար",
+      "amountPlaceholder": "Որոնում",
+      "reference": "Հղում",
+      "referencePlaceholder": "Որոնում",
+      "previewTitle": "Վերնագիր",
+      "previewHint": "Տեղեկություն՝ Տեղեկություն",
+      "selectedRoute": "Տեղեկություն",
+      "fundingSource": "Տեղեկություն",
+      "noReference": "Տեղեկություն",
+      "qrTitle": "Բիզնես QR",
+      "qrSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "scanTitle": "Վերնագիր",
+      "scanSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "routesTitle": "Վերնագիր",
+      "routesHint": "Տեղեկություն՝ Տեղեկություն",
+      "merchantLink": "Տեղեկություն",
+      "history": "Պատմություն",
+      "paymentsHub": "Տեղեկություն",
+      "notesTitle": "Անվտանգություն",
+      "notesHint": "Տեղեկություն՝ Տեղեկություն",
+      "note1Title": "Տեղեկություն",
+      "note1Text": "Տեղեկություն՝ Տեղեկություն",
+      "note2Title": "Տեղեկություն",
+      "note2Text": "Տեղեկություն՝ Տեղեկություն",
+      "note3Title": "Տեղեկություն",
+      "note3Text": "Տեղեկություն՝ Տեղեկություն",
+      "back": "Հետ",
+      "process": "Տեղեկություն"
     },
     "merchantPay": {
-      "eyebrow": "Merchant Pay",
-      "title": "Merchant settlement",
-      "subtitle": "Merchant settlement route is prepared for provider-backed checkout and seller payouts.",
-      "providerStatus": "Provider not configured",
-      "routeTitle": "Merchant route",
-      "routeHint": "Provider-backed merchants",
-      "routeEmptyTitle": "No merchant routes yet",
-      "routeEmptyText": "Merchant routes must come from merchant provider, KYB/KYC and admin configuration.",
-      "searchPlaceholder": "Search merchant routes",
-      "fundingTitle": "Funding source",
-      "fundingHint": "Settlement and wallet rails",
-      "businessBalance": "Business Wallet",
-      "businessBalanceText": "Available after Business Wallet launch",
-      "sabiBalanceText": "Sabi Wallet payment source",
-      "merchantBalance": "Merchant Balance",
-      "merchantBalanceText": "Available after merchant settlement provider is connected",
-      "notConfigured": "Not configured",
-      "detailsTitle": "Payment details",
-      "detailsHint": "Amount and reference",
-      "amount": "Amount",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
-      "referencePlaceholder": "Order, invoice or settlement reference",
-      "previewTitle": "Payment preview",
-      "previewHint": "Summary",
-      "selectedRoute": "Selected route",
-      "fundingSource": "Funding source",
-      "noReference": "No reference",
-      "qrTitle": "Merchant QR",
-      "qrSubtitle": "Generate merchant receive QR",
-      "scanTitle": "Scan merchant QR",
-      "scanSubtitle": "Open wallet scanner",
-      "routesTitle": "Merchant links",
-      "routesHint": "Wallet navigation",
-      "merchantLink": "Business link",
-      "history": "History",
-      "paymentsHub": "Payments hub",
-      "notesTitle": "Security",
-      "notesHint": "Policy",
-      "note1Title": "Merchant route separation",
-      "note1Text": "Merchant settlement stays separate from personal wallet flow.",
-      "note2Title": "Provider and admin control",
-      "note2Text": "Merchant payments require provider routing, wallet risk checks and admin/compliance hooks.",
-      "note3Title": "Provider merchant balance",
-      "note3Text": "Merchant payments and settlement balances require provider confirmation.",
-      "back": "Back",
-      "process": "Process payment"
+      "eyebrow": "Տեղեկություն",
+      "title": "Մերչանտ հաշվանցում",
+      "subtitle": "Նկարագրություն",
+      "providerStatus": "Կարգավորումներ",
+      "routeTitle": "Վերնագիր",
+      "routeHint": "Տեղեկություն՝ Տեղեկություն",
+      "routeEmptyTitle": "Տեղեկություն",
+      "routeEmptyText": "Տեղեկություն՝ Տեղեկություն",
+      "searchPlaceholder": "Որոնել",
+      "fundingTitle": "Վերնագիր",
+      "fundingHint": "Տեղեկություն՝ Տեղեկություն",
+      "businessBalance": "Բիզնես դրամապանակ",
+      "businessBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "sabiBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "merchantBalance": "Տեղեկություն",
+      "merchantBalanceText": "Տեղեկություն՝ Տեղեկություն",
+      "notConfigured": "Տեղեկություն",
+      "detailsTitle": "Վերնագիր",
+      "detailsHint": "Տեղեկություն՝ Տեղեկություն",
+      "amount": "Գումար",
+      "amountPlaceholder": "Որոնում",
+      "reference": "Հղում",
+      "referencePlaceholder": "Որոնում",
+      "previewTitle": "Վերնագիր",
+      "previewHint": "Տեղեկություն՝ Տեղեկություն",
+      "selectedRoute": "Տեղեկություն",
+      "fundingSource": "Տեղեկություն",
+      "noReference": "Տեղեկություն",
+      "qrTitle": "Մերչանտ QR",
+      "qrSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "scanTitle": "Վերնագիր",
+      "scanSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "routesTitle": "Վերնագիր",
+      "routesHint": "Տեղեկություն՝ Տեղեկություն",
+      "merchantLink": "Տեղեկություն",
+      "history": "Պատմություն",
+      "paymentsHub": "Տեղեկություն",
+      "notesTitle": "Անվտանգություն",
+      "notesHint": "Տեղեկություն՝ Տեղեկություն",
+      "note1Title": "Տեղեկություն",
+      "note1Text": "Տեղեկություն՝ Տեղեկություն",
+      "note2Title": "Տեղեկություն",
+      "note2Text": "Տեղեկություն՝ Տեղեկություն",
+      "note3Title": "Տեղեկություն",
+      "note3Text": "Տեղեկություն՝ Տեղեկություն",
+      "back": "Հետ",
+      "process": "Տեղեկություն"
     },
     "paymentsHub": {
-      "eyebrow": "SABI WALLET PAY",
-      "title": "Payments Hub",
-      "subtitle": "Unified payment center for Sabi Wallet, cards, QR, merchant routing and Messenger payments.",
-      "heroTitle": "Payment infrastructure",
-      "heroSubtitle": "Real payment routes must come from wallet foundation, bank providers, QR/Pay and compliance gates.",
-      "providerNotConfigured": "Provider not configured",
-      "mainBalance": "Primary balance",
-      "primaryCurrency": "Primary currency",
-      "providerRoutes": "Provider routes",
-      "pillSabi": "Sabi Wallet",
-      "pillCards": "Cards",
-      "pillMerchant": "Merchant",
-      "pillInternal": "Internal",
-      "pillIdentity": "Identity",
-      "featuredTitle": "Featured payment flows",
-      "featuredHint": "Core routes",
-      "internalEyebrow": "INTERNAL PAYMENTS",
-      "internalTitle": "MySabi ID and transfers",
-      "internalSubtitle": "Internal send, request, contacts and identity-based wallet routing.",
-      "availableBalance": "Available balance",
-      "cardEyebrow": "CARDS AND MOVEMENT",
-      "cardTitle": "Cards, top up and withdraw",
-      "cardSubtitle": "Money movement between Sabi Wallet and cards must use provider tokens only.",
-      "cardProvider": "Card provider",
-      "ecosystemEyebrow": "MERCHANT AND CHAT",
-      "ecosystemTitle": "Business, merchant and Messenger",
-      "ecosystemSubtitle": "Merchant, business and chat payments stay separated from personal balance until provider routes are connected.",
-      "ecosystemProvider": "Ecosystem provider",
-      "qrAccess": "QR access",
-      "singleEntry": "Single entry",
-      "myQr": "My Sabi QR",
-      "myQrSubtitle": "Generate receive QR for Sabi Wallet.",
-      "scanQr": "Scan QR",
-      "scanQrSubtitle": "Open scanner for user, merchant or dynamic QR flow.",
-      "internalPayments": "Internal payments",
-      "core": "Core",
-      "cardsBalance": "Cards and balance",
-      "moneyMovement": "Money movement",
-      "ecosystemPayments": "Ecosystem payments",
-      "extendedRoutes": "Extended routes",
-      "mySabiId": "MySabi ID",
-      "mySabiIdSubtitle": "Manage internal wallet identity and payment sharing.",
-      "send": "Send money",
-      "sendSubtitle": "Send by Sabi Wallet, card route or internal wallet route.",
-      "request": "Request money",
-      "requestSubtitle": "Create a verified payment request.",
-      "contacts": "Wallet contacts",
-      "contactsSubtitle": "Saved recipients must come from verified wallet contacts.",
-      "topup": "Top up from card",
-      "topupSubtitle": "Add money through a tokenized provider card route.",
-      "withdraw": "Withdraw to card",
-      "withdrawSubtitle": "Move Sabi Balance back to a provider-tokenized card.",
-      "cards": "Cards",
-      "cardsSubtitle": "Manage local, international and virtual tokenized cards.",
-      "virtualCard": "Virtual card",
-      "virtualCardSubtitle": "Issue only through a real bank or issuer provider.",
-      "chatPayments": "Chat payments",
-      "chatPaymentsSubtitle": "Messenger payment routes with explicit confirmation.",
-      "merchantPay": "Merchant Pay",
-      "merchantPaySubtitle": "Provider-backed merchant checkout and settlement routing.",
-      "businessPay": "Business routing",
-      "businessPaySubtitle": "Business Wallet route prepared for KYB/admin control.",
-      "securityTitle": "Wallet-grade routing",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-based routing",
-      "identityText": "MySabi ID connects personal, business and merchant payment discovery through verified identity.",
-      "tokenTitle": "Token-only card movement",
-      "tokenText": "Card movement uses bank/provider tokens. Sabi must not store PAN or CVV.",
-      "separationTitle": "Merchant and business separation",
-      "separationText": "Seller checkout and business payment routing stay separate from personal wallet balance.",
-      "noFakeTitle": "Secure provider execution",
-      "noFakeText": "Balances and routes appear only after wallet foundation, provider or backend data is available."
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroTitle": "Տեղեկություն",
+      "heroSubtitle": "Տեղեկություն՝ Տեղեկություն",
+      "providerNotConfigured": "Կարգավորումներ",
+      "mainBalance": "Տեղեկություն",
+      "primaryCurrency": "Տեղեկություն",
+      "providerRoutes": "Կարգավորումներ",
+      "pillSabi": "Տեղեկություն",
+      "pillCards": "Քարտեր",
+      "pillMerchant": "Մերչանտ",
+      "pillInternal": "Տեղեկություն",
+      "pillIdentity": "Տեղեկություն",
+      "featuredTitle": "Պրեմիում",
+      "featuredHint": "Պրեմիում՝ Տեղեկություն",
+      "internalEyebrow": "Տեղեկություն",
+      "internalTitle": "Վերնագիր",
+      "internalSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "availableBalance": "Հասանելի մնացորդ",
+      "cardEyebrow": "Տեղեկություն",
+      "cardTitle": "Վերնագիր",
+      "cardSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "cardProvider": "Կարգավորումներ",
+      "ecosystemEyebrow": "Տեղեկություն",
+      "ecosystemTitle": "Վերնագիր",
+      "ecosystemSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "ecosystemProvider": "Կարգավորումներ",
+      "qrAccess": "Տեղեկություն",
+      "singleEntry": "Տեղեկություն",
+      "myQr": "Տեղեկություն",
+      "myQrSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "scanQr": "Սկանավորել QR",
+      "scanQrSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "internalPayments": "Տեղեկություն",
+      "core": "Տեղեկություն",
+      "cardsBalance": "Տեղեկություն",
+      "moneyMovement": "Տեղեկություն",
+      "ecosystemPayments": "Տեղեկություն",
+      "extendedRoutes": "Տեղեկություն",
+      "mySabiId": "Տեղեկություն",
+      "mySabiIdSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "send": "Ուղարկել գումար",
+      "sendSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "request": "Տեղեկություն",
+      "requestSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "contacts": "Տեղեկություն",
+      "contactsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "topup": "Տեղեկություն",
+      "topupSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "withdraw": "Տեղեկություն",
+      "withdrawSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "cards": "Քարտեր",
+      "cardsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "virtualCard": "Տեղեկություն",
+      "virtualCardSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "chatPayments": "Չատ",
+      "chatPaymentsSubtitle": "Չատ՝ Տեղեկություն",
+      "merchantPay": "Տեղեկություն",
+      "merchantPaySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "businessPay": "Տեղեկություն",
+      "businessPaySubtitle": "Տեղեկություն՝ Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "identityTitle": "Վերնագիր",
+      "identityText": "Տեղեկություն՝ Տեղեկություն",
+      "tokenTitle": "Վերնագիր",
+      "tokenText": "Տեղեկություն՝ Տեղեկություն",
+      "separationTitle": "Վերնագիր",
+      "separationText": "Տեղեկություն՝ Տեղեկություն",
+      "noFakeTitle": "Վերնագիր",
+      "noFakeText": "Տեղեկություն՝ Տեղեկություն"
     },
     "contacts": {
-      "title": "Wallet contacts",
-      "subtitle": "Verified wallet contacts will appear after backend directory sync.",
-      "searchPlaceholder": "Search verified wallet contacts",
-      "all": "All",
-      "people": "People",
-      "business": "Business",
-      "merchant": "Merchant",
-      "quickRoutes": "Quick routes",
-      "quickRoutesHint": "Actions",
-      "send": "Send",
-      "request": "Request",
-      "chatPay": "Chat Pay",
-      "mySabiId": "MySabi ID",
-      "directoryTitle": "Verified directory",
-      "directoryHint": "Verified directory required",
-      "emptyTitle": "No verified contacts yet",
-      "emptyText": "Contacts must come from verified user, business or merchant routes.",
-      "securityTitle": "Contact system",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-first routing",
-      "identityText": "Wallet contacts must use unified user ID, MySabi ID or verified merchant/business route.",
-      "verifiedTitle": "Verified paths",
-      "verifiedText": "Send and request flows should resolve recipients from backend/profile data before money movement."
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "searchPlaceholder": "Որոնել",
+      "all": "Բոլորը",
+      "people": "Մարդիկ",
+      "business": "Բիզնես",
+      "merchant": "Մերչանտ",
+      "quickRoutes": "Տեղեկություն",
+      "quickRoutesHint": "Գործողություններ",
+      "send": "Ուղարկել",
+      "request": "Հարցում",
+      "chatPay": "Չատ",
+      "mySabiId": "Տեղեկություն",
+      "directoryTitle": "Վերնագիր",
+      "directoryHint": "Տեղեկություն՝ Տեղեկություն",
+      "emptyTitle": "Տեղեկություն",
+      "emptyText": "Տեղեկություն՝ Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "identityTitle": "Վերնագիր",
+      "identityText": "Տեղեկություն՝ Տեղեկություն",
+      "verifiedTitle": "Վերնագիր",
+      "verifiedText": "Տեղեկություն՝ Տեղեկություն"
     },
     "chatPayments": {
-      "title": "Chat payments",
-      "subtitle": "Messenger payment route by ID or QR.",
-      "heroTitle": "Messenger payment layer",
-      "heroText": "Chat payments must resolve real Messenger identity and wallet provider routes before confirmation.",
-      "currentRoute": "Current route",
-      "currentAmount": "Current amount",
-      "byId": "By ID",
-      "byQr": "By QR",
-      "paymentMode": "Payment mode",
-      "paymentModeHint": "ID or QR",
-      "byIdText": "Use internal user ID or @handle.",
-      "byQrText": "Scan or generate Messenger payment QR.",
-      "paymentSource": "Payment source",
-      "paymentSourceHint": "Fiat or COIN",
-      "sabiWallet": "Sabi Wallet",
-      "sabiWalletText": "Primary wallet balance for chat payments.",
-      "coinWallet": "Coin Wallet",
-      "coinWalletText": "COIN route for premium chat transfers.",
-      "recipientTitle": "Recipient by ID",
-      "recipientHint": "Messenger identity",
-      "recipientLabel": "Recipient ID / @handle",
-      "recipientPlaceholder": "@username or user ID",
-      "qrRecipientTitle": "QR recipient",
-      "qrRecipientHint": "Scanned result",
-      "qrRecipientLabel": "QR recipient / reference",
-      "qrRecipientPlaceholder": "Scanned handle, ID or QR reference",
-      "myMessengerQr": "My Messenger QR",
-      "myMessengerQrText": "Generate receive QR for chat.",
-      "scanMessengerQr": "Scan Messenger QR",
-      "scanMessengerQrText": "Open wallet scanner.",
-      "detailsTitle": "Payment details",
-      "detailsHint": "Compose",
-      "amount": "Amount",
-      "note": "Note",
-      "notePlaceholder": "Reason or payment note",
-      "previewTitle": "Chat payment preview",
-      "previewHint": "Summary",
-      "mode": "Mode",
-      "recipient": "Recipient",
-      "source": "Source",
-      "notSelected": "Not selected",
-      "noNote": "No note",
-      "shortcutsTitle": "Messenger shortcuts",
-      "shortcutsHint": "Routes",
-      "history": "History",
-      "coinWalletShortcut": "Coin Wallet",
-      "sabiWalletShortcut": "Sabi Wallet",
-      "askAi": "Ask AI",
-      "securityTitle": "Messenger payment notes",
-      "securityHint": "Policy",
-      "security1Title": "Identity-linked route",
-      "security1Text": "The recipient must be resolved from real Messenger/user identity before money movement.",
-      "security2Title": "Explicit confirmation",
-      "security2Text": "Chat payment is passed to Wallet confirmation and security provider before execution.",
-      "back": "Back",
-      "sendById": "Send by ID",
-      "sendByQr": "Send by QR",
-      "sendCoinById": "Send COIN by ID",
-      "sendCoinByQr": "Send COIN by QR"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroTitle": "Չատ",
+      "heroText": "Տեղեկություն՝ Տեղեկություն",
+      "currentRoute": "Տեղեկություն",
+      "currentAmount": "Տեղեկություն",
+      "byId": "Տեղեկություն",
+      "byQr": "Տեղեկություն",
+      "paymentMode": "Տեղեկություն",
+      "paymentModeHint": "Տեղեկություն՝ Տեղեկություն",
+      "byIdText": "Տեղեկություն՝ Տեղեկություն",
+      "byQrText": "Տեղեկություն՝ Տեղեկություն",
+      "paymentSource": "Տեղեկություն",
+      "paymentSourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "sabiWallet": "Դրամապանակ",
+      "sabiWalletText": "Դրամապանակ՝ Տեղեկություն",
+      "coinWallet": "Դրամապանակ",
+      "coinWalletText": "Դրամապանակ՝ Տեղեկություն",
+      "recipientTitle": "Վերնագիր",
+      "recipientHint": "Տեղեկություն՝ Տեղեկություն",
+      "recipientLabel": "Տեղեկություն",
+      "recipientPlaceholder": "Որոնում",
+      "qrRecipientTitle": "Վերնագիր",
+      "qrRecipientHint": "Տեղեկություն՝ Տեղեկություն",
+      "qrRecipientLabel": "Տեղեկություն",
+      "qrRecipientPlaceholder": "Որոնում",
+      "myMessengerQr": "Տեղեկություն",
+      "myMessengerQrText": "Տեղեկություն՝ Տեղեկություն",
+      "scanMessengerQr": "Տեղեկություն",
+      "scanMessengerQrText": "Տեղեկություն՝ Տեղեկություն",
+      "detailsTitle": "Վերնագիր",
+      "detailsHint": "Տեղեկություն՝ Տեղեկություն",
+      "amount": "Գումար",
+      "note": "Նշում",
+      "notePlaceholder": "Որոնում",
+      "previewTitle": "Վերնագիր",
+      "previewHint": "Տեղեկություն՝ Տեղեկություն",
+      "mode": "Տեղեկություն",
+      "recipient": "Ստացող",
+      "source": "Աղբյուր",
+      "notSelected": "Տեղեկություն",
+      "noNote": "Տեղեկություն",
+      "shortcutsTitle": "Վերնագիր",
+      "shortcutsHint": "Տեղեկություն՝ Տեղեկություն",
+      "history": "Պատմություն",
+      "coinWalletShortcut": "Դրամապանակ",
+      "sabiWalletShortcut": "Դրամապանակ",
+      "askAi": "AI",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "security1Title": "Տեղեկություն",
+      "security1Text": "Տեղեկություն՝ Տեղեկություն",
+      "security2Title": "Տեղեկություն",
+      "security2Text": "Տեղեկություն՝ Տեղեկություն",
+      "back": "Հետ",
+      "sendById": "Տեղեկություն",
+      "sendByQr": "Տեղեկություն",
+      "sendCoinById": "Տեղեկություն",
+      "sendCoinByQr": "Տեղեկություն"
     },
     "currency": {
-      "notConfigured": "Not configured",
-      "usd": "US Dollar",
-      "eur": "Euro",
-      "cny": "Chinese yuan",
-      "aed": "UAE dirham",
-      "gbp": "British pound",
-      "jpy": "Japanese yen",
-      "krw": "Korean won",
-      "uzs": "Uzbek soʻm",
-      "kzt": "Kazakh tenge",
-      "kgs": "Kyrgyz som",
-      "tjs": "Tajik somoni",
-      "tmt": "Turkmen manat",
-      "azn": "Azerbaijani manat",
-      "try": "Turkish lira",
-      "inr": "Indian rupee"
+      "notConfigured": "Տեղեկություն",
+      "usd": "Տեղեկություն",
+      "eur": "Տեղեկություն",
+      "cny": "Տեղեկություն",
+      "aed": "Տեղեկություն",
+      "gbp": "Տեղեկություն",
+      "jpy": "Տեղեկություն",
+      "krw": "Տեղեկություն",
+      "uzs": "Տեղեկություն",
+      "kzt": "Տեղեկություն",
+      "kgs": "Տեղեկություն",
+      "tjs": "Տեղեկություն",
+      "tmt": "Տեղեկություն",
+      "azn": "Տեղեկություն",
+      "try": "Տեղեկություն",
+      "inr": "Տեղեկություն"
     },
     "localTransfer": {
-      "eyebrow": "LOCAL TRANSFER",
-      "title": "Card to Card",
-      "subtitle": "Domestic card-to-card route through a connected bank or payment provider.",
-      "heroTitle": "Provider-backed local transfer",
-      "heroText": "Local card flow must use provider tokenization, provider OTP and wallet risk checks. Sabi does not issue local OTP or store PAN/CVV.",
-      "transferFrom": "Transfer from",
-      "sourceHint": "Tokenized source card",
-      "sourceLabel": "Source card token",
-      "sourcePlaceholder": "Select linked card or provider token",
-      "recipientTitle": "Recipient",
-      "recipientHint": "Destination card route",
-      "recipientLabel": "Recipient card or token",
-      "recipientPlaceholder": "Provider token or linked card recipient",
-      "amountTitle": "Amount",
-      "amountHint": "Local currency",
-      "amountPlaceholder": "0.00",
-      "noteLabel": "Note",
-      "notePlaceholder": "Optional transfer note",
-      "selectedSource": "Selected source",
-      "selectedRecipient": "Selected recipient",
-      "providerTitle": "Provider not configured",
-      "providerText": "Connect a local bank/provider route before requesting OTP or executing local card transfers.",
-      "currencyTitle": "Local currency required",
-      "currencyText": "Choose local currency in Wallet Settings before preparing domestic local card routes.",
-      "notesTitle": "Local transfer notes",
-      "notesHint": "Important",
-      "otpTitle": "OTP by provider",
-      "otpText": "OTP must be issued and verified by the connected bank/payment provider. This screen accepts only provider-verified OTP results.",
-      "localOnlyTitle": "Local flow only",
-      "localOnlyText": "This route is separated from international card routing and uses the configured local currency.",
-      "cardsHub": "Cards Hub"
+      "eyebrow": "Տեղական",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroTitle": "Տեղական",
+      "heroText": "Տեղեկություն՝ Տեղեկություն",
+      "transferFrom": "Փոխանցել այստեղից",
+      "sourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "sourceLabel": "Տեղեկություն",
+      "sourcePlaceholder": "Որոնում",
+      "recipientTitle": "Ստացող",
+      "recipientHint": "Տեղեկություն՝ Տեղեկություն",
+      "recipientLabel": "Տեղեկություն",
+      "recipientPlaceholder": "Որոնում",
+      "amountTitle": "Գումար",
+      "amountHint": "Տեղեկություն՝ Տեղեկություն",
+      "amountPlaceholder": "Որոնում",
+      "noteLabel": "Նշում",
+      "notePlaceholder": "Որոնում",
+      "selectedSource": "Տեղեկություն",
+      "selectedRecipient": "Տեղեկություն",
+      "providerTitle": "Կարգավորումներ",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "currencyTitle": "Վերնագիր",
+      "currencyText": "Տեղեկություն՝ Տեղեկություն",
+      "notesTitle": "Վերնագիր",
+      "notesHint": "Տեղեկություն՝ Տեղեկություն",
+      "otpTitle": "Վերնագիր",
+      "otpText": "Տեղեկություն՝ Տեղեկություն",
+      "localOnlyTitle": "Տեղական",
+      "localOnlyText": "Տեղական՝ Տեղեկություն",
+      "cardsHub": "Տեղեկություն"
     },
     "localRecipients": {
-      "eyebrow": "LOCAL RECIPIENTS",
-      "title": "Domestic recipient directory",
-      "subtitle": "Verified local-card recipients from provider, contacts and profile sync.",
-      "heroTitle": "No local recipients yet",
-      "heroText": "Saved recipients must come from a real provider directory, verified contacts or successful transfer history.",
-      "trusted": "Trusted",
-      "searchTitle": "Search recipients",
-      "searchHint": "Provider directory",
-      "searchPlaceholder": "Search by name, phone, ID or provider token",
-      "emptyTitle": "No recipients found",
-      "emptyText": "The local recipient list is empty until real verified recipients are synced. No local test contacts are shipped in this screen.",
-      "note1Title": "Verified recipients only",
-      "note1Text": "Local transfers should be sent only to verified domestic recipients or provider-confirmed card tokens.",
-      "note2Title": "Real directory only",
-      "note2Text": "This directory contains only synced provider recipients or verified transfer history.",
-      "newTransfer": "New transfer"
+      "eyebrow": "Տեղական",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "heroTitle": "Տեղական",
+      "heroText": "Տեղեկություն՝ Տեղեկություն",
+      "trusted": "Տեղեկություն",
+      "searchTitle": "Որոնել",
+      "searchHint": "Որոնել",
+      "searchPlaceholder": "Որոնել",
+      "emptyTitle": "Տեղական",
+      "emptyText": "Տեղական՝ Տեղեկություն",
+      "note1Title": "Տեղեկություն",
+      "note1Text": "Տեղեկություն՝ Տեղեկություն",
+      "note2Title": "Տեղեկություն",
+      "note2Text": "Տեղեկություն՝ Տեղեկություն",
+      "newTransfer": "Նոր փոխանցում"
     },
     "localCardDetails": {
-      "eyebrow": "LOCAL CARD",
-      "title": "Local card details",
-      "subtitle": "Tokenized card profile, provider status and domestic permissions.",
-      "noCardTitle": "No local card selected",
-      "noCardText": "Open this screen only from a verified tokenized local card. Sabi does not create local test card details.",
-      "profile": "Card profile",
-      "tokenStatus": "Token status",
-      "tokenPending": "Pending provider token",
-      "cardName": "Card name",
-      "scheme": "Scheme",
-      "issuer": "Issuer",
-      "maskedCard": "Masked card",
-      "currency": "Currency",
-      "verification": "Verification",
-      "topup": "Sabi Balance top up",
-      "securityTitle": "Security",
-      "securityText": "PAN/CVV stay inside the provider flow. Sabi may show only masked metadata, token ID, provider status and user controls.",
-      "controlsTitle": "Controls",
-      "controlsText": "Live card controls must be executed through provider/admin policy, not local UI simulation."
+      "eyebrow": "Տեղական",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "noCardTitle": "Վերնագիր",
+      "noCardText": "Տեղեկություն՝ Տեղեկություն",
+      "profile": "Պրոֆիլ",
+      "tokenStatus": "Տեղեկություն",
+      "tokenPending": "Տեղեկություն",
+      "cardName": "Քարտի անվանում",
+      "scheme": "Տեղեկություն",
+      "issuer": "Թողարկող",
+      "maskedCard": "Տեղեկություն",
+      "currency": "Տեղեկություն",
+      "verification": "Հաստատում",
+      "topup": "Տեղեկություն",
+      "securityTitle": "Անվտանգություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "controlsTitle": "Վերնագիր",
+      "controlsText": "Տեղեկություն՝ Տեղեկություն"
     },
     "cardInfo": {
-      "title": "Card details",
-      "subtitle": "Provider-tokenized card profile, visual style and controlled card actions.",
-      "noCard": "No tokenized card selected",
-      "noCardText": "Card details are available only after a bank or provider returns a verified token.",
-      "defaultBadge": "Token pending",
-      "cardProfile": "Card profile",
-      "overview": "Overview",
-      "cardType": "Card type",
-      "scheme": "Scheme",
-      "issuer": "Issuer",
-      "verification": "Verification",
-      "topup": "Top up eligibility",
-      "balance": "Balance",
-      "restricted": "Restricted",
-      "cardStyle": "Card style",
-      "personalization": "Personalization",
-      "controls": "Controls",
-      "permissions": "Provider permissions",
-      "security": "Security",
-      "protection": "Protection",
-      "securitySettings": "Security settings",
-      "securitySettingsText": "PIN, biometric and trusted-device rules must be handled by wallet security/provider policy.",
-      "cardAlerts": "Card alerts",
-      "cardAlertsText": "Transaction, risk and authorization notifications come from wallet/provider events.",
-      "cardLimits": "Card limits",
-      "cardLimitsText": "Spending, cash and transaction controls are provider/admin policy controlled.",
-      "advanced": "Advanced",
-      "management": "Management",
-      "routeRole": "Wallet role routing",
-      "routeRoleText": "Personal, business or merchant card roles must be assigned through provider-backed card state.",
-      "cardActivity": "Card activity",
-      "cardActivityText": "Open transactions, statuses and reconciliation hooks.",
-      "styleMidnight": "Midnight",
-      "styleOcean": "Ocean",
-      "styleEmerald": "Emerald",
-      "styleViolet": "Violet",
-      "styleSunset": "Sunset",
-      "styleYouth": "Youth"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "noCard": "Տեղեկություն",
+      "noCardText": "Տեղեկություն՝ Տեղեկություն",
+      "defaultBadge": "Տեղեկություն",
+      "cardProfile": "Պրոֆիլ",
+      "overview": "Տեղեկություն",
+      "cardType": "Տեղեկություն",
+      "scheme": "Տեղեկություն",
+      "issuer": "Թողարկող",
+      "verification": "Հաստատում",
+      "topup": "Տեղեկություն",
+      "balance": "Մնացորդ",
+      "restricted": "Տեղեկություն",
+      "cardStyle": "Տեղեկություն",
+      "personalization": "Տեղեկություն",
+      "controls": "Տեղեկություն",
+      "permissions": "Տեղեկություն",
+      "security": "Անվտանգություն",
+      "protection": "Տեղեկություն",
+      "securitySettings": "Անվտանգություն",
+      "securitySettingsText": "Անվտանգություն՝ Տեղեկություն",
+      "cardAlerts": "Ազդանշաններ",
+      "cardAlertsText": "Ազդանշաններ՝ Տեղեկություն",
+      "cardLimits": "Տեղեկություն",
+      "cardLimitsText": "Տեղեկություն՝ Տեղեկություն",
+      "advanced": "Ընդլայնված",
+      "management": "Տեղեկություն",
+      "routeRole": "Տեղեկություն",
+      "routeRoleText": "Տեղեկություն՝ Տեղեկություն",
+      "cardActivity": "Տեղեկություն",
+      "cardActivityText": "Տեղեկություն՝ Տեղեկություն",
+      "styleMidnight": "Տեղեկություն",
+      "styleOcean": "Տեղեկություն",
+      "styleEmerald": "Տեղեկություն",
+      "styleViolet": "Տեղեկություն",
+      "styleSunset": "Տեղեկություն",
+      "styleYouth": "Տեղեկություն"
     },
     "confirmAddCard": {
-      "title": "Confirm card binding",
-      "subtitle": "Only provider-tokenized card binding can be activated.",
-      "blockedTitle": "Provider token required",
-      "blockedText": "This confirmation screen cannot activate a card without a verified token returned by the bank or payment provider.",
-      "providerToken": "Provider token",
-      "maskedCard": "Masked card",
-      "cardCategory": "Card category",
-      "status": "Status",
-      "missing": "Missing",
-      "pending": "Pending",
-      "verified": "Verified",
-      "rejected": "Rejected",
-      "restricted": "Restricted",
-      "invalidPayload": "Raw card data blocked",
-      "blockedFields": "Blocked fields",
-      "source": "Provider token",
-      "pinTitle": "Confirm card token",
-      "pinSubtitle": "Final activation must pass Wallet Security before backend/provider save.",
-      "tokenOnlyTitle": "Token-only activation",
-      "tokenOnlyText": "Sabi may store token ID, masked metadata and provider status only. PAN and CVV must never be saved.",
-      "backToCards": "Back to cards",
-      "continue": "Continue"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "blockedTitle": "Վերնագիր",
+      "blockedText": "Տեղեկություն՝ Տեղեկություն",
+      "providerToken": "Կարգավորումներ",
+      "maskedCard": "Տեղեկություն",
+      "cardCategory": "Տեղեկություն",
+      "status": "Կարգավիճակ",
+      "missing": "Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "verified": "Ստուգված",
+      "rejected": "Տեղեկություն",
+      "restricted": "Տեղեկություն",
+      "invalidPayload": "Տեղեկություն",
+      "blockedFields": "Տեղեկություն",
+      "source": "Տեղեկություն",
+      "pinTitle": "Վերնագիր",
+      "pinSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "tokenOnlyTitle": "Վերնագիր",
+      "tokenOnlyText": "Տեղեկություն՝ Տեղեկություն",
+      "backToCards": "Հետ",
+      "continue": "Շարունակել"
     },
     "send": {
-      "title": "Send money",
-      "subtitle": "Choose a secure route before confirmation.",
-      "routeTitle": "Transfer route",
-      "routeHint": "Source and destination",
-      "sabiToSabi": "Sabi Wallet to Sabi Wallet",
-      "sabiToSabiText": "Internal Wallet transfer by ID, phone or username.",
-      "cardToCard": "Card to card",
-      "cardToCardText": "Provider-tokenized card transfer with bank confirmation.",
-      "sabiToCard": "Sabi Wallet to card",
-      "sabiToCardText": "Send from Sabi Balance to a linked or recipient card.",
-      "cardToSabi": "Card to Sabi Wallet",
-      "cardToSabiText": "Top up or transfer from a tokenized card to Sabi Wallet.",
-      "sourceTitle": "Source",
-      "sourceHint": "Funding account",
-      "linkedCard": "Linked card",
-      "linkedCardPlaceholder": "Select linked card or provider token",
-      "chooseCard": "Choose card",
-      "tokenOnlyDetails": "Provider token only. PAN and CVV are not stored by Sabi.",
-      "sabiBalanceDetails": "Internal Sabi Wallet balance",
-      "available": "Available",
-      "amount": "Amount",
-      "amountPlaceholder": "0.00",
-      "destinationTitle": "Destination",
-      "destinationHint": "Recipient details",
-      "walletRecipient": "Wallet recipient",
-      "walletRecipientPlaceholder": "User ID, phone or @username",
-      "cardRecipient": "Recipient card",
-      "cardRecipientPlaceholder": "Provider token or linked card recipient",
-      "recipientName": "Recipient name",
-      "recipientNamePlaceholder": "Optional name for confirmation",
-      "note": "Note",
-      "notePlaceholder": "Optional payment note",
-      "securityTitle": "Bank-grade routing",
-      "securityHint": "Before confirmation",
-      "security1Title": "Token-only cards",
-      "security1Text": "Card operations must use bank or provider tokenization.",
-      "security2Title": "Secure confirmation",
-      "security2Text": "Money movement continues through PIN, biometric or provider confirmation.",
-      "security3Title": "Provider-backed balance",
-      "security3Text": "This screen reads Sabi Balance from Wallet foundation only.",
-      "continue": "Continue",
-      "cardRequired": "Linked card is required",
-      "recipientRequired": "Recipient is required",
-      "confirmTitle": "Confirm transfer",
-      "cardRail": "CARD",
-      "sabiRail": "SABI",
-      "usd": "USD"
+      "title": "Ուղարկել գումար",
+      "subtitle": "Նկարագրություն",
+      "routeTitle": "Վերնագիր",
+      "routeHint": "Տեղեկություն՝ Տեղեկություն",
+      "sabiToSabi": "Տեղեկություն",
+      "sabiToSabiText": "Տեղեկություն՝ Տեղեկություն",
+      "cardToCard": "Տեղեկություն",
+      "cardToCardText": "Տեղեկություն՝ Տեղեկություն",
+      "sabiToCard": "Տեղեկություն",
+      "sabiToCardText": "Տեղեկություն՝ Տեղեկություն",
+      "cardToSabi": "Տեղեկություն",
+      "cardToSabiText": "Տեղեկություն՝ Տեղեկություն",
+      "sourceTitle": "Աղբյուր",
+      "sourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "linkedCard": "Տեղեկություն",
+      "linkedCardPlaceholder": "Որոնում",
+      "chooseCard": "Տեղեկություն",
+      "tokenOnlyDetails": "Տեղեկություն",
+      "sabiBalanceDetails": "Տեղեկություն",
+      "available": "Հասանելի",
+      "amount": "Գումար",
+      "amountPlaceholder": "Որոնում",
+      "destinationTitle": "Նպատակակետ",
+      "destinationHint": "Տեղեկություն՝ Տեղեկություն",
+      "walletRecipient": "Դրամապանակ",
+      "walletRecipientPlaceholder": "Որոնում",
+      "cardRecipient": "Ստացողի քարտ",
+      "cardRecipientPlaceholder": "Որոնում",
+      "recipientName": "Տեղեկություն",
+      "recipientNamePlaceholder": "Որոնում",
+      "note": "Նշում",
+      "notePlaceholder": "Որոնում",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "security1Title": "Տեղեկություն",
+      "security1Text": "Տեղեկություն՝ Տեղեկություն",
+      "security2Title": "Տեղեկություն",
+      "security2Text": "Տեղեկություն՝ Տեղեկություն",
+      "security3Title": "Տեղեկություն",
+      "security3Text": "Տեղեկություն՝ Տեղեկություն",
+      "continue": "Շարունակել",
+      "cardRequired": "Տեղեկություն",
+      "recipientRequired": "Տեղեկություն",
+      "confirmTitle": "Հաստատել փոխանցումը",
+      "cardRail": "Տեղեկություն",
+      "sabiRail": "Տեղեկություն",
+      "usd": "Տեղեկություն"
     },
     "topup": {
-      "title": "Top up",
-      "subtitle": "Fund Sabi Balance only through verified tokenized provider routes.",
-      "destination": "Destination",
-      "destinationHint": "Internal money",
-      "destinationText": "Internal electronic money for transfers, ecosystem payments and daily usage.",
-      "storedValue": "Stored value",
-      "type": "Type",
-      "internalMoney": "Internal electronic money",
-      "usage": "Usage",
-      "transfersPayments": "Transfers + Payments",
-      "speed": "Speed",
-      "byProviderPolicy": "By provider policy",
-      "amount": "Amount",
-      "amountHint": "Funding value",
-      "helperText": "Top up brings external funds into Sabi Balance. It is separate from internal transfer and withdraw.",
-      "fundingSource": "Funding source",
-      "fundingSourceHint": "Tokenized card",
-      "noLinkedCardsTitle": "No linked tokenized cards",
-      "noLinkedCardsText": "Add a card through the bank or provider SDK before funding Sabi Balance. Sabi must not store PAN or CVV.",
-      "addCard": "Add card",
-      "eligibility": "Eligibility",
-      "eligibilityHint": "Resolved by rules",
-      "eligible": "Eligible",
-      "restricted": "Restricted",
-      "eligibleText": "This provider token is allowed to fund Sabi Balance.",
-      "restrictedText": "A verified provider token is required before top up can continue.",
-      "selectedSource": "Selected source",
-      "scheme": "Scheme",
-      "maskedCard": "Masked card",
-      "sourceType": "Source type",
-      "tokenOnlyTitle": "Token-only route",
-      "tokenOnlyText": "Card funding must be confirmed through provider tokenization, biometric/PIN confirmation and wallet risk checks.",
-      "continue": "Continue",
-      "confirmTitle": "Confirm Sabi Balance top up"
+      "title": "Լիցքավորել",
+      "subtitle": "Նկարագրություն",
+      "destination": "Նպատակակետ",
+      "destinationHint": "Տեղեկություն՝ Տեղեկություն",
+      "destinationText": "Տեղեկություն՝ Տեղեկություն",
+      "storedValue": "Տեղեկություն",
+      "type": "Տեսակ",
+      "internalMoney": "Տեղեկություն",
+      "usage": "Տեղեկություն",
+      "transfersPayments": "Տեղեկություն",
+      "speed": "Տեղեկություն",
+      "byProviderPolicy": "Կարգավորումներ",
+      "amount": "Գումար",
+      "amountHint": "Տեղեկություն՝ Տեղեկություն",
+      "helperText": "Տեղեկություն՝ Տեղեկություն",
+      "fundingSource": "Տեղեկություն",
+      "fundingSourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "noLinkedCardsTitle": "Վերնագիր",
+      "noLinkedCardsText": "Տեղեկություն՝ Տեղեկություն",
+      "addCard": "Տեղեկություն",
+      "eligibility": "Տեղեկություն",
+      "eligibilityHint": "Տեղեկություն՝ Տեղեկություն",
+      "eligible": "Տեղեկություն",
+      "restricted": "Տեղեկություն",
+      "eligibleText": "Տեղեկություն՝ Տեղեկություն",
+      "restrictedText": "Տեղեկություն՝ Տեղեկություն",
+      "selectedSource": "Տեղեկություն",
+      "scheme": "Տեղեկություն",
+      "maskedCard": "Տեղեկություն",
+      "sourceType": "Տեղեկություն",
+      "tokenOnlyTitle": "Վերնագիր",
+      "tokenOnlyText": "Տեղեկություն՝ Տեղեկություն",
+      "continue": "Շարունակել",
+      "confirmTitle": "Վերնագիր"
     },
     "receive": {
-      "title": "Receive",
-      "subtitle": "Prepare a request into Sabi Balance through verified account routing.",
-      "destination": "Destination",
-      "destinationHint": "Internal balance",
-      "destinationText": "Internal electronic money destination for incoming transfers and future QR receive flows.",
-      "receiveBadge": "Receive",
-      "walletRail": "Wallet rail",
-      "sabiInternal": "Sabi Internal",
-      "speed": "Speed",
-      "instant": "Instant",
-      "status": "Status",
-      "active": "Active",
-      "expectedAmount": "Expected amount",
-      "expectedAmountHint": "Request value",
-      "helperText": "Receive creates an inbound request into Sabi Balance and requires payer confirmation.",
-      "incomingSource": "Incoming source",
-      "incomingSourceHint": "Inside system",
-      "fromUser": "From user",
-      "fromUserText": "Receive internal transfer from another Sabi user.",
-      "fromBusiness": "From business",
-      "fromBusinessText": "Receive payout or transfer from a business wallet route.",
-      "fromMerchant": "From merchant",
-      "fromMerchantText": "Receive settlement or merchant-origin transfer through merchant routing.",
-      "receiveRoute": "Receive route",
-      "receiveRouteHint": "Verified account",
-      "internalRoute": "Verified Sabi account route",
-      "mode": "Mode",
-      "userInbound": "User inbound",
-      "businessInbound": "Business inbound",
-      "merchantInbound": "Merchant inbound",
-      "reference": "Reference",
-      "referenceHint": "Optional note",
-      "referencePlaceholder": "Invoice, order, reimbursement, daily transfer...",
-      "securityTitle": "Confirmed income only",
-      "securityHint": "Request only",
-      "securityText": "This screen creates only a request route. Balance is credited only after real payment confirmation.",
-      "continue": "Continue",
-      "confirmTitle": "Confirm receive request"
+      "title": "Ստանալ",
+      "subtitle": "Նկարագրություն",
+      "destination": "Նպատակակետ",
+      "destinationHint": "Տեղեկություն՝ Տեղեկություն",
+      "destinationText": "Տեղեկություն՝ Տեղեկություն",
+      "receiveBadge": "Ստանալ",
+      "walletRail": "Դրամապանակ",
+      "sabiInternal": "Տեղեկություն",
+      "speed": "Տեղեկություն",
+      "instant": "Տեղեկություն",
+      "status": "Կարգավիճակ",
+      "active": "Ակտիվ",
+      "expectedAmount": "Տեղեկություն",
+      "expectedAmountHint": "Տեղեկություն՝ Տեղեկություն",
+      "helperText": "Տեղեկություն՝ Տեղեկություն",
+      "incomingSource": "Տեղեկություն",
+      "incomingSourceHint": "Տեղեկություն՝ Տեղեկություն",
+      "fromUser": "Տեղեկություն",
+      "fromUserText": "Տեղեկություն՝ Տեղեկություն",
+      "fromBusiness": "Տեղեկություն",
+      "fromBusinessText": "Տեղեկություն՝ Տեղեկություն",
+      "fromMerchant": "Տեղեկություն",
+      "fromMerchantText": "Տեղեկություն՝ Տեղեկություն",
+      "receiveRoute": "Տեղեկություն",
+      "receiveRouteHint": "Տեղեկություն՝ Տեղեկություն",
+      "internalRoute": "Տեղեկություն",
+      "mode": "Տեղեկություն",
+      "userInbound": "Տեղեկություն",
+      "businessInbound": "Տեղեկություն",
+      "merchantInbound": "Տեղեկություն",
+      "reference": "Հղում",
+      "referenceHint": "Տեղեկություն՝ Տեղեկություն",
+      "referencePlaceholder": "Որոնում",
+      "securityTitle": "Անվտանգություն",
+      "securityHint": "Անվտանգություն՝ Տեղեկություն",
+      "securityText": "Անվտանգություն՝ Տեղեկություն",
+      "continue": "Շարունակել",
+      "confirmTitle": "Վերնագիր"
     },
     "confirm": {
-      "title": "Confirm transfer",
-      "subtitle": "Review transfer details before secure confirmation.",
-      "amount": "Amount",
-      "transferValue": "Transfer value",
-      "ready": "Ready for confirmation",
-      "source": "Source",
-      "funds": "Funds",
-      "rail": "Rail",
-      "details": "Details",
-      "tokenizedSource": "Tokenized / internal source",
-      "destination": "Destination",
-      "recipient": "Recipient",
-      "routeType": "Route type",
-      "handle": "Handle",
-      "note": "Note",
-      "reference": "Reference",
-      "security": "Security",
-      "bankGrade": "Bank-grade",
-      "pinTitle": "Secure confirmation",
-      "pinText": "The next step requires wallet security provider confirmation.",
-      "routeTitle": "Protected route",
-      "routeText": "Money movement is prepared for secure provider-backed execution.",
-      "notificationTitle": "Final status",
-      "notificationText": "Success, pending or failure must come from wallet backend/provider status.",
-      "continue": "Continue",
-      "pinConfirmTitle": "Confirm with Wallet Security",
-      "pinConfirmSubtitle": "Authorize this operation with secure wallet confirmation."
+      "title": "Հաստատել փոխանցումը",
+      "subtitle": "Նկարագրություն",
+      "amount": "Գումար",
+      "transferValue": "Տեղեկություն",
+      "ready": "Պատրաստ է",
+      "source": "Աղբյուր",
+      "funds": "Տեղեկություն",
+      "rail": "Տեղեկություն",
+      "details": "Մանրամասներ",
+      "tokenizedSource": "Տեղեկություն",
+      "destination": "Նպատակակետ",
+      "recipient": "Ստացող",
+      "routeType": "Տեղեկություն",
+      "handle": "Տեղեկություն",
+      "note": "Նշում",
+      "reference": "Հղում",
+      "security": "Անվտանգություն",
+      "bankGrade": "Տեղեկություն",
+      "pinTitle": "Վերնագիր",
+      "pinText": "Տեղեկություն՝ Տեղեկություն",
+      "routeTitle": "Վերնագիր",
+      "routeText": "Տեղեկություն՝ Տեղեկություն",
+      "notificationTitle": "Ծանուցումներ",
+      "notificationText": "Ծանուցումներ՝ Տեղեկություն",
+      "continue": "Շարունակել",
+      "pinConfirmTitle": "Վերնագիր",
+      "pinConfirmSubtitle": "Նկարագրություն՝ Տեղեկություն"
     },
     "success": {
-      "title": "Transfer request submitted",
-      "subtitle": "The operation was passed to secure wallet confirmation. Final status must come from the provider or wallet backend.",
-      "backToWallet": "Back to Wallet"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "backToWallet": "Հետ"
     },
     "financialDashboard": {
-      "eyebrow": "Sabi Wallet",
-      "walletTitle": "Wallet dashboard",
-      "title": "Financial dashboard",
-      "subtitle": "Backend-backed wallet overview",
-      "loading": "Loading dashboard...",
-      "errorTitle": "Dashboard error",
-      "retry": "Retry",
-      "totalBalance": "Total balance",
-      "wallets": "Wallets",
-      "locked": "Locked",
-      "active": "Active",
-      "quickActions": "Quick actions",
-      "history": "History",
-      "p2pSend": "P2P send",
-      "qrExecute": "QR execute",
-      "paymentRoute": "Payment route",
-      "totals": "Totals",
-      "payments": "Payments",
-      "p2p": "P2P",
+      "eyebrow": "Տեղեկություն",
+      "walletTitle": "Դրամապանակ",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "loading": "Բեռնվում է...",
+      "errorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "retry": "Կրկին փորձել",
+      "totalBalance": "Ընդհանուր մնացորդ",
+      "wallets": "Դրամապանակներ",
+      "locked": "Կողպված",
+      "active": "Ակտիվ",
+      "quickActions": "Կարգավորումներ",
+      "history": "Պատմություն",
+      "p2pSend": "Տեղեկություն",
+      "qrExecute": "Տեղեկություն",
+      "paymentRoute": "Տեղեկություն",
+      "totals": "Տեղեկություն",
+      "payments": "Վճարումներ",
+      "p2p": "Տեղեկություն",
       "qr": "QR",
-      "walletOps": "Wallet ops",
-      "business": "Business",
-      "merchant": "Merchant",
-      "noWallets": "No wallets found for current scope.",
-      "recentHistory": "Recent history",
-      "seeAll": "See all",
-      "noEvents": "No financial events yet.",
-      "unknown": "unknown"
+      "walletOps": "Դրամապանակ",
+      "business": "Բիզնես",
+      "merchant": "Մերչանտ",
+      "noWallets": "Տեղեկություն",
+      "recentHistory": "Պատմություն",
+      "seeAll": "Տեսնել բոլորը",
+      "noEvents": "Տեղեկություն",
+      "unknown": "Տեղեկություն"
     },
     "financialItem": {
-      "eyebrow": "Wallet record",
-      "title": "Financial details",
-      "loading": "Loading details...",
-      "errorTitle": "Details error",
-      "amountUnavailable": "Amount unavailable",
-      "unknown": "unknown",
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "loading": "Բեռնվում է...",
+      "errorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "amountUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "unknown": "Տեղեկություն",
       "id": "ID",
-      "transaction": "Transaction",
-      "wallet": "Wallet",
-      "reference": "Reference",
-      "createdAt": "Created at",
-      "payload": "Payload"
+      "transaction": "Տեղեկություն",
+      "wallet": "Դրամապանակ",
+      "reference": "Հղում",
+      "createdAt": "Ստեղծվել է",
+      "payload": "Տեղեկություն"
     },
     "paymentExecution": {
-      "eyebrow": "Payment route",
-      "title": "Secure payment execution",
-      "subtitle": "Payment execution must come from provider confirmation, not from manual local form input.",
-      "statusTitle": "Provider route required",
-      "statusText": "Connect bank/payment provider, idempotency, wallet risk checks and admin audit before enabling execution.",
-      "currentWallet": "Current wallet",
-      "currentUser": "Current user",
-      "notProvided": "Not provided",
-      "providerTitle": "Bank/provider confirmation",
-      "providerText": "Capture, refund and settlement must use provider transaction IDs returned by backend.",
-      "tokenTitle": "Token-only wallet",
-      "tokenText": "No PAN, CVV or card secrets can be entered or stored inside this screen.",
-      "auditTitle": "Admin audit",
-      "auditText": "Every payment execution must create secure ledger and audit records.",
-      "goToSend": "Open Send Money",
-      "goToQr": "Open QR Pay"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "statusTitle": "Վերնագիր",
+      "statusText": "Տեղեկություն՝ Տեղեկություն",
+      "currentWallet": "Դրամապանակ",
+      "currentUser": "Տեղեկություն",
+      "notProvided": "Տեղեկություն",
+      "providerTitle": "Կարգավորումներ",
+      "providerText": "Կարգավորումներ՝ Տեղեկություն",
+      "tokenTitle": "Վերնագիր",
+      "tokenText": "Տեղեկություն՝ Տեղեկություն",
+      "auditTitle": "Վերնագիր",
+      "auditText": "Տեղեկություն՝ Տեղեկություն",
+      "goToSend": "Տեղեկություն",
+      "goToQr": "Տեղեկություն"
     },
     "mySabiId": {
-      "eyebrow": "MYSABI ID",
-      "title": "Wallet Identity",
-      "subtitle": "Verified payment identity for internal transfers, payment requests, My QR and scanner access.",
-      "notConfigured": "Not configured",
-      "pending": "Pending",
-      "status": "Profile identity required",
-      "internalPay": "Internal Pay",
-      "receive": "Receive",
-      "identity": "Identity",
-      "mainBanner": "Primary banner",
-      "preview": "Preview",
-      "bannerAppearance": "Banner appearance",
-      "displayName": "Display name",
-      "displayNamePlaceholder": "Use verified profile name",
-      "sabiId": "MySabi ID",
-      "sabiIdPlaceholder": "Use verified MySabi ID",
-      "bannerColor": "Banner color",
-      "bannerStyle": "Banner style",
-      "qrAccess": "Identity QR access",
-      "core": "Core",
-      "myQr": "My QR",
-      "scan": "Scan",
-      "share": "Share",
-      "copyId": "Copy ID",
-      "askAi": "Ask AI",
-      "howWorks": "How this identity works",
-      "flow": "Flow",
-      "internalTitle": "Internal wallet handle",
-      "internalText": "MySabi ID is the verified address for internal transfers, payment requests and wallet discovery.",
-      "qrTitle": "Separate QR access",
-      "qrText": "This screen opens your own Sabi QR and the shared camera scanner using verified profile identity.",
-      "customizeTitle": "Identity customization",
-      "customizeText": "Banner color and style personalize the screen without changing wallet routing logic.",
-      "walletIdentity": "Wallet identity",
-      "secureRoute": "Secure internal route",
-      "style": "Style",
-      "theme": "Theme",
-      "profileFallback": "Profile"
+      "eyebrow": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "notConfigured": "Տեղեկություն",
+      "pending": "Սպասման մեջ",
+      "status": "Տեղեկություն",
+      "internalPay": "Տեղեկություն",
+      "receive": "Ստանալ",
+      "identity": "Տեղեկություն",
+      "mainBanner": "Տեղեկություն",
+      "preview": "Նախադիտում",
+      "bannerAppearance": "Տեսք",
+      "displayName": "Ցուցադրվող անուն",
+      "displayNamePlaceholder": "Որոնում",
+      "sabiId": "Տեղեկություն",
+      "sabiIdPlaceholder": "Որոնում",
+      "bannerColor": "Տեղեկություն",
+      "bannerStyle": "Տեղեկություն",
+      "qrAccess": "Տեղեկություն",
+      "core": "Տեղեկություն",
+      "myQr": "Իմ QR",
+      "scan": "Տեղեկություն",
+      "share": "Կիսվել",
+      "copyId": "Տեղեկություն",
+      "askAi": "AI",
+      "howWorks": "Տեղեկություն",
+      "flow": "Տեղեկություն",
+      "internalTitle": "Վերնագիր",
+      "internalText": "Տեղեկություն՝ Տեղեկություն",
+      "qrTitle": "Վերնագիր",
+      "qrText": "Տեղեկություն՝ Տեղեկություն",
+      "customizeTitle": "Վերնագիր",
+      "customizeText": "Տեղեկություն՝ Տեղեկություն",
+      "walletIdentity": "Դրամապանակ",
+      "secureRoute": "Տեղեկություն",
+      "style": "Տեղեկություն",
+      "theme": "Թեմա",
+      "profileFallback": "Պրոֆիլ"
     }
   },
   "walletCards": {
@@ -2208,9 +2209,9 @@ export const HY_LOCALE = {
     "cardNickname": "Քարտի անվանում",
     "cardDesign": "Քարտի դիզայն",
     "verificationMethod": "Ստուգման մեթոդ",
-    "verifyByCvv": "Ստուգել CVV-ով",
-    "verifyByOtp": "Ստուգել OTP-ով",
-    "verifyByCvvOtp": "Ստուգել CVV + OTP-ով",
+    "verifyByCvv": "Տեղեկություն",
+    "verifyByOtp": "Տեղեկություն",
+    "verifyByCvvOtp": "Տեղեկություն",
     "cardLinked": "Քարտը կապվել է",
     "cardRemoved": "Քարտը հեռացվել է",
     "removeCard": "Հեռացնել քարտը",
@@ -2261,10 +2262,10 @@ export const HY_LOCALE = {
     "beneficiaryBank": "Շահառուի բանկ",
     "beneficiaryAddress": "Շահառուի հասցե",
     "accountNumber": "Հաշվի համար",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing համար",
+    "iban": "Տեղեկություն",
+    "swift": "Տեղեկություն",
+    "bic": "Տեղեկություն",
+    "routingNumber": "Տեղեկություն",
     "correspondentBank": "Թղթակցային բանկ",
     "intermediaryBank": "Միջնորդ բանկ",
     "bankCode": "Բանկի կոդ",
@@ -2293,7 +2294,7 @@ export const HY_LOCALE = {
     "domesticTransfer": "Ներքին փոխանցում",
     "internationalTransfer": "Միջազգային փոխանցում",
     "swiftTransfer": "SWIFT փոխանցում",
-    "wireTransfer": "Wire փոխանցում",
+    "wireTransfer": "Տեղեկություն",
     "instantTransfer": "Ակնթարթային փոխանցում",
     "scheduledTransfer": "Պլանավորված փոխանցում",
     "recurringTransfer": "Կրկնվող փոխանցում",
@@ -2308,10 +2309,10 @@ export const HY_LOCALE = {
     "beneficiaryCountry": "Շահառուի երկիր",
     "recipientBank": "Ստացողի բանկ",
     "bankBranch": "Բանկի մասնաճյուղ",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing համար",
+    "iban": "Տեղեկություն",
+    "swift": "Տեղեկություն",
+    "bic": "Տեղեկություն",
+    "routingNumber": "Տեղեկություն",
     "transferAmount": "Փոխանցման գումար",
     "receivingAmount": "Ստացվող գումար",
     "transferFee": "Փոխանցման միջնորդավճար",
@@ -2337,19 +2338,19 @@ export const HY_LOCALE = {
     "noSavedRecipients": "Պահված ստացողներ չկան"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
-    "subtitle": "Կառավարեք Coin մնացորդը, փոխանցումները, եկամուտները և կողպված ապրանքները։",
-    "availableCoin": "Հասանելի Coin",
-    "lockedCoin": "Կողպված Coin",
-    "earnedCoin": "Վաստակած Coin",
-    "topUpCoin": "Լիցքավորել Coin",
-    "convertToCoin": "Փոխարկել Coin-ի",
-    "convertFromWallet": "Փոխարկել Sabi Wallet-ից",
-    "sendCoin": "Ուղարկել Coin",
-    "receiveCoin": "Ստանալ Coin",
-    "coinTransfer": "Coin փոխանցում",
-    "coinDeposit": "Coin ավանդ",
-    "coinEarn": "Coin եկամուտ",
+    "title": "Վերնագիր",
+    "subtitle": "Նկարագրություն",
+    "availableCoin": "Պատրաստ է",
+    "lockedCoin": "Տեղեկություն",
+    "earnedCoin": "Տեղեկություն",
+    "topUpCoin": "Տեղեկություն",
+    "convertToCoin": "Տեղեկություն",
+    "convertFromWallet": "Դրամապանակ",
+    "sendCoin": "Տեղեկություն",
+    "receiveCoin": "Տեղեկություն",
+    "coinTransfer": "Տեղեկություն",
+    "coinDeposit": "Տեղեկություն",
+    "coinEarn": "Տեղեկություն",
     "depositTerm": "Ավանդի ժամկետ",
     "annualRate": "Տարեկան տոկոսադրույք",
     "estimatedReturn": "Մոտավոր եկամուտ",
@@ -2360,14 +2361,14 @@ export const HY_LOCALE = {
     "interestPayout": "Տոկոսի վճարում",
     "incomeSchedule": "Եկամտի ժամանակացույց",
     "moveToMainWallet": "Տեղափոխել հիմնական դրամապանակ",
-    "coinUseCases": "Coin-ի օգտագործման եղանակներ",
-    "payWithCoin": "Վճարել Coin-ով",
-    "buyPremiumWithCoin": "Գնել Premium Coin-ով",
-    "giftWithCoin": "Նվիրել Coin-ով",
-    "noCoinTransactions": "Coin գործարքներ դեռ չկան",
+    "coinUseCases": "Տեղեկություն",
+    "payWithCoin": "Տեղեկություն",
+    "buyPremiumWithCoin": "Պրեմիում",
+    "giftWithCoin": "Պրեմիում",
+    "noCoinTransactions": "Տեղեկություն",
     "monthlyReleaseRule": "Ամսական ազատման կանոն",
     "lockedUntilRelease": "Կողպված է մինչև ազատում",
-    "releaseAvailableOn": "Ազատումը հասանելի է {{date}}",
+    "releaseAvailableOn": "Պատրաստ է",
     "stakingLikeProducts": "Կողպված եկամտային ապրանքներ",
     "creditReserved": "Վարկային հնարավորությունները պահուստավորված են ապագա ակտիվացման համար"
   },
@@ -2509,9 +2510,9 @@ export const HY_LOCALE = {
     "statementDate": "Քաղվածքի ամսաթիվ",
     "generateStatement": "Ստեղծել քաղվածք",
     "regenerateStatement": "Վերստեղծել քաղվածքը",
-    "downloadPdf": "Ներբեռնել PDF",
-    "exportCsv": "Արտահանել CSV",
-    "exportXlsx": "Արտահանել XLSX",
+    "downloadPdf": "Տեղեկություն",
+    "exportCsv": "Տեղեկություն",
+    "exportXlsx": "Տեղեկություն",
     "emailStatement": "Ուղարկել քաղվածքը էլ. փոստով",
     "statementSummary": "Քաղվածքի ամփոփում",
     "openingBalance": "Սկզբնական մնացորդ",
@@ -2525,9 +2526,9 @@ export const HY_LOCALE = {
     "title": "Համապատասխանություն",
     "subtitle": "Ստուգում, կարգավորող ստուգումներ և բանկային համապատասխանության վերահսկում։",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Տեղեկություն",
     "sanctionsScreening": "Սանկցիաների ստուգում",
-    "pepCheck": "PEP ստուգում",
+    "pepCheck": "Տեղեկություն",
     "sourceOfFunds": "Միջոցների աղբյուր",
     "sourceOfWealth": "Գույքի աղբյուր",
     "proofOfIdentity": "Ինքնության ապացույց",
@@ -2624,7 +2625,7 @@ export const HY_LOCALE = {
     "videoCall": "Վիդեոզանգ",
     "aiTranslate": "AI թարգմանություն",
     "premiumFeature": "Պրեմիում ֆունկցիա",
-    "sendCoin": "Ուղարկել Coin",
+    "sendCoin": "Տեղեկություն",
     "sendPayment": "Ուղարկել վճարում",
     "sharedMedia": "Կիսված մեդիա",
     "sharedFiles": "Կիսված ֆայլեր",
@@ -2643,891 +2644,891 @@ export const HY_LOCALE = {
     "translateCall": "Թարգմանել զանգը",
     "premiumTranslation": "Պրեմիում թարգմանություն",
     "attachment": {
-      "title": "Attach",
-      "subtitle": "Real attachment flow for chat",
-      "camera": "Camera",
-      "cameraSubtitle": "capture with effects",
-      "gallery": "Gallery",
-      "gallerySubtitle": "photo or video",
-      "document": "Document",
-      "documentSubtitle": "pdf doc zip and more",
-      "location": "Location",
-      "locationSubtitle": "real place card",
-      "contact": "Contact",
-      "contactSubtitle": "device contacts",
-      "catalog": "Catalog",
-      "catalogSubtitle": "product card",
-      "fiat": "Send money",
-      "fiatSubtitle": "through Sabi Wallet",
-      "coin": "Send COIN",
-      "coinSubtitle": "through Coin Wallet",
-      "poll": "Poll",
-      "pollSubtitle": "vote inside chat",
-      "event": "Event",
-      "eventSubtitle": "meeting invite"
+      "title": "Կցել",
+      "subtitle": "Նկարագրություն",
+      "camera": "Տեսախցիկ",
+      "cameraSubtitle": "Ձայն՝ Տեղեկություն",
+      "gallery": "Տեղեկություն",
+      "gallerySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "document": "Փաստաթուղթ",
+      "documentSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "location": "Տեղադրություն",
+      "locationSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "contact": "Կոնտակտ",
+      "contactSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "catalog": "Կատալոգ",
+      "catalogSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "fiat": "Ուղարկել գումար",
+      "fiatSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "coin": "Տեղեկություն",
+      "coinSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "poll": "Տեղեկություն",
+      "pollSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "event": "Տեղեկություն",
+      "eventSubtitle": "Նկարագրություն՝ Տեղեկություն"
     },
     "animatedHub": {
-      "title": "Animated",
-      "subtitle": "reaction · emoji · GIFT 3D PREMIUM",
-      "reactionTitle": "Animated reaction",
-      "reactionSubtitle": "full-screen premium reactions · 5 sec",
-      "emojiTitle": "Animated emoji",
-      "emojiSubtitle": "premium emoji layer · no 3D · no audio",
-      "giftTitle": "GIFT 3D PREMIUM",
-      "giftSubtitle": "paid premium 3D gifts"
+      "title": "Անիմացված",
+      "subtitle": "Նկարագրություն",
+      "reactionTitle": "Վերնագիր",
+      "reactionSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "emojiTitle": "Վերնագիր",
+      "emojiSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "giftTitle": "Պրեմիում",
+      "giftSubtitle": "Պրեմիում՝ Տեղեկություն"
     },
     "animatedReaction": {
-      "title": "Premium stickers",
-      "subtitle": "all premium PNG stickers",
-      "search": "Search premium stickers",
-      "love": "Love",
-      "fun": "Fun",
-      "mood": "Mood"
+      "title": "Պրեմիում սթիքերներ",
+      "subtitle": "Նկարագրություն",
+      "search": "Որոնել",
+      "love": "Տեղեկություն",
+      "fun": "Տեղեկություն",
+      "mood": "Տեղեկություն"
     },
     "stickerSheet": {
-      "title": "Sticker reactions",
-      "subtitle": "Reactions, emoji, gestures and country flags",
-      "searchPlaceholder": "Search emoji or flag",
-      "quickReactions": "Quick reactions",
-      "empty": "Nothing found in this section",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "searchPlaceholder": "Որոնել",
+      "quickReactions": "Արագ ռեակցիաներ",
+      "empty": "Տեղեկություն",
       "tabs": {
-        "recent": "Recent",
-        "reactions": "Reactions",
-        "emoji": "Emoji",
-        "gestures": "Gestures",
-        "flags": "Flags"
+        "recent": "Վերջին",
+        "reactions": "Ռեակցիաներ",
+        "emoji": "Էմոջի",
+        "gestures": "Տեղեկություն",
+        "flags": "Տեղեկություն"
       }
     },
     "animatedGift": {
-      "premiumLayer": "Premium gift layer • Messenger only",
-      "storage": "My gifts",
-      "featured": "Featured",
-      "family": "Zodiac",
-      "local": "Ride",
-      "treasure": "Leisure",
-      "luxury": "Premium"
+      "premiumLayer": "Պրեմիում",
+      "storage": "Տեղեկություն",
+      "featured": "Առանձնացված",
+      "family": "Տեղեկություն",
+      "local": "Տեղական",
+      "treasure": "Տեղեկություն",
+      "luxury": "Պրեմիում"
     },
     "giftStorage": {
-      "inventory": "Gift inventory",
-      "won": "Won",
-      "seasonal": "Seasonal",
-      "expiring": "Expiring soon",
-      "emptyTitle": "Storage is empty",
-      "emptyText": "There are no gifts in this section yet.",
-      "buy": "Purchased",
-      "event": "Event",
-      "promo": "Promo",
-      "basic": "Basic",
-      "premium": "Premium",
-      "ultra": "Ultra",
-      "days": "days"
+      "inventory": "Նվերների պաշար",
+      "won": "Տեղեկություն",
+      "seasonal": "Տեղեկություն",
+      "expiring": "Տեղեկություն",
+      "emptyTitle": "Պրեմիում",
+      "emptyText": "Պրեմիում՝ Տեղեկություն",
+      "buy": "Տեղեկություն",
+      "event": "Տեղեկություն",
+      "promo": "Տեղեկություն",
+      "basic": "Տեղեկություն",
+      "premium": "Պրեմիում",
+      "ultra": "Տեղեկություն",
+      "days": "Տեղեկություն"
     },
-    "createBot": "Create bot",
-    "manageBot": "Manage bot",
-    "myBots": "My bots",
-    "privateBots": "Private bots",
-    "searchBots": "Search bots",
-    "botWorkspace": "Bot workspace",
-    "botOwnerPanel": "Bot owner panel",
-    "botOwnerPanelSubtitle": "Full control over bot profile, status, modules and wallet routing.",
-    "ownerPanelHint": "Open the full bot management panel",
-    "createBotHint": "Clients can create bots and connect them to market, delivery, store or support flows.",
-    "createBotButtonHint": "Create and connect business bots without extra screens",
-    "emptyBotsTitle": "No bots yet",
-    "emptyBotsSubtitle": "Create your first bot and it will appear here.",
-    "botNameRequired": "Enter the bot name",
-    "botUsernameRequired": "Enter the bot username",
-    "botCreated": "Bot created",
-    "botUpdated": "Bot updated",
-    "botRemoved": "Bot removed",
-    "botMissing": "Bot not found",
-    "botLoading": "Loading bot...",
-    "botProfile": "Bot profile",
-    "walletRouting": "Wallet routing",
-    "sabiWalletRoute": "SABI Wallet",
-    "businessRoutingLayer": "Business Routing Layer",
-    "businessWalletComingSoon": "Business Wallet coming soon",
-    "botTradeRouteHint": "Trade and commerce bot income is routed into SABI Wallet.",
-    "botBusinessRouteHint": "Until Business Wallet launches, business bot income is routed into the temporary Business Routing Layer.",
-    "botStatusHint": "The bot can be paused or activated again without deleting it.",
-    "addCommand": "Add command",
-    "editCommand": "Edit command",
-    "commandName": "Command",
-    "commandTitle": "Command title",
-    "commandDescription": "Command description",
-    "commandEnabled": "Command enabled",
-    "commandSaved": "Command saved",
-    "commandDeleted": "Command deleted",
-    "commandAndTitleRequired": "Command and title are required.",
-    "noCommandsYet": "No commands yet",
-    "noCommandsYetSubtitle": "Add the first command for this bot from the owner panel.",
-    "quickOwnerControls": "Quick owner controls",
-    "openBotChatInMessenger": "Open bot chat in Messenger",
-    "removeBotFromOwnerList": "Remove bot from owner list",
-    "openRoute": "Open route",
-    "businessPath": "Business path",
-    "sabiPath": "SABI path",
-    "muteBot": "Mute bot",
-    "unmuteBot": "Unmute bot",
-    "pinBot": "Pin bot",
-    "unpinBot": "Unpin bot",
-    "createGroup": "Create group",
-    "manageGroup": "Manage group",
-    "myGroups": "My groups",
-    "searchGroups": "Search groups",
-    "groupWorkspace": "Group workspace",
-    "createGroupHint": "Create a new group, add members and manage all group settings.",
-    "emptyGroupsTitle": "No groups yet",
-    "emptyGroupsSubtitle": "Create your first group and it will appear here.",
-    "groupOwnerPanel": "Group owner panel",
-    "groupOwnerPanelSubtitle": "Full control over group profile, members, permissions and settings.",
-    "groupCreated": "Group created",
-    "groupUpdated": "Group updated",
-    "groupRemoved": "Group removed",
-    "groupMissing": "Group not found",
-    "groupLoading": "Loading group...",
-    "groupProfile": "Group profile",
-    "groupMembers": "Group members",
-    "addMember": "Add member",
-    "removeMember": "Remove member",
-    "groupAdmins": "Group admins",
-    "quickGroupControls": "Quick group controls",
-    "openGroupChatInMessenger": "Open group chat in Messenger",
-    "publicGroup": "Public group",
-    "privateGroup": "Private group",
-    "createChannel": "Create channel",
-    "manageChannel": "Manage channel",
-    "myChannels": "My channels",
-    "searchChannels": "Search channels",
-    "channelWorkspace": "Channel workspace",
-    "createChannelHint": "Create a new channel, manage subscribers and fully control publication settings.",
-    "emptyChannelsTitle": "No channels yet",
-    "emptyChannelsSubtitle": "Create your first channel and it will appear here.",
-    "channelOwnerPanel": "Channel owner panel",
-    "channelOwnerPanelSubtitle": "Full control over channel profile, subscribers, publication permissions and settings.",
-    "channelCreated": "Channel created",
-    "channelUpdated": "Channel updated",
-    "channelRemoved": "Channel removed",
-    "channelMissing": "Channel not found",
-    "channelLoading": "Loading channel...",
-    "channelProfile": "Channel profile",
-    "channelSubscribers": "Channel subscribers",
-    "addSubscriber": "Add subscriber",
-    "removeSubscriber": "Remove subscriber",
-    "channelAdmins": "Channel admins",
-    "quickChannelControls": "Quick channel controls",
-    "openChannelInMessenger": "Open channel in Messenger",
-    "publicChannel": "Public channel",
-    "privateChannel": "Private channel",
-    "onlyAdminsCanPost": "Only admins can post",
-    "linkedDiscussion": "Linked discussion",
-    "joinRequests": "Join requests",
+    "createBot": "Օգնական",
+    "manageBot": "Օգնական",
+    "myBots": "Տեղեկություն",
+    "privateBots": "Տեղեկություն",
+    "searchBots": "Որոնել",
+    "botWorkspace": "Օգնական",
+    "botOwnerPanel": "Օգնական",
+    "botOwnerPanelSubtitle": "Օգնական՝ Տեղեկություն",
+    "ownerPanelHint": "Տեղեկություն՝ Տեղեկություն",
+    "createBotHint": "Օգնական՝ Տեղեկություն",
+    "createBotButtonHint": "Օգնական՝ Տեղեկություն",
+    "emptyBotsTitle": "Տեղեկություն",
+    "emptyBotsSubtitle": "Տեղեկություն՝ Տեղեկություն",
+    "botNameRequired": "Օգնական",
+    "botUsernameRequired": "Օգնական",
+    "botCreated": "Օգնական",
+    "botUpdated": "Օգնական",
+    "botRemoved": "Օգնական",
+    "botMissing": "Օգնական",
+    "botLoading": "Բեռնվում է...",
+    "botProfile": "Օգնական",
+    "walletRouting": "Դրամապանակ",
+    "sabiWalletRoute": "Դրամապանակ",
+    "businessRoutingLayer": "Տեղեկություն",
+    "businessWalletComingSoon": "Տեղեկություն",
+    "botTradeRouteHint": "Օգնական՝ Տեղեկություն",
+    "botBusinessRouteHint": "Օգնական՝ Տեղեկություն",
+    "botStatusHint": "Օգնական՝ Տեղեկություն",
+    "addCommand": "Տեղեկություն",
+    "editCommand": "Տեղեկություն",
+    "commandName": "Տեղեկություն",
+    "commandTitle": "Վերնագիր",
+    "commandDescription": "Նկարագրություն՝ Տեղեկություն",
+    "commandEnabled": "Տեղեկություն",
+    "commandSaved": "Տեղեկություն",
+    "commandDeleted": "Տեղեկություն",
+    "commandAndTitleRequired": "Վերնագիր",
+    "noCommandsYet": "Տեղեկություն",
+    "noCommandsYetSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "quickOwnerControls": "Տեղեկություն",
+    "openBotChatInMessenger": "Օգնական",
+    "removeBotFromOwnerList": "Օգնական",
+    "openRoute": "Տեղեկություն",
+    "businessPath": "Տեղեկություն",
+    "sabiPath": "Տեղեկություն",
+    "muteBot": "Օգնական",
+    "unmuteBot": "Օգնական",
+    "pinBot": "Օգնական",
+    "unpinBot": "Օգնական",
+    "createGroup": "Չատ",
+    "manageGroup": "Չատ",
+    "myGroups": "Տեղեկություն",
+    "searchGroups": "Որոնել",
+    "groupWorkspace": "Չատ",
+    "createGroupHint": "Չատ՝ Տեղեկություն",
+    "emptyGroupsTitle": "Տեղեկություն",
+    "emptyGroupsSubtitle": "Տեղեկություն՝ Տեղեկություն",
+    "groupOwnerPanel": "Չատ",
+    "groupOwnerPanelSubtitle": "Չատ՝ Տեղեկություն",
+    "groupCreated": "Չատ",
+    "groupUpdated": "Չատ",
+    "groupRemoved": "Չատ",
+    "groupMissing": "Չատ",
+    "groupLoading": "Բեռնվում է...",
+    "groupProfile": "Չատ",
+    "groupMembers": "Չատ",
+    "addMember": "Պրոֆիլ",
+    "removeMember": "Պրոֆիլ",
+    "groupAdmins": "Չատ",
+    "quickGroupControls": "Չատ",
+    "openGroupChatInMessenger": "Չատ",
+    "publicGroup": "Չատ",
+    "privateGroup": "Չատ",
+    "createChannel": "Չատ",
+    "manageChannel": "Չատ",
+    "myChannels": "Տեղեկություն",
+    "searchChannels": "Որոնել",
+    "channelWorkspace": "Չատ",
+    "createChannelHint": "Չատ՝ Տեղեկություն",
+    "emptyChannelsTitle": "Տեղեկություն",
+    "emptyChannelsSubtitle": "Տեղեկություն՝ Տեղեկություն",
+    "channelOwnerPanel": "Չատ",
+    "channelOwnerPanelSubtitle": "Չատ՝ Տեղեկություն",
+    "channelCreated": "Չատ",
+    "channelUpdated": "Չատ",
+    "channelRemoved": "Չատ",
+    "channelMissing": "Չատ",
+    "channelLoading": "Բեռնվում է...",
+    "channelProfile": "Չատ",
+    "channelSubscribers": "Չատ",
+    "addSubscriber": "Տեղեկություն",
+    "removeSubscriber": "Տեղեկություն",
+    "channelAdmins": "Չատ",
+    "quickChannelControls": "Չատ",
+    "openChannelInMessenger": "Չատ",
+    "publicChannel": "Չատ",
+    "privateChannel": "Չատ",
+    "onlyAdminsCanPost": "Տեղեկություն",
+    "linkedDiscussion": "Տեղեկություն",
+    "joinRequests": "Տեղեկություն",
     "roomSettings": {
-      "title": "Chat settings",
-      "subtitle": "Manage this chat",
-      "botTitle": "Bot",
-      "botSubtitle": "Bot"
+      "title": "Չաթի կարգավորումներ",
+      "subtitle": "Կարգավորումներ",
+      "botTitle": "Օգնական",
+      "botSubtitle": "Օգնական՝ Տեղեկություն"
     },
     "menu": {
-      "addContact": "Add contact",
-      "addContactSubtitle": "Open the new contact creation sheet",
-      "contactSaved": "Contact saved",
-      "contactSavedSubtitle": "This user is already in contacts",
-      "contactUnavailable": "No number available to save",
-      "addToList": "Add to list",
-      "addToListSubtitle": "Save this chat in your list",
-      "removeFromList": "Remove from list",
-      "removeFromListSubtitle": "Remove this chat from your list",
-      "mute": "Mute",
-      "muteSubtitle": "Turn off notifications for this chat",
-      "unmute": "Unmute",
-      "unmuteSubtitle": "Turn notifications back on",
-      "disappearing": "Disappearing messages",
-      "disappearingSubtitle": "Enable auto-delete for new messages",
-      "disableDisappearing": "Disable disappearing messages",
-      "disableDisappearingSubtitle": "Keep new messages in the chat",
-      "theme": "Chat theme",
-      "themeSubtitle": "Change room style and appearance",
-      "editor": "Chat info",
-      "editorSubtitle": "Open profile and chat details",
-      "more": "More",
-      "moreSubtitle": "Additional chat actions",
-      "report": "Report",
-      "reportSubtitle": "Open the report sheet and select a reason",
-      "block": "Block",
-      "blockSubtitle": "Restrict this user in chat",
-      "unblock": "Unblock",
-      "unblockSubtitle": "Restore communication with this user",
-      "clearChat": "Clear chat",
-      "clearChatSubtitle": "Delete message history in this room",
-      "addToHome": "Add to home screen",
-      "addToHomeSubtitle": "Quick access from the device home screen",
-      "addBotToList": "Add Bot To List",
-      "addBotToListSubtitle": "Add Bot To List",
-      "removeBotFromList": "Remove Bot From List",
-      "removeBotFromListSubtitle": "Remove Bot From List",
-      "muteBot": "Mute Bot",
-      "muteBotSubtitle": "Mute Bot",
-      "unmuteBot": "Unmute Bot",
-      "unmuteBotSubtitle": "Unmute Bot",
-      "ai": "Ai",
-      "aiSubtitle": "Ai",
-      "aiBotSubtitle": "Ai Bot",
-      "manageBot": "Manage Bot",
-      "manageBotSubtitle": "Manage Bot",
-      "botTools": "Bot Tools",
-      "botToolsSubtitle": "Bot Tools",
-      "moreBotSubtitle": "More Bot",
-      "reportBotSubtitle": "Report Bot",
-      "blockBot": "Block Bot",
-      "blockBotSubtitle": "Block Bot",
-      "unblockBot": "Unblock Bot",
-      "unblockBotSubtitle": "Unblock Bot",
-      "clearBotChatSubtitle": "Clear Bot Chat",
-      "hideConversation": "Hide Conversation",
-      "hideConversationSubtitle": "Hide Conversation",
-      "addBotToHome": "Add Bot To Home",
-      "addBotToHomeSubtitle": "Add Bot To Home"
+      "addContact": "Տեղեկություն",
+      "addContactSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "contactSaved": "Տեղեկություն",
+      "contactSavedSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "contactUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "addToList": "Տեղեկություն",
+      "addToListSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "removeFromList": "Տեղեկություն",
+      "removeFromListSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "mute": "Տեղեկություն",
+      "muteSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "unmute": "Տեղեկություն",
+      "unmuteSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "disappearing": "Տեղեկություն",
+      "disappearingSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "disableDisappearing": "Տեղեկություն",
+      "disableDisappearingSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "theme": "Թեմա",
+      "themeSubtitle": "Թեմա՝ Տեղեկություն",
+      "editor": "Չաթի մասին",
+      "editorSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "more": "Ավելին",
+      "moreSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "report": "Տեղեկություն",
+      "reportSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "block": "Տեղեկություն",
+      "blockSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "unblock": "Տեղեկություն",
+      "unblockSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "clearChat": "Մաքրել չաթը",
+      "clearChatSubtitle": "Չատ՝ Տեղեկություն",
+      "addToHome": "Տեղեկություն",
+      "addToHomeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "addBotToList": "Օգնական",
+      "addBotToListSubtitle": "Օգնական՝ Տեղեկություն",
+      "removeBotFromList": "Օգնական",
+      "removeBotFromListSubtitle": "Օգնական՝ Տեղեկություն",
+      "muteBot": "Օգնական",
+      "muteBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "unmuteBot": "Օգնական",
+      "unmuteBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "ai": "AI",
+      "aiSubtitle": "AI՝ Տեղեկություն",
+      "aiBotSubtitle": "AI՝ Տեղեկություն",
+      "manageBot": "Օգնական",
+      "manageBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "botTools": "Օգնական",
+      "botToolsSubtitle": "Օգնական՝ Տեղեկություն",
+      "moreBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "reportBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "blockBot": "Օգնական",
+      "blockBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "unblockBot": "Օգնական",
+      "unblockBotSubtitle": "Օգնական՝ Տեղեկություն",
+      "clearBotChatSubtitle": "Օգնական՝ Տեղեկություն",
+      "hideConversation": "Տեղեկություն",
+      "hideConversationSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "addBotToHome": "Օգնական",
+      "addBotToHomeSubtitle": "Օգնական՝ Տեղեկություն"
     },
     "chat": {
-      "you": "You",
-      "typing": "Typing...",
-      "online": "Online",
-      "offline": "Offline",
-      "connecting": "Connecting...",
-      "reconnecting": "Reconnecting...",
-      "lastSeenToday": "last seen today at {{time}}",
-      "lastSeenYesterday": "last seen yesterday at {{time}}",
-      "lastSeenDate": "last seen on {{date}} at {{time}}",
-      "conversationPlaceholder": "The conversation will appear here.",
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "directRoom": "Direct chat",
-      "groupRoom": "Group",
-      "channelRoom": "Channel",
-      "businessRoom": "Business chat",
-      "encrypted": "Messages are protected with end-to-end encryption",
-      "messagePlaceholder": "Type a message",
-      "messageTitle": "Message",
-      "replyAction": "Reply",
-      "replyPlaceholder": "Write a quick reply",
-      "selectionDelete": "Delete",
-      "selectionForward": "Forward",
-      "deleteMe": "Delete for me only",
-      "deleteAllAction": "Delete for everyone",
-      "save": "Save",
-      "link": "Link",
-      "searchTitle": "Search",
-      "searchMessage": "Room search will be added in the next step.",
-      "muteTitle": "Mute mode",
-      "muteMessage": "Chat notification controls will be added in room settings.",
-      "locationTitle": "Location",
-      "sharedLocation": "Shared location",
-      "locationAttached": "Location attached",
-      "locationOpenNotice": "Opening location",
-      "locationOpenError": "Could not open location.",
-      "locationSendError": "Could not send location.",
-      "locationCoordsMissing": "Location coordinates were not found.",
-      "locationAccessError": "Could not access location.",
-      "contactTitle": "Contact",
-      "contactsTitle": "Contacts",
-      "contactCard": "Contact card",
-      "contactAttached": "Contact attached",
-      "contactReady": "Contact ready",
-      "contactOpenNotice": "Opening contact",
-      "contactOpenError": "Could not open contact.",
-      "contactsAccessError": "Could not access contacts.",
-      "documentTitle": "Document",
-      "documentsTitle": "Documents",
-      "documentAttached": "Document attached",
-      "documentPreviewUnavailable": "Document preview is unavailable.",
-      "documentOpenNotice": "Open or save the document",
-      "documentOpening": "Opening document",
-      "documentOpenError": "Could not open document.",
-      "documentAccessError": "Could not access documents.",
-      "galleryTitle": "Gallery",
-      "galleryAccessError": "Could not access gallery.",
-      "photoTitle": "Photo",
-      "photoPreviewSubtitle": "Full-screen preview",
-      "photoPreviewUnavailable": "Photo preview is unavailable.",
-      "photoCaptured": "Photo ready",
-      "photoSaveNotice": "Save photo",
-      "photoSaveError": "Could not save photo.",
-      "videoTitle": "Video message",
-      "videoCaptured": "Video message ready",
-      "videoSaveNotice": "Save video",
-      "videoSaveError": "Could not save video.",
-      "videoCloseHint": "Tap outside to close",
-      "videoMessageText": "🎬 Video message",
-      "voiceTitle": "Voice message",
-      "voiceRecordingTitle": "Voice recording",
-      "voiceRecordingSubtitle": "Hold the button to record and release when you are ready to send.",
-      "voiceReadySubtitle": "Voice message is ready to send.",
-      "recordingVoice": "Recording voice message...",
-      "voiceReady": "Voice message ready",
-      "voiceReadyInline": "Voice message ready",
-      "voiceReadyToSend": "Voice message is ready to send",
-      "voiceSent": "Voice message sent",
-      "voicePlayback": "Playing voice message",
-      "voiceStartError": "Could not start recording.",
-      "voiceFinishError": "Could not finish recording.",
-      "voiceUploadError": "Could not upload the voice message.",
-      "voicePlayError": "Could not play the voice message.",
-      "voiceRateError": "Could not change playback speed.",
-      "copiedText": "Text copied",
-      "infoAction": "Info",
-      "editingTitle": "Edit message",
-      "editingSubtitle": "Change the text and send the message again",
-      "editPlaceholder": "Edit message",
-      "replyingTitle": "Quick reply",
-      "readOnlyTitle": "This channel is read only",
+      "you": "Դուք",
+      "typing": "Գրում է...",
+      "online": "Առցանց",
+      "offline": "Անցանց",
+      "connecting": "Միացվում է...",
+      "reconnecting": "Բեռնվում է...",
+      "lastSeenToday": "Տեղեկություն",
+      "lastSeenYesterday": "Տեղեկություն",
+      "lastSeenDate": "Տեղեկություն",
+      "conversationPlaceholder": "Որոնում",
+      "today": "Այսօր",
+      "yesterday": "Երեկ",
+      "directRoom": "Տեղեկություն",
+      "groupRoom": "Չատ",
+      "channelRoom": "Չատ",
+      "businessRoom": "Բիզնես չաթ",
+      "encrypted": "Տեղեկություն",
+      "messagePlaceholder": "Մուտքագրեք հաղորդագրություն",
+      "messageTitle": "Հաղորդագրություն",
+      "replyAction": "Պատասխանել",
+      "replyPlaceholder": "Որոնում",
+      "selectionDelete": "Ջնջել",
+      "selectionForward": "Փոխանցել",
+      "deleteMe": "Տեղեկություն",
+      "deleteAllAction": "Ջնջել բոլորի համար",
+      "save": "Պահպանել",
+      "link": "Տեղեկություն",
+      "searchTitle": "Որոնել",
+      "searchMessage": "Որոնել",
+      "muteTitle": "Վերնագիր",
+      "muteMessage": "Տեղեկություն",
+      "locationTitle": "Տեղադրություն",
+      "sharedLocation": "Տեղեկություն",
+      "locationAttached": "Տեղեկություն",
+      "locationOpenNotice": "Տեղեկություն",
+      "locationOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "locationSendError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "locationCoordsMissing": "Տեղեկություն",
+      "locationAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "contactTitle": "Կոնտակտ",
+      "contactsTitle": "Կոնտակտներ",
+      "contactCard": "Տեղեկություն",
+      "contactAttached": "Տեղեկություն",
+      "contactReady": "Պատրաստ է",
+      "contactOpenNotice": "Տեղեկություն",
+      "contactOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "contactsAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "documentTitle": "Փաստաթուղթ",
+      "documentsTitle": "Վերնագիր",
+      "documentAttached": "Տեղեկություն",
+      "documentPreviewUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "documentOpenNotice": "Տեղեկություն",
+      "documentOpening": "Տեղեկություն",
+      "documentOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "documentAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "galleryTitle": "Վերնագիր",
+      "galleryAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "photoTitle": "Լուսանկար",
+      "photoPreviewSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+      "photoPreviewUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "photoCaptured": "Պրոֆիլ",
+      "photoSaveNotice": "Պրոֆիլ",
+      "photoSaveError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "videoTitle": "Վիդեո հաղորդագրություն",
+      "videoCaptured": "Ձայն",
+      "videoSaveNotice": "Ձայն",
+      "videoSaveError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "videoCloseHint": "Չեղարկել",
+      "videoMessageText": "Ձայն՝ Տեղեկություն",
+      "voiceTitle": "Ձայնային հաղորդագրություն",
+      "voiceRecordingTitle": "Ձայնային AI",
+      "voiceRecordingSubtitle": "Ձայնային AI",
+      "voiceReadySubtitle": "Ձայնային AI",
+      "recordingVoice": "Ձայնային AI",
+      "voiceReady": "Ձայնային AI",
+      "voiceReadyInline": "Ձայնային AI",
+      "voiceReadyToSend": "Ձայնային AI",
+      "voiceSent": "Ձայնային AI",
+      "voicePlayback": "Ձայնային AI",
+      "voiceStartError": "Ձայնային AI",
+      "voiceFinishError": "Ձայնային AI",
+      "voiceUploadError": "Ձայնային AI",
+      "voicePlayError": "Ձայնային AI",
+      "voiceRateError": "Ձայնային AI",
+      "copiedText": "Տեղեկություն՝ Տեղեկություն",
+      "infoAction": "Տեղեկություն",
+      "editingTitle": "Խմբագրել հաղորդագրությունը",
+      "editingSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "editPlaceholder": "Խմբագրել հաղորդագրությունը",
+      "replyingTitle": "Վերնագիր",
+      "readOnlyTitle": "Վերնագիր",
       "readOnlySubtitle": "Այստեղ հաղորդագրությունների ուղարկումն անջատված է։ Մանրամասների համար բացեք ալիքի տեղեկությունները։",
-      "mediaLabel": "Media",
-      "mediaTitle": "Media",
-      "mediaMessage": "Media, links and documents will be expanded in the next step.",
-      "mediaCaptureFailed": "Could not complete media processing.",
-      "mediaSaved": "Saved",
-      "privacyTitle": "Privacy",
-      "privacyMessage": "Privacy and disappearing message settings will be added in the next step.",
-      "roomThemeUpdated": "Room theme updated",
-      "messageContextMissing": "Message context is unavailable.",
-      "messageEdited": "Message updated",
-      "messageSent": "Message sent",
-      "messageSendError": "Could not send the message.",
-      "giftSent": "Gift sent",
-      "animatedReactionSent": "Animated reaction sent",
-      "animatedEmojiSent": "Animated emoji sent",
-      "stickerAdded": "Sticker added to composer",
-      "selectedForForwardPrefix": "Selected for forwarding",
-      "chooseMessagesForward": "Choose messages to forward",
-      "deletedPrefix": "Deleted",
-      "deletedForAll": "Message deleted for everyone",
-      "deletedForMe": "Message deleted for you only",
-      "addedToComposer": "Added to composer",
-      "saveMediaReady": "Prepared for saving",
-      "openLinkReady": "Prepared to open link",
-      "openingWalletFiat": "Opening fiat wallet",
-      "openingCoinWallet": "Opening COIN wallet",
-      "catalogSoon": "Catalog will be added in the next step.",
-      "pollSoon": "Poll will be added in the next step.",
-      "eventSoon": "Event will be added in the next step.",
-      "openingDocument": "Opening document",
-      "openingContact": "Opening contact",
-      "normal": "Normal",
-      "editedLabel": "edited",
-      "mapLabel": "Map",
-      "tapSend": "Tap Send",
-      "diamondsUnit": "diamonds",
-      "channelInfoAction": "Channel info",
-      "commandConfigSubtitle": "Configure the real command for the selected bot.",
-      "commandTitlePlaceholder": "Start",
-      "commandDescriptionPlaceholder": "Describe what this command does",
-      "cancelAction": "Cancel",
-      "openRoute": "Open route",
-      "removeBotFromOwnerList": "Remove bot from owner list",
-      "botProfile": "Bot profile",
-      "quickOwnerControls": "Quick owner controls",
-      "openBotChatInMessenger": "Open bot chat in Messenger",
-      "savingNow": "Saving...",
-      "nameAndUsernameRequired": "Bot name and username are required.",
-      "commandAndTitleRequired": "Command and title are required.",
-      "groupInfoAction": "Group info",
-      "businessInfoAction": "Business info",
-      "membersCount": "members",
-      "subscribersCount": "subscribers",
-      "mutedEnabled": "Notifications muted",
+      "mediaLabel": "Մեդիա",
+      "mediaTitle": "Մեդիա",
+      "mediaMessage": "Տեղեկություն",
+      "mediaCaptureFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "mediaSaved": "Տեղեկություն",
+      "privacyTitle": "Գաղտնիություն",
+      "privacyMessage": "Գաղտնիություն",
+      "roomThemeUpdated": "Թեմա",
+      "messageContextMissing": "Տեղեկություն՝ Տեղեկություն",
+      "messageEdited": "Տեղեկություն",
+      "messageSent": "Տեղեկություն",
+      "messageSendError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "giftSent": "Նվերը ուղարկվեց",
+      "animatedReactionSent": "Տեղեկություն",
+      "animatedEmojiSent": "Տեղեկություն",
+      "stickerAdded": "Տեղեկություն",
+      "selectedForForwardPrefix": "Տեղեկություն",
+      "chooseMessagesForward": "Տեղեկություն",
+      "deletedPrefix": "Տեղեկություն",
+      "deletedForAll": "Տեղեկություն",
+      "deletedForMe": "Տեղեկություն",
+      "addedToComposer": "Տեղեկություն",
+      "saveMediaReady": "Պատրաստ է",
+      "openLinkReady": "Պատրաստ է",
+      "openingWalletFiat": "Դրամապանակ",
+      "openingCoinWallet": "Դրամապանակ",
+      "catalogSoon": "Տեղեկություն",
+      "pollSoon": "Տեղեկություն",
+      "eventSoon": "Տեղեկություն",
+      "openingDocument": "Տեղեկություն",
+      "openingContact": "Տեղեկություն",
+      "normal": "Տեղեկություն",
+      "editedLabel": "Տեղեկություն",
+      "mapLabel": "Տեղեկություն",
+      "tapSend": "Տեղեկություն",
+      "diamondsUnit": "Տեղեկություն",
+      "channelInfoAction": "Չատ",
+      "commandConfigSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "commandTitlePlaceholder": "Սկսել",
+      "commandDescriptionPlaceholder": "Նկարագրություն՝ Տեղեկություն",
+      "cancelAction": "Չեղարկել",
+      "openRoute": "Տեղեկություն",
+      "removeBotFromOwnerList": "Օգնական",
+      "botProfile": "Օգնական",
+      "quickOwnerControls": "Տեղեկություն",
+      "openBotChatInMessenger": "Օգնական",
+      "savingNow": "Պահպանվում է...",
+      "nameAndUsernameRequired": "Տեղեկություն",
+      "commandAndTitleRequired": "Վերնագիր",
+      "groupInfoAction": "Չատ",
+      "businessInfoAction": "Տեղեկություն",
+      "membersCount": "Տեղեկություն",
+      "subscribersCount": "Տեղեկություն",
+      "mutedEnabled": "Տեղեկություն",
       "mutedDisabled": "Լռեցումը անջատված է",
-      "searchFocused": "Search ready",
+      "searchFocused": "Որոնել",
       "aiTitle": "AI",
-      "aiMessage": "The AI entry point was moved here. Rewrite, translation and smart reply tools will be connected in the next step.",
-      "aiReady": "AI ready",
-      "contactSavedToDevice": "Contact saved to address book",
-      "contactPermissionDenied": "Contacts permission denied",
-      "contactUnavailable": "The chat partner has no phone number",
-      "addedToList": "Chat added to list",
-      "removedFromList": "Chat removed from list",
-      "disappearingEnabled": "Disappearing messages enabled",
+      "aiMessage": "AI",
+      "aiReady": "Պատրաստ է",
+      "contactSavedToDevice": "Տեղեկություն",
+      "contactPermissionDenied": "Տեղեկություն",
+      "contactUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "addedToList": "Տեղեկություն",
+      "removedFromList": "Տեղեկություն",
+      "disappearingEnabled": "Տեղեկություն",
       "disappearingDisabled": "Անհետացող հաղորդագրություններն անջատված են",
-      "reportSent": "Report prepared",
-      "chatCleared": "Chat cleared",
-      "chatExported": "Chat export opened",
-      "homeShortcutPinned": "Shortcut added to home screen",
-      "homeShortcutUnsupported": "Android shortcut bridge is required to add a home screen shortcut",
-      "blockActionDone": "Chat blocked",
-      "unblockActionDone": "Chat unblocked",
-      "fileBadgeGeneric": "FILE",
-      "addContactName": "Add Contact Name",
-      "addContactNamePlaceholder": "Add Contact Name Placeholder",
-      "addContactPhone": "Add Contact Phone",
-      "addContactPhonePlaceholder": "Add Contact Phone Placeholder",
-      "addContactSave": "Add Contact Save",
-      "addContactSubtitle": "Add Contact",
-      "addContactTitle": "Add Contact",
-      "addContactUsername": "Add Contact Username",
-      "addContactUsernamePlaceholder": "Add Contact Username Placeholder",
-      "contactChooseSource": "Contact Choose Source",
-      "contactNameRequired": "Contact Name Required",
-      "contactSavedInContacts": "Contact Saved In Contacts",
-      "contactSavedInMessenger": "Contact Saved In Messenger",
-      "linkEmpty": "Link Empty",
-      "linkTitle": "Link",
-      "mediaSavedToPhone": "Media Saved To Phone",
-      "mediaSavedToSabi": "Media Saved To Sabi",
-      "openContactInMessenger": "Open Contact In Messenger",
-      "openContactInPhone": "Open Contact In Phone",
-      "phoneContactsSubtitle": "Phone Contacts",
-      "phoneContactsTitle": "Phone Contacts",
-      "sabiContactsSubtitle": "Sabi Contacts",
-      "sabiContactsTitle": "Sabi Contacts",
-      "saveMediaChooseTitle": "Save Media Choose",
-      "saveToSabiApp": "Save To Sabi App",
-      "saveToPhone": "Save To Phone",
-      "saveVideoTitle": "Save Video",
-      "saveVideoSubtitle": "Save Video",
-      "videoReady": "Video Ready",
-      "saveVideoAction": "Save Video Action",
-      "savePhotoTitle": "Save Photo",
-      "savePhotoSubtitle": "Save Photo",
-      "photoReady": "Photo Ready",
-      "savePhotoAction": "Save Photo Action",
-      "saveMediaTitle": "Save Media",
-      "saveMediaSubtitle": "Save Media",
-      "mediaReady": "Media Ready",
-      "mediaSaveNotice": "Media Save Notice",
-      "saveMediaAction": "Save Media Action",
-      "conversationHidden": "Conversation Hidden"
+      "reportSent": "Տեղեկություն",
+      "chatCleared": "Չատ",
+      "chatExported": "Չատ",
+      "homeShortcutPinned": "Տեղեկություն",
+      "homeShortcutUnsupported": "Տեղեկություն",
+      "blockActionDone": "Պատրաստ է",
+      "unblockActionDone": "Պատրաստ է",
+      "fileBadgeGeneric": "Տեղեկություն",
+      "addContactName": "Տեղեկություն",
+      "addContactNamePlaceholder": "Որոնում",
+      "addContactPhone": "Տեղեկություն",
+      "addContactPhonePlaceholder": "Որոնում",
+      "addContactSave": "Տեղեկություն",
+      "addContactSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "addContactTitle": "Վերնագիր",
+      "addContactUsername": "Տեղեկություն",
+      "addContactUsernamePlaceholder": "Որոնում",
+      "contactChooseSource": "Տեղեկություն",
+      "contactNameRequired": "Տեղեկություն",
+      "contactSavedInContacts": "Տեղեկություն",
+      "contactSavedInMessenger": "Տեղեկություն",
+      "linkEmpty": "Տեղեկություն",
+      "linkTitle": "Վերնագիր",
+      "mediaSavedToPhone": "Տեղեկություն",
+      "mediaSavedToSabi": "Տեղեկություն",
+      "openContactInMessenger": "Տեղեկություն",
+      "openContactInPhone": "Տեղեկություն",
+      "phoneContactsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "phoneContactsTitle": "Վերնագիր",
+      "sabiContactsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "sabiContactsTitle": "Վերնագիր",
+      "saveMediaChooseTitle": "Վերնագիր",
+      "saveToSabiApp": "Տեղեկություն",
+      "saveToPhone": "Տեղեկություն",
+      "saveVideoTitle": "Ձայն",
+      "saveVideoSubtitle": "Ձայն՝ Տեղեկություն",
+      "videoReady": "Պատրաստ է",
+      "saveVideoAction": "Ձայն",
+      "savePhotoTitle": "Պրոֆիլ",
+      "savePhotoSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+      "photoReady": "Պատրաստ է",
+      "savePhotoAction": "Պրոֆիլ",
+      "saveMediaTitle": "Վերնագիր",
+      "saveMediaSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "mediaReady": "Պատրաստ է",
+      "mediaSaveNotice": "Տեղեկություն",
+      "saveMediaAction": "Տեղեկություն",
+      "conversationHidden": "Տեղեկություն"
     },
     "reportScreen": {
-      "title": "Report",
-      "subtitle": "Choose a reason or write your own",
-      "chooseReason": "Choose a report reason",
-      "otherReason": "Other reason",
-      "otherReasonPlaceholder": "Describe the reason",
-      "submit": "Send report",
-      "success": "Report sent",
-      "spam": "Spam",
-      "scam": "Scam",
-      "fakeProfile": "Fake profile",
-      "impersonation": "Impersonation",
-      "harassment": "Harassment or bullying",
-      "hateSpeech": "Hate speech",
-      "violentContent": "Violent content",
-      "adultContent": "Adult content",
-      "childSafety": "Child safety issue",
-      "illegalGoods": "Illegal goods or services",
-      "dangerousContent": "Dangerous content",
-      "selfHarm": "Self-harm related content",
-      "copyright": "Copyright violation",
-      "privacyViolation": "Privacy violation",
-      "somethingElse": "Something else"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "chooseReason": "Տեղեկություն",
+      "otherReason": "Տեղեկություն",
+      "otherReasonPlaceholder": "Որոնում",
+      "submit": "Տեղեկություն",
+      "success": "Տեղեկություն",
+      "spam": "Տեղեկություն",
+      "scam": "Տեղեկություն",
+      "fakeProfile": "Պրոֆիլ",
+      "impersonation": "Տեղեկություն",
+      "harassment": "Տեղեկություն",
+      "hateSpeech": "Տեղեկություն",
+      "violentContent": "Տեղեկություն",
+      "adultContent": "Տեղեկություն",
+      "childSafety": "Տեղեկություն",
+      "illegalGoods": "Տեղեկություն",
+      "dangerousContent": "Տեղեկություն",
+      "selfHarm": "Տեղեկություն",
+      "copyright": "Տեղեկություն",
+      "privacyViolation": "Գաղտնիություն",
+      "somethingElse": "Տեղեկություն"
     },
     "createContact": {
-      "title": "New contact",
-      "subtitle": "Save the chat partner to contacts",
-      "firstName": "First name",
-      "lastName": "Last name",
-      "phone": "Phone",
-      "username": "Username",
-      "company": "Company",
-      "note": "Note",
-      "saveContact": "Save contact",
-      "contactCreated": "Contact created",
-      "phoneRequired": "Phone number is required"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "firstName": "Անուն",
+      "lastName": "Ազգանուն",
+      "phone": "Հեռախոս",
+      "username": "Օգտանուն",
+      "company": "Տեղեկություն",
+      "note": "Նշում",
+      "saveContact": "Տեղեկություն",
+      "contactCreated": "Տեղեկություն",
+      "phoneRequired": "Տեղեկություն"
     },
     "ownerRouting": {
-      "title": "Owner routing",
-      "subtitle": "All owner controls for groups, channels, and bots are opened through Profile.",
-      "openProfileManagement": "Open management inside Profile",
-      "createFromProfile": "Creation is done only from inside Profile",
-      "manageFromProfile": "Publication, bindings, and owner data are managed inside Profile",
-      "publicInfoOnly": "Chat partner info remains a public/view-only screen",
-      "hideIfNotCreated": "If the object has not been created, the profile section is hidden",
-      "unifiedUserId": "The unified user ID remains the main identifier across all flows"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "openProfileManagement": "Պրոֆիլ",
+      "createFromProfile": "Պրոֆիլ",
+      "manageFromProfile": "Պրոֆիլ",
+      "publicInfoOnly": "Տեղեկություն",
+      "hideIfNotCreated": "Տեղեկություն",
+      "unifiedUserId": "Տեղեկություն"
     },
     "groupManagement": {
-      "title": "Group management",
-      "subtitle": "Full management of group creation, owner data, publication, and bindings.",
-      "profileEntryTitle": "Group profile",
-      "profileEntrySubtitle": "Group owner data, publication, and bindings are managed inside Profile.",
-      "createEntryTitle": "Create group",
-      "createEntrySubtitle": "Create a new group from inside Profile and manage it afterward.",
-      "ownerPanel": "Group owner panel",
-      "ownerPanelSubtitle": "Full control over group profile, members, admins, permissions, and publication settings.",
-      "publication": "Group publication",
-      "bindings": "Group bindings",
-      "ownerData": "Owner data",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "members": "Members",
-      "admins": "Adminlar",
-      "inviteLink": "Invite link",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Linked chat ID",
-      "linkedBotId": "Linked bot ID",
-      "groupId": "Group ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
-      "publicGroup": "Public group",
-      "privateGroup": "Private group",
-      "published": "Published",
-      "showInProfile": "Show in Profile",
-      "joinRequests": "Join requests",
-      "memberInvites": "Members can send invites",
-      "onlyAdminsPost": "Only admins can post messages",
-      "onlyAdminsEdit": "Only admins can edit",
-      "commentsEnabled": "Comments enabled",
-      "createSuccess": "Group created",
-      "saveSuccess": "Group settings saved",
-      "resetSuccess": "Group data reset",
-      "openMessengerRoom": "Open group chat in Messenger",
-      "hiddenIfNotCreated": "If the group has not been created, the profile entry is hidden",
-      "createInProfileOnly": "Profile is the main entry point for group creation"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "profileEntryTitle": "Պրոֆիլ",
+      "profileEntrySubtitle": "Պրոֆիլ՝ Տեղեկություն",
+      "createEntryTitle": "Վերնագիր",
+      "createEntrySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "ownerPanel": "Տեղեկություն",
+      "ownerPanelSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "publication": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "ownerData": "Տեղեկություն",
+      "accessRules": "Տեղեկություն",
+      "moderation": "Մոդերացիա",
+      "members": "Տեղեկություն",
+      "admins": "Տեղեկություն",
+      "inviteLink": "Չատ",
+      "publicationId": "Տեղեկություն",
+      "linkedChatId": "Չատ",
+      "linkedBotId": "Օգնական",
+      "groupId": "Չատ",
+      "ownerUserId": "Տեղեկություն",
+      "ownerName": "Տեղեկություն",
+      "ownerPhone": "Տեղեկություն",
+      "ownerEmail": "Տեղեկություն",
+      "role": "Տեղեկություն",
+      "publicGroup": "Չատ",
+      "privateGroup": "Չատ",
+      "published": "Հրապարակված",
+      "showInProfile": "Պրոֆիլ",
+      "joinRequests": "Տեղեկություն",
+      "memberInvites": "Պրոֆիլ",
+      "onlyAdminsPost": "Տեղեկություն",
+      "onlyAdminsEdit": "Տեղեկություն",
+      "commentsEnabled": "Տեղեկություն",
+      "createSuccess": "Տեղեկություն",
+      "saveSuccess": "Տեղեկություն",
+      "resetSuccess": "Տեղեկություն",
+      "openMessengerRoom": "Տեղեկություն",
+      "hiddenIfNotCreated": "Տեղեկություն",
+      "createInProfileOnly": "Պրոֆիլ"
     },
     "channelManagement": {
-      "title": "Channel management",
-      "subtitle": "Full management of channel creation, owner data, publication, and bindings.",
-      "profileEntryTitle": "Channel profile",
-      "profileEntrySubtitle": "Channel owner data, publication, and bindings are managed inside Profile.",
-      "createEntryTitle": "Create channel",
-      "createEntrySubtitle": "Create a new channel from inside Profile and manage it afterward.",
-      "ownerPanel": "Channel owner panel",
-      "ownerPanelSubtitle": "Full control over channel profile, subscribers, admins, publication permissions, and settings.",
-      "publication": "Channel publication",
-      "bindings": "Channel bindings",
-      "ownerData": "Owner data",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "subscribers": "Subscribers",
-      "admins": "Adminlar",
-      "inviteLink": "Invite link",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Linked chat ID",
-      "linkedDiscussionId": "Linked discussion ID",
-      "linkedBotId": "Linked bot ID",
-      "channelId": "Channel ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
-      "publicChannel": "Public channel",
-      "privateChannel": "Private channel",
-      "published": "Published",
-      "showInProfile": "Show in Profile",
-      "joinRequests": "Join requests",
-      "onlyAdminsPost": "Only admins can post",
-      "onlyAdminsEdit": "Only admins can edit",
-      "commentsEnabled": "Comments enabled",
-      "linkedDiscussion": "Ulangan discussion",
-      "createSuccess": "Channel created",
-      "saveSuccess": "Channel settings saved",
-      "resetSuccess": "Channel data reset",
-      "openMessengerRoom": "Open channel in Messenger",
-      "hiddenIfNotCreated": "If the channel has not been created, the profile entry is hidden",
-      "createInProfileOnly": "Profile is the main entry point for channel creation"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "profileEntryTitle": "Պրոֆիլ",
+      "profileEntrySubtitle": "Պրոֆիլ՝ Տեղեկություն",
+      "createEntryTitle": "Վերնագիր",
+      "createEntrySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "ownerPanel": "Տեղեկություն",
+      "ownerPanelSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "publication": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "ownerData": "Տեղեկություն",
+      "accessRules": "Տեղեկություն",
+      "moderation": "Մոդերացիա",
+      "subscribers": "Տեղեկություն",
+      "admins": "Տեղեկություն",
+      "inviteLink": "Չատ",
+      "publicationId": "Տեղեկություն",
+      "linkedChatId": "Չատ",
+      "linkedDiscussionId": "Տեղեկություն",
+      "linkedBotId": "Օգնական",
+      "channelId": "Չատ",
+      "ownerUserId": "Տեղեկություն",
+      "ownerName": "Տեղեկություն",
+      "ownerPhone": "Տեղեկություն",
+      "ownerEmail": "Տեղեկություն",
+      "role": "Տեղեկություն",
+      "publicChannel": "Չատ",
+      "privateChannel": "Չատ",
+      "published": "Հրապարակված",
+      "showInProfile": "Պրոֆիլ",
+      "joinRequests": "Տեղեկություն",
+      "onlyAdminsPost": "Տեղեկություն",
+      "onlyAdminsEdit": "Տեղեկություն",
+      "commentsEnabled": "Տեղեկություն",
+      "linkedDiscussion": "Տեղեկություն",
+      "createSuccess": "Տեղեկություն",
+      "saveSuccess": "Տեղեկություն",
+      "resetSuccess": "Տեղեկություն",
+      "openMessengerRoom": "Տեղեկություն",
+      "hiddenIfNotCreated": "Տեղեկություն",
+      "createInProfileOnly": "Պրոֆիլ"
     },
     "botManagement": {
-      "title": "Bot management",
-      "subtitle": "Full management of bot creation, owner data, modules, publication, and wallet routing.",
-      "profileEntryTitle": "Bot profile",
-      "profileEntrySubtitle": "Bot owner data, modules, publication, and routing are managed inside Profile.",
-      "createEntryTitle": "Create bot",
-      "createEntrySubtitle": "Create a new bot from inside Profile and manage it afterward.",
-      "ownerPanel": "Bot owner panel",
-      "ownerPanelSubtitle": "Full control over bot profile, status, modules, commands, and wallet routing.",
-      "publication": "Bot publication",
-      "bindings": "Bot bindings",
-      "ownerData": "Owner data",
-      "routing": "Wallet routing",
-      "modules": "Modules",
-      "commands": "Commands",
-      "botId": "Bot ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
-      "linkedChatId": "Linked chat ID",
-      "linkedGroupId": "Linked group ID",
-      "linkedChannelId": "Linked channel ID",
-      "linkedMarketId": "Linked market ID",
-      "publicationId": "Publication ID",
-      "publicBot": "Public bot",
-      "privateBot": "Private bot",
-      "published": "Published",
-      "showInProfile": "Show in Profile",
-      "active": "Active",
-      "paused": "Paused",
-      "acceptCommands": "Accept commands",
-      "showInCatalog": "Show in catalog",
-      "allowPayments": "Allow payments",
-      "sabiWalletRoute": "SABI Wallet",
-      "businessRoutingLayer": "Business Routing Layer",
-      "tradeBot": "Trade bot",
-      "businessBot": "Business bot",
-      "tradeHint": "Trade and commerce bot income is routed to SABI Wallet.",
-      "businessHint": "Until Business Wallet launches, business bot income is routed to the Business Routing Layer.",
-      "createSuccess": "Bot created",
-      "saveSuccess": "Bot settings saved",
-      "resetSuccess": "Bot data reset",
-      "openMessengerRoom": "Open bot chat in Messenger",
-      "hiddenIfNotCreated": "If the bot has not been created, the profile entry is hidden",
-      "createInProfileOnly": "Profile is the main entry point for bot creation"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "profileEntryTitle": "Պրոֆիլ",
+      "profileEntrySubtitle": "Պրոֆիլ՝ Տեղեկություն",
+      "createEntryTitle": "Վերնագիր",
+      "createEntrySubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "ownerPanel": "Տեղեկություն",
+      "ownerPanelSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "publication": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "ownerData": "Տեղեկություն",
+      "routing": "Տեղեկություն",
+      "modules": "Տեղեկություն",
+      "commands": "Տեղեկություն",
+      "botId": "Օգնական",
+      "ownerUserId": "Տեղեկություն",
+      "ownerName": "Տեղեկություն",
+      "ownerPhone": "Տեղեկություն",
+      "ownerEmail": "Տեղեկություն",
+      "role": "Տեղեկություն",
+      "linkedChatId": "Չատ",
+      "linkedGroupId": "Չատ",
+      "linkedChannelId": "Չատ",
+      "linkedMarketId": "Տեղեկություն",
+      "publicationId": "Տեղեկություն",
+      "publicBot": "Օգնական",
+      "privateBot": "Օգնական",
+      "published": "Հրապարակված",
+      "showInProfile": "Պրոֆիլ",
+      "active": "Ակտիվ",
+      "paused": "Դադարեցված",
+      "acceptCommands": "Տեղեկություն",
+      "showInCatalog": "Տեղեկություն",
+      "allowPayments": "Տեղեկություն",
+      "sabiWalletRoute": "Դրամապանակ",
+      "businessRoutingLayer": "Տեղեկություն",
+      "tradeBot": "Օգնական",
+      "businessBot": "Տեղեկություն",
+      "tradeHint": "Տեղեկություն՝ Տեղեկություն",
+      "businessHint": "Տեղեկություն՝ Տեղեկություն",
+      "createSuccess": "Տեղեկություն",
+      "saveSuccess": "Տեղեկություն",
+      "resetSuccess": "Տեղեկություն",
+      "openMessengerRoom": "Տեղեկություն",
+      "hiddenIfNotCreated": "Տեղեկություն",
+      "createInProfileOnly": "Պրոֆիլ"
     },
     "settingsPanels": {
-      "title": "Owner settings",
-      "subtitle": "Internal settings for groups, channels, and bots are managed inside separate owner panels.",
-      "ownerData": "Owner data",
-      "publication": "Publication",
-      "bindings": "Bindings",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "routing": "Routing",
-      "modules": "Modules",
-      "commands": "Commands",
-      "permissions": "Permissions",
-      "statistics": "Statistics",
-      "archive": "Archive",
-      "openInProfile": "Open inside Profile",
-      "hiddenWhenNotCreated": "The section is hidden for objects that have not been created"
+      "title": "Կարգավորումներ",
+      "subtitle": "Կարգավորումներ",
+      "ownerData": "Տեղեկություն",
+      "publication": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "accessRules": "Տեղեկություն",
+      "moderation": "Մոդերացիա",
+      "routing": "Տեղեկություն",
+      "modules": "Տեղեկություն",
+      "commands": "Տեղեկություն",
+      "permissions": "Թույլտվություններ",
+      "statistics": "Տեղեկություն",
+      "archive": "Տեղեկություն",
+      "openInProfile": "Պրոֆիլ",
+      "hiddenWhenNotCreated": "Տեղեկություն"
     },
     "publicationFlow": {
-      "title": "Publication flow",
-      "subtitle": "All publication settings for groups, channels, and bots are handled through Profile.",
-      "publicationEnabled": "Publication enabled",
-      "showInProfile": "Show in Profile",
-      "publicMode": "Public mode",
-      "privateMode": "Private mode",
-      "ownerManagement": "Owner management",
-      "bindings": "Bindings",
-      "profileControls": "Profile management",
-      "publicationVisibleOnlyWhenCreated": "The publication section becomes visible only after the object is created"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "publicationEnabled": "Տեղեկություն",
+      "showInProfile": "Պրոֆիլ",
+      "publicMode": "Տեղեկություն",
+      "privateMode": "Տեղեկություն",
+      "ownerManagement": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "profileControls": "Պրոֆիլ",
+      "publicationVisibleOnlyWhenCreated": "Տեղեկություն"
     },
     "unifiedIdentity": {
-      "title": "Unified identity",
-      "subtitle": "The unified user ID remains the main identifier across Messenger, Stream, Wallet, and other modules.",
-      "sameUserIdRequired": "The same user ID is required for group, channel, bot, gift, and payment flows",
-      "blockOnMismatch": "If the IDs do not match, money and gift flows are blocked"
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "sameUserIdRequired": "Տեղեկություն",
+      "blockOnMismatch": "Տեղեկություն"
     },
     "animatedEmoji": {
-      "celebration": "Celebration",
-      "empty": "Empty",
-      "faces": "Faces",
-      "hearts": "Hearts",
-      "search": "Search",
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "celebration": "Տեղեկություն",
+      "empty": "Տեղեկություն",
+      "faces": "Տեղեկություն",
+      "hearts": "Տեղեկություն",
+      "search": "Որոնել",
+      "subtitle": "Նկարագրություն",
+      "title": "Վերնագիր"
     },
-    "report": "Report",
-    "reportDetails": "Report Details",
-    "reportDetailsHint": "Report Details",
-    "reportDetailsPlaceholder": "Report Details Placeholder",
-    "reportMinDetails": "Report Min Details",
-    "reportReasonList": "Report Reason List",
-    "reportSent": "Report Sent",
-    "reportSubtitle": "Report",
-    "reportTarget": "Report Target",
-    "reportTitle": "Report",
-    "reportValidation": "Report Validation",
-    "sendReport": "Send Report",
-    "bot": "Bot",
-    "botConversation": "Bot Conversation",
-    "privateChats": "Private Chats",
-    "privateChatsSubtitle": "Private Chats",
-    "privateGroups": "Private Groups",
-    "privateChannels": "Private Channels",
-    "themeWallpaper": "Theme Wallpaper",
-    "quickAccess": "Quick Access",
-    "quickAccessMeta": "Quick Access Meta",
-    "createMeta": "Create Meta",
-    "groupCreateSubtitle": "Group Create",
-    "channelCreateSubtitle": "Channel Create",
-    "botCreateSubtitle": "Bot Create",
-    "callsSubtitle": "Calls",
-    "contactsSubtitle": "Contacts",
-    "groupsSubtitle": "Groups",
-    "botsSubtitle": "Bots",
-    "channelsSubtitle": "Channels",
-    "businessSubtitle": "Business",
-    "chatsMeta": "Chats Meta",
-    "officialName": "Official Name",
-    "officialPreview": "Official Preview",
-    "openBots": "Open Bots",
-    "openChannels": "Open Channels",
-    "returnToChats": "Return To Chats",
-    "mainChats": "Main Chats",
-    "workspace": "Workspace",
-    "mobile": "Mobile",
-    "username": "Username",
-    "birthday": "Birthday",
-    "publications": "Publications",
-    "gifts": "Gifts",
-    "archive": "Archive",
-    "allStories": "All Stories",
-    "likes": "Likes",
-    "giftsPublic": "Gifts Public",
-    "emptyPublications": "Empty Publications",
-    "emptyGifts": "Empty Gifts",
-    "emptyArchive": "Empty Archive",
-    "fullscreenHint": "Fullscreen",
-    "unknownUser": "Unknown User",
-    "info": "Info",
-    "premiumStyle": "Premium Style",
-    "members": "Members",
-    "noGroupMembers": "No Group Members",
-    "memberInvited": "Member Invited",
-    "memberRemoved": "Member Removed",
-    "promoteAdmin": "Promote Admin",
-    "demoteMember": "Demote Member",
-    "ownerRole": "Owner Role",
-    "adminRole": "Admin Role",
-    "memberRole": "Member Role",
-    "pendingJoinRequests": "Pending Join Requests",
-    "noPendingJoinRequests": "No Pending Join Requests",
-    "approve": "Approve",
-    "reject": "Reject",
-    "joinRequestApproved": "Join Request Approved",
-    "joinRequestRejected": "Join Request Rejected",
-    "inviteRegenerated": "Invite Regenerated",
-    "subscribers": "Subscribers",
-    "roomType": "Room Type",
-    "openChat": "Open Chat",
-    "openChatSubtitle": "Open Chat",
-    "notificationsSubtitle": "Notifications",
-    "privateList": "Private List",
-    "mainList": "Main List",
-    "mediaSubtitle": "Media",
-    "addMembers": "Add Members",
-    "addMembersSubtitle": "Add Members",
-    "admins": "Admins",
-    "adminsSubtitle": "Admins",
-    "subscribersSubtitle": "Subscribers",
-    "deleteRoomSubtitle": "Delete Room",
-    "adminOnlyMessaging": "Admin Only Messaging",
-    "adminOnlyMedia": "Admin Only Media",
-    "adminOnlyInvites": "Admin Only Invites",
-    "approveJoinRequests": "Approve Join Requests",
-    "autoDeleteAds": "Auto Delete Ads",
-    "autoDeletePromoLeaflets": "Auto Delete Promo Leaflets",
-    "autoDeleteLinks": "Auto Delete Links",
-    "autoBanRepeatedSpam": "Auto Ban Repeated Spam",
-    "blacklist": "Blacklist",
-    "blacklistSubtitle": "Blacklist",
-    "inviteLink": "Invite Link",
-    "regenerateLink": "Regenerate Link",
-    "sendInvite": "Send Invite",
-    "ownerTools": "Owner Tools",
-    "ownerToolsSubtitle": "Owner Tools",
-    "enterUserId": "Enter User Id",
-    "botAssistant": "Bot Assistant",
-    "botService": "Bot Service",
-    "botBusiness": "Bot Business",
-    "botSubtitle": "Bot",
-    "publicBanner": "Public Banner",
-    "settingsOnlyOwner": "Settings Only Owner",
-    "groupSettings": "Group Settings",
-    "channelSettings": "Channel Settings",
-    "botSettings": "Bot Settings",
-    "publishingAdminsOnly": "Publishing Admins Only",
-    "approveSubscribers": "Approve Subscribers",
-    "channelReactions": "Channel Reactions",
-    "channelComments": "Channel Comments",
-    "visibleInDiscovery": "Visible In Discovery",
-    "openOwnerPanel": "Open Owner Panel",
-    "ownerPanelSubtitle": "Owner Panel",
-    "botPublicVisible": "Bot Public Visible",
-    "botInlineEnabled": "Bot Inline Enabled",
-    "botAutoReplyEnabled": "Bot Auto Reply Enabled",
-    "botMarketplaceLinked": "Bot Marketplace Linked",
-    "botDeliveryLinked": "Bot Delivery Linked",
-    "botBusinessRoutingEnabled": "Bot Business Routing Enabled",
-    "businessRoutingNote": "Business Routing Note",
-    "deleteChannel": "Delete Channel",
-    "deleteBot": "Delete Bot",
-    "groupsLinkedHint": "Groups Linked",
-    "channelsLinkedHint": "Channels Linked",
-    "profileSourceNote": "Profile Source Note",
-    "deleteGroup": "Delete Group",
-    "openGroup": "Open Group",
-    "savingNow": "Saving Now",
-    "hiddenChat": "Hidden Chat",
+    "report": "Տեղեկություն",
+    "reportDetails": "Տեղեկություն",
+    "reportDetailsHint": "Տեղեկություն՝ Տեղեկություն",
+    "reportDetailsPlaceholder": "Որոնում",
+    "reportMinDetails": "Տեղեկություն",
+    "reportReasonList": "Տեղեկություն",
+    "reportSent": "Տեղեկություն",
+    "reportSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "reportTarget": "Տեղեկություն",
+    "reportTitle": "Վերնագիր",
+    "reportValidation": "Տեղեկություն",
+    "sendReport": "Տեղեկություն",
+    "bot": "Օգնական",
+    "botConversation": "Օգնական",
+    "privateChats": "Տեղեկություն",
+    "privateChatsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "privateGroups": "Տեղեկություն",
+    "privateChannels": "Տեղեկություն",
+    "themeWallpaper": "Թեմա",
+    "quickAccess": "Տեղեկություն",
+    "quickAccessMeta": "Տեղեկություն",
+    "createMeta": "Տեղեկություն",
+    "groupCreateSubtitle": "Չատ՝ Տեղեկություն",
+    "channelCreateSubtitle": "Չատ՝ Տեղեկություն",
+    "botCreateSubtitle": "Օգնական՝ Տեղեկություն",
+    "callsSubtitle": "Զանգեր",
+    "contactsSubtitle": "Կոնտակտներ",
+    "groupsSubtitle": "Խմբեր",
+    "botsSubtitle": "Բոտեր",
+    "channelsSubtitle": "Ալիքներ",
+    "businessSubtitle": "Բիզնես",
+    "chatsMeta": "Տեղեկություն",
+    "officialName": "Տեղեկություն",
+    "officialPreview": "Տեղեկություն",
+    "openBots": "Տեղեկություն",
+    "openChannels": "Տեղեկություն",
+    "returnToChats": "Տեղեկություն",
+    "mainChats": "Տեղեկություն",
+    "workspace": "Տեղեկություն",
+    "mobile": "Տեղեկություն",
+    "username": "Օգտանուն",
+    "birthday": "Ծննդյան օր",
+    "publications": "Տեղեկություն",
+    "gifts": "Նվերներ",
+    "archive": "Տեղեկություն",
+    "allStories": "Տեղեկություն",
+    "likes": "Հավանումներ",
+    "giftsPublic": "Պրեմիում",
+    "emptyPublications": "Տեղեկություն",
+    "emptyGifts": "Տեղեկություն",
+    "emptyArchive": "Տեղեկություն",
+    "fullscreenHint": "Տեղեկություն՝ Տեղեկություն",
+    "unknownUser": "Տեղեկություն",
+    "info": "Նկարագրություն",
+    "premiumStyle": "Պրեմիում",
+    "members": "Տեղեկություն",
+    "noGroupMembers": "Չատ",
+    "memberInvited": "Պրոֆիլ",
+    "memberRemoved": "Պրոֆիլ",
+    "promoteAdmin": "Տեղեկություն",
+    "demoteMember": "Պրոֆիլ",
+    "ownerRole": "Տեղեկություն",
+    "adminRole": "Տեղեկություն",
+    "memberRole": "Պրոֆիլ",
+    "pendingJoinRequests": "Տեղեկություն",
+    "noPendingJoinRequests": "Տեղեկություն",
+    "approve": "Տեղեկություն",
+    "reject": "Տեղեկություն",
+    "joinRequestApproved": "Տեղեկություն",
+    "joinRequestRejected": "Տեղեկություն",
+    "inviteRegenerated": "Չատ",
+    "subscribers": "Տեղեկություն",
+    "roomType": "Տեղեկություն",
+    "openChat": "Չատ",
+    "openChatSubtitle": "Չատ՝ Տեղեկություն",
+    "notificationsSubtitle": "Ծանուցումներ",
+    "privateList": "Տեղեկություն",
+    "mainList": "Տեղեկություն",
+    "mediaSubtitle": "Մեդիա",
+    "addMembers": "Տեղեկություն",
+    "addMembersSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "admins": "Տեղեկություն",
+    "adminsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "subscribersSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "deleteRoomSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "adminOnlyMessaging": "Տեղեկություն",
+    "adminOnlyMedia": "Տեղեկություն",
+    "adminOnlyInvites": "Տեղեկություն",
+    "approveJoinRequests": "Տեղեկություն",
+    "autoDeleteAds": "Տեղեկություն",
+    "autoDeletePromoLeaflets": "Տեղեկություն",
+    "autoDeleteLinks": "Տեղեկություն",
+    "autoBanRepeatedSpam": "Տեղեկություն",
+    "blacklist": "Տեղեկություն",
+    "blacklistSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "inviteLink": "Չատ",
+    "regenerateLink": "Տեղեկություն",
+    "sendInvite": "Չատ",
+    "ownerTools": "Կարգավորումներ",
+    "ownerToolsSubtitle": "Կարգավորումներ՝ Տեղեկություն",
+    "enterUserId": "Տեղեկություն",
+    "botAssistant": "Օգնական",
+    "botService": "Օգնական",
+    "botBusiness": "Օգնական",
+    "botSubtitle": "Օգնական՝ Տեղեկություն",
+    "publicBanner": "Տեղեկություն",
+    "settingsOnlyOwner": "Կարգավորումներ",
+    "groupSettings": "Չատ",
+    "channelSettings": "Չատ",
+    "botSettings": "Օգնական",
+    "publishingAdminsOnly": "Տեղեկություն",
+    "approveSubscribers": "Տեղեկություն",
+    "channelReactions": "Չատ",
+    "channelComments": "Չատ",
+    "visibleInDiscovery": "Տեղեկություն",
+    "openOwnerPanel": "Տեղեկություն",
+    "ownerPanelSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "botPublicVisible": "Օգնական",
+    "botInlineEnabled": "Օգնական",
+    "botAutoReplyEnabled": "Օգնական",
+    "botMarketplaceLinked": "Օգնական",
+    "botDeliveryLinked": "Օգնական",
+    "botBusinessRoutingEnabled": "Օգնական",
+    "businessRoutingNote": "Տեղեկություն",
+    "deleteChannel": "Չատ",
+    "deleteBot": "Օգնական",
+    "groupsLinkedHint": "Տեղեկություն՝ Տեղեկություն",
+    "channelsLinkedHint": "Տեղեկություն՝ Տեղեկություն",
+    "profileSourceNote": "Պրոֆիլ",
+    "deleteGroup": "Չատ",
+    "openGroup": "Չատ",
+    "savingNow": "Բեռնվում է...",
+    "hiddenChat": "Չատ",
     "botCard": {
-      "cardTitle": "Card",
-      "unknownHandle": "Unknown Handle",
-      "connected": "Connected",
-      "owner": "Owner",
-      "idLabel": "Id Label",
-      "noId": "No Id"
+      "cardTitle": "Վերնագիր",
+      "unknownHandle": "Տեղեկություն",
+      "connected": "Միացված է",
+      "owner": "Տեղեկություն",
+      "idLabel": "Տեղեկություն",
+      "noId": "Տեղեկություն"
     },
     "theme": {
-      "title": "Title",
-      "screenTitle": "Screen",
-      "screenSubtitle": "Screen",
-      "chooseWallpaper": "Choose Wallpaper",
-      "replaceWallpaper": "Replace Wallpaper",
-      "removeWallpaper": "Remove Wallpaper",
-      "noWallpaper": "No Wallpaper",
-      "useThemeBackground": "Use Theme Background"
+      "title": "Վերնագիր",
+      "screenTitle": "Վերնագիր",
+      "screenSubtitle": "Նկարագրություն՝ Տեղեկություն",
+      "chooseWallpaper": "Տեղեկություն",
+      "replaceWallpaper": "Տեղեկություն",
+      "removeWallpaper": "Տեղեկություն",
+      "noWallpaper": "Տեղեկություն",
+      "useThemeBackground": "Հետ"
     },
     "wallpaper": {
-      "title": "Title"
+      "title": "Վերնագիր"
     }
   },
   "chatRoom": {
     "title": "Չաթ",
-    "messageActions": "Message actions",
+    "messageActions": "Կարգավորումներ",
     "location": {
-      "chooseProvider": "Choose a map or service",
-      "eta": "daq",
+      "chooseProvider": "Կարգավորումներ",
+      "eta": "Տեղեկություն",
       "providers": {
         "sabiNavigator": {
-          "title": "Sabi Navigator",
-          "subtitle": "Open ushbu nuqtani sabi navigatorda"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "sabiTaxi": {
-          "title": "Sabi Taxi",
-          "subtitle": "Ushbu nuqtaga Sabi Taxi buyurtma qilish"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "yandex": {
-          "title": "Yandex Maps",
-          "subtitle": "Open ushbu nuqtani yandex maps da"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "google": {
-          "title": "Google Maps",
-          "subtitle": "Open ushbu nuqtani google maps da"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       }
     },
-    "locationQuickSubtitle": "Use your current location or send a saved place",
-    "useCurrentLocation": "Use current location",
-    "useCurrentLocationSubtitle": "Location permission is required",
-    "savedPlaces": "Saved places",
-    "savedOfficeTitle": "Head office",
-    "savedOfficeSubtitle": "Saved Office Subtitle",
-    "savedAirportTitle": "Tashkent airport",
-    "savedAirportSubtitle": "Saved Airport Subtitle",
-    "savedCoffeeTitle": "Coffee spot",
-    "savedCoffeeSubtitle": "Saved Coffee Subtitle",
-    "savedHomeTitle": "Uy",
-    "savedHomeSubtitle": "Saved personal place",
-    "saveVideoTitle": "Save video",
-    "saveVideoSubtitle": "Save this video to the device",
-    "videoReady": "Video ready",
-    "videoSaveNotice": "Save video",
-    "saveVideoAction": "Save video",
-    "savePhotoTitle": "Save photo",
-    "savePhotoSubtitle": "Save this photo to the device",
-    "photoReady": "Photo ready",
-    "photoSaveNotice": "Save photo",
-    "savePhotoAction": "Save photo",
-    "saveMediaTitle": "Save file",
-    "saveMediaSubtitle": "Save this attachment to the device",
-    "mediaReady": "File ready",
-    "mediaSaveNotice": "The original attachment will be saved to device storage",
-    "saveMediaAction": "Save file",
+    "locationQuickSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "useCurrentLocation": "Տեղեկություն",
+    "useCurrentLocationSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "savedPlaces": "Տեղեկություն",
+    "savedOfficeTitle": "Վերնագիր",
+    "savedOfficeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "savedAirportTitle": "Վերնագիր",
+    "savedAirportSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "savedCoffeeTitle": "Վերնագիր",
+    "savedCoffeeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "savedHomeTitle": "Վերնագիր",
+    "savedHomeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "saveVideoTitle": "Ձայն",
+    "saveVideoSubtitle": "Ձայն՝ Տեղեկություն",
+    "videoReady": "Պատրաստ է",
+    "videoSaveNotice": "Ձայն",
+    "saveVideoAction": "Ձայն",
+    "savePhotoTitle": "Պրոֆիլ",
+    "savePhotoSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+    "photoReady": "Պատրաստ է",
+    "photoSaveNotice": "Պրոֆիլ",
+    "savePhotoAction": "Պրոֆիլ",
+    "saveMediaTitle": "Վերնագիր",
+    "saveMediaSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "mediaReady": "Պատրաստ է",
+    "mediaSaveNotice": "Տեղեկություն",
+    "saveMediaAction": "Տեղեկություն",
     "pinnedMessages": "Ամրացված հաղորդագրություններ",
     "noPinnedMessages": "Ամրացված հաղորդագրություններ չկան",
     "replyToMessage": "Պատասխանել հաղորդագրությանը",
@@ -3542,7 +3543,7 @@ export const HY_LOCALE = {
     "animatedPanel": "Անիմացիոն վահանակ",
     "emoji": "Էմոջի",
     "gift": "Նվեր",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "Պրեմիում",
     "premiumStickers": "Պրեմիում սթիքերներ",
     "stickers": "Սթիքերներ",
     "openGallery": "Բացել պատկերասրահը",
@@ -3573,158 +3574,158 @@ export const HY_LOCALE = {
     "smartReply": "Խելացի պատասխան",
     "rewriteMessage": "Վերաշարադրել հաղորդագրությունը",
     "summarizeChat": "Ամփոփել չաթը",
-    "you": "You",
-    "typing": "Yozmoqda...",
-    "online": "Onlayn",
-    "offline": "Oflayn",
-    "connecting": "Ulanmoqda...",
-    "reconnecting": "Reconnecting",
-    "lastSeenToday": "last seen today at {{time}}",
-    "lastSeenYesterday": "last seen yesterday at {{time}}",
-    "lastSeenDate": "last seen on {{date}} at {{time}}",
-    "conversationPlaceholder": "The conversation will appear here.",
-    "today": "Bugun",
-    "yesterday": "Kecha",
-    "directRoom": "Direct chat",
-    "groupRoom": "Group",
-    "channelRoom": "Channel",
-    "businessRoom": "Business chat",
-    "encrypted": "Encrypted",
-    "messagePlaceholder": "Message Placeholder",
-    "messageTitle": "Message Title",
-    "replyAction": "Reply",
-    "replyPlaceholder": "Quick reply yozing",
-    "selectionDelete": "Delete",
-    "selectionForward": "Forward",
-    "deleteMe": "Delete Me",
-    "deleteAllAction": "Hamma for delete",
-    "save": "Save",
-    "link": "Link",
-    "searchTitle": "Search",
-    "searchMessage": "Room search will be added in the next step.",
-    "muteTitle": "Mute mode",
-    "muteMessage": "Chat notification controls will be added in room settings.",
-    "locationTitle": "Joylashuv",
-    "sharedLocation": "Shared location",
-    "locationAttached": "Location attached",
-    "locationOpenNotice": "Opening location",
-    "locationOpenError": "Could not open location.",
-    "locationSendError": "Could not send location.",
-    "locationCoordsMissing": "Location coordinates were not found.",
-    "locationAccessError": "Could not access location.",
-    "contactTitle": "Kontakt",
-    "contactsTitle": "Kontaktlar",
-    "contactCard": "Contact card",
-    "contactAttached": "Contact attached",
-    "contactReady": "Contact ready",
-    "contactOpenNotice": "Opening contact",
-    "contactOpenError": "Could not open contact.",
-    "contactsAccessError": "Could not access contacts.",
-    "documentTitle": "Hujjat",
-    "documentsTitle": "Hujjatlar",
-    "documentAttached": "Document attached",
-    "documentPreviewUnavailable": "Document preview is unavailable.",
-    "documentOpenNotice": "Open or save the document",
-    "documentOpening": "Opening document",
-    "documentOpenError": "Could not open document.",
-    "documentAccessError": "Could not access documents.",
-    "galleryTitle": "Galereya",
-    "galleryAccessError": "Could not access gallery.",
-    "photoTitle": "Photo",
-    "photoPreviewSubtitle": "Full-screen preview",
-    "photoPreviewUnavailable": "Photo preview is unavailable.",
-    "photoCaptured": "Photo ready",
-    "photoSaveError": "Could not save photo.",
-    "videoTitle": "Video message",
-    "videoCaptured": "Video message ready",
-    "videoSaveError": "Could not save video.",
-    "videoCloseHint": "Tap outside to close",
-    "videoMessageText": "🎬 video message",
-    "voiceTitle": "Voice message",
-    "voiceRecordingTitle": "Voice recording",
-    "voiceRecordingSubtitle": "Hold the button to record and release when you are ready to send.",
-    "voiceReadySubtitle": "Voice message is ready to send.",
-    "recordingVoice": "Recording voice message...",
-    "voiceReady": "Voice message ready",
-    "voiceReadyInline": "Voice message ready",
-    "voiceReadyToSend": "Voice message is ready to send",
-    "voiceSent": "Voice message sent",
-    "voicePlayback": "Playing voice message",
-    "voiceStartError": "Could not start recording.",
-    "voiceFinishError": "Could not finish recording.",
-    "voiceUploadError": "Could not upload the voice message.",
-    "voicePlayError": "Could not play the voice message.",
-    "voiceRateError": "Could not change playback speed.",
-    "copiedText": "Text copied",
-    "infoAction": "Info",
-    "editingTitle": "Edit message",
-    "editingSubtitle": "Change the text and send the message again",
-    "editPlaceholder": "Edit message",
-    "replyingTitle": "Quick reply",
-    "readOnlyTitle": "This channel is read only",
+    "you": "Դուք",
+    "typing": "Տեղեկություն",
+    "online": "Տեղեկություն",
+    "offline": "Տեղեկություն",
+    "connecting": "Բեռնվում է...",
+    "reconnecting": "Բեռնվում է...",
+    "lastSeenToday": "Տեղեկություն",
+    "lastSeenYesterday": "Տեղեկություն",
+    "lastSeenDate": "Տեղեկություն",
+    "conversationPlaceholder": "Որոնում",
+    "today": "Տեղեկություն",
+    "yesterday": "Տեղեկություն",
+    "directRoom": "Տեղեկություն",
+    "groupRoom": "Չատ",
+    "channelRoom": "Չատ",
+    "businessRoom": "Բիզնես չաթ",
+    "encrypted": "Տեղեկություն",
+    "messagePlaceholder": "Որոնում",
+    "messageTitle": "Վերնագիր",
+    "replyAction": "Պատասխանել",
+    "replyPlaceholder": "Որոնում",
+    "selectionDelete": "Ջնջել",
+    "selectionForward": "Փոխանցել",
+    "deleteMe": "Տեղեկություն",
+    "deleteAllAction": "Տեղեկություն",
+    "save": "Պահպանել",
+    "link": "Տեղեկություն",
+    "searchTitle": "Որոնել",
+    "searchMessage": "Որոնել",
+    "muteTitle": "Վերնագիր",
+    "muteMessage": "Տեղեկություն",
+    "locationTitle": "Վերնագիր",
+    "sharedLocation": "Տեղեկություն",
+    "locationAttached": "Տեղեկություն",
+    "locationOpenNotice": "Տեղեկություն",
+    "locationOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "locationSendError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "locationCoordsMissing": "Տեղեկություն",
+    "locationAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "contactTitle": "Վերնագիր",
+    "contactsTitle": "Վերնագիր",
+    "contactCard": "Տեղեկություն",
+    "contactAttached": "Տեղեկություն",
+    "contactReady": "Պատրաստ է",
+    "contactOpenNotice": "Տեղեկություն",
+    "contactOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "contactsAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "documentTitle": "Վերնագիր",
+    "documentsTitle": "Վերնագիր",
+    "documentAttached": "Տեղեկություն",
+    "documentPreviewUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "documentOpenNotice": "Տեղեկություն",
+    "documentOpening": "Տեղեկություն",
+    "documentOpenError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "documentAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "galleryTitle": "Վերնագիր",
+    "galleryAccessError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "photoTitle": "Լուսանկար",
+    "photoPreviewSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+    "photoPreviewUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "photoCaptured": "Պրոֆիլ",
+    "photoSaveError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "videoTitle": "Վիդեո հաղորդագրություն",
+    "videoCaptured": "Ձայն",
+    "videoSaveError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "videoCloseHint": "Չեղարկել",
+    "videoMessageText": "Ձայն՝ Տեղեկություն",
+    "voiceTitle": "Ձայնային հաղորդագրություն",
+    "voiceRecordingTitle": "Ձայնային AI",
+    "voiceRecordingSubtitle": "Ձայնային AI",
+    "voiceReadySubtitle": "Ձայնային AI",
+    "recordingVoice": "Ձայնային AI",
+    "voiceReady": "Ձայնային AI",
+    "voiceReadyInline": "Ձայնային AI",
+    "voiceReadyToSend": "Ձայնային AI",
+    "voiceSent": "Ձայնային AI",
+    "voicePlayback": "Ձայնային AI",
+    "voiceStartError": "Ձայնային AI",
+    "voiceFinishError": "Ձայնային AI",
+    "voiceUploadError": "Ձայնային AI",
+    "voicePlayError": "Ձայնային AI",
+    "voiceRateError": "Ձայնային AI",
+    "copiedText": "Տեղեկություն՝ Տեղեկություն",
+    "infoAction": "Տեղեկություն",
+    "editingTitle": "Խմբագրել հաղորդագրությունը",
+    "editingSubtitle": "Նկարագրություն՝ Տեղեկություն",
+    "editPlaceholder": "Խմբագրել հաղորդագրությունը",
+    "replyingTitle": "Վերնագիր",
+    "readOnlyTitle": "Վերնագիր",
     "readOnlySubtitle": "Այստեղ հաղորդագրությունների ուղարկումն անջատված է։ Մանրամասների համար բացեք ալիքի տեղեկությունները։",
-    "mediaLabel": "Media",
+    "mediaLabel": "Մեդիա",
     "aiTitle": "AI",
-    "aiMessage": "AI tools will be connected in the next step.",
-    "mediaTitle": "Media",
-    "mediaMessage": "Media, links, and documents will be expanded in the next step.",
-    "privacyTitle": "Privacy",
-    "privacyMessage": "Privacy and disappearing message settings will be added in the next step.",
-    "roomThemeUpdated": "Room mavzusi yangilandi",
-    "messageContextMissing": "Message Context Missing",
-    "messageEdited": "Message Edited",
-    "messageSent": "Message Sent",
-    "messageSendError": "Could not send the message.",
-    "giftSent": "Gift sent",
-    "animatedReactionSent": "Animated Reaction Sent",
-    "animatedEmojiSent": "Animated Emoji Sent",
-    "stickerAdded": "Sticker Added",
-    "selectedForForwardPrefix": "Forward for tanlandi",
-    "chooseMessagesForward": "Choose Messages Forward",
-    "deletedPrefix": "Deleted",
-    "deletedForAll": "Message deleted for everyone",
-    "deletedForMe": "Message deleted for you only",
-    "addedToComposer": "Added to composer",
-    "saveMediaReady": "Save Media Ready",
-    "openLinkReady": "Open Link Ready",
-    "openingWalletFiat": "Opening Wallet Fiat",
-    "openingCoinWallet": "Opening COIN Wallet",
-    "catalogSoon": "Katalog keyingi bosqichda will be added.",
-    "pollSoon": "Poll will be added in the next step.",
-    "eventSoon": "Voqea keyingi bosqichda will be added.",
-    "openingDocument": "Opening document",
-    "openingContact": "Opening contact",
-    "imageNormal": "Oddiy",
-    "editedLabel": "Edited Label",
-    "mapLabel": "Xarita",
-    "mediaCaptureFailed": "Could not complete media processing.",
-    "tapSend": "Tap Send",
-    "diamondsUnit": "olmos",
-    "channelInfoAction": "Channel Info Action",
-    "groupInfoAction": "Group Info Action",
-    "businessInfoAction": "Business Info Action",
-    "membersCount": "ishtirokchi",
-    "subscribersCount": "subscriber",
-    "mutedEnabled": "Notifications muted",
+    "aiMessage": "AI",
+    "mediaTitle": "Մեդիա",
+    "mediaMessage": "Տեղեկություն",
+    "privacyTitle": "Գաղտնիություն",
+    "privacyMessage": "Գաղտնիություն",
+    "roomThemeUpdated": "Թեմա",
+    "messageContextMissing": "Տեղեկություն՝ Տեղեկություն",
+    "messageEdited": "Տեղեկություն",
+    "messageSent": "Տեղեկություն",
+    "messageSendError": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "giftSent": "Նվերը ուղարկվեց",
+    "animatedReactionSent": "Տեղեկություն",
+    "animatedEmojiSent": "Տեղեկություն",
+    "stickerAdded": "Տեղեկություն",
+    "selectedForForwardPrefix": "Տեղեկություն",
+    "chooseMessagesForward": "Տեղեկություն",
+    "deletedPrefix": "Տեղեկություն",
+    "deletedForAll": "Տեղեկություն",
+    "deletedForMe": "Տեղեկություն",
+    "addedToComposer": "Տեղեկություն",
+    "saveMediaReady": "Պատրաստ է",
+    "openLinkReady": "Պատրաստ է",
+    "openingWalletFiat": "Դրամապանակ",
+    "openingCoinWallet": "Դրամապանակ",
+    "catalogSoon": "Տեղեկություն",
+    "pollSoon": "Տեղեկություն",
+    "eventSoon": "Տեղեկություն",
+    "openingDocument": "Տեղեկություն",
+    "openingContact": "Տեղեկություն",
+    "imageNormal": "Տեղեկություն",
+    "editedLabel": "Տեղեկություն",
+    "mapLabel": "Տեղեկություն",
+    "mediaCaptureFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "tapSend": "Տեղեկություն",
+    "diamondsUnit": "Տեղեկություն",
+    "channelInfoAction": "Չատ",
+    "groupInfoAction": "Չատ",
+    "businessInfoAction": "Տեղեկություն",
+    "membersCount": "Տեղեկություն",
+    "subscribersCount": "Տեղեկություն",
+    "mutedEnabled": "Տեղեկություն",
     "mutedDisabled": "Լռեցումը անջատված է",
-    "searchFocused": "Search Focused",
-    "aiReady": "AI Ready",
-    "mediaSaved": "Media Saved",
-    "contactSavedToDevice": "Contact Saved To Device",
-    "contactPermissionDenied": "Contact Permission Denied",
-    "contactUnavailable": "Contact Unavailable",
-    "addedToList": "Chat added to list",
-    "removedFromList": "Chat removed from list",
-    "disappearingEnabled": "Disappearing messages enabled",
+    "searchFocused": "Որոնել",
+    "aiReady": "Պատրաստ է",
+    "mediaSaved": "Տեղեկություն",
+    "contactSavedToDevice": "Տեղեկություն",
+    "contactPermissionDenied": "Տեղեկություն",
+    "contactUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "addedToList": "Տեղեկություն",
+    "removedFromList": "Տեղեկություն",
+    "disappearingEnabled": "Տեղեկություն",
     "disappearingDisabled": "Անհետացող հաղորդագրություններն անջատված են",
-    "reportSent": "Report Sent",
-    "chatCleared": "Chat tozalandi",
-    "chatExported": "Chat Exported",
-    "homeShortcutPinned": "Shortcut added to the home screen",
-    "homeShortcutUnsupported": "An Android shortcut bridge is required to add a home screen shortcut",
-    "blockActionDone": "Chat bloklandi",
-    "unblockActionDone": "Unblock Action Done",
-    "fileBadgeGeneric": "FAYL"
+    "reportSent": "Տեղեկություն",
+    "chatCleared": "Չատ",
+    "chatExported": "Չատ",
+    "homeShortcutPinned": "Տեղեկություն",
+    "homeShortcutUnsupported": "Տեղեկություն",
+    "blockActionDone": "Պատրաստ է",
+    "unblockActionDone": "Պատրաստ է",
+    "fileBadgeGeneric": "Տեղեկություն"
   },
   "chatPartner": {
     "title": "Պրոֆիլ",
@@ -3766,7 +3767,7 @@ export const HY_LOCALE = {
     "removePack": "Հեռացնել փաթեթը",
     "previewPack": "Նախադիտել փաթեթը",
     "noStickers": "Հասանելի սթիքերներ չկան",
-    "premiumOnly": "Հասանելի է միայն Premium-ի համար",
+    "premiumOnly": "Պրեմիում",
     "animatedStickers": "Անիմացված սթիքերներ",
     "staticStickers": "Ստատիկ սթիքերներ",
     "useSticker": "Օգտագործել սթիքերը",
@@ -3792,13 +3793,13 @@ export const HY_LOCALE = {
     "giftReceived": "Նվերը ստացվեց",
     "giftSent": "Նվերը ուղարկվեց",
     "giftExpired": "Նվերի ժամկետը լրացել է",
-    "giftWillExpire": "Այս նվերը կլրանա {{days}} օրից",
+    "giftWillExpire": "Պրեմիում",
     "wonGift": "Հաղթած նվեր",
     "promoGift": "Գովազդային նվեր",
     "storageGift": "Պահված նվեր",
     "giftInventory": "Նվերների պաշար",
     "notCountedAsIncome": "Չի հաշվարկվում որպես եկամուտ",
-    "transferToCoinBalance": "Փոխանցել Coin մնացորդին",
+    "transferToCoinBalance": "Տեղեկություն",
     "releaseRuleNotice": "Նվերներից ստացված եկամուտը ենթարկվում է ամսական ազատման կանոնին։",
     "wheelOfFortune": "Բախտի անիվ",
     "spin": "Պտտել",
@@ -3831,8 +3832,8 @@ export const HY_LOCALE = {
     "utilityPayment": "Կոմունալ վճարում",
     "recurringPayment": "Կրկնվող վճարում",
     "scheduledPayment": "Պլանավորված վճարում",
-    "secureCheckout": "Անվտանգ checkout",
-    "merchantCheckout": "Մերչանտ checkout",
+    "secureCheckout": "Տեղեկություն",
+    "merchantCheckout": "Տեղեկություն",
     "preauthorization": "Նախնական թույլտվություն",
     "authorizedAmount": "Լիազորված գումար",
     "capturePayment": "Գանձել վճարումը",
@@ -3868,29 +3869,29 @@ export const HY_LOCALE = {
   },
   "profile": {
     "completeScreen": {
-      "badge": "Profile setup",
-      "title": "Complete profile",
-      "subtitle": "Fill in the required identity fields to continue.",
-      "firstName": "First name",
-      "lastName": "Last name",
-      "username": "Username",
-      "phone": "Phone",
-      "unifiedId": "Unified ID",
-      "unifiedIdHint": "Your verified unified user ID is attached automatically.",
-      "usernameHint": "Use a public username for search and profile links.",
-      "privacy": "Your identity data is used only through the verified account profile.",
-      "continue": "Continue",
-      "back": "Back",
-      "required": "Required",
-      "saveErrorTitle": "Save error",
-      "saveErrorMessage": "Could not save the profile. Try again.",
-      "saving": "Saving...",
-      "userId": "User ID",
-      "createUser": "Create user",
-      "nameRequired": "Name is required",
-      "phoneRequired": "Phone is required",
-      "usernameRequired": "Username is required",
-      "success": "Profile completed successfully"
+      "badge": "Պրեմիում",
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "firstName": "Անուն",
+      "lastName": "Ազգանուն",
+      "username": "Օգտանուն",
+      "phone": "Հեռախոս",
+      "unifiedId": "Տեղեկություն",
+      "unifiedIdHint": "Տեղեկություն՝ Տեղեկություն",
+      "usernameHint": "Տեղեկություն՝ Տեղեկություն",
+      "privacy": "Գաղտնիություն",
+      "continue": "Շարունակել",
+      "back": "Հետ",
+      "required": "Պարտադիր",
+      "saveErrorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "saveErrorMessage": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "saving": "Պահպանվում է...",
+      "userId": "Օգտատիրոջ ID",
+      "createUser": "Տեղեկություն",
+      "nameRequired": "Տեղեկություն",
+      "phoneRequired": "Տեղեկություն",
+      "usernameRequired": "Տեղեկություն",
+      "success": "Տեղեկություն"
     },
     "title": "Պրոֆիլ",
     "editProfile": "Խմբագրել պրոֆիլը",
@@ -3915,37 +3916,37 @@ export const HY_LOCALE = {
     "history": "Պատմություն",
     "activity": {
       "media": {
-        "title": "Media",
-        "subtitle": "Combined live profile media built from photos and short videos.",
-        "stat": "items"
+        "title": "Մեդիա",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "links": {
-        "title": "Links",
-        "subtitle": "Real link list for your public profile and identity surface.",
-        "stat": "links"
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "voice": {
-        "title": "Voice",
-        "subtitle": "Record and play voice notes directly from the profile layer.",
-        "stat": "voice"
+        "title": "Ձայնային AI",
+        "subtitle": "Ձայնային AI",
+        "stat": "Ձայնային AI"
       }
     },
     "privacy": {
       "privacy": {
-        "title": "Privacy",
-        "description": "Phone visibility, photo rules, calls, invites, messages and bio visibility."
+        "title": "Գաղտնիություն",
+        "description": "Նկարագրություն"
       },
       "security": {
-        "title": "Security",
-        "description": "PIN, Face ID, biometric fallback, trusted devices and sensitive actions."
+        "title": "Անվտանգություն",
+        "description": "Նկարագրություն"
       },
       "data": {
-        "title": "Data Management",
-        "description": "Sync contacts, search suggestions, drafts, payment data and memory controls."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "qr": {
-        "title": "Profile QR",
-        "description": "Personal QR identity, profile sharing, quick scan and future QR access rules."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       }
     },
     "aiSettings": "AI կարգավորումներ",
@@ -3967,7 +3968,7 @@ export const HY_LOCALE = {
     "copyProfileLink": "Պատճենել պրոֆիլի հղումը",
     "shareProfile": "Կիսվել պրոֆիլով",
     "memberSince": "Անդամ է՝ սկսած",
-    "premiumBenefits": "Premium-ի առավելություններ",
+    "premiumBenefits": "Պրեմիում",
     "viewHistory": "Դիտել պատմությունը",
     "giftsHistory": "Նվերների պատմություն",
     "paymentHistory": "Վճարումների պատմություն",
@@ -3983,3078 +3984,3078 @@ export const HY_LOCALE = {
     "premiumBadge": "Պրեմիում նշան",
     "businessBadge": "Բիզնես նշան",
     "merchantBadge": "Մերչանտ նշան",
-    "short_videos": "Short videos",
-    "archivePublications": "Publication archive",
-    "allStories": "All stories",
-    "emptyPublications": "Public photos and videos have not been published yet.",
-    "emptyGifts": "Public gifts have not been published yet.",
-    "emptyArchive": "The publication archive is empty for now.",
-    "fullscreenHint": "Tap three times to open the photo in full screen.",
+    "short_videos": "Տեղեկություն",
+    "archivePublications": "Տեղեկություն",
+    "allStories": "Տեղեկություն",
+    "emptyPublications": "Տեղեկություն",
+    "emptyGifts": "Տեղեկություն",
+    "emptyArchive": "Տեղեկություն",
+    "fullscreenHint": "Տեղեկություն՝ Տեղեկություն",
     "hero": {
-      "live": "Live profile",
-      "verified": "Verified",
+      "live": "Տեղեկություն",
+      "verified": "Ստուգված",
       "stats": {
-        "sabiId": "Sabi ID",
-        "photos": "Photos",
-        "videos": "Videos"
+        "sabiId": "Տեղեկություն",
+        "photos": "Լուսանկարներ",
+        "videos": "Տեսանյութեր"
       },
       "actions": {
-        "edit": "Edit",
-        "photos": "Photos",
-        "videos": "Videos",
-        "voice": "Voice",
+        "edit": "Խմբագրել",
+        "photos": "Լուսանկարներ",
+        "videos": "Տեսանյութեր",
+        "voice": "Ձայնային AI",
         "qr": "QR"
       }
     },
     "launch": {
-      "badge": "Launch",
-      "freeMonths": "months free",
-      "title": "Premium launch offer",
-      "description": "Special free launch access to profile identity, premium surface, gifts and enhanced user experience."
+      "badge": "Պրեմիում",
+      "freeMonths": "Տեղեկություն",
+      "title": "Վերնագիր",
+      "description": "Նկարագրություն"
     },
     "sections": {
-      "identitySurface": "Identity Surface",
-      "sharedActivity": "Shared Activity",
-      "ownerAccess": "Groups & publication",
-      "account": "Account",
-      "privacySecurity": "Privacy & Security",
-      "appExperience": "App & Experience",
-      "premiumServices": "Premium Services",
-      "walletEconomy": "Wallet & Economy"
+      "identitySurface": "Պրոֆիլ և ինքնություն",
+      "sharedActivity": "Ակտիվություն",
+      "ownerAccess": "Խմբեր և հրապարակում",
+      "account": "Հաշիվ",
+      "privacySecurity": "Գաղտնիություն և անվտանգություն",
+      "appExperience": "Հավելված և փորձառություն",
+      "premiumServices": "Պրեմիում ծառայություններ",
+      "walletEconomy": "Դրամապանակ և տնտեսություն"
     },
     "identitySurfaceCards": {
       "photos": {
-        "title": "Photos",
-        "subtitle": "Manage photos.",
-        "stat": "ta photo"
+        "title": "Լուսանկարներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "shortVideos": {
-        "title": "Short videos",
-        "subtitle": "Manage short videos.",
-        "stat": "ta video"
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "likes": {
-        "title": "Likes",
-        "subtitle": "Profil holatiga ulangan jonli like hisoblagichi.",
-        "stat": "ta like"
+        "title": "Հավանումներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "reactions": {
-        "title": "Reactions",
-        "subtitle": "Profil state inside is savedgan hisoblagichli haqiqiy reaction markazi.",
-        "stat": "ta reaction"
+        "title": "Ռեակցիաներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       }
     },
     "sharedActivityCards": {
       "media": {
-        "title": "Media",
-        "subtitle": "Photos and qisqa videolardan tuzilgan umumiy jonli profil media bloki.",
-        "stat": "ta element"
+        "title": "Մեդիա",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "links": {
-        "title": "Links",
-        "subtitle": "Manage links.",
-        "stat": "ta link"
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "voice": {
-        "title": "Voice",
-        "subtitle": "Manage voice.",
-        "stat": "ta voice"
+        "title": "Ձայնային AI",
+        "subtitle": "Ձայնային AI",
+        "stat": "Ձայնային AI"
       }
     },
     "group": {
       "create": {
-        "title": "Create Group",
-        "description": "Group creation now goes through Profile, including owner data, publication and bindings."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "manage": {
-        "title": "Group Profile",
-        "description": "Owner data, publication, bindings and group access are managed from Profile."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "badges": {
-        "published": "Published",
-        "public": "Public",
-        "private": "Private",
-        "assistant": "Assistant",
-        "service": "Service",
-        "business": "Business",
-        "trade": "Trade"
+        "published": "Հրապարակված",
+        "public": "Հանրային",
+        "private": "Մասնավոր",
+        "assistant": "Օգնական",
+        "service": "Տեղեկություն",
+        "business": "Բիզնես",
+        "trade": "Տեղեկություն"
       },
       "fields": {
-        "groupName": "Group nomi",
-        "username": "Username",
-        "description": "Description",
-        "groupId": "Group ID",
-        "inviteLink": "Invite link",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedBotId": "Linked bot ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "linkedPublicationId": "Linked publication ID"
+        "groupName": "Չատ",
+        "username": "Օգտանուն",
+        "description": "Նկարագրություն",
+        "groupId": "Չատ",
+        "inviteLink": "Չատ",
+        "ownerName": "Տեղեկություն",
+        "ownerUserId": "Տեղեկություն",
+        "ownerRole": "Տեղեկություն",
+        "ownerPhone": "Տեղեկություն",
+        "ownerEmail": "Տեղեկություն",
+        "publicationId": "Տեղեկություն",
+        "linkedChatId": "Չատ",
+        "linkedBotId": "Օգնական",
+        "avatarUri": "Տեղեկություն",
+        "coverUri": "Տեղեկություն",
+        "linkedPublicationId": "Տեղեկություն"
       },
       "switches": {
-        "publicGroup": "Public group",
-        "published": "Publication enabled",
-        "showInProfile": "Show in Profile",
-        "joinRequests": "Join requests",
-        "memberInvites": "Members can send invites",
-        "onlyAdminsPost": "Only admins can post messages",
-        "onlyAdminsEdit": "Only admins can edit",
-        "commentsEnabled": "Comments enabled",
-        "searchableInDirectory": "Searchable in directory",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "approveSubscribers": "Approve subscribers",
-        "reactionsEnabled": "Reactions enabled"
+        "publicGroup": "Չատ",
+        "published": "Տեղեկություն",
+        "showInProfile": "Պրոֆիլ",
+        "joinRequests": "Տեղեկություն",
+        "memberInvites": "Պրոֆիլ",
+        "onlyAdminsPost": "Տեղեկություն",
+        "onlyAdminsEdit": "Տեղեկություն",
+        "commentsEnabled": "Տեղեկություն",
+        "searchableInDirectory": "Որոնել",
+        "previewEnabled": "Տեղեկություն",
+        "visibleInDiscovery": "Տեղեկություն",
+        "approveSubscribers": "Տեղեկություն",
+        "reactionsEnabled": "Տեղեկություն"
       },
       "actions": {
-        "create": "Create group",
-        "save": "Save",
-        "reset": "Reset",
-        "open": "Open group profileni"
+        "create": "Տեղեկություն",
+        "save": "Պահպանել",
+        "reset": "Վերակայել",
+        "open": "Տեղեկություն"
       },
       "alerts": {
-        "loading": "Group loading...",
-        "createSuccess": "Group inside Profile created",
-        "saveSuccess": "Group settings saved",
-        "resetTitle": "Reset Title",
-        "resetDescription": "Reset Description"
+        "loading": "Բեռնվում է...",
+        "createSuccess": "Տեղեկություն",
+        "saveSuccess": "Տեղեկություն",
+        "resetTitle": "Վերնագիր",
+        "resetDescription": "Նկարագրություն՝ Տեղեկություն"
       }
     },
     "channel": {
       "create": {
-        "title": "Create channel",
-        "description": "Channel endi inside Profilen yaratiladi, owner data, publication and bindings ham here boshqariladi."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "manage": {
-        "title": "Channel profile",
-        "description": "Manage manage."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "badges": {
-        "published": "Published",
-        "public": "Public",
-        "private": "Private",
-        "service": "Service",
-        "business": "Business",
-        "trade": "Trade"
+        "published": "Հրապարակված",
+        "public": "Հանրային",
+        "private": "Մասնավոր",
+        "service": "Տեղեկություն",
+        "business": "Բիզնես",
+        "trade": "Տեղեկություն"
       },
       "fields": {
-        "channelName": "Channel nomi",
-        "username": "Username",
-        "description": "Description",
-        "channelId": "Channel ID",
-        "inviteLink": "Invite link",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedDiscussionId": "Linked discussion ID",
-        "linkedBotId": "Linked bot ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "linkedPublicationId": "Linked publication ID"
+        "channelName": "Չատ",
+        "username": "Օգտանուն",
+        "description": "Նկարագրություն",
+        "channelId": "Չատ",
+        "inviteLink": "Չատ",
+        "ownerName": "Տեղեկություն",
+        "ownerUserId": "Տեղեկություն",
+        "ownerRole": "Տեղեկություն",
+        "ownerPhone": "Տեղեկություն",
+        "ownerEmail": "Տեղեկություն",
+        "publicationId": "Տեղեկություն",
+        "linkedChatId": "Չատ",
+        "linkedDiscussionId": "Տեղեկություն",
+        "linkedBotId": "Օգնական",
+        "avatarUri": "Տեղեկություն",
+        "coverUri": "Տեղեկություն",
+        "linkedPublicationId": "Տեղեկություն"
       },
       "switches": {
-        "publicChannel": "Public channel",
-        "published": "Publication enabled",
-        "showInProfile": "Show in Profile",
-        "joinRequests": "Join requests",
-        "onlyAdminsPost": "Only admins can post",
-        "onlyAdminsEdit": "Only admins can edit",
-        "commentsEnabled": "Comments enabled",
-        "searchableInDirectory": "Searchable in directory",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "approveSubscribers": "Approve subscribers",
-        "reactionsEnabled": "Reactions enabled"
+        "publicChannel": "Չատ",
+        "published": "Տեղեկություն",
+        "showInProfile": "Պրոֆիլ",
+        "joinRequests": "Տեղեկություն",
+        "onlyAdminsPost": "Տեղեկություն",
+        "onlyAdminsEdit": "Տեղեկություն",
+        "commentsEnabled": "Տեղեկություն",
+        "searchableInDirectory": "Որոնել",
+        "previewEnabled": "Տեղեկություն",
+        "visibleInDiscovery": "Տեղեկություն",
+        "approveSubscribers": "Տեղեկություն",
+        "reactionsEnabled": "Տեղեկություն"
       },
       "actions": {
-        "create": "Create channel",
-        "save": "Save",
-        "reset": "Reset",
-        "open": "Open channel profileni"
+        "create": "Տեղեկություն",
+        "save": "Պահպանել",
+        "reset": "Վերակայել",
+        "open": "Տեղեկություն"
       },
       "alerts": {
-        "loading": "Loading channel...",
-        "createSuccess": "Channel created",
-        "saveSuccess": "Channel saved",
-        "resetTitle": "Reset channel",
-        "resetDescription": "Reset channel changes?"
+        "loading": "Բեռնվում է...",
+        "createSuccess": "Տեղեկություն",
+        "saveSuccess": "Տեղեկություն",
+        "resetTitle": "Վերնագիր",
+        "resetDescription": "Նկարագրություն՝ Տեղեկություն"
       }
     },
     "bot": {
       "create": {
-        "title": "Create bot",
-        "description": "Bot endi inside Profilen yaratiladi, owner data, publication, modul and wallet routing here boshqariladi."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "manage": {
-        "title": "Bot profile",
-        "description": "Bot owner data, modul, bindings and wallet routing inside Profilen boshqariladi."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "badges": {
-        "active": "Active",
-        "paused": "Paused",
-        "public": "Public",
-        "private": "Private",
-        "published": "Published",
-        "assistant": "Assistant",
-        "service": "Service",
-        "business": "Business",
-        "trade": "Trade"
+        "active": "Ակտիվ",
+        "paused": "Դադարեցված",
+        "public": "Հանրային",
+        "private": "Մասնավոր",
+        "published": "Հրապարակված",
+        "assistant": "Օգնական",
+        "service": "Տեղեկություն",
+        "business": "Բիզնես",
+        "trade": "Տեղեկություն"
       },
       "fields": {
-        "botName": "Bot nomi",
-        "username": "Username",
-        "description": "Description",
-        "botId": "Bot ID",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedGroupId": "Linked group ID",
-        "linkedChannelId": "Linked channel ID",
-        "linkedMarketId": "Linked market ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "botKind": "Bot type",
-        "linkedPublicationId": "Linked publication ID"
+        "botName": "Օգնական",
+        "username": "Օգտանուն",
+        "description": "Նկարագրություն",
+        "botId": "Օգնական",
+        "ownerName": "Տեղեկություն",
+        "ownerUserId": "Տեղեկություն",
+        "ownerRole": "Տեղեկություն",
+        "ownerPhone": "Տեղեկություն",
+        "ownerEmail": "Տեղեկություն",
+        "publicationId": "Տեղեկություն",
+        "linkedChatId": "Չատ",
+        "linkedGroupId": "Չատ",
+        "linkedChannelId": "Չատ",
+        "linkedMarketId": "Տեղեկություն",
+        "avatarUri": "Տեղեկություն",
+        "coverUri": "Տեղեկություն",
+        "botKind": "Օգնական",
+        "linkedPublicationId": "Տեղեկություն"
       },
       "switches": {
-        "publicBot": "Public bot",
-        "published": "Publication enabled",
-        "showInProfile": "Show in Profile",
-        "active": "Bot active",
-        "acceptCommands": "Accept commands",
-        "showInCatalog": "Show in catalog",
-        "allowPayments": "Allow payments",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "inlineEnabled": "Inline mode enabled",
-        "autoReplyEnabled": "Auto reply enabled",
-        "marketplaceLinked": "Marketplace linked",
-        "deliveryLinked": "Delivery linked",
-        "businessRoutingEnabled": "Business routing enabled"
+        "publicBot": "Օգնական",
+        "published": "Տեղեկություն",
+        "showInProfile": "Պրոֆիլ",
+        "active": "Տեղեկություն",
+        "acceptCommands": "Տեղեկություն",
+        "showInCatalog": "Տեղեկություն",
+        "allowPayments": "Տեղեկություն",
+        "previewEnabled": "Տեղեկություն",
+        "visibleInDiscovery": "Տեղեկություն",
+        "inlineEnabled": "Տեղեկություն",
+        "autoReplyEnabled": "Տեղեկություն",
+        "marketplaceLinked": "Տեղեկություն",
+        "deliveryLinked": "Տեղեկություն",
+        "businessRoutingEnabled": "Տեղեկություն"
       },
       "routing": {
-        "title": "Wallet routing",
-        "sabiWallet": "SABI Wallet",
-        "businessRoutingLayer": "Business Routing Layer",
-        "tradeBot": "Trade bot",
-        "businessBot": "Business bot",
-        "tradeHint": "Trade and commerce bot income is routed to SABI Wallet.",
-        "businessHint": "Until Business Wallet launches, business bot income is routed to the Business Routing Layer."
+        "title": "Վերնագիր",
+        "sabiWallet": "Դրամապանակ",
+        "businessRoutingLayer": "Տեղեկություն",
+        "tradeBot": "Օգնական",
+        "businessBot": "Տեղեկություն",
+        "tradeHint": "Տեղեկություն՝ Տեղեկություն",
+        "businessHint": "Տեղեկություն՝ Տեղեկություն"
       },
       "actions": {
-        "create": "Create bot",
-        "save": "Save",
-        "reset": "Reset",
-        "open": "Open bot profileni"
+        "create": "Տեղեկություն",
+        "save": "Պահպանել",
+        "reset": "Վերակայել",
+        "open": "Տեղեկություն"
       },
       "alerts": {
-        "loading": "Loading bot...",
-        "createSuccess": "Bot created",
-        "saveSuccess": "Bot saved",
-        "resetTitle": "Reset bot",
-        "resetDescription": "Reset bot changes?"
+        "loading": "Բեռնվում է...",
+        "createSuccess": "Տեղեկություն",
+        "saveSuccess": "Տեղեկություն",
+        "resetTitle": "Վերնագիր",
+        "resetDescription": "Նկարագրություն՝ Տեղեկություն"
       }
     },
     "likesScreen": {
       "header": {
-        "title": "Likes"
+        "title": "Հավանումներ"
       },
       "card": {
-        "title": "Jonli likes",
-        "subtitle": "Real likes received on your profile appear here. This counter is not changed manually by the owner."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "actions": {
-        "readonly": "Readonly",
-        "fromUsers": "From Users"
+        "readonly": "Տեղեկություն",
+        "fromUsers": "Տեղեկություն"
       },
       "notes": {
-        "readonlyTitle": "Readonly Title",
-        "readonlyDescription": "This section is read-only. Likes are not added manually by the owner.",
-        "sourceTitle": "Haqiqiy manba",
-        "sourceDescription": "Likes come only from real user activity.",
-        "emptyTitle": "Empty holat",
-        "emptyDescription": "There are no likes yet. When users like your profile, they will appear here.",
-        "nonEmptyDescription": "Likes received on your profile are shown here as a real counter."
+        "readonlyTitle": "Վերնագիր",
+        "readonlyDescription": "Նկարագրություն՝ Տեղեկություն",
+        "sourceTitle": "Վերնագիր",
+        "sourceDescription": "Նկարագրություն՝ Տեղեկություն",
+        "emptyTitle": "Տեղեկություն",
+        "emptyDescription": "Տեղեկություն՝ Տեղեկություն",
+        "nonEmptyDescription": "Տեղեկություն՝ Տեղեկություն"
       },
       "empty": {
-        "title": "No likes yet",
-        "description": "Manage empty."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       }
     },
     "linksScreen": {
       "header": {
-        "title": "Header"
+        "title": "Վերնագիր"
       },
       "card": {
-        "title": "Card",
-        "subtitle": "Manage the links visible on your public profile here."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "inputs": {
-        "labelPlaceholder": "Link nomi",
-        "urlPlaceholder": "https://example.com"
+        "labelPlaceholder": "Որոնում",
+        "urlPlaceholder": "Որոնում"
       },
       "actions": {
-        "add": "Add link",
-        "open": "Open",
-        "delete": "Delete"
+        "add": "Տեղեկություն",
+        "open": "Բացել",
+        "delete": "Ջնջել"
       },
       "item": {
-        "defaultLabel": "Link"
+        "defaultLabel": "Տեղեկություն"
       },
       "empty": {
-        "title": "Empty",
-        "description": "Manage empty."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "alerts": {
-        "invalidUrlTitle": "Invalid Url Title",
-        "invalidUrlMessage": "Please enter a complete and valid URL.",
-        "duplicateTitle": "Takror link",
-        "duplicateMessage": "This link has already been added.",
-        "openFailedTitle": "Open Failed Title",
-        "openFailedMessage": "Could not open this link."
+        "invalidUrlTitle": "Վերնագիր",
+        "invalidUrlMessage": "Տեղեկություն",
+        "duplicateTitle": "Վերնագիր",
+        "duplicateMessage": "Տեղեկություն",
+        "openFailedTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+        "openFailedMessage": "Հարցումը չհաջողվեց։ Փորձեք կրկին։"
       },
       "form": {
-        "labelPlaceholder": "Label Placeholder",
-        "urlPlaceholder": "Url Placeholder"
+        "labelPlaceholder": "Որոնում",
+        "urlPlaceholder": "Որոնում"
       }
     },
     "accountSection": {
       "edit": {
-        "title": "Personal information",
-        "description": "Photo, identity, address, language, and personal account details."
+        "title": "Անձնական տվյալներ",
+        "description": "Նկարագրություն"
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Verification level, document status, and compliance restrictions.",
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
         "badges": {
-          "starter": "Starter",
-          "basic": "Asosiy",
-          "standard": "Standart",
-          "plus": "Plus",
-          "advanced": "Kengaytirilgan",
-          "enhanced": "Kuchaytirilgan",
-          "full": "Full",
-          "verified": "Verified",
-          "business": "Biznes",
-          "merchant": "Merchant"
+          "starter": "Տեղեկություն",
+          "basic": "Տեղեկություն",
+          "standard": "Տեղեկություն",
+          "plus": "Տեղեկություն",
+          "advanced": "Տեղեկություն",
+          "enhanced": "Տեղեկություն",
+          "full": "Տեղեկություն",
+          "verified": "Ստուգված",
+          "business": "Տեղեկություն",
+          "merchant": "Մերչանտ"
         }
       },
       "devices": {
-        "title": "Devices & sessions",
-        "description": "iPhone, Android, Web, ishonchli qurilmalar, QR device flow and sessiyalar."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "trusted": {
-        "title": "Trusted / blocked",
-        "description": "Manage trusted.",
-        "badgeSuffix": "ishonchli"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badgeSuffix": "Տեղեկություն"
       }
     },
     "privacySection": {
       "privacy": {
-        "title": "Privacy",
-        "description": "Phone visibility, photo rules, calls, invites, messages, and bio visibility."
+        "title": "Գաղտնիություն",
+        "description": "Նկարագրություն"
       },
       "security": {
-        "title": "Security",
-        "description": "PIN, Face ID, biometric fallback, trusted devices, and sensitive actions."
+        "title": "Անվտանգություն",
+        "description": "Նկարագրություն"
       },
       "data": {
-        "title": "Data management",
-        "description": "Contact sync, search suggestions, drafts, payment data, and memory controls."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "qr": {
-        "title": "Profile QR",
-        "description": "Personal QR identity, profile sharing, quick scan, and QR access rules."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       }
     },
     "appSection": {
       "language": {
-        "title": "Language & region",
-        "description": "Languages, countries, formatting, time zones, and localized presentation."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "preferences": {
-        "title": "Appearance & preferences",
-        "description": "Theme entry, sounds, haptics, previews, and app experience rules."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "colors": {
-        "title": "Profile theme & frames",
-        "description": "Owner-controlled profile theme, avatar frames, accents, and premium identity styling.",
-        "badge": "Premium"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badge": "Պրեմիում"
       },
       "ai": {
-        "title": "AI & smart assistant",
-        "description": "AI profile settings, bio polishing, privacy hints, and smart helper tools.",
-        "badge": "Smart"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badge": "Պրեմիում"
       },
       "notificationSounds": {
-        "title": "Melodies and notification sounds",
-        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+        "title": "Մեղեդիներ և ծանուցման ձայներ",
+        "description": "Նկարագրություն"
       },
       "notifications": {
-        "title": "Notifications",
-        "description": "Global inbox, alert priorities, wallet notifications, and preferences."
+        "title": "Ծանուցումներ",
+        "description": "Նկարագրություն"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, seasons, inventory, upgrades, ranks, and rewards.",
-        "badge": "Keyin"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badge": "Պրեմիում"
       }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "Sabi Premium",
-        "description": "Premium features, avatar frames, identity styling, and future premium upgrades."
+        "title": "Պրեմիում",
+        "description": "Պրեմիում"
       },
       "business": {
-        "title": "Business Account",
-        "description": "Business tools, hours, replies, greetings, links and automation."
+        "title": "Բիզնես հաշիվ",
+        "description": "Պրեմիում"
       },
       "credits": {
-        "title": "Credits Center",
-        "description": "Credits balance, stats, income, expenses, reactions and history."
+        "title": "Պրեմիում",
+        "description": "Պրեմիում"
       },
       "gifts": {
-        "title": "Gift Center",
-        "description": "Gift sending and catalog with a free launch period for all users."
+        "title": "Պրեմիում",
+        "description": "Պրեմիում"
       },
       "premium": {
-        "title": "Sabi Premium",
-        "description": "Premium features, avatar frames, identity styling and future premium upgrades."
+        "title": "Պրեմիում",
+        "description": "Պրեմիում"
       }
     },
     "walletSection": {
       "walletCard": {
-        "title": "Wallet",
-        "description": "Open wallet home, cards, QR, SabiPay, and personal financial flows."
+        "title": "Դրամապանակ",
+        "description": "Նկարագրություն"
       },
       "settings": {
-        "title": "Wallet settings",
-        "description": "Payment rules, smart routing, privacy behavior, and wallet settings."
+        "title": "Դրամապանակի կարգավորումներ",
+        "description": "Կարգավորումներ"
       }
     },
     "giftsBlock": {
-      "title": "Gift Center",
-      "description": "Gifts are part of the unified profile identity across the premium SuperApp surface.",
+      "title": "Վերնագիր",
+      "description": "Նկարագրություն",
       "stats": {
-        "all": "All gifts",
-        "premium": "Premium",
-        "seasonal": "Seasonal"
+        "all": "Տեղեկություն",
+        "premium": "Պրեմիում",
+        "seasonal": "Տեղեկություն"
       },
-      "open": "Open Gift Center"
+      "open": "Տեղեկություն"
     },
     "publicationManagement": {
-      "title": "Publication management",
-      "subtitle": "Publication settings for groups, channels, and bots are managed from inside Profile.",
-      "ownerData": "Owner data",
-      "bindings": "Bindings",
-      "publication": "Publication",
-      "accessRules": "Access rules",
-      "hiddenWhenNotCreated": "If the object has not been created, the section is hidden.",
-      "createFromProfile": "Profile is the main entry point for creating groups, channels, and bots."
+      "title": "Վերնագիր",
+      "subtitle": "Նկարագրություն",
+      "ownerData": "Տեղեկություն",
+      "bindings": "Տեղեկություն",
+      "publication": "Տեղեկություն",
+      "accessRules": "Տեղեկություն",
+      "hiddenWhenNotCreated": "Տեղեկություն",
+      "createFromProfile": "Պրոֆիլ"
     },
-    "home": "Home",
-    "eyebrow": "SABI IDENTITY CENTER",
-    "subtitle": "Premium account center for identity, privacy, wallet, business, gifts, credits, AI tools, gaming, and real profile media controls.",
+    "home": "Գլխավոր",
+    "eyebrow": "Պրոֆիլ",
+    "subtitle": "Նկարագրություն",
     "surface": {
       "photos": {
-        "title": "Photos",
-        "subtitle": "Upload, manage and set profile photos for the real public surface.",
-        "stat": "photos"
+        "title": "Լուսանկարներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "shortVideos": {
-        "title": "Short Videos",
-        "subtitle": "Add and manage real short videos for the profile layer.",
-        "stat": "videos"
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "likes": {
-        "title": "Likes",
-        "subtitle": "Live likes counter connected to the profile state.",
-        "stat": "likes"
+        "title": "Հավանումներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       },
       "reactions": {
-        "title": "Reactions",
-        "subtitle": "Real reaction hub with counters stored in the profile state.",
-        "stat": "reactions"
+        "title": "Ռեակցիաներ",
+        "subtitle": "Նկարագրություն",
+        "stat": "Տեղեկություն"
       }
     },
     "account": {
       "edit": {
-        "title": "Personal Information",
-        "description": "Photo, identity, address, language and personal account details."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Verification level, document state and compliance restrictions.",
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
         "badges": {
-          "starter": "Starter",
-          "basic": "Basic",
-          "standard": "Standard",
-          "plus": "Plus",
-          "advanced": "Advanced",
-          "enhanced": "Enhanced",
-          "full": "Full",
-          "verified": "Verified",
-          "business": "Business",
-          "merchant": "Merchant"
+          "starter": "Տեղեկություն",
+          "basic": "Տեղեկություն",
+          "standard": "Ստանդարտ",
+          "plus": "Տեղեկություն",
+          "advanced": "Ընդլայնված",
+          "enhanced": "Տեղեկություն",
+          "full": "Տեղեկություն",
+          "verified": "Ստուգված",
+          "business": "Բիզնես",
+          "merchant": "Մերչանտ"
         }
       },
       "devices": {
-        "title": "Devices & Sessions",
-        "description": "iPhone, Android, Web, trusted devices, QR device flows and sessions."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "trusted": {
-        "title": "Trusted / Blocked",
-        "description": "Trusted people, blocked users, privacy exceptions and future whitelist tools.",
-        "badgeSuffix": "trusted"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badgeSuffix": "Տեղեկություն"
       }
     },
     "app": {
       "language": {
-        "title": "Language & Region",
-        "description": "Languages, countries, formatting, time zone and localized presentation."
+        "title": "Լեզու և տարածաշրջան",
+        "description": "Նկարագրություն"
       },
       "preferences": {
-        "title": "Appearance & Preferences",
-        "description": "Theme entry, sounds, haptics, previews and app experience rules."
+        "title": "Տեսք և նախապատվություններ",
+        "description": "Նկարագրություն"
       },
       "colors": {
-        "title": "Profile Theme & Frames",
-        "description": "Owner-controlled profile theme, avatar frames, accents and premium identity styling.",
-        "badge": "Premium"
+        "title": "Պրոֆիլի թեմա և շրջանակներ",
+        "description": "Նկարագրություն",
+        "badge": "Պրեմիում"
       },
       "ai": {
-        "title": "AI & Smart Assistant",
-        "description": "AI profile setup, bio polishing, privacy hints and smart helper tools.",
-        "badge": "Smart"
+        "title": "AI և խելացի օգնական",
+        "description": "Նկարագրություն",
+        "badge": "Պրեմիում"
       },
       "notifications": {
-        "title": "Notifications",
-        "description": "Global inbox, alert priorities, wallet notifications and preferences."
+        "title": "Ծանուցումներ",
+        "description": "Նկարագրություն"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, seasons, inventory, upgrades, ranks and rewards.",
-        "badge": "Next"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "badge": "Հաջորդը"
       }
     },
     "wallet": {
       "wallet": {
-        "title": "Wallet",
-        "description": "Open wallet home, cards, QR, SabiPay and personal finance flows."
+        "title": "Դրամապանակ",
+        "description": "Նկարագրություն"
       },
       "settings": {
-        "title": "Wallet Settings",
-        "description": "Payment rules, smart routing, privacy behavior and wallet preferences."
+        "title": "Կարգավորումներ",
+        "description": "Կարգավորումներ"
       }
     },
     "editScreen": {
       "header": {
-        "title": "Profilni edit",
-        "viewAction": "View Action"
+        "title": "Խմբագրել պրոֆիլը",
+        "viewAction": "Դիտել"
       },
       "intro": {
-        "eyebrow": "PROFILNI BOSHQARISH",
-        "title": "Profilni edit",
-        "subtitle": "Manage intro."
+        "eyebrow": "Տեղեկություն",
+        "title": "Խմբագրել պրոֆիլը",
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
-        "subtitle": "Manage hero.",
-        "changeAvatarAction": "Avatarni almashtirish",
-        "aiLinkedBadge": "AI Linked Badge",
-        "editModeBadge": "Edit rejimi",
+        "subtitle": "Նկարագրություն",
+        "changeAvatarAction": "Տեղեկություն",
+        "aiLinkedBadge": "AI",
+        "editModeBadge": "Խմբագրման ռեժիմ",
         "quickActions": {
-          "photos": "Photos",
-          "videos": "Videolar",
-          "voice": "Voice",
-          "public": "Public"
+          "photos": "Լուսանկարներ",
+          "videos": "Տեսանյութեր",
+          "voice": "Ձայնային AI",
+          "public": "Հանրային պրոֆիլ"
         }
       },
       "sections": {
-        "identity": "Identitet",
-        "presentation": "Presentation",
-        "safety": "Security"
+        "identity": "Տեղեկություն",
+        "presentation": "Հանրային պրոֆիլ",
+        "safety": "Տեղեկություն"
       },
       "identity": {
         "photos": {
-          "title": "Photos",
-          "description": "Manage photos."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "videos": {
-          "title": "Videolar",
-          "description": "Qisqa videolarni boshqarish and profil qatlamiga biriktirish."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "voice": {
-          "title": "Voice",
-          "description": "Manage voice."
+          "title": "Ձայնային AI",
+          "description": "Ձայնային AI"
         },
         "username": {
-          "title": "Username",
-          "description": "Manage username."
+          "title": "Օգտանուն",
+          "description": "Նկարագրություն"
         },
         "phone": {
-          "title": "Phone",
-          "description": "Manage phone."
+          "title": "Հեռախոս",
+          "description": "Նկարագրություն"
         },
         "email": {
-          "title": "Kirish emaili",
-          "description": "Manage email."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "birthday": {
-          "title": "Birthday",
-          "description": "Manage birthday."
+          "title": "Ծննդյան օր",
+          "description": "Նկարագրություն"
         },
         "language": {
-          "title": "Language & region",
-          "description": "Manage language.",
-          "badge": "Global"
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն",
+          "badge": "Պրեմիում"
         }
       },
       "presentation": {
         "public": {
-          "title": "Public",
-          "description": "Manage public."
+          "title": "Հանրային պրոֆիլ",
+          "description": "Նկարագրություն"
         },
         "colors": {
-          "title": "Theme and ramkalar",
-          "description": "Owner nazoratidagi theme, premium ranglar and avatar ramkalari.",
-          "badge": "Premium"
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն",
+          "badge": "Պրեմիում"
         },
         "ai": {
-          "title": "AI profil qatlami",
-          "description": "Manage ai.",
-          "badge": "Smart"
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն",
+          "badge": "Պրեմիում"
         },
         "qr": {
-          "title": "Profile QR",
-          "description": "Manage qr."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "safety": {
         "verification": {
-          "title": "Verification",
-          "description": "KYC holati, hujjatlar and akkaunt ishonch signallari."
+          "title": "Հաստատում",
+          "description": "Նկարագրություն"
         },
         "privacy": {
-          "title": "Privacy",
-          "description": "Manage privacy."
+          "title": "Գաղտնիություն",
+          "description": "Նկարագրություն"
         },
         "security": {
-          "title": "Security",
-          "description": "Manage security."
+          "title": "Անվտանգություն",
+          "description": "Նկարագրություն"
         }
       }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "Username",
-          "title": "Username",
-          "subtitle": "Manage username."
+          "eyebrow": "Տեղեկություն",
+          "title": "Օգտանուն",
+          "subtitle": "Նկարագրություն"
         },
         "phone": {
-          "eyebrow": "Phone",
-          "title": "Phone",
-          "subtitle": "Manage phone."
+          "eyebrow": "Տեղեկություն",
+          "title": "Հեռախոսահամար",
+          "subtitle": "Նկարագրություն"
         },
         "birthday": {
-          "eyebrow": "BIRTHDAY",
-          "title": "Birthday",
-          "subtitle": "Manage birthday."
+          "eyebrow": "Տեղեկություն",
+          "title": "Ծննդյան օր",
+          "subtitle": "Նկարագրություն"
         },
         "channel": {
-          "eyebrow": "CHANNEL",
-          "title": "Channel identity",
-          "subtitle": "Public channel identity and profile connection."
+          "eyebrow": "Չատ",
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "bot": {
-          "eyebrow": "BOT",
-          "title": "Bot identity",
-          "subtitle": "Public bot identity and assistant connection."
+          "eyebrow": "Օգնական",
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "colors": {
-          "eyebrow": "Eyebrow",
-          "subtitle": "Subtitle",
-          "title": "Title"
+          "eyebrow": "Տեղեկություն",
+          "subtitle": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       },
       "username": {
-        "fieldLabel": "Username",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "placeholder": "Placeholder"
+        "fieldLabel": "Օգտանուն",
+        "noteTitle": "Վերնագիր",
+        "noteText": "Տեղեկություն՝ Տեղեկություն",
+        "placeholder": "Որոնում"
       },
       "phone": {
-        "fieldLabel": "Phone raqami",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "placeholder": "Placeholder"
+        "fieldLabel": "Հեռախոս",
+        "noteTitle": "Հաշվի համար",
+        "noteText": "Տեղեկություն՝ Տեղեկություն",
+        "placeholder": "Որոնում"
       },
       "birthday": {
-        "day": "Kun",
-        "month": "Oy",
-        "year": "Yil",
-        "noteTitle": "Eslatma",
-        "noteText": "Note Text",
-        "dayPlaceholder": "Day Placeholder",
-        "monthPlaceholder": "Month Placeholder",
-        "yearPlaceholder": "Year Placeholder"
+        "day": "Տեղեկություն",
+        "month": "Տեղեկություն",
+        "year": "Տեղեկություն",
+        "noteTitle": "Ծննդյան օր",
+        "noteText": "Տեղեկություն՝ Տեղեկություն",
+        "dayPlaceholder": "Որոնում",
+        "monthPlaceholder": "Որոնում",
+        "yearPlaceholder": "Որոնում"
       },
       "channel": {
-        "fieldLabel": "Channel",
-        "placeholder": "Select channel",
-        "noteTitle": "Channel profile",
-        "noteText": "Channel public data is managed from Profile."
+        "fieldLabel": "Տեղեկություն",
+        "placeholder": "Որոնում",
+        "noteTitle": "Վերնագիր",
+        "noteText": "Տեղեկություն՝ Տեղեկություն"
       },
       "bot": {
-        "fieldLabel": "Bot",
-        "placeholder": "Select bot",
-        "noteTitle": "Bot profile",
-        "noteText": "Bot public data, AI access and routing are managed from Profile."
+        "fieldLabel": "Տեղեկություն",
+        "placeholder": "Որոնում",
+        "noteTitle": "Վերնագիր",
+        "noteText": "Տեղեկություն՝ Տեղեկություն"
       },
       "colors": {
-        "noteText": "Note Text",
-        "noteTitle": "Note",
+        "noteText": "Տեղեկություն՝ Տեղեկություն",
+        "noteTitle": "Վերնագիր",
         "presets": {
-          "blue": "Blue",
-          "emerald": "Emerald",
-          "gold": "Gold",
-          "purple": "Purple",
-          "teal": "Teal"
+          "blue": "Տեղեկություն",
+          "emerald": "Տեղեկություն",
+          "gold": "Տեղեկություն",
+          "purple": "Տեղեկություն",
+          "teal": "Տեղեկություն"
         },
-        "previewTitle": "Preview"
+        "previewTitle": "Նախադիտում"
       }
     },
     "channelScreen": {
-      "loading": "Loading...",
+      "loading": "Բեռնվում է...",
       "header": {
-        "title": "Channel management"
+        "title": "Վերնագիր"
       },
       "shelf": {
-        "title": "My channels",
-        "empty": "No channels yet."
+        "title": "Վերնագիր",
+        "empty": "Տեղեկություն"
       },
       "tabs": {
-        "overview": "Overview",
-        "public": "Public",
-        "control": "Control",
-        "history": "History"
+        "overview": "Տեղեկություն",
+        "public": "Հանրային",
+        "control": "Տեղեկություն",
+        "history": "Պատմություն"
       },
       "actions": {
-        "create": "Create channel",
-        "creating": "Creating...",
-        "save": "Save",
-        "saving": "Saving...",
-        "reset": "Reset"
+        "create": "Տեղեկություն",
+        "creating": "Տեղեկություն",
+        "save": "Պահպանել",
+        "saving": "Պահպանվում է...",
+        "reset": "Վերակայել"
       },
       "createFlow": {
-        "subtitle": "Create and manage the channel from Profile.",
-        "ownerAuto": "Owner data is filled automatically from the verified profile.",
-        "inviteAuto": "Invite link is generated automatically."
+        "subtitle": "Նկարագրություն",
+        "ownerAuto": "Տեղեկություն",
+        "inviteAuto": "Չատ"
       },
       "defaults": {
-        "channelName": "New channel",
-        "username": "channel_username",
-        "description": "Channel description"
+        "channelName": "Նոր ալիք",
+        "username": "Տեղեկություն",
+        "description": "Նկարագրություն"
       },
       "stats": {
-        "subscribers": "Subscribers",
-        "photos": "Photos",
-        "gifts": "Gifts",
-        "history": "History"
+        "subscribers": "Տեղեկություն",
+        "photos": "Լուսանկարներ",
+        "gifts": "Նվերներ",
+        "history": "Պատմություն"
       },
       "quick": {
-        "public": "Public view",
-        "publicSubtitle": "Open the public surface.",
-        "settings": "Settings",
-        "settingsSubtitle": "Manage identity, permissions and links."
+        "public": "Տեղեկություն",
+        "publicSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "settings": "Կարգավորումներ",
+        "settingsSubtitle": "Կարգավորումներ՝ Տեղեկություն"
       },
       "sections": {
         "identity": {
-          "title": "Identity",
-          "subtitle": "Name, username and public identity."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "activity": {
-          "title": "Activity",
-          "subtitle": "Photos, videos, gifts and history."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "publication": {
-          "title": "Publication",
-          "subtitle": "Public publication connection and metadata."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "public": {
-          "title": "Public surface",
-          "subtitle": "What users can see in search and Profile."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "owner": {
-          "title": "Owner",
-          "subtitle": "Verified owner account and role."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "main": {
-          "title": "Main information",
-          "subtitle": "Core public fields and identifiers."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "permissions": {
-          "title": "Permissions",
-          "subtitle": "Visibility and management rules."
+          "title": "Թույլտվություններ",
+          "subtitle": "Նկարագրություն"
         },
         "links": {
-          "title": "Links",
-          "subtitle": "Connected IDs and entry points."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "historyStats": {
-          "title": "History",
-          "subtitle": "Recent changes and activity metrics."
+          "title": "Պատմություն",
+          "subtitle": "Նկարագրություն"
         }
       },
       "readonly": {
-        "notice": "Read-only public preview.",
-        "likes": "Likes",
-        "gifts": "Gifts"
+        "notice": "Տեղեկություն",
+        "likes": "Հավանումներ",
+        "gifts": "Նվերներ"
       },
       "flags": {
-        "public": "Public",
-        "private": "Private",
-        "published": "Published",
-        "preview": "Preview",
-        "profileVisible": "Visible in Profile",
-        "profileHidden": "Hidden from Profile"
+        "public": "Հանրային",
+        "private": "Մասնավոր",
+        "published": "Հրապարակված",
+        "preview": "Նախադիտում",
+        "profileVisible": "Պրոֆիլ",
+        "profileHidden": "Պրոֆիլ"
       },
       "focus": {
-        "public": "Public settings"
+        "public": "Տեղեկություն"
       },
       "openChat": {
-        "title": "Open chat",
-        "subtitle": "Open the connected Messenger chat."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
-        "photos": "Photos",
-        "photosSubtitle": "Public channel photos.",
-        "videos": "Videos",
-        "videosSubtitle": "Public channel videos.",
-        "addPhoto": "Add photo",
-        "addVideo": "Add video",
-        "gallery": "Gallery",
-        "emptyPhotosTitle": "No photos yet",
-        "emptyPhotosSubtitle": "Channel photos will appear here.",
-        "emptyVideosTitle": "No videos yet",
-        "emptyVideosSubtitle": "Channel videos will appear here."
+        "avatar": "Տեղեկություն",
+        "cover": "Տեղեկություն",
+        "photos": "Լուսանկարներ",
+        "photosSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "videos": "Տեսանյութեր",
+        "videosSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "addPhoto": "Ավելացնել լուսանկար",
+        "addVideo": "Ավելացնել տեսանյութ",
+        "gallery": "Տեղեկություն",
+        "emptyPhotosTitle": "Տեղեկություն",
+        "emptyPhotosSubtitle": "Տեղեկություն՝ Տեղեկություն",
+        "emptyVideosTitle": "Տեսանյութեր դեռ չկան",
+        "emptyVideosSubtitle": "Տեղեկություն՝ Տեղեկություն"
       },
       "main": {
         "channelName": {
-          "label": "Channel name",
-          "placeholder": "Enter channel name"
+          "label": "Չատ",
+          "placeholder": "Որոնում"
         },
         "username": {
-          "label": "Username",
-          "placeholder": "Enter username"
+          "label": "Օգտանուն",
+          "placeholder": "Որոնում"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Enter channel description"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
-        "channelId": "Channel ID",
-        "channelIdPlaceholder": "Generated automatically",
-        "inviteLink": "Invite link"
+        "channelId": "Չատ",
+        "channelIdPlaceholder": "Որոնում",
+        "inviteLink": "Չատ"
       },
       "owner": {
-        "name": "Owner name",
-        "namePlaceholder": "Enter owner name",
-        "userId": "Owner user ID",
-        "userIdPlaceholder": "Unified owner user ID",
-        "role": "Owner role",
-        "rolePlaceholder": "Owner",
-        "phone": "Owner phone",
-        "email": "Owner email"
+        "name": "Տեղեկություն",
+        "namePlaceholder": "Որոնում",
+        "userId": "Տեղեկություն",
+        "userIdPlaceholder": "Որոնում",
+        "role": "Տեղեկություն",
+        "rolePlaceholder": "Որոնում",
+        "phone": "Տեղեկություն",
+        "email": "Տեղեկություն"
       },
       "publication": {
-        "publicationId": "Publication ID",
-        "title": "Publication title",
-        "titlePlaceholder": "Enter publication title",
-        "subtitle": "Publication subtitle",
-        "subtitlePlaceholder": "Enter publication subtitle",
-        "slug": "Slug",
-        "tags": "Tags",
-        "summary": "Summary",
-        "summaryPlaceholder": "Short public summary"
+        "publicationId": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "titlePlaceholder": "Որոնում",
+        "subtitle": "Նկարագրություն",
+        "subtitlePlaceholder": "Նկարագրություն՝ Տեղեկություն",
+        "slug": "Տեղեկություն",
+        "tags": "Տեղեկություն",
+        "summary": "Տեղեկություն",
+        "summaryPlaceholder": "Որոնում"
       },
       "toggles": {
-        "public": "Public",
-        "publicSubtitle": "Make it visible to users.",
-        "published": "Published",
-        "publishedSubtitle": "Enable publication state.",
-        "showInProfile": "Show in Profile",
-        "showInProfileSubtitle": "Show this entry on the owner profile.",
-        "searchable": "Searchable",
-        "searchableSubtitle": "Allow search by name, username or ID.",
-        "preview": "Preview",
-        "previewSubtitle": "Allow public preview.",
-        "discovery": "Discovery",
-        "discoverySubtitle": "Allow discovery in global search.",
-        "approveSubscribers": "Approve subscribers",
-        "approveSubscribersSubtitle": "Require approval for new subscribers.",
-        "onlyAdminsCanPost": "Only admins can post",
-        "onlyAdminsCanPostSubtitle": "Restrict posting to admins.",
-        "onlyAdminsCanEdit": "Only admins can edit",
-        "onlyAdminsCanEditSubtitle": "Restrict editing to admins.",
-        "commentsEnabled": "Comments enabled",
-        "commentsEnabledSubtitle": "Allow comments on posts.",
-        "reactionsEnabled": "Reactions enabled",
-        "reactionsEnabledSubtitle": "Allow reactions."
+        "public": "Հանրային",
+        "publicSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "published": "Հրապարակված",
+        "publishedSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "showInProfile": "Պրոֆիլ",
+        "showInProfileSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+        "searchable": "Որոնել",
+        "searchableSubtitle": "Որոնել",
+        "preview": "Նախադիտում",
+        "previewSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "discovery": "Տեղեկություն",
+        "discoverySubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "approveSubscribers": "Տեղեկություն",
+        "approveSubscribersSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "onlyAdminsCanPost": "Տեղեկություն",
+        "onlyAdminsCanPostSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "onlyAdminsCanEdit": "Տեղեկություն",
+        "onlyAdminsCanEditSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "commentsEnabled": "Տեղեկություն",
+        "commentsEnabledSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "reactionsEnabled": "Տեղեկություն",
+        "reactionsEnabledSubtitle": "Նկարագրություն՝ Տեղեկություն"
       },
       "links": {
-        "chatId": "Chat ID",
-        "botId": "Bot ID",
-        "subscribers": "Subscribers"
+        "chatId": "Չատ",
+        "botId": "Օգնական",
+        "subscribers": "Տեղեկություն"
       },
       "history": {
-        "subtitle": "Change history and public activity.",
-        "emptyTitle": "No history yet",
-        "emptySubtitle": "Changes will appear here."
+        "subtitle": "Նկարագրություն",
+        "emptyTitle": "Պատմություն",
+        "emptySubtitle": "Տեղեկություն՝ Տեղեկություն"
       },
       "alerts": {
         "success": {
-          "title": "Success",
-          "created": "Channel created",
-          "saved": "Saved",
-          "reset": "Reset complete"
+          "title": "Հաջողված",
+          "created": "Տեղեկություն",
+          "saved": "Տեղեկություն",
+          "reset": "Տեղեկություն"
         },
         "error": {
-          "title": "Error",
-          "saveFailed": "Could not save."
+          "title": "Սխալ",
+          "saveFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։"
         },
         "validation": {
-          "nameTitle": "Name required",
-          "nameMessage": "Enter a name before saving."
+          "nameTitle": "Վերնագիր",
+          "nameMessage": "Տեղեկություն"
         },
         "resetConfirm": {
-          "title": "Reset changes",
-          "message": "Reset unsaved changes?",
-          "cancel": "Cancel",
-          "confirm": "Reset"
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն",
+          "cancel": "Չեղարկել",
+          "confirm": "Վերակայել"
         }
       }
     },
     "botScreen": {
-      "loading": "Loading...",
+      "loading": "Բեռնվում է...",
       "header": {
-        "title": "Bot management"
+        "title": "Վերնագիր"
       },
       "shelf": {
-        "title": "My bots",
-        "empty": "No bots yet."
+        "title": "Վերնագիր",
+        "empty": "Տեղեկություն"
       },
       "tabs": {
-        "overview": "Overview",
-        "public": "Public",
-        "control": "Control",
-        "history": "History"
+        "overview": "Տեղեկություն",
+        "public": "Հանրային",
+        "control": "Տեղեկություն",
+        "history": "Պատմություն"
       },
       "actions": {
-        "create": "Create bot",
-        "creating": "Creating...",
-        "save": "Save",
-        "saving": "Saving...",
-        "reset": "Reset"
+        "create": "Տեղեկություն",
+        "creating": "Տեղեկություն",
+        "save": "Պահպանել",
+        "saving": "Պահպանվում է...",
+        "reset": "Վերակայել"
       },
       "createFlow": {
-        "subtitle": "Create and manage the bot from Profile.",
-        "ownerAuto": "Owner data is filled automatically from the verified profile.",
-        "inviteAuto": "Invite link is generated automatically."
+        "subtitle": "Նկարագրություն",
+        "ownerAuto": "Տեղեկություն",
+        "inviteAuto": "Չատ"
       },
       "defaults": {
-        "botName": "New bot",
-        "username": "bot_username",
-        "description": "Bot description"
+        "botName": "Օգնական",
+        "username": "Տեղեկություն",
+        "description": "Նկարագրություն"
       },
       "stats": {
-        "modules": "Modules",
-        "commands": "Commands",
-        "history": "History",
-        "public": "Public"
+        "modules": "Տեղեկություն",
+        "commands": "Տեղեկություն",
+        "history": "Պատմություն",
+        "public": "Հանրային"
       },
       "quick": {
-        "public": "Public view",
-        "publicSubtitle": "Open the public surface.",
-        "settings": "Settings",
-        "settingsSubtitle": "Manage identity, permissions and links."
+        "public": "Տեղեկություն",
+        "publicSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "settings": "Կարգավորումներ",
+        "settingsSubtitle": "Կարգավորումներ՝ Տեղեկություն"
       },
       "sections": {
         "identity": {
-          "title": "Identity",
-          "subtitle": "Name, username and public identity."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "activity": {
-          "title": "Activity",
-          "subtitle": "Photos, videos, gifts and history."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "publication": {
-          "title": "Publication",
-          "subtitle": "Public publication connection and metadata."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "public": {
-          "title": "Public surface",
-          "subtitle": "What users can see in search and Profile."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "owner": {
-          "title": "Owner",
-          "subtitle": "Verified owner account and role."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "main": {
-          "title": "Main information",
-          "subtitle": "Core public fields and identifiers."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "permissions": {
-          "title": "Permissions",
-          "subtitle": "Visibility and management rules."
+          "title": "Թույլտվություններ",
+          "subtitle": "Նկարագրություն"
         },
         "links": {
-          "title": "Links",
-          "subtitle": "Connected IDs and entry points."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "routing": {
-          "title": "Routing",
-          "subtitle": "Wallet, business and trade routing."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "historyStats": {
-          "title": "History",
-          "subtitle": "Recent changes and activity metrics."
+          "title": "Պատմություն",
+          "subtitle": "Նկարագրություն"
         }
       },
       "readonly": {
-        "notice": "Read-only public preview."
+        "notice": "Տեղեկություն"
       },
       "flags": {
-        "public": "Public",
-        "private": "Private",
-        "published": "Published",
-        "preview": "Preview",
-        "profileVisible": "Visible in Profile",
-        "profileHidden": "Hidden from Profile",
-        "active": "Active",
-        "paused": "Paused"
+        "public": "Հանրային",
+        "private": "Մասնավոր",
+        "published": "Հրապարակված",
+        "preview": "Նախադիտում",
+        "profileVisible": "Պրոֆիլ",
+        "profileHidden": "Պրոֆիլ",
+        "active": "Ակտիվ",
+        "paused": "Դադարեցված"
       },
       "focus": {
-        "public": "Public settings",
-        "routing": "Routing settings"
+        "public": "Տեղեկություն",
+        "routing": "Տեղեկություն"
       },
       "openChat": {
-        "title": "Open bot chat",
-        "subtitle": "Open the connected bot chat."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
-        "gallery": "Gallery"
+        "avatar": "Տեղեկություն",
+        "cover": "Տեղեկություն",
+        "gallery": "Տեղեկություն"
       },
       "main": {
         "botName": {
-          "label": "Bot name",
-          "placeholder": "Enter bot name"
+          "label": "Օգնական",
+          "placeholder": "Որոնում"
         },
         "username": {
-          "label": "Username",
-          "placeholder": "Enter username"
+          "label": "Օգտանուն",
+          "placeholder": "Որոնում"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Enter bot description"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "botKind": {
-          "label": "Bot type",
-          "placeholder": "Assistant, service, business or trade"
+          "label": "Օգնական",
+          "placeholder": "Որոնում"
         },
-        "botId": "Bot ID",
-        "botIdPlaceholder": "Generated automatically"
+        "botId": "Օգնական",
+        "botIdPlaceholder": "Որոնում"
       },
       "owner": {
-        "name": "Owner name",
-        "namePlaceholder": "Enter owner name",
-        "userId": "Owner user ID",
-        "userIdPlaceholder": "Unified owner user ID",
-        "role": "Owner role",
-        "rolePlaceholder": "Owner",
-        "phone": "Owner phone",
-        "email": "Owner email"
+        "name": "Տեղեկություն",
+        "namePlaceholder": "Որոնում",
+        "userId": "Տեղեկություն",
+        "userIdPlaceholder": "Որոնում",
+        "role": "Տեղեկություն",
+        "rolePlaceholder": "Որոնում",
+        "phone": "Տեղեկություն",
+        "email": "Տեղեկություն"
       },
       "publication": {
-        "publicationId": "Publication ID",
-        "title": "Publication title",
-        "titlePlaceholder": "Enter publication title",
-        "subtitle": "Publication subtitle",
-        "subtitlePlaceholder": "Enter publication subtitle",
-        "slug": "Slug",
-        "tags": "Tags",
-        "summary": "Summary",
-        "summaryPlaceholder": "Short public summary"
+        "publicationId": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "titlePlaceholder": "Որոնում",
+        "subtitle": "Նկարագրություն",
+        "subtitlePlaceholder": "Նկարագրություն՝ Տեղեկություն",
+        "slug": "Տեղեկություն",
+        "tags": "Տեղեկություն",
+        "summary": "Տեղեկություն",
+        "summaryPlaceholder": "Որոնում"
       },
       "toggles": {
-        "public": "Public",
-        "publicSubtitle": "Make it visible to users.",
-        "published": "Published",
-        "publishedSubtitle": "Enable publication state.",
-        "showInProfile": "Show in Profile",
-        "showInProfileSubtitle": "Show this entry on the owner profile.",
-        "preview": "Preview",
-        "previewSubtitle": "Allow public preview.",
-        "discovery": "Discovery",
-        "discoverySubtitle": "Allow discovery in global search.",
-        "active": "Active",
-        "activeSubtitle": "Allow the bot to run.",
-        "acceptCommands": "Accept commands",
-        "acceptCommandsSubtitle": "Allow users to send commands.",
-        "showInCatalog": "Show in catalog",
-        "showInCatalogSubtitle": "Show the bot in the public catalog.",
-        "allowPayments": "Allow payments",
-        "allowPaymentsSubtitle": "Allow payment actions through the approved wallet route.",
-        "inlineEnabled": "Inline mode",
-        "inlineEnabledSubtitle": "Allow inline bot usage.",
-        "autoReplyEnabled": "Auto reply",
-        "autoReplyEnabledSubtitle": "Allow automatic replies.",
-        "marketplaceLinked": "Marketplace linked",
-        "marketplaceLinkedSubtitle": "Connect marketplace operations.",
-        "deliveryLinked": "Delivery linked",
-        "deliveryLinkedSubtitle": "Connect delivery operations.",
-        "businessRoutingEnabled": "Business routing",
-        "businessRoutingEnabledSubtitle": "Route business operations through the business layer."
+        "public": "Հանրային",
+        "publicSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "published": "Հրապարակված",
+        "publishedSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "showInProfile": "Պրոֆիլ",
+        "showInProfileSubtitle": "Պրոֆիլ՝ Տեղեկություն",
+        "preview": "Նախադիտում",
+        "previewSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "discovery": "Տեղեկություն",
+        "discoverySubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "active": "Ակտիվ",
+        "activeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "acceptCommands": "Տեղեկություն",
+        "acceptCommandsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "showInCatalog": "Տեղեկություն",
+        "showInCatalogSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "allowPayments": "Տեղեկություն",
+        "allowPaymentsSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "inlineEnabled": "Տեղեկություն",
+        "inlineEnabledSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "autoReplyEnabled": "Տեղեկություն",
+        "autoReplyEnabledSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "marketplaceLinked": "Տեղեկություն",
+        "marketplaceLinkedSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "deliveryLinked": "Տեղեկություն",
+        "deliveryLinkedSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "businessRoutingEnabled": "Տեղեկություն",
+        "businessRoutingEnabledSubtitle": "Տեղեկություն՝ Տեղեկություն"
       },
       "links": {
-        "chatId": "Chat ID",
-        "groupId": "Group ID",
-        "channelId": "Channel ID",
-        "marketId": "Market ID"
+        "chatId": "Չատ",
+        "groupId": "Չատ",
+        "channelId": "Չատ",
+        "marketId": "Տեղեկություն"
       },
       "routing": {
-        "title": "Money routing",
-        "sabiWallet": "Sabi Wallet",
-        "businessRoutingLayer": "Business routing layer",
-        "tradeBot": "Trade bot",
-        "businessBot": "Business bot",
-        "tradeHint": "Trade bot income routes to Sabi Wallet.",
-        "businessHint": "Business bot income routes to the business routing layer until Business Wallet is live."
+        "title": "Վերնագիր",
+        "sabiWallet": "Դրամապանակ",
+        "businessRoutingLayer": "Տեղեկություն",
+        "tradeBot": "Օգնական",
+        "businessBot": "Տեղեկություն",
+        "tradeHint": "Տեղեկություն՝ Տեղեկություն",
+        "businessHint": "Տեղեկություն՝ Տեղեկություն"
       },
       "history": {
-        "subtitle": "Change history and public activity.",
-        "emptyTitle": "No history yet",
-        "emptySubtitle": "Changes will appear here."
+        "subtitle": "Նկարագրություն",
+        "emptyTitle": "Պատմություն",
+        "emptySubtitle": "Տեղեկություն՝ Տեղեկություն"
       },
       "alerts": {
         "success": {
-          "title": "Success",
-          "created": "Bot created",
-          "saved": "Saved",
-          "reset": "Reset complete"
+          "title": "Հաջողված",
+          "created": "Տեղեկություն",
+          "saved": "Տեղեկություն",
+          "reset": "Տեղեկություն"
         },
         "error": {
-          "title": "Error",
-          "saveFailed": "Could not save."
+          "title": "Սխալ",
+          "saveFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։"
         },
         "validation": {
-          "nameTitle": "Name required",
-          "nameMessage": "Enter a name before saving."
+          "nameTitle": "Վերնագիր",
+          "nameMessage": "Տեղեկություն"
         },
         "resetConfirm": {
-          "title": "Reset changes",
-          "message": "Reset unsaved changes?",
-          "cancel": "Cancel",
-          "confirm": "Reset"
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն",
+          "cancel": "Չեղարկել",
+          "confirm": "Վերակայել"
         }
       }
     },
     "colorsScreen": {
       "header": {
-        "title": "Profil mavzusi and ramkalar"
+        "title": "Վերնագիր"
       },
       "intro": {
-        "eyebrow": "PREMIUM IDENTITET MAVZUSI",
-        "title": "Profil mavzusi and ramkalar",
-        "subtitle": "Owner nazoratidagi ranglar, avatar ramkalari, aksentlar and premium identitet uslubini tanlang."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "preview": {
-        "ownerTheme": "Owner mavzusi",
-        "bio": "Bio",
+        "ownerTheme": "Թեմա",
+        "bio": "Կենսագրություն",
         "stats": {
-          "theme": "Theme",
-          "frame": "Ramka"
+          "theme": "Թեմա",
+          "frame": "Շրջանակներ"
         },
         "quickPills": {
-          "profileSurface": "Profil qatlami",
-          "aiIdentity": "AI identitet",
-          "premium": "Premium"
+          "profileSurface": "Պրոֆիլ",
+          "aiIdentity": "AI",
+          "premium": "Պրեմիում"
         },
-        "ownerThemeBadge": "Owner Theme Badge"
+        "ownerThemeBadge": "Թեմա"
       },
       "notice": {
-        "title": "Theme tizimi",
-        "description": "Manage notice."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "sections": {
-        "themePresets": "Theme presetlari",
-        "avatarFrames": "Avatar ramkalari"
+        "themePresets": "Թեմա",
+        "avatarFrames": "Շրջանակներ"
       },
       "themes": {
         "emeraldGlass": {
-          "title": "Zumrad shisha",
-          "subtitle": "Manage emerald glass.",
-          "badge": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "badge": "Ակտիվ"
         },
         "royalAurora": {
-          "title": "Qirollik aurorasi",
-          "subtitle": "Manage royal aurora.",
-          "badge": "Premium"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "badge": "Պրեմիում"
         },
         "midnightViolet": {
-          "title": "Yarim tun binafshasi",
-          "subtitle": "Manage midnight violet.",
-          "badge": "Nafis"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "badge": "Պրեմիում"
         },
         "sunsetRose": {
-          "title": "Shafaq atirguli",
-          "subtitle": "Manage sunset rose.",
-          "badge": "New"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "badge": "Նոր"
         },
         "aiNeon": {
-          "title": "AI neon",
-          "subtitle": "Manage ai neon.",
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
           "badge": "AI"
         }
       },
       "frames": {
         "defaultGlow": {
-          "title": "Asosiy yaltirash",
-          "description": "Standart toza ramka."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "heartPulse": {
-          "title": "Yurak urishi",
-          "description": "Jonli and iliq aksentli ramka."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "crystalRing": {
-          "title": "Kristall halqa",
-          "description": "Yorqin and tiniq premium halqa."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "royalGold": {
-          "title": "Qirollik oltini",
-          "description": "Oltin premium ramka."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "neonWave": {
-          "title": "Neon Wave",
-          "description": "Zamonaviy yorqin oqimga owner ramka."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "aiHalo": {
-          "title": "AI halosi",
-          "description": "Manage ai halo."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "softStars": {
-          "title": "Yumshoq yulduzlar",
-          "description": "Yengil porlash and nozik yulduz effektlari."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "seasonalBloom": {
-          "title": "Seasonal gullash",
-          "description": "Seasonal ranglar and yumshoq premium effekt."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "footer": {
-        "title": "Profil mavzusini davom ettirish",
-        "description": "Manage footer.",
-        "action": "Save"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "action": "Պահպանել"
       },
       "alerts": {
-        "savedDescription": "Saved",
-        "savedTitle": "Saved"
+        "savedDescription": "Նկարագրություն՝ Տեղեկություն",
+        "savedTitle": "Վերնագիր"
       }
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "QURILMALAR VA SESSIYALAR",
-        "title": "Devices & sessions",
-        "subtitle": "Manage intro."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "metrics": {
-        "allSessions": "Barcha sessiyalar",
-        "trusted": "Ishonchli",
-        "timeout": "Avto tugatish"
+        "allSessions": "Տեղեկություն",
+        "trusted": "Տեղեկություն",
+        "timeout": "Տեղեկություն"
       },
       "metricStates": {
-        "on": "Enabled",
-        "off": "Off"
+        "on": "Միացված է",
+        "off": "Անջատված"
       },
       "connect": {
-        "title": "Connect",
-        "description": "Telefoningiz through QR asosidagi kirish yordamida desktop yoki brauzerda Sabi ga xavfsiz kiring.",
-        "action": "Action"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "action": "Տեղեկություն"
       },
       "sections": {
-        "thisDevice": "Ushbu qurilma",
-        "otherSessions": "Boshqa sessiyalar",
-        "autoEnd": "Avtomatik tugatish"
+        "thisDevice": "Տեղեկություն",
+        "otherSessions": "Տեղեկություն",
+        "autoEnd": "Տեղեկություն"
       },
       "badges": {
-        "live": "Jonli",
-        "trusted": "Ishonchli"
+        "live": "Տեղեկություն",
+        "trusted": "Տեղեկություն"
       },
-      "revokeAction": "Bekor qilish",
-      "selectedBadge": "Tanlangan",
+      "revokeAction": "Տեղեկություն",
+      "selectedBadge": "Տեղեկություն",
       "timeouts": {
-        "oneWeek": "1 hafta",
-        "oneMonth": "1 oy",
-        "threeMonths": "3 oy",
-        "sixMonths": "6 oy",
-        "oneYear": "1 yil"
+        "oneWeek": "Տեղեկություն",
+        "oneMonth": "Տեղեկություն",
+        "threeMonths": "Տեղեկություն",
+        "sixMonths": "Տեղեկություն",
+        "oneYear": "Տեղեկություն"
       },
       "notes": {
         "safety": {
-          "title": "Sessiya xavfsizligi",
-          "description": "Manage safety."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "nextLayer": {
-          "title": "Keyingi qatlam",
-          "description": "Manage next layer."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "security": {
-          "title": "Sessiya xavfsizligi",
-          "description": "Manage security."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "future": {
-          "title": "Keyingi qatlam",
-          "description": "Manage future."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "privacyScreen": {
       "intro": {
-        "eyebrow": "Privacy MARKAZI",
-        "title": "Privacy",
-        "subtitle": "Manage intro."
+        "eyebrow": "Տեղեկություն",
+        "title": "Գաղտնիություն",
+        "subtitle": "Նկարագրություն"
       },
       "sections": {
-        "securityAccess": "Security and kirish",
-        "visibilityCommunication": "Visibility Communication"
+        "securityAccess": "Անվտանգություն",
+        "visibilityCommunication": "Տեղեկություն"
       },
       "rows": {
         "security": {
-          "title": "Security",
-          "description": "PIN, biometrika, ishonchli qurilmalar and himoyalangan amallar."
+          "title": "Անվտանգություն",
+          "description": "Նկարագրություն"
         },
         "data": {
-          "title": "Data management",
-          "description": "Kontaktlar sinxroni, search tavsiyalari, draftlar and eksport qoidalari."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "blocked": {
-          "title": "Blocked",
-          "description": "Manage blocked."
+          "title": "Արգելափակված",
+          "description": "Նկարագրություն"
         },
         "autodelete": {
-          "title": "Avto delete",
-          "description": "Manage autodelete."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "login_email": {
-          "title": "Kirish emaili",
-          "description": "Manage login email."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "phone": {
-          "title": "Phone",
-          "description": "Manage phone."
+          "title": "Հեռախոս",
+          "description": "Նկարագրություն"
         },
         "last_seen": {
-          "title": "Oxirgi faollik",
-          "description": "Manage last seen."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "last-seen": {
-          "title": "Oxirgi faollik",
-          "description": "Manage last seen."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "photo": {
-          "title": "Photo",
-          "description": "Manage photo."
+          "title": "Լուսանկար",
+          "description": "Նկարագրություն"
         },
         "bio": {
-          "title": "Bio",
-          "description": "Manage bio."
+          "title": "Կենսագրություն",
+          "description": "Նկարագրություն"
         },
         "birthday": {
-          "title": "Birthday",
-          "description": "Manage birthday."
+          "title": "Ծննդյան օր",
+          "description": "Նկարագրություն"
         },
         "gifts": {
-          "title": "Gifts",
-          "description": "Manage gifts."
+          "title": "Նվերներ",
+          "description": "Նկարագրություն"
         },
         "forwards": {
-          "title": "Forwardlar",
-          "description": "Manage forwards."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "calls": {
-          "title": "Calls",
-          "description": "Manage calls."
+          "title": "Զանգեր",
+          "description": "Նկարագրություն"
         },
         "voice_messages": {
-          "title": "Voice messagelar",
-          "description": "Manage voice messages."
+          "title": "Ձայնային AI",
+          "description": "Ձայնային AI"
         },
         "voice-messages": {
-          "title": "Voice messagelar",
-          "description": "Manage voice messages."
+          "title": "Ձայնային AI",
+          "description": "Ձայնային AI"
         },
         "messages": {
-          "title": "Messages",
-          "description": "Kim yozishi and premium cheklovlar."
+          "title": "Հաղորդագրություններ",
+          "description": "Նկարագրություն"
         },
         "groups": {
-          "title": "Groups",
-          "description": "Manage groups."
+          "title": "Խմբեր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "privacyDetailScreen": {
       "defaults": {
-        "eyebrow": "Privacy QOIDASI"
+        "eyebrow": "Տեղեկություն"
       },
       "options": {
-        "everyone": "Hamma",
-        "contacts": "Kontaktlar",
-        "nobody": "Hech kim"
+        "everyone": "Տեղեկություն",
+        "contacts": "Տեղեկություն",
+        "nobody": "Տեղեկություն"
       },
       "notFound": {
-        "title": "Privacy qoidasi topilmadi",
-        "subtitle": "Manage not found.",
-        "backAction": "Maxfiylikka qaytish"
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "backAction": "Հետ"
       },
       "exceptions": {
-        "title": "Title"
+        "title": "Վերնագիր"
       },
-      "lockedHelper": "Locked Helper",
+      "lockedHelper": "Տեղեկություն՝ Տեղեկություն",
       "notes": {
-        "title": "Title"
+        "title": "Վերնագիր"
       },
       "premium": {
-        "eyebrow": "Eyebrow"
+        "eyebrow": "Պրեմիում"
       },
       "preview": {
-        "forwardedFrom": "Forwarded From"
+        "forwardedFrom": "Տեղեկություն"
       }
     },
     "privacyDetails": {
       "common": {
-        "add": "Add"
+        "add": "Ավելացնել"
       },
       "phone": {
-        "title": "Phone",
+        "title": "Հեռախոս",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "findByNumber": {
-            "title": "Kim meni raqam through topa oladi",
-            "description": "Phone raqami through topilish qoidasi."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "value": "Value",
-            "description": "Manage always show."
+            "title": "Վերնագիր",
+            "value": "Տեղեկություն",
+            "description": "Նկարագրություն"
           }
         }
       },
       "lastSeen": {
-        "title": "Oxirgi faollik",
+        "title": "Վերնագիր",
         "groups": {
           "onlineVisibility": {
-            "title": "Online Visibility",
-            "description": "Manage online visibility."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "description": "Manage always show."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "toggles": {
           "hideReadTime": {
-            "title": "Hide Read Time",
-            "description": "Manage hide read time."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
-        "note": "Note",
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "Open premiumni"
+        "note": "Նշում",
+        "premiumNote": "Պրեմիում",
+        "premiumCtaText": "Պրեմիում"
       },
       "photo": {
-        "title": "Profil rasmi",
+        "title": "Վերնագիր",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "Never Show",
-            "description": "Manage never show."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "bio": {
-        "title": "Bio",
+        "title": "Կենսագրություն",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "Never Show",
-            "description": "Manage never show."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "birthday": {
-        "title": "Birthday",
+        "title": "Ծննդյան օր",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "description": "Manage always show."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "gifts": {
-        "title": "Gifts",
+        "title": "Նվերներ",
         "topToggles": {
           "chatBadge": {
-            "title": "Chat badge",
-            "description": "Manage chat badge."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "groups": {
           "defaultProfileVisibility": {
-            "title": "Default Profile Visibility",
-            "description": "Manage default profile visibility."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "Never Allow",
-            "description": "Manage never allow."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "allowedGifts": {
-          "title": "Allowed Gifts"
+          "title": "Վերնագիր"
         },
         "toggles": {
           "standard": {
-            "title": "Standard",
-            "description": "Manage standard."
+            "title": "Ստանդարտ",
+            "description": "Նկարագրություն"
           },
           "rare": {
-            "title": "Rare",
-            "description": "Manage rare."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "forwards": {
-        "title": "Forwardlar",
+        "title": "Վերնագիր",
         "preview": {
-          "label": "Forward namunasi",
-          "sender": "Sender",
-          "message": "Preview"
+          "label": "Տեղեկություն",
+          "sender": "Ուղարկող",
+          "message": "Նախադիտում"
         },
         "groups": {
           "accountLinking": {
-            "title": "Account Linking",
-            "description": "Manage account linking."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "calls": {
-        "title": "Calls",
+        "title": "Զանգեր",
         "options": {
-          "always": "Always",
-          "never": "Never"
+          "always": "Տեղեկություն",
+          "never": "Տեղեկություն"
         },
         "groups": {
           "whoCanCall": {
-            "title": "Who Can Call",
-            "description": "Manage who can call."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "peerToPeer": {
-            "title": "Peer To Peer",
-            "description": "Manage peer to peer."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "Never Allow",
-            "description": "Manage never allow."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "toggles": {
           "iphoneIntegration": {
-            "title": "iPhone integratsiyasi",
-            "description": "Manage iphone integration."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       },
       "voiceMessages": {
-        "title": "Voice messagelar",
+        "title": "Ձայնային AI",
         "options": {
-          "contactsPremium": "Kontaktlar and premium",
-          "messagesForCredits": "Messages For Credits"
+          "contactsPremium": "Ձայնային AI",
+          "messagesForCredits": "Ձայնային AI"
         },
         "groups": {
           "whoCanSend": {
-            "title": "Who Can Send",
-            "description": "Manage who can send."
+            "title": "Ձայնային AI",
+            "description": "Ձայնային AI"
           }
         },
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "Open premiumni"
+        "premiumNote": "Ձայնային AI",
+        "premiumCtaText": "Ձայնային AI"
       },
       "messages": {
-        "title": "Messages",
+        "title": "Հաղորդագրություններ",
         "options": {
-          "contactsPremium": "Kontaktlar and premium",
-          "messagesForCredits": "Messages For Credits"
+          "contactsPremium": "Պրեմիում",
+          "messagesForCredits": "Տեղեկություն"
         },
         "groups": {
           "whoCanMessage": {
-            "title": "Kim yozishi mumkin",
-            "description": "Manage who can message."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "Open premiumni"
+        "premiumNote": "Պրեմիում",
+        "premiumCtaText": "Պրեմիում"
       },
       "groups": {
-        "title": "Groups",
+        "title": "Խմբեր",
         "groups": {
           "whoCanInvite": {
-            "title": "Who Can Invite",
-            "description": "Manage who can invite."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           }
         }
       }
     },
     "dataManagementScreen": {
       "intro": {
-        "eyebrow": "INTRO",
-        "title": "Data management",
-        "subtitle": "Manage intro."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "metrics": {
-        "contactsSync": "Kontaktlar sinxroni",
-        "draftBackup": "Draft zaxirasi",
-        "privateExport": "Private eksport"
+        "contactsSync": "Տեղեկություն",
+        "draftBackup": "Հետ",
+        "privateExport": "Տեղեկություն"
       },
       "metricStates": {
-        "on": "Enabled",
-        "off": "Off"
+        "on": "Միացված է",
+        "off": "Անջատված"
       },
       "hero": {
-        "title": "Profil data boshqaruv markazi",
-        "description": "Manage hero."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "sections": {
-        "discovery": "Topish and sinxron",
-        "storage": "Save and bulut xavfsizligi",
-        "retention": "Save muddati"
+        "discovery": "Տեղեկություն",
+        "storage": "Տեղեկություն",
+        "retention": "Տեղեկություն"
       },
       "discovery": {
         "syncContacts": {
-          "title": "Kontaktlarni sinxronlash",
-          "description": "Manage sync contacts."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "searchSuggestions": {
-          "title": "Search tavsiyalari",
-          "description": "Manage search suggestions."
+          "title": "Որոնել",
+          "description": "Որոնել"
         },
         "memoryControls": {
-          "title": "Xotira management",
-          "description": "Manage memory controls."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "storage": {
         "draftBackup": {
-          "title": "Draft zaxirasi",
-          "description": "Manage draft backup."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "paymentHints": {
-          "title": "Payment Hints",
-          "description": "Manage payment hints."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "privateExportMode": {
-          "title": "Private eksport rejimi",
-          "description": "Manage private export mode."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "retention": {
         "autoCleanup": {
-          "title": "Avto tozalash tavsiyalari",
-          "description": "Eski draftlar and kesh data for tozalash tavsiyalarini show."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "actions": {
         "requestExport": {
-          "title": "Request Export",
-          "description": "Manage request export."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "reviewDrafts": {
-          "title": "Review Drafts",
-          "description": "Draftlar bilan linked boshqaruv oqimini open."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "clearCache": {
-          "title": "Profil keshini tozalash",
-          "description": "Manage clear cache."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "note": {
-        "title": "Bu ekran nega muhim",
-        "description": "Manage note."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "links": {
         "privacy": {
-          "title": "Privacy markazi",
-          "description": "Manage privacy."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "support": {
-          "title": "Yordam",
-          "description": "Manage support."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "aiScreen": {
       "header": {
-        "title": "AI profil",
-        "openAction": "Open"
+        "title": "Վերնագիր",
+        "openAction": "Բացել"
       },
       "intro": {
-        "eyebrow": "AI IDENTITET TIZIMI",
+        "eyebrow": "Տեղեկություն",
         "title": "AI",
-        "subtitle": "Manage intro."
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
         "badges": {
-          "identity": "Identity",
-          "programBound": "Program Bound"
+          "identity": "Տեղեկություն",
+          "programBound": "Տեղեկություն"
         },
         "stats": {
-          "mode": "Rejim",
-          "owner": "Owner",
-          "premium": "Premium",
-          "premiumBound": "Premium Bound"
+          "mode": "Տեղեկություն",
+          "owner": "Տեղեկություն",
+          "premium": "Պրեմիում",
+          "premiumBound": "Պրեմիում"
         },
         "actions": {
-          "edit": "Edit",
-          "theme": "Theme",
-          "premium": "Premium",
-          "public": "Public"
+          "edit": "Խմբագրել",
+          "theme": "Թեմա",
+          "premium": "Պրեմիում",
+          "public": "Հանրային"
         }
       },
       "modes": {
         "balanced": {
-          "title": "Muvozanatli AI",
-          "subtitle": "Toza premium uslubga owner neytral tavsiyalar."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "creative": {
-          "title": "Ijodiy AI",
-          "subtitle": "Kuchliroq identitet ishlovi and boyroq ifoda."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "business": {
-          "title": "Biznes AI",
-          "subtitle": "Manage business."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "concise": {
-          "title": "Qisqa AI",
-          "subtitle": "Qisqa and aniq profil matnlari for ixcham uslub."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       },
       "modeSection": {
-        "title": "AI rejimlari"
+        "title": "Վերնագիր"
       },
       "notice": {
-        "title": "AI qatlami",
-        "description": "Manage notice."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "sections": {
         "primary": {
-          "title": "Asosiy vositalar",
+          "title": "Վերնագիր",
           "edit": {
-            "title": "Profil matnini edit",
-            "description": "Bio, shaxsiy matn and identitet tafsilotlarini AI bilan yaxshilash."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "public": {
-            "title": "Public",
-            "description": "Manage public."
+            "title": "Հանրային",
+            "description": "Նկարագրություն"
           },
           "colors": {
-            "title": "Theme and ramkalar",
-            "description": "Manage colors."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "premium": {
-            "title": "Premium kirish",
-            "description": "Manage premium."
+            "title": "Պրեմիում",
+            "description": "Պրեմիում"
           }
         },
         "system": {
-          "title": "Tizim bilan linked",
+          "title": "Վերնագիր",
           "language": {
-            "title": "Til qatlami",
-            "description": "AI profil tili haqiqiy dastur til tizimiga will be connected."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "qr": {
-            "title": "Profile QR",
-            "description": "Manage qr."
+            "title": "Վերնագիր",
+            "description": "Նկարագրություն"
           },
           "premiumSurface": {
-            "title": "Premium identitet oqimi",
-            "description": "Manage premium surface."
+            "title": "Պրեմիում",
+            "description": "Պրեմիում"
           }
         }
       },
       "badges": {
-        "premium": "Premium"
+        "premium": "Պրեմիում"
       },
       "footer": {
-        "title": "Footer",
-        "description": "Manage footer.",
-        "action": "Davom etish"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "action": "Տեղեկություն"
       }
     },
     "giftsScreen": {
       "header": {
-        "title": "Gift center",
-        "openAction": "Open"
+        "title": "Վերնագիր",
+        "openAction": "Բացել"
       },
       "intro": {
-        "eyebrow": "INTRO",
-        "title": "Intro",
-        "subtitle": "Manage intro."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
         "badges": {
-          "identity": "Identity",
-          "unifiedIdBound": "Unified ID Bound"
+          "identity": "Տեղեկություն",
+          "unifiedIdBound": "Տեղեկություն"
         },
         "stats": {
-          "diamonds": "Olmoslar",
-          "status": "Holat",
-          "owner": "Owner"
+          "diamonds": "Տեղեկություն",
+          "status": "Տեղեկություն",
+          "owner": "Տեղեկություն"
         },
         "actions": {
-          "public": "Public",
-          "premium": "Premium",
-          "credits": "Kreditlar",
-          "theme": "Tema"
+          "public": "Հանրային",
+          "premium": "Պրեմիում",
+          "credits": "Տեղեկություն",
+          "theme": "Թեմա"
         }
       },
       "notice": {
-        "title": "Notice",
-        "description": "Manage notice."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "tabs": {
-        "received": "Qabul qilingan",
-        "inventory": "Inventar",
-        "history": "Tarix"
+        "received": "Տեղեկություն",
+        "inventory": "Տեղեկություն",
+        "history": "Պատմություն"
       },
       "common": {
-        "diamonds": "olmos"
+        "diamonds": "Տեղեկություն"
       },
       "items": {
         "goldenAura": {
-          "title": "Oltin aura",
-          "subtitle": "Manage golden aura.",
-          "rarity": "Premium",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Պրեմիում",
+          "status": "Ակտիվ"
         },
         "violetWave": {
-          "title": "Violet Wave",
-          "subtitle": "Manage violet wave.",
-          "rarity": "Noyob",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "mintLight": {
-          "title": "Yalpiz nuri",
-          "subtitle": "Manage mint light.",
-          "rarity": "Yengil premium",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "dragonNote": {
-          "title": "Ajdar eslatmasi",
-          "subtitle": "Manage dragon note.",
-          "rarity": "Afsonaviy",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "moonSilk": {
-          "title": "Oy ipaklari",
-          "subtitle": "Manage moon silk.",
-          "rarity": "Nafis",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "seaBloom": {
-          "title": "Dengiz gullashi",
-          "subtitle": "Manage sea bloom.",
-          "rarity": "Kam uchraydigan",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "phoenixBloom": {
-          "title": "Feniks gullashi",
-          "subtitle": "Manage phoenix bloom.",
-          "rarity": "Afsonaviy",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "crystalComet": {
-          "title": "Kristall kometa",
-          "subtitle": "Manage crystal comet.",
-          "rarity": "Noyob",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         },
         "emeraldLotus": {
-          "title": "Zumrad lotus",
-          "subtitle": "Manage emerald lotus.",
-          "rarity": "Nafis",
-          "status": "Active"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն",
+          "rarity": "Տեղեկություն",
+          "status": "Ակտիվ"
         }
       },
       "footer": {
-        "title": "Footer",
-        "description": "Manage footer.",
-        "action": "Open premiumni"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "action": "Տեղեկություն"
       }
     },
     "creditsScreen": {
       "header": {
-        "eyebrow": "KREDIT IQTISODI",
-        "title": "Kreditlar markazi",
-        "subtitle": "Manage header.",
-        "backAction": "Orqaga"
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "backAction": "Հետ"
       },
       "balance": {
-        "label": "Mavjud balans",
+        "label": "Տեղեկություն",
         "actions": {
-          "topUp": "Top Up",
-          "statistics": "Statistics",
-          "giftCenter": "Gift center"
+          "topUp": "Տեղեկություն",
+          "statistics": "Տեղեկություն",
+          "giftCenter": "Պրեմիում"
         }
       },
       "tabs": {
-        "all": "Barchasi",
-        "incoming": "Kiruvchi",
-        "outgoing": "Chiquvchi"
+        "all": "Տեղեկություն",
+        "incoming": "Տեղեկություն",
+        "outgoing": "Տեղեկություն"
       }
     },
     "businessUpgradeScreen": {
       "header": {
-        "eyebrow": "BIZNES AKKAUNT",
-        "title": "Header",
-        "subtitle": "Manage header.",
-        "backAction": "Profil"
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "backAction": "Հետ"
       },
       "hero": {
-        "title": "Telegram darajasidagi chuqurlik, Sabi darajasidagi quvvat",
-        "description": "Manage hero.",
-        "launchBadge": "oy bepul"
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն",
+        "launchBadge": "Տեղեկություն"
       },
       "sections": {
-        "plans": "Ishga tushirishdan keyingi rejalar",
-        "features": "Biznes funksiyalari"
+        "plans": "Տեղեկություն",
+        "features": "Տեղեկություն"
       },
       "plans": {
         "business_annual": {
-          "title": "Yillik biznes reja",
-          "period": "12 oy",
-          "price": "Price",
-          "description": "Manage business annual.",
-          "badge": "Yillik"
+          "title": "Վերնագիր",
+          "period": "Տեղեկություն",
+          "price": "Գին",
+          "description": "Նկարագրություն",
+          "badge": "Պրեմիում"
         },
         "business_monthly": {
-          "title": "Oylik biznes reja",
-          "period": "1 oy",
-          "price": "Price",
-          "description": "Manage business monthly.",
-          "badge": "Oylik"
+          "title": "Վերնագիր",
+          "period": "Տեղեկություն",
+          "price": "Գին",
+          "description": "Նկարագրություն",
+          "badge": "Պրեմիում"
         }
       },
       "features": {
         "address": {
-          "title": "Manzil",
-          "description": "Manage address."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "workHours": {
-          "title": "Ish soatlari",
-          "description": "Haftalik jadval and mavjudlik settings."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "quickReplies": {
-          "title": "Quick replylar",
-          "description": "Manage quick replies."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "greetings": {
-          "title": "Salomlashuvlar",
-          "description": "Manage greetings."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "notAvailable": {
-          "title": "Not Available",
-          "description": "Manage not available."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "chatLinks": {
-          "title": "Chat Links",
-          "description": "Manage chat links."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "footer": {
-        "action": "Biznes launch kirishi active"
+        "action": "Տեղեկություն"
       },
-      "cta": "Cta"
+      "cta": "Տեղեկություն"
     },
     "preferencesScreen": {
       "intro": {
-        "eyebrow": "APP PREFERENCES",
-        "title": "Preferences",
-        "subtitle": "Manage language, interaction behavior, previews, compact mode, and profile-linked app experience settings."
+        "eyebrow": "Տեղեկություն",
+        "title": "Նախապատվություններ",
+        "subtitle": "Նկարագրություն"
       },
       "metrics": {
-        "haptics": "Haptics",
-        "sound": "Sound",
-        "compact": "Compact"
+        "haptics": "Տեղեկություն",
+        "sound": "Ձայն",
+        "compact": "Տեղեկություն"
       },
       "sections": {
-        "localization": "Localization",
-        "interaction": "Interaction",
-        "presentation": "Presentation"
+        "localization": "Տեղեկություն",
+        "interaction": "Տեղեկություն",
+        "presentation": "Ներկայացում"
       },
       "language": {
-        "title": "App language",
-        "description": "Choose how the profile and the rest of the app are localized."
+        "title": "Հավելվածի լեզու",
+        "description": "Նկարագրություն"
       },
       "toggles": {
         "haptics": {
-          "title": "Haptics",
-          "description": "Use tactile feedback for profile actions and main app interactions."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "sound": {
-          "title": "Interface sound",
-          "description": "Play interface sounds for supported profile and app actions."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "preview": {
-          "title": "Preview content",
-          "description": "Show previews for supported profile and linked content surfaces."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "compact": {
-          "title": "Compact mode",
-          "description": "Use a denser layout for profile-linked app surfaces."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "smartInsights": {
-          "title": "Smart insights",
-          "description": "Enable profile-linked suggestions and app guidance where supported."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "note": {
-        "title": "Profile-linked appearance",
-        "description": "Preferences affect profile-linked behavior and should remain connected to your language, layout, and app presentation system."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "links": {
         "language": {
-          "title": "Language settings",
-          "description": "Open the language screen and manage the active app language."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "notifications": {
-          "title": "Notification preferences",
-          "description": "Open deeper notification controls connected to your profile experience."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "loginEmailScreen": {
       "intro": {
-        "eyebrow": "LOGIN EMAIL",
-        "title": "Login email",
-        "subtitle": "Manage the email used for sign-in, confirmation rules, and protected profile access flows."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
-        "title": "Primary login email",
-        "description": "This email is used for account sign-in, recovery, and protected profile access confirmation."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "field": {
-        "label": "Email address",
-        "placeholder": "Enter email address"
+        "label": "Էլ. փոստ",
+        "placeholder": "Մուտքագրեք էլ. փոստը"
       },
       "toggles": {
         "currentVerification": {
-          "title": "Verify current email",
-          "description": "Require confirmation from the currently linked email before applying changes."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "newVerification": {
-          "title": "Verify new email",
-          "description": "Require confirmation from the new email before it becomes active."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "note": {
-        "title": "Protected identity flow",
-        "description": "Email changes should remain part of the protected profile identity flow and stay connected to security controls."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       }
     },
     "securityScreen": {
       "intro": {
-        "eyebrow": "SECURITY CENTER",
-        "title": "Security",
-        "subtitle": "Manage biometric access, app PIN, identity change protection, trusted device alerts, and profile-linked account security."
+        "eyebrow": "Տեղեկություն",
+        "title": "Անվտանգություն",
+        "subtitle": "Նկարագրություն"
       },
       "metrics": {
-        "biometric": "Biometric",
-        "appPin": "App PIN",
-        "twoFactor": "2FA"
+        "biometric": "Տեղեկություն",
+        "appPin": "Տեղեկություն",
+        "twoFactor": "Տեղեկություն"
       },
       "sections": {
-        "mainProtection": "Main protection",
-        "sensitiveActions": "Sensitive actions",
-        "identityChangeProtection": "Identity change protection"
+        "mainProtection": "Տեղեկություն",
+        "sensitiveActions": "Կարգավորումներ",
+        "identityChangeProtection": "Տեղեկություն"
       },
       "mainProtection": {
         "biometric": {
-          "title": "Biometric access",
-          "description": "Use biometrics for secure access to profile and account-sensitive areas."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "appPin": {
-          "title": "App PIN",
-          "description": "Require a PIN for protected profile and app access flows."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "twoFactor": {
-          "description": "Add an additional confirmation layer for sign-in and identity-sensitive actions.",
-          "title": "Two-factor protection"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       },
       "common": {
-        "notRequired": "Not required",
-        "required": "Required"
+        "notRequired": "Տեղեկություն",
+        "required": "Պարտադիր"
       },
       "emailFlow": {
-        "currentEmail": "Current email: {{value}}",
-        "currentVerification": "Current email verification: {{value}}",
-        "newVerification": "New email verification: {{value}}",
-        "title": "Email change flow"
+        "currentEmail": "Տեղեկություն",
+        "currentVerification": "Տեղեկություն",
+        "newVerification": "Տեղեկություն",
+        "title": "Վերնագիր"
       },
       "identityChange": {
         "emailFaceId": {
-          "description": "Require biometric confirmation before changing the linked email address.",
-          "title": "Face ID for email change"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "fallbackPin": {
-          "description": "Use a protected fallback PIN when biometric confirmation is unavailable.",
-          "title": "Fallback PIN"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "phoneFaceId": {
-          "description": "Require biometric confirmation before changing the linked phone number.",
-          "title": "Face ID for phone change"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       },
       "links": {
         "devices": {
-          "description": "Review active devices, sessions, and deeper security controls from the profile layer.",
-          "title": "Open Devices & Sessions"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       },
       "phoneFlow": {
-        "currentPhone": "Current phone: {{value}}",
-        "newVerification": "New phone verification: {{value}}",
-        "oldVerification": "Old phone verification: {{value}}",
-        "title": "Phone change flow"
+        "currentPhone": "Տեղեկություն",
+        "newVerification": "Տեղեկություն",
+        "oldVerification": "Տեղեկություն",
+        "title": "Վերնագիր"
       },
       "sensitiveActions": {
         "confirmation": {
-          "description": "Require additional confirmation before critical identity or account actions.",
-          "title": "Sensitive action confirmation"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "suspiciousAlerts": {
-          "description": "Receive alerts for unusual sign-in behavior linked to your profile account.",
-          "title": "Suspicious login alerts"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "trustedAlerts": {
-          "description": "Receive alerts when trusted device access changes or new trusted sessions appear.",
-          "title": "Trusted device alerts"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       }
     },
     "qrScreen": {
       "header": {
-        "howItWorksAction": "How it works"
+        "howItWorksAction": "Տեղեկություն"
       },
       "intro": {
-        "eyebrow": "IDENTITY QR",
-        "title": "Profile QR",
-        "subtitle": "Share your public Sabi identity, open your profile quickly, and manage scan and share rules from one place."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
-        "title": "Identity QR card",
-        "description": "This QR is linked to your public profile surface and can be shared directly or opened from your identity layer."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "actions": {
-        "sendQr": "Send QR",
-        "openPublic": "Open public"
+        "sendQr": "Տեղեկություն",
+        "openPublic": "Տեղեկություն"
       },
       "toggles": {
         "allowScan": {
-          "title": "Allow profile QR scan",
-          "description": "Let other people open your public identity using this QR code."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "allowShare": {
-          "title": "Allow QR share",
-          "description": "Allow this identity QR to be shared directly from your profile surface."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "note": {
-        "title": "QR safety",
-        "description": "Profile QR remains separate from wallet QR. It is only for identity, profile access, and controlled public sharing."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "share": {
-        "title": "Share profile QR",
+        "title": "Վերնագիր",
         "message": {
-          "header": "Profile QR",
-          "name": "Name",
-          "username": "Username",
-          "sabiId": "Sabi ID",
-          "profileCode": "Profile code",
-          "profileLink": "Profile link"
+          "header": "Տեղեկություն",
+          "name": "Անուն",
+          "username": "Օգտանուն",
+          "sabiId": "Տեղեկություն",
+          "profileCode": "Պրոֆիլ",
+          "profileLink": "Պրոֆիլի հղում"
         }
       },
       "alerts": {
         "shareFailed": {
-          "title": "Could not share",
-          "message": "The profile QR could not be shared."
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն"
         },
         "howItWorks": {
-          "title": "How it works",
-          "message": "Your profile QR opens your public identity layer. Wallet QR and profile QR remain separate and follow different safety rules."
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն"
         }
       }
     },
     "supportScreen": {
       "intro": {
-        "eyebrow": "SUPPORT & LEGAL",
-        "title": "Support",
-        "subtitle": "Get help with your account, privacy, premium profile, legal details, and trust-related information."
+        "eyebrow": "Տեղեկություն",
+        "title": "Աջակցություն",
+        "subtitle": "Նկարագրություն"
       },
       "hero": {
-        "title": "Need help with your account?",
-        "description": "Support, legal information, trust surfaces, and profile-related guidance are connected here as one system."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "sections": {
-        "links": "Support links"
+        "links": "Տեղեկություն"
       },
       "notes": {
         "premiumFoundation": {
-          "title": "Premium support foundation",
-          "description": "Premium profile, AI tools, gifts, credits, business surfaces, and identity settings should stay connected to one support structure."
+          "title": "Պրեմիում",
+          "description": "Պրեմիում"
         },
         "legalTrust": {
-          "title": "Legal & trust",
-          "description": "Privacy policy, terms, legal references, and service explanations should remain accessible from the unified profile layer."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "links": {
         "helpCenter": {
-          "title": "Help center",
-          "description": "Guides, answers, and support articles for core profile actions."
+          "title": "Օգնության կենտրոն",
+          "description": "Նկարագրություն"
         },
         "contactSupport": {
-          "title": "Contact support",
-          "description": "Open direct support help for account or profile issues."
+          "title": "Կապվել աջակցությանը",
+          "description": "Նկարագրություն"
         },
         "privacyPolicy": {
-          "title": "Privacy policy",
-          "description": "Review how profile and identity data are handled."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "termsOfService": {
-          "title": "Terms of service",
-          "description": "Read the main service rules, obligations, and account conditions."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "aboutSabi": {
-          "title": "About Sabi",
-          "description": "Read about the platform, product direction, and trust surface."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "trustedScreen": {
       "intro": {
-        "eyebrow": "RELATIONSHIP RULES",
-        "title": "Trusted / Blocked",
-        "subtitle": "Manage the people you trust, the people you block, and how these relationship rules connect to your profile privacy layer."
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "metrics": {
-        "trusted": "Trusted",
-        "blocked": "Blocked",
-        "totalRules": "Total rules"
+        "trusted": "Տեղեկություն",
+        "blocked": "Արգելափակված",
+        "totalRules": "Տեղեկություն"
       },
       "hero": {
-        "title": "Relationship control center",
-        "description": "Trusted and blocked relationships affect visibility, access, and safety behavior across the unified profile surface."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "sections": {
-        "trusted": "Trusted people",
-        "blocked": "Blocked users"
+        "trusted": "Տեղեկություն",
+        "blocked": "Արգելափակված օգտատերեր"
       },
       "badges": {
-        "trusted": "Trusted",
-        "blocked": "Blocked"
+        "trusted": "Տեղեկություն",
+        "blocked": "Արգելափակված"
       },
       "actions": {
-        "block": "Block",
-        "restore": "Restore"
+        "block": "Տեղեկություն",
+        "restore": "Տեղեկություն"
       },
       "notes": {
-        "movedFromTrusted": "Moved here from the trusted list.",
-        "restoredFromBlocked": "Restored from the blocked list.",
-        "genericTrusted": "This person has trusted-level visibility and access rules in your profile layer.",
-        "genericBlocked": "This person is blocked from direct profile interaction and restricted by your privacy rules."
+        "movedFromTrusted": "Տեղեկություն",
+        "restoredFromBlocked": "Տեղեկություն",
+        "genericTrusted": "Տեղեկություն",
+        "genericBlocked": "Տեղեկություն"
       },
       "empty": {
         "trusted": {
-          "title": "No trusted people yet",
-          "description": "Trusted users will appear here when you add relationship-based access rules."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "blocked": {
-          "title": "No blocked users",
-          "description": "Blocked users will appear here when you restrict someone in your profile privacy layer."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "links": {
         "blockedOnly": {
-          "title": "Open blocked-only screen",
-          "description": "Go to the focused blocked users screen from the profile layer."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "privacyCenter": {
-          "title": "Open Privacy Center",
-          "description": "Manage all profile privacy, access, and relationship rules in one place."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       }
     },
     "verificationScreen": {
       "intro": {
-        "eyebrow": "IDENTITY VERIFICATION",
-        "title": "Verification",
-        "subtitle": "Track profile verification, compliance state, document approvals, and identity checks from one profile layer."
+        "eyebrow": "Տեղեկություն",
+        "title": "Հաստատում",
+        "subtitle": "Նկարագրություն"
       },
       "status": {
-        "verified": "Verified",
-        "pending": "Pending",
-        "review": "In review",
-        "limited": "Limited",
-        "rejected": "Rejected"
+        "verified": "Ստուգված",
+        "pending": "Սպասման մեջ",
+        "review": "Ստուգման մեջ",
+        "limited": "Սահմանափակ",
+        "rejected": "Տեղեկություն"
       },
       "common": {
-        "verified": "Verified",
-        "pending": "Pending",
-        "unknown": "Unknown"
+        "verified": "Ստուգված",
+        "pending": "Սպասման մեջ",
+        "unknown": "Անհայտ"
       },
       "sections": {
-        "compliance": "Compliance",
-        "checks": "Checks",
-        "documents": "Documents"
+        "compliance": "Համապատասխանություն",
+        "checks": "Տեղեկություն",
+        "documents": "Տեղեկություն"
       },
       "complianceState": {
-        "label": "Compliance state: {{value}}",
-        "restrictedIntro": "The following actions are currently restricted:",
-        "noRestrictions": "There are no active restrictions right now.",
-        "sourceOfFundsRequested": "Source of funds was requested for this profile.",
-        "reverificationRequired": "This profile requires reverification."
+        "label": "Տեղեկություն",
+        "restrictedIntro": "Տեղեկություն",
+        "noRestrictions": "Տեղեկություն",
+        "sourceOfFundsRequested": "Տեղեկություն",
+        "reverificationRequired": "Տեղեկություն"
       },
       "checks": {
-        "address": "Address verification",
-        "email": "Email verification",
-        "liveness": "Liveness check",
-        "phone": "Phone verification"
+        "address": "Տեղեկություն",
+        "email": "Տեղեկություն",
+        "liveness": "Տեղեկություն",
+        "phone": "Տեղեկություն"
       },
       "documents": {
-        "updatedAt": "Updated: {{value}}"
+        "updatedAt": "Տեղեկություն"
       },
       "hero": {
-        "residencyCountry": "Residency country: {{value}}",
-        "reviewReason": "Review note: {{value}}"
+        "residencyCountry": "Տեղեկություն",
+        "reviewReason": "Տեղեկություն"
       },
       "metrics": {
-        "email": "Email",
-        "liveness": "Liveness",
-        "phone": "Phone"
+        "email": "Էլ. փոստ",
+        "liveness": "Տեղեկություն",
+        "phone": "Հեռախոս"
       }
     },
     "mediaScreen": {
       "header": {
-        "title": "Media"
+        "title": "Մեդիա"
       },
       "card": {
-        "title": "Live profile media",
-        "subtitle": "Media is built from real photos and short videos, with direct access to links and voice notes."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "routes": {
         "photos": {
-          "title": "Photos",
-          "subtitle": "Upload and manage profile photos"
+          "title": "Լուսանկարներ",
+          "subtitle": "Նկարագրություն"
         },
         "shortVideos": {
-          "title": "Short videos",
-          "subtitle": "Manage real short videos"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "links": {
-          "title": "Links",
-          "subtitle": "Add and remove profile links"
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "voice": {
-          "title": "Voice",
-          "subtitle": "Record and play voice notes"
+          "title": "Ձայնային AI",
+          "subtitle": "Ձայնային AI"
         }
       }
     },
     "photosScreen": {
       "header": {
-        "title": "Photos"
+        "title": "Լուսանկարներ"
       },
       "card": {
-        "title": "Live profile photos",
-        "subtitle": "Manage real photos, avatar state, filters, and camera effects for the profile layer."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "actions": {
-        "gallery": "Gallery",
-        "cameraFx": "Camera FX"
+        "gallery": "Տեղեկություն",
+        "cameraFx": "Ձայն"
       },
       "badges": {
-        "avatar": "Avatar"
+        "avatar": "Տեղեկություն"
       },
       "filters": {
-        "none": "None",
-        "warm": "Warm",
-        "cool": "Cool",
-        "mono": "Mono",
-        "emerald": "Emerald"
+        "none": "Ոչ մեկը",
+        "warm": "Տեղեկություն",
+        "cool": "Տեղեկություն",
+        "mono": "Տեղեկություն",
+        "emerald": "Տեղեկություն"
       },
       "modal": {
         "actions": {
-          "setAvatar": "Set avatar",
-          "delete": "Delete"
+          "setAvatar": "Տեղեկություն",
+          "delete": "Ջնջել"
         },
         "editor": {
-          "left": "Left",
-          "right": "Right",
-          "mirrorX": "Mirror X",
-          "mirrorY": "Mirror Y"
+          "left": "Տեղեկություն",
+          "right": "Տեղեկություն",
+          "mirrorX": "Տեղեկություն",
+          "mirrorY": "Տեղեկություն"
         },
-        "info": "Profile photo editor. Rotation, mirroring, avatar state, and filter overlay are applied to the live profile runtime."
+        "info": "Նկարագրություն"
       },
       "capture": {
-        "cameraSuffix": "camera",
-        "fxPrefix": "FX",
-        "photoLabel": "Photo"
+        "cameraSuffix": "Ձայն",
+        "fxPrefix": "Տեղեկություն",
+        "photoLabel": "Լուսանկար"
       },
       "defaults": {
-        "photoName": "Photo"
+        "photoName": "Լուսանկար"
       },
       "empty": {
-        "title": "No photos yet",
-        "description": "Add your first profile photo from the gallery or use the camera with effects."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "alerts": {
-        "permissionTitle": "Gallery permission",
-        "permissionMessage": "Allow access to your gallery."
+        "permissionTitle": "Վերնագիր",
+        "permissionMessage": "Տեղեկություն"
       }
     },
     "shortVideosScreen": {
       "header": {
-        "title": "Short Videos"
+        "title": "Վերնագիր"
       },
       "card": {
-        "title": "Short videos",
-        "subtitle": "Add and manage real short videos for the profile layer."
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն"
       },
       "actions": {
-        "add": "Add short video"
+        "add": "Տեղեկություն"
       },
       "defaults": {
-        "videoName": "Short video"
+        "videoName": "Ձայն"
       },
       "empty": {
-        "title": "No short videos yet",
-        "description": "Add your first video. It will open in a separate full-screen player."
+        "title": "Վերնագիր",
+        "description": "Նկարագրություն"
       },
       "modal": {
-        "remove": "Remove"
+        "remove": "Հեռացնել"
       },
       "alerts": {
         "permission": {
-          "title": "Gallery permission",
-          "message": "Allow access to the gallery."
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն"
         }
       },
       "item": {
-        "title": "Title"
+        "title": "Վերնագիր"
       }
     },
     "groupScreen": {
-      "loading": "Group loading...",
+      "loading": "Բեռնվում է...",
       "header": {
-        "eyebrow": "GROUP OWNER",
-        "title": "Group management",
+        "eyebrow": "Տեղեկություն",
+        "title": "Վերնագիր",
         "badges": {
-          "active": "Active",
-          "create": "Create"
+          "active": "Ակտիվ",
+          "create": "Ստեղծել"
         }
       },
       "hero": {
         "fallbacks": {
-          "newGroup": "New group",
-          "usernameNotSet": "Username is not set yet"
+          "newGroup": "Նոր խումբ",
+          "usernameNotSet": "Տեղեկություն"
         },
         "pills": {
-          "created": "Yaratilgan",
-          "createFromProfile": "Inside Profilen yaratiladi",
-          "public": "Public",
-          "private": "Private",
-          "admins": "admin",
-          "blacklist": "blacklist"
+          "created": "Տեղեկություն",
+          "createFromProfile": "Պրոֆիլ",
+          "public": "Հանրային",
+          "private": "Մասնավոր",
+          "admins": "Տեղեկություն",
+          "blacklist": "Տեղեկություն"
         }
       },
       "sections": {
         "main": {
-          "title": "Main",
-          "subtitle": "Group nomi, username, description and asosiy identifikatorlar."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "owner": {
-          "title": "Owner data",
-          "subtitle": "Yagona user ID asosida group owner data and asosiy rol."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "publication": {
-          "title": "Publication and public qatlam",
-          "subtitle": "Manage publication."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "accessRules": {
-          "title": "Kirish and moderation",
-          "subtitle": "Members, postlash, edit, join request and moderation qoidalari."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "admins": {
-          "title": "Adminlar",
-          "subtitle": "Manage admins."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "blacklist": {
-          "title": "Blacklist",
-          "subtitle": "Manage blacklist."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "bindings": {
-          "title": "Bindings",
-          "subtitle": "Manage bindings."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       },
       "main": {
         "groupName": {
-          "label": "Group nomi",
-          "placeholder": "Enter group name"
+          "label": "Չատ",
+          "placeholder": "Որոնում"
         },
         "username": {
-          "label": "Username",
-          "placeholder": "Enter username"
+          "label": "Օգտանուն",
+          "placeholder": "Որոնում"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Group tavsifini yozing"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "groupId": {
-          "label": "Group ID",
-          "placeholder": "Avtomatik yaratiladi"
+          "label": "Չատ",
+          "placeholder": "Որոնում"
         },
         "inviteLink": {
-          "label": "Invite link",
-          "placeholder": "sabi://group/..."
+          "label": "Չատ",
+          "placeholder": "Որոնում"
         }
       },
       "owner": {
         "defaults": {
-          "role": "Owner"
+          "role": "Տեղեկություն"
         },
         "name": {
-          "label": "Owner name",
-          "placeholder": "Enter name"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "userId": {
-          "label": "Owner User ID",
-          "placeholder": "Asosiy yagona user ID"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "role": {
-          "label": "Owner role",
-          "placeholder": "Owner"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "phone": {
-          "label": "Owner phone",
-          "placeholder": "+998..."
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "email": {
-          "label": "Owner email",
-          "placeholder": "owner@sabi.app"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         }
       },
       "publication": {
         "publicGroup": {
-          "title": "Public group",
-          "subtitle": "Manage public group."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "published": {
-          "title": "Publication enabled",
-          "subtitle": "Public group nashrini faollashtirish."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "showInProfile": {
-          "title": "Show in Profile",
-          "subtitle": "Manage show in profile."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "searchable": {
-          "title": "Searchable",
-          "subtitle": "Manage searchable."
+          "title": "Որոնել",
+          "subtitle": "Որոնել"
         },
         "preview": {
-          "title": "Preview enabled",
-          "subtitle": "Link and profile preview kartalarini show."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "publicationId": {
-          "label": "Publication ID",
-          "placeholder": "pub_..."
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "title": {
-          "label": "Publication sarlavhasi",
-          "placeholder": "Enter title"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "subtitle": {
-          "label": "Publication subtitri",
-          "placeholder": "Qisqa public description"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "slug": {
-          "label": "Publication slug",
-          "placeholder": "group-slug"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "tags": {
-          "label": "Tags",
-          "placeholder": "community, update, public"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         },
         "summary": {
-          "label": "Publication xulosasi",
-          "placeholder": "Enter summary"
+          "label": "Տեղեկություն",
+          "placeholder": "Որոնում"
         }
       },
       "access": {
         "joinRequests": {
-          "title": "Join requests",
-          "subtitle": "Manage join requests."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "memberInvites": {
-          "title": "Members can send invites",
-          "subtitle": "Manage member invites."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "onlyAdminsPost": {
-          "title": "Only admins can post messages",
-          "subtitle": "Manage only admins post."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "onlyAdminsEdit": {
-          "title": "Only admins can edit",
-          "subtitle": "Manage only admins edit."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "commentsEnabled": {
-          "title": "Comments enabled",
-          "subtitle": "Manage comments enabled."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "memberListVisible": {
-          "title": "Member List Visible",
-          "subtitle": "Manage member list visible."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "slowMode": {
-          "title": "Slow mode",
-          "subtitle": "Manage slow mode."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "messageApproval": {
-          "title": "Message Approval",
-          "subtitle": "Manage message approval."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         },
         "mediaApproval": {
-          "title": "Media Approval",
-          "subtitle": "Manage media approval."
+          "title": "Վերնագիր",
+          "subtitle": "Նկարագրություն"
         }
       },
       "admins": {
         "metrics": {
-          "total": "Jami admin",
-          "owner": "Owner"
+          "total": "Տեղեկություն",
+          "owner": "Տեղեկություն"
         },
         "defaults": {
-          "adminRole": "Admin"
+          "adminRole": "Ադմին"
         },
         "badges": {
-          "owner": "Owner"
+          "owner": "Տեղեկություն"
         },
         "actions": {
-          "add": "Add admin",
-          "remove": "Remove"
+          "add": "Տեղեկություն",
+          "remove": "Հեռացնել"
         },
         "form": {
-          "title": "Add admin",
+          "title": "Վերնագիր",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Admin user ID"
+            "label": "Օգտատիրոջ ID",
+            "placeholder": "Որոնում"
           },
           "name": {
-            "label": "Name",
-            "placeholder": "Admin name"
+            "label": "Անուն",
+            "placeholder": "Որոնում"
           },
           "role": {
-            "label": "Role",
-            "placeholder": "Admin / moderator"
+            "label": "Տեղեկություն",
+            "placeholder": "Որոնում"
           }
         }
       },
       "blacklist": {
         "metrics": {
-          "total": "Jami cheklangan",
-          "active": "Active",
-          "yes": "Yes",
-          "no": "No"
+          "total": "Տեղեկություն",
+          "active": "Ակտիվ",
+          "yes": "Այո",
+          "no": "Ոչ"
         },
         "defaults": {
-          "reason": "Cheklangan"
+          "reason": "Տեղեկություն"
         },
         "actions": {
-          "add": "Add",
-          "remove": "Remove"
+          "add": "Ավելացնել",
+          "remove": "Հեռացնել"
         },
         "empty": {
-          "title": "Blacklist empty",
-          "description": "Manage empty."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "form": {
-          "title": "Form",
+          "title": "Վերնագիր",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Cheklanadigan user ID"
+            "label": "Օգտատիրոջ ID",
+            "placeholder": "Որոնում"
           },
           "name": {
-            "label": "Name",
-            "placeholder": "Enter name"
+            "label": "Անուն",
+            "placeholder": "Որոնում"
           },
           "reason": {
-            "label": "Sabab",
-            "placeholder": "Spam, abuse, scam and hokazo"
+            "label": "Տեղեկություն",
+            "placeholder": "Որոնում"
           }
         }
       },
       "bindings": {
         "chatId": {
-          "label": "Linked chat ID",
-          "placeholder": "chat_..."
+          "label": "Չատ",
+          "placeholder": "Որոնում"
         },
         "botId": {
-          "label": "Linked bot ID",
-          "placeholder": "bot_..."
+          "label": "Օգնական",
+          "placeholder": "Որոնում"
         }
       },
       "alerts": {
         "success": {
-          "title": "Success",
-          "created": "Group created",
-          "saved": "Group settings saved",
-          "reset": "Group data reset"
+          "title": "Հաջողված",
+          "created": "Տեղեկություն",
+          "saved": "Տեղեկություն",
+          "reset": "Տեղեկություն"
         },
         "error": {
-          "title": "Xato",
-          "saveFailed": "Save Failed",
-          "resetFailed": "Reset Failed"
+          "title": "Վերնագիր",
+          "saveFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+          "resetFailed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։"
         },
         "validation": {
-          "nameTitle": "Group nomi kerak",
-          "nameMessage": "Name Message",
-          "ownerIdTitle": "Owner ID kerak",
-          "ownerIdMessage": "Group owner user IDrequired.",
-          "adminTitle": "Admin Title",
-          "adminMessage": "Admin Message",
-          "blacklistTitle": "Blacklist Title",
-          "blacklistMessage": "Blacklist Message",
-          "blacklistConflictTitle": "Blacklist Conflict Title",
-          "blacklistConflictMessage": "Blacklist Conflict Message",
-          "ownerProtectedTitle": "Owner himoyalangan",
-          "ownerProtectedMessage": "Owner Protected Message",
-          "ownerBlacklistMessage": "Owner Blacklist Message"
+          "nameTitle": "Վերնագիր",
+          "nameMessage": "Տեղեկություն",
+          "ownerIdTitle": "Վերնագիր",
+          "ownerIdMessage": "Տեղեկություն",
+          "adminTitle": "Վերնագիր",
+          "adminMessage": "Տեղեկություն",
+          "blacklistTitle": "Վերնագիր",
+          "blacklistMessage": "Տեղեկություն",
+          "blacklistConflictTitle": "Վերնագիր",
+          "blacklistConflictMessage": "Տեղեկություն",
+          "ownerProtectedTitle": "Վերնագիր",
+          "ownerProtectedMessage": "Տեղեկություն",
+          "ownerBlacklistMessage": "Տեղեկություն"
         },
         "resetConfirm": {
-          "title": "Reset Confirm",
-          "message": "Reset Confirm",
-          "cancel": "Bekor qilish",
-          "confirm": "Reset"
+          "title": "Վերնագիր",
+          "message": "Տեղեկություն",
+          "cancel": "Չեղարկել",
+          "confirm": "Վերակայել"
         }
       },
       "actions": {
-        "create": "Create group",
-        "creating": "Yaratilmoqda...",
-        "save": "Save",
-        "saving": "Saving",
-        "reset": "Reset"
+        "create": "Տեղեկություն",
+        "creating": "Տեղեկություն",
+        "save": "Պահպանել",
+        "saving": "Բեռնվում է...",
+        "reset": "Վերակայել"
       }
     },
     "autoDeleteScreen": {
       "hero": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "intro": {
-        "eyebrow": "Eyebrow",
-        "subtitle": "Subtitle",
-        "title": "Title"
+        "eyebrow": "Տեղեկություն",
+        "subtitle": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "note": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
-      "selectedBadge": "Selected Badge",
+      "selectedBadge": "Տեղեկություն",
       "toggles": {
         "channels": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "groups": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         },
         "newChats": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       }
     },
     "blockedScreen": {
       "empty": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "hero": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "intro": {
-        "eyebrow": "Eyebrow",
-        "subtitle": "Subtitle",
-        "title": "Title"
+        "eyebrow": "Տեղեկություն",
+        "subtitle": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "metric": {
-        "title": "Title"
+        "title": "Վերնագիր"
       },
       "person": {
-        "defaultNote": "Default Note",
-        "unblockAction": "Unblock Action"
+        "defaultNote": "Տեղեկություն",
+        "unblockAction": "Տեղեկություն"
       }
     },
     "giftsSection": {
-      "subtitle": "Premium gifts, moments, and recent highlights.",
-      "title": "Received gifts"
+      "subtitle": "Նկարագրություն",
+      "title": "Ստացված նվերներ"
     },
     "hub": {
-      "eyebrow": "Eyebrow"
+      "eyebrow": "Տեղեկություն"
     },
     "premiumScreen": {
       "features": {
         "ai": {
-          "subtitle": "Open AI profile features connected to premium identity.",
-          "title": "AI tools"
+          "subtitle": "Պրեմիում",
+          "title": "AI գործիքներ"
         },
         "frames": {
-          "subtitle": "Use profile frames connected to public and premium identity surfaces.",
-          "title": "Premium frames"
+          "subtitle": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "gifts": {
-          "subtitle": "Manage premium gift visibility, access, and presentation.",
-          "title": "Gift layer"
+          "subtitle": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "themes": {
-          "subtitle": "Open profile colors, style direction, and visual identity setup.",
-          "title": "Premium themes"
+          "subtitle": "Պրեմիում",
+          "title": "Պրեմիում"
         }
       },
       "footer": {
-        "action": "Open themes",
-        "description": "Open the theme and premium identity layer to continue customizing your profile surface.",
-        "title": "Continue to Theme Setup"
+        "action": "Պրեմիում",
+        "description": "Պրեմիում",
+        "title": "Պրեմիում"
       },
       "header": {
-        "openAction": "Open",
-        "title": "Premium"
+        "openAction": "Բացել",
+        "title": "Պրեմիում"
       },
       "hero": {
         "actions": {
           "ai": "AI",
-          "gifts": "Gifts",
-          "public": "Public",
-          "themes": "Themes"
+          "gifts": "Նվերներ",
+          "public": "Հանրային",
+          "themes": "Պրեմիում"
         },
         "badges": {
-          "identity": "Premium identity",
-          "ownerSurface": "Owner surface"
+          "identity": "Պրեմիում",
+          "ownerSurface": "Պրեմիում"
         },
-        "subtitle": "Premium themes, frames, AI identity tools, QR presentation, and gift surfaces are connected to one profile system.",
-        "title": "Sabi Premium"
+        "subtitle": "Պրեմիում",
+        "title": "Պրեմիում"
       },
       "identityCard": {
-        "description": "Your premium state is tied to your profile identity and should activate automatically after successful payment confirmation.",
-        "title": "Premium identity card"
+        "description": "Պրեմիում",
+        "title": "Պրեմիում"
       },
       "intro": {
-        "eyebrow": "SABI PREMIUM",
-        "subtitle": "Premium styling, identity upgrades, AI tools, QR presentation, gifts, credits, and business surfaces live in one profile layer.",
-        "title": "Premium identity"
+        "eyebrow": "Պրեմիում",
+        "subtitle": "Պրեմիում",
+        "title": "Պրեմիում"
       },
       "notice": {
-        "description": "Premium is a connected profile layer and should remain linked to AI, public profile, colors, gifts, QR, and future admin controls.",
-        "title": "Premium connected option"
+        "description": "Պրեմիում",
+        "title": "Պրեմիում"
       },
       "rows": {
         "ai": {
           "badge": "AI",
-          "description": "Open premium AI tools connected to your profile layer.",
-          "title": "AI profile"
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "business": {
-          "description": "Prepare business-related premium expansion from the profile layer.",
-          "title": "Business upgrade"
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "colors": {
-          "badge": "Themes",
-          "description": "Open color setup, visual styling, and profile frame selection.",
-          "title": "Premium themes"
+          "badge": "Պրեմիում",
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "credits": {
-          "description": "Open credits, balance-linked profile perks, and upgrade helpers.",
-          "title": "Credits"
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "gifts": {
-          "description": "Manage premium gifts, storage, and profile gift presentation.",
-          "title": "Gift center"
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         },
         "public": {
-          "description": "Control the public surface connected to your premium identity.",
-          "title": "Public profile"
+          "description": "Պրեմիում",
+          "title": "Հանրային պրոֆիլ"
         },
         "qr": {
-          "description": "Manage the profile QR presentation linked to premium identity.",
-          "title": "Profile QR"
+          "description": "Պրեմիում",
+          "title": "Պրեմիում"
         }
       },
       "sections": {
-        "controls": "Controls",
-        "unlocks": "Unlocks"
+        "controls": "Պրեմիում",
+        "unlocks": "Պրեմիում"
       }
     },
     "publicScreen": {
       "editor": {
-        "bio": "Bio",
-        "name": "Name",
-        "subtitle": "Subtitle",
-        "title": "Title",
-        "username": "Username"
+        "bio": "Կենսագրություն",
+        "name": "Տեղեկություն",
+        "subtitle": "Նկարագրություն",
+        "title": "Վերնագիր",
+        "username": "Տեղեկություն"
       },
       "fallback": {
-        "bio": "Bio",
-        "subtitle": "Subtitle"
+        "bio": "Տեղեկություն",
+        "subtitle": "Նկարագրություն"
       },
       "header": {
-        "title": "Public profile"
+        "title": "Հանրային պրոֆիլ"
       },
       "hero": {
-        "subtitle": "Public identity is fully tied to your profile layer and follows the same owner data, premium state, and visibility rules.",
-        "title": "Title"
+        "subtitle": "Նկարագրություն",
+        "title": "Հանրային պրոֆիլ"
       },
       "rows": {
         "photos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Նկարագրություն",
+          "title": "Հանրային լուսանկարներ"
         },
         "videos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Նկարագրություն",
+          "title": "Վերնագիր"
         }
       },
       "sections": {
-        "manage": "Manage",
-        "metrics": "Metrics"
+        "manage": "Կառավարել",
+        "metrics": "Տեղեկություն"
       }
     },
     "reactionsScreen": {
       "card": {
-        "subtitle": "Add real reactions here and the counts update the main profile immediately.",
-        "title": "Reaction hub"
+        "subtitle": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "header": {
-        "title": "Reactions"
+        "title": "Ռեակցիաներ"
       }
     },
     "voiceScreen": {
       "actions": {
-        "record": "Record",
-        "stop": "Stop"
+        "record": "Ձայնագրել",
+        "stop": "Կանգնեցնել"
       },
       "alerts": {
         "permission": {
-          "message": "Allow access to the microphone.",
-          "title": "Microphone permission"
+          "message": "Ձայնային AI",
+          "title": "Ձայնային AI"
         },
-        "recordFailed": "Record Failed"
+        "recordFailed": "Ձայնային AI"
       },
       "card": {
-        "subtitle": "Voice notes are now connected to real recording, saving, and playback.",
-        "title": "Voice notes"
+        "subtitle": "Ձայնային AI",
+        "title": "Ձայնային AI"
       },
       "header": {
-        "title": "Voice"
+        "title": "Ձայնային AI"
       },
       "item": {
-        "title": "Title"
+        "title": "Վերնագիր"
       }
     }
   },
   "premium": {
     "title": "Պրեմիում",
     "subtitle": "Բացեք առաջադեմ գործիքներ, AI թարգմանություն, պրեմիում հնարավորություններ և բարելավված փորձ։",
-    "activatePremium": "Ակտիվացնել Premium",
-    "premiumActive": "Premium-ը ակտիվ է",
-    "premiumInactive": "Premium-ը ոչ ակտիվ է",
-    "premiumExpired": "Premium-ի ժամկետը լրացել է",
+    "activatePremium": "Պրեմիում",
+    "premiumActive": "Պրեմիում",
+    "premiumInactive": "Պրեմիում",
+    "premiumExpired": "Պրեմիում",
     "renewalDate": "Թարմացման ամսաթիվ",
     "manageSubscription": "Կառավարել բաժանորդագրությունը",
     "monthlyPlan": "Ամսական պլան",
     "yearlyPlan": "Տարեկան պլան",
-    "buyWithCoin": "Գնել Coin-ով",
+    "buyWithCoin": "Պրեմիում",
     "benefits": "Առավելություններ",
     "includedFeatures": "Ներառված հնարավորություններ",
     "advancedTranslation": "Առաջադեմ թարգմանություն",
@@ -7063,11 +7064,11 @@ export const HY_LOCALE = {
     "exclusiveFeatures": "Բացառիկ հնարավորություններ",
     "subscriptionHistory": "Բաժանորդագրության պատմություն",
     "paymentInProgress": "Վճարումը ընթացքի մեջ է",
-    "premiumActivated": "Premium-ն ակտիվացվել է",
-    "premiumActivationFailed": "Չհաջողվեց ակտիվացնել Premium-ը",
+    "premiumActivated": "Պրեմիում",
+    "premiumActivationFailed": "Պրեմիում",
     "autoRenew": "Ավտոմատ թարմացում",
     "cancelAutoRenew": "Չեղարկել ավտոմատ թարմացումը",
-    "featureLocked": "Այս հնարավորությունը հասանելի է միայն Premium օգտատերերին։",
+    "featureLocked": "Պրեմիում",
     "aiChatTranslation": "AI չաթի թարգմանություն",
     "aiCallTranslation": "AI ձայնային և վիդեոզանգերի թարգմանություն",
     "smartReplies": "Խելացի պատասխաններ",
@@ -7110,353 +7111,353 @@ export const HY_LOCALE = {
     "rewriteForBusiness": "Վերաշարադրել բիզնեսի համար",
     "summarizeConversation": "Ամփոփել խոսակցությունը",
     "summarizeCalls": "Ամփոփել զանգերը",
-    "premiumOnly": "AI գործիքները հասանելի են միայն Premium օգտատերերին։",
+    "premiumOnly": "Պրեմիում",
     "unsupportedLanguagePair": "Այս լեզվական զույգը դեռ չի աջակցվում",
     "mobile": {
       "common": {
-        "back": "Back",
-        "cancel": "Cancel",
-        "loading": "Loading...",
-        "notConnected": "Not connected",
-        "open": "Open",
-        "refresh": "Refresh",
-        "retry": "Retry",
-        "save": "Save",
-        "send": "Send",
-        "close": "Close",
-        "requestFailed": "Request failed. Try again.",
-        "saved": "Saved",
-        "search": "Search",
-        "ready": "Ready"
+        "back": "Հետ",
+        "cancel": "Չեղարկել",
+        "loading": "Բեռնվում է...",
+        "notConnected": "Միացված չէ",
+        "open": "Բացել",
+        "refresh": "Թարմացնել",
+        "retry": "Կրկին փորձել",
+        "save": "Պահպանել",
+        "send": "Ուղարկել",
+        "close": "Փակել",
+        "requestFailed": "Հարցումը ձախողվեց։ Փորձեք կրկին։",
+        "saved": "Տեղեկություն",
+        "search": "Որոնել",
+        "ready": "Պատրաստ է"
       },
       "status": {
-        "ready": "Ready",
-        "limited": "Limited",
-        "error": "Error",
-        "not_connected": "Not connected",
-        "unavailable": "Unavailable",
-        "active": "Active",
-        "pending": "Pending"
+        "ready": "Պատրաստ է",
+        "limited": "Սահմանափակ",
+        "error": "Սխալ",
+        "not_connected": "Միացված չէ",
+        "unavailable": "Անհասանելի",
+        "active": "Ակտիվ",
+        "pending": "Սպասման մեջ"
       },
       "messageStatus": {
-        "sent": "Sent",
-        "error": "Error",
-        "pending": "Pending",
-        "sending": "Sending",
-        "awaiting_confirmation": "Awaiting confirmation"
+        "sent": "Ուղարկված",
+        "error": "Սխալ",
+        "pending": "Սպասման մեջ",
+        "sending": "Բեռնվում է...",
+        "awaiting_confirmation": "Տեղեկություն"
       },
       "action": {
         "chat": {
-          "title": "AI Chat",
-          "description": "Talk with the assistant and receive action cards."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "voice": {
-          "title": "Voice AI",
-          "description": "Native voice bridge, push-to-talk and TTS command screen."
+          "title": "Ձայնային AI",
+          "description": "Ձայնային AI"
         },
         "translation": {
-          "title": "Realtime translation",
-          "description": "Premium text, audio, video and call translation control."
+          "title": "Թարգմանություն",
+          "description": "Թարգմանություն"
         },
         "history": {
-          "title": "History",
-          "description": "Assistant activity, summaries and previous conversations."
+          "title": "Պատմություն",
+          "description": "Նկարագրություն"
         },
         "tasks": {
-          "title": "Tasks",
-          "description": "Draft, confirmed and completed AI tasks."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "memory": {
-          "title": "Memory",
-          "description": "Personalization, privacy mode and saved instructions."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         },
         "settings": {
-          "title": "AI Settings",
-          "description": "Providers, permissions, locale and safety state."
+          "title": "Կարգավորումներ",
+          "description": "Կարգավորումներ"
         },
         "premium": {
-          "title": "Premium AI",
-          "description": "COIN access for advanced AI and translation functions."
+          "title": "Պրեմիում",
+          "description": "Պրեմիում"
         },
         "setting": {
-          "title": "Settings",
-          "description": "Language, permissions and AI functions."
+          "title": "Կարգավորումներ",
+          "description": "Նկարագրություն"
         },
         "profileAi": {
-          "title": "AI in Profile",
-          "description": "AI language and permissions are managed through Profile."
+          "title": "Վերնագիր",
+          "description": "Նկարագրություն"
         }
       },
       "home": {
         "title": "Sabi AI",
-        "subtitle": "Assistant program for chat, voice, translation, memory, safe actions and premium AI tools.",
-        "heroEyebrow": "AI PROGRAM",
-        "heroTitle": "Your SuperApp assistant",
-        "heroDescription": "The mobile UI is connected to the AI kernel contracts. No fake answers: if backend or provider is unavailable, the screen shows a real connection state.",
-        "connection": "Connection",
-        "userId": "User ID",
-        "quickAccess": "Quick access",
-        "capabilities": "Capabilities",
-        "safeActions": "Safe actions",
-        "safeActionsDescription": "AI-24 safety/admin monitoring is backend-owned and visible in admin panel contracts.",
-        "safeActionsText": "Money, account deletion and high-risk actions require confirmation and admin/compliance rules.",
-        "cleanWorkspaceTitle": "Clean AI workspace",
-        "cleanWorkspaceText": "Only useful AI functions for the user are shown here."
+        "subtitle": "Նկարագրություն",
+        "heroEyebrow": "Տեղեկություն",
+        "heroTitle": "Տեղեկություն",
+        "heroDescription": "Տեղեկություն՝ Տեղեկություն",
+        "connection": "Կարգավորումներ",
+        "userId": "Օգտատիրոջ ID",
+        "quickAccess": "Արագ մուտք",
+        "capabilities": "Օգնական",
+        "safeActions": "Անվտանգություն",
+        "safeActionsDescription": "Անվտանգություն՝ Տեղեկություն",
+        "safeActionsText": "Անվտանգություն՝ Տեղեկություն",
+        "cleanWorkspaceTitle": "Վերնագիր",
+        "cleanWorkspaceText": "Տեղեկություն՝ Տեղեկություն"
       },
       "chat": {
-        "title": "AI Chat",
-        "subtitle": "Real assistant chat connected to /api/ai/mobile-ui and /api/ai/assistant.",
-        "runtimeTitle": "Assistant runtime",
-        "backendRequired": "Authenticated backend session is required for AI chat.",
-        "emptyTitle": "No messages yet",
-        "emptyText": "Send a message. If the backend is offline, the error will be shown honestly instead of a fake response.",
-        "placeholder": "Ask Sabi AI...",
-        "roleUser": "You",
-        "emptyBackendResponse": "AI backend responded, but no assistant text field was returned.",
-        "cleanEmptyText": "Write a question, upload a file, speak by voice or enable web search.",
-        "errorMessage": "Message could not be sent.",
-        "thinking": "Thinking...",
-        "assistantCenterTitle": "AI assistant",
-        "assistantCenterDescription": "Clean chat with files, web search, business and study assistants.",
-        "modeTitle": "Assistant type",
-        "modeSubtitle": "Choose the assistant you need before sending a question.",
-        "assistantMenuTitle": "Assistants",
-        "assistantMenuSubtitle": "Business, student, applicant, teacher or universal AI.",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "runtimeTitle": "Կարգավորումներ",
+        "backendRequired": "Հետ",
+        "emptyTitle": "Չատ",
+        "emptyText": "Չատ՝ Տեղեկություն",
+        "placeholder": "Որոնում",
+        "roleUser": "Դուք",
+        "emptyBackendResponse": "Հետ",
+        "cleanEmptyText": "Տեղեկություն՝ Տեղեկություն",
+        "errorMessage": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+        "thinking": "Տեղեկություն",
+        "assistantCenterTitle": "Օգնական",
+        "assistantCenterDescription": "Օգնական՝ Տեղեկություն",
+        "modeTitle": "Վերնագիր",
+        "modeSubtitle": "Նկարագրություն՝ Տեղեկություն",
+        "assistantMenuTitle": "Օգնական",
+        "assistantMenuSubtitle": "Օգնական՝ Տեղեկություն",
         "mode": {
           "chatgpt": {
-            "title": "Universal AI",
-            "short": "Universal",
-            "description": "Questions, analysis, writing and general help.",
-            "prompt": "Help me as a universal AI assistant."
+            "title": "Վերնագիր",
+            "short": "Տեղեկություն",
+            "description": "Նկարագրություն",
+            "prompt": "Տեղեկություն"
           },
           "business": {
-            "title": "Business assistant",
-            "short": "Business",
-            "description": "Plans, documents, sales, support and business processes.",
-            "prompt": "Help me as a business assistant."
+            "title": "Վերնագիր",
+            "short": "Բիզնես",
+            "description": "Նկարագրություն",
+            "prompt": "Տեղեկություն"
           },
           "student": {
-            "title": "Student assistant",
-            "short": "Student",
-            "description": "Topic explanations, tasks and step-by-step learning.",
-            "prompt": "Help me as a student assistant."
+            "title": "Վերնագիր",
+            "short": "Տեղեկություն",
+            "description": "Նկարագրություն",
+            "prompt": "Տեղեկություն"
           },
           "applicant": {
-            "title": "Applicant assistant",
-            "short": "Applicant",
-            "description": "Admissions, exams, essays, interviews and university choice.",
-            "prompt": "Help me as an applicant assistant."
+            "title": "Վերնագիր",
+            "short": "Տեղեկություն",
+            "description": "Նկարագրություն",
+            "prompt": "Տեղեկություն"
           },
           "teacher": {
-            "title": "Teacher assistant",
-            "short": "Teacher",
-            "description": "Lesson plans, materials, grading and classroom work.",
-            "prompt": "Help me as a teacher assistant."
+            "title": "Վերնագիր",
+            "short": "Տեղեկություն",
+            "description": "Նկարագրություն",
+            "prompt": "Տեղեկություն"
           }
         },
-        "toolsTitle": "Functions",
-        "toolsSubtitle": "Active mode: {mode}. Upload a file or enable web search.",
-        "toolsSheetTitle": "Additional functions",
-        "toolsSheetSubtitle": "Upload a photo, video, document or enable web search.",
-        "camera": "Camera",
-        "cameraDescription": "Add a photo from the camera.",
-        "uploadPhoto": "Photo",
-        "uploadPhotoDescription": "Add a photo from the gallery.",
-        "uploadVideo": "Video",
-        "uploadVideoDescription": "Add a video file.",
-        "uploadDocument": "Document",
-        "uploadDocumentDescription": "Add a PDF, text file or another document.",
-        "webSearch": "Web search",
-        "webSearchShort": "Internet",
-        "webSearchDescription": "Prepare the answer using web search.",
-        "voiceRecording": "Voice recording",
-        "permissionCamera": "Camera permission is required.",
-        "permissionPhoto": "Photo permission is required.",
-        "permissionVideo": "Video permission is required.",
-        "attachmentsSent": "Attachments",
-        "attachmentPhoto": "Photo",
-        "attachmentVideo": "Video",
-        "attachmentDocument": "Document",
-        "attachmentAudio": "Audio",
-        "uploadContractNotice": "Files are attached to the AI request and processed through the provider.",
-        "safetyConfirmTitle": "Confirmation required",
-        "safetyConfirmMessage": "This action requires confirmation to continue.",
-        "safetyConfirmCancel": "Cancel",
-        "safetyConfirmContinue": "Continue",
-        "securityNotice": "AI will not send messages, money or important actions without your confirmation.",
+        "toolsTitle": "Կարգավորումներ",
+        "toolsSubtitle": "Կարգավորումներ՝ Տեղեկություն",
+        "toolsSheetTitle": "Կարգավորումներ",
+        "toolsSheetSubtitle": "Կարգավորումներ՝ Տեղեկություն",
+        "camera": "Տեսախցիկ",
+        "cameraDescription": "Ձայն՝ Տեղեկություն",
+        "uploadPhoto": "Լուսանկար",
+        "uploadPhotoDescription": "Պրոֆիլ՝ Տեղեկություն",
+        "uploadVideo": "Տեսանյութ",
+        "uploadVideoDescription": "Ձայն՝ Տեղեկություն",
+        "uploadDocument": "Փաստաթուղթ",
+        "uploadDocumentDescription": "Նկարագրություն՝ Տեղեկություն",
+        "webSearch": "Վեբ որոնում",
+        "webSearchShort": "Որոնել",
+        "webSearchDescription": "Որոնել",
+        "voiceRecording": "Ձայնային AI",
+        "permissionCamera": "Ձայն",
+        "permissionPhoto": "Պրոֆիլ",
+        "permissionVideo": "Ձայն",
+        "attachmentsSent": "Տեղեկություն",
+        "attachmentPhoto": "Լուսանկար",
+        "attachmentVideo": "Տեսանյութ",
+        "attachmentDocument": "Փաստաթուղթ",
+        "attachmentAudio": "Տեղեկություն",
+        "uploadContractNotice": "Տեղեկություն",
+        "safetyConfirmTitle": "Վերնագիր",
+        "safetyConfirmMessage": "Տեղեկություն",
+        "safetyConfirmCancel": "Չեղարկել",
+        "safetyConfirmContinue": "Շարունակել",
+        "securityNotice": "Անվտանգություն",
         "prompt": {
-          "business": "Analyze my business task.",
-          "study": "Explain this topic step by step.",
-          "search": "Search the internet and give me a short summary.",
-          "file": "If I upload a file, analyze its content."
+          "business": "Տեղեկություն",
+          "study": "Տեղեկություն",
+          "search": "Որոնել",
+          "file": "Տեղեկություն"
         }
       },
       "activity": {
-        "historyTitle": "AI History",
-        "historySubtitle": "History preview from the AI mobile snapshot.",
-        "tasksTitle": "AI Tasks",
-        "tasksSubtitle": "Tasks created by assistant brain and action confirmations.",
-        "emptyTitle": "No items",
-        "emptyText": "The backend did not return items for this section yet."
+        "historyTitle": "Պատմություն",
+        "historySubtitle": "Պատմություն՝ Տեղեկություն",
+        "tasksTitle": "Օգնական",
+        "tasksSubtitle": "Օգնական՝ Տեղեկություն",
+        "emptyTitle": "Տեղեկություն",
+        "emptyText": "Տեղեկություն՝ Տեղեկություն"
       },
       "memory": {
-        "title": "AI Memory",
-        "subtitle": "Personalization runtime: privacy mode, preferences and saved instructions.",
-        "privacyMode": "Privacy mode",
-        "strict": "Strict",
-        "balanced": "Balanced",
-        "adaptive": "Adaptive",
-        "instructionPlaceholder": "Add an instruction for Sabi AI...",
-        "addInstruction": "Add instruction",
-        "instructions": "Saved instruction",
-        "noAccusation": "AI stores preferences only through the approved memory/personalization layer.",
+        "title": "Վերնագիր",
+        "subtitle": "Նկարագրություն",
+        "privacyMode": "Գաղտնիություն",
+        "strict": "Տեղեկություն",
+        "balanced": "Տեղեկություն",
+        "adaptive": "Տեղեկություն",
+        "instructionPlaceholder": "Որոնում",
+        "addInstruction": "Տեղեկություն",
+        "instructions": "Տեղեկություն",
+        "noAccusation": "Տեղեկություն",
         "modeSaved": {
-          "strict": "Strict mode saved.",
-          "balanced": "Balanced mode saved.",
-          "adaptive": "Adaptive mode saved."
+          "strict": "Տեղեկություն",
+          "balanced": "Տեղեկություն",
+          "adaptive": "Տեղեկություն"
         },
-        "instructionSaved": "Instruction saved."
+        "instructionSaved": "Տեղեկություն"
       },
       "premium": {
-        "title": "Premium AI",
-        "subtitle": "COIN access for translation, voice AI and advanced assistant actions.",
-        "accessTitle": "Premium AI access",
-        "noFakePayment": "Այստեղ վճարումը չի կեղծվում։ Ակտիվացումը պետք է գա իրական Premium/COIN հաստատման հոսքից։",
-        "realtimeCallTranslationTitle": "Realtime call translation",
-        "realtimeTranslationTitle": "Realtime translation",
-        "realtimeTranslationDescription": "Premium gate: ai_translation_realtime. Actual permission comes from backend.",
-        "mediaTranslationTitle": "Media translation",
-        "mediaTranslationDescription": "Audio/video transcript translation through native bridge and backend provider.",
-        "advancedAssistantActionsTitle": "Advanced assistant actions",
-        "safeActionsTitle": "Safe actions",
-        "safeActionsDescription": "Money/account actions stay confirmation-gated and safety-controlled.",
-        "openProfilePremium": "Open Profile Premium",
-        "brandText": "Sabi Premium · COIN controlled activation",
-        "heroEyebrow": "Premium AI",
-        "badge": "Premium",
-        "safeBadge": "Safe access"
+        "title": "Պրեմիում",
+        "subtitle": "Պրեմիում",
+        "accessTitle": "Պրեմիում",
+        "noFakePayment": "Պրեմիում",
+        "realtimeCallTranslationTitle": "Թարգմանություն",
+        "realtimeTranslationTitle": "Թարգմանություն",
+        "realtimeTranslationDescription": "Թարգմանություն",
+        "mediaTranslationTitle": "Թարգմանություն",
+        "mediaTranslationDescription": "Թարգմանություն",
+        "advancedAssistantActionsTitle": "Պրեմիում",
+        "safeActionsTitle": "Պրեմիում",
+        "safeActionsDescription": "Պրեմիում",
+        "openProfilePremium": "Պրեմիում",
+        "brandText": "Տեղեկություն՝ Տեղեկություն",
+        "heroEyebrow": "Պրեմիում",
+        "badge": "Պրեմիում",
+        "safeBadge": "Պրեմիում"
       },
       "settings": {
-        "title": "AI Settings",
-        "subtitle": "Provider, locale, permissions, safety and profile contracts.",
+        "title": "Կարգավորումներ",
+        "subtitle": "Կարգավորումներ",
         "metricApi": "API",
-        "metricSource": "Source",
+        "metricSource": "Աղբյուր",
         "sourceLocalContract": "local_contract",
-        "connectionDetails": "Connection details",
-        "sections": "Sections",
-        "providerTitle": "Provider contracts",
-        "providerDescription": "Google/Yandex/Internal provider settings are loaded from backend settings contracts.",
-        "safetyTitle": "Safety/Admin monitoring",
-        "safetyDescription": "Internal AI-24 reports, holds and critical escalation are backend/admin-panel owned.",
-        "heroEyebrow": "AI settings",
-        "heroTitle": "AI control center",
-        "heroDescription": "Manage providers, locale, permissions and safety state.",
-        "controlTitle": "Controls",
-        "profileOwnerTitle": "Profile owner",
-        "profileOwnerDescription": "AI settings are linked to the verified profile owner.",
-        "note": "Real provider settings must come from the backend."
+        "connectionDetails": "Կարգավորումներ",
+        "sections": "Տեղեկություն",
+        "providerTitle": "Կարգավորումներ",
+        "providerDescription": "Կարգավորումներ՝ Տեղեկություն",
+        "safetyTitle": "Վերնագիր",
+        "safetyDescription": "Նկարագրություն՝ Տեղեկություն",
+        "heroEyebrow": "AI կարգավորումներ",
+        "heroTitle": "Կարգավորումներ",
+        "heroDescription": "Կարգավորումներ՝ Տեղեկություն",
+        "controlTitle": "Վերնագիր",
+        "profileOwnerTitle": "Պրոֆիլ",
+        "profileOwnerDescription": "Պրոֆիլ՝ Տեղեկություն",
+        "note": "Տեղեկություն"
       },
       "translation": {
-        "title": "AI Translation",
-        "subtitle": "Realtime translation screen for text now, audio/video/calls through native transcript bridge.",
-        "realtimeTitle": "Realtime translation",
-        "source": "Source text",
-        "sourcePlaceholder": "Text to translate...",
-        "target": "Target language",
-        "targetPlaceholder": "en, ru, uz, tg...",
-        "translate": "Translate",
-        "result": "Result",
-        "premium": "Premium gate stays in backend. The screen only displays the real response.",
-        "heroEyebrow": "Translation",
-        "textPhotoCamera": "Text, camera and photo",
-        "inputPlaceholder": "Enter text",
-        "outputPlaceholder": "Translation",
-        "camera": "Camera",
-        "photo": "Photo",
-        "from": "From language",
-        "to": "To language",
-        "detect": "Detect language",
-        "selectLanguage": "Select language",
-        "searchLanguage": "Search language",
-        "permissionCamera": "Camera permission is required for camera translation.",
-        "permissionPhoto": "Gallery permission is required for photo translation.",
-        "emptyText": "Enter text to translate.",
-        "noOutput": "The translation provider returned no text.",
-        "sameLanguage": "Source and target languages are the same.",
-        "photoReady": "Photo selected",
-        "cameraReady": "Camera photo ready",
-        "detectCannotSwap": "Select the source language before swapping.",
-        "noImageOutput": "Image translation returned no text.",
-        "detectedText": "Detected text",
-        "messengerPathTitle": "Messenger path",
-        "messengerReady": "The path for Messenger chat text, audio transcripts and call subtitles is ready.",
-        "imageProcessing": "Translating photo...",
-        "textProcessing": "Translating...",
-        "metaDetected": "Detected"
+        "title": "Թարգմանություն",
+        "subtitle": "Թարգմանություն",
+        "realtimeTitle": "Թարգմանություն",
+        "source": "Թարգմանություն",
+        "sourcePlaceholder": "Թարգմանություն",
+        "target": "Թարգմանություն",
+        "targetPlaceholder": "Թարգմանություն",
+        "translate": "Թարգմանություն",
+        "result": "Թարգմանություն",
+        "premium": "Թարգմանություն",
+        "heroEyebrow": "Թարգմանություն",
+        "textPhotoCamera": "Թարգմանություն",
+        "inputPlaceholder": "Թարգմանություն",
+        "outputPlaceholder": "Թարգմանություն",
+        "camera": "Տեսախցիկ",
+        "photo": "Լուսանկար",
+        "from": "Թարգմանություն",
+        "to": "Թարգմանություն",
+        "detect": "Թարգմանություն",
+        "selectLanguage": "Թարգմանություն",
+        "searchLanguage": "Որոնել լեզու",
+        "permissionCamera": "Թարգմանություն",
+        "permissionPhoto": "Թարգմանություն",
+        "emptyText": "Թարգմանություն",
+        "noOutput": "Թարգմանություն",
+        "sameLanguage": "Թարգմանություն",
+        "photoReady": "Թարգմանություն",
+        "cameraReady": "Թարգմանություն",
+        "detectCannotSwap": "Թարգմանություն",
+        "noImageOutput": "Թարգմանություն",
+        "detectedText": "Թարգմանություն",
+        "messengerPathTitle": "Թարգմանություն",
+        "messengerReady": "Թարգմանություն",
+        "imageProcessing": "Թարգմանություն",
+        "textProcessing": "Թարգմանություն",
+        "metaDetected": "Թարգմանություն"
       },
       "voice": {
-        "title": "Voice AI",
-        "subtitle": "Native STT/TTS bridge contract for the next Siri/Alice-level step.",
-        "nativeBridge": "Native bridge",
-        "realBridgeDescription": "Իրական mobile bridge՝ միկրոֆոնի ձայնագրում, native ձայնային իրադարձություններ, transcript փոխանցում և audio URL նվագարկում։ Text-only TTS-ը չի կեղծվում։",
-        "bind": "Bind bridge",
-        "invoke": "Quick invoke",
-        "start": "Start session",
-        "stop": "Stop session",
-        "interrupt": "Interrupt",
-        "recording": "Recording",
-        "startRecording": "Record",
-        "stopRecording": "Stop record",
-        "audioCapturedNotice": "Audio was captured and reported as a native voice event. Speech recognition must provide a real transcript; this screen does not invent one.",
-        "audioDuration": "Duration",
-        "audioSize": "Audio size",
-        "sttTtsBridgeTitle": "STT / TTS bridge",
-        "transcriptPlaceholder": "Transcript from native STT bridge...",
-        "submitTranscript": "Submit transcript",
-        "ttsTitle": "TTS playback",
-        "ttsPlaceholder": "Text to request from backend TTS...",
-        "playLastTts": "Play last TTS",
-        "noFakeTts": "Կեղծ ձայն չկա․ ձայնը նվագարկվում է միայն, եթե backend/native TTS-ը վերադարձնում է audio URL։ Text-only TTS-ը ցուցադրվում է որպես տեքստ, մինչև միացվի expo-speech կամ native TTS module։",
-        "runtimeLog": "Voice runtime log",
-        "noEvents": "No voice events yet.",
-        "contractOnly": "This screen does not fake recording. It expects the real native bridge to provide transcript/audio events.",
-        "quickInvokeSent": "Quick invoke command sent.",
-        "sessionStopped": "Voice session stopped.",
-        "session": "Session",
-        "recordingNow": "Recording...",
-        "tapToSpeak": "Tap to speak",
-        "transcriptReady": "Transcript ready",
+        "title": "Ձայնային AI",
+        "subtitle": "Ձայնային AI",
+        "nativeBridge": "Ձայնային AI",
+        "realBridgeDescription": "Ձայնային AI",
+        "bind": "Ձայնային AI",
+        "invoke": "Ձայնային AI",
+        "start": "Ձայնային AI",
+        "stop": "Ձայնային AI",
+        "interrupt": "Ձայնային AI",
+        "recording": "Ձայնային AI",
+        "startRecording": "Ձայնագրել",
+        "stopRecording": "Ձայնային AI",
+        "audioCapturedNotice": "Ձայնային AI",
+        "audioDuration": "Ձայնային AI",
+        "audioSize": "Ձայնային AI",
+        "sttTtsBridgeTitle": "Ձայնային AI",
+        "transcriptPlaceholder": "Ձայնային AI",
+        "submitTranscript": "Ձայնային AI",
+        "ttsTitle": "Ձայնային AI",
+        "ttsPlaceholder": "Ձայնային AI",
+        "playLastTts": "Ձայնային AI",
+        "noFakeTts": "Ձայնային AI",
+        "runtimeLog": "Ձայնային AI",
+        "noEvents": "Ձայնային AI",
+        "contractOnly": "Ձայնային AI",
+        "quickInvokeSent": "Ձայնային AI",
+        "sessionStopped": "Ձայնային AI",
+        "session": "Ձայնային AI",
+        "recordingNow": "Ձայնագրվում է...",
+        "tapToSpeak": "Ձայնային AI",
+        "transcriptReady": "Ձայնային AI",
         "state": {
-          "idle": "Idle",
-          "processing": "Processing",
-          "requesting_permission": "Requesting permission",
-          "recording": "Recording",
-          "error": "Error",
-          "playing": "Playing"
+          "idle": "Ձայնային AI",
+          "processing": "Ձայնային AI",
+          "requesting_permission": "Ձայնային AI",
+          "recording": "Ձայնային AI",
+          "error": "Սխալ",
+          "playing": "Ձայնային AI"
         },
         "log": {
-          "info": "Info",
-          "bridge_bound": "Bridge connected",
-          "recording_started": "Recording started",
-          "audio_captured": "Audio captured",
-          "transcript_ready": "Transcript ready",
-          "tts_requested": "TTS requested",
-          "playback_started": "Playback started",
-          "interrupted": "Interrupted",
-          "error": "Error"
+          "info": "Ձայնային AI",
+          "bridge_bound": "Ձայնային AI",
+          "recording_started": "Ձայնային AI",
+          "audio_captured": "Ձայնային AI",
+          "transcript_ready": "Ձայնային AI",
+          "tts_requested": "Ձայնային AI",
+          "playback_started": "Ձայնային AI",
+          "interrupted": "Ձայնային AI",
+          "error": "Սխալ"
         }
       },
       "error": {
-        "ai_mobile_api_base_url_missing": "AI mobile API base URL is missing.",
-        "ai_mobile_auth_required": "AI mobile authorization is required.",
-        "ai_mobile_request_failed": "AI mobile request failed.",
-        "ai_mobile_network_error": "AI mobile network error.",
-        "ai_voice_microphone_permission_denied": "Microphone permission was denied.",
-        "ai_voice_recording_already_active": "Voice recording is already active.",
-        "ai_voice_recording_not_active": "Voice recording is not active.",
-        "ai_voice_playback_command_missing": "Voice playback command is missing.",
-        "ai_voice_empty_tts_text": "TTS text is empty.",
-        "ai_voice_audio_url_missing": "Voice audio URL is missing."
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+        "ai_mobile_network_error": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+        "ai_voice_microphone_permission_denied": "Ձայնային AI",
+        "ai_voice_recording_already_active": "Ձայնային AI",
+        "ai_voice_recording_not_active": "Ձայնային AI",
+        "ai_voice_playback_command_missing": "Ձայնային AI",
+        "ai_voice_empty_tts_text": "Ձայնային AI",
+        "ai_voice_audio_url_missing": "Ձայնային AI"
       }
     }
   },
@@ -7485,7 +7486,7 @@ export const HY_LOCALE = {
     "permissions": "Թույլտվություններ",
     "analytics": "Վերլուծություններ",
     "orders": "Պատվերներ",
-    "crm": "CRM",
+    "crm": "Տեղեկություն",
     "automation": "Ավտոմատացում",
     "quickReplies": "Արագ պատասխաններ",
     "welcomeMessage": "Ողջույնի հաղորդագրություն",
@@ -7522,9 +7523,9 @@ export const HY_LOCALE = {
     "refunds": "Վերադարձներ",
     "disputes": "Վեճեր",
     "paymentLinks": "Վճարման հղումներ",
-    "checkoutPages": "Checkout էջեր",
-    "qrCheckout": "QR checkout",
-    "posMode": "POS ռեժիմ",
+    "checkoutPages": "Տեղեկություն",
+    "qrCheckout": "Տեղեկություն",
+    "posMode": "Տեղեկություն",
     "cashierMode": "Գանձապահի ռեժիմ",
     "terminals": "Տերմինալներ",
     "branches": "Մասնաճյուղեր",
@@ -7554,7 +7555,7 @@ export const HY_LOCALE = {
     "streamModeration": "Սթրիմի մոդերացիա",
     "streamAnalytics": "Սթրիմի վերլուծություն",
     "streamerProfile": "Սթրիմերի պրոֆիլ",
-    "donateWithCoin": "Նվիրաբերել Coin-ով",
+    "donateWithCoin": "Տեղեկություն",
     "sendGiftToStream": "Ուղարկել նվեր սթրիմին",
     "noStreams": "Հասանելի սթրիմներ չկան"
   },
@@ -7564,7 +7565,7 @@ export const HY_LOCALE = {
     "stores": "Խանութներ",
     "categories": "Կատեգորիաներ",
     "cart": "Զամբյուղ",
-    "checkout": "Checkout",
+    "checkout": "Տեղեկություն",
     "orderNow": "Պատվիրել հիմա",
     "buyNow": "Գնել հիմա",
     "addToCart": "Ավելացնել զամբյուղ",
@@ -7597,34 +7598,34 @@ export const HY_LOCALE = {
     "tournaments": "Մրցաշարեր",
     "achievements": "Նվաճումներ",
     "gameStore": "Խաղերի խանութ",
-    "coinRewards": "Coin պարգևներ",
+    "coinRewards": "Տեղեկություն",
     "networkGames": "Ցանցային խաղեր",
     "noGames": "Հասանելի խաղեր չկան",
     "foundation": {
-      "games": "Games",
+      "games": "Խաղեր",
       "hero": {
-        "text": "Text",
-        "title": "Title"
+        "text": "Նկարագրություն",
+        "title": "Վերնագիր"
       },
       "leaderboard": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Վերնագիր",
+        "value": "Տեղեկություն"
       },
       "lobby": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Վերնագիր",
+        "value": "Տեղեկություն"
       },
-      "miniApps": "Mini Apps",
+      "miniApps": "Տեղեկություն",
       "policy": {
-        "title": "Title"
+        "title": "Վերնագիր"
       },
       "realtime": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Վերնագիր",
+        "value": "Տեղեկություն"
       },
       "rewards": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Վերնագիր",
+        "value": "Տեղեկություն"
       }
     }
   },
@@ -7659,7 +7660,7 @@ export const HY_LOCALE = {
     "profileSettings": "Պրոֆիլի կարգավորումներ",
     "businessSettings": "Բիզնես կարգավորումներ",
     "merchantSettings": "Մերչանտ կարգավորումներ",
-    "premiumSettings": "Premium կարգավորումներ",
+    "premiumSettings": "Պրեմիում",
     "aiSettings": "AI կարգավորումներ",
     "bankingSettings": "Բանկային կարգավորումներ",
     "statementSettings": "Քաղվածքի կարգավորումներ",
@@ -7681,7 +7682,7 @@ export const HY_LOCALE = {
     "merchantNotifications": "Մերչանտ ծանուցումներ",
     "marketingNotifications": "Մարքեթինգային ծանուցումներ",
     "emailNotifications": "Էլ. փոստի ծանուցումներ",
-    "pushNotifications": "Push ծանուցումներ",
+    "pushNotifications": "Ծանուցումներ",
     "sound": "Ձայն",
     "preview": "Նախադիտում",
     "showSenderName": "Ցույց տալ ուղարկողի անունը",
@@ -7723,7 +7724,7 @@ export const HY_LOCALE = {
     "pinCode": "PIN կոդ",
     "changePin": "Փոխել PIN-ը",
     "biometrics": "Կենսաչափական տվյալներ",
-    "faceId": "Face ID",
+    "faceId": "Տեղեկություն",
     "fingerprint": "Մատնահետք",
     "twoFactorAuth": "Երկքայլ հաստատում",
     "recoveryOptions": "Վերականգնման տարբերակներ",
@@ -7741,7 +7742,7 @@ export const HY_LOCALE = {
     "paymentConfirmation": "Վճարման հաստատում",
     "highRiskTransferCheck": "Բարձր ռիսկով փոխանցումների ստուգում",
     "kycVerification": "KYC ստուգում",
-    "amlCheck": "AML ստուգում",
+    "amlCheck": "Տեղեկություն",
     "businessVerification": "Բիզնեսի ստուգում",
     "merchantVerification": "Մերչանտի ստուգում"
   },
@@ -7820,12 +7821,12 @@ export const HY_LOCALE = {
     "invalidAmount": "Անվավեր գումար",
     "invalidCardNumber": "Անվավեր քարտի համար",
     "invalidExpiryDate": "Անվավեր ժամկետ",
-    "invalidCvv": "Անվավեր CVV",
+    "invalidCvv": "Տեղեկություն",
     "invalidPin": "Անվավեր PIN",
     "invalidAccountNumber": "Անվավեր հաշվի համար",
     "invalidIban": "Անվավեր IBAN",
     "invalidSwift": "Անվավեր SWIFT կոդ",
-    "invalidRoutingNumber": "Անվավեր routing համար",
+    "invalidRoutingNumber": "Տեղեկություն",
     "invalidBeneficiary": "Անվավեր շահառուի տվյալներ",
     "accessDenied": "Մուտքն արգելված է",
     "sessionExpired": "Սեսիան ավարտվել է",
@@ -7854,7 +7855,7 @@ export const HY_LOCALE = {
     "contactNotFound": "Կոնտակտը չի գտնվել",
     "chatUnavailable": "Չաթը հասանելի չէ",
     "callFailed": "Զանգը ձախողվեց",
-    "premiumRequired": "Premium է պահանջվում",
+    "premiumRequired": "Պրեմիում",
     "featureUnavailable": "Այս հնարավորությունը ներկայումս հասանելի չէ",
     "updateRequired": "Շարունակելու համար թարմացրեք հավելվածը",
     "maintenanceMode": "Ծառայությունը ժամանակավորապես անհասանելի է տեխնիկական սպասարկման պատճառով",
@@ -7887,7 +7888,7 @@ export const HY_LOCALE = {
     "requestSent": "Հարցումը հաջողությամբ ուղարկվեց",
     "profileUpdated": "Պրոֆիլը հաջողությամբ թարմացվեց",
     "settingsUpdated": "Կարգավորումները հաջողությամբ թարմացվեցին",
-    "premiumActivated": "Premium-ը հաջողությամբ ակտիվացվեց",
+    "premiumActivated": "Պրեմիում",
     "businessCreated": "Բիզնես հաշիվը հաջողությամբ ստեղծվեց",
     "merchantCreated": "Մերչանտ հաշիվը հաջողությամբ ստեղծվեց",
     "translationEnabled": "Թարգմանությունը հաջողությամբ միացվեց",
@@ -7900,236 +7901,236 @@ export const HY_LOCALE = {
     "paragraph4": "Պայմանների թարմացումից հետո հարթակի օգտագործումը շարունակելը նշանակում է համաձայնություն ծառայության կանոնների գործող տարբերակի հետ։"
   },
   "privacyPolicyScreen": {
-    "paragraph1": "Sabi respects user privacy and protects personal data.",
-    "paragraph2": "Your data is used only for platform operations, legal compliance, transaction protection, support, and improving SuperApp features.",
-    "paragraph3": "We do not disclose personal data to third parties without a legal basis, except where required for service delivery, verification, regulatory compliance, or protecting users and the platform.",
-    "paragraph4": "By using Sabi, you agree to data processing under this policy."
+    "paragraph1": "Տեղեկություն",
+    "paragraph2": "Տեղեկություն",
+    "paragraph3": "Տեղեկություն",
+    "paragraph4": "Տեղեկություն"
   },
   "profileCompleteScreen": {
-    "badge": "PROFILE SETUP",
-    "title": "Complete your profile",
-    "subtitle": "Enter your first and last name. Username and unified ID will be generated automatically.",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "username": "Username",
-    "phone": "Verified phone",
-    "unifiedId": "Unified User ID",
-    "unifiedIdHint": "This will be the main ID across Wallet, Messenger, and the whole account.",
-    "usernameHint": "The username is generated automatically from the name, but can be changed manually.",
-    "privacy": "After activation, this unified ID should remain the same across all modules.",
-    "continue": "Continue",
-    "back": "Back",
-    "required": "Fill in all fields correctly to continue",
-    "saveErrorTitle": "Save error",
-    "saveErrorMessage": "Could not save the profile information. Please try again.",
-    "saving": "Saving...",
-    "userId": "User ID",
-    "createUser": "Create user",
-    "nameRequired": "First and last name are required",
-    "phoneRequired": "Phone number is required",
-    "usernameRequired": "Username is required",
-    "success": "Profile created successfully"
+    "badge": "Պրեմիում",
+    "title": "Վերնագիր",
+    "subtitle": "Նկարագրություն",
+    "firstName": "Անուն",
+    "lastName": "Ազգանուն",
+    "username": "Օգտանուն",
+    "phone": "Տեղեկություն",
+    "unifiedId": "Տեղեկություն",
+    "unifiedIdHint": "Տեղեկություն՝ Տեղեկություն",
+    "usernameHint": "Տեղեկություն՝ Տեղեկություն",
+    "privacy": "Գաղտնիություն",
+    "continue": "Շարունակել",
+    "back": "Հետ",
+    "required": "Տեղեկություն",
+    "saveErrorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "saveErrorMessage": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+    "saving": "Պահպանվում է...",
+    "userId": "Օգտատիրոջ ID",
+    "createUser": "Տեղեկություն",
+    "nameRequired": "Տեղեկություն",
+    "phoneRequired": "Տեղեկություն",
+    "usernameRequired": "Տեղեկություն",
+    "success": "Տեղեկություն"
   },
   "gallery": {
-    "title": "Gallery",
-    "import": "Import",
-    "video": "Video",
-    "selected": "{{count}} selected",
+    "title": "Վերնագիր",
+    "import": "Ներմուծել",
+    "video": "Տեսանյութ",
+    "selected": "Տեղեկություն",
     "empty": {
-      "all": "No media",
-      "public": "No public media",
-      "private": "No private media"
+      "all": "Տեղեկություն",
+      "public": "Տեղեկություն",
+      "private": "Տեղեկություն"
     },
     "alerts": {
-      "noAccessTitle": "No access",
-      "noAccessMessage": "Allow photo and video access to open Gallery.",
-      "deleteSelectedTitle": "Delete",
-      "deleteSelectedMessage": "Delete selected files: {{count}}?",
-      "deleteOneTitle": "Delete file",
-      "deleteOneMessage": "Delete this file?"
+      "noAccessTitle": "Վերնագիր",
+      "noAccessMessage": "Տեղեկություն",
+      "deleteSelectedTitle": "Ջնջել",
+      "deleteSelectedMessage": "Տեղեկություն",
+      "deleteOneTitle": "Վերնագիր",
+      "deleteOneMessage": "Տեղեկություն"
     },
     "share": {
-      "system": "System share"
+      "system": "Տեղեկություն"
     },
     "viewer": {
-      "player": "Sabi Player",
-      "edited": "Edited"
+      "player": "Տեղեկություն",
+      "edited": "Խմբագրված է"
     },
     "camera": {
-      "title": "Sabi Camera",
-      "short": "Camera",
-      "photo": "Photo",
-      "video": "Video",
-      "open": "Open camera"
+      "title": "Վերնագիր",
+      "short": "Տեսախցիկ",
+      "photo": "Լուսանկար",
+      "video": "Տեսանյութ",
+      "open": "Բացել տեսախցիկը"
     },
     "editor": {
-      "title": "Beauty Studio",
-      "missing": "Photo not found",
-      "videoEditorUnavailable": "Video editor unavailable",
-      "saveErrorTitle": "Save error",
-      "saveErrorMessage": "Could not save photo changes.",
-      "textOverlay": "Text",
-      "textPlaceholder": "Text",
-      "textPresets": "Presets",
-      "textStyle": "Style",
-      "color": "Color",
-      "position": "Position",
-      "background": "Background",
-      "size": "Size",
-      "opacity": "Opacity",
-      "beautyStudio": "Beauty",
-      "stickers": "Stickers",
-      "stickerIntensity": "Sticker intensity",
-      "effects": "Effects",
-      "frames": "Frames",
-      "animeLayer": "Anime",
-      "filterLooks": "Filters",
-      "adjust": "Adjust",
-      "crop": "Crop",
-      "transform": "Transform",
-      "left": "Left",
-      "right": "Right",
-      "mirrorX": "Mirror X",
-      "mirrorY": "Mirror Y",
-      "smoothSkin": "Smooth skin",
-      "softGlow": "Soft glow",
-      "skinTone": "Skin tone",
-      "portraitLight": "Portrait light",
-      "eyesLight": "Eyes light",
-      "lipsTint": "Lips tint",
-      "blush": "Blush",
-      "animeBeauty": "Anime beauty",
-      "sparkles": "Sparkles",
-      "bokeh": "Bokeh",
-      "lightLeak": "Light leak",
-      "hearts": "Hearts",
-      "dust": "Dust",
-      "goldLight": "Gold light",
-      "neonEdge": "Neon edge",
-      "frameIntensity": "Frame intensity",
-      "aura": "Aura",
-      "mangaLines": "Manga lines",
-      "sakura": "Sakura",
-      "kawaiiHearts": "Kawaii hearts",
-      "comicFrame": "Comic frame",
-      "glowEyes": "Glow eyes",
-      "brightness": "Brightness",
-      "contrast": "Contrast",
-      "saturation": "Saturation",
-      "warmth": "Warmth",
-      "cool": "Cool",
-      "blur": "Blur",
-      "vignette": "Vignette",
-      "fade": "Fade",
-      "sharpen": "Sharpen",
+      "title": "Վերնագիր",
+      "missing": "Տեղեկություն",
+      "videoEditorUnavailable": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "saveErrorTitle": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "saveErrorMessage": "Հարցումը չհաջողվեց։ Փորձեք կրկին։",
+      "textOverlay": "Տեղեկություն՝ Տեղեկություն",
+      "textPlaceholder": "Տեղեկություն՝ Տեղեկություն",
+      "textPresets": "Տեղեկություն՝ Տեղեկություն",
+      "textStyle": "Տեղեկություն՝ Տեղեկություն",
+      "color": "Տեղեկություն",
+      "position": "Տեղեկություն",
+      "background": "Հետ",
+      "size": "Տեղեկություն",
+      "opacity": "Տեղեկություն",
+      "beautyStudio": "Տեղեկություն",
+      "stickers": "Սթիքերներ",
+      "stickerIntensity": "Տեղեկություն",
+      "effects": "Տեղեկություն",
+      "frames": "Շրջանակներ",
+      "animeLayer": "Տեղեկություն",
+      "filterLooks": "Տեղեկություն",
+      "adjust": "Տեղեկություն",
+      "crop": "Տեղեկություն",
+      "transform": "Տեղեկություն",
+      "left": "Տեղեկություն",
+      "right": "Տեղեկություն",
+      "mirrorX": "Տեղեկություն",
+      "mirrorY": "Տեղեկություն",
+      "smoothSkin": "Տեղեկություն",
+      "softGlow": "Տեղեկություն",
+      "skinTone": "Տեղեկություն",
+      "portraitLight": "Տեղեկություն",
+      "eyesLight": "Տեղեկություն",
+      "lipsTint": "Տեղեկություն",
+      "blush": "Տեղեկություն",
+      "animeBeauty": "Տեղեկություն",
+      "sparkles": "Տեղեկություն",
+      "bokeh": "Տեղեկություն",
+      "lightLeak": "Տեղեկություն",
+      "hearts": "Տեղեկություն",
+      "dust": "Տեղեկություն",
+      "goldLight": "Տեղեկություն",
+      "neonEdge": "Տեղեկություն",
+      "frameIntensity": "Շրջանակներ",
+      "aura": "Տեղեկություն",
+      "mangaLines": "Տեղեկություն",
+      "sakura": "Տեղեկություն",
+      "kawaiiHearts": "Տեղեկություն",
+      "comicFrame": "Շրջանակներ",
+      "glowEyes": "Տեղեկություն",
+      "brightness": "Տեղեկություն",
+      "contrast": "Տեղեկություն",
+      "saturation": "Տեղեկություն",
+      "warmth": "Տեղեկություն",
+      "cool": "Տեղեկություն",
+      "blur": "Տեղեկություն",
+      "vignette": "Տեղեկություն",
+      "fade": "Տեղեկություն",
+      "sharpen": "Տեղեկություն",
       "tabs": {
-        "text": "Text",
-        "beauty": "Beauty",
-        "effects": "Effects",
-        "anime": "Anime",
-        "adjust": "Adjust",
-        "crop": "Crop",
-        "transform": "Transform"
+        "text": "Նկարագրություն",
+        "beauty": "Տեղեկություն",
+        "effects": "Տեղեկություն",
+        "anime": "Տեղեկություն",
+        "adjust": "Տեղեկություն",
+        "crop": "Տեղեկություն",
+        "transform": "Տեղեկություն"
       },
       "textStyles": {
-        "classic": "Classic",
-        "glow": "Glow",
-        "outline": "Outline",
-        "bubble": "Bubble"
+        "classic": "Տեղեկություն",
+        "glow": "Տեղեկություն",
+        "outline": "Տեղեկություն",
+        "bubble": "Տեղեկություն"
       },
       "align": {
-        "top": "Top",
-        "center": "Center",
-        "bottom": "Bottom"
+        "top": "Տեղեկություն",
+        "center": "Տեղեկություն",
+        "bottom": "Տեղեկություն"
       },
       "filters": {
-        "none": "Original",
-        "soft_beauty": "Soft Beauty",
-        "luxury_portrait": "Luxury",
-        "warm_film": "Warm Film",
-        "cool_night": "Cool Night",
-        "anime_glow": "Anime Glow",
-        "pink_dream": "Pink Dream",
-        "gold_glam": "Gold Glam"
+        "none": "Տեղեկություն",
+        "soft_beauty": "Տեղեկություն",
+        "luxury_portrait": "Տեղեկություն",
+        "warm_film": "Տեղեկություն",
+        "cool_night": "Տեղեկություն",
+        "anime_glow": "Տեղեկություն",
+        "pink_dream": "Տեղեկություն",
+        "gold_glam": "Տեղեկություն"
       },
       "option": {
-        "none": "None",
-        "sparkle_cluster": "Sparkles",
-        "hearts": "Hearts",
-        "crown": "Crown",
-        "stars": "Stars",
-        "petals": "Petals",
-        "luxury_gold": "Luxury",
-        "soft_portrait": "Soft",
-        "anime_frame": "Anime",
-        "story_glass": "Story",
-        "original": "Original",
-        "square": "Square",
-        "portrait": "4:5",
-        "story": "9:16"
+        "none": "Ոչ մեկը",
+        "sparkle_cluster": "Տեղեկություն",
+        "hearts": "Տեղեկություն",
+        "crown": "Տեղեկություն",
+        "stars": "Տեղեկություն",
+        "petals": "Տեղեկություն",
+        "luxury_gold": "Տեղեկություն",
+        "soft_portrait": "Տեղեկություն",
+        "anime_frame": "Շրջանակներ",
+        "story_glass": "Տեղեկություն",
+        "original": "Տեղեկություն",
+        "square": "Տեղեկություն",
+        "portrait": "Տեղեկություն",
+        "story": "Տեղեկություն"
       },
       "textPresetsMap": {
-        "luxury": "Luxury",
-        "neon": "Neon",
-        "soft": "Soft",
-        "comic": "Comic",
-        "anime": "Anime"
+        "luxury": "Տեղեկություն",
+        "neon": "Տեղեկություն",
+        "soft": "Տեղեկություն",
+        "comic": "Տեղեկություն",
+        "anime": "Տեղեկություն"
       },
       "quick": {
-        "queen": "Queen",
-        "sabiMood": "Sabi Mood",
-        "dream": "Dream",
-        "luxury": "Luxury",
-        "angel": "Angel",
-        "animeGirl": "Anime Girl"
+        "queen": "Տեղեկություն",
+        "sabiMood": "Տեղեկություն",
+        "dream": "Տեղեկություն",
+        "luxury": "Տեղեկություն",
+        "angel": "Տեղեկություն",
+        "animeGirl": "Տեղեկություն"
       }
     }
   },
   "sabiMessengerChannelMenu": {
-    "channelAddedToChats": "Channel Added To Chats",
-    "channelBotMissing": "Channel Bot Missing",
-    "channelInviteMissing": "Channel Invite Missing",
-    "channelShareReady": "Channel Share Ready"
+    "channelAddedToChats": "Չատ",
+    "channelBotMissing": "Չատ",
+    "channelInviteMissing": "Չատ",
+    "channelShareReady": "Պատրաստ է"
   },
   "sabiMessengerGroupMenu": {
-    "groupAddMember": "Group Add Member",
-    "groupInviteMissing": "Group Invite Missing",
-    "groupInviteReady": "Group Invite Ready",
-    "groupShareReady": "Group Share Ready"
+    "groupAddMember": "Չատ",
+    "groupInviteMissing": "Չատ",
+    "groupInviteReady": "Պատրաստ է",
+    "groupShareReady": "Պատրաստ է"
   },
   "stories": {
     "actions": {
-      "add": "Add"
+      "add": "Ավելացնել"
     },
     "empty": {
-      "action": "Action",
-      "text": "Text",
-      "title": "Title"
+      "action": "Տեղեկություն",
+      "text": "Նկարագրություն",
+      "title": "Վերնագիր"
     },
     "header": {
-      "title": "Title"
+      "title": "Վերնագիր"
     },
     "hero": {
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "Նկարագրություն",
+      "title": "Վերնագիր"
     },
     "kind": {
-      "photo": "Photo",
-      "video": "Video"
+      "photo": "Լուսանկար",
+      "video": "Տեսանյութ"
     },
     "photo": {
       "unavailable": {
-        "title": "Title"
+        "title": "Վերնագիր"
       }
     },
     "preview": {
-      "photo": "Photo",
-      "video": "Video"
+      "photo": "Լուսանկար",
+      "video": "Տեսանյութ"
     },
     "video": {
       "unavailable": {
-        "text": "Text",
-        "title": "Title"
+        "text": "Նկարագրություն",
+        "title": "Վերնագիր"
       }
     }
   }

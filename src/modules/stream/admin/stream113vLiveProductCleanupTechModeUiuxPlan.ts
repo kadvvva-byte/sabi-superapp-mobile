@@ -1,0 +1,25 @@
+export const stream113vLiveProductCleanupTechModeUiuxPlan = {
+  version: "STREAM-113V",
+  title: "Live product cleanup / hidden tech mode UI/UX",
+  scope: "Final product-mode cleanup for Live room settings before moving beyond Live UI/UX.",
+  order: [
+    "Keep Live first: finish Live UI/UX before full Stream, Business Stream, profile, Shorts, gifts or monetization.",
+    "Make ordinary Live settings look like a premium product surface, not a QA/debug report.",
+    "Keep 112N→113U checks available only behind explicit technical mode.",
+    "Show future profile and Business Stream hooks only as boundaries inside Live when needed.",
+    "Keep gifts as end-stage boundary; do not implement sending/payment now.",
+    "Keep all future realtime/provider/lifecycle/moderation/co-host/battle/profile/business/gift connections through core/kernel contracts/facades/events.",
+  ] as const,
+  forbidden: [
+    "no fake live",
+    "no fake realtime",
+    "no fake provider",
+    "no fake payments",
+    "no fake gift sending",
+    "no direct provider connection from screen",
+    "no scattered service connection",
+    "no separate profile screen now",
+    "no separate Business Stream screen now",
+    "no wallet/messenger/core-ai touch",
+  ] as const,
+};

@@ -1,0 +1,25 @@
+{
+  "version": "STREAM-GAME-GIFTS-190C",
+  "assetId": "royal-peacock-fan",
+  "displayNameRu": "Королевский Павлин",
+  "packLabel": "Pack 3",
+  "screenImpactPolish": {
+    "soundCueReference": "assets/stream/gifts/190a-premium-pack/sound-cues/royal-peacock-fan-cue.wav",
+    "hapticSequence": "elegant medium impact",
+    "screenHitTimingMs": {
+      "preGlow": 160,
+      "impact": 500,
+      "tail": 1140
+    },
+    "recipientFocus": "center-safe spotlight, no chat/input overlap",
+    "crowdMoment": "preview-only sparkle wave, no send/payment/result"
+  },
+  "runtime": {
+    "soundAutoplayEnabledNow": false,
+    "mediaPlaybackEnabledNow": false,
+    "realSendEnabledNow": false,
+    "backendEnabledNow": false,
+    "paymentEnabledNow": false,
+    "payoutEnabledNow": false
+  }
+}

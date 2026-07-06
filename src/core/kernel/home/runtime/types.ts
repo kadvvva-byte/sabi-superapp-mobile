@@ -82,7 +82,12 @@ function normalizeString(value: unknown): string {
 
 export function isShareableHomeBackgroundUri(value: unknown): value is string {
   const normalized = normalizeString(value).toLowerCase();
-  return normalized.startsWith("http://") || normalized.startsWith("https://") || normalized.startsWith("data:image/");
+  return (
+    normalized.startsWith("file://") ||
+    normalized.startsWith("http://") ||
+    normalized.startsWith("https://") ||
+    normalized.startsWith("data:image/")
+  );
 }
 
 function uniqueStrings(items: unknown[]): string[] {

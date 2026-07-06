@@ -149,6 +149,12 @@ export type AiMobileVoiceOutputPreference = {
   preferredVoiceGender?: "female" | "male" | "neutral";
 };
 
+export type AiMobileConversationMessage = {
+  role: "user" | "assistant" | "system";
+  text: string;
+  createdAt?: string | null;
+};
+
 export type AiMobileAssistantMessageInput = {
   message: string;
   assistantMode?: AiMobileAssistantMode;
@@ -161,6 +167,7 @@ export type AiMobileAssistantMessageInput = {
   providerRoute?: AiMobileProviderRoute | null;
   safetyApproval?: AiMobileSafetyApprovalDecision | null;
   clientCapabilities?: string[];
+  conversationHistory?: AiMobileConversationMessage[];
 };
 
 export type AiMobileChatMessage = {

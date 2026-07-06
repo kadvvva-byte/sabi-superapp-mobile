@@ -1,0 +1,27 @@
+export const STREAM_113S_LIVE_SAFE_PREFLIGHT_LAUNCH_GUARD_UIUX_PLAN = {
+  version: "STREAM-113S",
+  title: "Live-safe preflight / launch guard UI/UX",
+  scope: "Stream live room UI/UX only",
+  ownerGoal: "Перед эфиром ведущий видит готовность UI, 18+, Sabi AI контроль, чат, жалобы, ручные действия и честную backend/provider boundary без fake launch.",
+  requiredPath: [
+    "phone surface",
+    "18+ checkpoint",
+    "Sabi AI controller",
+    "chat policy",
+    "reports/evidence/review",
+    "host moderation controls",
+    "backend/provider boundary",
+    "safe preview readiness",
+  ],
+  forbidden: [
+    "fake live launch",
+    "fake realtime ready",
+    "fake provider ready",
+    "fake age/legal verification",
+    "fake AI auto-ban",
+    "fake permanent sanction",
+    "fake payments",
+    "cinema/anime module mix",
+    "Wallet/Messenger/main AI changes",
+  ],
+} as const;

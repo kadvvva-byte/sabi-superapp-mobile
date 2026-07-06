@@ -1,6 +1,6 @@
-import React from "react";
-import ProfileIdentityDetailScreen from "../../src/modules/profile/components/ProfileIdentityDetailScreen";
+import createLazyRouteScreen from "../../src/shared/navigation/createLazyRouteScreen";
 
-export default function ProfileUsernameScreen() {
-  return <ProfileIdentityDetailScreen mode="username" />;
-}
+export default createLazyRouteScreen(
+  () => import("../../src/modules/profile/routes/ProfileUsernameRoute"),
+  "ProfileUsernameRoute",
+);

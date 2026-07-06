@@ -1,0 +1,25 @@
+export const stream110jShortVideoCommentsDepthPlan = {
+  version: "110J-SHORT-VIDEO-COMMENTS-DEPTH",
+  scope: "stream_shorts_only",
+  changes: [
+    "Add real local Shorts social/comment runtime",
+    "Add premium comments bottom sheet with composer",
+    "Add comment like/reply/pin/report/hide local actions",
+    "Add compact premium social buttons for Like, Comments, Share and Save",
+    "Keep provider/backend/realtime delivery blocked until real integration",
+  ],
+  forbidden: {
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+    serverTouched: false,
+    paymentsTouched: false,
+    giftsTouched: false,
+    monetizationTouched: false,
+    fakeLikes: false,
+    fakeCommentDelivery: false,
+    fakeShareDelivery: false,
+    fakeProviderSuccess: false,
+    fakePublish: false,
+  },
+} as const;

@@ -554,8 +554,12 @@ function mapHistoryItemToCallItem(
   avatarFallback?: string,
 ): CallItem {
   const createdAt = item.endedAt || item.answeredAt || item.startedAt || new Date().toISOString();
+  const id =
+    String(item.id ?? item.callId ?? item.chatId ?? item.peerId ?? "").trim() ||
+    `call:${String(item.userId ?? "unknown")}:${createdAt}`;
+
   return {
-    id: String(item.id || item.callId || item.chatId || item.peerId || `call:${createdAt}:${item.counterpartyName || "unknown"}`),
+    id,
     name: item.counterpartyName || "Sabi",
     time: formatTimeLabel(createdAt, locale),
     dateLabel: formatDateLabel(createdAt, todayLabel, yesterdayLabel, locale),

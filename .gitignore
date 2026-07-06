@@ -58,8 +58,7 @@ android-keys/
 # - modules/**/android and modules/**/ios are NOT ignored
 # - .txt, .md, .ps1, .cjs are NOT globally ignored
 
-# Local/generated folders - never commit
-.vscode/
+# Local/generated folders - do not commit
 android/
 ios/
 backend/
@@ -68,12 +67,9 @@ docs/
 tools/
 scripts/
 patches/
+.vscode/
 
-# Local repair/build scripts - never commit
-build-android-apk.ps1
-install-sabi-emblem.ps1
-
-# Local repair/readme/backup files - never commit
+# Local repair / backup files
 *.bak
 *.bak-*
 *.log
@@ -84,3 +80,30 @@ SABI_REPAIR_README_RU.txt
 src/README.txt
 src/modules/**/README.md
 src/modules/**/README.txt
+# Local/runtime/generated excludes
+node_modules/
+.expo/
+dist/
+build/
+web-build/
+coverage/
+reports/
+mnt/
+
+# Local secrets
+.env
+.env.*
+!.env.example
+
+# OS/logs
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Generated owner local packages / reports
+.sabi-taxi-client-final/
+reports/
+mnt/

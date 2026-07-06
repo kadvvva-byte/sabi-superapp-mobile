@@ -1,404 +1,348 @@
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
 const PS_AI_MOBILE_LOCALE = {
-  ai: {
-    mobile: {
-      common: {
-        back: "شاته",
-        cancel: "لغوه",
-        close: "بندول",
-        loading: "درحال بارېدو...",
-        notConnected: "not Connected",
-        open: "خلاصول",
-        refresh: "تازه کول",
-        requestFailed: "غوښتنه ناکامه شوه. بیا هڅه وکړئ.",
-        retry: "بیا هڅه",
-        save: "ساتل",
-        saved: "وساتل شو",
-        search: "لټون",
-        send: "لېږل",
-        ready: "چمتو",
+  "ai": {
+    "mobile": {
+      "common": {
+        "back": "شاته",
+        "cancel": "لغوه",
+        "close": "بندول",
+        "loading": "درحال بارېدو...",
+        "notConnected": "نښلول شوی نه دی",
+        "open": "خلاصول",
+        "refresh": "تازه کول",
+        "requestFailed": "غوښتنه ناکامه شوه. بیا هڅه وکړئ.",
+        "retry": "بیا هڅه",
+        "save": "ساتل",
+        "saved": "وساتل شو",
+        "search": "لټون",
+        "send": "لېږل",
+        "ready": "چمتو"
       },
-
-      status: {
-        ready: "چمتو",
-        limited: "محدود",
-        not_connected: "نښلول شوی نه دی",
-        error: "تېروتنه",
+      "status": {
+        "ready": "چمتو",
+        "limited": "محدود",
+        "not_connected": "نښلول شوی نه دی",
+        "error": "تېروتنه"
       },
-
-      messageStatus: {
-        sending: "درحال لېږلو...",
-        sent: "لېږل شوی",
-        error: "تېروتنه",
-        awaiting_confirmation: "awaiting confirmation",
+      "messageStatus": {
+        "sending": "درحال لېږلو...",
+        "sent": "لېږل شوی",
+        "error": "تېروتنه",
+        "awaiting_confirmation": "معلومات"
       },
-
-      home: {
-        title: "سرلیک",
-        subtitle: "فرعي سرلیک",
-        heroEyebrow: "AI",
-        heroTitle: "hero Title",
-        heroDescription:
-          "hero Description",
-        quickAccess: "چټک لاسرسی",
-        capabilities: "capabilities",
-        safeActions: "safe Actions",
-        safeActionsDescription:
-          "safe Actions Description",
-        safeActionsText:
-          "safe Actions Text",
-        connection: "connection",
-        userId: "user Id",
-        cleanWorkspaceTitle: "clean Workspace Title",
-        cleanWorkspaceText:
-          "clean Workspace Text",
+      "home": {
+        "title": "سرلیک",
+        "subtitle": "فرعي سرلیک",
+        "heroEyebrow": "AI",
+        "heroTitle": "معلومات",
+        "heroDescription": "معلومات — معلومات",
+        "quickAccess": "چټک لاسرسی",
+        "capabilities": "مرستیال",
+        "safeActions": "امنیت",
+        "safeActionsDescription": "امنیت — معلومات",
+        "safeActionsText": "امنیت — معلومات",
+        "connection": "امستنې",
+        "userId": "د کارونکي ID",
+        "cleanWorkspaceTitle": "سرلیک",
+        "cleanWorkspaceText": "معلومات — معلومات"
       },
-
-      action: {
-        chat: {
-          title: "سرلیک",
-          description: "تفصیل",
+      "action": {
+        "chat": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        voice: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "voice": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        translation: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "translation": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        history: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "history": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        tasks: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "tasks": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        memory: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "memory": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        setting: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "setting": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        settings: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "settings": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        premium: {
-          title: "سرلیک",
-          description: "تفصیل",
+        "premium": {
+          "title": "سرلیک",
+          "description": "تفصیل"
         },
-        profileAi: {
-          title: "سرلیک",
-          description: "تفصیل",
-        },
+        "profileAi": {
+          "title": "سرلیک",
+          "description": "تفصیل"
+        }
       },
-
-      chat: {
-        title: "سرلیک",
-        subtitle: "فرعي سرلیک",
-        roleUser: "role User",
-        runtimeTitle: "runtime Title",
-        backendRequired: "backend Required",
-        emptyTitle: "empty Title",
-        emptyText: "empty Text",
-        cleanEmptyText:
-          "clean Empty Text",
-        placeholder: "خلک، چټونه، تادیات، خدمتونه، سوداګرۍ یا تنظیمات ولټوئ",
-        emptyBackendResponse: "empty Backend Response",
-        errorMessage: "error Message",
-        thinking: "thinking",
-
-        assistantCenterTitle: "assistant Center Title",
-        assistantCenterDescription:
-          "assistant Center Description",
-        modeTitle: "mode Title",
-        modeSubtitle: "mode Subtitle",
-        assistantMenuTitle: "assistant Menu Title",
-        assistantMenuSubtitle:
-          "assistant Menu Subtitle",
-
-        mode: {
-          chatgpt: {
-            title: "سرلیک",
-            short: "short",
-            description: "تفصیل",
-            prompt: "prompt",
+      "chat": {
+        "title": "سرلیک",
+        "subtitle": "فرعي سرلیک",
+        "roleUser": "تاسو",
+        "runtimeTitle": "امستنې",
+        "backendRequired": "شاته",
+        "emptyTitle": "چټ",
+        "emptyText": "چټ — معلومات",
+        "cleanEmptyText": "معلومات — معلومات",
+        "placeholder": "خلک، چټونه، تادیات، خدمتونه، سوداګرۍ یا تنظیمات ولټوئ",
+        "emptyBackendResponse": "شاته",
+        "errorMessage": "غوښتنه ناکامه شوه. بیا هڅه وکړئ.",
+        "thinking": "معلومات",
+        "assistantCenterTitle": "مرستیال",
+        "assistantCenterDescription": "مرستیال — معلومات",
+        "modeTitle": "سرلیک",
+        "modeSubtitle": "تفصیل — معلومات",
+        "assistantMenuTitle": "مرستیال",
+        "assistantMenuSubtitle": "مرستیال — معلومات",
+        "mode": {
+          "chatgpt": {
+            "title": "سرلیک",
+            "short": "معلومات",
+            "description": "تفصیل",
+            "prompt": "معلومات"
           },
-          business: {
-            title: "سرلیک",
-            short: "short",
-            description:
-              "تفصیل",
-            prompt: "prompt",
+          "business": {
+            "title": "سرلیک",
+            "short": "سوداګریز",
+            "description": "تفصیل",
+            "prompt": "معلومات"
           },
-          student: {
-            title: "سرلیک",
-            short: "short",
-            description:
-              "تفصیل",
-            prompt: "prompt",
+          "student": {
+            "title": "سرلیک",
+            "short": "معلومات",
+            "description": "تفصیل",
+            "prompt": "معلومات"
           },
-          applicant: {
-            title: "سرلیک",
-            short: "short",
-            description:
-              "تفصیل",
-            prompt: "prompt",
+          "applicant": {
+            "title": "سرلیک",
+            "short": "معلومات",
+            "description": "تفصیل",
+            "prompt": "معلومات"
           },
-          teacher: {
-            title: "سرلیک",
-            short: "short",
-            description:
-              "تفصیل",
-            prompt: "prompt",
-          },
+          "teacher": {
+            "title": "سرلیک",
+            "short": "معلومات",
+            "description": "تفصیل",
+            "prompt": "معلومات"
+          }
         },
-
-        toolsTitle: "tools Title",
-        toolsSubtitle:
-          "tools Subtitle",
-        toolsSheetTitle: "tools Sheet Title",
-        toolsSheetSubtitle:
-          "tools Sheet Subtitle",
-
-        camera: "کمره",
-        cameraDescription: "camera Description",
-        uploadPhoto: "upload Photo",
-        uploadPhotoDescription: "upload Photo Description",
-        uploadVideo: "upload Video",
-        uploadVideoDescription: "upload Video Description",
-        uploadDocument: "upload Document",
-        uploadDocumentDescription: "upload Document Description",
-        webSearch: "web Search",
-        webSearchShort: "web Search Short",
-        webSearchDescription:
-          "web Search Description",
-
-        voiceRecording: "voice Recording",
-        permissionCamera: "permission Camera",
-        permissionPhoto: "permission Photo",
-        permissionVideo: "permission Video",
-
-        attachmentsSent: "attachments Sent",
-        attachmentPhoto: "attachment Photo",
-        attachmentVideo: "attachment Video",
-        attachmentDocument: "attachment Document",
-        attachmentAudio: "attachment Audio",
-        uploadContractNotice:
-          "upload Contract Notice",
-
-        safetyConfirmTitle: "safety Confirm Title",
-        safetyConfirmMessage: "safety Confirm Message",
-        safetyConfirmCancel: "safety Confirm Cancel",
-        safetyConfirmContinue: "safety Confirm Continue",
-        securityNotice:
-          "security Notice",
-
-        prompt: {
-          business: "سوداګریز",
-          study: "study",
-          search: "لټون",
-          file: "file",
+        "toolsTitle": "امستنې",
+        "toolsSubtitle": "امستنې — معلومات",
+        "toolsSheetTitle": "امستنې",
+        "toolsSheetSubtitle": "امستنې — معلومات",
+        "camera": "کمره",
+        "cameraDescription": "غږ — معلومات",
+        "uploadPhoto": "عکس",
+        "uploadPhotoDescription": "پروفایل — معلومات",
+        "uploadVideo": "ویډیو",
+        "uploadVideoDescription": "غږ — معلومات",
+        "uploadDocument": "سند",
+        "uploadDocumentDescription": "تفصیل — معلومات",
+        "webSearch": "ویب لټون",
+        "webSearchShort": "وېب لټون",
+        "webSearchDescription": "وېب لټون — معلومات",
+        "voiceRecording": "غږ",
+        "permissionCamera": "غږ",
+        "permissionPhoto": "پروفایل",
+        "permissionVideo": "غږ",
+        "attachmentsSent": "معلومات",
+        "attachmentPhoto": "عکس",
+        "attachmentVideo": "ویډیو",
+        "attachmentDocument": "سند",
+        "attachmentAudio": "معلومات",
+        "uploadContractNotice": "معلومات",
+        "safetyConfirmTitle": "سرلیک",
+        "safetyConfirmMessage": "معلومات",
+        "safetyConfirmCancel": "لغوه",
+        "safetyConfirmContinue": "دوام",
+        "securityNotice": "امنیت",
+        "prompt": {
+          "business": "سوداګریز",
+          "study": "معلومات",
+          "search": "لټون",
+          "file": "معلومات"
+        }
+      },
+      "translation": {
+        "title": "سرلیک",
+        "subtitle": "فرعي سرلیک",
+        "heroEyebrow": "ژباړه",
+        "realtimeTitle": "سرلیک",
+        "premium": "پریمیم",
+        "source": "سرچینه",
+        "sourcePlaceholder": "لټون",
+        "textPhotoCamera": "معلومات — معلومات",
+        "target": "معلومات",
+        "targetPlaceholder": "en, ru, uz, tg...",
+        "translate": "ژباړه",
+        "result": "معلومات",
+        "inputPlaceholder": "لټون",
+        "outputPlaceholder": "ژباړه",
+        "camera": "کمره",
+        "photo": "عکس",
+        "from": "له",
+        "to": "تر",
+        "detect": "معلومات",
+        "selectLanguage": "ژبه",
+        "searchLanguage": "ژبه ولټوئ",
+        "permissionCamera": "غږ",
+        "permissionPhoto": "پروفایل",
+        "emptyText": "ژباړه — معلومات",
+        "noOutput": "معلومات",
+        "sameLanguage": "ژبه",
+        "photoReady": "چمتو",
+        "cameraReady": "چمتو",
+        "detectCannotSwap": "معلومات",
+        "noImageOutput": "معلومات",
+        "detectedText": "معلومات — معلومات",
+        "messengerPathTitle": "سرلیک",
+        "messengerReady": "چمتو",
+        "imageProcessing": "پورته کېږي...",
+        "textProcessing": "پورته کېږي...",
+        "metaDetected": "معلومات"
+      },
+      "voice": {
+        "title": "سرلیک",
+        "subtitle": "فرعي سرلیک",
+        "nativeBridge": "معلومات",
+        "sttTtsBridgeTitle": "سرلیک",
+        "realBridgeDescription": "تفصیل — معلومات",
+        "bind": "معلومات",
+        "start": "پیل",
+        "stop": "درول",
+        "invoke": "معلومات",
+        "interrupt": "معلومات",
+        "startRecording": "ثبتول",
+        "stopRecording": "معلومات",
+        "recordingNow": "درحال ثبت...",
+        "tapToSpeak": "معلومات",
+        "session": "معلومات",
+        "recording": "درحال ثبت...",
+        "audioSize": "معلومات",
+        "audioDuration": "معلومات",
+        "audioCapturedNotice": "معلومات",
+        "transcriptPlaceholder": "لټون",
+        "ttsTitle": "سرلیک",
+        "ttsPlaceholder": "لټون",
+        "playLastTts": "معلومات",
+        "noFakeTts": "معلومات",
+        "runtimeLog": "امستنې",
+        "noEvents": "معلومات",
+        "sessionStopped": "معلومات",
+        "quickInvokeSent": "معلومات",
+        "transcriptReady": "چمتو",
+        "state": {
+          "idle": "Idle",
+          "processing": "درحال پروسس...",
+          "requesting_permission": "معلومات",
+          "recording": "درحال ثبت...",
+          "error": "تېروتنه",
+          "playing": "معلومات"
         },
+        "log": {
+          "info": "معلومات",
+          "bridge_bound": "معلومات",
+          "recording_started": "معلومات",
+          "audio_captured": "معلومات",
+          "transcript_ready": "چمتو",
+          "tts_requested": "معلومات",
+          "playback_started": "شاته",
+          "interrupted": "معلومات",
+          "error": "تېروتنه"
+        }
       },
-
-      translation: {
-        title: "سرلیک",
-        subtitle: "فرعي سرلیک",
-        heroEyebrow: "hero Eyebrow",
-        realtimeTitle: "realtime Title",
-        premium:
-          "Premium",
-        source: "سرچینه",
-        sourcePlaceholder: "source Placeholder",
-        textPhotoCamera: "text Photo Camera",
-        target: "target",
-        targetPlaceholder: "target Placeholder",
-        translate: "ژباړه",
-        result: "result",
-        inputPlaceholder: "input Placeholder",
-        outputPlaceholder: "output Placeholder",
-        camera: "کمره",
-        photo: "عکس",
-        from: "له",
-        to: "تر",
-        detect: "detect",
-        selectLanguage: "select Language",
-        searchLanguage: "search Language",
-        permissionCamera: "permission Camera",
-        permissionPhoto: "permission Photo",
-        emptyText: "empty Text",
-        noOutput: "no Output",
-        sameLanguage: "same Language",
-        photoReady: "photo Ready",
-        cameraReady: "camera Ready",
-        detectCannotSwap: "detect Cannot Swap",
-        noImageOutput: "no Image Output",
-        detectedText: "detected Text",
-        messengerPathTitle: "messenger Path Title",
-        messengerReady:
-          "messenger Ready",
-        imageProcessing: "image Processing",
-        textProcessing: "text Processing",
-        metaDetected: "meta Detected",
+      "settings": {
+        "title": "سرلیک",
+        "heroEyebrow": "د AI تنظیمات",
+        "heroTitle": "امستنې",
+        "heroDescription": "امستنې — معلومات",
+        "subtitle": "فرعي سرلیک",
+        "metricApi": "API",
+        "metricSource": "سرچینه",
+        "sourceLocalContract": "local_contract",
+        "connectionDetails": "امستنې",
+        "sections": "معلومات",
+        "safetyTitle": "سرلیک",
+        "safetyDescription": "تفصیل — معلومات",
+        "providerTitle": "امستنې",
+        "providerDescription": "امستنې — معلومات",
+        "controlTitle": "سرلیک",
+        "profileOwnerTitle": "پروفایل",
+        "profileOwnerDescription": "پروفایل — معلومات",
+        "note": "یادونه"
       },
-
-      voice: {
-        title: "سرلیک",
-        subtitle: "فرعي سرلیک",
-        nativeBridge: "native Bridge",
-        sttTtsBridgeTitle: "stt Tts Bridge Title",
-        realBridgeDescription:
-          "رښتینی موبایل bridge: د مایکروفون ثبت، native غږیزې پېښې، transcript سپارل او audio URL غږول. Text-only TTS جعلي نه دی.",
-        bind: "bind",
-        start: "پیل",
-        stop: "درول",
-        invoke: "invoke",
-        interrupt: "interrupt",
-        startRecording: "start Recording",
-        stopRecording: "stop Recording",
-        recordingNow: "recording Now",
-        tapToSpeak: "tap To Speak",
-        session: "session",
-        recording: "درحال ثبت...",
-        audioSize: "audio Size",
-        audioDuration: "audio Duration",
-        audioCapturedNotice:
-          "audio Captured Notice",
-        transcriptPlaceholder: "transcript Placeholder",
-        ttsTitle: "tts Title",
-        ttsPlaceholder: "tts Placeholder",
-        playLastTts: "play Last Tts",
-        noFakeTts:
-          "جعلي غږ نشته: audio playback یوازې هغه وخت کار کوي چې backend/native TTS audio URL ورکړي. Text-only TTS د expo-speech یا native TTS module تر نښلولو پورې د متن په توګه ښودل کېږي.",
-        runtimeLog: "runtime Log",
-        noEvents: "no Events",
-        sessionStopped: "session Stopped",
-        quickInvokeSent: "quick Invoke Sent",
-        transcriptReady: "transcript Ready",
-        state: {
-          idle: "idle",
-          processing: "درحال پروسس...",
-          requesting_permission: "requesting permission",
-          recording: "درحال ثبت...",
-          error: "تېروتنه",
-          playing: "playing",
+      "memory": {
+        "title": "سرلیک",
+        "subtitle": "فرعي سرلیک",
+        "privacyMode": "محرمیت",
+        "strict": "معلومات",
+        "balanced": "معلومات",
+        "adaptive": "معلومات",
+        "addInstruction": "معلومات",
+        "instructions": "معلومات",
+        "instructionPlaceholder": "لټون",
+        "noAccusation": "معلومات",
+        "modeSaved": {
+          "strict": "معلومات",
+          "balanced": "معلومات",
+          "adaptive": "معلومات"
         },
-        log: {
-          info: "معلومات",
-          bridge_bound: "bridge bound",
-          recording_started: "recording started",
-          audio_captured: "audio captured",
-          transcript_ready: "transcript ready",
-          tts_requested: "tts requested",
-          playback_started: "playback started",
-          interrupted: "interrupted",
-          error: "تېروتنه",
-        },
+        "instructionSaved": "معلومات"
       },
-
-      settings: {
-        title: "سرلیک",
-        heroEyebrow: "hero Eyebrow",
-        heroTitle: "hero Title",
-        heroDescription:
-          "hero Description",
-        subtitle: "فرعي سرلیک",
-        metricApi: "metric Api",
-        metricSource: "metric Source",
-        sourceLocalContract: "source Local Contract",
-        connectionDetails: "connection Details",
-        sections: "sections",
-        safetyTitle: "safety Title",
-        safetyDescription:
-          "safety Description",
-        providerTitle: "provider Title",
-        providerDescription:
-          "provider Description",
-        controlTitle: "control Title",
-        profileOwnerTitle: "profile Owner Title",
-        profileOwnerDescription:
-          "profile Owner Description",
-        note: "یادونه",
+      "premium": {
+        "title": "سرلیک",
+        "heroEyebrow": "پریمیم",
+        "subtitle": "فرعي سرلیک",
+        "accessTitle": "سرلیک",
+        "noFakePayment": "معلومات",
+        "realtimeCallTranslationTitle": "غږ",
+        "realtimeTranslationTitle": "ژباړه",
+        "realtimeTranslationDescription": "ژباړه — معلومات",
+        "mediaTranslationTitle": "ژباړه",
+        "mediaTranslationDescription": "ژباړه — معلومات",
+        "advancedAssistantActionsTitle": "مرستیال",
+        "safeActionsTitle": "امنیت",
+        "safeActionsDescription": "امنیت — معلومات",
+        "openProfilePremium": "پروفایل",
+        "brandText": "معلومات — معلومات",
+        "badge": "پریمیم",
+        "safeBadge": "پریمیم"
       },
-
-      memory: {
-        title: "سرلیک",
-        subtitle: "فرعي سرلیک",
-        privacyMode: "privacy Mode",
-        strict: "strict",
-        balanced: "balanced",
-        adaptive: "adaptive",
-        addInstruction: "add Instruction",
-        instructions: "instructions",
-        instructionPlaceholder: "instruction Placeholder",
-        noAccusation:
-          "no Accusation",
-        modeSaved: {
-          strict: "strict",
-          balanced: "balanced",
-          adaptive: "adaptive",
-        },
-        instructionSaved:
-          "instruction Saved",
+      "activity": {
+        "historyTitle": "تاریخچه",
+        "historySubtitle": "تاریخچه — معلومات",
+        "tasksTitle": "مرستیال",
+        "tasksSubtitle": "مرستیال — معلومات",
+        "emptyTitle": "معلومات",
+        "emptyText": "معلومات — معلومات"
       },
-
-      premium: {
-        title: "سرلیک",
-        heroEyebrow: "hero Eyebrow",
-        subtitle: "فرعي سرلیک",
-        accessTitle: "access Title",
-        noFakePayment:
-          "دلته تادیه جعلي نه ده. فعالول باید د رښتیني Premium/COIN تایید جریان څخه راشي.",
-        realtimeCallTranslationTitle: "realtime Call Translation Title",
-        realtimeTranslationTitle: "realtime Translation Title",
-        realtimeTranslationDescription:
-          "realtime Translation Description",
-        mediaTranslationTitle: "media Translation Title",
-        mediaTranslationDescription:
-          "media Translation Description",
-        advancedAssistantActionsTitle: "advanced Assistant Actions Title",
-        safeActionsTitle: "safe Actions Title",
-        safeActionsDescription:
-          "safe Actions Description",
-        openProfilePremium: "open Profile Premium",
-        brandText: "brand Text",
-        badge: "Premium",
-        safeBadge: "safe Badge",
-      },
-
-      activity: {
-        historyTitle: "history Title",
-        historySubtitle: "history Subtitle",
-        tasksTitle: "tasks Title",
-        tasksSubtitle: "tasks Subtitle",
-        emptyTitle: "empty Title",
-        emptyText:
-          "empty Text",
-      },
-
-      error: {
-        ai_mobile_api_base_url_missing: "ai mobile api base url missing",
-        ai_mobile_auth_required:
-          "ai mobile auth required",
-        ai_mobile_request_failed: "ai mobile request failed",
-        ai_mobile_network_error:
-          "ai mobile network error",
-        ai_voice_microphone_permission_denied:
-          "ai voice microphone permission denied",
-        ai_voice_recording_already_active:
-          "ai voice recording already active",
-        ai_voice_recording_not_active: "ai voice recording not active",
-        ai_voice_playback_command_missing: "ai voice playback command missing",
-        ai_voice_empty_tts_text: "ai voice empty tts text",
-        ai_voice_audio_url_missing:
-          "ai voice audio url missing",
-      },
-    },
-  },
+      "error": {
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "غوښتنه ناکامه شوه. بیا هڅه وکړئ.",
+        "ai_mobile_network_error": "غوښتنه ناکامه شوه. بیا هڅه وکړئ.",
+        "ai_voice_microphone_permission_denied": "AI",
+        "ai_voice_recording_already_active": "چمتو",
+        "ai_voice_recording_not_active": "AI",
+        "ai_voice_playback_command_missing": "شاته",
+        "ai_voice_empty_tts_text": "AI — معلومات",
+        "ai_voice_audio_url_missing": "AI"
+      }
+    }
+  }
 } as const;
 
 export default PS_AI_MOBILE_LOCALE;

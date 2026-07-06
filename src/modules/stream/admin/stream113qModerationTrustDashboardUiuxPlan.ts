@@ -1,0 +1,25 @@
+export const STREAM_113Q_MODERATION_TRUST_DASHBOARD_UIUX_PLAN = {
+  version: "STREAM-113Q",
+  title: "Moderation trust dashboard / safety summary UI/UX polish",
+  scope: "Stream live-room UI/UX only",
+  goals: [
+    "Give the host one premium safety dashboard for 18+, chat safety, reports, Sabi AI review and moderation actions.",
+    "Show appeals and audit timeline clearly without fake legal proof or fake backend enforcement.",
+    "Keep provider/Admin/realtime enforcement as an honest boundary until real backend integration exists.",
+    "Preserve clean phone mode and keep technical/debug panels folded by default.",
+  ],
+  safeBoundaries: {
+    walletTouched: false,
+    messengerTouched: false,
+    coreAiTouched: false,
+    fakeLiveAllowed: false,
+    fakeRealtimeAllowed: false,
+    fakeProviderAllowed: false,
+    fakePaymentsAllowed: false,
+    fakeAgeVerificationAllowed: false,
+    fakeAutoBanAllowed: false,
+    fakePermanentSanctionAllowed: false,
+    fakeLegalProofAllowed: false,
+    cinemaOrAnimeMixedIntoStream: false,
+  },
+} as const;

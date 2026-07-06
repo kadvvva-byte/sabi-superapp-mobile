@@ -1,0 +1,28 @@
+export const stream111fShortsUploadGalleryFileUiPolishPlan = {
+  version: "111F",
+  title: "Shorts upload / gallery / file UI polish",
+  scope: "mobile_stream_shorts_only",
+  changedFiles: [
+    "src/modules/stream/mobile/StreamShortVideoDraftPanel.tsx",
+    "src/modules/stream/admin/stream111fShortsUploadGalleryFileUiPolishPlan.ts",
+    "src/modules/stream/index.ts",
+  ],
+  guarantees: {
+    sabiInAppCameraKept: true,
+    systemCameraLaunchRemoved: true,
+    galleryPickerOnlyInsideVideoSourceSheet: true,
+    documentVideoPickerOnlyInsideVideoSourceSheet: true,
+    selectedSourceStatusVisible: true,
+    localSourceBindingPreserved: true,
+    timelineBindingPreserved: true,
+    previewBindingPreserved: true,
+    uploadProviderLocked: true,
+    fakeUpload: false,
+    fakePublish: false,
+    fakeProviderSuccess: false,
+    backendTouched: false,
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+  },
+} as const;

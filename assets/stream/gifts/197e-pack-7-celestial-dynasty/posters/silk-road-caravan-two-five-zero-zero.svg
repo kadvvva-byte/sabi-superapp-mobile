@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Шёлковый Караван 2500 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="76%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="44%" stop-color="#7C2D12"/><stop offset="100%" stop-color="#080711"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".55" stop-color="#FFE08A"/><stop offset="1" stop-color="#B28DFF"/></linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <circle cx="192" cy="178" r="126" fill="none" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="3"/>
+  <circle cx="192" cy="178" r="94" fill="#080711" fill-opacity=".28"/>
+  <path d="M72 238h240 M106 226c18-54 56-76 86-76s68 22 86 76 M124 238a22 22 0 1 0 0 1 M260 238a22 22 0 1 0 0 1 M126 150l66-46 66 46" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">Шёлковый Караван</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">2500 алмазов · preview only</text>
+</svg>

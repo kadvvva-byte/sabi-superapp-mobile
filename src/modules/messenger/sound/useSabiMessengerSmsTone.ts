@@ -4,9 +4,8 @@ import { AppState, DeviceEventEmitter, type AppStateStatus } from "react-native"
 
 import { getAuthSessionState, isAuthenticatedSessionReady } from "../../../core/kernel/auth/session.store";
 import { messengerKernelFacade } from "../../../core/kernel/messenger/facade";
+import { resolveSabiSoundForKind } from "../../notifications/sounds/sabiSoundPreferences";
 import { getSuperAppSocket } from "../../../shared/realtime/superapp-socket";
-
-const SABI_SMS_TONE = require("../../../../assets/sounds/sabi-message.wav");
 
 type MessengerSmsToneParams = {
   enabled: boolean;
@@ -353,9 +352,7 @@ export function useSabiMessengerSmsTone({ enabled, pathname }: MessengerSmsToneP
     let cancelled = false;
     const socket = getSuperAppSocket(currentUserId);
 
-    async function getSound() {
-      if (soundRef.current) return soundRef.current;
-
+    async function createSelectedMessageSound() {
       await Audio.setAudioModeAsync({
         allowsRecordingIOS: false,
         staysActiveInBackground: false,
@@ -364,7 +361,8 @@ export function useSabiMessengerSmsTone({ enabled, pathname }: MessengerSmsToneP
         playThroughEarpieceAndroid: false,
       });
 
-      const { sound } = await Audio.Sound.createAsync(SABI_SMS_TONE, {
+      const selectedTone = await resolveSabiSoundForKind("message");
+      const { sound } = await Audio.Sound.createAsync(selectedTone.source, {
         shouldPlay: false,
         volume: 0.86,
       });
@@ -374,7 +372,6 @@ export function useSabiMessengerSmsTone({ enabled, pathname }: MessengerSmsToneP
         return null;
       }
 
-      soundRef.current = sound;
       return sound;
     }
 
@@ -384,9 +381,14 @@ export function useSabiMessengerSmsTone({ enabled, pathname }: MessengerSmsToneP
       lastPlayAtRef.current = now;
 
       try {
-        const sound = await getSound();
+        const previous = soundRef.current;
+        soundRef.current = null;
+        await previous?.unloadAsync().catch(() => undefined);
+
+        const sound = await createSelectedMessageSound();
         if (!sound) return;
 
+        soundRef.current = sound;
         await sound.stopAsync().catch(() => undefined);
         await sound.setPositionAsync(0).catch(() => undefined);
         await sound.playAsync();

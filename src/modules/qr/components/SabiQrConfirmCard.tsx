@@ -1,7 +1,7 @@
 import React from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useQrMobileTranslations } from "../../../shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../../shared/i18n/qr-mobile-hooks";
 import type {
   SabiQrExecuteResponse,
   SabiQrFunctionDefinition,
@@ -13,6 +13,7 @@ import {
   type SabiQrConfirmSeverity,
 } from "../runtime/qrExecutionGuards";
 import { getSabiQrVisualTheme } from "../runtime/qrVisualTheme";
+import { cleanSabiQrUserDisplayValue } from "../runtime/qrDisplaySanitizer";
 
 export type SabiQrConfirmCardProps = {
   definition: SabiQrFunctionDefinition;
@@ -38,6 +39,36 @@ function severityStyle(severity: SabiQrConfirmSeverity) {
   }
 }
 
+function cleanString(value: unknown): string {
+  return typeof value === "string" ? value.trim() : String(value ?? "").trim();
+}
+
+function metadataString(token: SabiQrTokenRecord, keys: string[]): string {
+  const metadata = token.metadata;
+  if (!metadata || typeof metadata !== "object") return "";
+  const record = metadata as Record<string, unknown>;
+  for (const key of keys) {
+    const value = cleanString(record[key]);
+    if (value) return value;
+  }
+  return "";
+}
+
+function getOwnerName(token: SabiQrTokenRecord, fallback: string) {
+  const verified = token.verifiedIdentity;
+  const fullName = [verified?.firstName, verified?.lastName]
+    .map(cleanString)
+    .filter(Boolean)
+    .join(" ");
+  return (
+    cleanString(verified?.displayName) ||
+    metadataString(token, ["displayName", "name", "merchantName", "businessName", "title"]) ||
+    fullName ||
+    cleanString(verified?.username) ||
+    fallback
+  );
+}
+
 export default function SabiQrConfirmCard({
   definition,
   token,
@@ -53,6 +84,18 @@ export default function SabiQrConfirmCard({
   const actionTone = severityStyle(action.severity);
   const resultInfo = executeResult ? describeSabiQrExecuteResult(executeResult, language) : null;
   const resultTone = resultInfo ? severityStyle(resultInfo.severity) : null;
+  const ownerName = cleanSabiQrUserDisplayValue(
+    getOwnerName(token, tq("qr.mobile.identity.namePending")),
+    { kind: "human", maxLength: 56 },
+  ) || tq("qr.mobile.identity.namePending");
+  const username = cleanSabiQrUserDisplayValue(
+    cleanString(token.verifiedIdentity?.username) || metadataString(token, ["username", "handle", "publicUsername"]),
+    { kind: "human", maxLength: 32 },
+  );
+  const reference = cleanSabiQrUserDisplayValue(
+    cleanString(token.reference) || metadataString(token, ["reference", "orderId", "invoiceId", "tripId"]),
+    { kind: "reference", maxLength: 56 },
+  );
 
   return (
     <View style={[styles.card, { backgroundColor: theme.card, borderColor: theme.accentSoft }]}> 
@@ -74,34 +117,18 @@ export default function SabiQrConfirmCard({
         </View>
       </View>
 
-      {token.verifiedIdentity ? (
-        <View style={styles.ownerBox}>
-          <Text style={styles.ownerLabel}>{tq("qr.mobile.identity.autoTitle")}</Text>
-          <Text numberOfLines={1} style={styles.ownerName}>
-            {token.verifiedIdentity.displayName || [token.verifiedIdentity.firstName, token.verifiedIdentity.lastName].filter(Boolean).join(" ").trim() || token.verifiedIdentity.username || tq("qr.mobile.identity.namePending")}
-          </Text>
-          <Text numberOfLines={1} style={styles.ownerId}>{tq("qr.mobile.identity.userIdValue", { value: token.verifiedIdentity.userId || token.actorUserId })}</Text>
-        </View>
-      ) : null}
+      <View style={styles.ownerBox}>
+        <Text style={styles.ownerLabel}>{tq("qr.mobile.result.target")}</Text>
+        <Text numberOfLines={1} style={styles.ownerName}>{ownerName}</Text>
+        {username ? <Text numberOfLines={1} style={styles.ownerId}>@{username.replace(/^@+/, "")}</Text> : null}
+      </View>
 
       <View style={styles.metaGrid}>
         <Meta label={tq("qr.mobile.common.function")} value={functionTitle(definition.code)} />
         <Meta label={tq("qr.mobile.common.surface")} value={valueLabel(definition.surface)} />
-        <Meta label={tq("qr.mobile.common.rail")} value={valueLabel(definition.rail === "coin_wallet" ? "coin_wallet_rail" : definition.rail)} />
-        <Meta label={tq("qr.mobile.common.trust")} value={valueLabel(token.trustState)} />
-        <Meta label={tq("qr.mobile.common.userId")} value={token.actorUserId} />
-        <Meta label={tq("qr.mobile.common.risk")} value={valueLabel(definition.riskLevel)} />
+        {token.amount ? <Meta label={tq("qr.mobile.common.amount")} value={`${token.amount} ${token.currency ?? ""}`.trim()} /> : null}
+        {reference ? <Meta label={tq("qr.mobile.common.reference")} value={reference} /> : null}
       </View>
-
-      <View style={styles.tokenBox}>
-        <Text style={styles.tokenLabel}>{tq("qr.mobile.common.shortPayload")}</Text>
-        <Text numberOfLines={1} style={styles.tokenValue}>{token.shortValue}</Text>
-        <Text style={styles.expiry}>{tq("qr.mobile.common.expires", { value: new Date(token.expiresAt).toLocaleString() })}</Text>
-      </View>      {token.amount ? (
-        <View style={styles.detailsBox}>
-          <Meta label={tq("qr.mobile.common.amount")} value={`${token.amount} ${token.currency ?? ""}`.trim()} />
-        </View>
-      ) : null}
 
       {resultInfo ? (
         <View style={[styles.resultBox, { borderColor: resultTone?.color ?? "rgba(255,255,255,0.12)" }]}> 

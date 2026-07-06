@@ -1,4 +1,5 @@
-export const TK_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const TK_LOCALE = {
   "calls": {
     "audio": "audio",
     "video": "wideo",
@@ -160,7 +161,7 @@ export const TK_LOCALE = {
     "wallet": "Gapjyk",
     "premium": "Premium",
     "business": "Biznes",
-    "merchant": "Merchant",
+    "merchant": "söwdagär",
     "personal": "Şahsy",
     "public": "Açyk",
     "private": "Gizlin",
@@ -177,9 +178,9 @@ export const TK_LOCALE = {
     "settlementBalance": "Hasaplaşyk balansy",
     "payoutBalance": "Töleg balansy",
     "accountNumber": "Hasap belgisi",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Maglumat",
+    "swift": "Maglumat",
+    "bic": "Maglumat",
     "branch": "Şahamça",
     "reference": "Salgy",
     "beneficiary": "Alyjy",
@@ -203,7 +204,7 @@ export const TK_LOCALE = {
     "forward": "ugrat",
     "info": "maglumat",
     "phone": "telefon",
-    "profile": "profil",
+    "profile": "Profil",
     "room": "otag",
     "theme": "tema",
     "count": "sany",
@@ -359,7 +360,7 @@ export const TK_LOCALE = {
     "chooseAccountType": "Hasap görnüşini saýlaň"
   },
   "onboarding": {
-    "title": "Size gerek zatlaryň hemmesi bir programmada",
+    "title": "Sazlamalar",
     "subtitle": "Söhbet ediň, töleg ediň, gapjygy dolandyryň, AI gurallaryny ulanyň, biznes alyp baryň we gündelik hyzmatlara bir ýerden girip biliň.",
     "messengerTitle": "Premium messenjer",
     "messengerSubtitle": "Söhbetler, jaňlar, media paýlaşmak, AI terjimesi we premium aragatnaşyk mümkinçilikleri.",
@@ -369,7 +370,7 @@ export const TK_LOCALE = {
     "businessSubtitle": "Biznes hasaby, merchant tölegleri, analitika, hasapnamalar we topar girişleri.",
     "aiTitle": "AI her ýerde",
     "aiSubtitle": "Söhbetleri we jaňlary terjime ediň, akylly jogaplary dörediň we premium iş akymlaryny güýçlendiriň.",
-    "profileTitle": "Birleşdirilen profil",
+    "profileTitle": "Profil",
     "profileSubtitle": "Profiliňiz, açyk mazmun, gizlinlik sazlamalary we premium şahsyýet bir ulgamda.",
     "customizationTitle": "Şahsylaşdyrylan baş sahypa",
     "customizationSubtitle": "Wigetler, gysga ýol düwmeleri, mini-programmalar we zerurlyga görä çalt giriş.",
@@ -384,7 +385,7 @@ export const TK_LOCALE = {
     "microphoneTitle": "Mikrofon",
     "microphoneSubtitle": "Sesli habar ibermek we sesli/wideo jaňlara gatnaşmak üçin.",
     "photosTitle": "Suratlar",
-    "photosSubtitle": "Galereýadan media saýlamak we profil mazmunyny dolandyrmak üçin.",
+    "photosSubtitle": "Düşündiriş Maglumat",
     "contactsTitle": "Habarlaşyklar",
     "contactsSubtitle": "Adamlary çalt tapmak we kontakt kartlaryny paýlaşmak üçin.",
     "locationTitle": "Ýerleşiş",
@@ -509,15 +510,15 @@ export const TK_LOCALE = {
     "cards": {
       "title": "title",
       "subtitle": "subtitle",
-      "localCard": "local kart",
-      "localCardText": "local kart düşündiriş",
+      "localCard": "Ýerli",
+      "localCardText": "Ýerli Maglumat",
       "internationalCard": "international kart",
       "internationalCardText": "international kart düşündiriş",
-      "localGlobalCard": "local global kart",
-      "localGlobalCardText": "local global kart düşündiriş",
+      "localGlobalCard": "Ýerli",
+      "localGlobalCardText": "Ýerli Maglumat",
       "virtualCard": "virtual kart",
       "virtualCardText": "virtual kart düşündiriş",
-      "localCards": "local kartlar",
+      "localCards": "Ýerli",
       "internationalCards": "international kartlar",
       "virtualCards": "virtual kartlar",
       "categoriesTitle": "categories",
@@ -530,8 +531,8 @@ export const TK_LOCALE = {
       "providerStatus": "provider ýagdaý",
       "providerNotConfigured": "Provider sazlanmady",
       "providerNotConfiguredText": "Hakyky custody/gapjyk üpjün edijisi, bazar maglumat ugry we admin gözegçiligi birikdirilýänçä crypto amallary öçük galýar.",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "ruleTokenTitle": "rule token",
       "ruleTokenText": "rule token düşündiriş",
       "ruleDetectionTitle": "rule detection",
@@ -560,7 +561,7 @@ export const TK_LOCALE = {
       "completed": "tamamlandy",
       "searchPlaceholder": "gözle kömekçi tekst",
       "all": "hemmesi",
-      "money": "pul",
+      "money": "Maglumat",
       "cards": "kartlar",
       "qr": "QR",
       "liveNote": "live note",
@@ -583,16 +584,16 @@ export const TK_LOCALE = {
       "refundWallet": "gaýtaryş gapjyk",
       "providerRefundReturned": "provider gaýtaryş returned",
       "withdrawWallet": "çykarmak gapjyk",
-      "moneyWithdrawal": "pul withdrawal",
+      "moneyWithdrawal": "Maglumat",
       "depositWallet": "depozit gapjyk",
-      "moneyCredited": "pul credited",
+      "moneyCredited": "Maglumat",
       "qrPayment": "QR töleg",
-      "qrRouteExecution": "QR route execution",
+      "qrRouteExecution": "Maglumat",
       "walletOperation": "gapjyk amal",
       "walletTransferTitle": "gapjyk geçirme"
     },
-    "sendMoney": "Pul ugrat",
-    "receiveMoney": "Pul al",
+    "sendMoney": "Maglumat",
+    "receiveMoney": "Maglumat",
     "requestMoney": {
       "title": "title",
       "subtitle": "subtitle",
@@ -630,8 +631,8 @@ export const TK_LOCALE = {
       "createQr": "döret QR",
       "actions": "hereketler",
       "routes": "routes",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "security1Title": "security1",
       "security1Text": "security1 düşündiriş",
       "security2Title": "security2",
@@ -678,8 +679,8 @@ export const TK_LOCALE = {
       "reference": "salgylanma",
       "referenceHint": "salgylanma kömekçi tekst",
       "notePlaceholder": "note kömekçi tekst",
-      "securityTitle": "security",
-      "securityText": "security düşündiriş",
+      "securityTitle": "Howpsuzlyk",
+      "securityText": "Howpsuzlyk Maglumat",
       "continue": "dowam et",
       "confirmTitle": "tassykla"
     },
@@ -707,7 +708,7 @@ export const TK_LOCALE = {
       "providerTitle": "provider",
       "providerHint": "provider kömekçi tekst",
       "routeCurrency": "route walýuta",
-      "localCurrencyRequired": "local walýuta hökmany",
+      "localCurrencyRequired": "Ýerli",
       "internationalCurrency": "international walýuta",
       "providerNotConfigured": "Provider sazlanmady",
       "providerReady": "provider taýýar",
@@ -777,8 +778,8 @@ export const TK_LOCALE = {
       "reqTokenText": "req token düşündiriş",
       "reqRiskTitle": "req risk",
       "reqRiskText": "req risk düşündiriş",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "freeze": "freeze",
       "onlinePayments": "online payments",
       "internationalUsage": "international usage",
@@ -789,7 +790,7 @@ export const TK_LOCALE = {
       "disabledReason": "Çykarmakdan öň üpjün edijini birikdiriň.",
       "manageCards": "manage kartlar"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "pill Sabi pay",
     "qrPay": "QR bilen töle",
     "qrReceive": "QR bilen al",
     "paymentRequest": "Töleg soragy",
@@ -830,9 +831,9 @@ export const TK_LOCALE = {
       "walletId": "gapjyk ID",
       "statusNote": "ýagdaý note",
       "processing": "processing",
-      "securityNote": "security note",
-      "securityText": "security düşündiriş",
-      "backendPayload": "backend payload",
+      "securityNote": "Howpsuzlyk",
+      "securityText": "Howpsuzlyk Maglumat",
+      "backendPayload": "Yza",
       "liveData": "live data",
       "quickActions": "quick hereketler",
       "nextStep": "indiki step",
@@ -915,7 +916,7 @@ export const TK_LOCALE = {
     "statements": "Hasabatlar",
     "generateStatement": "Hasabat taýýarla",
     "downloadStatement": "Hasabaty ýükle",
-    "coinWallet": "Coin Wallet",
+    "coinWallet": "title",
     "coinTopUp": "Coin doldur",
     "coinSend": "Coin ugrat",
     "coinReceive": "Coin al",
@@ -951,8 +952,8 @@ export const TK_LOCALE = {
       "providerText": "provider düşündiriş",
       "noFakeTitle": "ýok fake",
       "noFakeText": "ýok fake düşündiriş",
-      "securityTitle": "security",
-      "securityText": "security düşündiriş",
+      "securityTitle": "Howpsuzlyk",
+      "securityText": "Howpsuzlyk Maglumat",
       "availableCoin": "available COIN",
       "totalCoin": "total COIN",
       "diamonds": "diamonds",
@@ -1022,8 +1023,8 @@ export const TK_LOCALE = {
       "cryptoValue": "kripto value",
       "status": "ýagdaý",
       "disabled": "Öçürilen",
-      "securityTitle": "security",
-      "securityText": "security düşündiriş",
+      "securityTitle": "Howpsuzlyk",
+      "securityText": "Howpsuzlyk Maglumat",
       "keysTitle": "keys",
       "keysText": "keys düşündiriş",
       "marketTitle": "market",
@@ -1135,8 +1136,8 @@ export const TK_LOCALE = {
       "mainHeroSubtitle": "main hero düşündiriş",
       "mainBalanceLabel": "main balans",
       "mainBalanceHint": "main balans kömekçi tekst",
-      "localBalanceLabel": "local balans",
-      "localBalanceHint": "local balans kömekçi tekst",
+      "localBalanceLabel": "Ýerli",
+      "localBalanceHint": "Ýerli Maglumat",
       "send": "iber",
       "cards": "kartlar",
       "quickActionsTitle": "quick hereketler",
@@ -1154,9 +1155,9 @@ export const TK_LOCALE = {
       "coinTitle": "COIN",
       "coinSubtitle": "COIN düşündiriş",
       "coinBalanceLabel": "COIN balans",
-      "localCardsTitle": "local kartlar",
-      "localCardsSubtitle": "local kartlar düşündiriş",
-      "localCardsBalanceLabel": "local kartlar balans",
+      "localCardsTitle": "Ýerli",
+      "localCardsSubtitle": "Ýerli Maglumat",
+      "localCardsBalanceLabel": "Ýerli",
       "businessTitle": "biznes",
       "businessSubtitle": "biznes düşündiriş",
       "merchantTitle": "söwdagär",
@@ -1218,7 +1219,7 @@ export const TK_LOCALE = {
       "eyebrowSabiPay": "eyebrow Sabi pay",
       "eyebrowQr": "eyebrow QR",
       "eyebrowSabiCoin": "eyebrow Sabi COIN",
-      "eyebrowLocalCards": "eyebrow local kartlar",
+      "eyebrowLocalCards": "Ýerli",
       "eyebrowBusiness": "eyebrow biznes",
       "eyebrowMerchant": "eyebrow söwdagär",
       "eyebrowCrypto": "eyebrow kripto",
@@ -1248,7 +1249,7 @@ export const TK_LOCALE = {
       "amountLabel": "mukdar",
       "flow": "flow",
       "digits": "digits",
-      "security": "security",
+      "security": "Howpsuzlyk",
       "active": "active",
       "summaryTitle": "summary",
       "summaryHint": "summary kömekçi tekst",
@@ -1325,7 +1326,7 @@ export const TK_LOCALE = {
       "eyebrow": "eyebrow",
       "title": "title",
       "subtitle": "subtitle",
-      "profileActive": "profil active",
+      "profileActive": "Profil",
       "heroTitle": "hero",
       "heroText": "hero düşündiriş",
       "smartRouting": "smart routing",
@@ -1336,8 +1337,8 @@ export const TK_LOCALE = {
       "currencyTitle": "walýuta",
       "primaryCurrency": "primary walýuta",
       "primaryCurrencyDescription": "primary walýuta düşündiriş",
-      "localCurrency": "local walýuta",
-      "localCurrencyDescription": "local walýuta düşündiriş",
+      "localCurrency": "Ýerli",
+      "localCurrencyDescription": "Ýerli Maglumat",
       "internationalCurrency": "international walýuta",
       "internationalCurrencyDescription": "international walýuta düşündiriş",
       "noHardcodedCurrencyTitle": "ýok hardcoded walýuta",
@@ -1348,7 +1349,7 @@ export const TK_LOCALE = {
       "defaultCardMode": "default kart mode",
       "defaultCardModeDescription": "default kart mode düşündiriş",
       "smart": "smart",
-      "local": "local",
+      "local": "Ýerli",
       "international": "international",
       "virtual": "virtual",
       "autoSelectBestCard": "auto saýla best kart",
@@ -1358,17 +1359,17 @@ export const TK_LOCALE = {
       "walletPreferences": "gapjyk preferences",
       "sabiPayQuickAccess": "Sabi pay quick access",
       "sabiPayQuickAccessDescription": "Sabi pay quick access düşündiriş",
-      "qrQuickAccess": "QR quick access",
+      "qrQuickAccess": "Maglumat",
       "qrQuickAccessDescription": "QR quick access düşündiriş",
       "allowSmartRouting": "rugsat ber smart routing",
       "allowSmartRoutingDescription": "rugsat ber smart routing düşündiriş",
       "paymentPriority": "töleg priority",
       "paymentPriorityDescription": "töleg priority düşündiriş",
-      "security": "security",
+      "security": "Howpsuzlyk",
       "walletNotifications": "gapjyk habarnamalar",
       "walletNotificationsDescription": "gapjyk habarnamalar düşündiriş",
-      "securityAlerts": "security alerts",
-      "securityAlertsDescription": "security alerts düşündiriş",
+      "securityAlerts": "Howpsuzlyk",
+      "securityAlertsDescription": "Howpsuzlyk Maglumat",
       "requireLargeConfirmation": "require large confirmation",
       "requireLargeConfirmationDescription": "require large confirmation düşündiriş",
       "sensitiveBehavior": "sensitive behavior",
@@ -1395,7 +1396,7 @@ export const TK_LOCALE = {
       "defaultCardSelection": "default kart selection",
       "defaultPaymentSource": "default töleg çeşme",
       "smartAuto": "smart auto",
-      "localFirst": "local birinji",
+      "localFirst": "Ýerli",
       "internationalFirst": "international birinji",
       "virtualFirst": "virtual birinji",
       "tapToReveal": "tap to reveal",
@@ -1411,7 +1412,7 @@ export const TK_LOCALE = {
       "walletBalance": "gapjyk balans",
       "personal": "şahsy",
       "mainBalance": "main balans",
-      "localBalance": "local balans",
+      "localBalance": "Ýerli",
       "coinBalance": "COIN balans",
       "cryptoValue": "kripto value",
       "sabiBalance": "Sabi balans",
@@ -1437,8 +1438,8 @@ export const TK_LOCALE = {
       "cardsAccessHint": "kartlar access kömekçi tekst",
       "allCardsTitle": "hemmesi kartlar",
       "allCardsSubtitle": "hemmesi kartlar düşündiriş",
-      "localCardsTitle": "local kartlar",
-      "localCardsSubtitle": "local kartlar düşündiriş"
+      "localCardsTitle": "Ýerli",
+      "localCardsSubtitle": "Ýerli Maglumat"
     },
     "coinIndex": {
       "eyebrow": "eyebrow",
@@ -1473,7 +1474,7 @@ export const TK_LOCALE = {
       "lockedDepositText": "locked depozit düşündiriş",
       "manage": "manage",
       "maturity": "maturity",
-      "months": "months",
+      "months": "Maglumat",
       "noActiveDeposits": "ýok active deposits",
       "moveCoinToWallet": "move COIN to gapjyk",
       "available": "available",
@@ -1639,8 +1640,8 @@ export const TK_LOCALE = {
       "pillMerchant": "pill söwdagär",
       "pillInternal": "pill internal",
       "pillIdentity": "pill identity",
-      "featuredTitle": "featured",
-      "featuredHint": "featured kömekçi tekst",
+      "featuredTitle": "Premium",
+      "featuredHint": "Premium Maglumat",
       "internalEyebrow": "internal",
       "internalTitle": "internal",
       "internalSubtitle": "internal düşündiriş",
@@ -1653,7 +1654,7 @@ export const TK_LOCALE = {
       "ecosystemTitle": "ecosystem",
       "ecosystemSubtitle": "ecosystem düşündiriş",
       "ecosystemProvider": "ecosystem provider",
-      "qrAccess": "QR access",
+      "qrAccess": "Maglumat",
       "singleEntry": "single entry",
       "myQr": "my QR",
       "myQrSubtitle": "my QR düşündiriş",
@@ -1662,7 +1663,7 @@ export const TK_LOCALE = {
       "internalPayments": "internal payments",
       "core": "core",
       "cardsBalance": "kartlar balans",
-      "moneyMovement": "pul movement",
+      "moneyMovement": "Maglumat",
       "ecosystemPayments": "ecosystem payments",
       "extendedRoutes": "extended routes",
       "mySabiId": "my Sabi ID",
@@ -1687,8 +1688,8 @@ export const TK_LOCALE = {
       "merchantPaySubtitle": "söwdagär pay düşündiriş",
       "businessPay": "biznes pay",
       "businessPaySubtitle": "biznes pay düşündiriş",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "identityTitle": "identity",
       "identityText": "identity düşündiriş",
       "tokenTitle": "token",
@@ -1716,8 +1717,8 @@ export const TK_LOCALE = {
       "directoryHint": "directory kömekçi tekst",
       "emptyTitle": "boş",
       "emptyText": "boş düşündiriş",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "identityTitle": "identity",
       "identityText": "identity düşündiriş",
       "verifiedTitle": "verified",
@@ -1772,8 +1773,8 @@ export const TK_LOCALE = {
       "coinWalletShortcut": "COIN gapjyk shortcut",
       "sabiWalletShortcut": "Sabi gapjyk shortcut",
       "askAi": "ask AI",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "security1Title": "security1",
       "security1Text": "security1 düşündiriş",
       "security2Title": "security2",
@@ -1831,8 +1832,8 @@ export const TK_LOCALE = {
       "notesHint": "notes kömekçi tekst",
       "otpTitle": "otp",
       "otpText": "otp düşündiriş",
-      "localOnlyTitle": "local only",
-      "localOnlyText": "local only düşündiriş",
+      "localOnlyTitle": "Ýerli",
+      "localOnlyText": "Ýerli Maglumat",
       "cardsHub": "kartlar hub"
     },
     "localRecipients": {
@@ -1859,7 +1860,7 @@ export const TK_LOCALE = {
       "subtitle": "subtitle",
       "noCardTitle": "ýok kart",
       "noCardText": "ýok kart düşündiriş",
-      "profile": "profil",
+      "profile": "Profil",
       "tokenStatus": "token ýagdaý",
       "tokenPending": "token pending",
       "cardName": "kart at",
@@ -1869,8 +1870,8 @@ export const TK_LOCALE = {
       "currency": "walýuta",
       "verification": "verification",
       "topup": "üstüni doldur",
-      "securityTitle": "security",
-      "securityText": "security düşündiriş",
+      "securityTitle": "Howpsuzlyk",
+      "securityText": "Howpsuzlyk Maglumat",
       "controlsTitle": "controls",
       "controlsText": "controls düşündiriş"
     },
@@ -1880,7 +1881,7 @@ export const TK_LOCALE = {
       "noCard": "ýok kart",
       "noCardText": "ýok kart düşündiriş",
       "defaultBadge": "default badge",
-      "cardProfile": "kart profil",
+      "cardProfile": "Profil",
       "overview": "overview",
       "cardType": "kart type",
       "scheme": "scheme",
@@ -1893,10 +1894,10 @@ export const TK_LOCALE = {
       "personalization": "personalization",
       "controls": "controls",
       "permissions": "permissions",
-      "security": "security",
+      "security": "Howpsuzlyk",
       "protection": "protection",
-      "securitySettings": "security sazlamalar",
-      "securitySettingsText": "security sazlamalar düşündiriş",
+      "securitySettings": "Howpsuzlyk",
+      "securitySettingsText": "Howpsuzlyk Maglumat",
       "cardAlerts": "kart alerts",
       "cardAlertsText": "kart alerts düşündiriş",
       "cardLimits": "kart limits",
@@ -1971,8 +1972,8 @@ export const TK_LOCALE = {
       "recipientNamePlaceholder": "alyjy at kömekçi tekst",
       "note": "note",
       "notePlaceholder": "note kömekçi tekst",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
       "security1Title": "security1",
       "security1Text": "security1 düşündiriş",
       "security2Title": "security2",
@@ -1995,7 +1996,7 @@ export const TK_LOCALE = {
       "destinationText": "ugur düşündiriş",
       "storedValue": "stored value",
       "type": "type",
-      "internalMoney": "internal pul",
+      "internalMoney": "Maglumat",
       "usage": "usage",
       "transfersPayments": "transfers payments",
       "speed": "speed",
@@ -2057,9 +2058,9 @@ export const TK_LOCALE = {
       "reference": "salgylanma",
       "referenceHint": "salgylanma kömekçi tekst",
       "referencePlaceholder": "salgylanma kömekçi tekst",
-      "securityTitle": "security",
-      "securityHint": "security kömekçi tekst",
-      "securityText": "security düşündiriş",
+      "securityTitle": "Howpsuzlyk",
+      "securityHint": "Howpsuzlyk Maglumat",
+      "securityText": "Howpsuzlyk Maglumat",
       "continue": "dowam et",
       "confirmTitle": "tassykla"
     },
@@ -2080,7 +2081,7 @@ export const TK_LOCALE = {
       "handle": "handle",
       "note": "note",
       "reference": "salgylanma",
-      "security": "security",
+      "security": "Howpsuzlyk",
       "bankGrade": "bank grade",
       "pinTitle": "berkit",
       "pinText": "berkit düşündiriş",
@@ -2112,7 +2113,7 @@ export const TK_LOCALE = {
       "quickActions": "quick hereketler",
       "history": "taryh",
       "p2pSend": "p2p iber",
-      "qrExecute": "QR execute",
+      "qrExecute": "Maglumat",
       "paymentRoute": "töleg route",
       "totals": "totals",
       "payments": "payments",
@@ -2125,7 +2126,7 @@ export const TK_LOCALE = {
       "recentHistory": "recent taryh",
       "seeAll": "see hemmesi",
       "noEvents": "ýok events",
-      "unknown": "unknown"
+      "unknown": "Maglumat"
     },
     "financialItem": {
       "eyebrow": "eyebrow",
@@ -2133,7 +2134,7 @@ export const TK_LOCALE = {
       "loading": "ýüklenýär",
       "errorTitle": "error",
       "amountUnavailable": "mukdar unavailable",
-      "unknown": "unknown",
+      "unknown": "Maglumat",
       "id": "ID",
       "transaction": "transaction",
       "wallet": "gapjyk",
@@ -2197,7 +2198,7 @@ export const TK_LOCALE = {
       "secureRoute": "howpsuz route",
       "style": "style",
       "theme": "tema",
-      "profileFallback": "profil fallback"
+      "profileFallback": "Profil"
     }
   },
   "walletCards": {
@@ -2235,7 +2236,7 @@ export const TK_LOCALE = {
     "cardStatus": "Kart ýagdaýy",
     "cashWithdrawal": "Nagt çykarmak",
     "atmWithdrawal": "Bankomatdan çykarmak",
-    "cardToCardTransfer": "Kartdan karta geçirim",
+    "cardToCardTransfer": "Maglumat",
     "tokenizedPayments": "Tokenleşdirilen tölegler",
     "cardLimitResetDate": "Kart çägi täzelenýän sene",
     "verificationMode": "Tassyklama tertibi"
@@ -2261,9 +2262,9 @@ export const TK_LOCALE = {
     "beneficiaryBank": "Alyjy banky",
     "beneficiaryAddress": "Alyjy salgysy",
     "accountNumber": "Hasap belgisi",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Maglumat",
+    "swift": "Maglumat",
+    "bic": "Maglumat",
     "routingNumber": "Ugrukdyrma belgisi",
     "correspondentBank": "Hyzmatdaş bank",
     "intermediaryBank": "Araçy bank",
@@ -2308,9 +2309,9 @@ export const TK_LOCALE = {
     "beneficiaryCountry": "Alyjy ýurdy",
     "recipientBank": "Alyjy banky",
     "bankBranch": "Bank şahamçasy",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Maglumat",
+    "swift": "Maglumat",
+    "bic": "Maglumat",
     "routingNumber": "Ugrukdyrma belgisi",
     "transferAmount": "Geçirim möçberi",
     "receivingAmount": "Alnjak möçber",
@@ -2337,7 +2338,7 @@ export const TK_LOCALE = {
     "noSavedRecipients": "Saklanan alyjy ýok"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
+    "title": "title",
     "subtitle": "Coin balansyny, geçirimleri, girdejileri we gulplanan önümleri dolandyryň.",
     "availableCoin": "Elýeterli Coin",
     "lockedCoin": "Gulpulanan Coin",
@@ -2428,7 +2429,7 @@ export const TK_LOCALE = {
     "qrPayments": "QR tölegler",
     "onlinePayments": "Onlaýn tölegler",
     "invoicePayments": "Hasap-faktura tölegleri",
-    "acquiring": "Acquiring",
+    "acquiring": "Maglumat",
     "acquiringRate": "Acquiring derejesi",
     "settlementSchedule": "Hasaplaşyk tertibi",
     "settlementCycle": "Hasaplaşyk döwri",
@@ -2525,7 +2526,7 @@ export const TK_LOCALE = {
     "title": "Gabat geliş",
     "subtitle": "Tassyklama, düzgünleşdiriji barlaglar we bank gabat geliş dolandyryşy.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Maglumat",
     "sanctionsScreening": "Sanksiýa barlagy",
     "pepCheck": "PEP barlagy",
     "sourceOfFunds": "Serişdäniň gelip çykyşy",
@@ -2554,7 +2555,7 @@ export const TK_LOCALE = {
     "shareQr": "QR paýlaş",
     "saveQr": "QR sakla",
     "businessQr": "Biznes QR",
-    "merchantQr": "Merchant QR",
+    "merchantQr": "QR",
     "staticQr": "Statik QR",
     "dynamicQr": "Dinamik QR",
     "qrExpired": "QR koduň möhleti gutardy",
@@ -2581,7 +2582,7 @@ export const TK_LOCALE = {
     "delivered": "Gowşuryldy",
     "seen": "Görüldi",
     "attach": "Birikdir",
-    "media": "Media",
+    "media": "media",
     "photo": "Surat",
     "video": "Wideo",
     "document": "Resminama",
@@ -2701,9 +2702,9 @@ export const TK_LOCALE = {
     "animatedGift": {
       "premiumLayer": "Premium layer",
       "storage": "storage",
-      "featured": "featured",
+      "featured": "Premium",
       "family": "family",
-      "local": "local",
+      "local": "Ýerli",
       "treasure": "treasure",
       "luxury": "luxury"
     },
@@ -2720,7 +2721,7 @@ export const TK_LOCALE = {
       "basic": "basic",
       "premium": "Premium",
       "ultra": "ultra",
-      "days": "days"
+      "days": "Maglumat"
     },
     "createBot": "döret bot",
     "manageBot": "manage bot",
@@ -2742,7 +2743,7 @@ export const TK_LOCALE = {
     "botRemoved": "bot removed",
     "botMissing": "bot missing",
     "botLoading": "bot ýüklenýär",
-    "botProfile": "bot profil",
+    "botProfile": "title",
     "walletRouting": "gapjyk routing",
     "sabiWalletRoute": "Sabi gapjyk route",
     "businessRoutingLayer": "biznes routing layer",
@@ -2786,7 +2787,7 @@ export const TK_LOCALE = {
     "groupRemoved": "group removed",
     "groupMissing": "group missing",
     "groupLoading": "group ýüklenýär",
-    "groupProfile": "group profil",
+    "groupProfile": "Çat",
     "groupMembers": "group members",
     "addMember": "goş member",
     "removeMember": "aýyr member",
@@ -2810,7 +2811,7 @@ export const TK_LOCALE = {
     "channelRemoved": "channel removed",
     "channelMissing": "channel missing",
     "channelLoading": "channel ýüklenýär",
-    "channelProfile": "channel profil",
+    "channelProfile": "title",
     "channelSubscribers": "channel subscribers",
     "addSubscriber": "goş subscriber",
     "removeSubscriber": "aýyr subscriber",
@@ -3014,18 +3015,18 @@ export const TK_LOCALE = {
       "openingDocument": "opening resminama",
       "openingContact": "opening contact",
       "normal": "normal",
-      "editedLabel": "edited",
+      "editedLabel": "Maglumat",
       "mapLabel": "map",
       "tapSend": "tap iber",
       "diamondsUnit": "diamonds unit",
       "channelInfoAction": "channel maglumat hereket",
       "commandConfigSubtitle": "command config düşündiriş",
       "commandTitlePlaceholder": "command title kömekçi tekst",
-      "commandDescriptionPlaceholder": "command description kömekçi tekst",
+      "commandDescriptionPlaceholder": "Düşündiriş Maglumat",
       "cancelAction": "ýatyr hereket",
       "openRoute": "aç route",
       "removeBotFromOwnerList": "aýyr bot kimden owner list",
-      "botProfile": "bot profil",
+      "botProfile": "title",
       "quickOwnerControls": "quick owner controls",
       "openBotChatInMessenger": "aç bot chat in Messenger",
       "savingNow": "saving now",
@@ -3107,7 +3108,7 @@ export const TK_LOCALE = {
       "success": "success",
       "spam": "spam",
       "scam": "scam",
-      "fakeProfile": "fake profil",
+      "fakeProfile": "Profil",
       "impersonation": "impersonation",
       "harassment": "harassment",
       "hateSpeech": "hate speech",
@@ -3137,9 +3138,9 @@ export const TK_LOCALE = {
     "ownerRouting": {
       "title": "title",
       "subtitle": "subtitle",
-      "openProfileManagement": "aç profil management",
-      "createFromProfile": "döret kimden profil",
-      "manageFromProfile": "manage kimden profil",
+      "openProfileManagement": "Profil",
+      "createFromProfile": "Profil",
+      "manageFromProfile": "Profil",
       "publicInfoOnly": "açyk maglumat only",
       "hideIfNotCreated": "hide if not created",
       "unifiedUserId": "unified ulanyjy ID"
@@ -3147,8 +3148,8 @@ export const TK_LOCALE = {
     "groupManagement": {
       "title": "title",
       "subtitle": "subtitle",
-      "profileEntryTitle": "profil entry",
-      "profileEntrySubtitle": "profil entry düşündiriş",
+      "profileEntryTitle": "Profil",
+      "profileEntrySubtitle": "Profil Maglumat",
       "createEntryTitle": "döret entry",
       "createEntrySubtitle": "döret entry düşündiriş",
       "ownerPanel": "owner panel",
@@ -3173,7 +3174,7 @@ export const TK_LOCALE = {
       "publicGroup": "açyk group",
       "privateGroup": "şahsy group",
       "published": "published",
-      "showInProfile": "show in profil",
+      "showInProfile": "title",
       "joinRequests": "join requests",
       "memberInvites": "member invites",
       "onlyAdminsPost": "only admins post",
@@ -3184,13 +3185,13 @@ export const TK_LOCALE = {
       "resetSuccess": "täzeden düz success",
       "openMessengerRoom": "aç Messenger otag",
       "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "döret in profil only"
+      "createInProfileOnly": "Profil"
     },
     "channelManagement": {
       "title": "title",
       "subtitle": "subtitle",
-      "profileEntryTitle": "profil entry",
-      "profileEntrySubtitle": "profil entry düşündiriş",
+      "profileEntryTitle": "title",
+      "profileEntrySubtitle": "Profil Maglumat",
       "createEntryTitle": "döret entry",
       "createEntrySubtitle": "döret entry düşündiriş",
       "ownerPanel": "owner panel",
@@ -3216,7 +3217,7 @@ export const TK_LOCALE = {
       "publicChannel": "açyk channel",
       "privateChannel": "şahsy channel",
       "published": "published",
-      "showInProfile": "show in profil",
+      "showInProfile": "title",
       "joinRequests": "join requests",
       "onlyAdminsPost": "only admins post",
       "onlyAdminsEdit": "only admins redaktirle",
@@ -3227,13 +3228,13 @@ export const TK_LOCALE = {
       "resetSuccess": "täzeden düz success",
       "openMessengerRoom": "aç Messenger otag",
       "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "döret in profil only"
+      "createInProfileOnly": "Profil"
     },
     "botManagement": {
       "title": "title",
       "subtitle": "subtitle",
-      "profileEntryTitle": "profil entry",
-      "profileEntrySubtitle": "profil entry düşündiriş",
+      "profileEntryTitle": "title",
+      "profileEntrySubtitle": "Profil Maglumat",
       "createEntryTitle": "döret entry",
       "createEntrySubtitle": "döret entry düşündiriş",
       "ownerPanel": "owner panel",
@@ -3258,7 +3259,7 @@ export const TK_LOCALE = {
       "publicBot": "açyk bot",
       "privateBot": "şahsy bot",
       "published": "published",
-      "showInProfile": "show in profil",
+      "showInProfile": "title",
       "active": "active",
       "paused": "paused",
       "acceptCommands": "kabul et buýruklar",
@@ -3275,7 +3276,7 @@ export const TK_LOCALE = {
       "resetSuccess": "täzeden düz success",
       "openMessengerRoom": "aç Messenger otag",
       "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "döret in profil only"
+      "createInProfileOnly": "Profil"
     },
     "settingsPanels": {
       "title": "title",
@@ -3291,19 +3292,19 @@ export const TK_LOCALE = {
       "permissions": "permissions",
       "statistics": "statistics",
       "archive": "arhiw",
-      "openInProfile": "aç in profil",
+      "openInProfile": "Profil",
       "hiddenWhenNotCreated": "hidden when not created"
     },
     "publicationFlow": {
       "title": "title",
       "subtitle": "subtitle",
       "publicationEnabled": "publication enabled",
-      "showInProfile": "show in profil",
+      "showInProfile": "title",
       "publicMode": "açyk mode",
       "privateMode": "şahsy mode",
       "ownerManagement": "owner management",
       "bindings": "bindings",
-      "profileControls": "profil controls",
+      "profileControls": "Profil",
       "publicationVisibleOnlyWhenCreated": "publication visible only when created"
     },
     "unifiedIdentity": {
@@ -3449,7 +3450,7 @@ export const TK_LOCALE = {
     "deleteBot": "poz bot",
     "groupsLinkedHint": "groups linked kömekçi tekst",
     "channelsLinkedHint": "channels linked kömekçi tekst",
-    "profileSourceNote": "profil çeşme note",
+    "profileSourceNote": "Profil",
     "deleteGroup": "poz group",
     "openGroup": "aç group",
     "savingNow": "saving now",
@@ -3540,9 +3541,9 @@ export const TK_LOCALE = {
     "audioMessage": "Sesli habar",
     "videoMessage": "Wideo habar",
     "animatedPanel": "Animasiýa paneli",
-    "emoji": "Emoji",
+    "emoji": "emoji",
     "gift": "Sowgat",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "sowgat",
     "premiumStickers": "Premium stikerler",
     "stickers": "Stikerler",
     "openGallery": "Galereýany aç",
@@ -3731,8 +3732,8 @@ export const TK_LOCALE = {
     "photos": "Suratlar",
     "videos": "Wideo",
     "likes": "Haladym",
-    "bio": "Bio",
-    "media": "Media",
+    "bio": "bio",
+    "media": "media",
     "gifts": "Sowgatlar",
     "premiumGifts": "Premium sowgatlar",
     "publicInfo": "Açyk maglumat",
@@ -3832,7 +3833,7 @@ export const TK_LOCALE = {
     "recurringPayment": "Gaýtalanýan töleg",
     "scheduledPayment": "Meýilleşdirilen töleg",
     "secureCheckout": "Howpsuz checkout",
-    "merchantCheckout": "Merchant checkout",
+    "merchantCheckout": "Maglumat",
     "preauthorization": "Öňünden rugsat",
     "authorizedAmount": "Rugsat edilen möçber",
     "capturePayment": "Tölegi kabul et",
@@ -3840,7 +3841,7 @@ export const TK_LOCALE = {
     "voidAuthorization": "Rugsady ýatyr",
     "refundPayment": "Tölegi gaýtar",
     "partialRefund": "Bölekleýin gaýtarma",
-    "chargeback": "Chargeback",
+    "chargeback": "Yza",
     "dispute": "Jedel",
     "settlement": "Hasaplaşyk",
     "settlementDelay": "Hasaplaşyk gijä galmasy",
@@ -3894,13 +3895,13 @@ export const TK_LOCALE = {
     },
     "title": "Profil",
     "editProfile": "Profili üýtget",
-    "publicProfile": "Açyk profil",
+    "publicProfile": "açyk",
     "premium": "Premium",
     "username": "Ulanyjy ady",
     "displayName": "Görünýän at",
     "firstName": "Ady",
     "lastName": "Familiýasy",
-    "bio": "Bio",
+    "bio": "bio",
     "birthday": "Doglan güni",
     "address": "Salgy",
     "phone": "Telefon",
@@ -3933,19 +3934,19 @@ export const TK_LOCALE = {
     "privacy": {
       "privacy": {
         "title": "title",
-        "description": "description"
+        "description": "Gizlinlik Maglumat"
       },
       "security": {
         "title": "title",
-        "description": "description"
+        "description": "Howpsuzlyk Maglumat"
       },
       "data": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "qr": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       }
     },
     "aiSettings": "AI sazlamalary",
@@ -3994,7 +3995,7 @@ export const TK_LOCALE = {
       "live": "live",
       "verified": "Tassyklanan",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "Maglumat",
         "photos": "suratlar",
         "videos": "videos"
       },
@@ -4010,16 +4011,16 @@ export const TK_LOCALE = {
       "badge": "badge",
       "freeMonths": "free months",
       "title": "title",
-      "description": "description"
+      "description": "Maglumat Maglumat"
     },
     "sections": {
       "identitySurface": "identity surface",
       "sharedActivity": "shared işjeňlik",
       "ownerAccess": "owner access",
       "account": "hasap",
-      "privacySecurity": "gizlinlik security",
+      "privacySecurity": "Gizlinlik",
       "appExperience": "app experience",
-      "premiumServices": "Premium services",
+      "premiumServices": "Premium",
       "walletEconomy": "gapjyk economy"
     },
     "identitySurfaceCards": {
@@ -4064,11 +4065,11 @@ export const TK_LOCALE = {
     "group": {
       "create": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "manage": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "badges": {
         "published": "published",
@@ -4082,7 +4083,7 @@ export const TK_LOCALE = {
       "fields": {
         "groupName": "group at",
         "username": "ulanyjy ady",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "groupId": "group ID",
         "inviteLink": "invite baglanyşyk",
         "ownerName": "owner at",
@@ -4100,7 +4101,7 @@ export const TK_LOCALE = {
       "switches": {
         "publicGroup": "açyk group",
         "published": "published",
-        "showInProfile": "show in profil",
+        "showInProfile": "title",
         "joinRequests": "join requests",
         "memberInvites": "member invites",
         "onlyAdminsPost": "only admins post",
@@ -4129,11 +4130,11 @@ export const TK_LOCALE = {
     "channel": {
       "create": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "manage": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "badges": {
         "published": "published",
@@ -4146,7 +4147,7 @@ export const TK_LOCALE = {
       "fields": {
         "channelName": "channel at",
         "username": "ulanyjy ady",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "channelId": "channel ID",
         "inviteLink": "invite baglanyşyk",
         "ownerName": "owner at",
@@ -4165,7 +4166,7 @@ export const TK_LOCALE = {
       "switches": {
         "publicChannel": "açyk channel",
         "published": "published",
-        "showInProfile": "show in profil",
+        "showInProfile": "title",
         "joinRequests": "join requests",
         "onlyAdminsPost": "only admins post",
         "onlyAdminsEdit": "only admins redaktirle",
@@ -4193,11 +4194,11 @@ export const TK_LOCALE = {
     "bot": {
       "create": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "manage": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "badges": {
         "active": "active",
@@ -4213,7 +4214,7 @@ export const TK_LOCALE = {
       "fields": {
         "botName": "bot at",
         "username": "ulanyjy ady",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "botId": "bot ID",
         "ownerName": "owner at",
         "ownerUserId": "owner ulanyjy ID",
@@ -4233,7 +4234,7 @@ export const TK_LOCALE = {
       "switches": {
         "publicBot": "açyk bot",
         "published": "published",
-        "showInProfile": "show in profil",
+        "showInProfile": "title",
         "active": "active",
         "acceptCommands": "kabul et buýruklar",
         "showInCatalog": "show in catalog",
@@ -4292,7 +4293,7 @@ export const TK_LOCALE = {
       },
       "empty": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       }
     },
     "linksScreen": {
@@ -4317,7 +4318,7 @@ export const TK_LOCALE = {
       },
       "empty": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "alerts": {
         "invalidUrlTitle": "invalid url",
@@ -4335,11 +4336,11 @@ export const TK_LOCALE = {
     "accountSection": {
       "edit": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "verification": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badges": {
           "starter": "starter",
           "basic": "basic",
@@ -4355,49 +4356,49 @@ export const TK_LOCALE = {
       },
       "devices": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "trusted": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badgeSuffix": "badge suffix"
       }
     },
     "privacySection": {
       "privacy": {
         "title": "title",
-        "description": "description"
+        "description": "Gizlinlik Maglumat"
       },
       "security": {
         "title": "title",
-        "description": "description"
+        "description": "Howpsuzlyk Maglumat"
       },
       "data": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "qr": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       }
     },
     "appSection": {
       "language": {
         "title": "title",
-        "description": "description"
+        "description": "Dil Maglumat"
       },
       "preferences": {
         "title": "title",
-        "description": "description"
+        "description": "Saýlamalar Maglumat"
       },
       "colors": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badge": "badge"
       },
       "ai": {
         "title": "title",
-        "description": "description",
+        "description": "AI Maglumat",
         "badge": "badge"
       },
       "notificationSounds": {
@@ -4406,49 +4407,49 @@ export const TK_LOCALE = {
       },
       "notifications": {
         "title": "title",
-        "description": "description"
+        "description": "Bildirişler Maglumat"
       },
       "games": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badge": "badge"
       }
     },
     "premiumSection": {
       "premiumCard": {
         "title": "title",
-        "description": "description"
+        "description": "Premium Maglumat"
       },
       "business": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "credits": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "gifts": {
         "title": "title",
-        "description": "description"
+        "description": "Premium Maglumat"
       },
       "premium": {
         "title": "title",
-        "description": "description"
+        "description": "Premium Maglumat"
       }
     },
     "walletSection": {
       "walletCard": {
         "title": "title",
-        "description": "description"
+        "description": "Gapjyk Maglumat"
       },
       "settings": {
         "title": "title",
-        "description": "description"
+        "description": "Sazlamalar Maglumat"
       }
     },
     "giftsBlock": {
       "title": "title",
-      "description": "description",
+      "description": "Premium Maglumat",
       "stats": {
         "all": "hemmesi",
         "premium": "Premium",
@@ -4464,7 +4465,7 @@ export const TK_LOCALE = {
       "publication": "publication",
       "accessRules": "access rules",
       "hiddenWhenNotCreated": "hidden when not created",
-      "createFromProfile": "döret kimden profil"
+      "createFromProfile": "Profil"
     },
     "home": "baş sahypa",
     "eyebrow": "eyebrow",
@@ -4494,11 +4495,11 @@ export const TK_LOCALE = {
     "account": {
       "edit": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "verification": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badges": {
           "starter": "starter",
           "basic": "basic",
@@ -4514,106 +4515,51 @@ export const TK_LOCALE = {
       },
       "devices": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "trusted": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badgeSuffix": "badge suffix"
       }
     },
     "app": {
       "language": {
         "title": "title",
-        "description": "description"
+        "description": "Dil Maglumat"
       },
       "preferences": {
         "title": "title",
-        "description": "description"
+        "description": "Saýlamalar Maglumat"
       },
       "colors": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badge": "badge"
       },
       "ai": {
         "title": "title",
-        "description": "description",
+        "description": "AI Maglumat",
         "badge": "badge"
       },
       "notifications": {
         "title": "title",
-        "description": "description"
+        "description": "Bildirişler Maglumat"
       },
       "games": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "badge": "badge"
       }
     },
     "wallet": {
       "wallet": {
         "title": "title",
-        "description": "description"
+        "description": "Gapjyk Maglumat"
       },
       "settings": {
         "title": "title",
-        "description": "description"
-      }
-    },
-    "notificationSounds": {
-      "title": "Melodiler ve sesler",
-      "subtitle": "Arama, mesaj, Wallet, Market, AI ve sistem olayları için ses seçin.",
-      "sections": {
-        "call": "Aramalar",
-        "message": "Mesajlar",
-        "wallet": "Wallet",
-        "market": "Market",
-        "ai": "AI",
-        "system": "Sistem"
-      },
-      "actions": {
-        "addMp3": "Telefondan MP3 ekle"
-      },
-      "custom": {
-        "localFile": "Yerel dosya"
-      },
-      "notes": {
-        "customMp3": "Kişisel MP3 Sabi içinde ve gelen arama ekranında çalışır. Kapalı Android push APK içindeki sesleri kullanır."
-      },
-      "errors": {
-        "addTitle": "Ses eklenmedi",
-        "addMessage": "Bu ses dosyası içe aktarılamadı."
-      },
-      "options": {
-        "call_neon": { "title": "Neon", "description": "Modern arama melodisi" },
-        "call_premium": { "title": "Premium", "description": "Modern arama melodisi" },
-        "call_soft": { "title": "Soft", "description": "Modern arama melodisi" },
-        "call_digital": { "title": "Digital", "description": "Modern arama melodisi" },
-        "call_skyline": { "title": "Skyline", "description": "Modern arama melodisi" },
-        "call_ocean": { "title": "Ocean", "description": "Modern arama melodisi" },
-        "call_crystal": { "title": "Crystal", "description": "Modern arama melodisi" },
-        "call_lux": { "title": "Lux", "description": "Modern arama melodisi" },
-        "call_night": { "title": "Night", "description": "Modern arama melodisi" },
-        "call_minimal": { "title": "Minimal", "description": "Modern arama melodisi" },
-        "msg_clean": { "title": "Clean", "description": "Kısa bildirim sesi" },
-        "msg_soft": { "title": "Soft", "description": "Kısa bildirim sesi" },
-        "msg_glass": { "title": "Glass", "description": "Kısa bildirim sesi" },
-        "msg_pop": { "title": "Pop", "description": "Kısa bildirim sesi" },
-        "msg_air": { "title": "Air", "description": "Kısa bildirim sesi" },
-        "msg_pixel": { "title": "Pixel", "description": "Kısa bildirim sesi" },
-        "msg_drop": { "title": "Drop", "description": "Kısa bildirim sesi" },
-        "msg_bell": { "title": "Bell", "description": "Kısa bildirim sesi" },
-        "msg_swipe": { "title": "Swipe", "description": "Kısa bildirim sesi" },
-        "msg_tap": { "title": "Tap", "description": "Kısa bildirim sesi" },
-        "wallet_confirm": { "title": "Wallet Confirm", "description": "Servis bildirim sesi" },
-        "wallet_alert": { "title": "Wallet Alert", "description": "Servis bildirim sesi" },
-        "market_alert": { "title": "Market Alert", "description": "Servis bildirim sesi" },
-        "market_soft": { "title": "Market Soft", "description": "Servis bildirim sesi" },
-        "ai_ping": { "title": "AI Ping", "description": "Servis bildirim sesi" },
-        "ai_soft": { "title": "AI Soft", "description": "Servis bildirim sesi" },
-        "system_notice": { "title": "System Notice", "description": "Servis bildirim sesi" },
-        "system_soft": { "title": "System Soft", "description": "Servis bildirim sesi" },
+        "description": "Sazlamalar Maglumat"
       }
     },
     "editScreen": {
@@ -4646,70 +4592,70 @@ export const TK_LOCALE = {
       "identity": {
         "photos": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "videos": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "voice": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "username": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "phone": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "email": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "birthday": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "language": {
           "title": "title",
-          "description": "description",
+          "description": "Dil Maglumat",
           "badge": "badge"
         }
       },
       "presentation": {
         "public": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "colors": {
           "title": "title",
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "badge": "badge"
         },
         "ai": {
           "title": "title",
-          "description": "description",
+          "description": "AI Maglumat",
           "badge": "badge"
         },
         "qr": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "safety": {
         "verification": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "privacy": {
           "title": "title",
-          "description": "description"
+          "description": "Gizlinlik Maglumat"
         },
         "security": {
           "title": "title",
-          "description": "description"
+          "description": "Howpsuzlyk Maglumat"
         }
       }
     },
@@ -4823,7 +4769,7 @@ export const TK_LOCALE = {
       "defaults": {
         "channelName": "channel at",
         "username": "ulanyjy ady",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "stats": {
         "subscribers": "subscribers",
@@ -4885,8 +4831,8 @@ export const TK_LOCALE = {
         "private": "şahsy",
         "published": "published",
         "preview": "öňünden gör",
-        "profileVisible": "profil visible",
-        "profileHidden": "profil hidden"
+        "profileVisible": "Profil",
+        "profileHidden": "Profil"
       },
       "focus": {
         "public": "açyk"
@@ -4953,8 +4899,8 @@ export const TK_LOCALE = {
         "publicSubtitle": "açyk düşündiriş",
         "published": "published",
         "publishedSubtitle": "published düşündiriş",
-        "showInProfile": "show in profil",
-        "showInProfileSubtitle": "show in profil düşündiriş",
+        "showInProfile": "title",
+        "showInProfileSubtitle": "Profil Maglumat",
         "searchable": "searchable",
         "searchableSubtitle": "searchable düşündiriş",
         "preview": "öňünden gör",
@@ -5035,7 +4981,7 @@ export const TK_LOCALE = {
       "defaults": {
         "botName": "bot at",
         "username": "ulanyjy ady",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "stats": {
         "modules": "modullar",
@@ -5099,8 +5045,8 @@ export const TK_LOCALE = {
         "private": "şahsy",
         "published": "published",
         "preview": "öňünden gör",
-        "profileVisible": "profil visible",
-        "profileHidden": "profil hidden",
+        "profileVisible": "Profil",
+        "profileHidden": "Profil",
         "active": "active",
         "paused": "paused"
       },
@@ -5163,8 +5109,8 @@ export const TK_LOCALE = {
         "publicSubtitle": "açyk düşündiriş",
         "published": "published",
         "publishedSubtitle": "published düşündiriş",
-        "showInProfile": "show in profil",
-        "showInProfileSubtitle": "show in profil düşündiriş",
+        "showInProfile": "title",
+        "showInProfileSubtitle": "Profil Maglumat",
         "preview": "öňünden gör",
         "previewSubtitle": "öňünden gör düşündiriş",
         "discovery": "discovery",
@@ -5248,7 +5194,7 @@ export const TK_LOCALE = {
           "frame": "frame"
         },
         "quickPills": {
-          "profileSurface": "profil surface",
+          "profileSurface": "Profil",
           "aiIdentity": "AI identity",
           "premium": "Premium"
         },
@@ -5256,7 +5202,7 @@ export const TK_LOCALE = {
       },
       "notice": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "sections": {
         "themePresets": "tema presets",
@@ -5292,40 +5238,40 @@ export const TK_LOCALE = {
       "frames": {
         "defaultGlow": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "heartPulse": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "crystalRing": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "royalGold": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "neonWave": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "aiHalo": {
           "title": "title",
-          "description": "description"
+          "description": "AI Maglumat"
         },
         "softStars": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "seasonalBloom": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "footer": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "action": "hereket"
       },
       "alerts": {
@@ -5350,7 +5296,7 @@ export const TK_LOCALE = {
       },
       "connect": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "action": "hereket"
       },
       "sections": {
@@ -5374,19 +5320,19 @@ export const TK_LOCALE = {
       "notes": {
         "safety": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "nextLayer": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "security": {
           "title": "title",
-          "description": "description"
+          "description": "Howpsuzlyk Maglumat"
         },
         "future": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       }
     },
@@ -5397,81 +5343,81 @@ export const TK_LOCALE = {
         "subtitle": "subtitle"
       },
       "sections": {
-        "securityAccess": "security access",
+        "securityAccess": "Howpsuzlyk",
         "visibilityCommunication": "visibility communication"
       },
       "rows": {
         "security": {
           "title": "title",
-          "description": "description"
+          "description": "Howpsuzlyk Maglumat"
         },
         "data": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "blocked": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "autodelete": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "login_email": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "phone": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "last_seen": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "last-seen": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "photo": {
           "title": "title",
-          "description": "description"
+          "description": "Profil Maglumat"
         },
         "bio": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "birthday": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "gifts": {
           "title": "title",
-          "description": "description"
+          "description": "Premium Maglumat"
         },
         "forwards": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "calls": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "voice_messages": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "voice-messages": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "messages": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "groups": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       }
     },
@@ -5512,18 +5458,18 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanSee": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "findByNumber": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "title",
             "value": "value",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5532,19 +5478,19 @@ export const TK_LOCALE = {
         "groups": {
           "onlineVisibility": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "toggles": {
           "hideReadTime": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "note": "note",
@@ -5556,13 +5502,13 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanSee": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "neverShow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5571,13 +5517,13 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanSee": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "neverShow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5586,13 +5532,13 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanSee": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5601,19 +5547,19 @@ export const TK_LOCALE = {
         "topToggles": {
           "chatBadge": {
             "title": "title",
-            "description": "description"
+            "description": "Çat Maglumat"
           }
         },
         "groups": {
           "defaultProfileVisibility": {
             "title": "title",
-            "description": "description"
+            "description": "Profil Maglumat"
           }
         },
         "exceptions": {
           "neverAllow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "allowedGifts": {
@@ -5622,11 +5568,11 @@ export const TK_LOCALE = {
         "toggles": {
           "standard": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "rare": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5640,13 +5586,13 @@ export const TK_LOCALE = {
         "groups": {
           "accountLinking": {
             "title": "title",
-            "description": "description"
+            "description": "Hasap Maglumat"
           }
         },
         "exceptions": {
           "alwaysAllow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5659,27 +5605,27 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanCall": {
             "title": "title",
-            "description": "description"
+            "description": "Ses Maglumat"
           },
           "peerToPeer": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "exceptions": {
           "neverAllow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "alwaysAllow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "toggles": {
           "iphoneIntegration": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       },
@@ -5692,7 +5638,7 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanSend": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "premiumNote": "Premium note",
@@ -5707,7 +5653,7 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanMessage": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         },
         "premiumNote": "Premium note",
@@ -5718,13 +5664,13 @@ export const TK_LOCALE = {
         "groups": {
           "whoCanInvite": {
             "title": "title",
-            "description": "description"
+            "description": "Çat Maglumat"
           }
         },
         "exceptions": {
           "alwaysAllow": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           }
         }
       }
@@ -5746,7 +5692,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "sections": {
         "discovery": "discovery",
@@ -5756,63 +5702,63 @@ export const TK_LOCALE = {
       "discovery": {
         "syncContacts": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "searchSuggestions": {
           "title": "title",
-          "description": "description"
+          "description": "Gözleg Maglumat"
         },
         "memoryControls": {
           "title": "title",
-          "description": "description"
+          "description": "Kömekçi Maglumat"
         }
       },
       "storage": {
         "draftBackup": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "paymentHints": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "privateExportMode": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "retention": {
         "autoCleanup": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "actions": {
         "requestExport": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "reviewDrafts": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "clearCache": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "note": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "links": {
         "privacy": {
           "title": "title",
-          "description": "description"
+          "description": "Gizlinlik Maglumat"
         },
         "support": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       }
     },
@@ -5867,41 +5813,41 @@ export const TK_LOCALE = {
       },
       "notice": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "sections": {
         "primary": {
           "title": "title",
           "edit": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "public": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "colors": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "premium": {
             "title": "title",
-            "description": "description"
+            "description": "Premium Maglumat"
           }
         },
         "system": {
           "title": "title",
           "language": {
             "title": "title",
-            "description": "description"
+            "description": "Dil Maglumat"
           },
           "qr": {
             "title": "title",
-            "description": "description"
+            "description": "Maglumat Maglumat"
           },
           "premiumSurface": {
             "title": "title",
-            "description": "description"
+            "description": "Premium Maglumat"
           }
         }
       },
@@ -5910,7 +5856,7 @@ export const TK_LOCALE = {
       },
       "footer": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "action": "hereket"
       }
     },
@@ -5943,7 +5889,7 @@ export const TK_LOCALE = {
       },
       "notice": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "tabs": {
         "received": "received",
@@ -6011,7 +5957,7 @@ export const TK_LOCALE = {
       },
       "footer": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "action": "hereket"
       }
     },
@@ -6045,7 +5991,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "launchBadge": "launch badge"
       },
       "sections": {
@@ -6057,41 +6003,41 @@ export const TK_LOCALE = {
           "title": "title",
           "period": "period",
           "price": "price",
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "badge": "badge"
         },
         "business_monthly": {
           "title": "title",
           "period": "period",
           "price": "price",
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "badge": "badge"
         }
       },
       "features": {
         "address": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "workHours": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "quickReplies": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "greetings": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "notAvailable": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "chatLinks": {
           "title": "title",
-          "description": "description"
+          "description": "Çat Maglumat"
         }
       },
       "footer": {
@@ -6117,42 +6063,42 @@ export const TK_LOCALE = {
       },
       "language": {
         "title": "title",
-        "description": "description"
+        "description": "Dil Maglumat"
       },
       "toggles": {
         "haptics": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "sound": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "preview": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "compact": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "smartInsights": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "note": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "links": {
         "language": {
           "title": "title",
-          "description": "description"
+          "description": "Dil Maglumat"
         },
         "notifications": {
           "title": "title",
-          "description": "description"
+          "description": "Bildirişler Maglumat"
         }
       }
     },
@@ -6164,7 +6110,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "field": {
         "label": "label",
@@ -6173,16 +6119,16 @@ export const TK_LOCALE = {
       "toggles": {
         "currentVerification": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "newVerification": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "note": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       }
     },
     "securityScreen": {
@@ -6204,14 +6150,14 @@ export const TK_LOCALE = {
       "mainProtection": {
         "biometric": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "appPin": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "twoFactor": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       },
@@ -6227,21 +6173,21 @@ export const TK_LOCALE = {
       },
       "identityChange": {
         "emailFaceId": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "fallbackPin": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "phoneFaceId": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       },
       "links": {
         "devices": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       },
@@ -6253,15 +6199,15 @@ export const TK_LOCALE = {
       },
       "sensitiveActions": {
         "confirmation": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "suspiciousAlerts": {
-          "description": "description",
+          "description": "Duýduryşlar Maglumat",
           "title": "title"
         },
         "trustedAlerts": {
-          "description": "description",
+          "description": "Duýduryşlar Maglumat",
           "title": "title"
         }
       }
@@ -6277,7 +6223,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "actions": {
         "sendQr": "iber QR",
@@ -6286,16 +6232,16 @@ export const TK_LOCALE = {
       "toggles": {
         "allowScan": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "allowShare": {
           "title": "title",
-          "description": "description"
+          "description": "Çat Maglumat"
         }
       },
       "note": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "share": {
         "title": "title",
@@ -6303,9 +6249,9 @@ export const TK_LOCALE = {
           "header": "header",
           "name": "at",
           "username": "ulanyjy ady",
-          "sabiId": "Sabi ID",
-          "profileCode": "profil code",
-          "profileLink": "profil baglanyşyk"
+          "sabiId": "Maglumat",
+          "profileCode": "Profil",
+          "profileLink": "Profil salgysy"
         }
       },
       "alerts": {
@@ -6327,7 +6273,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "sections": {
         "links": "baglanyşyklar"
@@ -6335,33 +6281,33 @@ export const TK_LOCALE = {
       "notes": {
         "premiumFoundation": {
           "title": "title",
-          "description": "description"
+          "description": "Premium Maglumat"
         },
         "legalTrust": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "links": {
         "helpCenter": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "contactSupport": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "privacyPolicy": {
           "title": "title",
-          "description": "description"
+          "description": "Gizlinlik Maglumat"
         },
         "termsOfService": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "aboutSabi": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       }
     },
@@ -6378,7 +6324,7 @@ export const TK_LOCALE = {
       },
       "hero": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "sections": {
         "trusted": "trusted",
@@ -6401,21 +6347,21 @@ export const TK_LOCALE = {
       "empty": {
         "trusted": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "blocked": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         }
       },
       "links": {
         "blockedOnly": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "privacyCenter": {
           "title": "title",
-          "description": "description"
+          "description": "Gizlinlik Maglumat"
         }
       }
     },
@@ -6540,7 +6486,7 @@ export const TK_LOCALE = {
       },
       "empty": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "alerts": {
         "permissionTitle": "permission",
@@ -6563,7 +6509,7 @@ export const TK_LOCALE = {
       },
       "empty": {
         "title": "title",
-        "description": "description"
+        "description": "Maglumat Maglumat"
       },
       "modal": {
         "remove": "aýyr"
@@ -6595,11 +6541,11 @@ export const TK_LOCALE = {
         },
         "pills": {
           "created": "created",
-          "createFromProfile": "döret kimden profil",
+          "createFromProfile": "Profil",
           "public": "açyk",
           "private": "şahsy",
           "admins": "admins",
-          "blacklist": "blacklist"
+          "blacklist": "Maglumat"
         }
       },
       "sections": {
@@ -6810,7 +6756,7 @@ export const TK_LOCALE = {
         },
         "empty": {
           "title": "title",
-          "description": "description"
+          "description": "Maglumat Maglumat"
         },
         "form": {
           "title": "title",
@@ -6882,7 +6828,7 @@ export const TK_LOCALE = {
     },
     "autoDeleteScreen": {
       "hero": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "intro": {
@@ -6891,32 +6837,32 @@ export const TK_LOCALE = {
         "title": "title"
       },
       "note": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "selectedBadge": "saýlandy badge",
       "toggles": {
         "channels": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "groups": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "newChats": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       }
     },
     "blockedScreen": {
       "empty": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "hero": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "intro": {
@@ -6960,7 +6906,7 @@ export const TK_LOCALE = {
       },
       "footer": {
         "action": "hereket",
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "header": {
@@ -6982,7 +6928,7 @@ export const TK_LOCALE = {
         "title": "title"
       },
       "identityCard": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "intro": {
@@ -6991,38 +6937,38 @@ export const TK_LOCALE = {
         "title": "title"
       },
       "notice": {
-        "description": "description",
+        "description": "Maglumat Maglumat",
         "title": "title"
       },
       "rows": {
         "ai": {
           "badge": "badge",
-          "description": "description",
+          "description": "AI Maglumat",
           "title": "title"
         },
         "business": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "colors": {
           "badge": "badge",
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "credits": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "gifts": {
-          "description": "description",
+          "description": "Premium Maglumat",
           "title": "title"
         },
         "public": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "qr": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       },
@@ -7052,11 +6998,11 @@ export const TK_LOCALE = {
       },
       "rows": {
         "photos": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         },
         "videos": {
-          "description": "description",
+          "description": "Maglumat Maglumat",
           "title": "title"
         }
       },
@@ -7114,7 +7060,7 @@ export const TK_LOCALE = {
     "includedFeatures": "Içindäki aýratynlyklar",
     "advancedTranslation": "Ösen terjime",
     "premiumStickers": "Premium stikerler",
-    "enhancedProfile": "Güýçlendirilen profil",
+    "enhancedProfile": "Premium",
     "exclusiveFeatures": "Aýratyn mümkinçilikler",
     "subscriptionHistory": "Abunalyk taryhy",
     "paymentInProgress": "Töleg amala aşyrylýar",
@@ -7134,14 +7080,14 @@ export const TK_LOCALE = {
   },
   "ai": {
     "title": "AI",
-    "subtitle": "Messenjerde, profilde, biznesde we goldawda elýeterli premium AI gurallary.",
+    "subtitle": "Sazlamalar",
     "aiAssistant": "AI kömekçi",
     "aiTranslator": "AI terjimeçi",
     "aiWriter": "AI ýazyjy",
     "aiReply": "AI jogap",
     "aiRewrite": "AI täzeden ýazma",
     "aiSummary": "AI gysgaça mazmun",
-    "aiProfileAssistant": "AI profil kömekçisi",
+    "aiProfileAssistant": "AI",
     "aiBusinessAssistant": "AI biznes kömekçisi",
     "aiMerchantAssistant": "AI merchant kömekçisi",
     "chatTranslation": "Söhbet terjimesi",
@@ -7203,43 +7149,43 @@ export const TK_LOCALE = {
       "action": {
         "chat": {
           "title": "title",
-          "description": "description"
+          "description": "Çat Maglumat"
         },
         "voice": {
           "title": "title",
-          "description": "description"
+          "description": "Ses Maglumat"
         },
         "translation": {
           "title": "title",
-          "description": "description"
+          "description": "Terjime Maglumat"
         },
         "history": {
           "title": "title",
-          "description": "description"
+          "description": "Taryh Maglumat"
         },
         "tasks": {
           "title": "title",
-          "description": "description"
+          "description": "Kömekçi Maglumat"
         },
         "memory": {
           "title": "title",
-          "description": "description"
+          "description": "Kömekçi Maglumat"
         },
         "settings": {
           "title": "title",
-          "description": "description"
+          "description": "Sazlamalar Maglumat"
         },
         "premium": {
           "title": "title",
-          "description": "description"
+          "description": "Premium Maglumat"
         },
         "setting": {
           "title": "title",
-          "description": "description"
+          "description": "Sazlamalar Maglumat"
         },
         "profileAi": {
           "title": "title",
-          "description": "description"
+          "description": "Profil Maglumat"
         }
       },
       "home": {
@@ -7248,10 +7194,10 @@ export const TK_LOCALE = {
         "heroEyebrow": "hero",
         "heroTitle": "hero",
         "heroDescription": "hero düşündiriş",
-        "connection": "connection",
+        "connection": "Sazlamalar",
         "userId": "ulanyjy ID",
         "quickAccess": "quick access",
-        "capabilities": "capabilities",
+        "capabilities": "Kömekçi",
         "safeActions": "safe hereketler",
         "safeActionsDescription": "safe hereketler düşündiriş",
         "safeActionsText": "safe hereketler düşündiriş",
@@ -7262,12 +7208,12 @@ export const TK_LOCALE = {
         "title": "title",
         "subtitle": "subtitle",
         "runtimeTitle": "runtime",
-        "backendRequired": "backend hökmany",
+        "backendRequired": "Yza",
         "emptyTitle": "boş",
         "emptyText": "boş düşündiriş",
         "placeholder": "ýer tutujy",
         "roleUser": "role ulanyjy",
-        "emptyBackendResponse": "boş backend response",
+        "emptyBackendResponse": "Yza",
         "cleanEmptyText": "clean boş düşündiriş",
         "errorMessage": "error message",
         "thinking": "thinking",
@@ -7281,31 +7227,31 @@ export const TK_LOCALE = {
           "chatgpt": {
             "title": "title",
             "short": "short",
-            "description": "description",
+            "description": "Maglumat Maglumat",
             "prompt": "prompt"
           },
           "business": {
             "title": "title",
             "short": "short",
-            "description": "description",
+            "description": "Maglumat Maglumat",
             "prompt": "prompt"
           },
           "student": {
             "title": "title",
             "short": "short",
-            "description": "description",
+            "description": "Maglumat Maglumat",
             "prompt": "prompt"
           },
           "applicant": {
             "title": "title",
             "short": "short",
-            "description": "description",
+            "description": "Maglumat Maglumat",
             "prompt": "prompt"
           },
           "teacher": {
             "title": "title",
             "short": "short",
-            "description": "description",
+            "description": "Maglumat Maglumat",
             "prompt": "prompt"
           }
         },
@@ -7338,10 +7284,10 @@ export const TK_LOCALE = {
         "safetyConfirmMessage": "safety tassykla message",
         "safetyConfirmCancel": "safety tassykla ýatyr",
         "safetyConfirmContinue": "safety tassykla dowam et",
-        "securityNotice": "security notice",
+        "securityNotice": "Howpsuzlyk",
         "prompt": {
           "business": "biznes",
-          "study": "study",
+          "study": "Maglumat",
           "search": "gözle",
           "file": "faýl"
         }
@@ -7385,7 +7331,7 @@ export const TK_LOCALE = {
         "advancedAssistantActionsTitle": "advanced kömekçi hereketler",
         "safeActionsTitle": "safe hereketler",
         "safeActionsDescription": "safe hereketler düşündiriş",
-        "openProfilePremium": "aç profil Premium",
+        "openProfilePremium": "Premium",
         "brandText": "brand düşündiriş",
         "heroEyebrow": "hero",
         "badge": "badge",
@@ -7396,8 +7342,8 @@ export const TK_LOCALE = {
         "subtitle": "subtitle",
         "metricApi": "metric api",
         "metricSource": "metric çeşme",
-        "sourceLocalContract": "çeşme local contract",
-        "connectionDetails": "connection jikme-jiklikler",
+        "sourceLocalContract": "Ýerli",
+        "connectionDetails": "Sazlamalar",
         "sections": "sections",
         "providerTitle": "provider",
         "providerDescription": "provider düşündiriş",
@@ -7407,8 +7353,8 @@ export const TK_LOCALE = {
         "heroTitle": "hero",
         "heroDescription": "hero düşündiriş",
         "controlTitle": "control",
-        "profileOwnerTitle": "profil owner",
-        "profileOwnerDescription": "profil owner düşündiriş",
+        "profileOwnerTitle": "Profil",
+        "profileOwnerDescription": "Profil Maglumat",
         "note": "note"
       },
       "translation": {
@@ -7421,7 +7367,7 @@ export const TK_LOCALE = {
         "targetPlaceholder": "maksat kömekçi tekst",
         "translate": "terjime",
         "result": "result",
-        "premium": "Premium",
+        "premium": "Terjime",
         "heroEyebrow": "hero",
         "textPhotoCamera": "text surat kamera",
         "inputPlaceholder": "input kömekçi tekst",
@@ -7443,7 +7389,7 @@ export const TK_LOCALE = {
         "detectCannotSwap": "detect cannot çalyş",
         "noImageOutput": "ýok image output",
         "detectedText": "detected düşündiriş",
-        "messengerPathTitle": "Messenger path",
+        "messengerPathTitle": "Terjime",
         "messengerReady": "Messenger taýýar",
         "imageProcessing": "image processing",
         "textProcessing": "text processing",
@@ -7471,7 +7417,7 @@ export const TK_LOCALE = {
         "ttsTitle": "tts",
         "ttsPlaceholder": "tts kömekçi tekst",
         "playLastTts": "play soňky tts",
-        "noFakeTts": "Galp ses ýok: audio playback diňe backend/native TTS audio URL gaýtarsa işleýär. expo-speech ýa-da native TTS module birikdirilýänçä Text-only TTS tekst hökmünde görkezilýär.",
+        "noFakeTts": "Maglumat",
         "runtimeLog": "runtime log",
         "noEvents": "ýok events",
         "contractOnly": "contract only",
@@ -7520,7 +7466,7 @@ export const TK_LOCALE = {
     "subtitle": "Ösen aragatnaşyk, tölegler we doly dolandyryş bilen biznesiňizi alyp baryň.",
     "createBusinessAccount": "Biznes hasaby döret",
     "switchToBusiness": "Biznese geç",
-    "businessProfile": "Biznes profili",
+    "businessProfile": "Maglumat",
     "companyName": "Kompaniýanyň ady",
     "brandName": "Brend ady",
     "legalName": "Kanuny ady",
@@ -7540,7 +7486,7 @@ export const TK_LOCALE = {
     "permissions": "Rugsatlar",
     "analytics": "Analitika",
     "orders": "Sargytlar",
-    "crm": "CRM",
+    "crm": "Maglumat",
     "automation": "Awtomatlaşdyrma",
     "quickReplies": "Çalt jogaplar",
     "welcomeMessage": "Hoş geldiňiz habary",
@@ -7561,10 +7507,10 @@ export const TK_LOCALE = {
     "title": "Merchant hasaby",
     "subtitle": "Tölegleri kabul ediň, satuwy dolandyryň we merchant işlerini ýörediň.",
     "createMerchantAccount": "Merchant hasaby döret",
-    "merchantProfile": "Merchant profili",
+    "merchantProfile": "Profil",
     "storeName": "Dükan ady",
     "merchantCategory": "Merchant kategoriýasy",
-    "merchantId": "Merchant ID",
+    "merchantId": "Maglumat",
     "sellerDashboard": "Satyjy paneli",
     "sales": "Satuw",
     "orders": "Sargytlar",
@@ -7578,7 +7524,7 @@ export const TK_LOCALE = {
     "disputes": "Jedeller",
     "paymentLinks": "Töleg salgylary",
     "checkoutPages": "Checkout sahypalary",
-    "qrCheckout": "QR checkout",
+    "qrCheckout": "Maglumat",
     "posMode": "POS tertibi",
     "cashierMode": "Kassir tertibi",
     "terminals": "Terminallar",
@@ -7608,18 +7554,18 @@ export const TK_LOCALE = {
     "streamGifts": "Göni ýaýlym sowgatlary",
     "streamModeration": "Göni ýaýlym dolandyryşy",
     "streamAnalytics": "Göni ýaýlym analitikasy",
-    "streamerProfile": "Streamer profili",
+    "streamerProfile": "Profil",
     "donateWithCoin": "Coin bilen goldaw et",
     "sendGiftToStream": "Göni ýaýlyma sowgat ugrat",
     "noStreams": "Elýeterli göni ýaýlym ýok"
   },
   "marketplace": {
-    "title": "Marketplace",
+    "title": "Sazlamalar",
     "products": "Önümler",
     "stores": "Dükanlar",
     "categories": "Kategoriýalar",
     "cart": "Sebet",
-    "checkout": "Checkout",
+    "checkout": "pill checkout",
     "orderNow": "Häzir sargyt et",
     "buyNow": "Häzir satyn al",
     "addToCart": "Sebede goş",
@@ -7752,7 +7698,7 @@ export const TK_LOCALE = {
     "title": "Gizlinlik",
     "whoCanMessageMe": "Maňa kim habar ugradyp biler",
     "whoCanCallMe": "Maňa kim jaň edip biler",
-    "whoCanSeeMyProfile": "Meniň profilimi kim görüp biler",
+    "whoCanSeeMyProfile": "Profil",
     "whoCanSeeMyPhotos": "Meniň suratlarymy kim görüp biler",
     "whoCanSeeMyLastSeen": "Soňky görlen wagtym kim görüp biler",
     "whoCanSeeMyOnlineStatus": "Onlaýn ýagdaýymy kim görüp biler",
@@ -7778,7 +7724,7 @@ export const TK_LOCALE = {
     "pinCode": "PIN kod",
     "changePin": "PIN üýtget",
     "biometrics": "Biometriýa",
-    "faceId": "Face ID",
+    "faceId": "Maglumat",
     "fingerprint": "Barmak yzy",
     "twoFactorAuth": "Iki faktorly tassyklama",
     "recoveryOptions": "Dikeltmek mümkinçilikleri",
@@ -7836,7 +7782,7 @@ export const TK_LOCALE = {
     "bankingTerms": "Bank şertleri"
   },
   "admin": {
-    "title": "Admin",
+    "title": "admin",
     "dashboard": "Dolandyryş paneli",
     "users": "Ulanyjylar",
     "moderation": "Moderasiýa",

@@ -156,7 +156,7 @@ const LOCAL_PROGRAMS: Record<SabiHomeProgramCode, LocalProgramSeed> = {
     historyStreams: ["game_session", "game_reward", "leaderboard"],
   },
   marketplace: {
-    title: "Marketplace",
+    title: "SilkRoad",
     mobileRoute: "/marketplace",
     apiBasePath: "/api/v2/marketplace",
     runtimeStatus: "foundation_ready",

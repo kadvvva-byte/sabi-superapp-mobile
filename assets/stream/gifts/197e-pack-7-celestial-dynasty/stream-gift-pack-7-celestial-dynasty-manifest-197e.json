@@ -1,0 +1,77 @@
+{
+  "version": "STREAM-GAME-GIFTS-197E",
+  "pack": "197e-pack-7-celestial-dynasty",
+  "giftCount": 8,
+  "diamondPriceMin": 1,
+  "diamondPriceMax": 10000,
+  "minimumTopUpCoins": 10,
+  "minimumTopUpUsd": 10,
+  "userFacingOnly": true,
+  "runtime": {
+    "backend": false,
+    "payment": false,
+    "provider": false,
+    "walletMutation": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "diamond-drop-one",
+      "displayNameRu": "Алмазная Капля",
+      "diamondPrice": 1,
+      "poster": "posters/diamond-drop-one.svg",
+      "soundCue": "sound-cues/diamond-drop-one-cue.wav"
+    },
+    {
+      "id": "neon-jasmine-eight",
+      "displayNameRu": "Неоновый Жасмин",
+      "diamondPrice": 8,
+      "poster": "posters/neon-jasmine-eight.svg",
+      "soundCue": "sound-cues/neon-jasmine-eight-cue.wav"
+    },
+    {
+      "id": "crystal-butterfly-thirty-five",
+      "displayNameRu": "Кристальная Бабочка",
+      "diamondPrice": 35,
+      "poster": "posters/crystal-butterfly-thirty-five.svg",
+      "soundCue": "sound-cues/crystal-butterfly-thirty-five-cue.wav"
+    },
+    {
+      "id": "royal-lantern-one-twenty",
+      "displayNameRu": "Королевский Фонарь",
+      "diamondPrice": 120,
+      "poster": "posters/royal-lantern-one-twenty.svg",
+      "soundCue": "sound-cues/royal-lantern-one-twenty-cue.wav"
+    },
+    {
+      "id": "dragon-pearl-seven-seven-seven",
+      "displayNameRu": "Жемчуг Дракона",
+      "diamondPrice": 777,
+      "poster": "posters/dragon-pearl-seven-seven-seven.svg",
+      "soundCue": "sound-cues/dragon-pearl-seven-seven-seven-cue.wav"
+    },
+    {
+      "id": "silk-road-caravan-two-five-zero-zero",
+      "displayNameRu": "Шёлковый Караван",
+      "diamondPrice": 2500,
+      "poster": "posters/silk-road-caravan-two-five-zero-zero.svg",
+      "soundCue": "sound-cues/silk-road-caravan-two-five-zero-zero-cue.wav"
+    },
+    {
+      "id": "aurora-palace-seven-five-zero-zero",
+      "displayNameRu": "Дворец Авроры",
+      "diamondPrice": 7500,
+      "poster": "posters/aurora-palace-seven-five-zero-zero.svg",
+      "soundCue": "sound-cues/aurora-palace-seven-five-zero-zero-cue.wav"
+    },
+    {
+      "id": "celestial-emperor-ten-thousand",
+      "displayNameRu": "Небесный Император",
+      "diamondPrice": 10000,
+      "poster": "posters/celestial-emperor-ten-thousand.svg",
+      "soundCue": "sound-cues/celestial-emperor-ten-thousand-cue.wav"
+    }
+  ]
+}

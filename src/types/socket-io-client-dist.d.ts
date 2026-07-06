@@ -1,17 +1,14 @@
-declare module "socket.io-client/dist/socket.io" {
-  import { io, type Socket } from "socket.io-client";
-
-  export * from "socket.io-client";
-  export { io };
-  export type { Socket };
-  export default io;
+﻿declare module "socket.io-client/dist/socket.io" {
+  export { io } from "socket.io-client";
+  export type { Socket, ManagerOptions, SocketOptions } from "socket.io-client";
 }
 
 declare module "socket.io-client/dist/socket.io.js" {
-  import { io, type Socket } from "socket.io-client";
+  export { io } from "socket.io-client";
+  export type { Socket, ManagerOptions, SocketOptions } from "socket.io-client";
+}
 
-  export * from "socket.io-client";
-  export { io };
-  export type { Socket };
-  export default io;
+declare module "socket.io-client/dist/socket.io.min.js" {
+  export { io } from "socket.io-client";
+  export type { Socket, ManagerOptions, SocketOptions } from "socket.io-client";
 }

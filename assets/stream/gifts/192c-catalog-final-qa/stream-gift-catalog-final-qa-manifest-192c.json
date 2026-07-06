@@ -1,0 +1,22 @@
+{
+  "version": "STREAM-GAME-GIFTS-192C",
+  "title": "Premium catalog final QA / 24 gifts / user-facing only",
+  "giftCount": 24,
+  "source": "streamPremiumGiftCatalogFinalQa192C.ts",
+  "covers": [
+    "188F catalog organization",
+    "192A catalog final polish",
+    "192B accessibility/localization polish"
+  ],
+  "locks": {
+    "userFacingOnly": true,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "sendRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

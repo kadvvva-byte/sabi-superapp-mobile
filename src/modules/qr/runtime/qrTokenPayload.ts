@@ -9,7 +9,16 @@ export function normalizeQrText(value: string | null | undefined): string | null
 export function normalizeQrAmount(value: string | null | undefined): string | null {
   const normalized = normalizeQrText(value);
   if (!normalized) return null;
-  return normalized.replace(/,/g, ".");
+  return normalized.replace(/,/g, ".").trim();
+}
+
+export function isValidQrAmount(value: string | null | undefined): boolean {
+  const normalized = normalizeQrAmount(value);
+  if (!normalized) return false;
+  if (!/^\d+(?:\.\d{1,8})?$/.test(normalized)) return false;
+
+  const numeric = Number(normalized);
+  return Number.isFinite(numeric) && numeric > 0;
 }
 
 export function normalizeQrCurrency(value: string | null | undefined): string | null {
@@ -27,6 +36,10 @@ export function validateQrInput(
 ): string | null {
   if (definition.requiresAmount && !normalizeQrAmount(input.amount)) {
     return "qr.mobile.error.amountRequired";
+  }
+
+  if (definition.requiresAmount && !isValidQrAmount(input.amount)) {
+    return "qr.mobile.error.amountInvalid";
   }
 
   if (definition.requiresAmount && !normalizeQrCurrency(input.currency)) {

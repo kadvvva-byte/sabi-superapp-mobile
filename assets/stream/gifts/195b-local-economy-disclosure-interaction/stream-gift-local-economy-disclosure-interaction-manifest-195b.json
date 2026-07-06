@@ -1,0 +1,21 @@
+{
+  "version": "STREAM-GAME-GIFTS-195B",
+  "stage": "local_economy_disclosure_interaction_polish",
+  "giftCount": 24,
+  "interactionModes": [
+    "demoPoints",
+    "giftOnly",
+    "noCashout",
+    "officialCreator"
+  ],
+  "userFacingOnly": true,
+  "localInteractionOnly": true,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "dbReadRuntimeEnabledNow": false,
+  "dbWriteRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false,
+  "walletMutationEnabledNow": false
+}

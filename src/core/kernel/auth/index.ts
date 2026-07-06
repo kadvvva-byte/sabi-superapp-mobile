@@ -1,3 +1,4 @@
+/* eslint-disable import/export */
 export * from "./current-user";
 export * from "./domain/access-control";
 export * from "./domain/auth-actor";

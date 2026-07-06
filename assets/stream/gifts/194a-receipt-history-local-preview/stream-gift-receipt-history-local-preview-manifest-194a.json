@@ -1,0 +1,27 @@
+{
+  "version": "STREAM-GAME-GIFTS-194A",
+  "title": "Stream Gift Receipt/History Local Preview Polish",
+  "scope": "mobile UI user-facing local preview only",
+  "giftCount": 24,
+  "receiptPreviewCoverage": 24,
+  "historyPreviewCoverage": 24,
+  "timelinePreviewCoverage": 24,
+  "sourceFiles": [
+    "src/modules/stream/gifts/streamPremiumGiftReceiptHistoryLocalPreview194A.ts",
+    "src/modules/stream/screens/StreamScreen.tsx",
+    "src/modules/stream/index.ts"
+  ],
+  "safety": {
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "dbReadRuntimeEnabledNow": false,
+    "dbWriteRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

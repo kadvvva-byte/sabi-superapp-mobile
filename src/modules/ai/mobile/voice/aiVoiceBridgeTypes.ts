@@ -36,6 +36,8 @@ export type AiVoicePlaybackCommand = {
   sessionId: string | null;
   text: string | null;
   audioUrl: string | null;
+  audioBase64: string | null;
+  audioMimeType: string | null;
   language: string | null;
   status: AiMobileConnectionStatus;
   raw?: Record<string, unknown> | null;

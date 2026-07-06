@@ -662,6 +662,11 @@ export function createStandardCallPeer(options: {
   socket: SocketLike;
   initialVideoEnabled?: boolean;
   initialCameraFacing?: StandardCameraFacing;
+  // VIDEO-CALLS-1.6: repeat incoming calls answer the offer first, then
+  // attach local mic/camera after Accept. This avoids the 3-4s Android
+  // getUserMedia wait before answer, without opening camera before Accept.
+  deferInitialLocalMedia?: boolean;
+  localMediaBeforeAnswerTimeoutMs?: number;
   canStartCaller: () => boolean;
   onLocalStream?: (stream: any | null) => void;
   onRemoteStream?: (stream: any | null) => void;
@@ -669,8 +674,11 @@ export function createStandardCallPeer(options: {
   onError: (message: string) => void;
 }) {
   let pc: any | null = null;
+  let peerPromise: Promise<any> | null = null;
   let localStream: any | null = null;
+  let localStreamPromise: Promise<any> | null = null;
   let localVideoTrack: any | null = null;
+  let localAudioSender: any | null = null;
   let videoSender: any | null = null;
   let closed = false;
   // SABI_ECHO_GUARD: audio calls must start through the earpiece.
@@ -724,13 +732,6 @@ export function createStandardCallPeer(options: {
     options.onConnected();
   };
 
-  const emitConnectedFromRemoteStreamOnce = (reason: string, targetPc: any | null = pc) => {
-    if (connectedEmitted || isPeerClosedState(targetPc)) return;
-    connectedEmitted = true;
-    debug("connected:emit", { reason });
-    emit("call:connected", { event: "connected", phase: "active", status: "active", connectedAt: new Date().toISOString() });
-    options.onConnected();
-  };
 
   debug("peer:create", {
     initialVideoEnabled: options.initialVideoEnabled,
@@ -771,7 +772,7 @@ export function createStandardCallPeer(options: {
     options.onLocalStream?.(localStream);
   };
 
-  const negotiate = async (event = "renegotiate_offer") => {
+  const negotiate = async (event = "offer") => {
     if (!pc || closed || makingOffer) {
       debug("offer:skip", { event, hasPeer: Boolean(pc), closed, makingOffer });
       return;
@@ -792,6 +793,17 @@ export function createStandardCallPeer(options: {
     if (state !== "stable") {
       debug("offer:skip_not_stable", { event, signalingState: state });
       return;
+    }
+
+    if (isInitialOffer) {
+      const stream = await ensureLocalStream();
+      if (closed || !pc) return;
+      await attachLocalTracksToPeer(pc, stream);
+      debug("media:offer_ready", {
+        tracks: stream.getTracks?.()?.length ?? 0,
+        audio: stream.getAudioTracks?.()?.length ?? 0,
+        video: stream.getVideoTracks?.()?.length ?? 0,
+      });
     }
 
     makingOffer = true;
@@ -841,23 +853,16 @@ export function createStandardCallPeer(options: {
 
   const ensureLocalStream = async () => {
     if (localStream) return localStream;
+    if (localStreamPromise) return localStreamPromise;
 
-    await applyAudioMode();
+    void applyAudioMode();
     debug("media:getUserMedia:start", { videoWanted, speakerEnabled, cameraFacing });
 
-    localStream = await mediaDevices.getUserMedia({
+    localStreamPromise = mediaDevices.getUserMedia({
       audio: {
         echoCancellation: true,
         noiseSuppression: true,
         autoGainControl: true,
-        // Android WebRTC accepts these legacy constraints on many devices.
-        // Unsupported keys are ignored, but supported devices get stronger
-        // acoustic echo/noise processing for 1:1 calls.
-        googEchoCancellation: true,
-        googAutoGainControl: true,
-        googNoiseSuppression: true,
-        googHighpassFilter: true,
-        googTypingNoiseDetection: true,
       },
       video: videoWanted ? videoConstraints(cameraFacing) : false,
     } as any).catch(async (error: unknown) => {
@@ -871,36 +876,74 @@ export function createStandardCallPeer(options: {
         },
         video: { facingMode: cameraFacing, width: 320, height: 240, frameRate: 15 },
       } as any);
+    }).then((stream: any) => {
+      if (closed) {
+        try {
+          stream?.getTracks?.().forEach((track: any) => track.stop?.());
+        } catch {}
+        throw new Error("peer_closed");
+      }
+
+      localStream = stream;
+      localVideoTrack = localStream.getVideoTracks?.()[0] ?? null;
+
+      debug("media:getUserMedia:success", {
+        tracks: localStream.getTracks?.()?.length ?? 0,
+        audio: localStream.getAudioTracks?.()?.length ?? 0,
+        video: localStream.getVideoTracks?.()?.length ?? 0,
+      });
+
+      publishLocal();
+      return localStream;
+    }).finally(() => {
+      localStreamPromise = null;
     });
 
-    if (closed) {
-      try {
-        localStream?.getTracks?.().forEach((track: any) => track.stop?.());
-      } catch {}
-      throw new Error("peer_closed");
-    }
-
-    localVideoTrack = localStream.getVideoTracks?.()[0] ?? null;
-
-    debug("media:getUserMedia:success", {
-      tracks: localStream.getTracks?.()?.length ?? 0,
-      audio: localStream.getAudioTracks?.()?.length ?? 0,
-      video: localStream.getVideoTracks?.()?.length ?? 0,
-    });
-
-    publishLocal();
-    return localStream;
+    return localStreamPromise;
   };
 
-  const ensurePeer = async () => {
-    if (closed) throw new Error("peer_closed");
-    if (pc) return pc;
+  const attachLocalTracksToPeer = async (connection: any, stream: any) => {
+    if (!connection || !stream || closed) return;
 
-    const iceServers = await withSabiCallTimeout(
+    const senders = (() => {
+      try {
+        return (typeof connection.getSenders === "function" ? connection.getSenders() : []) as any[];
+      } catch {
+        return [] as any[];
+      }
+    })();
+
+    const hasLiveSenderKind = (kind: string) =>
+      senders.some((sender: any) => {
+        const track = sender?.track;
+        return track?.kind === kind && track.readyState !== "ended";
+      });
+
+    const audioTrack = stream.getAudioTracks?.()?.find((track: any) => track?.readyState !== "ended") ?? null;
+    if (audioTrack && !localAudioSender && !hasLiveSenderKind("audio")) {
+      try {
+        audioTrack.enabled = true;
+        localAudioSender = connection.addTrack(audioTrack, stream);
+      } catch {}
+    }
+
+    const videoTrack = stream.getVideoTracks?.()?.find((track: any) => track?.readyState !== "ended") ?? null;
+    if (videoTrack && !videoSender && !hasLiveSenderKind("video")) {
+      try {
+        videoTrack.enabled = videoWanted !== false;
+        localVideoTrack = videoTrack;
+        videoSender = connection.addTrack(videoTrack, stream);
+        await stabilizeVideoSender(videoSender);
+      } catch {}
+    }
+  };
+
+  const createPeerConnection = async () => {
+    const iceServers = (await withSabiCallTimeout(
       "resolve_ice_servers",
       resolveSabiCallIceServers(),
       350,
-    ).catch(() => [{ urls: "stun:stun.l.google.com:19302" }]);
+    ).catch(() => [{ urls: "stun:stun.l.google.com:19302" }])) as any[];
     const nextPc: any = new RTCPeerConnection({
       iceServers: iceServers.length ? iceServers : [{ urls: "stun:stun.l.google.com:19302" }],
       iceCandidatePoolSize: 0,
@@ -952,11 +995,6 @@ export function createStandardCallPeer(options: {
         });
         options.onRemoteStream?.(stream);
       }
-
-      // Start the call timer immediately when real remote media arrives.
-      // Step 21 waited for peer_state only, which made the UI timer feel
-      // delayed by several seconds. Closed peers are still blocked above.
-      emitConnectedFromRemoteStreamOnce("remote_stream", nextPc);
     };
 
     const onState = () => {
@@ -981,21 +1019,19 @@ export function createStandardCallPeer(options: {
     nextPc.oniceconnectionstatechange = onState;
     nextPc.onconnectionstatechange = onState;
 
-    const stream = await ensureLocalStream();
-
-    if (closed || pc !== nextPc) throw new Error("peer_closed");
-
-    for (const track of stream.getTracks()) {
-      if (closed || pc !== nextPc) throw new Error("peer_closed");
-      const sender = nextPc.addTrack(track, stream);
-      if (track.kind === "video") {
-        videoSender = sender;
-        localVideoTrack = track;
-        void stabilizeVideoSender(videoSender);
-      }
-    }
-
+    debug("media:peer_ready_without_camera_wait", { reason: "peer_created_before_media" });
     return nextPc;
+  };
+
+  const ensurePeer = async () => {
+    if (closed) throw new Error("peer_closed");
+    if (pc) return pc;
+    if (peerPromise) return peerPromise;
+
+    peerPromise = createPeerConnection().finally(() => {
+      peerPromise = null;
+    });
+    return peerPromise;
   };
 
   const addIceCandidateSafe = async (connection: any, candidate: unknown) => {
@@ -1029,6 +1065,10 @@ export function createStandardCallPeer(options: {
       videoWanted = true;
 
       const currentStream = await ensureLocalStream();
+      if (pc) {
+        await attachLocalTracksToPeer(pc, currentStream);
+      }
+
       const existing = localVideoTrack ?? currentStream.getVideoTracks?.()[0];
 
       if (existing && existing.readyState !== "ended") {
@@ -1059,9 +1099,7 @@ export function createStandardCallPeer(options: {
           await stabilizeVideoSender(videoSender);
         } else {
           videoSender = pc.addTrack(nextTrack, currentStream);
-          if (shouldNegotiate) {
-            await negotiate("renegotiate_offer");
-          }
+          await stabilizeVideoSender(videoSender);
         }
       }
 
@@ -1073,6 +1111,19 @@ export function createStandardCallPeer(options: {
   };
 
   return {
+    async prepareLocalMedia(reason = "prepare_local_media") {
+      debug("media:prepare:start", { reason });
+      const connection = await ensurePeer();
+      const stream = await ensureLocalStream();
+      if (!closed && connection) await attachLocalTracksToPeer(connection, stream);
+      debug("media:prepare:ready", {
+        reason,
+        tracks: stream.getTracks?.()?.length ?? 0,
+        audio: stream.getAudioTracks?.()?.length ?? 0,
+        video: stream.getVideoTracks?.()?.length ?? 0,
+      });
+    },
+
     async startCaller() {
       if (!options.canStartCaller()) {
         debug("startCaller:blocked");
@@ -1100,18 +1151,6 @@ export function createStandardCallPeer(options: {
         SABI_CALL_INITIAL_OFFER_LOCKS.delete(offerLock);
         if (!closed) options.onError(error instanceof Error ? error.message : "connection_error");
       }
-    },
-
-    getSignalingState() {
-      return sabiSignalingState(pc);
-    },
-
-    getConnectionState() {
-      return {
-        signalingState: sabiSignalingState(pc),
-        iceConnectionState: String(pc?.iceConnectionState || ""),
-        connectionState: String(pc?.connectionState || ""),
-      };
     },
 
     async handleOffer(payload: unknown) {
@@ -1172,6 +1211,21 @@ export function createStandardCallPeer(options: {
 
         await flushPendingIceCandidates();
         if (closed) return;
+
+        const mediaTimeoutMs = Math.max(1000, Number(options.localMediaBeforeAnswerTimeoutMs ?? 7000));
+        const answerStream = await withSabiCallTimeout(
+          "media_before_answer",
+          ensureLocalStream(),
+          mediaTimeoutMs,
+        );
+        if (closed) return;
+        await attachLocalTracksToPeer(connection, answerStream);
+        debug("media:before_answer:ready", {
+          timeoutMs: mediaTimeoutMs,
+          tracks: answerStream.getTracks?.()?.length ?? 0,
+          audio: answerStream.getAudioTracks?.()?.length ?? 0,
+          video: answerStream.getVideoTracks?.()?.length ?? 0,
+        });
 
         debug("answer:create:start");
         const answer = (await withSabiCallTimeout(
@@ -1298,16 +1352,10 @@ export function createStandardCallPeer(options: {
               track.enabled = true;
             });
             publishLocal();
-            if (pc) {
-              void negotiate("camera_on");
-            }
             return;
           }
 
-          await addOrReplaceVideoTrack(Boolean(pc));
-          if (pc) {
-            void negotiate("camera_on");
-          }
+          await addOrReplaceVideoTrack(false);
           return;
         }
 
@@ -1358,9 +1406,8 @@ export function createStandardCallPeer(options: {
           }
         }, 0);
 
-        if (pc) {
-          void negotiate("camera_off");
-        }
+        // Camera state is sent through media-state events by the screen.
+        // Do not renegotiate here: the first video offer already owns video.
       } catch {}
     },
 
@@ -1410,7 +1457,6 @@ export function createStandardCallPeer(options: {
         } else if (pc) {
           videoSender = pc.addTrack(nextTrack, localStream);
           await stabilizeVideoSender(videoSender);
-          await negotiate("renegotiate_offer");
         }
 
         try {
@@ -1428,8 +1474,8 @@ export function createStandardCallPeer(options: {
       await applyAudioMode();
     },
 
-    close() {
-      debug("peer:close");
+    close(reason = "manual_close") {
+      debug("peer:close", { reason });
       closed = true;
       connectedEmitted = true;
 
@@ -1438,6 +1484,7 @@ export function createStandardCallPeer(options: {
       } catch {}
 
       pc = null;
+      localAudioSender = null;
       videoSender = null;
 
       clearCallLocks(options.route);

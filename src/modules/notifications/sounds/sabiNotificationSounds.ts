@@ -1,4 +1,4 @@
-﻿export type SabiNotificationSoundKind =
+export type SabiNotificationSoundKind =
   | "call"
   | "message"
   | "wallet"
@@ -10,8 +10,10 @@ export type SabiNotificationSoundOption = {
   id: string;
   kind: SabiNotificationSoundKind;
   fileName: string;
-  bundled: boolean;
+  bundled: true;
 };
+
+export type SabiBundledSoundSource = number;
 
 export const SABI_CALL_SOUND_OPTIONS: SabiNotificationSoundOption[] = [
   { id: "call_neon", kind: "call", fileName: "sabi_call_neon.wav", bundled: true },
@@ -64,3 +66,45 @@ export const SABI_NOTIFICATION_SOUND_OPTIONS = [
   ...SABI_MESSAGE_SOUND_OPTIONS,
   ...SABI_SERVICE_SOUND_OPTIONS,
 ];
+
+export function findSabiNotificationSoundOption(soundId: string) {
+  return SABI_NOTIFICATION_SOUND_OPTIONS.find((option) => option.id === soundId) || null;
+}
+
+export function isSabiBundledSoundForKind(kind: SabiNotificationSoundKind, soundId: string) {
+  return findSabiNotificationSoundOption(soundId)?.kind === kind;
+}
+
+export function getSabiBundledSoundSource(soundId: string): SabiBundledSoundSource {
+  switch (soundId) {
+    case "call_neon": return require("../../../../assets/sounds/sabi_call_neon.wav");
+    case "call_premium": return require("../../../../assets/sounds/sabi_call_premium.wav");
+    case "call_soft": return require("../../../../assets/sounds/sabi_call_soft.wav");
+    case "call_digital": return require("../../../../assets/sounds/sabi_call_digital.wav");
+    case "call_skyline": return require("../../../../assets/sounds/sabi_call_skyline.wav");
+    case "call_ocean": return require("../../../../assets/sounds/sabi_call_ocean.wav");
+    case "call_crystal": return require("../../../../assets/sounds/sabi_call_crystal.wav");
+    case "call_lux": return require("../../../../assets/sounds/sabi_call_lux.wav");
+    case "call_night": return require("../../../../assets/sounds/sabi_call_night.wav");
+    case "call_minimal": return require("../../../../assets/sounds/sabi_call_minimal.wav");
+    case "msg_clean": return require("../../../../assets/sounds/sabi_msg_clean.wav");
+    case "msg_soft": return require("../../../../assets/sounds/sabi_msg_soft.wav");
+    case "msg_glass": return require("../../../../assets/sounds/sabi_msg_glass.wav");
+    case "msg_pop": return require("../../../../assets/sounds/sabi_msg_pop.wav");
+    case "msg_air": return require("../../../../assets/sounds/sabi_msg_air.wav");
+    case "msg_pixel": return require("../../../../assets/sounds/sabi_msg_pixel.wav");
+    case "msg_drop": return require("../../../../assets/sounds/sabi_msg_drop.wav");
+    case "msg_bell": return require("../../../../assets/sounds/sabi_msg_bell.wav");
+    case "msg_swipe": return require("../../../../assets/sounds/sabi_msg_swipe.wav");
+    case "msg_tap": return require("../../../../assets/sounds/sabi_msg_tap.wav");
+    case "wallet_confirm": return require("../../../../assets/sounds/sabi_wallet_confirm.wav");
+    case "wallet_alert": return require("../../../../assets/sounds/sabi_wallet_alert.wav");
+    case "market_alert": return require("../../../../assets/sounds/sabi_market_alert.wav");
+    case "market_soft": return require("../../../../assets/sounds/sabi_market_soft.wav");
+    case "ai_ping": return require("../../../../assets/sounds/sabi_ai_ping.wav");
+    case "ai_soft": return require("../../../../assets/sounds/sabi_ai_soft.wav");
+    case "system_notice": return require("../../../../assets/sounds/sabi_system_notice.wav");
+    case "system_soft": return require("../../../../assets/sounds/sabi_system_soft.wav");
+    default: return require("../../../../assets/sounds/sabi_msg_clean.wav");
+  }
+}

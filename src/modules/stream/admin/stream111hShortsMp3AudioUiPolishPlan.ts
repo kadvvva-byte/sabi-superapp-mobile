@@ -1,0 +1,28 @@
+export const stream111hShortsMp3AudioUiPolishPlan = {
+  id: "STREAM-111H-SHORTS-MP3-AUDIO-UI-POLISH",
+  status: "ready_local_only",
+  scope: "mobile_stream_shorts_only",
+  summary: "Polish Shorts Settings MP3/audio tab into a premium selector and mixer while keeping audio render/upload/publish locked until real providers exist.",
+  changedAreas: [
+    "Shorts Settings MP3/audio focus card",
+    "Local audio track selector",
+    "Local waveform/mix preview",
+    "Local volume/original/trim/start controls",
+    "Audio tool selector cards",
+  ],
+  guarantees: {
+    systemCameraUsedForRecord: false,
+    sabiInAppCameraPreserved: true,
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+    backendTouched: false,
+    paymentsTouched: false,
+    giftsTouched: false,
+    monetizationTouched: false,
+    fakeAudioRenderSuccess: false,
+    fakeUploadSuccess: false,
+    fakePublishSuccess: false,
+    fakeProviderSuccess: false,
+  },
+} as const;

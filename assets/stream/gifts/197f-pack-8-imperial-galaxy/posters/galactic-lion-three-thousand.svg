@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Галактический Лев 3000 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="78%"><stop offset="0%" stop-color="#FBBF24"/><stop offset="44%" stop-color="#312E81"/><stop offset="100%" stop-color="#070712"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".52" stop-color="#FFE08A"/><stop offset="1" stop-color="#93C5FD"/></linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <circle cx="192" cy="176" r="128" fill="none" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="3"/>
+  <circle cx="192" cy="176" r="96" fill="#070712" fill-opacity=".30"/>
+  <path d="M192 90l44 42 60-8-14 60 32 52-58 16-28 54-36-50-36 50-28-54-58-16 32-52-14-60 60 8z M160 202c20 24 44 24 64 0" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">Галактический Лев</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">3000 алмазов · preview only</text>
+</svg>

@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "diamond-genie-lamp",
+  "displayNameRu": "Алмазный Джинн",
+  "displayName": "Diamond Genie Lamp",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/diamond-genie-lamp-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/diamond-genie-lamp-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/diamond-genie-lamp-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/diamond-genie-lamp-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/diamond-genie-lamp-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3360,
+    "finaleDurationMs": 760
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#8EC5FF",
+    "light": "#E4F1FF"
+  }
+}

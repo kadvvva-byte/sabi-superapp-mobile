@@ -1,6 +1,6 @@
 import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+import WifiCastScreen from "../src/modules/wifi-cast/screens/WifiCastScreen";
 
 export default function WifiCastEntryScreen() {
-  return <HomeProgramEntryScreen kind="wifi-cast" />;
+  return <WifiCastScreen />;
 }

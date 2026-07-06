@@ -1,6 +1,7 @@
 import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+
+import WholesaleMarketScreen from "../src/modules/wholesale-market/screens/WholesaleMarketScreen";
 
 export default function WholesaleMarketEntryScreen() {
-  return <HomeProgramEntryScreen kind="wholesale-market" />;
+  return <WholesaleMarketScreen />;
 }

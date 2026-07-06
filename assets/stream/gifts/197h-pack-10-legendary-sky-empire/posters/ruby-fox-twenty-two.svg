@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Рубиновый Лис 22 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="26%" r="78%"><stop offset="0%" stop-color="#FDA4AF"/><stop offset="50%" stop-color="#BE123C"/><stop offset="100%" stop-color="#030712"/></radialGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".45" stop-color="#C7D2FE"/><stop offset="1" stop-color="#FFE08A"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <path d="M36 138c56-34 114-34 170 0s106 34 162 0" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="13" stroke-linecap="round"/>
+  <circle cx="192" cy="184" r="128" fill="none" stroke="#FFFFFF" stroke-opacity=".20" stroke-width="3"/>
+  <circle cx="192" cy="184" r="94" fill="#020617" fill-opacity=".30"/>
+  <path d="M92 250c42-96 128-132 198-80l28-48 24 104c-42 68-144 96-250 24z M170 178l34 44 48-56 M132 230c44 26 92 26 138 0" fill="none" stroke="url(#sky)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="#FFFFFF">Рубиновый Лис</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">22 алмазов · preview only</text>
+</svg>

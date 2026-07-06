@@ -22,6 +22,13 @@ import {
 
 import { useI18n } from "../../../src/shared/i18n";
 import { useProfileKernel } from "../../../src/core/kernel/profile/bindings";
+import {
+  SABI_ACCOUNT_DELETION_PATH,
+  SABI_ACCOUNT_DELETION_RETENTION_EXCEPTIONS,
+  SABI_ACCOUNT_DELETION_URL,
+  SABI_PRIVACY_POLICY_URL,
+  SABI_PRIVACY_POLICY_URL_STATUS,
+} from "../../../src/modules/profile/data/privacy";
 
 const BG_TOP = "#05140D";
 const BG_MID = "#062018";
@@ -238,6 +245,36 @@ export default function AutoDeleteScreen() {
               </Text>
               <Text style={styles.noteText}>
                 {t("profile.autoDeleteScreen.note.description")}
+              </Text>
+            </View>
+
+            <View style={styles.noteCard}>
+              <Text style={styles.noteTitle}>Account deletion</Text>
+              <Text style={styles.noteText}>
+                In-app request path: {SABI_ACCOUNT_DELETION_PATH}. This Play-ready
+                screen explains how users can request Sabi account deletion. This
+                patch does not delete accounts or mutate user data.
+              </Text>
+            </View>
+
+            <View style={styles.noteCard}>
+              <Text style={styles.noteTitle}>Public deletion and privacy links</Text>
+              <Text style={styles.noteText}>
+                Privacy Policy URL: {SABI_PRIVACY_POLICY_URL}
+                {"\n"}Account deletion web request URL: {SABI_ACCOUNT_DELETION_URL}
+                {"\n"}Status: {SABI_PRIVACY_POLICY_URL_STATUS}. Replace placeholder
+                URLs with the final public company domain before Google Play
+                production submission.
+              </Text>
+            </View>
+
+            <View style={styles.noteCard}>
+              <Text style={styles.noteTitle}>Retention exceptions</Text>
+              <Text style={styles.noteText}>
+                Some records may be retained when required for:
+                {"\n"}{SABI_ACCOUNT_DELETION_RETENTION_EXCEPTIONS.map(
+                  (item: string) => `• ${item}`,
+                ).join("\n")}
               </Text>
             </View>
           </ScrollView>

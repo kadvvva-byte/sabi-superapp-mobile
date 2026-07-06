@@ -1,4 +1,4 @@
-import Constants from "expo-constants";
+﻿import Constants from "expo-constants";
 import { NativeModules, Platform } from "react-native";
 
 export type SabiApiBaseUrlOptions = {
@@ -8,7 +8,7 @@ export type SabiApiBaseUrlOptions = {
 
 const DEFAULT_API_PORT = "4001";
 const SABI_DEFAULT_LAN_API_BASE_URL = "";
-const SABI_PRODUCTION_API_BASE_URL = "http://178.154.210.119";
+const SABI_PRODUCTION_API_BASE_URL = "https://sabi-superapp-api-7srquvexva-ew.a.run.app";
 const KNOWN_INVALID_NATIVE_BUNDLE_HOSTS = new Set([
   "index.android.bundle",
   "assets.android.bundle",
@@ -267,3 +267,4 @@ export function requireSabiApiBaseUrl(value?: unknown, options?: SabiApiBaseUrlO
 
   return resolved;
 }
+

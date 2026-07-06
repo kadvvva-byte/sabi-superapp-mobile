@@ -1,0 +1,16 @@
+{
+  "version": "STREAM-GAME-GIFTS-188A-FINAL-POLISH",
+  "posterFallbackFiles": [
+    "phoenix-crown-burst-final-polish.svg",
+    "crystal-whale-wave-final-polish.svg",
+    "cyber-panda-beat-final-polish.svg",
+    "velvet-butterfly-storm-final-polish.svg",
+    "thunder-tiger-flash-final-polish.svg",
+    "aurora-unicorn-ride-final-polish.svg",
+    "diamond-genie-lamp-final-polish.svg",
+    "galaxy-idol-stage-final-polish.svg"
+  ],
+  "safety": {
+    "localPreviewOnlyNow": true
+  }
+}

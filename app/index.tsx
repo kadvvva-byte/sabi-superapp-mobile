@@ -29,6 +29,8 @@ import { useAuthSession } from "../src/core/kernel/auth/use-auth-session";
 import { LANGUAGES } from "../src/shared/data/languages";
 import { setAppLanguage, useI18n } from "../src/shared/i18n";
 
+const SABI_GOOGLE_REVIEW_MODE = process.env.EXPO_PUBLIC_GOOGLE_REVIEW_MODE === "1";
+
 type LanguageRow = (typeof LANGUAGES)[number];
 
 function normalizeCode(input?: string | null): string {
@@ -112,6 +114,11 @@ export default function WelcomeScreen() {
   }, [goTo, isAuthenticated]);
 
   const handleContinue = useCallback(() => {
+    if (SABI_GOOGLE_REVIEW_MODE) {
+      goTo("/home");
+      return;
+    }
+
     if (isAuthenticated) {
       goTo("/home");
       return;

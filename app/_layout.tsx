@@ -1,5 +1,4 @@
 import { Stack, router, usePathname } from "expo-router";
-import * as Notifications from "expo-notifications";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   ActivityIndicator,
@@ -28,7 +27,6 @@ import {
   shutdownMessengerKernel,
 } from "../src/core/kernel/messenger/facade";
 import { createMessengerKernelHttpRuntimeConfig } from "../src/core/kernel/messenger/runtime";
-import { subscribeMessengerRealtimeService } from "../src/core/kernel/messenger/realtime/service";
 import {
   configureProfileRuntime,
   configureProfileSession,
@@ -39,23 +37,17 @@ import useSuperappLiveBootstrap from "../src/hooks/use-superapp-live-bootstrap";
 import { fetchUserProfileById } from "../src/shared/api/user-profile-api";
 import { buildSabiDisplayId } from "../src/shared/account/unified-account-profile";
 import AppProviders from "../src/modules/app/ui/AppProviders";
+import { prepareI18nLanguage } from "../src/shared/i18n";
 import SabiPlatformStabilityProvider from "../src/shared/platform/SabiPlatformStabilityProvider";
 import { HomeEditModeProvider } from "../src/modules/home/HomeEditModeProvider";
 import { HomeLayoutProvider } from "../src/modules/home/HomeLayoutProvider";
-import {
-  getSuperAppSocket,
-  joinRealtimeChannel,
-  joinWalletCoreChannel,
-  leaveRealtimeChannel,
-  leaveWalletCoreChannel,
-} from "../src/shared/realtime/superapp-socket";
+import { getSuperAppSocket } from "../src/shared/realtime/superapp-socket";
 import { useSabiMessengerSmsTone } from "../src/modules/messenger/sound/useSabiMessengerSmsTone";
 import AppBackground from "../src/theme/AppBackground";
 import { AppearanceProvider } from "../src/theme/AppearanceProvider";
 import { ThemeProvider } from "../src/theme/ThemeProvider";
+import AppNotificationOverlay from "../src/modules/notifications/overlay/AppNotificationOverlay";
 import { useSabiCallPushRegistration } from "../src/modules/calls/push/useSabiCallPushRegistration";
-import { getPrivateChatProfile } from "../src/modules/messenger/private/privateChatRuntime";
-import { listCustomMessengerContacts } from "../src/modules/messenger/contacts/messengerContactsRuntime";
 
 let appKernelsConfigured = false;
 
@@ -183,794 +175,11 @@ function normalizeIncomingCallString(value: unknown) {
   return typeof value === "string" && value.trim() ? value.trim() : "";
 }
 
-const SABI_MESSENGER_SYSTEM_NOTIFICATION_DEDUPE_MS = 2500;
-const sabiMessengerSystemNotificationDedupe = new Map<string, number>();
-const sabiSystemNotificationDedupe = new Map<string, number>();
-let sabiMessengerNotificationChannelReady = false;
-let sabiWalletNotificationChannelReady = false;
-let sabiGeneralNotificationChannelReady = false;
-
-function normalizeSabiMessengerNotificationText(value: unknown): string {
-  return typeof value === "string" ? value.trim() : "";
-}
-
-function normalizeSabiMessengerNotificationLower(value: unknown): string {
-  return normalizeSabiMessengerNotificationText(value).toLowerCase();
-}
-
-function normalizeSabiNotificationIdentity(value: unknown): string {
-  return normalizeSabiMessengerNotificationText(value).toLowerCase();
-}
-
-function readSabiMessengerNotificationObject(value: unknown): Record<string, unknown> {
-  return value && typeof value === "object" && !Array.isArray(value)
-    ? (value as Record<string, unknown>)
-    : {};
-}
-
-function pickSabiNestedObject(...values: unknown[]): Record<string, unknown> {
-  for (const value of values) {
-    const record = readSabiMessengerNotificationObject(value);
-    if (Object.keys(record).length > 0) return record;
-  }
-  return {};
-}
-
-function pickSabiMessengerPayload(event: unknown): Record<string, unknown> {
-  const record = readSabiMessengerNotificationObject(event);
-  const payload = readSabiMessengerNotificationObject(record.payload);
-  const data = readSabiMessengerNotificationObject(record.data);
-  const message = readSabiMessengerNotificationObject(record.message);
-
-  const sender = pickSabiNestedObject(
-    record.sender,
-    record.from,
-    record.author,
-    payload.sender,
-    payload.from,
-    payload.author,
-    data.sender,
-    data.from,
-    data.author,
-    message.sender,
-    message.from,
-    message.author,
-    message.user,
-  );
-
-  const recipient = pickSabiNestedObject(
-    record.recipient,
-    record.receiver,
-    record.to,
-    record.target,
-    payload.recipient,
-    payload.receiver,
-    payload.to,
-    payload.target,
-    data.recipient,
-    data.receiver,
-    data.to,
-    data.target,
-    message.recipient,
-    message.receiver,
-    message.to,
-    message.target,
-  );
-
-  const room = pickSabiNestedObject(
-    record.chat,
-    record.room,
-    record.group,
-    record.channel,
-    record.bot,
-    payload.chat,
-    payload.room,
-    payload.group,
-    payload.channel,
-    payload.bot,
-    data.chat,
-    data.room,
-    data.group,
-    data.channel,
-    data.bot,
-    message.chat,
-    message.room,
-    message.group,
-    message.channel,
-    message.bot,
-  );
-
-  return {
-    ...record,
-    ...payload,
-    ...data,
-    ...message,
-    senderId:
-      normalizeSabiMessengerNotificationText(message.senderId) ||
-      normalizeSabiMessengerNotificationText(message.authorId) ||
-      normalizeSabiMessengerNotificationText(message.fromUserId) ||
-      normalizeSabiMessengerNotificationText(message.userId) ||
-      normalizeSabiMessengerNotificationText(sender.id) ||
-      normalizeSabiMessengerNotificationText(sender.userId) ||
-      normalizeSabiMessengerNotificationText(sender.senderId) ||
-      normalizeSabiMessengerNotificationText(sender.authorId) ||
-      normalizeSabiMessengerNotificationText(sender.fromUserId) ||
-      normalizeSabiMessengerNotificationText(data.senderId) ||
-      normalizeSabiMessengerNotificationText(payload.senderId) ||
-      normalizeSabiMessengerNotificationText(record.senderId) ||
-      normalizeSabiMessengerNotificationText(record.fromUserId) ||
-      normalizeSabiMessengerNotificationText(record.userId),
-    senderName:
-      normalizeSabiMessengerNotificationText(message.senderName) ||
-      normalizeSabiMessengerNotificationText(message.authorName) ||
-      normalizeSabiMessengerNotificationText(message.fromName) ||
-      normalizeSabiMessengerNotificationText(sender.name) ||
-      normalizeSabiMessengerNotificationText(sender.displayName) ||
-      normalizeSabiMessengerNotificationText(sender.fullName) ||
-      normalizeSabiMessengerNotificationText(sender.username) ||
-      normalizeSabiMessengerNotificationText(data.senderName) ||
-      normalizeSabiMessengerNotificationText(payload.senderName) ||
-      normalizeSabiMessengerNotificationText(record.senderName),
-    senderPhone:
-      normalizeSabiMessengerNotificationText(message.senderPhone) ||
-      normalizeSabiMessengerNotificationText(message.authorPhone) ||
-      normalizeSabiMessengerNotificationText(message.fromPhone) ||
-      normalizeSabiMessengerNotificationText(sender.phone) ||
-      normalizeSabiMessengerNotificationText(sender.phoneNumber) ||
-      normalizeSabiMessengerNotificationText(sender.msisdn) ||
-      normalizeSabiMessengerNotificationText(data.senderPhone) ||
-      normalizeSabiMessengerNotificationText(payload.senderPhone) ||
-      normalizeSabiMessengerNotificationText(record.senderPhone),
-    recipientUserId:
-      normalizeSabiMessengerNotificationText(message.recipientUserId) ||
-      normalizeSabiMessengerNotificationText(message.receiverUserId) ||
-      normalizeSabiMessengerNotificationText(message.toUserId) ||
-      normalizeSabiMessengerNotificationText(message.targetUserId) ||
-      normalizeSabiMessengerNotificationText(recipient.id) ||
-      normalizeSabiMessengerNotificationText(recipient.userId) ||
-      normalizeSabiMessengerNotificationText(recipient.recipientUserId) ||
-      normalizeSabiMessengerNotificationText(recipient.receiverUserId) ||
-      normalizeSabiMessengerNotificationText(recipient.toUserId) ||
-      normalizeSabiMessengerNotificationText(data.recipientUserId) ||
-      normalizeSabiMessengerNotificationText(payload.recipientUserId) ||
-      normalizeSabiMessengerNotificationText(record.recipientUserId) ||
-      normalizeSabiMessengerNotificationText(record.receiverUserId) ||
-      normalizeSabiMessengerNotificationText(record.toUserId),
-    recipientPhone:
-      normalizeSabiMessengerNotificationText(message.recipientPhone) ||
-      normalizeSabiMessengerNotificationText(message.receiverPhone) ||
-      normalizeSabiMessengerNotificationText(message.toPhone) ||
-      normalizeSabiMessengerNotificationText(recipient.phone) ||
-      normalizeSabiMessengerNotificationText(recipient.phoneNumber) ||
-      normalizeSabiMessengerNotificationText(recipient.msisdn),
-    chatTitle:
-      normalizeSabiMessengerNotificationText(message.chatTitle) ||
-      normalizeSabiMessengerNotificationText(room.title) ||
-      normalizeSabiMessengerNotificationText(room.name) ||
-      normalizeSabiMessengerNotificationText(data.chatTitle) ||
-      normalizeSabiMessengerNotificationText(payload.chatTitle) ||
-      normalizeSabiMessengerNotificationText(record.chatTitle),
-    roomTitle:
-      normalizeSabiMessengerNotificationText(message.roomTitle) ||
-      normalizeSabiMessengerNotificationText(room.title) ||
-      normalizeSabiMessengerNotificationText(room.name) ||
-      normalizeSabiMessengerNotificationText(data.roomTitle) ||
-      normalizeSabiMessengerNotificationText(payload.roomTitle) ||
-      normalizeSabiMessengerNotificationText(record.roomTitle),
-  };
-}
-
-function isSabiMessengerMessageEvent(event: unknown): boolean {
-  const record = readSabiMessengerNotificationObject(event);
-  const payload = pickSabiMessengerPayload(event);
-  const marker = [
-    record.type,
-    record.eventName,
-    record.sourceEventName,
-    record.roomType,
-    record.chatType,
-    payload.type,
-    payload.kind,
-    payload.event,
-    payload.eventName,
-    payload.sourceEventName,
-    payload.notificationType,
-    payload.sabiType,
-    payload.roomType,
-    payload.chatType,
-  ]
-    .map(normalizeSabiMessengerNotificationLower)
-    .join("|");
-
-  if (marker.includes("typing") || marker.includes("presence") || marker.includes("read") || marker.includes("delivered")) {
-    return false;
-  }
-
-  return (
-    marker.includes("message:new") ||
-    marker.includes("new_message") ||
-    marker.includes("chat:message") ||
-    marker.includes("messenger") ||
-    marker.includes("group") ||
-    marker.includes("channel") ||
-    marker.includes("bot") ||
-    marker.includes("message") ||
-    Boolean(
-      normalizeSabiMessengerNotificationText(payload.chatId || payload.roomId) &&
-        (normalizeSabiMessengerNotificationText(payload.content) ||
-          normalizeSabiMessengerNotificationText(payload.text) ||
-          normalizeSabiMessengerNotificationText(payload.body) ||
-          normalizeSabiMessengerNotificationText(payload.previewTitle) ||
-          normalizeSabiMessengerNotificationText(payload.mediaUri) ||
-          normalizeSabiMessengerNotificationText(payload.attachmentUrl) ||
-          normalizeSabiMessengerNotificationText(payload.fileName)),
-    )
-  );
-}
-
-function pickSabiMessengerSenderId(payload: Record<string, unknown>): string {
-  return (
-    normalizeSabiMessengerNotificationText(payload.senderId) ||
-    normalizeSabiMessengerNotificationText(payload.authorId) ||
-    normalizeSabiMessengerNotificationText(payload.fromUserId) ||
-    normalizeSabiMessengerNotificationText(payload.userId)
-  );
-}
-
-function pickSabiMessengerTargetIds(payload: Record<string, unknown>): string[] {
-  return Array.from(
-    new Set(
-      [
-        payload.recipientUserId,
-        payload.receiverUserId,
-        payload.toUserId,
-        payload.targetUserId,
-        payload.ownerUserId,
-        payload.participantUserId,
-      ]
-        .map(normalizeSabiNotificationIdentity)
-        .filter(Boolean),
-    ),
-  );
-}
-
-function shouldShowSabiMessengerNotificationForCurrentUser(payload: Record<string, unknown>): boolean {
-  const auth = getAuthSessionState();
-  const currentUserId = normalizeSabiNotificationIdentity(auth.currentUserId);
-  const currentPhone = normalizeSabiNotificationIdentity(auth.phoneNumber);
-
-  if (!currentUserId && !currentPhone) return false;
-
-  const ownFlags = [payload.isOwn, payload.own, payload.fromMe, payload.isFromMe, payload.outgoing, payload.sentByMe];
-  if (ownFlags.some((value) => value === true || value === "true" || value === "1")) return false;
-
-  const direction = normalizeSabiMessengerNotificationLower(payload.direction || payload.messageDirection || payload.deliveryDirection);
-  if (direction === "outgoing" || direction === "sent") return false;
-
-  const senderIds = [
-    pickSabiMessengerSenderId(payload),
-    payload.senderUserId,
-    payload.authorUserId,
-    payload.fromUserId,
-    payload.createdByUserId,
-  ]
-    .map(normalizeSabiNotificationIdentity)
-    .filter(Boolean);
-  const senderPhones = [payload.senderPhone, payload.authorPhone, payload.fromPhone, payload.phone]
-    .map(normalizeSabiNotificationIdentity)
-    .filter(Boolean);
-
-  if (currentUserId && senderIds.includes(currentUserId)) return false;
-  if (currentPhone && senderPhones.includes(currentPhone)) return false;
-
-  const targetIds = pickSabiMessengerTargetIds(payload);
-  const targetPhones = [payload.recipientPhone, payload.receiverPhone, payload.toPhone, payload.targetPhone]
-    .map(normalizeSabiNotificationIdentity)
-    .filter(Boolean);
-
-  if (targetIds.length > 0) return currentUserId ? targetIds.includes(currentUserId) : false;
-  if (targetPhones.length > 0) return currentPhone ? targetPhones.includes(currentPhone) : false;
-
-  // If backend did not send an explicit recipient but it is clearly not my own
-  // message, allow it. If sender is also missing, suppress it to avoid showing
-  // generic notifications on the sender device.
-  return senderIds.length > 0 || senderPhones.length > 0;
-}
-
-function pickSabiNotificationNameOrPhone(payload: Record<string, unknown>): string {
-  return (
-    normalizeSabiMessengerNotificationText(payload.senderName) ||
-    normalizeSabiMessengerNotificationText(payload.authorName) ||
-    normalizeSabiMessengerNotificationText(payload.displayName) ||
-    normalizeSabiMessengerNotificationText(payload.contactName) ||
-    normalizeSabiMessengerNotificationText(payload.fromName) ||
-    normalizeSabiMessengerNotificationText(payload.callerName) ||
-    normalizeSabiMessengerNotificationText(payload.name) ||
-    normalizeSabiMessengerNotificationText(payload.senderPhone) ||
-    normalizeSabiMessengerNotificationText(payload.authorPhone) ||
-    normalizeSabiMessengerNotificationText(payload.fromPhone) ||
-    normalizeSabiMessengerNotificationText(payload.callerPhone) ||
-    normalizeSabiMessengerNotificationText(payload.phone) ||
-    normalizeSabiMessengerNotificationText(payload.msisdn) ||
-    normalizeSabiMessengerNotificationText(payload.mobile) ||
-    normalizeSabiMessengerNotificationText(payload.username)
-  );
-}
-
-function pickSabiRoomNotificationTitle(payload: Record<string, unknown>): string {
-  return (
-    normalizeSabiMessengerNotificationText(payload.chatTitle) ||
-    normalizeSabiMessengerNotificationText(payload.roomTitle) ||
-    normalizeSabiMessengerNotificationText(payload.groupTitle) ||
-    normalizeSabiMessengerNotificationText(payload.groupName) ||
-    normalizeSabiMessengerNotificationText(payload.channelTitle) ||
-    normalizeSabiMessengerNotificationText(payload.channelName) ||
-    normalizeSabiMessengerNotificationText(payload.botTitle) ||
-    normalizeSabiMessengerNotificationText(payload.botName)
-  );
-}
-
-function trimSabiNotificationBody(value: string, maxLength = 72): string {
-  const text = value.replace(/\s+/g, " ").trim();
-  if (text.length <= maxLength) return text;
-  return `${text.slice(0, maxLength - 1).trim()}…`;
-}
-
-function pickSabiMessengerMessagePreview(payload: Record<string, unknown>): string {
-  const marker = [
-    payload.type,
-    payload.kind,
-    payload.messageType,
-    payload.mediaType,
-    payload.attachmentType,
-    payload.mimeType,
-    payload.sabiType,
-    payload.notificationType,
-    payload.giftId,
-    payload.giftType,
-    payload.animatedPayload,
-  ]
-    .map(normalizeSabiMessengerNotificationLower)
-    .join("|");
-
-  const caption =
-    normalizeSabiMessengerNotificationText(payload.caption) ||
-    normalizeSabiMessengerNotificationText(payload.previewSubtitle);
-  const plainText =
-    normalizeSabiMessengerNotificationText(payload.content) ||
-    normalizeSabiMessengerNotificationText(payload.text) ||
-    normalizeSabiMessengerNotificationText(payload.body) ||
-    normalizeSabiMessengerNotificationText(payload.previewTitle) ||
-    normalizeSabiMessengerNotificationText(payload.message);
-
-  if (marker.includes("gift")) return "🎁 Подарок";
-  if (marker.includes("sticker")) return "Стикер";
-  if (marker.includes("location") || marker.includes("geo") || payload.latitude || payload.longitude) return "📍 Локация";
-  if (marker.includes("voice") || marker.includes("audio")) return "🎙 Голосовое сообщение";
-  if (marker.includes("video")) return caption ? trimSabiNotificationBody(`🎥 Видео: ${caption}`) : "🎥 Видео";
-  if (marker.includes("photo") || marker.includes("image") || marker.includes("picture")) return caption ? trimSabiNotificationBody(`📷 Фото: ${caption}`) : "📷 Фото";
-  if (marker.includes("contact")) return "Контакт";
-  if (plainText) return trimSabiNotificationBody(plainText, 96);
-
-  const fileName = normalizeSabiMessengerNotificationText(payload.fileName) || normalizeSabiMessengerNotificationText(payload.name);
-  if (fileName) return trimSabiNotificationBody(`📎 ${fileName}`, 72);
-  if (payload.mediaUri || payload.url || payload.attachmentUrl) return "📎 Медиа";
-  return "Новое сообщение";
-}
-
-function isSabiGroupChannelOrBotPayload(payload: Record<string, unknown>): boolean {
-  const marker = [
-    payload.roomType,
-    payload.chatType,
-    payload.type,
-    payload.kind,
-    payload.event,
-    payload.eventName,
-    payload.sourceEventName,
-    payload.notificationType,
-    payload.sabiType,
-  ]
-    .map(normalizeSabiMessengerNotificationLower)
-    .join("|");
-
-  return marker.includes("group") || marker.includes("channel") || marker.includes("bot");
-}
-
-type SabiMessengerBuiltNotification = {
-  title: string;
-  body: string;
-  channelId: string;
-  payload: Record<string, unknown>;
-  data: Record<string, unknown>;
-};
-
-function buildSabiMessengerSystemNotification(event: unknown): SabiMessengerBuiltNotification | null {
-  if (!isSabiMessengerMessageEvent(event)) return null;
-
-  const payload = pickSabiMessengerPayload(event);
-  if (!shouldShowSabiMessengerNotificationForCurrentUser(payload)) return null;
-
-  const chatId =
-    normalizeSabiMessengerNotificationText(payload.chatId) ||
-    normalizeSabiMessengerNotificationText(payload.roomId) ||
-    normalizeSabiMessengerNotificationText(payload.conversationId) ||
-    normalizeSabiMessengerNotificationText(payload.channelId) ||
-    normalizeSabiMessengerNotificationText(payload.groupId) ||
-    normalizeSabiMessengerNotificationText(payload.botId);
-  const messageId =
-    normalizeSabiMessengerNotificationText(payload.id) ||
-    normalizeSabiMessengerNotificationText(payload.messageId) ||
-    normalizeSabiMessengerNotificationText(payload.clientMessageId) ||
-    normalizeSabiMessengerNotificationText(payload.localId);
-
-  const senderId = pickSabiMessengerSenderId(payload);
-  const senderLabel = pickSabiNotificationNameOrPhone(payload) || senderId || "Пользователь";
-  const roomTitle = pickSabiRoomNotificationTitle(payload);
-  const isRoomNotification = Boolean(roomTitle && isSabiGroupChannelOrBotPayload(payload));
-  const title = isRoomNotification ? roomTitle : senderLabel || roomTitle || "Sabi Messenger";
-  const preview = pickSabiMessengerMessagePreview(payload);
-  const body = isRoomNotification && senderLabel ? trimSabiNotificationBody(`${senderLabel}: ${preview}`, 110) : preview;
-
-  const dedupeKey = messageId || `${chatId}:${senderId}:${title}:${body}`;
-  const now = Date.now();
-  const lastAt = sabiMessengerSystemNotificationDedupe.get(dedupeKey) || 0;
-  if (now - lastAt < SABI_MESSENGER_SYSTEM_NOTIFICATION_DEDUPE_MS) return null;
-  sabiMessengerSystemNotificationDedupe.set(dedupeKey, now);
-
-  Array.from(sabiMessengerSystemNotificationDedupe.entries()).forEach(([key, at]) => {
-    if (now - at > 60_000) sabiMessengerSystemNotificationDedupe.delete(key);
-  });
-
-  return {
-    title,
-    body,
-    channelId: "sabi_messenger",
-    payload,
-    data: {
-      sabiType: "messenger_message",
-      notificationType: "messenger_message",
-      chatId,
-      roomId: chatId,
-      messageId,
-      senderId,
-      senderName: senderLabel,
-      route: chatId ? `/tabs/chat/${encodeURIComponent(chatId)}` : "/tabs/chats",
-    },
-  };
-}
-
-async function resolveSabiMessengerNotificationLabel(notification: SabiMessengerBuiltNotification): Promise<string> {
-  const payload = notification.payload;
-  const auth = getAuthSessionState();
-  const ownerUserId = normalizeSabiMessengerNotificationText(auth.currentUserId);
-  const chatId =
-    normalizeSabiMessengerNotificationText(payload.chatId) ||
-    normalizeSabiMessengerNotificationText(payload.roomId) ||
-    normalizeSabiMessengerNotificationText(payload.conversationId);
-  const senderId = pickSabiMessengerSenderId(payload);
-  const senderPhone =
-    normalizeSabiMessengerNotificationText(payload.senderPhone) ||
-    normalizeSabiMessengerNotificationText(payload.authorPhone) ||
-    normalizeSabiMessengerNotificationText(payload.fromPhone) ||
-    normalizeSabiMessengerNotificationText(payload.phone);
-  const senderUsername = normalizeSabiMessengerNotificationText(payload.senderUsername) || normalizeSabiMessengerNotificationText(payload.username);
-
-  try {
-    if (chatId) {
-      const profile = await getPrivateChatProfile(chatId);
-      if (profile?.peerUserId && senderId && profile.peerUserId !== senderId) {
-        // Ignore a mismatched cached profile.
-      } else {
-        const profileLabel =
-          normalizeSabiMessengerNotificationText(profile?.name) ||
-          normalizeSabiMessengerNotificationText(profile?.phone) ||
-          normalizeSabiMessengerNotificationText(profile?.username);
-        if (profileLabel) return profileLabel;
-      }
-    }
-  } catch {
-    // Local profile cache is optional for notifications.
-  }
-
-  try {
-    const contacts = await listCustomMessengerContacts(ownerUserId || undefined);
-    const normalizedSenderPhone = normalizeSabiNotificationIdentity(senderPhone);
-    const normalizedSenderUsername = normalizeSabiNotificationIdentity(senderUsername);
-    const contact = contacts.find((item) => {
-      const contactPeerId = normalizeSabiNotificationIdentity(item.peerUserId);
-      const contactChatId = normalizeSabiNotificationIdentity(item.chatId);
-      const contactPhone = normalizeSabiNotificationIdentity(item.phone);
-      const contactUsername = normalizeSabiNotificationIdentity(item.username);
-      return Boolean(
-        (senderId && contactPeerId && contactPeerId === normalizeSabiNotificationIdentity(senderId)) ||
-          (chatId && contactChatId && contactChatId === normalizeSabiNotificationIdentity(chatId)) ||
-          (normalizedSenderPhone && contactPhone && contactPhone === normalizedSenderPhone) ||
-          (normalizedSenderUsername && contactUsername && contactUsername === normalizedSenderUsername),
-      );
-    });
-
-    if (contact?.name) return contact.name;
-    if (contact?.phone) return contact.phone;
-  } catch {
-    // Contacts are optional for notifications.
-  }
-
-  return pickSabiNotificationNameOrPhone(payload) || senderPhone || senderUsername || senderId || notification.title;
-}
-
-async function ensureSabiSystemNotificationPermission() {
-  const current = await Notifications.getPermissionsAsync();
-  if (current.granted || current.status === "granted") return true;
-  if (current.canAskAgain === false) return false;
-  const requested = await Notifications.requestPermissionsAsync();
-  return Boolean(requested.granted || requested.status === "granted");
-}
-
-async function ensureSabiMessengerNotificationChannel() {
-  await ensureSabiSystemNotificationPermission();
-  if (sabiMessengerNotificationChannelReady) return;
-  sabiMessengerNotificationChannelReady = true;
-  if (Platform.OS !== "android") return;
-
-  await Notifications.setNotificationChannelAsync("sabi_messenger", {
-    name: "Sabi Messenger",
-    importance: Notifications.AndroidImportance.HIGH,
-    sound: "default",
-    vibrationPattern: [0, 180, 120, 180],
-    enableVibrate: true,
-    showBadge: true,
-  });
-}
-
-async function ensureSabiWalletNotificationChannel() {
-  await ensureSabiSystemNotificationPermission();
-  if (sabiWalletNotificationChannelReady) return;
-  sabiWalletNotificationChannelReady = true;
-  if (Platform.OS !== "android") return;
-
-  await Notifications.setNotificationChannelAsync("sabi_wallet", {
-    name: "Sabi Wallet",
-    importance: Notifications.AndroidImportance.HIGH,
-    sound: "default",
-    vibrationPattern: [0, 180, 120, 180],
-    enableVibrate: true,
-    showBadge: true,
-  });
-}
-
-async function ensureSabiGeneralNotificationChannel() {
-  await ensureSabiSystemNotificationPermission();
-  if (sabiGeneralNotificationChannelReady) return;
-  sabiGeneralNotificationChannelReady = true;
-  if (Platform.OS !== "android") return;
-
-  await Notifications.setNotificationChannelAsync("sabi_general", {
-    name: "Sabi",
-    importance: Notifications.AndroidImportance.HIGH,
-    sound: "default",
-    vibrationPattern: [0, 180, 120, 180],
-    enableVibrate: true,
-    showBadge: true,
-  });
-}
-
-async function showSabiMessengerSystemNotification(event: unknown) {
-  const notification = buildSabiMessengerSystemNotification(event);
-  if (!notification) return;
-
-  try {
-    const senderLabel = await resolveSabiMessengerNotificationLabel(notification);
-    const roomTitle = pickSabiRoomNotificationTitle(notification.payload);
-    const isRoomNotification = Boolean(roomTitle && isSabiGroupChannelOrBotPayload(notification.payload));
-    const preview = pickSabiMessengerMessagePreview(notification.payload);
-    const title = isRoomNotification ? notification.title : senderLabel || notification.title;
-    const body = isRoomNotification && senderLabel
-      ? trimSabiNotificationBody(`${senderLabel}: ${preview}`, 110)
-      : trimSabiNotificationBody(notification.body, 110);
-
-    await ensureSabiMessengerNotificationChannel();
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title,
-        body,
-        sound: true,
-        data: {
-          ...notification.data,
-          senderName: senderLabel || notification.data.senderName,
-        },
-      },
-      trigger: Platform.OS === "android" ? { channelId: notification.channelId } : null,
-    });
-  } catch (error) {
-    console.warn(
-      "[messenger-notification] system notification skipped",
-      error instanceof Error ? error.message : error,
-    );
-  }
-}
-
-function buildSabiWalletNotification(eventName: string, event: unknown) {
-  const payload = pickSabiMessengerPayload({ eventName, payload: event });
-  const markerText = [
-    eventName,
-    payload.type,
-    payload.kind,
-    payload.event,
-    payload.eventName,
-    payload.notificationType,
-    payload.sabiType,
-    payload.category,
-  ]
-    .map(normalizeSabiMessengerNotificationLower)
-    .join("|");
-
-  if (!markerText.includes("wallet") && !markerText.includes("payment") && !markerText.includes("transfer") && !markerText.includes("transaction")) {
-    return null;
-  }
-
-  const actor =
-    normalizeSabiMessengerNotificationText(payload.merchantName) ||
-    normalizeSabiMessengerNotificationText(payload.businessName) ||
-    normalizeSabiMessengerNotificationText(payload.senderName) ||
-    normalizeSabiMessengerNotificationText(payload.receiverName) ||
-    normalizeSabiMessengerNotificationText(payload.counterpartyName) ||
-    normalizeSabiMessengerNotificationText(payload.fromName) ||
-    normalizeSabiMessengerNotificationText(payload.toName) ||
-    normalizeSabiMessengerNotificationText(payload.phone) ||
-    normalizeSabiMessengerNotificationText(payload.fromPhone) ||
-    normalizeSabiMessengerNotificationText(payload.toPhone);
-
-  const amount =
-    normalizeSabiMessengerNotificationText(payload.amount) ||
-    normalizeSabiMessengerNotificationText(payload.totalAmount) ||
-    normalizeSabiMessengerNotificationText(payload.value);
-  const currency =
-    normalizeSabiMessengerNotificationText(payload.currency) ||
-    normalizeSabiMessengerNotificationText(payload.asset) ||
-    normalizeSabiMessengerNotificationText(payload.token) ||
-    normalizeSabiMessengerNotificationText(payload.coin);
-  const status =
-    normalizeSabiMessengerNotificationText(payload.status) ||
-    normalizeSabiMessengerNotificationText(payload.state) ||
-    normalizeSabiMessengerNotificationText(payload.result);
-  const operation =
-    normalizeSabiMessengerNotificationText(payload.operationTitle) ||
-    normalizeSabiMessengerNotificationText(payload.title) ||
-    normalizeSabiMessengerNotificationText(payload.operationType) ||
-    normalizeSabiMessengerNotificationText(payload.type) ||
-    normalizeSabiMessengerNotificationText(payload.event) ||
-    "Wallet";
-  const body =
-    normalizeSabiMessengerNotificationText(payload.body) ||
-    normalizeSabiMessengerNotificationText(payload.message) ||
-    [operation, amount && currency ? `${amount} ${currency}` : amount || currency, status]
-      .filter(Boolean)
-      .join(" · ") ||
-    "Sabi Wallet";
-
-  return {
-    title: actor ? `${actor} · Sabi Wallet` : "Sabi Wallet",
-    body,
-    channelId: "sabi_wallet",
-    data: {
-      sabiType: "wallet_notification",
-      notificationType: "wallet",
-      sourceEventName: eventName,
-      route: "/tabs/wallet",
-    },
-  };
-}
-
-function buildSabiMissedCallNotification(eventName: string, event: unknown) {
-  const payload = pickSabiMessengerPayload({ eventName, payload: event });
-  const markerText = [
-    eventName,
-    payload.type,
-    payload.kind,
-    payload.event,
-    payload.action,
-    payload.status,
-    payload.reason,
-    payload.endReason,
-    payload.signalKind,
-    payload.notificationType,
-    payload.sabiType,
-  ]
-    .map(normalizeSabiMessengerNotificationLower)
-    .join("|");
-
-  if (!markerText.includes("call")) return null;
-  const missed = markerText.includes("missed") || markerText.includes("no_answer") || markerText.includes("unanswered");
-  if (!missed) return null;
-
-  const caller = pickSabiNotificationNameOrPhone(payload) || "Sabi Call";
-  const isVideo = markerText.includes("video");
-  return {
-    title: caller,
-    body: isVideo ? "Пропущенный видеозвонок" : "Пропущенный аудиозвонок",
-    channelId: "sabi_calls",
-    data: {
-      sabiType: "missed_call",
-      notificationType: "missed_call",
-      sourceEventName: eventName,
-      route: "/tabs/calls",
-    },
-  };
-}
-
-function buildSabiGeneralSystemNotification(eventName: string, event: unknown) {
-  const messengerNotification = buildSabiMessengerSystemNotification({ eventName, payload: event });
-  if (messengerNotification) return messengerNotification;
-
-  const missedCallNotification = buildSabiMissedCallNotification(eventName, event);
-  if (missedCallNotification) return missedCallNotification;
-
-  const walletNotification = buildSabiWalletNotification(eventName, event);
-  if (walletNotification) return walletNotification;
-
-  const payload = pickSabiMessengerPayload({ eventName, payload: event });
-  const title =
-    normalizeSabiMessengerNotificationText(payload.title) ||
-    pickSabiNotificationNameOrPhone(payload) ||
-    "Sabi";
-  const body =
-    normalizeSabiMessengerNotificationText(payload.body) ||
-    normalizeSabiMessengerNotificationText(payload.message) ||
-    normalizeSabiMessengerNotificationText(payload.text) ||
-    normalizeSabiMessengerNotificationText(payload.content);
-
-  if (!body) return null;
-
-  return {
-    title,
-    body,
-    channelId: "sabi_general",
-    data: {
-      sabiType: "system_notification",
-      notificationType: "system",
-      sourceEventName: eventName,
-      route: normalizeSabiMessengerNotificationText(payload.route) || "/notifications",
-    },
-  };
-}
-
-async function showSabiGeneralSystemNotification(eventName: string, event: unknown) {
-  const notification = buildSabiGeneralSystemNotification(eventName, event);
-  if (!notification) return;
-
-  const dedupeKey = `${notification.channelId}:${notification.title}:${notification.body}:${normalizeSabiMessengerNotificationText((notification.data as Record<string, unknown>).sourceEventName)}`;
-  const now = Date.now();
-  const lastAt = sabiSystemNotificationDedupe.get(dedupeKey) || 0;
-  if (now - lastAt < SABI_MESSENGER_SYSTEM_NOTIFICATION_DEDUPE_MS) return;
-  sabiSystemNotificationDedupe.set(dedupeKey, now);
-  for (const [key, at] of sabiSystemNotificationDedupe) {
-    if (now - at > 60_000) sabiSystemNotificationDedupe.delete(key);
-  }
-
-  try {
-    if (notification.channelId === "sabi_messenger") await ensureSabiMessengerNotificationChannel();
-    else if (notification.channelId === "sabi_wallet") await ensureSabiWalletNotificationChannel();
-    else await ensureSabiGeneralNotificationChannel();
-
-    await Notifications.scheduleNotificationAsync({
-      content: {
-        title: notification.title,
-        body: notification.body,
-        sound: true,
-        data: notification.data,
-      },
-      trigger: Platform.OS === "android" ? { channelId: notification.channelId } : null,
-    });
-  } catch (error) {
-    console.warn("[sabi-notification] system notification skipped", error instanceof Error ? error.message : error);
-  }
-}
-
 function normalizeIncomingCallBoolean(value: unknown) {
   return value === true || value === "1" || value === "true";
 }
 
-const SABI_VIDEO_INCOMING_INVITE_TTL_MS = 15000;
+const SABI_DIRECT_INCOMING_INVITE_TTL_MS = 12000;
 
 function parseSabiCallTimeMs(value: unknown): number {
   if (typeof value === "number" && Number.isFinite(value)) {
@@ -1009,14 +218,14 @@ function getSabiIncomingCallCreatedAtMs(payload: IncomingMessengerCallPayload, c
   );
 }
 
-function isStaleSabiVideoIncomingInvite(payload: IncomingMessengerCallPayload, callId?: unknown): boolean {
+function isStaleSabiDirectIncomingInvite(payload: IncomingMessengerCallPayload, callId?: unknown): boolean {
   const kind = normalizeIncomingCallKind(payload);
-  if (kind !== "video") return false;
+  if (kind !== "audio" && kind !== "video") return false;
 
   const createdAtMs = getSabiIncomingCallCreatedAtMs(payload, callId);
   if (!createdAtMs) return false;
 
-  return Date.now() - createdAtMs > SABI_VIDEO_INCOMING_INVITE_TTL_MS;
+  return Date.now() - createdAtMs > SABI_DIRECT_INCOMING_INVITE_TTL_MS;
 }
 
 
@@ -1457,92 +666,13 @@ function RootBootstrap() {
   const lastSyncErrorRef = useRef<string | null>(null);
   const uiReadyRef = useRef(false);
   const kernelSyncTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const overlayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [overlayEnabled, setOverlayEnabled] = useState(false);
 
   useSabiMessengerSmsTone({
     enabled: isReady,
     pathname,
   });
-
-  useEffect(() => {
-    if (!isReady) return undefined;
-
-    const unsubscribe = subscribeMessengerRealtimeService((event) => {
-      void showSabiMessengerSystemNotification(event);
-    });
-
-    return () => {
-      unsubscribe();
-    };
-  }, [isReady]);
-
-  useEffect(() => {
-    if (!isReady) return undefined;
-
-    const auth = getAuthSessionState();
-    const currentUserId = typeof auth.currentUserId === "string" ? auth.currentUserId.trim() : "";
-    if (!currentUserId) return undefined;
-
-    const socket = getSuperAppSocket(currentUserId);
-    const notificationChannel = `notification:user:${currentUserId}`;
-    const walletChannel = `wallet-core:user:${currentUserId}`;
-
-    joinRealtimeChannel(notificationChannel, currentUserId);
-    joinWalletCoreChannel(walletChannel, currentUserId);
-
-    const notificationEvents = [
-      "notification:new",
-      "notifications:new",
-      "notification",
-      "push:notification",
-      "message:new",
-      "new_message",
-      "chat:message",
-      "messenger:message:new",
-      "messenger:new_message",
-      "messenger:group:message",
-      "group:message",
-      "group:post",
-      "messenger:channel:post",
-      "channel:post",
-      "channel:message",
-      "messenger:bot:message",
-      "bot:message",
-      "bot:reply",
-      "wallet:balance.updated",
-      "wallet:history.changed",
-      "wallet:operation.updated",
-      "wallet-core:event",
-      "wallet.operation.completed",
-      "wallet.business.transfer.completed",
-      "wallet.business.transfer.received",
-      "wallet.merchant.payment.completed",
-      "wallet.merchant.settlement.completed",
-      "realtime:event",
-      "call:missed",
-      "missed_call",
-    ];
-
-    const handlers = notificationEvents.map((eventName) => {
-      const handler = (payload: unknown) => {
-        void showSabiGeneralSystemNotification(eventName, payload);
-      };
-      socket.on(eventName, handler);
-      return { eventName, handler };
-    });
-
-    if (!socket.connected) socket.connect();
-
-    return () => {
-      handlers.forEach(({ eventName, handler }) => socket.off(eventName, handler));
-      leaveRealtimeChannel(notificationChannel);
-      leaveWalletCoreChannel(walletChannel);
-    };
-  }, [isReady]);
-
-  useEffect(() => {
-    (globalThis as any).__sabiCurrentPathname = pathname || "";
-    (globalThis as any).__sabiAppState = AppState.currentState;
-  }, [pathname]);
 
   const syncAppKernelsWithAuth = useCallback(async () => {
     if (syncInFlightRef.current) {
@@ -1646,6 +776,10 @@ function RootBootstrap() {
         kernelSyncTimerRef.current = null;
       }
 
+      if (overlayTimerRef.current) {
+        clearTimeout(overlayTimerRef.current);
+        overlayTimerRef.current = null;
+      }
 
       if (messengerKernelBootedRef.current) {
         void shutdownMessengerKernel().catch((error) => {
@@ -1667,8 +801,17 @@ function RootBootstrap() {
 
   useEffect(() => {
     const fallbackTimer = setTimeout(() => {
-      markUiReady();
-      scheduleAppKernelSync(900);
+      void prepareI18nLanguage()
+        .catch((error) => {
+          console.warn(
+            "[i18n] selected language bootstrap failed",
+            error instanceof Error ? error.message : error,
+          );
+        })
+        .finally(() => {
+          markUiReady();
+          scheduleAppKernelSync(900);
+        });
     }, 900);
 
     return () => clearTimeout(fallbackTimer);
@@ -1677,6 +820,7 @@ function RootBootstrap() {
   useSuperappLiveBootstrap({
     onBootstrap: async () => {
       try {
+        await prepareI18nLanguage();
         await restoreAuthenticatedSessionFromStorage();
       } catch (error) {
         console.warn(
@@ -1797,14 +941,14 @@ function RootBootstrap() {
       const route = buildIncomingCallRouteParams(payload as IncomingMessengerCallPayload, currentUserId);
       if (!route) return;
 
-      // SABI_VIDEO_ROUTE_DELAY_FIX_18:
-      // A direct video invite must open only while it is fresh.
-      // Delayed/stale relay delivery after decline/end must not wake the second
-      // phone later and must not recreate an already cancelled video call.
-      if (isStaleSabiVideoIncomingInvite(payload as IncomingMessengerCallPayload, route.params.callId)) {
+      // SABI_DIRECT_ROUTE_STALE_INVITE_GUARD:
+      // A delayed direct audio/video invite must not wake the second phone later
+      // after decline/end. Both audio and video use the same short freshness gate.
+      if (isStaleSabiDirectIncomingInvite(payload as IncomingMessengerCallPayload, route.params.callId)) {
         console.log(
-          "[sabi-call:incoming-route] SKIP stale video invite",
+          "[sabi-call:incoming-route] SKIP stale direct invite",
           "callId=" + String(route.params.callId || ""),
+          "kind=" + String(route.params.kind || ""),
           "from=" + String(route.params.peerId || ""),
         );
         return;
@@ -1926,6 +1070,16 @@ function RootBootstrap() {
       if (activeCallScreen && lastIncomingCallKeyRef.current === nextKey) return;
 
       const routeIsGroupCall = String((route.params as any).groupCall || "") === "1";
+
+      // SABI_CALL_RESTORE_ACTIVE_DIRECT_GUARD:
+      // If an audio/video call screen is already open, a fresh-looking direct
+      // incoming relay packet must not push/replace the route. Route remounts
+      // were closing the live RTCPeerConnection immediately after accepted and
+      // then creating 2-3 new callIds. The open screen consumes WebRTC signals;
+      // only group handoff is allowed to update an active call screen above.
+      if (activeCallScreen && !routeIsGroupCall) {
+        return;
+      }
 
       // SABI_BLOCK_DIRECT_NAV_FOR_ACTIVE_GROUP_CALL
       if (routeIsGroupCall && callKey) {
@@ -2248,8 +1402,6 @@ function RootBootstrap() {
 
     const syncMessengerPresenceScope = (nextAppState: AppStateStatus = appStateRef.current) => {
       appStateRef.current = nextAppState;
-      (globalThis as any).__sabiAppState = nextAppState;
-      (globalThis as any).__sabiCurrentPathname = pathname || "";
       const routeIsMessenger = isMessengerPresencePath(pathname);
       const appIsActive = nextAppState === "active";
       const active = Boolean(routeIsMessenger && appIsActive);
@@ -2283,6 +1435,31 @@ function RootBootstrap() {
       }).catch(() => undefined);
     };
   }, [isReady, pathname]);
+
+  useEffect(() => {
+    if (!isReady) {
+      setOverlayEnabled(false);
+      return undefined;
+    }
+
+    if (overlayTimerRef.current) {
+      clearTimeout(overlayTimerRef.current);
+    }
+
+    overlayTimerRef.current = setTimeout(() => {
+      overlayTimerRef.current = null;
+      if (aliveRef.current) {
+        setOverlayEnabled(true);
+      }
+    }, 1200);
+
+    return () => {
+      if (overlayTimerRef.current) {
+        clearTimeout(overlayTimerRef.current);
+        overlayTimerRef.current = null;
+      }
+    };
+  }, [isReady]);
 
   if (!isReady) {
     return (
@@ -2336,6 +1513,7 @@ function RootBootstrap() {
           }}
         />
       </Stack>
+      {overlayEnabled ? <AppNotificationOverlay /> : null}
     </>
   );
 }

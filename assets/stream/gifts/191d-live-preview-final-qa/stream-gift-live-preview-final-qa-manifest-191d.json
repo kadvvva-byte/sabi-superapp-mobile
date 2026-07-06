@@ -1,0 +1,22 @@
+{
+  "version": "STREAM-GAME-GIFTS-191D",
+  "mode": "premium_live_preview_final_qa_local_preview_controls_user_facing_only",
+  "giftCount": 24,
+  "sourceAdded": "src/modules/stream/gifts/streamPremiumGiftLivePreviewFinalQa191D.ts",
+  "screenCard": "191D Live Preview Final QA",
+  "checks": {
+    "phaseShellCoverage": 24,
+    "overlayPolishCoverage": 24,
+    "interactionPolishCoverage": 24,
+    "phaseCountPerGift": 3,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

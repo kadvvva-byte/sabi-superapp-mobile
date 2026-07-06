@@ -1,0 +1,37 @@
+export const stream110xShortVideoSettingsProductionFlowPlan = {
+  stage: "110X",
+  title: "Shorts Settings production flow clean",
+  scope: "mobile_stream_shorts_only",
+  status: "ready",
+  mainScreen: {
+    cleanViewer: true,
+    rightRail: ["Settings", "Like", "Comments", "Share", "Save"],
+    editorToolsOutsideSettings: false,
+  },
+  settingsFlow: {
+    orderedTabs: ["Video", "Edit", "Text", "Overlays", "Effects", "MP3", "Review"],
+    productionModeDefault: true,
+    advancedToolsCollapsedByDefault: true,
+    advancedToggleRequired: true,
+  },
+  localActions: {
+    video: ["record_camera", "upload_library", "pick_video_file"],
+    edit: ["bind_timeline", "bind_review", "local_check"],
+    text: ["add_text", "bind_timeline", "bind_review"],
+    overlays: ["add_useful_overlay", "bind_timeline", "bind_review"],
+    effects: ["apply_effect", "sync_stack", "render_blocked"],
+    mp3: ["pick_mp3", "review_mix", "mute_original"],
+    review: ["draft_check", "timeline_check", "publish_blocked"],
+  },
+  safety: {
+    fakeRenderSuccess: false,
+    fakeUploadSuccess: false,
+    fakePublishSuccess: false,
+    fakeProviderSuccess: false,
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+    backendTouched: false,
+    monetizationTouched: false,
+  },
+} as const;

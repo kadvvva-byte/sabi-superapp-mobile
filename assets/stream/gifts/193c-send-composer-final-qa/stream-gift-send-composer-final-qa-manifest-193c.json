@@ -1,0 +1,29 @@
+{
+  "version": "STREAM-GAME-GIFTS-193C",
+  "stage": "send_composer_final_qa",
+  "scope": "mobile_ui_user_facing_only",
+  "giftCount": 24,
+  "covers": [
+    "193A local composer preview",
+    "193B interaction polish",
+    "recipient",
+    "quantity",
+    "message",
+    "confirm gate"
+  ],
+  "runtimeLocks": {
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false
+  },
+  "files": [
+    "src/modules/stream/gifts/streamPremiumGiftSendComposerFinalQa193C.ts",
+    "src/modules/stream/screens/StreamScreen.tsx",
+    "src/modules/stream/index.ts"
+  ]
+}

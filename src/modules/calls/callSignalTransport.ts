@@ -1,4 +1,4 @@
-export type SabiCallSocketLike = {
+﻿export type SabiCallSocketLike = {
   connected?: boolean;
   connect?: () => void;
   emit: (eventName: string, payload?: unknown) => void;
@@ -246,7 +246,7 @@ function makeEnvelope(eventName: string, payload: AnyRecord): AnyRecord {
 
 function apiBaseUrl() {
   const env = (typeof process !== "undefined" ? (process as any).env : undefined) || {};
-  const raw = text(env.EXPO_PUBLIC_API_BASE_URL, env.EXPO_PUBLIC_AUTH_API_BASE_URL, env.EXPO_PUBLIC_SOCKET_BASE_URL, "http://178.154.210.119");
+  const raw = text(env.EXPO_PUBLIC_API_BASE_URL, env.EXPO_PUBLIC_AUTH_API_BASE_URL, env.EXPO_PUBLIC_SOCKET_BASE_URL, "https://sabi-superapp-api-7srquvexva-ew.a.run.app");
   return raw.replace(/\/+$/, "");
 }
 
@@ -485,3 +485,4 @@ export function subscribeSabiCallTransportEvents(
     unsubscribers.splice(0).forEach((unsubscribe) => unsubscribe());
   };
 }
+

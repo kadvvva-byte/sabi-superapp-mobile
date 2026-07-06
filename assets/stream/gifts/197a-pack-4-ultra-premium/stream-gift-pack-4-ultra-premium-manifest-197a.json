@@ -1,0 +1,74 @@
+{
+  "version": "STREAM-GAME-GIFTS-197A",
+  "stage": "pack_4_ultra_premium_gifts_fair_pricing_appearance_upgrade",
+  "addedGiftCount": 8,
+  "cumulativeGiftCount": 32,
+  "pricingPolicy": "fair quality tiers; demo-points preview labels now; no real payment/runtime/Wallet mutation",
+  "assets": [
+    {
+      "id": "celestial-tiger-crown",
+      "poster": "posters/celestial-tiger-crown.svg",
+      "soundCue": "sound-cues/celestial-tiger-crown-cue.wav",
+      "fairDemoPoints": 95,
+      "qualityTier": "Legendary"
+    },
+    {
+      "id": "diamond-sakura-palace",
+      "poster": "posters/diamond-sakura-palace.svg",
+      "soundCue": "sound-cues/diamond-sakura-palace-cue.wav",
+      "fairDemoPoints": 120,
+      "qualityTier": "Legendary"
+    },
+    {
+      "id": "aurora-phoenix-parade",
+      "poster": "posters/aurora-phoenix-parade.svg",
+      "soundCue": "sound-cues/aurora-phoenix-parade-cue.wav",
+      "fairDemoPoints": 180,
+      "qualityTier": "Mythic"
+    },
+    {
+      "id": "royal-galaxy-yacht",
+      "poster": "posters/royal-galaxy-yacht.svg",
+      "soundCue": "sound-cues/royal-galaxy-yacht-cue.wav",
+      "fairDemoPoints": 210,
+      "qualityTier": "Mythic"
+    },
+    {
+      "id": "crystal-lotus-dragon",
+      "poster": "posters/crystal-lotus-dragon.svg",
+      "soundCue": "sound-cues/crystal-lotus-dragon-cue.wav",
+      "fairDemoPoints": 260,
+      "qualityTier": "Ultra Mythic"
+    },
+    {
+      "id": "neon-opera-idol",
+      "poster": "posters/neon-opera-idol.svg",
+      "soundCue": "sound-cues/neon-opera-idol-cue.wav",
+      "fairDemoPoints": 85,
+      "qualityTier": "Epic"
+    },
+    {
+      "id": "golden-falcon-crown",
+      "poster": "posters/golden-falcon-crown.svg",
+      "soundCue": "sound-cues/golden-falcon-crown-cue.wav",
+      "fairDemoPoints": 150,
+      "qualityTier": "Legendary"
+    },
+    {
+      "id": "imperial-dragon-meteor",
+      "poster": "posters/imperial-dragon-meteor.svg",
+      "soundCue": "sound-cues/imperial-dragon-meteor-cue.wav",
+      "fairDemoPoints": 340,
+      "qualityTier": "Ultra Mythic"
+    }
+  ],
+  "safety": {
+    "userFacingOnly": true,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "realSendRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false
+  }
+}

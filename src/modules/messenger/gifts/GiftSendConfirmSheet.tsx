@@ -1,4 +1,4 @@
-﻿import React, { useMemo } from "react";
+import React, { useMemo } from "react";
 import {
   Modal,
   Pressable,
@@ -25,6 +25,7 @@ type Props = {
   receiverLabel?: string;
   feeRateBps?: number;
   onClose: () => void;
+  sendRuntimeEnabled?: boolean;
   onConfirmSend: (gift: GiftCatalogItem) => void;
 };
 
@@ -148,6 +149,7 @@ export default function GiftSendConfirmSheet({
   currentCoinBalance = 0,
   receiverLabel = "Recipient",
   feeRateBps = DEFAULT_GIFT_FEE_RATE_BPS,
+  sendRuntimeEnabled = false,
   onClose,
   onConfirmSend,
 }: Props) {
@@ -159,6 +161,7 @@ export default function GiftSendConfirmSheet({
         netCoin: 0,
         balanceAfter: currentCoinBalance,
         canSend: false,
+        canPreviewHandoff: false,
       };
     }
 
@@ -172,9 +175,10 @@ export default function GiftSendConfirmSheet({
       feeCoin,
       netCoin,
       balanceAfter,
-      canSend: balanceAfter >= 0,
+      canSend: sendRuntimeEnabled && balanceAfter >= 0,
+      canPreviewHandoff: balanceAfter >= 0,
     };
-  }, [gift, currentCoinBalance, feeRateBps]);
+  }, [gift, currentCoinBalance, feeRateBps, sendRuntimeEnabled]);
 
   if (!gift) return null;
 
@@ -211,7 +215,7 @@ export default function GiftSendConfirmSheet({
               </Text>
               <Text style={styles.title}>Confirm Send</Text>
               <Text style={styles.subtitle}>
-                Coin is deducted at send time. Receiver sees net credited income after platform fee.
+                No local fake send: sender charge and receiver pending balance require backend gift ledger.
               </Text>
             </View>
 
@@ -315,7 +319,7 @@ export default function GiftSendConfirmSheet({
             </View>
 
             <Text style={styles.balanceHint}>
-              Received gift income becomes visible immediately, but transfer to active balance is limited to once per month.
+              Receiver pending appears only after verified backend ledger event. Available balance is never faked on mobile.
             </Text>
           </LinearGradient>
 
@@ -343,7 +347,7 @@ export default function GiftSendConfirmSheet({
             <View style={styles.divider} />
 
             <Text style={styles.ruleText}>
-              Full playback is shown only to sender and receiver. Others see a gift record card in chat history until month end.
+              This is a unified Stream + Messenger gift preview. Real send, payment, Wallet mutation and payout are disabled until backend ledger is connected.
             </Text>
           </View>
 
@@ -377,7 +381,7 @@ export default function GiftSendConfirmSheet({
                 >
                   <Ionicons name="gift-outline" size={17} color="#06130F" />
                   <Text style={styles.primaryActionText}>
-                    {financials.canSend ? "Confirm Send" : "Not Enough COIN"}
+                    {financials.canSend ? "Confirm Send" : financials.canPreviewHandoff ? "Backend Ledger Required" : "Not Enough COIN"}
                   </Text>
                 </LinearGradient>
               )}

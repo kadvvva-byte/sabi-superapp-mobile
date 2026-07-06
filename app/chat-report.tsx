@@ -89,6 +89,18 @@ export default function ChatReportScreen() {
       other: txOr(t, "messenger.report.other", "Другая причина"),
       sending: txOr(t, "messenger.report.sending", "Отправка..."),
       back: txOr(t, "common.back", "Назад"),
+      playReadyEvidenceTitle: txOr(t, "messenger.report.playReadyEvidenceTitle", "Play-ready UGC safety"),
+      reportContentAction: txOr(t, "messenger.report.reportContentAction", "Report content"),
+      reportUserAction: txOr(t, "messenger.report.reportUserAction", "Report user"),
+      blockUserAction: txOr(t, "messenger.report.blockUserAction", "Block user"),
+      commentModerationAction: txOr(t, "messenger.report.commentModerationAction", "Comment report / hide"),
+      noFakeModeration: txOr(
+        t,
+        "messenger.report.noFakeModeration",
+        "Mobile UI evidence only: no fake moderation success, no backend/provider call, no money movement."
+      ),
+      adultGateEvidence: txOr(t, "messenger.report.adultGateEvidence", "18+ / minor-safety reason is available through the report reasons."),
+      providerNotConfigured: txOr(t, "messenger.report.providerNotConfigured", "provider_not_configured: moderation queue/provider is not connected in this mobile-only patch."),
     }),
     [t],
   );
@@ -107,6 +119,13 @@ export default function ChatReportScreen() {
   const canSubmit =
     Boolean(selectedReason) &&
     (selectedReason !== "other" || Boolean(details.trim()));
+
+  const handleBlockPreview = () => {
+    Alert.alert(
+      texts.blockUserAction,
+      `${texts.noFakeModeration}\n\nTarget user: ${targetUserId || "not provided"}`
+    );
+  };
 
   const handleSubmit = async () => {
     if (!selectedReason) {
@@ -206,6 +225,27 @@ export default function ChatReportScreen() {
                   </View>
                 </LinearGradient>
               </View>
+
+            <View style={styles.playReadyEvidenceCard}>
+              <Text style={styles.playReadyEvidenceTitle}>{texts.playReadyEvidenceTitle}</Text>
+              <View style={styles.playReadyPillRow}>
+                <View style={styles.playReadyPill}><Text style={styles.playReadyPillText}>{texts.reportContentAction}</Text></View>
+                <View style={styles.playReadyPill}><Text style={styles.playReadyPillText}>{texts.reportUserAction}</Text></View>
+                <View style={styles.playReadyPill}><Text style={styles.playReadyPillText}>{texts.commentModerationAction}</Text></View>
+              </View>
+              <Text style={styles.playReadyEvidenceText}>{texts.adultGateEvidence}</Text>
+              <Text style={styles.playReadyEvidenceText}>{texts.providerNotConfigured}</Text>
+              <Pressable
+                onPress={handleBlockPreview}
+                style={styles.blockPreviewButton}
+                accessibilityRole="button"
+                accessibilityLabel={texts.blockUserAction}
+              >
+                <ShieldAlert size={15} color="#07131C" strokeWidth={2.5} />
+                <Text style={styles.blockPreviewButtonText}>{texts.blockUserAction}</Text>
+              </Pressable>
+              <Text style={styles.noFakeModerationText}>{texts.noFakeModeration}</Text>
+            </View>
 
               <View style={styles.sectionWrap}>
                 <Text style={styles.sectionTitle}>{texts.reasonTitle}</Text>
@@ -422,6 +462,74 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "900",
     marginTop: 4,
+  },
+  playReadyEvidenceCard: {
+    borderRadius: 22,
+    borderWidth: 1,
+    borderColor: "rgba(107,255,214,0.15)",
+    backgroundColor: "rgba(107,255,214,0.07)",
+    paddingHorizontal: 14,
+    paddingVertical: 13,
+    marginBottom: 18,
+  },
+  playReadyEvidenceTitle: {
+    color: "#F6FFF9",
+    fontSize: 13,
+    fontWeight: "900",
+    marginBottom: 8,
+  },
+  playReadyPillRow: {
+    flexDirection: "row",
+    flexWrap: "wrap",
+    gap: 7,
+    marginBottom: 9,
+  },
+  playReadyPill: {
+    minHeight: 24,
+    borderRadius: 12,
+    paddingHorizontal: 9,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(107,255,214,0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(107,255,214,0.16)",
+  },
+  playReadyPillText: {
+    color: "#70FFD8",
+    fontSize: 10,
+    fontWeight: "900",
+  },
+  playReadyEvidenceText: {
+    color: "rgba(232,255,246,0.72)",
+    fontSize: 11,
+    lineHeight: 16,
+    fontWeight: "800",
+    marginTop: 3,
+  },
+  blockPreviewButton: {
+    minHeight: 36,
+    borderRadius: 18,
+    backgroundColor: "#70FFD8",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 7,
+    paddingHorizontal: 12,
+    marginTop: 10,
+  },
+  blockPreviewButtonText: {
+    color: "#07131C",
+    fontSize: 12,
+    fontWeight: "900",
+    textTransform: "uppercase",
+    letterSpacing: 0.3,
+  },
+  noFakeModerationText: {
+    color: "rgba(232,255,246,0.54)",
+    fontSize: 10,
+    lineHeight: 14,
+    fontWeight: "800",
+    marginTop: 8,
   },
   sectionWrap: {
     marginBottom: 18,

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Космический Замок 5000 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="72%"><stop offset="0%" stop-color="#818CF8"/><stop offset="42%" stop-color="#F0ABFC"/><stop offset="100%" stop-color="#09070D"/></radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2C75B"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <circle cx="192" cy="176" r="122" fill="none" stroke="#FFFFFF" stroke-opacity=".30" stroke-width="3"/>
+  <circle cx="192" cy="176" r="94" fill="#09070D" fill-opacity=".24"/>
+  <path d="M82 270V122l38-28 38 28v52h76v-52l38-28 38 28v148z M150 270v-58c0-25 21-45 46-45s46 20 46 45v58z" fill="none" stroke="url(#stroke)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Космический Замок</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">5000 алмазов · preview only</text>
+</svg>

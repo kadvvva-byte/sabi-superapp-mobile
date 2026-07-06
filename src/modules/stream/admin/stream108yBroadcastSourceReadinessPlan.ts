@@ -1,0 +1,40 @@
+export const stream108yBroadcastSourceReadinessPlan = {
+  version: "STREAM-108Y",
+  title: "Broadcast source readiness depth",
+  scope: "stream-only-mobile-source",
+  status: "locked_preview_ready",
+  touchedModules: ["src/modules/stream"],
+  forbiddenModulesTouched: ["wallet", "messenger", "calls", "server", "foundation", "backend-finance", "payments", "gifts", "monetization"].map((name) => ({ name, touched: false })),
+  realLocalActions: [
+    "track selected broadcast source for camera, microphone, screen share, game capture, video file, and external RTMP",
+    "record camera and microphone permission paths without fake permission granted",
+    "record local screen/game capture intent while keeping provider contract blocked",
+    "record video file and RTMP URL intents as local drafts without fake upload or ingest success",
+    "build source readiness evidence snapshot for future backend/provider/Admin union",
+    "block source provider handoff until real backend room contract, realtime provider, media provider, source provider, and Admin launch approval exist",
+  ],
+  blockedUntilRealIntegration: [
+    "backend room contract",
+    "realtime provider",
+    "media provider",
+    "screen capture provider",
+    "game capture provider",
+    "video storage provider",
+    "RTMP ingest provider",
+    "Admin launch approval",
+  ],
+  fakeStatesForbidden: {
+    fakeLive: true,
+    fakeOnAir: true,
+    fakeProvider: true,
+    fakeSourceProvider: true,
+    fakeMediaSuccess: true,
+    fakeUploadSuccess: true,
+    fakeRtmpIngestSuccess: true,
+    fakePayment: true,
+    fakeGift: true,
+    fakeLaunchComplete: true,
+  },
+} as const;
+
+export type Stream108yBroadcastSourceReadinessPlan = typeof stream108yBroadcastSourceReadinessPlan;

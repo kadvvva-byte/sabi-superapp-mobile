@@ -1,0 +1,22 @@
+{
+  "version": "STREAM-GAME-GIFTS-195A",
+  "scope": "mobile user-facing local economy disclosure polish only",
+  "giftCount": 24,
+  "disclosures": [
+    "demo-points",
+    "gift-only spending",
+    "no cash-out for regular users",
+    "official creator payout boundary",
+    "KYC/KYB/AML/Admin gates"
+  ],
+  "runtime": {
+    "realSend": false,
+    "backend": false,
+    "dbRead": false,
+    "dbWrite": false,
+    "payment": false,
+    "provider": false,
+    "payout": false,
+    "walletMutation": false
+  }
+}

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="720" viewBox="0 0 720 720" role="img" aria-label="Русалка Жемчуг stream gift poster">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="68%">
+      <stop offset="0%" stop-color="#F7E9FF" stop-opacity="0.92"/>
+      <stop offset="42%" stop-color="#8BE8FF" stop-opacity="0.74"/>
+      <stop offset="100%" stop-color="#09070D" stop-opacity="1"/>
+    </radialGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="12" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="720" height="720" rx="96" fill="url(#bg)"/>
+  <circle cx="360" cy="332" r="188" fill="none" stroke="rgba(255,255,255,0.58)" stroke-width="10" filter="url(#glow)"/>
+  <circle cx="360" cy="332" r="116" fill="rgba(255,255,255,0.18)" stroke="rgba(255,255,255,0.45)" stroke-width="6"/>
+  <path d="M140 528 C240 460 480 460 580 528" fill="none" stroke="rgba(255,255,255,0.50)" stroke-width="12" stroke-linecap="round"/>
+  <text x="360" y="344" text-anchor="middle" font-size="58" font-family="Arial, sans-serif" font-weight="800" fill="#FFFFFF">✦</text>
+  <text x="360" y="588" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="800" fill="#FFFFFF">Русалка Жемчуг</text>
+  <text x="360" y="630" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="rgba(255,255,255,0.82)">PREMIUM POSTER · Legendary Pearl</text>
+</svg>

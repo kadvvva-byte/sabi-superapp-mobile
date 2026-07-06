@@ -1,0 +1,90 @@
+{
+  "version": "STREAM-GAME-GIFTS-187B",
+  "generatedAtUtc": "2026-06-10T08:44:37.796406+00:00",
+  "scope": "user-facing-mobile-local-preview-assets-only",
+  "soundCueRuntimeIncludedNow": false,
+  "hapticRuntimeMetadataReady": true,
+  "actualPaymentOrSendRuntimeIncludedNow": false,
+  "cues": [
+    {
+      "assetId": "sakura-heart-burst",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/sakura-heart-burst-soft-chime.wav",
+      "soundCueLabel": "soft sakura chime",
+      "durationMs": 1180,
+      "hapticLabel": "soft pulse",
+      "hapticImpactStyle": "soft",
+      "liveEffectLabel": "живое сердце из сакуры",
+      "intensityLabel": "Soft bloom"
+    },
+    {
+      "assetId": "koi-luck-splash",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/koi-luck-splash-water-bell.wav",
+      "soundCueLabel": "water bell splash",
+      "durationMs": 1360,
+      "hapticLabel": "wave pulse",
+      "hapticImpactStyle": "light",
+      "liveEffectLabel": "водный всплеск удачи",
+      "intensityLabel": "Aqua pulse"
+    },
+    {
+      "assetId": "neon-fox-tail",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/neon-fox-tail-synth-snap.wav",
+      "soundCueLabel": "short synth snap",
+      "durationMs": 1550,
+      "hapticLabel": "snap impact",
+      "hapticImpactStyle": "medium",
+      "liveEffectLabel": "неоновый хвост лиса",
+      "intensityLabel": "Neon snap"
+    },
+    {
+      "assetId": "moon-cat-guard",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/moon-cat-guard-night-bell.wav",
+      "soundCueLabel": "night bell cue",
+      "durationMs": 1880,
+      "hapticLabel": "gentle tap",
+      "hapticImpactStyle": "soft",
+      "liveEffectLabel": "лунный кот-защитник",
+      "intensityLabel": "Calm orbit"
+    },
+    {
+      "assetId": "dj-star-drop",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/dj-star-drop-edm-hit.wav",
+      "soundCueLabel": "edm star hit",
+      "durationMs": 1280,
+      "hapticLabel": "beat haptic",
+      "hapticImpactStyle": "medium",
+      "liveEffectLabel": "beat-пульс DJ звезды",
+      "intensityLabel": "Beat pulse"
+    },
+    {
+      "assetId": "golden-lion-roar",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/golden-lion-roar-soft-roar.wav",
+      "soundCueLabel": "soft lion roar cue",
+      "durationMs": 2050,
+      "hapticLabel": "strong impact",
+      "hapticImpactStyle": "strong",
+      "liveEffectLabel": "золотая аура льва",
+      "intensityLabel": "Royal impact"
+    },
+    {
+      "assetId": "royal-rose-stage",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/royal-rose-stage-romantic-sting.wav",
+      "soundCueLabel": "romantic sting",
+      "durationMs": 2260,
+      "hapticLabel": "elegant tap",
+      "hapticImpactStyle": "light",
+      "liveEffectLabel": "королевское раскрытие розы",
+      "intensityLabel": "Velvet bloom"
+    },
+    {
+      "assetId": "cosmic-dragon-gate",
+      "soundCueFile": "assets/stream/gifts/187b-sound-cues/cosmic-dragon-gate-cosmic-hit.wav",
+      "soundCueLabel": "deep cosmic hit",
+      "durationMs": 2950,
+      "hapticLabel": "finale impact",
+      "hapticImpactStyle": "finale",
+      "liveEffectLabel": "космические ворота дракона",
+      "intensityLabel": "Mythic finale"
+    }
+  ]
+}

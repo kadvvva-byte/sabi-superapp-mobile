@@ -1,3 +1,32 @@
+import { ResizeMode, Video } from "expo-av";
+import { LinearGradient } from "expo-linear-gradient";
+import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
+import {
+  ArrowLeft,
+  BadgeCheck,
+  Bot,
+  BriefcaseBusiness,
+  ChevronRight,
+  Eye,
+  Gift,
+  Hash,
+  Heart,
+  Image as ImageIcon,
+  Link2,
+  Lock,
+  MessageCircleMore,
+  PhoneCall,
+  Play,
+  Settings2,
+  ShieldCheck,
+  Store,
+  Trash2,
+  Truck,
+  UserRoundPlus,
+  Users,
+  Video as VideoIcon,
+  X
+} from "lucide-react-native";
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   Alert,
@@ -17,45 +46,53 @@ import {
   View,
   useWindowDimensions,
 } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { router, useFocusEffect, useLocalSearchParams } from "expo-router";
-import {
-  ArrowLeft,
-  BadgeCheck,
-  BellOff,
-  BellRing,
-  Bot,
-  BriefcaseBusiness,
-  ChevronRight,
-  Eye,
-  Gift,
-  Hash,
-  Heart,
-  Image as ImageIcon,
-  Link2,
-  Lock,
-  MessageCircleMore,
-  PhoneCall,
-  Pin,
-  PinOff,
-  Play,
-  Settings2,
-  ShieldCheck,
-  Store,
-  Truck,
-  Trash2,
-  UserRoundPlus,
-  Users,
-  Video as VideoIcon,
-  X,
-} from "lucide-react-native";
-import { ResizeMode, Video } from "expo-av";
 
+import { getAuthSessionState } from "../../../core/kernel/auth/session.store";
+import {
+  fetchUserPublicProfileSurface,
+  isLocalOnlyUserProfileMediaUri,
+  resolveUserProfileMediaUrl,
+} from "../../../shared/api/user-profile-api";
 import { useI18n } from "../../../shared/i18n";
-import { useMessengerPresence } from "../../../core/kernel/messenger/bindings/useMessengerPresence";
 import { useRealtimeChannel } from "../../../shared/realtime/use-realtime-channel";
 import { appStorage } from "../../../shared/storage/app-storage";
+import {
+  buildMessengerCallParticipants,
+  countMessengerCallParticipants,
+  encodeMessengerCallParticipants,
+} from "../../calls/callParticipants";
+import {
+  addGroupBlacklistEntry,
+  approveGroupJoinRequest,
+  canInviteToGroup,
+  getGroupInviteLink,
+  getGroupModerationState,
+  hydrateGroupModerationRuntime,
+  inviteGroupMember,
+  listGroupMembers,
+  regenerateGroupInviteLink,
+  rejectGroupJoinRequest,
+  removeGroupBlacklistEntry,
+  removeGroupMember,
+  resolveGroupRole,
+  isGroupOwner as runtimeIsGroupOwner,
+  setGroupRole,
+  updateGroupModerationRules,
+  type GroupMemberRecord,
+} from "../groups/groupModerationRuntime";
+import { hydrateGroupPublicProfile } from "../groups/groupPublicProfileRuntime";
+import {
+  getPrivateChatProfile,
+  markPrivateChatRead,
+  markPrivateChatUnread,
+  setPrivateChatDeleted,
+  setPrivateChatHiddenFromMain,
+  setPrivateChatMuted,
+  setPrivateChatPinned,
+  upsertPrivateChatProfile,
+} from "../private/privateChatRuntime";
+import { hydratePublicProfile, hydratePublicProfileStorage, savePublicProfile, subscribePublicProfiles } from "../public/publicProfileRuntime";
 import {
   getMessengerThemePalette,
   getMessengerThemeState,
@@ -67,67 +104,6 @@ import {
   hydratePersistedChatPresence,
   registerPersistedChatRoom,
 } from "./services/chatRoomRealtime";
-import {
-  getPrivateChatProfile,
-  markPrivateChatRead,
-  markPrivateChatUnread,
-  setPrivateChatDeleted,
-  setPrivateChatHiddenFromMain,
-  setPrivateChatMuted,
-  setPrivateChatPinned,
-  upsertPrivateChatProfile,
-} from "../private/privateChatRuntime";
-import {
-  addGroupBlacklistEntry,
-  approveGroupJoinRequest,
-  canInviteToGroup,
-  getGroupInviteLink,
-  getGroupModerationState,
-  hydrateGroupModerationRuntime,
-  inviteGroupMember,
-  isGroupOwner as runtimeIsGroupOwner,
-  listGroupMembers,
-  regenerateGroupInviteLink,
-  rejectGroupJoinRequest,
-  removeGroupBlacklistEntry,
-  removeGroupMember,
-  resolveGroupRole,
-  setGroupRole,
-  type GroupMemberRecord,
-  updateGroupModerationRules,
-} from "../groups/groupModerationRuntime";
-import {
-  hydrateGroupPublicProfile,
-  hydrateGroupPublicProfileStorage,
-  refreshGroupPublicProfileStorage,
-  saveGroupPublicProfile,
-  subscribeGroupPublicProfiles,
-} from "../groups/groupPublicProfileRuntime";
-import {
-  hydrateChannelPublicProfile,
-  hydrateChannelPublicProfileStorage,
-  refreshChannelPublicProfileStorage,
-  saveChannelPublicProfile,
-  subscribeChannelPublicProfiles,
-} from "../channels/channelPublicProfileRuntime";
-import {
-  hydratePublicProfile,
-  hydratePublicProfileStorage,
-  refreshPublicProfileStorage,
-  savePublicProfile,
-  subscribePublicProfiles,
-} from "../public/publicProfileRuntime";
-import { getAuthSessionState } from "../../../core/kernel/auth/session.store";
-import {
-  fetchUserPublicProfileSurface,
-  isLocalOnlyUserProfileMediaUri,
-  resolveUserProfileMediaUrl,
-} from "../../../shared/api/user-profile-api";
-import {
-  buildMessengerCallParticipants,
-  countMessengerCallParticipants,
-  encodeMessengerCallParticipants,
-} from "../../calls/callParticipants";
 
 type TabKey = "publications" | "gifts" | "archive";
 type MediaKind = "photo" | "video";
@@ -191,8 +167,6 @@ type RouteParams = {
   premiumAccent?: string;
   publicPhotos?: string | string[];
   publicVideos?: string | string[];
-  publicationPhotos?: string | string[];
-  publicationVideos?: string | string[];
   archivePublications?: string | string[];
   publicGifts?: string | string[];
   likesCount?: string | string[];
@@ -427,7 +401,7 @@ const CHAT_PARTNER_INFO_EN_DEFAULTS: Record<ChatPartnerInfoTextKey, string> = {
   autoBanRepeatedSpam: "Auto ban repeated spam",
   blacklist: "Blacklist",
   blacklistSubtitle: "Blocked users cannot write or return until removed.",
-  inviteLink: "Ссылка приглашения",
+  inviteLink: "Invite link",
   regenerateLink: "Regenerate invite link",
   sendInvite: "Send invitation",
   ownerTools: "Owner tools",
@@ -920,176 +894,28 @@ function normalizePublicProfileMediaUri(value?: string | null) {
   return resolveUserProfileMediaUrl(uri, getAuthSessionState());
 }
 
-function hasPublicMediaRoutePayload(value: string | string[] | undefined) {
-  if (Array.isArray(value)) return value.length > 0;
-
-  if (typeof value !== "string") return false;
-
-  const text = value.trim();
-  if (!text || text === "[]") return false;
-
-  try {
-    const parsed = JSON.parse(text);
-    if (Array.isArray(parsed)) return parsed.length > 0;
-  } catch {}
-
-  return true;
-}
-
-function pickPublicMediaRoutePayload(
-  primary?: string | string[],
-  fallback?: string | string[],
-): string | string[] | undefined {
-  return hasPublicMediaRoutePayload(primary) ? primary : fallback;
-}
-
-function readPublicMediaString(source: Record<string, unknown>, keys: string[]): string {
-  for (const key of keys) {
-    const value = source[key];
-    if (typeof value === "string" && value.trim()) return value.trim();
-  }
-  return "";
-}
-
-function pickPublicMediaUri(source: Record<string, unknown>, keys: string[]): string {
-  for (const key of keys) {
-    const resolved = normalizePublicProfileMediaUri(readPublicMediaString(source, [key]));
-    if (resolved) return resolved;
-  }
-  return "";
-}
-
-function readPublicProfileNumber(source: unknown, keys: string[]): number | null {
-  if (!source || typeof source !== "object" || Array.isArray(source)) return null;
-
-  const record = source as Record<string, unknown>;
-  for (const key of keys) {
-    const value = record[key];
-    const parsed = typeof value === "number" ? value : typeof value === "string" && value.trim() ? Number(value) : NaN;
-    if (Number.isFinite(parsed)) return Math.max(0, Math.floor(parsed));
-  }
-
-  return null;
-}
-
-function buildStablePublicMediaId(
-  raw: Record<string, unknown>,
-  index: number,
-  kind: MediaKind,
-  fallbackUri?: string,
-) {
-  const explicit = String(raw.id ?? raw.mediaId ?? raw.assetId ?? raw.fileId ?? raw.storageKey ?? "").trim();
-  if (explicit) return explicit;
-
-  const source = String(
-    raw.uri ??
-      raw.mediaUri ??
-      raw.videoUri ??
-      raw.imageUri ??
-      raw.thumbnailUri ??
-      raw.posterUri ??
-      raw.previewUri ??
-      raw.downloadUrl ??
-      raw.fileUrl ??
-      raw.url ??
-      fallbackUri ??
-      "",
-  ).trim();
-
-  if (source) {
-    const clean = source.split("?")[0]?.split("#")[0] || source;
-    const tail = decodeURIComponent(clean.split("/").filter(Boolean).pop() || clean);
-    const normalized = tail
-      .trim()
-      .toLowerCase()
-      .replace(/[^a-z0-9_.-]+/gi, "-")
-      .replace(/^-+|-+$/g, "")
-      .slice(0, 80);
-    if (normalized) return `${kind}-${normalized}`;
-  }
-
-  return `${kind}-${index}`;
-}
-
-function normalizePublicMediaLikeKey(value: unknown) {
-  const raw = String(value || "").trim();
-  if (!raw) return "";
-
-  const withoutQuery = raw.split("?")[0]?.split("#")[0] || raw;
-  const tail = withoutQuery.split("/").filter(Boolean).pop() || withoutQuery;
-  return decodeURIComponent(tail)
-    .trim()
-    .replace(/^@+/, "")
-    .toLowerCase();
-}
-
-function collectPublicMediaLikeKeys(media: Partial<PublicMediaItem> | null | undefined) {
-  const keys = new Set<string>();
-  if (!media) return keys;
-
-  [media.id, media.uri, media.mediaUri, media.thumbnailUri].forEach((value) => {
-    const normalized = normalizePublicMediaLikeKey(value);
-    if (normalized) keys.add(normalized);
-  });
-
-  return keys;
-}
-
-function publicMediaLikeMatches(left: Partial<PublicMediaItem>, right: Partial<PublicMediaItem>) {
-  const leftKeys = collectPublicMediaLikeKeys(left);
-  const rightKeys = collectPublicMediaLikeKeys(right);
-
-  for (const key of leftKeys) {
-    if (rightKeys.has(key)) return true;
-  }
-
-  return false;
-}
-
 function normalizePublicMediaList(value: unknown): PublicMediaItem[] {
   if (!Array.isArray(value)) return [];
 
   return value
     .map((item, index) => {
-      const raw = (item ?? {}) as Partial<PublicMediaItem> & Record<string, unknown>;
-      const kind = raw.kind === "video" || raw.type === "video" || raw.mediaKind === "video" ? "video" : "photo";
-      const mediaUri = pickPublicMediaUri(raw, [
-        "mediaUri",
-        "videoUri",
-        "playbackUri",
-        "sourceUri",
-        "downloadUrl",
-        "fileUrl",
-        "url",
-        "uri",
-      ]);
-      const thumbnailUri = pickPublicMediaUri(raw, [
-        "thumbnailUri",
-        "posterUri",
-        "previewUri",
-        "imageUri",
-        "coverUri",
-      ]);
-      const photoUri = pickPublicMediaUri(raw, [
-        "uri",
-        "imageUri",
-        "mediaUri",
-        "downloadUrl",
-        "fileUrl",
-        "url",
-        "thumbnailUri",
-      ]);
-      const uri = kind === "video" ? thumbnailUri || mediaUri : photoUri || thumbnailUri || mediaUri;
-      const openUri = mediaUri || photoUri || uri || thumbnailUri;
+      const raw = (item ?? {}) as Partial<PublicMediaItem> & { thumbnailUri?: string; mediaUri?: string; mimeType?: string; durationMs?: number };
+      const kind = raw.kind === "video" ? "video" : "photo";
+      const mediaUri = normalizePublicProfileMediaUri(raw.mediaUri) || normalizePublicProfileMediaUri(raw.uri);
+      const thumbnailUri = normalizePublicProfileMediaUri(raw.thumbnailUri);
+      const uri = kind === "video"
+        ? thumbnailUri || mediaUri
+        : normalizePublicProfileMediaUri(raw.uri) || mediaUri || thumbnailUri;
+      const openUri = mediaUri || uri || thumbnailUri;
       if (!uri && !openUri) return null;
 
       return {
-        id: buildStablePublicMediaId(raw, index, kind, openUri || uri),
+        id: String(raw.id ?? `media-${index}`),
         uri: uri || openUri,
         kind,
         thumbnailUri: thumbnailUri || undefined,
         mediaUri: openUri || undefined,
-        mimeType: typeof raw.mimeType === "string" ? raw.mimeType : typeof raw.type === "string" && raw.type.includes("/") ? raw.type : undefined,
+        mimeType: typeof raw.mimeType === "string" ? raw.mimeType : undefined,
         views: typeof raw.views === "number" ? raw.views : 0,
         duration: typeof raw.duration === "string" ? raw.duration : typeof raw.durationMs === "number" ? formatMediaDuration(raw.durationMs) : undefined,
         liked: typeof raw.liked === "boolean" ? raw.liked : undefined,
@@ -1111,609 +937,6 @@ function resolveMediaOpenUri(item: PublicMediaItem) {
 
 function countLikedPublicMedia(photos: PublicMediaItem[], videos: PublicMediaItem[]) {
   return [...photos, ...videos].filter((media) => Boolean(media?.liked)).length;
-}
-
-function expandGroupLikeAliases(values: unknown[]) {
-  const aliases: string[] = [];
-  const seen = new Set<string>();
-
-  const push = (value: unknown) => {
-    const raw = String(value || "").trim();
-    if (!raw) return;
-
-    const variants = [raw];
-    const withoutAt = raw.replace(/^@+/, "");
-    if (withoutAt && withoutAt !== raw) variants.push(withoutAt);
-
-    if (withoutAt.startsWith("group:")) {
-      const withoutPrefix = withoutAt.slice("group:".length).trim();
-      if (withoutPrefix) variants.push(withoutPrefix);
-    } else if (/^(grp|group)[_-]/i.test(withoutAt)) {
-      variants.push(`group:${withoutAt}`);
-    }
-
-    variants.forEach((variant) => {
-      const normalized = String(variant || "").trim().replace(/^@+/, "").toLowerCase();
-      if (!normalized || seen.has(normalized)) return;
-      seen.add(normalized);
-      aliases.push(String(variant).trim());
-    });
-  };
-
-  values.forEach(push);
-  return aliases;
-}
-
-function normalizeSabiGroupLikeKey(value: unknown) {
-  return String(value || "").trim().replace(/^@+/, "").toLowerCase();
-}
-
-function collectSabiGroupLikeKeys(values: unknown[]) {
-  const keys = new Set<string>();
-
-  const push = (value: unknown) => {
-    const raw = String(value || "").trim();
-    if (!raw) return;
-
-    const normalized = normalizeSabiGroupLikeKey(raw);
-    if (normalized) keys.add(normalized);
-
-    if (normalized && !normalized.startsWith("group:")) {
-      keys.add(`group:${normalized}`);
-    }
-
-    if (normalized.startsWith("group:")) {
-      const withoutPrefix = normalized.slice("group:".length).trim();
-      if (withoutPrefix) keys.add(withoutPrefix);
-    }
-  };
-
-  values.forEach((value) => {
-    if (!value) return;
-
-    if (typeof value === "string" || typeof value === "number") {
-      push(value);
-      return;
-    }
-
-    if (typeof value !== "object" || Array.isArray(value)) return;
-
-    const item = value as Record<string, unknown>;
-    [
-      item.id,
-      item.uri,
-      item.mediaUri,
-      item.thumbnailUri,
-      item.chatId,
-      item.groupId,
-      item.linkedChatId,
-      item.linkedPublicationId,
-      item.username,
-      item.groupName,
-      item.name,
-      item.inviteLink,
-    ].forEach(push);
-  });
-
-  return keys;
-}
-
-function buildSabiGroupLikeAliases(values: unknown[]) {
-  return Array.from(collectSabiGroupLikeKeys(values));
-}
-
-function sabiGroupLikeMatchesLocalGroup(snapshotValues: unknown[], group: Record<string, unknown>) {
-  const snapshotKeys = collectSabiGroupLikeKeys(snapshotValues);
-  const groupKeys = collectSabiGroupLikeKeys([
-    group,
-    ...(Array.isArray(group.publicationPhotos) ? group.publicationPhotos : []),
-    ...(Array.isArray(group.publicationVideos) ? group.publicationVideos : []),
-  ]);
-
-  for (const key of snapshotKeys) {
-    if (groupKeys.has(key)) return true;
-  }
-
-  return false;
-}
-
-async function saveSabiGroupLikeCountToLocalCollection(params: {
-  aliases: string[];
-  publicationPhotos: PublicMediaItem[];
-  publicationVideos: PublicMediaItem[];
-  likesCount: number;
-}) {
-  try {
-    const storageModule = await import("@react-native-async-storage/async-storage");
-    const AsyncStorage = storageModule.default;
-    const storageKey = "sabi.profile.groups.collection.v1";
-    const raw = await AsyncStorage.getItem(storageKey);
-    if (!raw) return;
-
-    const parsed = JSON.parse(raw) as unknown;
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return;
-
-    const record = parsed as Record<string, unknown>;
-    const groups = Array.isArray(record.groups) ? record.groups : [];
-    let changed = false;
-
-    const snapshotValues = [
-      ...params.aliases,
-      ...params.publicationPhotos,
-      ...params.publicationVideos,
-    ];
-
-    const nextGroups = groups.map((group) => {
-      if (!group || typeof group !== "object" || Array.isArray(group)) return group;
-
-      const groupRecord = group as Record<string, unknown>;
-      if (!sabiGroupLikeMatchesLocalGroup(snapshotValues, groupRecord)) return group;
-
-      const currentLikes = Number(groupRecord.likesCount || 0);
-      const nextLikes = Math.max(currentLikes, Number(params.likesCount || 0));
-
-      if (nextLikes === currentLikes) return group;
-
-      changed = true;
-      return {
-        ...groupRecord,
-        likesCount: nextLikes,
-        lastUpdatedAt: Date.now(),
-      };
-    });
-
-    if (!changed) return;
-
-    await AsyncStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        ...record,
-        groups: nextGroups,
-        updatedAt: Date.now(),
-      }),
-    );
-  } catch {}
-}
-
-async function saveGroupLikeCounterDirectToOwnerProfile(params: {
-  aliases: string[];
-  photos: PublicMediaItem[];
-  videos: PublicMediaItem[];
-  likesCount: number;
-}) {
-  try {
-    const storageModule = await import("@react-native-async-storage/async-storage");
-    const AsyncStorage = storageModule.default;
-    const storageKey = "sabi.profile.groups.collection.v1";
-
-    const raw = await AsyncStorage.getItem(storageKey);
-    if (!raw) return;
-
-    const parsed = JSON.parse(raw) as {
-      groups?: unknown[];
-      selectedGroupId?: string | null;
-      [key: string]: unknown;
-    };
-
-    const groups = Array.isArray(parsed.groups) ? parsed.groups : [];
-    if (!groups.length) return;
-
-    const normalizedAliases = new Set(
-      params.aliases
-        .map((value) => String(value || "").trim().replace(/^@+/, "").toLowerCase())
-        .filter(Boolean),
-    );
-
-    const mediaKeys = new Set(
-      [...params.photos, ...params.videos]
-        .flatMap((item) => [item.id, item.uri, item.mediaUri, item.thumbnailUri])
-        .map((value) => String(value || "").trim().toLowerCase())
-        .filter(Boolean),
-    );
-
-    const selectedGroupId = String(parsed.selectedGroupId || "").trim();
-
-    let matched = false;
-    const nextGroups = groups.map((group, index) => {
-      if (!group || typeof group !== "object" || Array.isArray(group)) return group;
-
-      const record = group as Record<string, unknown>;
-
-      const groupAliases = [
-        record.groupId,
-        record.linkedChatId,
-        record.linkedPublicationId,
-        record.username,
-        record.groupName,
-        record.inviteLink,
-      ]
-        .map((value) => String(value || "").trim().replace(/^@+/, "").toLowerCase())
-        .filter(Boolean);
-
-      const groupMediaKeys = [
-        ...(Array.isArray(record.publicationPhotos) ? record.publicationPhotos : []),
-        ...(Array.isArray(record.publicationVideos) ? record.publicationVideos : []),
-      ]
-        .flatMap((item) => {
-          if (!item || typeof item !== "object" || Array.isArray(item)) return [];
-          const media = item as Record<string, unknown>;
-          return [media.id, media.uri, media.mediaUri, media.thumbnailUri];
-        })
-        .map((value) => String(value || "").trim().toLowerCase())
-        .filter(Boolean);
-
-      const aliasMatched = groupAliases.some((alias) => normalizedAliases.has(alias));
-      const mediaMatched = groupMediaKeys.some((key) => mediaKeys.has(key));
-      const selectedMatched = selectedGroupId && String(record.groupId || "") === selectedGroupId;
-      const fallbackMatched = !selectedGroupId && index === 0;
-
-      if (!aliasMatched && !mediaMatched && !selectedMatched && !fallbackMatched) return group;
-
-      matched = true;
-
-      const currentLikes = Number(record.likesCount || 0);
-      const nextLikes = Math.max(currentLikes, Number(params.likesCount || 0));
-
-      return {
-        ...record,
-        likesCount: nextLikes,
-        lastUpdatedAt: Date.now(),
-      };
-    });
-
-    if (!matched) return;
-
-    await AsyncStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        ...parsed,
-        groups: nextGroups,
-        updatedAt: Date.now(),
-      }),
-    );
-  } catch {}
-}
-
-function buildSabiChannelPublicLikeAliases(values: unknown[]) {
-  const aliases: string[] = [];
-  const seen = new Set<string>();
-
-  const push = (value: unknown) => {
-    const raw = String(value || "").trim();
-    if (!raw) return;
-
-    const normalized = raw.replace(/^@+/, "").toLowerCase();
-    if (!normalized) return;
-
-    const variants = [
-      normalized,
-      normalized.startsWith("channel:") ? normalized.slice("channel:".length) : "channel:" + normalized,
-    ].filter(Boolean);
-
-    variants.forEach((alias) => {
-      const safe = String(alias || "").trim();
-      if (!safe || seen.has(safe)) return;
-      seen.add(safe);
-      aliases.push(safe);
-    });
-  };
-
-  values.forEach((value) => {
-    if (Array.isArray(value)) {
-      value.forEach(push);
-      return;
-    }
-
-    if (value && typeof value === "object") {
-      const record = value as Record<string, unknown>;
-      [
-        record.id,
-        record.chatId,
-        record.channelId,
-        record.linkedChatId,
-        record.linkedPublicationId,
-        record.username,
-        record.channelName,
-        record.name,
-        record.title,
-        record.inviteLink,
-        record.uri,
-        record.mediaUri,
-        record.thumbnailUri,
-      ].forEach(push);
-      return;
-    }
-
-    push(value);
-  });
-
-  return aliases;
-}
-
-function buildSabiGroupPublicLikeAliases(values: unknown[]) {
-  const aliases: string[] = [];
-  const seen = new Set<string>();
-
-  const push = (value: unknown) => {
-    const raw = String(value || "").trim();
-    if (!raw) return;
-
-    const normalized = raw.replace(/^@+/, "").toLowerCase();
-    if (normalized && !seen.has(normalized)) {
-      seen.add(normalized);
-      aliases.push(normalized);
-    }
-
-    if (normalized && !normalized.startsWith("group:")) {
-      const grouped = `group:${normalized}`;
-      if (!seen.has(grouped)) {
-        seen.add(grouped);
-        aliases.push(grouped);
-      }
-    }
-
-    if (normalized.startsWith("group:")) {
-      const withoutPrefix = normalized.slice("group:".length).trim();
-      if (withoutPrefix && !seen.has(withoutPrefix)) {
-        seen.add(withoutPrefix);
-        aliases.push(withoutPrefix);
-      }
-    }
-  };
-
-  values.forEach((value) => {
-    if (Array.isArray(value)) {
-      value.forEach(push);
-      return;
-    }
-
-    if (value && typeof value === "object") {
-      const record = value as Record<string, unknown>;
-      [
-        record.id,
-        record.chatId,
-        record.groupId,
-        record.linkedChatId,
-        record.linkedPublicationId,
-        record.username,
-        record.groupName,
-        record.name,
-        record.inviteLink,
-        record.uri,
-        record.mediaUri,
-        record.thumbnailUri,
-      ].forEach(push);
-      return;
-    }
-
-    push(value);
-  });
-
-  return aliases;
-}
-
-async function persistSabiGroupLikesIntoOwnerCollection(params: {
-  chatId: string;
-  aliases: string[];
-  photos: PublicMediaItem[];
-  videos: PublicMediaItem[];
-  likesCount: number;
-}) {
-  try {
-    const storageModule = await import("@react-native-async-storage/async-storage");
-    const AsyncStorage = storageModule.default;
-    const storageKey = "sabi.profile.groups.collection.v1";
-    const raw = await AsyncStorage.getItem(storageKey);
-    if (!raw) return;
-
-    const parsed = JSON.parse(raw) as {
-      groups?: unknown[];
-      selectedGroupId?: string | null;
-      [key: string]: unknown;
-    };
-
-    const groups = Array.isArray(parsed.groups) ? parsed.groups : [];
-    if (!groups.length) return;
-
-    const chatId = String(params.chatId || "").trim();
-    const groupIdFromChat = chatId.replace(/^group:/, "").trim();
-
-    const aliases = new Set(
-      [
-        chatId,
-        groupIdFromChat,
-        ...params.aliases,
-      ]
-        .map((value) => String(value || "").trim().replace(/^@+/, "").toLowerCase())
-        .filter(Boolean),
-    );
-
-    const mediaIds = new Set(
-      [...params.photos, ...params.videos]
-        .flatMap((item) => [item.id, item.uri, item.mediaUri, item.thumbnailUri])
-        .map((value) => String(value || "").trim().toLowerCase())
-        .filter(Boolean),
-    );
-
-    let changed = false;
-
-    const nextGroups = groups.map((group) => {
-      if (!group || typeof group !== "object" || Array.isArray(group)) return group;
-
-      const record = group as Record<string, unknown>;
-
-      const groupKeys = [
-        record.groupId,
-        record.linkedChatId,
-        record.linkedPublicationId,
-        record.username,
-        record.groupName,
-        record.inviteLink,
-      ]
-        .map((value) => String(value || "").trim().replace(/^@+/, "").toLowerCase())
-        .filter(Boolean);
-
-      const groupMediaIds = [
-        ...(Array.isArray(record.publicationPhotos) ? record.publicationPhotos : []),
-        ...(Array.isArray(record.publicationVideos) ? record.publicationVideos : []),
-      ]
-        .flatMap((item) => {
-          if (!item || typeof item !== "object" || Array.isArray(item)) return [];
-          const media = item as Record<string, unknown>;
-          return [media.id, media.uri, media.mediaUri, media.thumbnailUri];
-        })
-        .map((value) => String(value || "").trim().toLowerCase())
-        .filter(Boolean);
-
-      const matchesGroup =
-        groupKeys.some((key) => aliases.has(key)) ||
-        groupMediaIds.some((key) => mediaIds.has(key));
-
-      if (!matchesGroup) return group;
-
-      const currentLikes = Number(record.likesCount || 0);
-      const nextLikes = Math.max(currentLikes, Number(params.likesCount || 0));
-
-      if (nextLikes === currentLikes) return group;
-
-      changed = true;
-
-      return {
-        ...record,
-        likesCount: nextLikes,
-        lastUpdatedAt: Date.now(),
-      };
-    });
-
-    if (!changed) return;
-
-    await AsyncStorage.setItem(
-      storageKey,
-      JSON.stringify({
-        ...parsed,
-        groups: nextGroups,
-        updatedAt: Date.now(),
-      }),
-    );
-  } catch {}
-}
-
-async function pushSabiChannelPublicLikeToBackend(params: {
-  chatId: string;
-  aliases: string[];
-  publicationPhotos: PublicMediaItem[];
-  publicationVideos: PublicMediaItem[];
-  likesCount: number;
-  liked: boolean;
-  mediaId: string;
-  mediaKind: MediaKind;
-  title?: string;
-  avatarUri?: string;
-  coverUri?: string;
-}) {
-  try {
-    const auth = getAuthSessionState();
-    const apiBaseUrl = String(auth.apiBaseUrl || "").replace(/\/+$/, "");
-    if (!apiBaseUrl) return null;
-
-    const headers: Record<string, string> = { "Content-Type": "application/json" };
-    if (auth.accessToken) headers.Authorization = "Bearer " + auth.accessToken;
-    if (auth.currentUserId) headers["X-User-ID"] = auth.currentUserId;
-
-    const response = await fetch(
-      apiBaseUrl + "/api/v2/messenger/channels/" + encodeURIComponent(params.chatId) + "/public-profile/like",
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          chatId: params.chatId,
-          channelId: params.chatId,
-          title: params.title || undefined,
-          name: params.title || undefined,
-          channelName: params.title || undefined,
-          avatarUri: params.avatarUri || undefined,
-          avatarUrl: params.avatarUri || undefined,
-          coverUri: params.coverUri || undefined,
-          publicationPhotos: params.publicationPhotos,
-          publicationVideos: params.publicationVideos,
-          publicPhotos: params.publicationPhotos,
-          publicVideos: params.publicationVideos,
-          likesCount: params.likesCount,
-          aliases: params.aliases,
-          liked: params.liked,
-          mediaId: params.mediaId,
-          mediaKind: params.mediaKind,
-        }),
-      },
-    );
-
-    if (!response.ok) return null;
-
-    const payload = await response.json();
-    const data = payload?.data || payload;
-    return data && typeof data === "object" ? data : null;
-  } catch {
-    return null;
-  }
-}
-
-async function pushSabiGroupPublicLikeToBackend(params: {
-  chatId: string;
-  aliases: string[];
-  publicationPhotos: PublicMediaItem[];
-  publicationVideos: PublicMediaItem[];
-  likesCount: number;
-  liked: boolean;
-  mediaId: string;
-  mediaKind: MediaKind;
-  title?: string;
-  avatarUri?: string;
-  coverUri?: string;
-}) {
-  try {
-    const auth = getAuthSessionState();
-    const apiBaseUrl = String(auth.apiBaseUrl || "").replace(/\/+$/, "");
-    if (!apiBaseUrl) return null;
-
-    const headers: Record<string, string> = { "Content-Type": "application/json" };
-    if (auth.accessToken) headers.Authorization = "Bearer " + auth.accessToken;
-    if (auth.currentUserId) headers["X-User-ID"] = auth.currentUserId;
-
-    const response = await fetch(
-      apiBaseUrl + "/api/v2/messenger/groups/" + encodeURIComponent(params.chatId) + "/public-profile/like",
-      {
-        method: "POST",
-        headers,
-        body: JSON.stringify({
-          chatId: params.chatId,
-          groupId: params.chatId,
-          title: params.title || undefined,
-          name: params.title || undefined,
-          groupName: params.title || undefined,
-          avatarUri: params.avatarUri || undefined,
-          avatarUrl: params.avatarUri || undefined,
-          coverUri: params.coverUri || undefined,
-          publicationPhotos: params.publicationPhotos,
-          publicationVideos: params.publicationVideos,
-          publicPhotos: params.publicationPhotos,
-          publicVideos: params.publicationVideos,
-          likesCount: params.likesCount,
-          aliases: params.aliases,
-          liked: params.liked,
-          mediaId: params.mediaId,
-          mediaKind: params.mediaKind,
-        }),
-      },
-    );
-
-    if (!response.ok) return null;
-
-    const payload = await response.json();
-    const data = payload?.data || payload;
-    return data && typeof data === "object" ? data : null;
-  } catch {
-    return null;
-  }
 }
 
 function goBackOrMessenger() {
@@ -1792,17 +1015,9 @@ function normalizePublicGiftList(value: unknown): PublicGiftItem[] {
 
   return value
     .map((item, index) => {
-      const raw = (item ?? {}) as Partial<PublicGiftItem> & Record<string, unknown>;
+      const raw = (item ?? {}) as Partial<PublicGiftItem>;
       const emoji = typeof raw.emoji === "string" ? raw.emoji : undefined;
-      const imageUri = pickPublicMediaUri(raw, [
-        "imageUri",
-        "thumbnailUri",
-        "iconUri",
-        "downloadUrl",
-        "fileUrl",
-        "url",
-        "uri",
-      ]);
+      const imageUri = typeof raw.imageUri === "string" ? raw.imageUri.trim() : "";
       const title = typeof raw.title === "string" ? raw.title : "";
 
       if (!emoji && !imageUri) return null;
@@ -2439,8 +1654,6 @@ export default function ChatPartnerInfoScreen() {
   const { language, t } = useI18n();
   const [themeState, setThemeState] = useState<MessengerThemeState>(getMessengerThemeState());
   const [settingsVisible, setSettingsVisible] = useState(false);
-  const openGroupSettingsParam = String((params as Record<string, unknown>).openGroupSettings || "").trim();
-  const autoOpenedGroupSettingsRef = useRef("");
   const [runtimeRevision, setRuntimeRevision] = useState(0);
   const [publicProfileRevision, setPublicProfileRevision] = useState(0);
 
@@ -2451,67 +1664,47 @@ export default function ChatPartnerInfoScreen() {
   );
 
   useEffect(() => {
-    // SABI_OPEN_GROUP_SETTINGS_FROM_CHAT_ROOM:
-    // Chat group menu "Добавить участника" opens the real group owner tools,
-    // not a fake notice.
-    if (openGroupSettingsParam !== "1") return;
-    if (normalizeRoomType(params.roomType) !== "group") return;
-
-    const key = String(params.chatId || params.id || "group");
-    if (autoOpenedGroupSettingsRef.current === key) return;
-
-    autoOpenedGroupSettingsRef.current = key;
-    setSettingsVisible(true);
-  }, [openGroupSettingsParam, params.chatId, params.id, params.roomType]);
-
-  useEffect(() => {
     let mounted = true;
 
-    void Promise.all([hydratePublicProfileStorage(), hydrateGroupPublicProfileStorage(), hydrateChannelPublicProfileStorage()]).then(() => {
+    void hydratePublicProfileStorage().then(() => {
       if (mounted) {
         setPublicProfileRevision((value) => value + 1);
       }
     });
 
-    const unsubscribePublicProfiles = subscribePublicProfiles(() => {
-      setPublicProfileRevision((value) => value + 1);
-    });
-    const unsubscribeGroupPublicProfiles = subscribeGroupPublicProfiles(() => {
-      setPublicProfileRevision((value) => value + 1);
-    });
-    const unsubscribeChannelPublicProfiles = subscribeChannelPublicProfiles(() => {
+    const unsubscribe = subscribePublicProfiles(() => {
       setPublicProfileRevision((value) => value + 1);
     });
 
     return () => {
       mounted = false;
-      unsubscribePublicProfiles();
-      unsubscribeGroupPublicProfiles();
-      unsubscribeChannelPublicProfiles();
+      unsubscribe();
     };
   }, []);
 
-  const refreshDirectPublicProfileFromBackend = useCallback(
-    async (isActive?: () => boolean): Promise<boolean> => {
-      const roomTypeForFetch = normalizeRoomType(params.roomType);
-      if (roomTypeForFetch !== "direct") return false;
+  useEffect(() => {
+    const roomTypeForFetch = normalizeRoomType(params.roomType);
+    if (roomTypeForFetch !== "direct") return;
 
-      const identifiers = [
-        typeof params.peerId === "string" ? params.peerId : "",
-        typeof params.partnerId === "string" ? params.partnerId : "",
-        typeof params.targetUserId === "string" ? params.targetUserId : "",
-        typeof params.userId === "string" ? params.userId : "",
-        typeof params.chatId === "string" ? params.chatId : "",
-        typeof params.id === "string" ? params.id : "",
-        typeof params.phone === "string" ? params.phone : "",
-        typeof params.handle === "string" ? params.handle : "",
-      ]
-        .map((value) => String(value || "").trim())
-        .filter(Boolean);
+    const identifiers = [
+      typeof params.peerId === "string" ? params.peerId : "",
+      typeof params.partnerId === "string" ? params.partnerId : "",
+      typeof params.targetUserId === "string" ? params.targetUserId : "",
+      typeof params.userId === "string" ? params.userId : "",
+      typeof params.chatId === "string" ? params.chatId : "",
+      typeof params.id === "string" ? params.id : "",
+      typeof params.phone === "string" ? params.phone : "",
+      typeof params.handle === "string" ? params.handle : "",
+    ]
+      .map((value) => String(value || "").trim())
+      .filter(Boolean);
 
-      const uniqueIdentifiers = Array.from(new Set(identifiers));
-      if (!uniqueIdentifiers.length) return false;
+    const uniqueIdentifiers = Array.from(new Set(identifiers));
+    if (!uniqueIdentifiers.length) return;
 
+    let active = true;
+
+    void (async () => {
       const auth = getAuthSessionState();
 
       for (const identifier of uniqueIdentifiers) {
@@ -2523,7 +1716,7 @@ export default function ChatPartnerInfoScreen() {
             timeoutMs: 18000,
           });
 
-          if (isActive && !isActive()) return false;
+          if (!active) return;
 
           const aliases = Array.from(
             new Set([
@@ -2537,58 +1730,25 @@ export default function ChatPartnerInfoScreen() {
             ].map((value) => String(value || "").trim()).filter(Boolean)),
           );
 
-          const primaryKey = surface.chatId || surface.userId || identifier;
-          savePublicProfile(primaryKey, surface as any, aliases);
+          savePublicProfile(surface.chatId || identifier, surface as any, aliases);
           aliases.forEach((alias) => {
-            if (alias && alias !== primaryKey) {
+            if (alias && alias !== (surface.chatId || identifier)) {
               savePublicProfile(alias, surface as any, aliases);
             }
           });
 
           setPublicProfileRevision((value) => value + 1);
-          return true;
+          return;
         } catch {
           // Try next identifier. Public profile fetch must not block the info screen.
         }
       }
-
-      return false;
-    },
-    [params.chatId, params.handle, params.id, params.partnerId, params.peerId, params.phone, params.roomType, params.targetUserId, params.userId],
-  );
-
-  useEffect(() => {
-    let active = true;
-
-    void refreshDirectPublicProfileFromBackend(() => active);
+    })();
 
     return () => {
       active = false;
     };
-  }, [refreshDirectPublicProfileFromBackend]);
-
-  useFocusEffect(
-    useCallback(() => {
-      let active = true;
-
-      void (async () => {
-        await Promise.all([
-          refreshPublicProfileStorage(),
-          refreshGroupPublicProfileStorage(),
-          refreshChannelPublicProfileStorage(),
-        ]);
-
-        if (!active) return;
-
-        setPublicProfileRevision((value) => value + 1);
-        await refreshDirectPublicProfileFromBackend(() => active);
-      })();
-
-      return () => {
-        active = false;
-      };
-    }, [refreshDirectPublicProfileFromBackend]),
-  );
+  }, [params.chatId, params.handle, params.id, params.partnerId, params.peerId, params.phone, params.roomType, params.targetUserId, params.userId]);
 
   const roomType = normalizeRoomType(params.roomType);
   const isBot = String(params.isBot || "0") === "1";
@@ -2703,7 +1863,7 @@ export default function ChatPartnerInfoScreen() {
       autoBanRepeatedSpam: txAny(["messenger.autoBanRepeatedSpam"], "Auto ban repeated spam"),
       blacklist: txAny(["messenger.blacklist"], "Blacklist"),
       blacklistSubtitle: txAny(["messenger.blacklistSubtitle"], "Blocked users cannot write or return until removed."),
-      inviteLink: txAny(["messenger.inviteLink"], "Ссылка приглашения"),
+      inviteLink: txAny(["messenger.inviteLink"], "Invite link"),
       regenerateLink: txAny(["messenger.regenerateLink"], "Regenerate invite link"),
       sendInvite: txAny(["messenger.sendInvite"], "Send invitation"),
       ownerTools: txAny(["messenger.ownerTools"], "Owner tools"),
@@ -2750,27 +1910,20 @@ export default function ChatPartnerInfoScreen() {
         ? params.id.trim()
         : "partner";
 
-  const routePartnerName = typeof params.name === "string" && params.name.trim() ? params.name.trim() : "";
-  const routePartnerHandle =
+  const partnerName = typeof params.name === "string" && params.name.trim() ? params.name : texts.unknownUser;
+  const partnerHandle =
     typeof params.handle === "string" && params.handle.trim()
       ? params.handle.trim()
-      : "";
+      : buildHandle(partnerName);
+  const partnerLetter = resolveAvatarLetter(params.avatarLetter, partnerName);
   const partnerVerified = params.verified === "1" || String(params.verified).toLowerCase() === "true";
   const rawGroupSharedProfile = useMemo(
     () => (roomType === "group" && chatId ? hydrateGroupPublicProfile(chatId) : null),
-    [chatId, publicProfileRevision, roomType],
+    [chatId, roomType],
   );
   const sharedGroupProfile = useMemo(
     () => pickMeaningfulProfile(rawGroupSharedProfile),
     [rawGroupSharedProfile],
-  );
-  const rawChannelSharedProfile = useMemo(
-    () => (roomType === "channel" && chatId ? hydrateChannelPublicProfile(chatId) : null),
-    [chatId, publicProfileRevision, roomType],
-  );
-  const sharedChannelProfile = useMemo(
-    () => pickMeaningfulProfile(rawChannelSharedProfile),
-    [rawChannelSharedProfile],
   );
   const rawSharedPublicProfile = useMemo(
     () => (chatId ? hydratePublicProfile(chatId) : null),
@@ -2803,47 +1956,10 @@ export default function ChatPartnerInfoScreen() {
     () => pickMeaningfulProfile(peerPublicProfile, sharedPublicProfile),
     [peerPublicProfile, sharedPublicProfile],
   );
-  const activePublicProfile = useMemo(
-    () =>
-      roomType === "group"
-        ? sharedGroupProfile
-        : roomType === "channel"
-          ? sharedChannelProfile
-          : resolvedDirectPublicProfile,
-    [resolvedDirectPublicProfile, roomType, sharedChannelProfile, sharedGroupProfile],
-  );
-  const partnerName =
-    readPublicProfileText(activePublicProfile, [
-      "displayName",
-      "publicName",
-      "name",
-      "title",
-      "groupName",
-      "channelName",
-      "botName",
-    ]) ||
-    routePartnerName ||
-    texts.unknownUser;
-  const partnerHandle =
-    readPublicProfileText(activePublicProfile, [
-      "publicUsername",
-      "username",
-      "handle",
-      "slug",
-      "shortName",
-      "groupUsername",
-      "channelUsername",
-      "botHandle",
-    ]) ||
-    routePartnerHandle ||
-    buildHandle(partnerName);
-  const partnerLetter = resolveAvatarLetter(params.avatarLetter, partnerName);
   const avatarUri =
     roomType === "group" && typeof sharedGroupProfile?.avatarUri === "string" && sharedGroupProfile.avatarUri.trim()
       ? sharedGroupProfile.avatarUri.trim()
-      : roomType === "channel" && typeof sharedChannelProfile?.avatarUri === "string" && sharedChannelProfile.avatarUri.trim()
-        ? sharedChannelProfile.avatarUri.trim()
-        : typeof resolvedDirectPublicProfile?.avatarUri === "string" && resolvedDirectPublicProfile.avatarUri.trim()
+      : typeof resolvedDirectPublicProfile?.avatarUri === "string" && resolvedDirectPublicProfile.avatarUri.trim()
         ? resolvedDirectPublicProfile.avatarUri.trim()
         : typeof params.avatarUrl === "string" && params.avatarUrl.trim()
           ? params.avatarUrl.trim()
@@ -2851,8 +1967,7 @@ export default function ChatPartnerInfoScreen() {
             ? params.photoUrl.trim()
             : "";
   const partnerBirthday =
-    readPublicProfileText(activePublicProfile, ["birthday", "birthDate", "dateOfBirth", "publicBirthday"]) ||
-    (typeof params.birthday === "string" && params.birthday.trim() ? params.birthday.trim() : texts.defaultBirthday);
+    typeof params.birthday === "string" && params.birthday.trim() ? params.birthday.trim() : texts.defaultBirthday;
   const routeUserId =
     typeof params.userId === "string" && params.userId.trim()
       ? params.userId.trim()
@@ -2985,16 +2100,16 @@ export default function ChatPartnerInfoScreen() {
     const runtimePhone = readProfilePhone(profile);
     if (runtimePhone) return runtimePhone;
 
-    const publicPhone = readPublicProfileText(activePublicProfile, [
-      "phone",
-      "partnerPhone",
-      "peerPhone",
-      "contactPhone",
-      "mobile",
-      "msisdn",
-      "publicPhone",
-      "profilePhone",
-    ]);
+    const publicPhone = readPublicProfileText(resolvedDirectPublicProfile, [
+    "phone",
+    "partnerPhone",
+    "peerPhone",
+    "contactPhone",
+    "mobile",
+    "msisdn",
+    "publicPhone",
+    "profilePhone",
+  ]);
     if (publicPhone) return publicPhone;
 
     const routePhone = String(params.phone ?? "").trim();
@@ -3003,19 +2118,17 @@ export default function ChatPartnerInfoScreen() {
     }
 
     return "—";
-  }, [activePublicProfile, params.phone, profile]);
+  }, [params.phone, profile, resolvedDirectPublicProfile]);
 
   const publicProfileInfoText = useMemo(
     () =>
-      readPublicProfileText(activePublicProfile, [
+      readPublicProfileText(resolvedDirectPublicProfile, [
         "publicBio",
         "bio",
-        "about",
-        "description",
         "publicSubtitle",
         "subtitle",
       ]),
-    [activePublicProfile],
+    [resolvedDirectPublicProfile],
   );
 
   const runtimeState = useMemo(() => getGroupModerationState(chatId || "group:temp"), [chatId, runtimeRevision]);
@@ -3088,11 +2201,9 @@ export default function ChatPartnerInfoScreen() {
   const initialPublicPhotos = useMemo(() => {
     const source = roomType === "group" && Array.isArray(sharedGroupProfile?.publicationPhotos) && sharedGroupProfile.publicationPhotos.length
       ? sharedGroupProfile.publicationPhotos
-      : roomType === "channel" && Array.isArray(sharedChannelProfile?.publicationPhotos) && sharedChannelProfile.publicationPhotos.length
-        ? sharedChannelProfile.publicationPhotos
-        : Array.isArray(resolvedDirectPublicProfile?.publicationPhotos) && resolvedDirectPublicProfile.publicationPhotos.length
+      : Array.isArray(resolvedDirectPublicProfile?.publicationPhotos) && resolvedDirectPublicProfile.publicationPhotos.length
         ? resolvedDirectPublicProfile.publicationPhotos
-        : parseJsonArray<PublicMediaItem>(pickPublicMediaRoutePayload(params.publicPhotos, params.publicationPhotos));
+        : parseJsonArray<PublicMediaItem>(params.publicPhotos);
 
     return normalizePublicMediaList(source)
       .filter((item) => item.kind === "photo")
@@ -3102,16 +2213,14 @@ export default function ChatPartnerInfoScreen() {
         kind: "photo" as const,
         liked: Boolean(item.liked),
       }));
-  }, [params.publicPhotos, params.publicationPhotos, resolvedDirectPublicProfile, roomType, sharedChannelProfile, sharedGroupProfile]);
+  }, [params.publicPhotos, resolvedDirectPublicProfile, roomType, sharedGroupProfile]);
 
   const initialPublicVideos = useMemo(() => {
     const source = roomType === "group" && Array.isArray(sharedGroupProfile?.publicationVideos) && sharedGroupProfile.publicationVideos.length
       ? sharedGroupProfile.publicationVideos
-      : roomType === "channel" && Array.isArray(sharedChannelProfile?.publicationVideos) && sharedChannelProfile.publicationVideos.length
-        ? sharedChannelProfile.publicationVideos
-        : Array.isArray(resolvedDirectPublicProfile?.publicationVideos) && resolvedDirectPublicProfile.publicationVideos.length
+      : Array.isArray(resolvedDirectPublicProfile?.publicationVideos) && resolvedDirectPublicProfile.publicationVideos.length
         ? resolvedDirectPublicProfile.publicationVideos
-        : parseJsonArray<PublicMediaItem>(pickPublicMediaRoutePayload(params.publicVideos, params.publicationVideos));
+        : parseJsonArray<PublicMediaItem>(params.publicVideos);
 
     return normalizePublicMediaList(source)
       .filter((item) => item.kind === "video")
@@ -3121,7 +2230,7 @@ export default function ChatPartnerInfoScreen() {
         kind: "video" as const,
         liked: Boolean(item.liked),
       }));
-  }, [params.publicVideos, params.publicationVideos, resolvedDirectPublicProfile, roomType, sharedChannelProfile, sharedGroupProfile]);
+  }, [params.publicVideos, resolvedDirectPublicProfile, roomType, sharedGroupProfile]);
 
   const initialArchive = useMemo<PublicMediaItem[]>(
     () =>
@@ -3138,10 +2247,12 @@ export default function ChatPartnerInfoScreen() {
     [params.archivePublications],
   );
 
-  const publicProfileGiftsSource = useMemo<PublicGiftItem[]>(() => {
-    if (!activePublicProfile || typeof activePublicProfile !== "object") return [];
+  const groupPublicGiftsSource = useMemo<PublicGiftItem[]>(() => {
+    if (roomType !== "group" || !sharedGroupProfile || typeof sharedGroupProfile !== "object") {
+      return [];
+    }
 
-    const profile = activePublicProfile as {
+    const profile = sharedGroupProfile as {
       publicGifts?: PublicGiftItem[];
       publicationGifts?: PublicGiftItem[];
       gifts?: PublicGiftItem[];
@@ -3152,46 +2263,53 @@ export default function ChatPartnerInfoScreen() {
     if (Array.isArray(profile.gifts)) return profile.gifts;
 
     return [];
-  }, [activePublicProfile]);
+  }, [roomType, sharedGroupProfile]);
 
   const publicGifts = useMemo(
-    () => {
-      const source = publicProfileGiftsSource.length
-        ? publicProfileGiftsSource
-        : parseJsonArray<PublicGiftItem>(params.publicGifts);
-
-      return normalizePublicGiftList(source).map((item, index) => ({
-        id: item.id || `gift-${index}`,
-        title: item.title || "",
-        emoji: item.emoji,
-        imageUri: item.imageUri,
-      }));
-    },
-    [params.publicGifts, publicProfileGiftsSource],
+    () =>
+      roomType === "group" && groupPublicGiftsSource.length
+        ? groupPublicGiftsSource
+            .filter(
+              (item) =>
+                item &&
+                ((typeof item.emoji === "string" && item.emoji) ||
+                  (typeof item.imageUri === "string" && item.imageUri.trim())),
+            )
+            .map((item, index) => ({
+              id: item.id || `gift-${index}`,
+              title: item.title || "",
+              emoji: item.emoji,
+              imageUri: item.imageUri,
+            }))
+        : Array.isArray(resolvedDirectPublicProfile?.publicGifts) && resolvedDirectPublicProfile.publicGifts.length
+          ? resolvedDirectPublicProfile.publicGifts
+              .filter(
+                (item) =>
+                  item &&
+                  ((typeof item.emoji === "string" && item.emoji) ||
+                    (typeof item.imageUri === "string" && item.imageUri.trim())),
+              )
+              .map((item, index) => ({
+                id: item.id || `gift-${index}`,
+                title: item.title || "",
+                emoji: item.emoji,
+                imageUri: item.imageUri,
+              }))
+          : parseJsonArray<PublicGiftItem>(params.publicGifts)
+              .filter(
+                (item) =>
+                  item &&
+                  ((typeof item.emoji === "string" && item.emoji) ||
+                    (typeof item.imageUri === "string" && item.imageUri.trim())),
+              )
+              .map((item, index) => ({
+                id: item.id || `gift-${index}`,
+                title: item.title || "",
+                emoji: item.emoji,
+                imageUri: item.imageUri,
+              })),
+    [groupPublicGiftsSource, params.publicGifts, resolvedDirectPublicProfile, roomType],
   );
-
-  const publicGiftsCount = useMemo(() => {
-    const routeGiftsCountParam = Array.isArray(params.publicGiftsCount)
-      ? params.publicGiftsCount[0]
-      : typeof params.publicGiftsCount === "string"
-        ? params.publicGiftsCount
-        : undefined;
-    const routeGiftsCount = routeGiftsCountParam && routeGiftsCountParam.trim() ? Number(routeGiftsCountParam) : NaN;
-    const profileGiftsCount = readPublicProfileNumber(activePublicProfile, [
-      "publicGiftsCount",
-      "publicationGiftsCount",
-      "giftsCount",
-      "giftCount",
-      "receivedGiftsCount",
-    ]);
-
-    return Math.max(
-      0,
-      publicGifts.length,
-      profileGiftsCount ?? 0,
-      Number.isFinite(routeGiftsCount) ? Math.max(0, Math.floor(routeGiftsCount)) : 0,
-    );
-  }, [activePublicProfile, params.publicGiftsCount, publicGifts.length]);
 
   const likesParam = Array.isArray(params.likesCount) ? params.likesCount[0] : params.likesCount;
   const initialLikesCount = typeof likesParam === "string" && likesParam.trim() ? Number(likesParam) : undefined;
@@ -3207,27 +2325,8 @@ export default function ChatPartnerInfoScreen() {
   const [hasPresenceSignal, setHasPresenceSignal] = useState(() =>
     roomType !== "direct" ? true : routePresenceOnline !== null || Boolean(routeLastSeenAt),
   );
-  const peerKernelPresence = useMessengerPresence(roomType === "direct" ? routePeerId : null);
-  const peerKernelPresenceKnown = Boolean(peerKernelPresence?.userId);
-  const peerKernelOnline =
-    peerKernelPresence?.status === "online"
-      ? true
-      : peerKernelPresence?.status === "offline"
-        ? false
-        : peerKernelPresence?.isOnline === true;
-  const peerKernelLastSeenAt =
-    typeof peerKernelPresence?.lastSeenAt === "string" && peerKernelPresence.lastSeenAt.trim()
-      ? peerKernelPresence.lastSeenAt.trim()
-      : peerKernelPresence?.status === "offline" && typeof peerKernelPresence?.updatedAt === "string" && peerKernelPresence.updatedAt.trim()
-        ? peerKernelPresence.updatedAt.trim()
-        : null;
-  const effectiveIsOnline = roomType === "direct" && peerKernelPresenceKnown ? peerKernelOnline : isOnline;
-  const effectiveLastSeenAt = roomType === "direct" && peerKernelPresenceKnown ? peerKernelLastSeenAt : lastSeenAt;
-  const effectiveHasPresenceSignal = hasPresenceSignal || peerKernelPresenceKnown;
   const [photoModalUri, setPhotoModalUri] = useState<string | null>(null);
   const [videoModalUri, setVideoModalUri] = useState<string | null>(null);
-  const [photoModalFailed, setPhotoModalFailed] = useState(false);
-  const [videoModalFailed, setVideoModalFailed] = useState(false);
   const [videosLiked, setVideosLiked] = useState<Record<string, boolean>>(
     Object.fromEntries(initialPublicVideos.map((item) => [item.id, Boolean(item.liked)])),
   );
@@ -3240,10 +2339,8 @@ export default function ChatPartnerInfoScreen() {
       let changed = false;
       const next = { ...current };
       initialPublicPhotos.forEach((item) => {
-        if (!item?.id) return;
-        const nextLiked = Boolean(item.liked);
-        if (next[item.id] === nextLiked) return;
-        next[item.id] = nextLiked;
+        if (!item?.id || item.id in next) return;
+        next[item.id] = Boolean(item.liked);
         changed = true;
       });
       return changed ? next : current;
@@ -3255,23 +2352,13 @@ export default function ChatPartnerInfoScreen() {
       let changed = false;
       const next = { ...current };
       initialPublicVideos.forEach((item) => {
-        if (!item?.id) return;
-        const nextLiked = Boolean(item.liked);
-        if (next[item.id] === nextLiked) return;
-        next[item.id] = nextLiked;
+        if (!item?.id || item.id in next) return;
+        next[item.id] = Boolean(item.liked);
         changed = true;
       });
       return changed ? next : current;
     });
   }, [initialPublicVideos]);
-
-  useEffect(() => {
-    setPhotoModalFailed(false);
-  }, [photoModalUri]);
-
-  useEffect(() => {
-    setVideoModalFailed(false);
-  }, [videoModalUri]);
 
   const [muted, setMuted] = useState(Boolean(profile?.muted));
   const [pinned, setPinned] = useState(Boolean(profile?.pinned));
@@ -3514,20 +2601,20 @@ export default function ChatPartnerInfoScreen() {
 
   const displayStatus = useMemo(() => {
     if (roomType !== "direct") return "";
-    if (effectiveIsOnline) return texts.online;
-    if (effectiveLastSeenAt) {
-      return formatLastSeen(effectiveLastSeenAt, normalizeLocaleCode(language), {
+    if (isOnline) return texts.online;
+    if (lastSeenAt) {
+      return formatLastSeen(lastSeenAt, normalizeLocaleCode(language), {
         offline: texts.offline,
         lastSeenToday: texts.lastSeenToday,
         lastSeenYesterday: texts.lastSeenYesterday,
         lastSeenDate: texts.lastSeenDate,
       });
     }
-    if (!effectiveHasPresenceSignal && routeStatusText && parseOnlineStatusText(routeStatusText) !== true) {
+    if (!hasPresenceSignal && routeStatusText) {
       return routeStatusText;
     }
     return texts.offline;
-  }, [effectiveHasPresenceSignal, effectiveIsOnline, effectiveLastSeenAt, language, roomType, routeStatusText, texts]);
+  }, [hasPresenceSignal, isOnline, language, lastSeenAt, roomType, routeStatusText, texts]);
 
   const publications = useMemo(() => [...initialPublicPhotos, ...initialPublicVideos], [initialPublicPhotos, initialPublicVideos]);
 
@@ -3538,15 +2625,13 @@ export default function ChatPartnerInfoScreen() {
     const storedCount =
       roomType === "group" && typeof sharedGroupProfile?.likesCount === "number"
         ? sharedGroupProfile.likesCount
-        : roomType === "channel" && typeof sharedChannelProfile?.likesCount === "number"
-          ? sharedChannelProfile.likesCount
-          : typeof resolvedDirectPublicProfile?.likesCount === "number" && Number.isFinite(resolvedDirectPublicProfile.likesCount)
+        : typeof resolvedDirectPublicProfile?.likesCount === "number" && Number.isFinite(resolvedDirectPublicProfile.likesCount)
           ? resolvedDirectPublicProfile.likesCount
           : typeof initialLikesCount === "number" && Number.isFinite(initialLikesCount)
             ? initialLikesCount
             : 0;
     return Math.max(0, storedCount, likedMediaCount);
-  }, [initialLikesCount, photosLiked, resolvedDirectPublicProfile, roomType, sharedChannelProfile, sharedGroupProfile, videosLiked]);
+  }, [initialLikesCount, photosLiked, resolvedDirectPublicProfile, roomType, sharedGroupProfile, videosLiked]);
 
   const tileGap = 12;
   const tileWidth = (width - 32 - tileGap * 2) / 3;
@@ -3555,10 +2640,7 @@ export default function ChatPartnerInfoScreen() {
 
   const routeMembersCount = parseIntParam(params.membersCount, parseIntParam(params.subtitle, 0));
   const membersCount = roomType === "group" && groupMemberRecords.length ? groupMemberRecords.length : routeMembersCount;
-  const subscribersCount =
-    roomType === "channel" && typeof sharedChannelProfile?.subscribersCount === "number"
-      ? Math.max(0, sharedChannelProfile.subscribersCount)
-      : parseIntParam(params.subscribersCount, parseIntParam(params.subtitle, roomType === "channel" ? 0 : 0));
+  const subscribersCount = parseIntParam(params.subscribersCount, parseIntParam(params.subtitle, roomType === "channel" ? 0 : 0));
   const botKindLabel =
     String(params.botKind || "").trim().toLowerCase() === "business"
       ? texts.botBusiness
@@ -3590,6 +2672,12 @@ export default function ChatPartnerInfoScreen() {
       nextPhotosLiked: Record<string, boolean>,
       nextVideosLiked: Record<string, boolean>,
     ) => {
+      if (roomType !== "direct") return;
+
+      const source = resolvedDirectPublicProfile;
+      const key = String(source?.chatId || source?.userId || routePeerId || chatId || "").trim();
+      if (!key) return;
+
       const applyLikes = (
         items: PublicMediaItem[],
         likedMap: Record<string, boolean>,
@@ -3601,182 +2689,12 @@ export default function ChatPartnerInfoScreen() {
             ...media,
             kind,
             liked:
-              publicMediaLikeMatches(media, item)
+              media.id === item.id
                 ? nextLiked
                 : typeof likedMap[media.id] === "boolean"
                   ? likedMap[media.id]
                   : Boolean(media.liked),
           }));
-
-      if (roomType === "channel") {
-        const source = sharedChannelProfile;
-        const key = String(source?.chatId || chatId || params.chatId || params.id || "").trim();
-        if (!key) return;
-
-        const sourcePhotos = Array.isArray(source?.publicationPhotos)
-          ? (source.publicationPhotos as PublicMediaItem[])
-          : initialPublicPhotos;
-        const sourceVideos = Array.isArray(source?.publicationVideos)
-          ? (source.publicationVideos as PublicMediaItem[])
-          : initialPublicVideos;
-
-        const nextPhotos = applyLikes(sourcePhotos, nextPhotosLiked, "photo");
-        const nextVideos = applyLikes(sourceVideos, nextVideosLiked, "video");
-        const nextLikesCount = countLikedPublicMedia(nextPhotos, nextVideos);
-        const aliases = buildSabiChannelPublicLikeAliases([
-          key,
-          chatId,
-          params.chatId,
-          params.id,
-          params.handle,
-          params.name,
-          partnerName,
-          source,
-          Array.isArray(source?.aliases) ? source.aliases : [],
-          nextPhotos,
-          nextVideos,
-        ]);
-
-        saveChannelPublicProfile(
-          key,
-          {
-            ...(source || {}),
-            chatId: key,
-            publicationPhotos: nextPhotos,
-            publicationVideos: nextVideos,
-            likesCount: nextLikesCount,
-            aliases,
-            updatedAt: Date.now(),
-          },
-          aliases,
-        );
-
-        const backendSurface = await pushSabiChannelPublicLikeToBackend({
-          chatId: key,
-          aliases,
-          publicationPhotos: nextPhotos,
-          publicationVideos: nextVideos,
-          likesCount: nextLikesCount,
-          liked: nextLiked,
-          mediaId: item.id,
-          mediaKind: item.kind,
-          title: partnerName,
-          avatarUri: typeof source?.avatarUri === "string" ? source.avatarUri : avatarUri,
-          coverUri: typeof source?.coverUri === "string" ? source.coverUri : undefined,
-        });
-
-        if (backendSurface) {
-          const backendAliases = Array.from(
-            new Set(
-              [
-                key,
-                backendSurface.chatId,
-                backendSurface.userId,
-                ...(Array.isArray(backendSurface.aliases) ? backendSurface.aliases : []),
-                ...aliases,
-              ]
-                .map((value) => String(value || "").trim())
-                .filter(Boolean),
-            ),
-          );
-
-          saveChannelPublicProfile(
-            String(backendSurface.chatId || key),
-            backendSurface,
-            backendAliases,
-          );
-        }
-
-        return;
-      }
-
-      if (roomType === "group") {
-        const source = sharedGroupProfile;
-        const key = String(source?.chatId || chatId || params.chatId || params.id || "").trim();
-        if (!key) return;
-
-        const sourcePhotos = Array.isArray(source?.publicationPhotos)
-          ? (source.publicationPhotos as PublicMediaItem[])
-          : initialPublicPhotos;
-        const sourceVideos = Array.isArray(source?.publicationVideos)
-          ? (source.publicationVideos as PublicMediaItem[])
-          : initialPublicVideos;
-
-        const nextPhotos = applyLikes(sourcePhotos, nextPhotosLiked, "photo");
-        const nextVideos = applyLikes(sourceVideos, nextVideosLiked, "video");
-        const nextLikesCount = countLikedPublicMedia(nextPhotos, nextVideos);
-        const aliases = buildSabiGroupPublicLikeAliases([
-          key,
-          chatId,
-          params.chatId,
-          params.id,
-          params.handle,
-          params.name,
-          partnerName,
-          source,
-          Array.isArray(source?.aliases) ? source.aliases : [],
-          nextPhotos,
-          nextVideos,
-        ]);
-
-        saveGroupPublicProfile(
-          key,
-          {
-            ...(source || {}),
-            chatId: key,
-            publicationPhotos: nextPhotos,
-            publicationVideos: nextVideos,
-            likesCount: nextLikesCount,
-            aliases,
-            updatedAt: Date.now(),
-          },
-          aliases,
-        );
-
-        const backendSurface = await pushSabiGroupPublicLikeToBackend({
-          chatId: key,
-          aliases,
-          publicationPhotos: nextPhotos,
-          publicationVideos: nextVideos,
-          likesCount: nextLikesCount,
-          liked: nextLiked,
-          mediaId: item.id,
-          mediaKind: item.kind,
-          title: partnerName,
-          avatarUri: typeof source?.avatarUri === "string" ? source.avatarUri : avatarUri,
-          coverUri: typeof source?.coverUri === "string" ? source.coverUri : undefined,
-        });
-
-        if (backendSurface) {
-          const backendAliases = Array.from(
-            new Set(
-              [
-                key,
-                backendSurface.chatId,
-                backendSurface.userId,
-                ...(Array.isArray(backendSurface.aliases) ? backendSurface.aliases : []),
-                ...aliases,
-              ]
-                .map((value) => String(value || "").trim())
-                .filter(Boolean),
-            ),
-          );
-
-          saveGroupPublicProfile(
-            String(backendSurface.chatId || key),
-            backendSurface,
-            backendAliases,
-          );
-        }
-
-        return;
-      }
-
-      if (roomType !== "direct") return;
-
-      const source = resolvedDirectPublicProfile;
-      const key = String(source?.chatId || source?.userId || routePeerId || chatId || "").trim();
-      if (!key) return;
 
       const sourcePhotos = Array.isArray(source?.publicationPhotos)
         ? (source.publicationPhotos as PublicMediaItem[])
@@ -3864,25 +2782,18 @@ export default function ChatPartnerInfoScreen() {
       }
     },
     [
-      avatarUri,
       chatId,
       initialPublicPhotos,
       initialPublicVideos,
-      params.chatId,
       params.handle,
-      params.id,
-      params.name,
       params.partnerId,
       params.peerId,
       params.phone,
       params.targetUserId,
       params.userId,
-      partnerName,
       resolvedDirectPublicProfile,
       roomType,
       routePeerId,
-      sharedChannelProfile,
-      sharedGroupProfile,
     ],
   );
 
@@ -3941,13 +2852,23 @@ export default function ChatPartnerInfoScreen() {
         likesCount: String(
           roomType === "group" && typeof sharedGroupProfile?.likesCount === "number"
             ? sharedGroupProfile.likesCount
-            : roomType === "channel" && typeof sharedChannelProfile?.likesCount === "number"
-              ? sharedChannelProfile.likesCount
-              : typeof resolvedDirectPublicProfile?.likesCount === "number"
-                ? resolvedDirectPublicProfile.likesCount
-                : initialLikesCount || 0,
+            : typeof resolvedDirectPublicProfile?.likesCount === "number"
+              ? resolvedDirectPublicProfile.likesCount
+              : initialLikesCount || 0,
         ),
-        publicGiftsCount: String(publicGiftsCount),
+        publicGiftsCount: Array.isArray(params.publicGiftsCount)
+          ? params.publicGiftsCount[0]
+          : typeof params.publicGiftsCount === "string"
+            ? params.publicGiftsCount
+            : roomType === "group"
+              ? String(
+                  typeof (sharedGroupProfile as { publicGiftsCount?: number } | null)?.publicGiftsCount === "number"
+                    ? (sharedGroupProfile as { publicGiftsCount?: number }).publicGiftsCount
+                    : publicGifts.length || 0,
+                )
+              : typeof resolvedDirectPublicProfile?.publicGiftsCount === "number"
+                ? String(resolvedDirectPublicProfile.publicGiftsCount)
+                : String(publicGifts.length || 0),
         publicGifts: JSON.stringify(publicGifts),
         isBot: isBot ? "1" : "0",
         botId: params.botId ? String(params.botId) : undefined,
@@ -3981,11 +2902,9 @@ export default function ChatPartnerInfoScreen() {
     partnerPhone,
     partnerVerified,
     publicGifts,
-    publicGiftsCount,
     roomType,
     scopeLabel,
     resolvedDirectPublicProfile,
-    sharedChannelProfile,
     sharedGroupProfile,
   ]);
 
@@ -4038,35 +2957,15 @@ export default function ChatPartnerInfoScreen() {
 
   const callMembersCount = countMessengerCallParticipants(initialCallParticipants);
 
-  const directCallPeerId = String(routePeerId || "").trim() && String(routePeerId || "").trim() !== String(presenceUserId || "").trim()
-    ? String(routePeerId || "").trim()
-    : "";
-
   const directCallRouteParams = useMemo(
-    () => {
-      const safePeerId = directCallPeerId || undefined;
-      const safeChatId = String(chatId || "direct").trim();
-      const fullCallId = [
-        "call",
-        safeChatId.replace(/:/g, "_"),
-        String(presenceUserId || "self").replace(/:/g, "_"),
-        String(safePeerId || "peer").replace(/:/g, "_"),
-        String(Date.now()),
-        Math.random().toString(36).slice(2, 10),
-      ].join(":");
-
-      return ({
+    () => ({
       id: chatId,
       chatId,
-      callId: fullCallId,
       userId: presenceUserId || undefined,
       selfId: presenceUserId || undefined,
-      peerId: safePeerId,
-      peerUserId: safePeerId,
-      partnerId: safePeerId,
-      targetUserId: safePeerId,
-      toUserId: safePeerId,
-      receiverUserId: safePeerId,
+      peerId: routePeerId || undefined,
+      partnerId: routePeerId || undefined,
+      targetUserId: routePeerId || undefined,
       roomType,
       name: partnerName,
       avatarLetter: partnerLetter,
@@ -4077,8 +2976,6 @@ export default function ChatPartnerInfoScreen() {
       membersCount: callMembersCount ? String(Math.max(callMembersCount, membersCount || 0)) : membersCount ? String(membersCount) : undefined,
       verified: partnerVerified ? "1" : "0",
       status: displayStatus || scopeLabel,
-      presenceOnline: roomType === "direct" ? (effectiveIsOnline ? "1" : "0") : undefined,
-      lastSeenAt: roomType === "direct" && effectiveLastSeenAt ? effectiveLastSeenAt : undefined,
       subtitle: scopeLabel,
       handle: partnerHandle,
       phone: partnerPhone !== "—" ? partnerPhone : undefined,
@@ -4093,17 +2990,13 @@ export default function ChatPartnerInfoScreen() {
           ? params.botKind.trim()
           : undefined,
       isBotOwnedByMe: isBotOwnedByMe ? "1" : "0",
-    });
-    },
+    }),
     [
       avatarUri,
       callMembersCount,
       callParticipantsParam,
       chatId,
-      directCallPeerId,
       displayStatus,
-      effectiveIsOnline,
-      effectiveLastSeenAt,
       isBot,
       isBotOwnedByMe,
       params.botHandle,
@@ -4127,13 +3020,7 @@ export default function ChatPartnerInfoScreen() {
     if (roomType !== "direct") return;
     router.push({
       pathname: "/calls/audio",
-      params: {
-        ...directCallRouteParams,
-        kind: "audio",
-        type: "audio",
-        callKind: "audio",
-        callType: "audio",
-      },
+      params: directCallRouteParams,
     } as never);
   }, [directCallRouteParams, roomType]);
 
@@ -4141,13 +3028,7 @@ export default function ChatPartnerInfoScreen() {
     if (roomType !== "direct") return;
     router.push({
       pathname: "/calls/video",
-      params: {
-        ...directCallRouteParams,
-        kind: "video",
-        type: "video",
-        callKind: "video",
-        callType: "video",
-      },
+      params: directCallRouteParams,
     } as never);
   }, [directCallRouteParams, roomType]);
 
@@ -4335,11 +3216,9 @@ export default function ChatPartnerInfoScreen() {
           const openUri = resolveMediaOpenUri(item);
           if (!openUri) return;
           if (item.kind === "video") {
-            setVideoModalFailed(false);
             setVideoModalUri(openUri);
             return;
           }
-          setPhotoModalFailed(false);
           setPhotoModalUri(openUri);
         }}
       >
@@ -4497,10 +3376,10 @@ export default function ChatPartnerInfoScreen() {
                     {roomType === "group" ? <Users size={14} color={theme.accentSoft} strokeWidth={2.4} /> : roomType === "channel" ? <Hash size={14} color={theme.accentSoft} strokeWidth={2.4} /> : <Gift size={14} color={PURPLE} strokeWidth={2.4} />}
                     <Text style={styles.statChipValue}>
                       {roomType === "group"
-                        ? formatCount(membersCount || visibleGroupMembers.length || groupMemberRecords.length || 0)
+                        ? formatCount(membersCount || 3)
                         : roomType === "channel"
                           ? formatCount(subscribersCount || 0)
-                          : formatCount(publicGiftsCount)}
+                          : formatCount(publicGifts.length)}
                     </Text>
                     <Text style={styles.statChipLabel}>
                       {roomType === "group" ? texts.members : roomType === "channel" ? texts.subscribers : texts.giftsPublic}
@@ -5074,13 +3953,7 @@ export default function ChatPartnerInfoScreen() {
                 <LinearGradient colors={["rgba(255,255,255,0.18)", "rgba(255,255,255,0.07)", "rgba(255,255,255,0.03)"]} style={styles.modalCloseGlass} />
                 <X size={20} strokeWidth={2.4} color="#FFFFFF" />
               </Pressable>
-              {photoModalUri && !photoModalFailed ? (
-                <Image source={{ uri: photoModalUri }} style={styles.fullscreenMedia} resizeMode="contain" onError={() => setPhotoModalFailed(true)} />
-              ) : photoModalUri ? (
-                <LinearGradient colors={["rgba(59,210,255,0.20)", "rgba(137,88,255,0.14)", "rgba(0,0,0,0.52)"]} style={styles.fullscreenFallback}>
-                  <ImageIcon size={36} color="#FFFFFF" strokeWidth={2.4} />
-                </LinearGradient>
-              ) : null}
+              {photoModalUri ? <Image source={{ uri: photoModalUri }} style={styles.fullscreenMedia} resizeMode="contain" /> : null}
             </View>
           </View>
         </Modal>
@@ -5093,20 +3966,8 @@ export default function ChatPartnerInfoScreen() {
                 <LinearGradient colors={["rgba(255,255,255,0.18)", "rgba(255,255,255,0.07)", "rgba(255,255,255,0.03)"]} style={styles.modalCloseGlass} />
                 <X size={20} strokeWidth={2.4} color="#FFFFFF" />
               </Pressable>
-              {videoModalUri && !videoModalFailed ? (
-                <Video
-                  source={{ uri: videoModalUri }}
-                  style={styles.fullscreenMedia}
-                  useNativeControls
-                  resizeMode={ResizeMode.CONTAIN}
-                  shouldPlay
-                  isLooping={false}
-                  onError={() => setVideoModalFailed(true)}
-                />
-              ) : videoModalUri ? (
-                <LinearGradient colors={["rgba(59,210,255,0.20)", "rgba(137,88,255,0.14)", "rgba(0,0,0,0.52)"]} style={styles.fullscreenFallback}>
-                  <Play size={42} color="#FFFFFF" fill="#FFFFFF" strokeWidth={2.4} />
-                </LinearGradient>
+              {videoModalUri ? (
+                <Video source={{ uri: videoModalUri }} style={styles.fullscreenMedia} useNativeControls resizeMode={ResizeMode.CONTAIN} shouldPlay isLooping={false} />
               ) : null}
             </View>
           </View>
@@ -5299,8 +4160,5 @@ const styles = StyleSheet.create<any>({
   modalClose: { position: "absolute", top: 56, right: 22, zIndex: 3, width: 44, height: 44, borderRadius: 22, alignItems: "center", justifyContent: "center", backgroundColor: "rgba(255,255,255,0.06)", overflow: "hidden" },
   modalCloseGlass: { ...StyleSheet.absoluteFillObject },
   fullscreenMedia: { width: "100%", height: "100%" },
-  fullscreenFallback: { width: "100%", height: "100%", alignItems: "center", justifyContent: "center" },
   pressed: { transform: [{ scale: 0.985 }], opacity: 0.96 },
 });
-
-

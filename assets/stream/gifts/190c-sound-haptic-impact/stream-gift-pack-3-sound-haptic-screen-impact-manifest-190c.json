@@ -1,0 +1,22 @@
+{
+  "version": "STREAM-GAME-GIFTS-190C",
+  "title": "Pack 3 sound, haptic and screen impact polish manifest",
+  "giftCount": 8,
+  "impactJsonFiles": [
+    "assets/stream/gifts/190c-sound-haptic-impact/solar-samurai-dash-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/mermaid-pearl-bloom-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/midnight-wolf-moon-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/candy-planet-pop-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/royal-peacock-fan-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/neon-shark-surge-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/angel-harp-glow-screen-impact-polish.json",
+    "assets/stream/gifts/190c-sound-haptic-impact/volcano-dragon-flare-screen-impact-polish.json"
+  ],
+  "actualSoundAutoplayRuntimeEnabledNow": false,
+  "actualMediaPlaybackRuntimeEnabledNow": false,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false
+}

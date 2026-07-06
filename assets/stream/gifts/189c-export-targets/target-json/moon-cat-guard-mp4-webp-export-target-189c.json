@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "moon-cat-guard",
+  "displayNameRu": "Лунный Кот",
+  "displayName": "Moon Cat Guard",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/moon-cat-guard-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/moon-cat-guard-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/moon-cat-guard-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/moon-cat-guard-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/moon-cat-guard-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3000,
+    "finaleDurationMs": 840
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#BFD7FF",
+    "light": "#F2F7FF"
+  }
+}

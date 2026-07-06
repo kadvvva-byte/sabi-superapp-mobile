@@ -1,10 +1,11 @@
-﻿import React, { useCallback, useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 import {
   Copy,
   Download,
   ExternalLink,
   Forward,
+  Languages,
   MoreHorizontal,
   Reply,
   Trash2,
@@ -112,6 +113,7 @@ export type OverflowAction = {
 const OVERFLOW_ICON_MAP: Record<string, LucideIcon> = {
   "download-outline": Download,
   "link-outline": ExternalLink,
+  "language-outline": Languages,
   "arrow-undo-outline": Reply,
   "trash-outline": Trash2,
   "copy-outline": Copy,

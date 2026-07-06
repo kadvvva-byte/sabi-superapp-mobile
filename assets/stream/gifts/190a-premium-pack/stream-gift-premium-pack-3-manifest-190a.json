@@ -1,0 +1,39 @@
+{
+  "version": "STREAM-GAME-GIFTS-190A",
+  "packLabel": "Pack 3 · Premium Live",
+  "giftCount": 8,
+  "cumulativeGiftCountAfter190A": 24,
+  "posterFallbacks": [
+    "assets/stream/gifts/190a-premium-pack/posters/solar-samurai-dash.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/mermaid-pearl-bloom.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/midnight-wolf-moon.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/candy-planet-pop.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/royal-peacock-fan.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/neon-shark-surge.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/angel-harp-glow.svg",
+    "assets/stream/gifts/190a-premium-pack/posters/volcano-dragon-flare.svg"
+  ],
+  "finalPolishPosters": [
+    "assets/stream/gifts/190a-premium-pack/final-polish/solar-samurai-dash-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/mermaid-pearl-bloom-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/midnight-wolf-moon-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/candy-planet-pop-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/royal-peacock-fan-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/neon-shark-surge-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/angel-harp-glow-final-polish.svg",
+    "assets/stream/gifts/190a-premium-pack/final-polish/volcano-dragon-flare-final-polish.svg"
+  ],
+  "soundCues": [
+    "assets/stream/gifts/190a-premium-pack/sound-cues/solar-samurai-dash-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/mermaid-pearl-bloom-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/midnight-wolf-moon-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/candy-planet-pop-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/royal-peacock-fan-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/neon-shark-surge-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/angel-harp-glow-cue.wav",
+    "assets/stream/gifts/190a-premium-pack/sound-cues/volcano-dragon-flare-cue.wav"
+  ],
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "sendRuntimeEnabledNow": false
+}

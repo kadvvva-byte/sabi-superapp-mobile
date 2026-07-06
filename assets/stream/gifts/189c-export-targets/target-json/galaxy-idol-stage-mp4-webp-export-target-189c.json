@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "galaxy-idol-stage",
+  "displayNameRu": "Галакси Айдол",
+  "displayName": "Galaxy Idol Stage",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/galaxy-idol-stage-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/galaxy-idol-stage-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/galaxy-idol-stage-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/galaxy-idol-stage-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/galaxy-idol-stage-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3000,
+    "finaleDurationMs": 840
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#FF8BE8",
+    "light": "#FFE0FA"
+  }
+}

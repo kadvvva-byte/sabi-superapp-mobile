@@ -1,0 +1,25 @@
+export const STREAM_113O_MODERATION_POLICY_ROLES_UIUX_PLAN = {
+  version: "STREAM-113O",
+  title: "AI admin moderation policy / roles UI/UX polish",
+  scope: "Stream live-room UI/UX only",
+  goals: [
+    "Make 18+ mode visible as a clear Stream policy checkpoint.",
+    "Show chat rules for profanity, insults and bullying before moderation actions.",
+    "Clarify Sabi AI controller, host and moderator roles without fake backend enforcement.",
+    "Add reaction levels: notice, warning, mute intent, remove preview, admin/backend enforcement later.",
+    "Keep clean phone mode and hide technical/debug panels from the main path.",
+  ],
+  safeBoundaries: {
+    walletTouched: false,
+    messengerTouched: false,
+    coreAiTouched: false,
+    fakeLiveAllowed: false,
+    fakeRealtimeAllowed: false,
+    fakeProviderAllowed: false,
+    fakePaymentsAllowed: false,
+    fakeAgeVerificationAllowed: false,
+    fakeAutoBanAllowed: false,
+    fakeLegalApprovalAllowed: false,
+    cinemaOrAnimeMixedIntoStream: false,
+  },
+} as const;

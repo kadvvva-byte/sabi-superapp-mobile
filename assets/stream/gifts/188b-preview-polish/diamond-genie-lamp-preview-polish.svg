@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Diamond Genie Live Preview">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#A98BFF"/><stop offset="1" stop-color="#BFFAFF"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.90"/><stop offset="0.45" stop-color="#FFFFFF" stop-opacity="0.22"/><stop offset="1" stop-color="#000000" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#09070D"/>
+  <rect x="26" y="26" width="460" height="460" rx="82" fill="url(#bg)" opacity="0.94"/>
+  <circle cx="256" cy="218" r="138" fill="url(#glow)"/>
+  <path d="M132 318 C188 250 220 360 256 284 C298 360 328 250 382 318" fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" opacity="0.82"/>
+  <path d="M164 186 C216 130 296 130 348 186" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.55"/>
+  <circle cx="174" cy="150" r="13" fill="#FFFFFF" opacity="0.76"/>
+  <circle cx="346" cy="154" r="10" fill="#FFFFFF" opacity="0.70"/>
+  <circle cx="398" cy="258" r="12" fill="#FFFFFF" opacity="0.55"/>
+  <circle cx="118" cy="258" r="10" fill="#FFFFFF" opacity="0.52"/>
+  <text x="256" y="394" font-family="Arial, sans-serif" font-size="28" font-weight="800" fill="#09070D" text-anchor="middle">188B LIVE PREVIEW</text>
+  <text x="256" y="430" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#09070D" text-anchor="middle">Алмазный Джинн</text>
+</svg>

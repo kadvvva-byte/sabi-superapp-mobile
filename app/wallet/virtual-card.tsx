@@ -6,6 +6,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 import WalletScreenShell from "../../src/modules/wallet/components/WalletScreenShell";
 import WalletProviderStatusPanel from "../../src/modules/wallet/components/WalletProviderStatusPanel";
+import PlayReadyFinancialFeatureDisclosurePanel from "../../src/modules/play-ready/mobile/PlayReadyFinancialFeatureDisclosurePanel";
 import { useI18n } from "../../src/shared/i18n";
 import {
   formatWalletCurrencyAmount,
@@ -221,6 +222,11 @@ export default function WalletVirtualCardScreen() {
         </View>
 
         <WalletProviderStatusPanel scope="virtual-card" compact />
+
+        <PlayReadyFinancialFeatureDisclosurePanel
+          compact
+          contextLabel="Virtual card issuer disclosure evidence"
+        />
 
         <SectionRow title={texts.useCaseTitle} hint={texts.useCaseHint} />
         <View style={styles.useCaseList}>

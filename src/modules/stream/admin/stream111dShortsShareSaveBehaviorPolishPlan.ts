@@ -1,0 +1,27 @@
+export const stream111dShortsShareSaveBehaviorPolishPlan = {
+  version: "111D",
+  title: "Shorts share/save behavior final polish",
+  scope: "mobile_stream_shorts_only",
+  changedFiles: [
+    "src/modules/stream/mobile/StreamShortVideoDraftPanel.tsx",
+    "src/modules/stream/mobile/streamShortVideoShareSaveBehaviorRuntime.ts",
+    "src/modules/stream/admin/stream111dShortsShareSaveBehaviorPolishPlan.ts",
+    "src/modules/stream/index.ts",
+  ],
+  guarantees: {
+    mainShortsScreenClean: true,
+    socialRailKeptOnViewer: ["Settings", "Like", "Comments", "Share", "Save"],
+    shareUsesUserFacingOptionsSheet: true,
+    shareCanOpenNativeShareIntent: true,
+    shareCanCopyPreviewTextLocally: true,
+    saveUsesLocalCollectionState: true,
+    saveCanSelectLocalCollections: ["saved", "favorites", "watch_later"],
+    fakeShareDelivery: false,
+    fakeSaveProviderSync: false,
+    fakePublish: false,
+    backendTouched: false,
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+  },
+} as const;

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Imperial Dragon Meteor ultra premium gift poster">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="62%"><stop offset="0" stop-color="#9B5CFF" stop-opacity="0.95"/><stop offset="0.48" stop-color="#FF5B4A" stop-opacity="0.72"/><stop offset="1" stop-color="#09070D"/></radialGradient>
+    <linearGradient id="rim" x1="0" x2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.92"/><stop offset="1" stop-color="#FF5B4A" stop-opacity="0.72"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="18" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="1080" height="1080" rx="116" fill="url(#bg)"/>
+  <circle cx="540" cy="520" r="330" fill="none" stroke="url(#rim)" stroke-width="22" opacity="0.85" filter="url(#glow)"/>
+  <circle cx="540" cy="520" r="230" fill="rgba(255,255,255,0.12)" stroke="#FFFFFF" stroke-width="8" opacity="0.72"/>
+  <path d="M190 680 C330 430 460 760 550 365 C655 780 780 430 895 680" fill="none" stroke="#FFFFFF" stroke-width="34" stroke-linecap="round" opacity="0.75" filter="url(#glow)"/>
+  <path d="M300 780 C430 715 655 715 790 780" fill="none" stroke="#FF5B4A" stroke-width="42" stroke-linecap="round" opacity="0.88"/>
+  <text x="540" y="510" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="56" font-weight="800" text-anchor="middle">Имперский Дракон</text>
+  <text x="540" y="585" fill="#09070D" font-family="Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">Ultra Mythic · fair 340 demo-points</text>
+  <text x="540" y="920" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="28" font-weight="700" text-anchor="middle" opacity="0.86">poster-first · no autoplay · no real send</text>
+</svg>

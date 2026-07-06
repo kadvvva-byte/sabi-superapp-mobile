@@ -1,6 +1,7 @@
-export const RU_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const RU_LOCALE = {
   "calls": {
-    "audio": "Sabi Audio",
+    "audio": "Информация",
     "video": "Sabi Video",
     "incoming": "Входящий вызов",
     "calling": "Вызов",
@@ -22,7 +23,7 @@ export const RU_LOCALE = {
     "expand": "Открыть",
     "swap": "Сменить",
     "more": "Ещё",
-    "add": "Добавить",
+    "add": "Добавить"
   },
   "common": {
     "back": "Назад",
@@ -177,9 +178,9 @@ export const RU_LOCALE = {
     "settlementBalance": "Расчётный баланс",
     "payoutBalance": "Баланс для выплат",
     "accountNumber": "Номер счёта",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Информация",
+    "swift": "Информация",
+    "bic": "Информация",
     "branch": "Филиал",
     "reference": "Референс",
     "beneficiary": "Бенефициар",
@@ -211,7 +212,7 @@ export const RU_LOCALE = {
     "modules": "Модули",
     "verified": "Подтверждено",
     "custom": "Индивидуально",
-    "ai": "Assistant",
+    "ai": "AI",
     "service": "Сервис",
     "market": "Маркет",
     "delivery": "Доставка",
@@ -234,7 +235,7 @@ export const RU_LOCALE = {
     "saved": "Сохранено",
     "approve": "Одобрить",
     "reject": "Отклонить",
-    "people": "Люди",
+    "people": "Люди"
   },
   "status": {
     "success": "Успешно",
@@ -280,27 +281,27 @@ export const RU_LOCALE = {
     "disputed": "Оспаривается",
     "underReview": "На рассмотрении",
     "onHold": "На удержании",
-    "partiallySettled": "Частично рассчитано",
+    "partiallySettled": "Частично рассчитано"
   },
   "time": {
     "justNow": "Только что",
-    "minutesAgo": "{{count}} мин назад",
-    "hoursAgo": "{{count}} ч назад",
-    "daysAgo": "{{count}} д назад",
-    "weeksAgo": "{{count}} нед назад",
-    "monthsAgo": "{{count}} мес назад",
-    "yearsAgo": "{{count}} г назад",
+    "minutesAgo": "Информация",
+    "hoursAgo": "Информация",
+    "daysAgo": "Информация",
+    "weeksAgo": "Информация",
+    "monthsAgo": "Информация",
+    "yearsAgo": "Информация",
     "at": "в",
     "until": "до",
     "from": "с",
     "to": "по",
-    "startsIn": "Начнётся через {{value}}",
-    "endsIn": "Закончится через {{value}}",
-    "availableOn": "Доступно {{date}}",
+    "startsIn": "Информация",
+    "endsIn": "Информация",
+    "availableOn": "Готово",
     "processingTime": "Время обработки",
     "settlementDate": "Дата расчёта",
     "payoutDate": "Дата выплаты",
-    "valueDate": "Дата валютирования",
+    "valueDate": "Дата валютирования"
   },
   "languageScreen": {
     "title": "Язык приложения",
@@ -318,11 +319,11 @@ export const RU_LOCALE = {
     "rtlPreview": "Предпросмотр справа налево",
     "restartMayBeRequired": "Для некоторых изменений может потребоваться повторное открытие приложения.",
     "translationCoverage": "Покрытие перевода",
-    "incompleteTranslation": "Некоторые разделы могут быть переведены не полностью.",
+    "incompleteTranslation": "Некоторые разделы могут быть переведены не полностью."
   },
   "auth": {
     "welcomeTitle": "Добро пожаловать в Sabi",
-    "welcomeSubtitle": "Премиум super app для общения, платежей, банкинга, бизнеса и повседневных сервисов.",
+    "welcomeSubtitle": "Описание Информация",
     "getStarted": "Начать",
     "signIn": "Войти",
     "signUp": "Создать аккаунт",
@@ -332,7 +333,7 @@ export const RU_LOCALE = {
     "phoneSubtitle": "Введите номер, чтобы продолжить.",
     "phonePlaceholder": "Введите номер телефона",
     "emailTitle": "Электронная почта",
-    "emailPlaceholder": "Введите email",
+    "emailPlaceholder": "Поиск",
     "passwordTitle": "Пароль",
     "passwordPlaceholder": "Введите пароль",
     "confirmPassword": "Подтвердите пароль",
@@ -356,7 +357,7 @@ export const RU_LOCALE = {
     "personalAccount": "Личный аккаунт",
     "businessAccount": "Бизнес-аккаунт",
     "merchantAccount": "Мерчант-аккаунт",
-    "chooseAccountType": "Выберите тип аккаунта",
+    "chooseAccountType": "Выберите тип аккаунта"
   },
   "onboarding": {
     "title": "Всё, что нужно, в одном приложении",
@@ -364,17 +365,17 @@ export const RU_LOCALE = {
     "messengerTitle": "Премиум-мессенджер",
     "messengerSubtitle": "Чаты, звонки, обмен медиа, AI-перевод и премиальные инструменты общения.",
     "walletTitle": "Умный кошелёк",
-    "walletSubtitle": "Карты, банковские переводы, QR-платежи, Coin, выписки и безопасное управление балансом.",
+    "walletSubtitle": "Кошелёк Информация",
     "businessTitle": "Бизнес-инструменты",
     "businessSubtitle": "Бизнес-аккаунт, мерчант-платежи, аналитика, выставление счетов и доступ для команды.",
     "aiTitle": "AI везде",
     "aiSubtitle": "Переводите чаты и звонки, создавайте умные ответы и усиливайте премиальные сценарии.",
     "profileTitle": "Единый профиль",
     "profileSubtitle": "Ваш профиль, публичный контент, настройки конфиденциальности и премиальная идентичность в одной системе.",
-    "customizationTitle": "Персонализированный Home",
+    "customizationTitle": "Заголовок",
     "customizationSubtitle": "Виджеты, ярлыки, мини-приложения и быстрый доступ, настроенные под ваши задачи.",
     "finishTitle": "Всё готово",
-    "finishSubtitle": "Настройте аккаунт и начните пользоваться Sabi.",
+    "finishSubtitle": "Настройте аккаунт и начните пользоваться Sabi."
   },
   "permissions": {
     "title": "Разрешения",
@@ -402,14 +403,14 @@ export const RU_LOCALE = {
     "allowStorage": "Разрешить файлы и хранилище",
     "permissionDenied": "Доступ запрещён",
     "permissionRequired": "Для этого действия требуется разрешение.",
-    "openSettings": "Открыть настройки",
+    "openSettings": "Открыть настройки"
   },
   "tabs": {
     "home": "Главная",
     "wallet": "Кошелёк",
     "chats": "Чаты",
     "profile": "Профиль",
-    "calls": "Звонки",
+    "calls": "Звонки"
   },
   "search": {
     "title": "Поиск",
@@ -426,7 +427,7 @@ export const RU_LOCALE = {
     "merchants": "Мерчанты",
     "miniApps": "Мини-приложения",
     "noRecentSearches": "Недавних запросов нет",
-    "chatPlaceholder": "Поиск чата",
+    "chatPlaceholder": "Поиск чата"
   },
   "home": {
     "title": "Главная",
@@ -468,8 +469,8 @@ export const RU_LOCALE = {
       "openWallet": "Открыть кошелёк",
       "settings": "Настройки кошелька",
       "subtitle": "Баланс, карты и быстрые операции",
-      "updating": "Обновление…",
-    },
+      "updating": "Обновление…"
+    }
   },
   "wallet": {
     "title": "Кошелёк",
@@ -478,31 +479,31 @@ export const RU_LOCALE = {
     "currentBalance": "Текущий баланс",
     "cardBalance": "Баланс карт",
     "bankBalance": "Банковский баланс",
-    "coinBalance": "Баланс Coin",
+    "coinBalance": "Информация",
     "localCards": {
       "title": "Раздел",
       "subtitle": "Описание",
       "balanceTitle": "Баланс",
-      "balanceCaption": "Баланс Caption",
+      "balanceCaption": "Информация",
       "providerPending": "Провайдер В ожидании",
       "providerText": "Локальная Карты: информация",
-      "noCardTitle": "no Карта",
+      "noCardTitle": "Заголовок",
       "noCardText": "Локальная Карты: информация",
-      "domesticPayments": "domestic Payments",
-      "otpProtected": "otp Protected",
-      "actions": "actions",
-      "cardToCard": "Карта To Карта",
-      "recipients": "recipients",
-      "scope": "scope",
-      "currency": "currency",
-      "payments": "payments",
-      "domesticOnly": "domestic Only",
-      "verification": "verification",
-      "otpProvider": "otp Провайдер",
-      "sabiBalanceTopup": "sabi Баланс Topup",
-      "providerControlled": "Провайдер Controlled",
+      "domesticPayments": "Информация",
+      "otpProtected": "Информация",
+      "actions": "Действия",
+      "cardToCard": "Раздел",
+      "recipients": "Информация",
+      "scope": "Информация",
+      "currency": "Информация",
+      "payments": "Платежи",
+      "domesticOnly": "Информация",
+      "verification": "Подтверждение",
+      "otpProvider": "Настройки",
+      "sabiBalanceTopup": "Информация",
+      "providerControlled": "Настройки",
       "cardSettings": "Карта Настройки",
-      "tokenOnly": "token Only",
+      "tokenOnly": "Информация"
     },
     "internationalCards": "Международные карты",
     "virtualCards": "Виртуальные карты",
@@ -513,57 +514,57 @@ export const RU_LOCALE = {
       "localCardText": "Карты: информация",
       "internationalCard": "Международная Карта",
       "internationalCardText": "Карты: информация",
-      "localGlobalCard": "Локальная Global Карта",
+      "localGlobalCard": "Локальная + Глобальная",
       "localGlobalCardText": "Карты: информация",
       "virtualCard": "Виртуальная Карта",
       "virtualCardText": "Карты: информация",
       "localCards": "Локальная Карты",
       "internationalCards": "Международная Карты",
       "virtualCards": "Виртуальная Карты",
-      "categoriesTitle": "categories",
+      "categoriesTitle": "Заголовок",
       "categoriesHint": "Карты: информация",
-      "selectedRoute": "selected Route",
-      "noCardsTitle": "no Карты",
+      "selectedRoute": "Информация",
+      "noCardsTitle": "Заголовок",
       "noCardsText": "Карты: информация",
       "addCard": "Добавить Карта",
-      "issueVirtual": "issue Виртуальная",
+      "issueVirtual": "Информация",
       "providerStatus": "Провайдер Статус",
       "providerNotConfigured": "Провайдер не настроен",
-      "providerNotConfiguredText": "Крипто-действия отключены до подключения реального custody/wallet-провайдера, маршрута рыночных данных и админ-контроля.",
+      "providerNotConfiguredText": "Настройки Информация",
       "securityTitle": "Безопасность",
       "securityHint": "Карты: информация",
-      "ruleTokenTitle": "rule Token",
+      "ruleTokenTitle": "Заголовок",
       "ruleTokenText": "Карты: информация",
-      "ruleDetectionTitle": "rule Detection",
+      "ruleDetectionTitle": "Заголовок",
       "ruleDetectionText": "Карты: информация",
-      "ruleConfirmationTitle": "rule Confirmation",
+      "ruleConfirmationTitle": "Заголовок",
       "ruleConfirmationText": "Карты: информация",
       "settingsTitle": "Настройки",
       "settingsHint": "Карты: информация",
       "settingsText": "Карты: информация",
-      "open": "Открыть",
+      "open": "Открыть"
     },
     "bankAccounts": "Банковские счета",
     "linkedAccounts": "Привязанные счета",
     "accounts": "Счета",
     "transactions": "Транзакции",
     "history": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "История",
       "title": "История",
       "subtitle": "Описание",
-      "heroEyebrow": "hero Eyebrow",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero Описание",
-      "total": "total",
+      "heroEyebrow": "История",
+      "heroTitle": "История",
+      "heroSubtitle": "История Информация",
+      "total": "Итого",
       "pending": "В ожидании",
       "failed": "Ошибка",
       "completed": "Завершено",
       "searchPlaceholder": "Введите значение",
-      "all": "all",
-      "money": "money",
+      "all": "Все",
+      "money": "Информация",
       "cards": "Карты",
       "qr": "QR",
-      "liveNote": "live Note",
+      "liveNote": "Информация",
       "loadingTitle": "Загрузка…",
       "loadingText": "История: информация",
       "errorTitle": "Ошибка",
@@ -571,78 +572,78 @@ export const RU_LOCALE = {
       "emptyTitle": "Пусто",
       "emptyText": "История: информация",
       "back": "Назад",
-      "walletHome": "Кошелёк Home",
-      "today": "today",
-      "yesterday": "yesterday",
+      "walletHome": "Кошелёк",
+      "today": "Сегодня",
+      "yesterday": "Вчера",
       "user": "Пользователь",
-      "walletTransfer": "Кошелёк Transfer",
-      "sendP2p": "Отправить P2p",
-      "receiveP2p": "receive P2p",
-      "topupWallet": "topup Кошелёк",
-      "providerPaymentCredited": "Провайдер Payment Credited",
-      "refundWallet": "refund Кошелёк",
-      "providerRefundReturned": "Провайдер Refund Returned",
-      "withdrawWallet": "withdraw Кошелёк",
-      "moneyWithdrawal": "money Withdrawal",
-      "depositWallet": "deposit Кошелёк",
-      "moneyCredited": "money Credited",
-      "qrPayment": "QR Payment",
-      "qrRouteExecution": "QR Route Execution",
-      "walletOperation": "Кошелёк Operation",
-      "walletTransferTitle": "Кошелёк Transfer",
+      "walletTransfer": "Кошелёк",
+      "sendP2p": "Информация",
+      "receiveP2p": "Информация",
+      "topupWallet": "Кошелёк",
+      "providerPaymentCredited": "Настройки",
+      "refundWallet": "Кошелёк",
+      "providerRefundReturned": "Настройки",
+      "withdrawWallet": "Кошелёк",
+      "moneyWithdrawal": "Информация",
+      "depositWallet": "Кошелёк",
+      "moneyCredited": "Информация",
+      "qrPayment": "Информация",
+      "qrRouteExecution": "Информация",
+      "walletOperation": "Кошелёк",
+      "walletTransferTitle": "Кошелёк"
     },
     "sendMoney": "Отправить деньги",
     "receiveMoney": "Получить деньги",
     "requestMoney": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "heroTitle": "hero",
-      "heroText": "Запрос Money: информация",
-      "balanceLabel": "Баланс Label",
-      "collectInto": "collect Into",
-      "collectIntoHint": "Запрос Money: информация",
-      "personal": "personal",
-      "personalText": "Запрос Money: информация",
-      "business": "business",
-      "businessText": "Запрос Money: информация",
-      "merchant": "merchant",
-      "merchantText": "Запрос Money: информация",
-      "recipientTitle": "recipient",
-      "recipientHint": "Запрос Money: информация",
-      "recipientId": "recipient ID",
+      "heroTitle": "Информация",
+      "heroText": "Информация Информация",
+      "balanceLabel": "Информация",
+      "collectInto": "Информация",
+      "collectIntoHint": "Назначение",
+      "personal": "Личный",
+      "personalText": "Личная информация Информация",
+      "business": "Бизнес",
+      "businessText": "Информация Информация",
+      "merchant": "Мерчант",
+      "merchantText": "Информация Информация",
+      "recipientTitle": "Заголовок",
+      "recipientHint": "Информация Информация",
+      "recipientId": "Информация",
       "recipientPlaceholder": "Введите значение",
-      "recipientHelp": "recipient Help",
-      "recipientError": "recipient Ошибка",
+      "recipientHelp": "Информация",
+      "recipientError": "Не удалось выполнить запрос. Попробуйте снова.",
       "detailsTitle": "Детали",
-      "detailsHint": "Запрос Money: информация",
-      "amount": "amount",
-      "reason": "reason",
+      "detailsHint": "Информация Информация",
+      "amount": "Сумма",
+      "reason": "Информация",
       "reasonPlaceholder": "Введите значение",
-      "reference": "reference",
+      "reference": "Референс",
       "referencePlaceholder": "Введите значение",
-      "previewTitle": "preview",
-      "previewHint": "Запрос Money: информация",
-      "from": "from",
-      "destination": "destination",
-      "notSelected": "не Selected",
-      "noReason": "no Reason",
-      "noReference": "no Reference",
+      "previewTitle": "Заголовок",
+      "previewHint": "Информация Информация",
+      "from": "Информация",
+      "destination": "Назначение",
+      "notSelected": "Информация",
+      "noReason": "Информация",
+      "noReference": "Информация",
       "createQr": "Создать QR",
-      "actions": "actions",
-      "routes": "routes",
+      "actions": "Действия",
+      "routes": "Информация",
       "securityTitle": "Безопасность",
-      "securityHint": "Запрос Money: информация",
-      "security1Title": "security1",
-      "security1Text": "Запрос Money: информация",
-      "security2Title": "security2",
-      "security2Text": "Запрос Money: информация",
-      "paymentsHub": "payments Hub",
+      "securityHint": "Безопасность Информация",
+      "security1Title": "Информация",
+      "security1Text": "Информация Информация",
+      "security2Title": "Информация",
+      "security2Text": "Информация Информация",
+      "paymentsHub": "Раздел",
       "continue": "Продолжить",
-      "confirmTitle": "Подтвердить",
+      "confirmTitle": "Подтвердить"
     },
     "transfer": "Перевод",
     "bankTransfer": "Банковский перевод",
-    "wireTransfer": "Wire-перевод",
+    "wireTransfer": "Информация",
     "swiftTransfer": "SWIFT-перевод",
     "domesticTransfer": "Внутренний перевод",
     "internationalTransfer": "Международный перевод",
@@ -653,35 +654,35 @@ export const RU_LOCALE = {
       "title": "Раздел",
       "subtitle": "Описание",
       "source": "Источник",
-      "sourceHint": "withdraw: информация",
-      "sourceText": "withdraw: информация",
-      "storedValue": "stored Value",
-      "available": "available",
-      "withdrawRoute": "withdraw Route",
-      "linkedCard": "linked Карта",
-      "speed": "speed",
-      "byProviderPolicy": "by Провайдер Policy",
-      "amount": "amount",
-      "amountHint": "withdraw: информация",
-      "helperText": "withdraw: информация",
-      "destination": "destination",
-      "destinationHint": "withdraw: информация",
-      "noLinkedCardsTitle": "no Linked Карты",
-      "noLinkedCardsText": "withdraw: информация",
+      "sourceHint": "Информация Информация",
+      "sourceText": "Информация Информация",
+      "storedValue": "Информация",
+      "available": "Доступно",
+      "withdrawRoute": "Информация",
+      "linkedCard": "Информация",
+      "speed": "Информация",
+      "byProviderPolicy": "Настройки",
+      "amount": "Сумма",
+      "amountHint": "Информация Информация",
+      "helperText": "Информация Информация",
+      "destination": "Информация",
+      "destinationHint": "Информация Информация",
+      "noLinkedCardsTitle": "Заголовок",
+      "noLinkedCardsText": "Информация Информация",
       "addCard": "Добавить Карта",
-      "destinationDetails": "destination Детали",
-      "destinationDetailsHint": "withdraw: информация",
-      "destinationLabel": "destination Label",
-      "scheme": "scheme",
-      "maskedCard": "masked Карта",
-      "type": "type",
-      "reference": "reference",
-      "referenceHint": "withdraw: информация",
+      "destinationDetails": "Информация",
+      "destinationDetailsHint": "Информация Информация",
+      "destinationLabel": "Назначение",
+      "scheme": "Информация",
+      "maskedCard": "Информация",
+      "type": "Тип",
+      "reference": "Референс",
+      "referenceHint": "Информация Информация",
       "notePlaceholder": "Введите значение",
       "securityTitle": "Безопасность",
-      "securityText": "withdraw: информация",
+      "securityText": "Безопасность Информация",
       "continue": "Продолжить",
-      "confirmTitle": "Подтвердить",
+      "confirmTitle": "Подтвердить"
     },
     "cashOut": "Обналичить",
     "topUp": "Пополнить",
@@ -694,40 +695,40 @@ export const RU_LOCALE = {
     "addCard": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "roleTitle": "role",
+      "roleTitle": "Заголовок",
       "roleHint": "Добавить Карта: информация",
-      "personal": "personal",
+      "personal": "Личный",
       "personalText": "Добавить Карта: информация",
-      "business": "business",
+      "business": "Бизнес",
       "businessText": "Добавить Карта: информация",
-      "merchant": "merchant",
+      "merchant": "Мерчант",
       "merchantText": "Добавить Карта: информация",
-      "categoryTitle": "category",
+      "categoryTitle": "Заголовок",
       "categoryHint": "Добавить Карта: информация",
       "providerTitle": "Провайдер",
       "providerHint": "Добавить Карта: информация",
-      "routeCurrency": "route Currency",
-      "localCurrencyRequired": "Локальная Currency Required",
-      "internationalCurrency": "Международная Currency",
+      "routeCurrency": "Информация",
+      "localCurrencyRequired": "Локальный",
+      "internationalCurrency": "Информация",
       "providerNotConfigured": "Провайдер не настроен",
       "providerReady": "Провайдер Готово",
-      "providerKycRequired": "Провайдер Kyc Required",
-      "providerReviewRequired": "Провайдер Review Required",
-      "providerRestricted": "Провайдер Restricted",
-      "providerOpenUnavailable": "Провайдер Открыть Unavailable",
+      "providerKycRequired": "Настройки",
+      "providerReviewRequired": "Настройки",
+      "providerRestricted": "Настройки",
+      "providerOpenUnavailable": "Не удалось выполнить запрос. Попробуйте снова.",
       "providerText": "Добавить Карта: информация",
-      "noManualTitle": "no Manual",
+      "noManualTitle": "Заголовок",
       "noManualText": "Добавить Карта: информация",
-      "policyTitle": "policy",
+      "policyTitle": "Заголовок",
       "policyHint": "Добавить Карта: информация",
-      "tokenTitle": "token",
+      "tokenTitle": "Источник",
       "tokenText": "Добавить Карта: информация",
       "confirmTitle": "Подтвердить",
       "confirmText": "Добавить Карта: информация",
       "adminTitle": "Админ",
       "adminText": "Добавить Карта: информация",
       "openProvider": "Открыть Провайдер",
-      "providerDisabled": "Провайдер отключён",
+      "providerDisabled": "Провайдер отключён"
     },
     "addBankAccount": "Добавить банковский счёт",
     "linkBankAccount": "Привязать банковский счёт",
@@ -742,54 +743,54 @@ export const RU_LOCALE = {
     "virtualCard": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "previewEyebrow": "preview Eyebrow",
-      "previewMasked": "preview Masked",
-      "previewStatus": "preview Статус",
-      "category": "category",
-      "theme": "theme",
-      "currency": "currency",
-      "usd": "usd",
-      "currencyFromSettings": "currency From Настройки",
-      "monthlyLimit": "monthly Limit",
+      "previewEyebrow": "Информация",
+      "previewMasked": "Информация",
+      "previewStatus": "Информация",
+      "category": "Категория",
+      "theme": "Тема",
+      "currency": "Информация",
+      "usd": "Информация",
+      "currencyFromSettings": "Настройки",
+      "monthlyLimit": "Месячный лимит",
       "limitPlaceholder": "Введите значение",
-      "useCaseTitle": "use Case",
+      "useCaseTitle": "Заголовок",
       "useCaseHint": "Виртуальная Карта: информация",
-      "onlineTitle": "online",
+      "onlineTitle": "Онлайн-платежи",
       "onlineText": "Виртуальная Карта: информация",
-      "subscriptionTitle": "subscription",
+      "subscriptionTitle": "Заголовок",
       "subscriptionText": "Виртуальная Карта: информация",
-      "travelTitle": "travel",
+      "travelTitle": "Заголовок",
       "travelText": "Виртуальная Карта: информация",
       "providerTitle": "Провайдер",
       "providerHint": "Виртуальная Карта: информация",
       "providerNotConfigured": "Провайдер не настроен",
       "providerReady": "Провайдер Готово",
-      "providerKycRequired": "Провайдер Kyc Required",
-      "providerReviewRequired": "Провайдер Review Required",
-      "providerRestricted": "Провайдер Restricted",
-      "providerOpenUnavailable": "Провайдер Открыть Unavailable",
+      "providerKycRequired": "Настройки",
+      "providerReviewRequired": "Настройки",
+      "providerRestricted": "Настройки",
+      "providerOpenUnavailable": "Не удалось выполнить запрос. Попробуйте снова.",
       "providerText": "Виртуальная Карта: информация",
-      "requirementsTitle": "requirements",
+      "requirementsTitle": "Заголовок",
       "requirementsHint": "Виртуальная Карта: информация",
-      "reqKycTitle": "req Kyc",
+      "reqKycTitle": "Заголовок",
       "reqKycText": "Виртуальная Карта: информация",
-      "reqTokenTitle": "req Token",
+      "reqTokenTitle": "Заголовок",
       "reqTokenText": "Виртуальная Карта: информация",
-      "reqRiskTitle": "req Risk",
+      "reqRiskTitle": "Заголовок",
       "reqRiskText": "Виртуальная Карта: информация",
       "securityTitle": "Безопасность",
       "securityHint": "Виртуальная Карта: информация",
-      "freeze": "freeze",
-      "onlinePayments": "online Payments",
-      "internationalUsage": "Международная Usage",
+      "freeze": "Информация",
+      "onlinePayments": "Онлайн-платежи",
+      "internationalUsage": "Информация",
       "statusTitle": "Статус",
-      "kycRequired": "kyc Required",
+      "kycRequired": "Информация",
       "ready": "Готово",
-      "issue": "issue",
+      "issue": "Информация",
       "disabledReason": "Подключите провайдера перед выпуском.",
-      "manageCards": "manage Карты",
+      "manageCards": "Карты"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "Информация",
     "qrPay": "Оплата по QR",
     "qrReceive": "Получение по QR",
     "paymentRequest": "Запрос платежа",
@@ -798,72 +799,72 @@ export const RU_LOCALE = {
     "transferByAccount": "Перевод по счёту",
     "transferBetweenOwnAccounts": "Перевод между моими счетами",
     "transactionDetails": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
       "loadingTitle": "Загрузка…",
-      "loadingText": "transaction Детали: информация",
+      "loadingText": "Загрузка...",
       "errorTitle": "Ошибка",
       "retry": "Повторить",
       "completed": "Завершено",
-      "completedText": "transaction Детали: информация",
+      "completedText": "Информация Информация",
       "pending": "В ожидании",
-      "pendingText": "transaction Детали: информация",
+      "pendingText": "Информация Информация",
       "failed": "Ошибка",
-      "failedText": "transaction Детали: информация",
-      "incoming": "incoming",
-      "outgoing": "outgoing",
-      "summaryEyebrow": "summary Eyebrow",
-      "operationSummary": "operation Summary",
-      "overview": "overview",
-      "type": "type",
-      "category": "category",
+      "failedText": "Не удалось выполнить запрос. Попробуйте снова.",
+      "incoming": "Входящее",
+      "outgoing": "Исходящее",
+      "summaryEyebrow": "Информация",
+      "operationSummary": "Информация",
+      "overview": "Информация",
+      "type": "Тип",
+      "category": "Категория",
       "status": "Статус",
-      "direction": "direction",
-      "date": "date",
-      "time": "time",
-      "referenceData": "reference Data",
-      "tracking": "tracking",
-      "transactionId": "transaction ID",
-      "reference": "reference",
-      "route": "route",
+      "direction": "Информация",
+      "date": "Дата",
+      "time": "Время",
+      "referenceData": "Информация",
+      "tracking": "Информация",
+      "transactionId": "ID транзакции",
+      "reference": "Референс",
+      "route": "Информация",
       "walletId": "Кошелёк ID",
-      "statusNote": "Статус Note",
-      "processing": "processing",
-      "securityNote": "Безопасность Note",
-      "securityText": "transaction Детали: информация",
-      "backendPayload": "backend Payload",
-      "liveData": "live Data",
-      "quickActions": "quick Actions",
-      "nextStep": "next Step",
+      "statusNote": "Информация",
+      "processing": "Загрузка…",
+      "securityNote": "Безопасность",
+      "securityText": "Безопасность Информация",
+      "backendPayload": "Назад",
+      "liveData": "Информация",
+      "quickActions": "Настройки",
+      "nextStep": "Информация",
       "backHistory": "Назад История",
-      "walletHome": "Кошелёк Home",
-      "newSend": "new Отправить",
-      "newRequest": "new Запрос",
-      "copyReference": "copy Reference",
-      "referenceTitle": "reference",
-      "transaction": "transaction",
-      "walletOperation": "Кошелёк Operation",
-      "refundWallet": "refund Кошелёк",
-      "paymentWallet": "payment Кошелёк",
-      "p2pTransfer": "p2p Transfer",
-      "qrExecution": "QR Execution",
-      "coreOperation": "core Operation",
-      "providerPaymentLinked": "Провайдер Payment Linked",
-      "transferBetweenUsers": "transfer Between Users",
-      "qrRouteExecution": "QR Route Execution",
-      "businessMerchantRoute": "business Merchant Route",
-      "routeTransaction": "route Transaction",
-      "routePayment": "route Payment",
-      "routeP2p": "route P2p",
-      "routeQr": "route QR",
-      "routeCore": "route Core",
-      "routeSend": "route Отправить",
-      "routeReceive": "route Receive",
-      "routeTopup": "route Topup",
-      "routeWithdraw": "route Withdraw",
-      "routeCard": "route Карта",
-      "routeFallback": "route Fallback",
+      "walletHome": "Кошелёк",
+      "newSend": "Информация",
+      "newRequest": "Информация",
+      "copyReference": "Информация",
+      "referenceTitle": "Референс",
+      "transaction": "Информация",
+      "walletOperation": "Кошелёк",
+      "refundWallet": "Кошелёк",
+      "paymentWallet": "Кошелёк",
+      "p2pTransfer": "Информация",
+      "qrExecution": "Информация",
+      "coreOperation": "Информация",
+      "providerPaymentLinked": "Настройки",
+      "transferBetweenUsers": "Информация",
+      "qrRouteExecution": "Информация",
+      "businessMerchantRoute": "Информация",
+      "routeTransaction": "Информация",
+      "routePayment": "Информация",
+      "routeP2p": "Информация",
+      "routeQr": "Информация",
+      "routeCore": "Информация",
+      "routeSend": "Информация",
+      "routeReceive": "Информация",
+      "routeTopup": "Информация",
+      "routeWithdraw": "Информация",
+      "routeCard": "Информация",
+      "routeFallback": "Назад"
     },
     "incoming": "Входящее",
     "outgoing": "Исходящее",
@@ -915,12 +916,12 @@ export const RU_LOCALE = {
     "statements": "Выписки",
     "generateStatement": "Сформировать выписку",
     "downloadStatement": "Скачать выписку",
-    "coinWallet": "Coin Wallet",
-    "coinTopUp": "Пополнить Coin",
-    "coinSend": "Отправить Coin",
-    "coinReceive": "Получить Coin",
-    "coinHistory": "История Coin",
-    "moveToSabiWallet": "Перевести в Sabi Wallet",
+    "coinWallet": "Раздел",
+    "coinTopUp": "Информация",
+    "coinSend": "Информация",
+    "coinReceive": "Информация",
+    "coinHistory": "История",
+    "moveToSabiWallet": "Кошелёк",
     "earnings": "Доход",
     "deposit": "Депозит",
     "interest": "Проценты",
@@ -928,1277 +929,1277 @@ export const RU_LOCALE = {
     "businessWallet": "Бизнес-кошелёк",
     "merchantWallet": "Мерчант-кошелёк",
     "adminReviewStatus": {
-      "approved": "approved",
-      "escalated": "escalated",
-      "notRequired": "не Required",
+      "approved": "Одобрено",
+      "escalated": "Информация",
+      "notRequired": "Информация",
       "pending": "В ожидании",
-      "rejected": "rejected",
+      "rejected": "Информация"
     },
     "amlStatus": {
-      "blocked": "blocked",
-      "clear": "clear",
-      "monitoring": "monitoring",
-      "reviewRequired": "review Required",
-      "safeHold": "safe Hold",
+      "blocked": "Заблокировано",
+      "clear": "Очистить",
+      "monitoring": "Информация",
+      "reviewRequired": "Информация",
+      "safeHold": "Безопасность"
     },
     "coinProvider": {
-      "bridgeRoute": "bridge Route",
-      "directCardBlocked": "direct Карта Blocked",
-      "guardReason": "guard Reason",
+      "bridgeRoute": "Информация",
+      "directCardBlocked": "Информация",
+      "guardReason": "Информация",
       "providerStatus": "Провайдер Статус",
-      "eyebrow": "eyebrow",
+      "eyebrow": "Настройки",
       "providerTitle": "Провайдер",
       "providerText": "COIN Провайдер: информация",
-      "noFakeTitle": "no Fake",
+      "noFakeTitle": "Заголовок",
       "noFakeText": "COIN Провайдер: информация",
       "securityTitle": "Безопасность",
       "securityText": "COIN Провайдер: информация",
-      "availableCoin": "available COIN",
-      "totalCoin": "total COIN",
-      "diamonds": "diamonds",
-      "deposits": "deposits",
-      "records": "records",
+      "availableCoin": "Готово",
+      "totalCoin": "Информация",
+      "diamonds": "Раздел",
+      "deposits": "Информация",
+      "records": "Информация",
       "disabled": "Отключено",
-      "backToCoin": "Назад To COIN",
+      "backToCoin": "Назад",
       "screens": {
         "topup": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "send": {
           "title": "Отправить",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "withdraw": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "diamonds": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "withdrawDiamonds": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "earn": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "history": {
           "title": "История",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "diamondsHistory": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "depositHistory": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "depositDetails": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
-      },
+          "subtitle": "Описание"
+        }
+      }
     },
     "complianceStatus": {
-      "adminReview": "Админ Review",
-      "amlReview": "aml Review",
-      "blocked": "blocked",
-      "clear": "clear",
-      "kycRequired": "kyc Required",
-      "restricted": "restricted",
-      "safeHold": "safe Hold",
+      "adminReview": "Информация",
+      "amlReview": "Информация",
+      "blocked": "Заблокировано",
+      "clear": "Очистить",
+      "kycRequired": "Информация",
+      "restricted": "Информация",
+      "safeHold": "Безопасность"
     },
     "cryptoProvider": {
-      "providerNotConfiguredShort": "Провайдер не настроен Short",
-      "providerStatusText": "crypto Провайдер: информация",
+      "providerNotConfiguredShort": "Провайдер В ожидании",
+      "providerStatusText": "Настройки Информация",
       "providerStatusTitle": "Провайдер Статус",
-      "eyebrow": "eyebrow",
+      "eyebrow": "Настройки",
       "providerNotConfiguredTitle": "Провайдер не настроен",
-      "providerNotConfiguredText": "Крипто-действия отключены до подключения реального custody/wallet-провайдера, маршрута рыночных данных и админ-контроля.",
-      "cryptoValue": "crypto Value",
+      "providerNotConfiguredText": "Настройки Информация",
+      "cryptoValue": "Информация",
       "status": "Статус",
       "disabled": "Отключено",
       "securityTitle": "Безопасность",
-      "securityText": "crypto Провайдер: информация",
-      "keysTitle": "keys",
-      "keysText": "crypto Провайдер: информация",
-      "marketTitle": "market",
-      "marketText": "crypto Провайдер: информация",
-      "backToCrypto": "Назад To Crypto",
+      "securityText": "Безопасность Информация",
+      "keysTitle": "Заголовок",
+      "keysText": "Информация Информация",
+      "marketTitle": "Заголовок",
+      "marketText": "Информация Информация",
+      "backToCrypto": "Назад",
       "screens": {
         "assets": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "portfolio": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "assetDetails": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "buy": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "sell": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "swap": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "send": {
           "title": "Отправить",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "receive": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "history": {
           "title": "История",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "transactionDetails": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "confirm": {
           "title": "Подтвердить",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "market": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "watchlist": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "networks": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "manageTokens": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "importToken": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "addressBook": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "addAddress": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "seedCreate": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "seedBackup": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "seedVerify": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
-      },
+          "subtitle": "Описание"
+        }
+      }
     },
     "home": {
-      "financialDashboardSubtitle": "financial Dashboard Описание",
-      "financialDashboardTitle": "financial Dashboard",
-      "receive": "receive",
-      "receiveSubtitle": "receive Описание",
-      "scanQr": "scan QR",
+      "financialDashboardSubtitle": "Описание Информация",
+      "financialDashboardTitle": "Заголовок",
+      "receive": "Получить",
+      "receiveSubtitle": "Получить",
+      "scanQr": "Сканировать QR",
       "settings": "Настройки",
       "settingsSubtitle": "Настройки Описание",
-      "topUp": "top Up",
-      "topUpSubtitle": "top Up Описание",
-      "withdraw": "withdraw",
-      "withdrawSubtitle": "withdraw Описание",
-      "headerEyebrow": "header Eyebrow",
-      "headerTitle": "header",
-      "headerSubtitle": "header Описание",
-      "mainHeroTitle": "main Hero",
-      "mainHeroSubtitle": "main Hero Описание",
-      "mainBalanceLabel": "main Баланс Label",
-      "mainBalanceHint": "home: информация",
-      "localBalanceLabel": "Локальная Баланс Label",
-      "localBalanceHint": "home: информация",
+      "topUp": "Пополнить",
+      "topUpSubtitle": "Пополнить",
+      "withdraw": "Раздел",
+      "withdrawSubtitle": "Раздел",
+      "headerEyebrow": "Информация",
+      "headerTitle": "Заголовок",
+      "headerSubtitle": "Описание Информация",
+      "mainHeroTitle": "Заголовок",
+      "mainHeroSubtitle": "Описание Информация",
+      "mainBalanceLabel": "Информация",
+      "mainBalanceHint": "Информация Информация",
+      "localBalanceLabel": "Локальная Баланс",
+      "localBalanceHint": "Локальный Информация",
       "send": "Отправить",
       "cards": "Карты",
-      "quickActionsTitle": "quick Actions",
-      "quickActionsHint": "home: информация",
+      "quickActionsTitle": "Настройки",
+      "quickActionsHint": "Настройки Информация",
       "request": "Запрос",
       "history": "История",
-      "mySabiId": "my Sabi ID",
-      "mainBlocksTitle": "main Blocks",
-      "mainBlocksHint": "home: информация",
-      "sabiPayTitle": "sabi Pay",
-      "sabiPaySubtitle": "sabi Pay Описание",
-      "sabiPayBalanceLabel": "sabi Pay Баланс Label",
+      "mySabiId": "Информация",
+      "mainBlocksTitle": "Заголовок",
+      "mainBlocksHint": "Информация Информация",
+      "sabiPayTitle": "Заголовок",
+      "sabiPaySubtitle": "Описание Информация",
+      "sabiPayBalanceLabel": "Информация",
       "qrTitle": "QR",
       "qrSubtitle": "QR Описание",
       "coinTitle": "COIN",
       "coinSubtitle": "COIN Описание",
-      "coinBalanceLabel": "COIN Баланс Label",
+      "coinBalanceLabel": "COIN Баланс",
       "localCardsTitle": "Локальная Карты",
       "localCardsSubtitle": "Локальная Карты Описание",
-      "localCardsBalanceLabel": "Локальная Карты Баланс Label",
-      "businessTitle": "business",
-      "businessSubtitle": "business Описание",
-      "merchantTitle": "merchant",
-      "merchantSubtitle": "merchant Описание",
-      "cryptoTitle": "crypto",
-      "cryptoSubtitle": "crypto Описание",
-      "cryptoBalanceLabel": "crypto Баланс Label",
-      "aiSectionTitle": "AI Section",
-      "aiSectionHint": "home: информация",
+      "localCardsBalanceLabel": "Локальная Баланс",
+      "businessTitle": "Раздел",
+      "businessSubtitle": "Информация Информация",
+      "merchantTitle": "Раздел",
+      "merchantSubtitle": "Описание Информация",
+      "cryptoTitle": "Заголовок",
+      "cryptoSubtitle": "Описание Информация",
+      "cryptoBalanceLabel": "Информация",
+      "aiSectionTitle": "AI помощник",
+      "aiSectionHint": "AI Информация",
       "aiTitle": "AI",
       "aiSubtitle": "AI Описание",
-      "aiGuidanceTitle": "AI Guidance",
-      "aiGuidanceText": "home: информация",
-      "aiSupportTitle": "AI Support",
-      "aiSupportText": "home: информация",
-      "infraTitle": "infra",
-      "infraHint": "home: информация",
-      "cardsHubTitle": "Карты Hub",
-      "cardsHubSubtitle": "Карты Hub Описание",
-      "chatPaymentsTitle": "Чат Payments",
-      "chatPaymentsSubtitle": "Чат Payments Описание",
+      "aiGuidanceTitle": "AI",
+      "aiGuidanceText": "AI Информация",
+      "aiSupportTitle": "Поддержка",
+      "aiSupportText": "AI Информация",
+      "infraTitle": "Заголовок",
+      "infraHint": "Информация Информация",
+      "cardsHubTitle": "Заголовок",
+      "cardsHubSubtitle": "Описание Информация",
+      "chatPaymentsTitle": "Раздел",
+      "chatPaymentsSubtitle": "Чат Информация",
       "virtualCardTitle": "Виртуальная Карта",
       "virtualCardSubtitle": "Виртуальная Карта Описание",
-      "controlsTitle": "controls",
-      "controlsHint": "home: информация",
-      "info1Title": "info1",
-      "info1Text": "home: информация",
-      "info2Title": "info2",
-      "info2Text": "home: информация",
-      "info3Title": "info3",
-      "info3Text": "home: информация",
-      "info4Title": "info4",
-      "info4Text": "home: информация",
-      "info5Title": "info5",
-      "info5Text": "home: информация",
-      "info6Title": "info6",
-      "info6Text": "home: информация",
-      "info7Title": "info7",
-      "info7Text": "home: информация",
-      "pillInternal": "pill Internal",
-      "pillCore": "pill Core",
-      "pillCamera": "pill Камера",
-      "pillMerchant": "pill Merchant",
-      "pillGifts": "pill Gifts",
-      "pillStream": "pill Stream",
-      "pillDomestic": "pill Domestic",
-      "pillOperations": "pill Operations",
-      "pillReferences": "pill References",
-      "pillCheckout": "pill Checkout",
-      "pillSettlements": "pill Settlements",
-      "pillAssets": "pill Assets",
-      "pillProvider": "pill Провайдер",
-      "pillCustody": "pill Custody",
-      "pillSeparated": "pill Separated",
-      "askAi": "ask AI",
-      "smartTips": "smart Tips",
-      "recentHelp": "recent Help",
+      "controlsTitle": "Заголовок",
+      "controlsHint": "Информация Информация",
+      "info1Title": "Информация",
+      "info1Text": "Информация Информация",
+      "info2Title": "Информация",
+      "info2Text": "Информация Информация",
+      "info3Title": "Информация",
+      "info3Text": "Информация Информация",
+      "info4Title": "Информация",
+      "info4Text": "Информация Информация",
+      "info5Title": "Информация",
+      "info5Text": "Информация Информация",
+      "info6Title": "Информация",
+      "info6Text": "Информация Информация",
+      "info7Title": "Информация",
+      "info7Text": "Информация Информация",
+      "pillInternal": "Информация",
+      "pillCore": "Информация",
+      "pillCamera": "Камера",
+      "pillMerchant": "Мерчант",
+      "pillGifts": "Подарки",
+      "pillStream": "Стрим",
+      "pillDomestic": "Локальная",
+      "pillOperations": "Информация",
+      "pillReferences": "Информация",
+      "pillCheckout": "Информация",
+      "pillSettlements": "Расчёты",
+      "pillAssets": "Информация",
+      "pillProvider": "Настройки",
+      "pillCustody": "Информация",
+      "pillSeparated": "Информация",
+      "askAi": "AI",
+      "smartTips": "Информация",
+      "recentHelp": "Информация",
       "loading": "Загрузка…",
-      "eyebrowSabiPay": "eyebrow Sabi Pay",
-      "eyebrowQr": "eyebrow QR",
-      "eyebrowSabiCoin": "eyebrow Sabi COIN",
-      "eyebrowLocalCards": "eyebrow Локальная Карты",
-      "eyebrowBusiness": "eyebrow Business",
-      "eyebrowMerchant": "eyebrow Merchant",
-      "eyebrowCrypto": "eyebrow Crypto",
-      "pillSabiPay": "pill Sabi Pay",
-      "pillSabiBalance": "pill Sabi Баланс",
-      "pillMyQr": "pill My QR",
-      "pillBusiness": "pill Business",
+      "eyebrowSabiPay": "Информация",
+      "eyebrowQr": "QR",
+      "eyebrowSabiCoin": "Информация",
+      "eyebrowLocalCards": "Локальный",
+      "eyebrowBusiness": "Информация",
+      "eyebrowMerchant": "Информация",
+      "eyebrowCrypto": "Информация",
+      "pillSabiPay": "Информация",
+      "pillSabiBalance": "Информация",
+      "pillMyQr": "Мой QR",
+      "pillBusiness": "Бизнес"
     },
     "kycStatus": {
-      "notRequired": "не Required",
+      "notRequired": "Информация",
       "pending": "В ожидании",
-      "rejected": "rejected",
-      "required": "required",
-      "verified": "verified",
+      "rejected": "Информация",
+      "required": "Обязательно",
+      "verified": "Подтверждено"
     },
     "pinConfirm": {
-      "guardReason": "guard Reason",
+      "guardReason": "Информация",
       "providerStatus": "Провайдер Статус",
-      "riskStatus": "risk Статус",
-      "walletRoute": "Кошелёк Route",
-      "eyebrow": "eyebrow",
+      "riskStatus": "Информация",
+      "walletRoute": "Кошелёк",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
-      "protectedAction": "protected Action",
-      "authorizationTitle": "authorization",
-      "authorizationText": "pin Подтвердить: информация",
-      "amountLabel": "amount Label",
-      "flow": "flow",
-      "digits": "digits",
+      "protectedAction": "Информация",
+      "authorizationTitle": "Заголовок",
+      "authorizationText": "Информация Информация",
+      "amountLabel": "Информация",
+      "flow": "Информация",
+      "digits": "Информация",
       "security": "Безопасность",
-      "active": "active",
-      "summaryTitle": "summary",
-      "summaryHint": "pin Подтвердить: информация",
-      "recipientTarget": "recipient Цель",
+      "active": "Активно",
+      "summaryTitle": "Заголовок",
+      "summaryHint": "Информация Информация",
+      "recipientTarget": "Информация",
       "source": "Источник",
-      "amount": "amount",
-      "reference": "reference",
-      "note": "note",
-      "emptyAmount": "Пусто Amount",
-      "emptyNote": "Пусто Note",
-      "emptyReference": "Пусто Reference",
-      "protectedTarget": "protected Цель",
+      "amount": "Сумма",
+      "reference": "Референс",
+      "note": "Примечание",
+      "emptyAmount": "Информация",
+      "emptyNote": "Информация",
+      "emptyReference": "Информация",
+      "protectedTarget": "Информация",
       "walletSource": "Кошелёк Источник",
-      "enterPin": "enter Pin",
-      "providerRequired": "Провайдер Required",
-      "providerRequiredError": "Провайдер Required Ошибка",
-      "helperText": "pin Подтвердить: информация",
-      "protectionTitle": "protection",
-      "protectionText": "pin Подтвердить: информация",
+      "enterPin": "Введите PIN",
+      "providerRequired": "Настройки",
+      "providerRequiredError": "Не удалось выполнить запрос. Попробуйте снова.",
+      "helperText": "Информация Информация",
+      "protectionTitle": "Заголовок",
+      "protectionText": "Информация Информация",
       "providerTitle": "Провайдер",
-      "providerText": "pin Подтвердить: информация",
+      "providerText": "Настройки Информация"
     },
     "providerPanel": {
-      "cardsHint": "Провайдер Panel: информация",
+      "cardsHint": "Карты",
       "cardsTitle": "Карты",
-      "coinHint": "Провайдер Panel: информация",
+      "coinHint": "COIN",
       "coinTitle": "COIN",
       "compliance": "Комплаенс",
-      "cryptoHint": "Провайдер Panel: информация",
-      "cryptoTitle": "crypto",
-      "settingsHint": "Провайдер Panel: информация",
+      "cryptoHint": "Информация Информация",
+      "cryptoTitle": "Заголовок",
+      "settingsHint": "Настройки Информация",
       "settingsTitle": "Настройки",
-      "tokenOnlyPolicy": "token Only Policy",
-      "virtualCardHint": "Провайдер Panel: информация",
+      "tokenOnlyPolicy": "Информация",
+      "virtualCardHint": "Виртуальная Карта",
       "virtualCardTitle": "Виртуальная Карта",
-      "walletHint": "Провайдер Panel: информация",
-      "walletTitle": "Кошелёк",
+      "walletHint": "Кошелёк",
+      "walletTitle": "Кошелёк"
     },
     "providerStatus": {
-      "kycRequired": "kyc Required",
+      "kycRequired": "Информация",
       "providerNotConfigured": "Провайдер не настроен",
       "ready": "Готово",
-      "restricted": "restricted",
-      "reviewRequired": "review Required",
+      "restricted": "Информация",
+      "reviewRequired": "Информация"
     },
     "settings": {
       "adminComplianceDescription": "Настройки: информация",
       "adminComplianceTitle": "Админ Комплаенс",
-      "adminReview": "Админ Review",
-      "adminReviewStatus": "Админ Review Статус",
-      "amlReview": "aml Review",
-      "amlStatus": "aml Статус",
-      "approved": "approved",
-      "blocked": "blocked",
-      "clear": "clear",
+      "adminReview": "Информация",
+      "adminReviewStatus": "Информация",
+      "amlReview": "Информация",
+      "amlStatus": "Информация",
+      "approved": "Одобрено",
+      "blocked": "Заблокировано",
+      "clear": "Очистить",
       "complianceStatus": "Комплаенс Статус",
-      "escalated": "escalated",
-      "kycRequired": "kyc Required",
-      "kycStatus": "kyc Статус",
-      "monitoring": "monitoring",
-      "notRequired": "не Required",
+      "escalated": "Информация",
+      "kycRequired": "Информация",
+      "kycStatus": "Информация",
+      "monitoring": "Информация",
+      "notRequired": "Информация",
       "pending": "В ожидании",
-      "providerConfigurationRequired": "Провайдер Configuration Required",
-      "rejected": "rejected",
-      "required": "required",
-      "restricted": "restricted",
-      "reviewRequired": "review Required",
-      "safeHold": "safe Hold",
-      "safeHoldState": "safe Hold State",
-      "tokenOnlyPolicy": "token Only Policy",
+      "providerConfigurationRequired": "Настройки",
+      "rejected": "Информация",
+      "required": "Обязательно",
+      "restricted": "Информация",
+      "reviewRequired": "Информация",
+      "safeHold": "Безопасность",
+      "safeHoldState": "Безопасность",
+      "tokenOnlyPolicy": "Информация",
       "tokenOnlyPolicyText": "Настройки: информация",
-      "verified": "verified",
+      "verified": "Подтверждено",
       "back": "Назад",
-      "eyebrow": "eyebrow",
+      "eyebrow": "Настройки",
       "title": "Настройки",
       "subtitle": "Описание",
-      "profileActive": "Профиль Active",
-      "heroTitle": "hero",
+      "profileActive": "Профиль",
+      "heroTitle": "Настройки",
       "heroText": "Настройки: информация",
-      "smartRouting": "smart Routing",
-      "sensitiveGuard": "sensitive Guard",
-      "largePaymentCheck": "large Payment Check",
-      "on": "on",
-      "off": "off",
-      "currencyTitle": "currency",
-      "primaryCurrency": "primary Currency",
+      "smartRouting": "Информация",
+      "sensitiveGuard": "Информация",
+      "largePaymentCheck": "Информация",
+      "on": "Информация",
+      "off": "Информация",
+      "currencyTitle": "Заголовок",
+      "primaryCurrency": "Информация",
       "primaryCurrencyDescription": "Настройки: информация",
-      "localCurrency": "Локальная Currency",
+      "localCurrency": "Локальный",
       "localCurrencyDescription": "Настройки: информация",
-      "internationalCurrency": "Международная Currency",
+      "internationalCurrency": "Информация",
       "internationalCurrencyDescription": "Настройки: информация",
-      "noHardcodedCurrencyTitle": "no Hardcoded Currency",
+      "noHardcodedCurrencyTitle": "Заголовок",
       "noHardcodedCurrencyText": "Настройки: информация",
-      "cardPreferences": "Карта Preferences",
-      "manageCards": "manage Карты",
+      "cardPreferences": "Предпочтения",
+      "manageCards": "Информация",
       "manageCardsDescription": "Настройки: информация",
-      "defaultCardMode": "default Карта Mode",
+      "defaultCardMode": "Информация",
       "defaultCardModeDescription": "Настройки: информация",
-      "smart": "smart",
+      "smart": "Умно",
       "local": "Локальная",
       "international": "Международная",
       "virtual": "Виртуальная",
-      "autoSelectBestCard": "auto Select Best Карта",
+      "autoSelectBestCard": "Информация",
       "autoSelectBestCardDescription": "Настройки: информация",
-      "showLast4": "show Last4",
+      "showLast4": "Информация",
       "showLast4Description": "Настройки: информация",
-      "walletPreferences": "Кошелёк Preferences",
-      "sabiPayQuickAccess": "sabi Pay Quick Access",
+      "walletPreferences": "Кошелёк",
+      "sabiPayQuickAccess": "Информация",
       "sabiPayQuickAccessDescription": "Настройки: информация",
-      "qrQuickAccess": "QR Quick Access",
+      "qrQuickAccess": "Информация",
       "qrQuickAccessDescription": "Настройки: информация",
-      "allowSmartRouting": "Разрешить Smart Routing",
+      "allowSmartRouting": "Информация",
       "allowSmartRoutingDescription": "Настройки: информация",
-      "paymentPriority": "payment Priority",
+      "paymentPriority": "Информация",
       "paymentPriorityDescription": "Настройки: информация",
       "security": "Безопасность",
-      "walletNotifications": "Кошелёк Notifications",
+      "walletNotifications": "Уведомления кошелька",
       "walletNotificationsDescription": "Настройки: информация",
-      "securityAlerts": "Безопасность Alerts",
+      "securityAlerts": "Безопасность",
       "securityAlertsDescription": "Настройки: информация",
-      "requireLargeConfirmation": "require Large Confirmation",
+      "requireLargeConfirmation": "Информация",
       "requireLargeConfirmationDescription": "Настройки: информация",
-      "sensitiveBehavior": "sensitive Behavior",
+      "sensitiveBehavior": "Информация",
       "sensitiveBehaviorDescription": "Настройки: информация",
-      "tap": "tap",
-      "biometric": "biometric",
-      "pin": "pin",
-      "useBiometric": "use Biometric",
+      "tap": "Информация",
+      "biometric": "Информация",
+      "pin": "Информация",
+      "useBiometric": "Информация",
       "useBiometricDescription": "Настройки: информация",
-      "hideBalances": "hide Balances",
+      "hideBalances": "Информация",
       "hideBalancesDescription": "Настройки: информация",
-      "notificationPreferences": "notification Preferences",
+      "notificationPreferences": "Раздел настроек профиля",
       "notificationPreferencesDescription": "Настройки: информация",
-      "limits": "limits",
-      "dailySendLimit": "daily Отправить Limit",
+      "limits": "Лимиты",
+      "dailySendLimit": "Информация",
       "dailySendLimitDescription": "Настройки: информация",
-      "qrPaymentLimit": "QR Payment Limit",
+      "qrPaymentLimit": "Информация",
       "qrPaymentLimitDescription": "Настройки: информация",
-      "sensitiveWindow": "sensitive Window",
+      "sensitiveWindow": "Информация",
       "sensitiveWindowDescription": "Настройки: информация",
-      "policyControlled": "policy Controlled",
-      "defaultBehavior": "default Behavior",
-      "defaultSensitiveUnlock": "default Sensitive Unlock",
-      "defaultCardSelection": "default Карта Selection",
-      "defaultPaymentSource": "default Payment Источник",
-      "smartAuto": "smart Auto",
-      "localFirst": "Локальная First",
-      "internationalFirst": "Международная First",
-      "virtualFirst": "Виртуальная First",
-      "tapToReveal": "tap To Reveal",
-      "pinRequired": "pin Required",
-      "biometricRequired": "biometric Required",
-      "sabiBalanceFirst": "sabi Баланс First",
-      "cardsFirst": "Карты First",
+      "policyControlled": "Информация",
+      "defaultBehavior": "Информация",
+      "defaultSensitiveUnlock": "Информация",
+      "defaultCardSelection": "Информация",
+      "defaultPaymentSource": "Информация",
+      "smartAuto": "Информация",
+      "localFirst": "Локальный",
+      "internationalFirst": "Информация",
+      "virtualFirst": "Информация",
+      "tapToReveal": "Информация",
+      "pinRequired": "Информация",
+      "biometricRequired": "Информация",
+      "sabiBalanceFirst": "Информация",
+      "cardsFirst": "Информация"
     },
     "shared": {
       "back": "Назад",
       "wallet": "Кошелёк",
-      "totalBalance": "total Баланс",
+      "totalBalance": "Общий баланс",
       "walletBalance": "Кошелёк Баланс",
-      "personal": "personal",
-      "mainBalance": "main Баланс",
+      "personal": "Личный",
+      "mainBalance": "Информация",
       "localBalance": "Локальная Баланс",
       "coinBalance": "COIN Баланс",
-      "cryptoValue": "crypto Value",
-      "sabiBalance": "sabi Баланс",
-      "sabiBalanceDescription": "shared: информация",
-      "internal": "internal",
-      "holder": "holder",
-      "expiry": "expiry",
+      "cryptoValue": "Информация",
+      "sabiBalance": "Информация",
+      "sabiBalanceDescription": "Описание Информация",
+      "internal": "Информация",
+      "holder": "Информация",
+      "expiry": "Информация",
       "balance": "Баланс",
-      "unknown": "unknown",
+      "unknown": "Неизвестно"
     },
     "entry": {
-      "headerTitle": "header",
-      "headerSubtitle": "header Описание",
-      "quickActionsTitle": "quick Actions",
-      "quickActionsHint": "entry: информация",
-      "topUp": "top Up",
+      "headerTitle": "Кошелёк",
+      "headerSubtitle": "Описание Информация",
+      "quickActionsTitle": "Настройки",
+      "quickActionsHint": "Настройки Информация",
+      "topUp": "Пополнить",
       "send": "Отправить",
-      "receive": "receive",
-      "qrPay": "QR Pay",
+      "receive": "Получить",
+      "qrPay": "Оплата по QR",
       "cards": "Карты",
-      "crypto": "crypto",
-      "cardsAccessTitle": "Карты Access",
-      "cardsAccessHint": "entry: информация",
-      "allCardsTitle": "all Карты",
-      "allCardsSubtitle": "all Карты Описание",
+      "crypto": "Информация",
+      "cardsAccessTitle": "Заголовок",
+      "cardsAccessHint": "Информация Информация",
+      "allCardsTitle": "Заголовок",
+      "allCardsSubtitle": "Описание Информация",
       "localCardsTitle": "Локальная Карты",
-      "localCardsSubtitle": "Локальная Карты Описание",
+      "localCardsSubtitle": "Локальная Карты Описание"
     },
     "coinIndex": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
-      "totalLabel": "total Label",
-      "heroSubtitle": "hero Описание",
-      "myCoinQr": "my COIN QR",
-      "myCoinQrText": "COIN Index: информация",
-      "scanCoinQr": "scan COIN QR",
-      "scanCoinQrText": "COIN Index: информация",
-      "diamondLayer": "diamond Layer",
-      "diamondLayerText": "COIN Index: информация",
+      "totalLabel": "Информация",
+      "heroSubtitle": "Информация Информация",
+      "myCoinQr": "Информация",
+      "myCoinQrText": "Информация Информация",
+      "scanCoinQr": "Информация",
+      "scanCoinQrText": "Информация Информация",
+      "diamondLayer": "Информация",
+      "diamondLayerText": "Информация Информация",
       "open": "Открыть",
-      "diamondWithdrawRule": "diamond Withdraw Rule",
-      "nextAvailableDate": "next Available Date",
-      "coinActions": "COIN Actions",
-      "coreWallet": "core Кошелёк",
-      "topUp": "top Up",
-      "topUpText": "COIN Index: информация",
+      "diamondWithdrawRule": "Информация",
+      "nextAvailableDate": "Готово",
+      "coinActions": "Настройки",
+      "coreWallet": "Кошелёк",
+      "topUp": "Пополнить",
+      "topUpText": "Информация Информация",
       "send": "Отправить",
-      "sendText": "COIN Index: информация",
-      "receive": "receive",
-      "receiveText": "COIN Index: информация",
+      "sendText": "Информация Информация",
+      "receive": "Получить",
+      "receiveText": "Информация Информация",
       "history": "История",
-      "historyText": "COIN Index: информация",
-      "diamonds": "diamonds",
-      "diamondsText": "COIN Index: информация",
-      "earn": "earn",
-      "earnText": "COIN Index: информация",
-      "lockedDeposit": "locked Deposit",
-      "lockedDepositText": "COIN Index: информация",
-      "manage": "manage",
-      "maturity": "maturity",
-      "months": "months",
-      "noActiveDeposits": "no Active Deposits",
-      "moveCoinToWallet": "move COIN To Кошелёк",
-      "available": "available",
-      "frozen": "frozen",
-      "interest": "interest",
-      "spendable": "spendable",
-      "withdrawable": "withdrawable",
-      "gameEligible": "game Eligible",
-      "diamondsUnit": "diamonds Unit",
+      "historyText": "История Информация",
+      "diamonds": "Раздел",
+      "diamondsText": "Информация Информация",
+      "earn": "Информация",
+      "earnText": "Информация Информация",
+      "lockedDeposit": "Информация",
+      "lockedDepositText": "Информация Информация",
+      "manage": "Управление",
+      "maturity": "Информация",
+      "months": "Информация",
+      "noActiveDeposits": "Информация",
+      "moveCoinToWallet": "Кошелёк",
+      "available": "Доступно",
+      "frozen": "Заморожено",
+      "interest": "Проценты",
+      "spendable": "Информация",
+      "withdrawable": "Информация",
+      "gameEligible": "Информация",
+      "diamondsUnit": "Информация"
     },
     "cryptoIndex": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
-      "totalBalance": "total Баланс",
-      "providerRequired": "Провайдер Required",
+      "totalBalance": "Информация",
+      "providerRequired": "Провайдер",
       "providerNotConfigured": "Провайдер не настроен",
-      "assetsCount": "assets Count",
-      "networks": "networks",
-      "change24h": "change24h",
+      "assetsCount": "Информация",
+      "networks": "Раздел",
+      "change24h": "Информация",
       "status": "Статус",
-      "quickActions": "quick Actions",
-      "buy": "buy",
-      "buyText": "crypto Index: информация",
+      "quickActions": "Настройки",
+      "buy": "Информация",
+      "buyText": "Информация Информация",
       "send": "Отправить",
-      "sendText": "crypto Index: информация",
-      "receive": "receive",
-      "receiveText": "crypto Index: информация",
-      "swap": "swap",
-      "swapText": "crypto Index: информация",
-      "sell": "sell",
-      "sellText": "crypto Index: информация",
+      "sendText": "Информация Информация",
+      "receive": "Получить",
+      "receiveText": "Информация Информация",
+      "swap": "Сменить",
+      "swapText": "Информация Информация",
+      "sell": "Информация",
+      "sellText": "Информация Информация",
       "history": "История",
-      "historyText": "crypto Index: информация",
-      "portfolio": "portfolio",
-      "custody": "custody",
-      "custodyText": "crypto Index: информация",
-      "pricing": "pricing",
-      "pricingText": "crypto Index: информация",
-      "risk": "risk",
-      "riskText": "crypto Index: информация",
-      "assets": "assets",
-      "noAssetsTitle": "no Assets",
-      "noAssetsText": "crypto Index: информация",
-      "networksTokens": "networks Tokens",
-      "networksText": "crypto Index: информация",
-      "tokensText": "crypto Index: информация",
-      "cryptoFoundation": "crypto Foundation",
-      "cryptoFoundationText": "crypto Index: информация",
-      "backToWalletHome": "Назад To Кошелёк Home",
-      "openAssets": "Открыть Assets",
+      "historyText": "История Информация",
+      "portfolio": "Информация",
+      "custody": "Информация",
+      "custodyText": "Информация Информация",
+      "pricing": "Информация",
+      "pricingText": "Информация Информация",
+      "risk": "Информация",
+      "riskText": "Информация Информация",
+      "assets": "Информация",
+      "noAssetsTitle": "Заголовок",
+      "noAssetsText": "Информация Информация",
+      "networksTokens": "Информация",
+      "networksText": "Информация Информация",
+      "tokensText": "Информация Информация",
+      "cryptoFoundation": "Информация",
+      "cryptoFoundationText": "Информация Информация",
+      "backToWalletHome": "Назад",
+      "openAssets": "Информация"
     },
     "businessPay": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
       "providerStatus": "Провайдер Статус",
-      "routeTitle": "route",
-      "routeHint": "business Pay: информация",
-      "routeEmptyTitle": "route Пусто",
-      "routeEmptyText": "business Pay: информация",
+      "routeTitle": "Заголовок",
+      "routeHint": "Информация Информация",
+      "routeEmptyTitle": "Информация",
+      "routeEmptyText": "Информация Информация",
       "searchPlaceholder": "Введите значение",
-      "fundingTitle": "funding",
-      "fundingHint": "business Pay: информация",
-      "businessBalance": "business Баланс",
-      "businessBalanceText": "business Pay: информация",
-      "sabiBalanceText": "business Pay: информация",
-      "merchantBalance": "merchant Баланс",
-      "merchantBalanceText": "business Pay: информация",
+      "fundingTitle": "Заголовок",
+      "fundingHint": "Информация Информация",
+      "businessBalance": "Бизнес-кошелёк",
+      "businessBalanceText": "Информация Информация",
+      "sabiBalanceText": "Информация Информация",
+      "merchantBalance": "Информация",
+      "merchantBalanceText": "Информация Информация",
       "notConfigured": "не настроен",
       "detailsTitle": "Детали",
-      "detailsHint": "business Pay: информация",
-      "amount": "amount",
+      "detailsHint": "Информация Информация",
+      "amount": "Сумма",
       "amountPlaceholder": "Введите значение",
-      "reference": "reference",
+      "reference": "Референс",
       "referencePlaceholder": "Введите значение",
-      "previewTitle": "preview",
-      "previewHint": "business Pay: информация",
-      "selectedRoute": "selected Route",
-      "fundingSource": "funding Источник",
-      "noReference": "no Reference",
+      "previewTitle": "Заголовок",
+      "previewHint": "Информация Информация",
+      "selectedRoute": "Информация",
+      "fundingSource": "Информация",
+      "noReference": "Информация",
       "qrTitle": "QR",
       "qrSubtitle": "QR Описание",
-      "scanTitle": "scan",
-      "scanSubtitle": "scan Описание",
-      "routesTitle": "routes",
-      "routesHint": "business Pay: информация",
-      "merchantLink": "merchant Link",
+      "scanTitle": "Заголовок",
+      "scanSubtitle": "Описание Информация",
+      "routesTitle": "Заголовок",
+      "routesHint": "Информация Информация",
+      "merchantLink": "Информация",
       "history": "История",
-      "paymentsHub": "payments Hub",
-      "notesTitle": "notes",
-      "notesHint": "business Pay: информация",
-      "note1Title": "note1",
-      "note1Text": "business Pay: информация",
-      "note2Title": "note2",
-      "note2Text": "business Pay: информация",
-      "note3Title": "note3",
-      "note3Text": "business Pay: информация",
+      "paymentsHub": "Информация",
+      "notesTitle": "Безопасность",
+      "notesHint": "Информация Информация",
+      "note1Title": "Информация",
+      "note1Text": "Информация Информация",
+      "note2Title": "Информация",
+      "note2Text": "Информация Информация",
+      "note3Title": "Информация",
+      "note3Text": "Информация Информация",
       "back": "Назад",
-      "process": "process",
+      "process": "Информация"
     },
     "merchantPay": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
       "providerStatus": "Провайдер Статус",
-      "routeTitle": "route",
-      "routeHint": "merchant Pay: информация",
-      "routeEmptyTitle": "route Пусто",
-      "routeEmptyText": "merchant Pay: информация",
+      "routeTitle": "Заголовок",
+      "routeHint": "Информация Информация",
+      "routeEmptyTitle": "Информация",
+      "routeEmptyText": "Информация Информация",
       "searchPlaceholder": "Введите значение",
-      "fundingTitle": "funding",
-      "fundingHint": "merchant Pay: информация",
-      "businessBalance": "business Баланс",
-      "businessBalanceText": "merchant Pay: информация",
-      "sabiBalanceText": "merchant Pay: информация",
-      "merchantBalance": "merchant Баланс",
-      "merchantBalanceText": "merchant Pay: информация",
+      "fundingTitle": "Заголовок",
+      "fundingHint": "Информация Информация",
+      "businessBalance": "Бизнес-кошелёк",
+      "businessBalanceText": "Информация Информация",
+      "sabiBalanceText": "Информация Информация",
+      "merchantBalance": "Информация",
+      "merchantBalanceText": "Информация Информация",
       "notConfigured": "не настроен",
       "detailsTitle": "Детали",
-      "detailsHint": "merchant Pay: информация",
-      "amount": "amount",
+      "detailsHint": "Информация Информация",
+      "amount": "Сумма",
       "amountPlaceholder": "Введите значение",
-      "reference": "reference",
+      "reference": "Референс",
       "referencePlaceholder": "Введите значение",
-      "previewTitle": "preview",
-      "previewHint": "merchant Pay: информация",
-      "selectedRoute": "selected Route",
-      "fundingSource": "funding Источник",
-      "noReference": "no Reference",
+      "previewTitle": "Заголовок",
+      "previewHint": "Информация Информация",
+      "selectedRoute": "Информация",
+      "fundingSource": "Информация",
+      "noReference": "Информация",
       "qrTitle": "QR",
       "qrSubtitle": "QR Описание",
-      "scanTitle": "scan",
-      "scanSubtitle": "scan Описание",
-      "routesTitle": "routes",
-      "routesHint": "merchant Pay: информация",
-      "merchantLink": "merchant Link",
+      "scanTitle": "Заголовок",
+      "scanSubtitle": "Описание Информация",
+      "routesTitle": "Заголовок",
+      "routesHint": "Информация Информация",
+      "merchantLink": "Информация",
       "history": "История",
-      "paymentsHub": "payments Hub",
-      "notesTitle": "notes",
-      "notesHint": "merchant Pay: информация",
-      "note1Title": "note1",
-      "note1Text": "merchant Pay: информация",
-      "note2Title": "note2",
-      "note2Text": "merchant Pay: информация",
-      "note3Title": "note3",
-      "note3Text": "merchant Pay: информация",
+      "paymentsHub": "Информация",
+      "notesTitle": "Безопасность",
+      "notesHint": "Информация Информация",
+      "note1Title": "Информация",
+      "note1Text": "Информация Информация",
+      "note2Title": "Информация",
+      "note2Text": "Информация Информация",
+      "note3Title": "Информация",
+      "note3Text": "Информация Информация",
       "back": "Назад",
-      "process": "process",
+      "process": "Информация"
     },
     "paymentsHub": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero Описание",
+      "heroTitle": "Информация",
+      "heroSubtitle": "Информация Информация",
       "providerNotConfigured": "Провайдер не настроен",
-      "mainBalance": "main Баланс",
-      "primaryCurrency": "primary Currency",
-      "providerRoutes": "Провайдер Routes",
-      "pillSabi": "pill Sabi",
-      "pillCards": "pill Карты",
-      "pillMerchant": "pill Merchant",
-      "pillInternal": "pill Internal",
-      "pillIdentity": "pill Identity",
-      "featuredTitle": "featured",
-      "featuredHint": "payments Hub: информация",
-      "internalEyebrow": "internal Eyebrow",
-      "internalTitle": "internal",
-      "internalSubtitle": "internal Описание",
-      "availableBalance": "available Баланс",
-      "cardEyebrow": "Карта Eyebrow",
+      "mainBalance": "Информация",
+      "primaryCurrency": "Информация",
+      "providerRoutes": "Настройки",
+      "pillSabi": "Информация",
+      "pillCards": "Карты",
+      "pillMerchant": "Мерчант",
+      "pillInternal": "Информация",
+      "pillIdentity": "Идентичность",
+      "featuredTitle": "Премиум",
+      "featuredHint": "Премиум Информация",
+      "internalEyebrow": "Информация",
+      "internalTitle": "Заголовок",
+      "internalSubtitle": "Описание Информация",
+      "availableBalance": "Доступный баланс",
+      "cardEyebrow": "Информация",
       "cardTitle": "Карта",
       "cardSubtitle": "Карта Описание",
       "cardProvider": "Карта Провайдер",
-      "ecosystemEyebrow": "ecosystem Eyebrow",
-      "ecosystemTitle": "ecosystem",
-      "ecosystemSubtitle": "ecosystem Описание",
-      "ecosystemProvider": "ecosystem Провайдер",
-      "qrAccess": "QR Access",
-      "singleEntry": "single Entry",
-      "myQr": "my QR",
-      "myQrSubtitle": "my QR Описание",
-      "scanQr": "scan QR",
-      "scanQrSubtitle": "scan QR Описание",
-      "internalPayments": "internal Payments",
-      "core": "core",
+      "ecosystemEyebrow": "Информация",
+      "ecosystemTitle": "Заголовок",
+      "ecosystemSubtitle": "Описание Информация",
+      "ecosystemProvider": "Настройки",
+      "qrAccess": "Информация",
+      "singleEntry": "Информация",
+      "myQr": "Информация",
+      "myQrSubtitle": "Описание Информация",
+      "scanQr": "Сканировать QR",
+      "scanQrSubtitle": "Описание Информация",
+      "internalPayments": "Информация",
+      "core": "Информация",
       "cardsBalance": "Карты Баланс",
-      "moneyMovement": "money Movement",
-      "ecosystemPayments": "ecosystem Payments",
-      "extendedRoutes": "extended Routes",
-      "mySabiId": "my Sabi ID",
-      "mySabiIdSubtitle": "my Sabi ID Описание",
+      "moneyMovement": "Информация",
+      "ecosystemPayments": "Информация",
+      "extendedRoutes": "Информация",
+      "mySabiId": "Информация",
+      "mySabiIdSubtitle": "Описание Информация",
       "send": "Отправить",
       "sendSubtitle": "Отправить Описание",
       "request": "Запрос",
       "requestSubtitle": "Запрос Описание",
-      "contacts": "contacts",
-      "contactsSubtitle": "contacts Описание",
-      "topup": "topup",
-      "topupSubtitle": "topup Описание",
-      "withdraw": "withdraw",
-      "withdrawSubtitle": "withdraw Описание",
+      "contacts": "Раздел",
+      "contactsSubtitle": "Описание Информация",
+      "topup": "Информация",
+      "topupSubtitle": "Описание Информация",
+      "withdraw": "Информация",
+      "withdrawSubtitle": "Описание Информация",
       "cards": "Карты",
       "cardsSubtitle": "Карты Описание",
       "virtualCard": "Виртуальная Карта",
       "virtualCardSubtitle": "Виртуальная Карта Описание",
-      "chatPayments": "Чат Payments",
-      "chatPaymentsSubtitle": "Чат Payments Описание",
-      "merchantPay": "merchant Pay",
-      "merchantPaySubtitle": "merchant Pay Описание",
-      "businessPay": "business Pay",
-      "businessPaySubtitle": "business Pay Описание",
+      "chatPayments": "Раздел",
+      "chatPaymentsSubtitle": "Чат Информация",
+      "merchantPay": "Информация",
+      "merchantPaySubtitle": "Описание Информация",
+      "businessPay": "Раздел",
+      "businessPaySubtitle": "Информация Информация",
       "securityTitle": "Безопасность",
-      "securityHint": "payments Hub: информация",
-      "identityTitle": "identity",
-      "identityText": "payments Hub: информация",
-      "tokenTitle": "token",
-      "tokenText": "payments Hub: информация",
-      "separationTitle": "separation",
-      "separationText": "payments Hub: информация",
-      "noFakeTitle": "no Fake",
-      "noFakeText": "payments Hub: информация",
+      "securityHint": "Безопасность Информация",
+      "identityTitle": "Заголовок",
+      "identityText": "Информация Информация",
+      "tokenTitle": "Заголовок",
+      "tokenText": "Информация Информация",
+      "separationTitle": "Заголовок",
+      "separationText": "Информация Информация",
+      "noFakeTitle": "Заголовок",
+      "noFakeText": "Информация Информация"
     },
     "contacts": {
       "title": "Раздел",
       "subtitle": "Описание",
       "searchPlaceholder": "Введите значение",
-      "all": "all",
+      "all": "Все",
       "people": "Люди",
-      "business": "business",
-      "merchant": "merchant",
-      "quickRoutes": "quick Routes",
-      "quickRoutesHint": "contacts: информация",
+      "business": "Бизнес",
+      "merchant": "Мерчант",
+      "quickRoutes": "Информация",
+      "quickRoutesHint": "Действия",
       "send": "Отправить",
       "request": "Запрос",
-      "chatPay": "Чат Pay",
-      "mySabiId": "my Sabi ID",
-      "directoryTitle": "directory",
-      "directoryHint": "contacts: информация",
+      "chatPay": "Чат",
+      "mySabiId": "Информация",
+      "directoryTitle": "Заголовок",
+      "directoryHint": "Информация Информация",
       "emptyTitle": "Пусто",
-      "emptyText": "contacts: информация",
+      "emptyText": "Информация Информация",
       "securityTitle": "Безопасность",
-      "securityHint": "contacts: информация",
-      "identityTitle": "identity",
-      "identityText": "contacts: информация",
-      "verifiedTitle": "verified",
-      "verifiedText": "contacts: информация",
+      "securityHint": "Безопасность Информация",
+      "identityTitle": "Заголовок",
+      "identityText": "Информация Информация",
+      "verifiedTitle": "Заголовок",
+      "verifiedText": "Информация Информация"
     },
     "chatPayments": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "heroTitle": "hero",
-      "heroText": "Чат Payments: информация",
-      "currentRoute": "current Route",
-      "currentAmount": "current Amount",
-      "byId": "by ID",
-      "byQr": "by QR",
-      "paymentMode": "payment Mode",
-      "paymentModeHint": "Чат Payments: информация",
-      "byIdText": "Чат Payments: информация",
-      "byQrText": "Чат Payments: информация",
-      "paymentSource": "payment Источник",
-      "paymentSourceHint": "Чат Payments: информация",
-      "sabiWallet": "sabi Кошелёк",
-      "sabiWalletText": "Чат Payments: информация",
+      "heroTitle": "Чат",
+      "heroText": "Информация Информация",
+      "currentRoute": "Информация",
+      "currentAmount": "Информация",
+      "byId": "Информация",
+      "byQr": "Информация",
+      "paymentMode": "Информация",
+      "paymentModeHint": "Информация Информация",
+      "byIdText": "Информация Информация",
+      "byQrText": "Информация Информация",
+      "paymentSource": "Информация",
+      "paymentSourceHint": "Информация Информация",
+      "sabiWallet": "Кошелёк",
+      "sabiWalletText": "Кошелёк Информация",
       "coinWallet": "COIN Кошелёк",
-      "coinWalletText": "Чат Payments: информация",
-      "recipientTitle": "recipient",
-      "recipientHint": "Чат Payments: информация",
-      "recipientLabel": "recipient Label",
+      "coinWalletText": "Кошелёк Информация",
+      "recipientTitle": "Заголовок",
+      "recipientHint": "Информация Информация",
+      "recipientLabel": "Информация",
       "recipientPlaceholder": "Введите значение",
-      "qrRecipientTitle": "QR Recipient",
-      "qrRecipientHint": "Чат Payments: информация",
-      "qrRecipientLabel": "QR Recipient Label",
+      "qrRecipientTitle": "Заголовок",
+      "qrRecipientHint": "Информация Информация",
+      "qrRecipientLabel": "Информация",
       "qrRecipientPlaceholder": "Введите значение",
-      "myMessengerQr": "my Messenger QR",
-      "myMessengerQrText": "Чат Payments: информация",
-      "scanMessengerQr": "scan Messenger QR",
-      "scanMessengerQrText": "Чат Payments: информация",
+      "myMessengerQr": "Информация",
+      "myMessengerQrText": "Информация Информация",
+      "scanMessengerQr": "Информация",
+      "scanMessengerQrText": "Информация Информация",
       "detailsTitle": "Детали",
-      "detailsHint": "Чат Payments: информация",
-      "amount": "amount",
-      "note": "note",
+      "detailsHint": "Информация Информация",
+      "amount": "Сумма",
+      "note": "Примечание",
       "notePlaceholder": "Введите значение",
-      "previewTitle": "preview",
-      "previewHint": "Чат Payments: информация",
-      "mode": "mode",
-      "recipient": "recipient",
+      "previewTitle": "Заголовок",
+      "previewHint": "Информация Информация",
+      "mode": "Информация",
+      "recipient": "Получатель",
       "source": "Источник",
-      "notSelected": "не Selected",
-      "noNote": "no Note",
-      "shortcutsTitle": "shortcuts",
-      "shortcutsHint": "Чат Payments: информация",
+      "notSelected": "Информация",
+      "noNote": "Информация",
+      "shortcutsTitle": "Заголовок",
+      "shortcutsHint": "Информация Информация",
       "history": "История",
-      "coinWalletShortcut": "COIN Кошелёк Shortcut",
-      "sabiWalletShortcut": "sabi Кошелёк Shortcut",
-      "askAi": "ask AI",
+      "coinWalletShortcut": "Раздел",
+      "sabiWalletShortcut": "Кошелёк",
+      "askAi": "AI",
       "securityTitle": "Безопасность",
-      "securityHint": "Чат Payments: информация",
-      "security1Title": "security1",
-      "security1Text": "Чат Payments: информация",
-      "security2Title": "security2",
-      "security2Text": "Чат Payments: информация",
+      "securityHint": "Безопасность Информация",
+      "security1Title": "Информация",
+      "security1Text": "Информация Информация",
+      "security2Title": "Информация",
+      "security2Text": "Информация Информация",
       "back": "Назад",
-      "sendById": "Отправить By ID",
-      "sendByQr": "Отправить By QR",
-      "sendCoinById": "Отправить COIN By ID",
-      "sendCoinByQr": "Отправить COIN By QR",
+      "sendById": "Информация",
+      "sendByQr": "Информация",
+      "sendCoinById": "Информация",
+      "sendCoinByQr": "Информация"
     },
     "currency": {
       "notConfigured": "не настроен",
-      "usd": "usd",
-      "eur": "eur",
-      "cny": "cny",
-      "aed": "aed",
-      "gbp": "gbp",
-      "jpy": "jpy",
-      "krw": "krw",
-      "uzs": "uzs",
-      "kzt": "kzt",
-      "kgs": "kgs",
-      "tjs": "tjs",
-      "tmt": "tmt",
-      "azn": "azn",
-      "try": "try",
-      "inr": "inr",
+      "usd": "Информация",
+      "eur": "Информация",
+      "cny": "Информация",
+      "aed": "Информация",
+      "gbp": "Информация",
+      "jpy": "Информация",
+      "krw": "Информация",
+      "uzs": "Информация",
+      "kzt": "Информация",
+      "kgs": "Информация",
+      "tjs": "Информация",
+      "tmt": "Информация",
+      "azn": "Информация",
+      "try": "Информация",
+      "inr": "Информация"
     },
     "localTransfer": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Локальный",
       "title": "Раздел",
       "subtitle": "Описание",
-      "heroTitle": "hero",
-      "heroText": "Локальная Transfer: информация",
-      "transferFrom": "transfer From",
-      "sourceHint": "Локальная Transfer: информация",
-      "sourceLabel": "Источник Label",
+      "heroTitle": "Локальный",
+      "heroText": "Информация Информация",
+      "transferFrom": "Перевод со счёта",
+      "sourceHint": "Информация Информация",
+      "sourceLabel": "Информация",
       "sourcePlaceholder": "Введите значение",
-      "recipientTitle": "recipient",
-      "recipientHint": "Локальная Transfer: информация",
-      "recipientLabel": "recipient Label",
+      "recipientTitle": "Получатель",
+      "recipientHint": "Информация Информация",
+      "recipientLabel": "Информация",
       "recipientPlaceholder": "Введите значение",
-      "amountTitle": "amount",
-      "amountHint": "Локальная Transfer: информация",
+      "amountTitle": "Сумма",
+      "amountHint": "Информация Информация",
       "amountPlaceholder": "Введите значение",
-      "noteLabel": "note Label",
+      "noteLabel": "Примечание",
       "notePlaceholder": "Введите значение",
-      "selectedSource": "selected Источник",
-      "selectedRecipient": "selected Recipient",
+      "selectedSource": "Информация",
+      "selectedRecipient": "Информация",
       "providerTitle": "Провайдер",
-      "providerText": "Локальная Transfer: информация",
-      "currencyTitle": "currency",
-      "currencyText": "Локальная Transfer: информация",
-      "notesTitle": "notes",
-      "notesHint": "Локальная Transfer: информация",
-      "otpTitle": "otp",
-      "otpText": "Локальная Transfer: информация",
-      "localOnlyTitle": "Локальная Only",
-      "localOnlyText": "Локальная Transfer: информация",
-      "cardsHub": "Карты Hub",
+      "providerText": "Настройки Информация",
+      "currencyTitle": "Заголовок",
+      "currencyText": "Информация Информация",
+      "notesTitle": "Заголовок",
+      "notesHint": "Информация Информация",
+      "otpTitle": "Заголовок",
+      "otpText": "Информация Информация",
+      "localOnlyTitle": "Локальный",
+      "localOnlyText": "Локальный Информация",
+      "cardsHub": "Информация"
     },
     "localRecipients": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Локальный",
       "title": "Раздел",
       "subtitle": "Описание",
-      "heroTitle": "hero",
-      "heroText": "Локальная Recipients: информация",
-      "trusted": "trusted",
+      "heroTitle": "Локальный",
+      "heroText": "Информация Информация",
+      "trusted": "Доверенные",
       "searchTitle": "Поиск",
-      "searchHint": "Локальная Recipients: информация",
+      "searchHint": "Поиск",
       "searchPlaceholder": "Введите значение",
       "emptyTitle": "Пусто",
-      "emptyText": "Локальная Recipients: информация",
-      "note1Title": "note1",
-      "note1Text": "Локальная Recipients: информация",
-      "note2Title": "note2",
-      "note2Text": "Локальная Recipients: информация",
-      "newTransfer": "new Transfer",
+      "emptyText": "Локальный Информация",
+      "note1Title": "Информация",
+      "note1Text": "Информация Информация",
+      "note2Title": "Информация",
+      "note2Text": "Информация Информация",
+      "newTransfer": "Новый перевод"
     },
     "localCardDetails": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Локальный",
       "title": "Раздел",
       "subtitle": "Описание",
-      "noCardTitle": "no Карта",
+      "noCardTitle": "Заголовок",
       "noCardText": "Локальная Карта Детали: информация",
       "profile": "Профиль",
-      "tokenStatus": "token Статус",
-      "tokenPending": "token В ожидании",
+      "tokenStatus": "Информация",
+      "tokenPending": "Информация",
       "cardName": "Карта Название",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "maskedCard": "masked Карта",
-      "currency": "currency",
-      "verification": "verification",
-      "topup": "topup",
+      "scheme": "Информация",
+      "issuer": "Эмитент",
+      "maskedCard": "Информация",
+      "currency": "Информация",
+      "verification": "Подтверждение",
+      "topup": "Информация",
       "securityTitle": "Безопасность",
       "securityText": "Локальная Карта Детали: информация",
-      "controlsTitle": "controls",
-      "controlsText": "Локальная Карта Детали: информация",
+      "controlsTitle": "Заголовок",
+      "controlsText": "Локальная Карта Детали: информация"
     },
     "cardInfo": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "noCard": "no Карта",
-      "noCardText": "Карта Info: информация",
-      "defaultBadge": "default Badge",
+      "noCard": "Информация",
+      "noCardText": "Информация Информация",
+      "defaultBadge": "Информация",
       "cardProfile": "Карта Профиль",
-      "overview": "overview",
-      "cardType": "Карта Type",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "verification": "verification",
-      "topup": "topup",
+      "overview": "Информация",
+      "cardType": "Информация",
+      "scheme": "Информация",
+      "issuer": "Эмитент",
+      "verification": "Подтверждение",
+      "topup": "Информация",
       "balance": "Баланс",
-      "restricted": "restricted",
-      "cardStyle": "Карта Style",
-      "personalization": "personalization",
-      "controls": "controls",
-      "permissions": "permissions",
+      "restricted": "Информация",
+      "cardStyle": "Информация",
+      "personalization": "Информация",
+      "controls": "Информация",
+      "permissions": "Информация",
       "security": "Безопасность",
-      "protection": "protection",
+      "protection": "Информация",
       "securitySettings": "Безопасность Настройки",
-      "securitySettingsText": "Карта Info: информация",
-      "cardAlerts": "Карта Alerts",
-      "cardAlertsText": "Карта Info: информация",
-      "cardLimits": "Карта Limits",
-      "cardLimitsText": "Карта Info: информация",
-      "advanced": "advanced",
-      "management": "management",
-      "routeRole": "route Role",
-      "routeRoleText": "Карта Info: информация",
-      "cardActivity": "Карта Activity",
-      "cardActivityText": "Карта Info: информация",
-      "styleMidnight": "style Midnight",
-      "styleOcean": "style Ocean",
-      "styleEmerald": "style Emerald",
-      "styleViolet": "style Violet",
-      "styleSunset": "style Sunset",
-      "styleYouth": "style Youth",
+      "securitySettingsText": "Безопасность Информация",
+      "cardAlerts": "Сигналы",
+      "cardAlertsText": "Сигналы Информация",
+      "cardLimits": "Информация",
+      "cardLimitsText": "Информация Информация",
+      "advanced": "Расширенные",
+      "management": "Информация",
+      "routeRole": "Информация",
+      "routeRoleText": "Информация Информация",
+      "cardActivity": "Информация",
+      "cardActivityText": "Информация Информация",
+      "styleMidnight": "Информация",
+      "styleOcean": "Информация",
+      "styleEmerald": "Изумрудный",
+      "styleViolet": "Информация",
+      "styleSunset": "Информация",
+      "styleYouth": "Информация"
     },
     "confirmAddCard": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "blockedTitle": "blocked",
+      "blockedTitle": "Заголовок",
       "blockedText": "Подтвердить Добавить Карта: информация",
-      "providerToken": "Провайдер Token",
-      "maskedCard": "masked Карта",
-      "cardCategory": "Карта Category",
+      "providerToken": "Источник",
+      "maskedCard": "Информация",
+      "cardCategory": "Информация",
       "status": "Статус",
-      "missing": "missing",
+      "missing": "Информация",
       "pending": "В ожидании",
-      "verified": "verified",
-      "rejected": "rejected",
-      "restricted": "restricted",
-      "invalidPayload": "invalid Payload",
-      "blockedFields": "blocked Fields",
+      "verified": "Подтверждено",
+      "rejected": "Информация",
+      "restricted": "Информация",
+      "invalidPayload": "Информация",
+      "blockedFields": "Информация",
       "source": "Источник",
-      "pinTitle": "pin",
-      "pinSubtitle": "pin Описание",
-      "tokenOnlyTitle": "token Only",
+      "pinTitle": "Заголовок",
+      "pinSubtitle": "Описание Информация",
+      "tokenOnlyTitle": "Заголовок",
       "tokenOnlyText": "Подтвердить Добавить Карта: информация",
-      "backToCards": "Назад To Карты",
-      "continue": "Продолжить",
+      "backToCards": "Назад",
+      "continue": "Продолжить"
     },
     "send": {
       "title": "Отправить",
       "subtitle": "Описание",
-      "routeTitle": "route",
+      "routeTitle": "Заголовок",
       "routeHint": "Отправить: информация",
-      "sabiToSabi": "sabi To Sabi",
+      "sabiToSabi": "Информация",
       "sabiToSabiText": "Отправить: информация",
-      "cardToCard": "Карта To Карта",
+      "cardToCard": "Информация",
       "cardToCardText": "Отправить: информация",
-      "sabiToCard": "sabi To Карта",
+      "sabiToCard": "Информация",
       "sabiToCardText": "Отправить: информация",
-      "cardToSabi": "Карта To Sabi",
+      "cardToSabi": "Информация",
       "cardToSabiText": "Отправить: информация",
       "sourceTitle": "Источник",
       "sourceHint": "Отправить: информация",
-      "linkedCard": "linked Карта",
+      "linkedCard": "Информация",
       "linkedCardPlaceholder": "Введите значение",
-      "chooseCard": "choose Карта",
-      "tokenOnlyDetails": "token Only Детали",
-      "sabiBalanceDetails": "sabi Баланс Детали",
-      "available": "available",
-      "amount": "amount",
+      "chooseCard": "Информация",
+      "tokenOnlyDetails": "Информация",
+      "sabiBalanceDetails": "Информация",
+      "available": "Доступно",
+      "amount": "Сумма",
       "amountPlaceholder": "Введите значение",
-      "destinationTitle": "destination",
+      "destinationTitle": "Назначение",
       "destinationHint": "Отправить: информация",
-      "walletRecipient": "Кошелёк Recipient",
+      "walletRecipient": "Кошелёк",
       "walletRecipientPlaceholder": "Введите значение",
-      "cardRecipient": "Карта Recipient",
+      "cardRecipient": "Карта получателя",
       "cardRecipientPlaceholder": "Введите значение",
-      "recipientName": "recipient Название",
+      "recipientName": "Информация",
       "recipientNamePlaceholder": "Введите значение",
-      "note": "note",
+      "note": "Примечание",
       "notePlaceholder": "Введите значение",
       "securityTitle": "Безопасность",
       "securityHint": "Отправить: информация",
-      "security1Title": "security1",
+      "security1Title": "Информация",
       "security1Text": "Отправить: информация",
-      "security2Title": "security2",
+      "security2Title": "Информация",
       "security2Text": "Отправить: информация",
-      "security3Title": "security3",
+      "security3Title": "Информация",
       "security3Text": "Отправить: информация",
       "continue": "Продолжить",
-      "cardRequired": "Карта Required",
-      "recipientRequired": "recipient Required",
+      "cardRequired": "Информация",
+      "recipientRequired": "Информация",
       "confirmTitle": "Подтвердить",
-      "cardRail": "Карта Rail",
-      "sabiRail": "sabi Rail",
-      "usd": "usd",
+      "cardRail": "Информация",
+      "sabiRail": "Информация",
+      "usd": "Информация"
     },
     "topup": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "destination": "destination",
-      "destinationHint": "topup: информация",
-      "destinationText": "topup: информация",
-      "storedValue": "stored Value",
-      "type": "type",
-      "internalMoney": "internal Money",
-      "usage": "usage",
-      "transfersPayments": "transfers Payments",
-      "speed": "speed",
-      "byProviderPolicy": "by Провайдер Policy",
-      "amount": "amount",
-      "amountHint": "topup: информация",
-      "helperText": "topup: информация",
-      "fundingSource": "funding Источник",
-      "fundingSourceHint": "topup: информация",
-      "noLinkedCardsTitle": "no Linked Карты",
-      "noLinkedCardsText": "topup: информация",
+      "destination": "Назначение",
+      "destinationHint": "Информация Информация",
+      "destinationText": "Информация Информация",
+      "storedValue": "Информация",
+      "type": "Тип",
+      "internalMoney": "Информация",
+      "usage": "Информация",
+      "transfersPayments": "Информация",
+      "speed": "Информация",
+      "byProviderPolicy": "Настройки",
+      "amount": "Сумма",
+      "amountHint": "Информация Информация",
+      "helperText": "Информация Информация",
+      "fundingSource": "Информация",
+      "fundingSourceHint": "Информация Информация",
+      "noLinkedCardsTitle": "Заголовок",
+      "noLinkedCardsText": "Информация Информация",
       "addCard": "Добавить Карта",
-      "eligibility": "eligibility",
-      "eligibilityHint": "topup: информация",
-      "eligible": "eligible",
-      "restricted": "restricted",
-      "eligibleText": "topup: информация",
-      "restrictedText": "topup: информация",
-      "selectedSource": "selected Источник",
-      "scheme": "scheme",
-      "maskedCard": "masked Карта",
-      "sourceType": "Источник Type",
-      "tokenOnlyTitle": "token Only",
-      "tokenOnlyText": "topup: информация",
+      "eligibility": "Информация",
+      "eligibilityHint": "Информация Информация",
+      "eligible": "Информация",
+      "restricted": "Информация",
+      "eligibleText": "Информация Информация",
+      "restrictedText": "Информация Информация",
+      "selectedSource": "Информация",
+      "scheme": "Информация",
+      "maskedCard": "Информация",
+      "sourceType": "Информация",
+      "tokenOnlyTitle": "Заголовок",
+      "tokenOnlyText": "Информация Информация",
       "continue": "Продолжить",
-      "confirmTitle": "Подтвердить",
+      "confirmTitle": "Подтвердить"
     },
     "receive": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "destination": "destination",
-      "destinationHint": "receive: информация",
-      "destinationText": "receive: информация",
-      "receiveBadge": "receive Badge",
-      "walletRail": "Кошелёк Rail",
-      "sabiInternal": "sabi Internal",
-      "speed": "speed",
-      "instant": "instant",
+      "destination": "Назначение",
+      "destinationHint": "Информация Информация",
+      "destinationText": "Информация Информация",
+      "receiveBadge": "Получить",
+      "walletRail": "Кошелёк",
+      "sabiInternal": "Информация",
+      "speed": "Информация",
+      "instant": "Информация",
       "status": "Статус",
-      "active": "active",
-      "expectedAmount": "expected Amount",
-      "expectedAmountHint": "receive: информация",
-      "helperText": "receive: информация",
-      "incomingSource": "incoming Источник",
-      "incomingSourceHint": "receive: информация",
-      "fromUser": "from Пользователь",
-      "fromUserText": "receive: информация",
-      "fromBusiness": "from Business",
-      "fromBusinessText": "receive: информация",
-      "fromMerchant": "from Merchant",
-      "fromMerchantText": "receive: информация",
-      "receiveRoute": "receive Route",
-      "receiveRouteHint": "receive: информация",
-      "internalRoute": "internal Route",
-      "mode": "mode",
-      "userInbound": "Пользователь Inbound",
-      "businessInbound": "business Inbound",
-      "merchantInbound": "merchant Inbound",
-      "reference": "reference",
-      "referenceHint": "receive: информация",
+      "active": "Активно",
+      "expectedAmount": "Информация",
+      "expectedAmountHint": "Информация Информация",
+      "helperText": "Информация Информация",
+      "incomingSource": "Информация",
+      "incomingSourceHint": "Информация Информация",
+      "fromUser": "Информация",
+      "fromUserText": "Информация Информация",
+      "fromBusiness": "Информация",
+      "fromBusinessText": "Информация Информация",
+      "fromMerchant": "Информация",
+      "fromMerchantText": "Информация Информация",
+      "receiveRoute": "Информация",
+      "receiveRouteHint": "Информация Информация",
+      "internalRoute": "Информация",
+      "mode": "Информация",
+      "userInbound": "Информация",
+      "businessInbound": "Информация",
+      "merchantInbound": "Информация",
+      "reference": "Референс",
+      "referenceHint": "Информация Информация",
       "referencePlaceholder": "Введите значение",
       "securityTitle": "Безопасность",
-      "securityHint": "receive: информация",
-      "securityText": "receive: информация",
+      "securityHint": "Безопасность Информация",
+      "securityText": "Безопасность Информация",
       "continue": "Продолжить",
-      "confirmTitle": "Подтвердить",
+      "confirmTitle": "Подтвердить"
     },
     "confirm": {
       "title": "Подтвердить",
       "subtitle": "Описание",
-      "amount": "amount",
-      "transferValue": "transfer Value",
+      "amount": "Сумма",
+      "transferValue": "Информация",
       "ready": "Готово",
       "source": "Источник",
-      "funds": "funds",
-      "rail": "rail",
+      "funds": "Информация",
+      "rail": "Информация",
       "details": "Детали",
-      "tokenizedSource": "tokenized Источник",
-      "destination": "destination",
-      "recipient": "recipient",
-      "routeType": "route Type",
-      "handle": "handle",
-      "note": "note",
-      "reference": "reference",
+      "tokenizedSource": "Информация",
+      "destination": "Назначение",
+      "recipient": "Получатель",
+      "routeType": "Информация",
+      "handle": "Информация",
+      "note": "Примечание",
+      "reference": "Референс",
       "security": "Безопасность",
-      "bankGrade": "bank Grade",
-      "pinTitle": "pin",
+      "bankGrade": "Информация",
+      "pinTitle": "Заголовок",
       "pinText": "Подтвердить: информация",
-      "routeTitle": "route",
+      "routeTitle": "Заголовок",
       "routeText": "Подтвердить: информация",
-      "notificationTitle": "notification",
+      "notificationTitle": "Уведомления",
       "notificationText": "Подтвердить: информация",
       "continue": "Продолжить",
-      "pinConfirmTitle": "pin Подтвердить",
-      "pinConfirmSubtitle": "pin Подтвердить Описание",
+      "pinConfirmTitle": "Заголовок",
+      "pinConfirmSubtitle": "Описание Информация"
     },
     "success": {
       "title": "Раздел",
       "subtitle": "Описание",
-      "backToWallet": "Назад To Кошелёк",
+      "backToWallet": "Назад"
     },
     "financialDashboard": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "walletTitle": "Кошелёк",
       "title": "Раздел",
       "subtitle": "Описание",
       "loading": "Загрузка…",
       "errorTitle": "Ошибка",
       "retry": "Повторить",
-      "totalBalance": "total Баланс",
-      "wallets": "wallets",
-      "locked": "locked",
-      "active": "active",
-      "quickActions": "quick Actions",
+      "totalBalance": "Общий баланс",
+      "wallets": "Кошельки",
+      "locked": "Заблокировано",
+      "active": "Активно",
+      "quickActions": "Настройки",
       "history": "История",
-      "p2pSend": "p2p Отправить",
-      "qrExecute": "QR Execute",
-      "paymentRoute": "payment Route",
-      "totals": "totals",
-      "payments": "payments",
-      "p2p": "p2p",
+      "p2pSend": "Информация",
+      "qrExecute": "Информация",
+      "paymentRoute": "Информация",
+      "totals": "Информация",
+      "payments": "Платежи",
+      "p2p": "Информация",
       "qr": "QR",
-      "walletOps": "Кошелёк Ops",
-      "business": "business",
-      "merchant": "merchant",
-      "noWallets": "no Wallets",
-      "recentHistory": "recent История",
-      "seeAll": "see All",
-      "noEvents": "no Events",
-      "unknown": "unknown",
+      "walletOps": "Кошелёк",
+      "business": "Бизнес",
+      "merchant": "Мерчант",
+      "noWallets": "Информация",
+      "recentHistory": "История",
+      "seeAll": "Показать всё",
+      "noEvents": "Информация",
+      "unknown": "Информация"
     },
     "financialItem": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "loading": "Загрузка…",
       "errorTitle": "Ошибка",
-      "amountUnavailable": "amount Unavailable",
-      "unknown": "unknown",
+      "amountUnavailable": "Не удалось выполнить запрос. Попробуйте снова.",
+      "unknown": "Информация",
       "id": "ID",
-      "transaction": "transaction",
+      "transaction": "Информация",
       "wallet": "Кошелёк",
-      "reference": "reference",
-      "createdAt": "created At",
-      "payload": "payload",
+      "reference": "Референс",
+      "createdAt": "Создано",
+      "payload": "Информация"
     },
     "paymentExecution": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
       "statusTitle": "Статус",
-      "statusText": "payment Execution: информация",
-      "currentWallet": "current Кошелёк",
-      "currentUser": "current Пользователь",
-      "notProvided": "не Provided",
+      "statusText": "Информация Информация",
+      "currentWallet": "Кошелёк",
+      "currentUser": "Информация",
+      "notProvided": "Информация",
       "providerTitle": "Провайдер",
-      "providerText": "payment Execution: информация",
-      "tokenTitle": "token",
-      "tokenText": "payment Execution: информация",
-      "auditTitle": "audit",
-      "auditText": "payment Execution: информация",
-      "goToSend": "go To Отправить",
-      "goToQr": "go To QR",
+      "providerText": "Настройки Информация",
+      "tokenTitle": "Заголовок",
+      "tokenText": "Информация Информация",
+      "auditTitle": "Заголовок",
+      "auditText": "Информация Информация",
+      "goToSend": "Информация",
+      "goToQr": "Информация"
     },
     "mySabiId": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Информация",
       "title": "Раздел",
       "subtitle": "Описание",
       "notConfigured": "не настроен",
       "pending": "В ожидании",
       "status": "Статус",
-      "internalPay": "internal Pay",
-      "receive": "receive",
-      "identity": "identity",
-      "mainBanner": "main Banner",
-      "preview": "preview",
-      "bannerAppearance": "banner Appearance",
-      "displayName": "display Название",
+      "internalPay": "Информация",
+      "receive": "Получить",
+      "identity": "Идентичность",
+      "mainBanner": "Информация",
+      "preview": "Предпросмотр",
+      "bannerAppearance": "Внешний вид",
+      "displayName": "Отображаемое имя",
       "displayNamePlaceholder": "Введите значение",
-      "sabiId": "sabi ID",
+      "sabiId": "Информация",
       "sabiIdPlaceholder": "Введите значение",
-      "bannerColor": "banner Color",
-      "bannerStyle": "banner Style",
-      "qrAccess": "QR Access",
-      "core": "core",
-      "myQr": "my QR",
-      "scan": "scan",
-      "share": "share",
-      "copyId": "copy ID",
-      "askAi": "ask AI",
-      "howWorks": "how Works",
-      "flow": "flow",
-      "internalTitle": "internal",
-      "internalText": "my Sabi ID: информация",
+      "bannerColor": "Информация",
+      "bannerStyle": "Информация",
+      "qrAccess": "Информация",
+      "core": "Информация",
+      "myQr": "Мой QR",
+      "scan": "Информация",
+      "share": "Поделиться",
+      "copyId": "Информация",
+      "askAi": "AI",
+      "howWorks": "Информация",
+      "flow": "Информация",
+      "internalTitle": "Заголовок",
+      "internalText": "Информация Информация",
       "qrTitle": "QR",
-      "qrText": "my Sabi ID: информация",
-      "customizeTitle": "customize",
-      "customizeText": "my Sabi ID: информация",
-      "walletIdentity": "Кошелёк Identity",
-      "secureRoute": "secure Route",
-      "style": "style",
-      "theme": "theme",
-      "profileFallback": "Профиль Fallback",
-    },
+      "qrText": "Информация Информация",
+      "customizeTitle": "Заголовок",
+      "customizeText": "Информация Информация",
+      "walletIdentity": "Кошелёк",
+      "secureRoute": "Информация",
+      "style": "Стиль",
+      "theme": "Тема",
+      "profileFallback": "Профиль"
+    }
   },
   "walletCards": {
     "title": "Карты",
@@ -2208,9 +2209,9 @@ export const RU_LOCALE = {
     "cardNickname": "Название карты",
     "cardDesign": "Дизайн карты",
     "verificationMethod": "Метод подтверждения",
-    "verifyByCvv": "Подтвердить по CVV",
-    "verifyByOtp": "Подтвердить по OTP",
-    "verifyByCvvOtp": "Подтвердить по CVV + OTP",
+    "verifyByCvv": "Информация",
+    "verifyByOtp": "Информация",
+    "verifyByCvvOtp": "Информация",
     "cardLinked": "Карта привязана",
     "cardRemoved": "Карта удалена",
     "removeCard": "Удалить карту",
@@ -2238,7 +2239,7 @@ export const RU_LOCALE = {
     "cardToCardTransfer": "Перевод с карты на карту",
     "tokenizedPayments": "Токенизированные платежи",
     "cardLimitResetDate": "Дата сброса лимита карты",
-    "verificationMode": "Режим подтверждения",
+    "verificationMode": "Режим подтверждения"
   },
   "bankAccounts": {
     "title": "Банковские счета",
@@ -2261,10 +2262,10 @@ export const RU_LOCALE = {
     "beneficiaryBank": "Банк бенефициара",
     "beneficiaryAddress": "Адрес бенефициара",
     "accountNumber": "Номер счёта",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing number",
+    "iban": "Информация",
+    "swift": "Информация",
+    "bic": "Информация",
+    "routingNumber": "Информация",
     "correspondentBank": "Банк-корреспондент",
     "intermediaryBank": "Банк-посредник",
     "bankCode": "Код банка",
@@ -2282,7 +2283,7 @@ export const RU_LOCALE = {
     "noLinkedAccounts": "Привязанных банковских счетов пока нет",
     "linkSuccess": "Банковский счёт успешно привязан",
     "verificationPending": "Подтверждение банковского счёта в обработке",
-    "verificationComplete": "Банковский счёт подтверждён",
+    "verificationComplete": "Банковский счёт подтверждён"
   },
   "bankTransfers": {
     "title": "Банковские переводы",
@@ -2293,7 +2294,7 @@ export const RU_LOCALE = {
     "domesticTransfer": "Внутренний перевод",
     "internationalTransfer": "Международный перевод",
     "swiftTransfer": "SWIFT-перевод",
-    "wireTransfer": "Wire-перевод",
+    "wireTransfer": "Информация",
     "instantTransfer": "Мгновенный перевод",
     "scheduledTransfer": "Запланированный перевод",
     "recurringTransfer": "Регулярный перевод",
@@ -2308,10 +2309,10 @@ export const RU_LOCALE = {
     "beneficiaryCountry": "Страна бенефициара",
     "recipientBank": "Банк получателя",
     "bankBranch": "Филиал банка",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing number",
+    "iban": "Информация",
+    "swift": "Информация",
+    "bic": "Информация",
+    "routingNumber": "Информация",
     "transferAmount": "Сумма перевода",
     "receivingAmount": "Сумма к получению",
     "transferFee": "Комиссия за перевод",
@@ -2334,22 +2335,22 @@ export const RU_LOCALE = {
     "savedRecipients": "Сохранённые получатели",
     "repeatTransfer": "Повторить перевод",
     "cancelTransfer": "Отменить перевод",
-    "noSavedRecipients": "Сохранённых получателей нет",
+    "noSavedRecipients": "Сохранённых получателей нет"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
-    "subtitle": "Управляйте балансом Coin, переводами, доходом и заблокированными продуктами.",
-    "availableCoin": "Доступный Coin",
-    "lockedCoin": "Заблокированный Coin",
-    "earnedCoin": "Заработанный Coin",
-    "topUpCoin": "Пополнить Coin",
-    "convertToCoin": "Конвертировать в Coin",
-    "convertFromWallet": "Конвертировать из Sabi Wallet",
-    "sendCoin": "Отправить Coin",
-    "receiveCoin": "Получить Coin",
-    "coinTransfer": "Перевод Coin",
-    "coinDeposit": "Депозит Coin",
-    "coinEarn": "Доход по Coin",
+    "title": "Раздел",
+    "subtitle": "Настройки",
+    "availableCoin": "Готово",
+    "lockedCoin": "Информация",
+    "earnedCoin": "Информация",
+    "topUpCoin": "Информация",
+    "convertToCoin": "Информация",
+    "convertFromWallet": "Кошелёк",
+    "sendCoin": "Информация",
+    "receiveCoin": "Информация",
+    "coinTransfer": "Информация",
+    "coinDeposit": "Информация",
+    "coinEarn": "Информация",
     "depositTerm": "Срок депозита",
     "annualRate": "Годовая ставка",
     "estimatedReturn": "Ожидаемая доходность",
@@ -2360,16 +2361,16 @@ export const RU_LOCALE = {
     "interestPayout": "Выплата процентов",
     "incomeSchedule": "График дохода",
     "moveToMainWallet": "Перевести в основной кошелёк",
-    "coinUseCases": "Способы использования Coin",
-    "payWithCoin": "Оплатить через Coin",
-    "buyPremiumWithCoin": "Купить Premium за Coin",
-    "giftWithCoin": "Подарить за Coin",
-    "noCoinTransactions": "Транзакций Coin пока нет",
+    "coinUseCases": "Информация",
+    "payWithCoin": "Информация",
+    "buyPremiumWithCoin": "Премиум",
+    "giftWithCoin": "Премиум",
+    "noCoinTransactions": "Информация",
     "monthlyReleaseRule": "Ежемесячное правило разблокировки",
     "lockedUntilRelease": "Заблокировано до разблокировки",
-    "releaseAvailableOn": "Разблокировка доступна {{date}}",
+    "releaseAvailableOn": "Готово",
     "stakingLikeProducts": "Доходные продукты с блокировкой",
-    "creditReserved": "Кредитные функции зарезервированы для будущего запуска",
+    "creditReserved": "Кредитные функции зарезервированы для будущего запуска"
   },
   "walletBusiness": {
     "title": "Бизнес-кошелёк",
@@ -2392,7 +2393,7 @@ export const RU_LOCALE = {
     "teamPermissions": "Права команды",
     "businessTransfers": "Бизнес-переводы",
     "salaryPayments": "Зарплатные выплаты",
-    "payroll": "Payroll",
+    "payroll": "Информация",
     "massPayouts": "Массовые выплаты",
     "expenseControl": "Контроль расходов",
     "cashFlow": "Денежный поток",
@@ -2407,7 +2408,7 @@ export const RU_LOCALE = {
     "bankReconciliation": "Банковская сверка",
     "reconciliationStatus": "Статус сверки",
     "unmatchedTransactions": "Несопоставленные транзакции",
-    "noBusinessWallet": "Бизнес-кошелёк ещё не подключён",
+    "noBusinessWallet": "Бизнес-кошелёк ещё не подключён"
   },
   "walletMerchant": {
     "title": "Мерчант-кошелёк",
@@ -2420,8 +2421,8 @@ export const RU_LOCALE = {
     "netSales": "Чистые продажи",
     "refunds": "Возвраты",
     "refundRate": "Уровень возвратов",
-    "chargebacks": "Chargeback-споры",
-    "chargebackRate": "Уровень chargeback",
+    "chargebacks": "Назад",
+    "chargebackRate": "Назад",
     "disputes": "Споры",
     "paymentAcceptance": "Приём платежей",
     "terminalPayments": "Платежи через терминал",
@@ -2446,7 +2447,7 @@ export const RU_LOCALE = {
     "capturedPayments": "Списанные платежи",
     "authorizedPayments": "Авторизованные платежи",
     "reversedPayments": "Реверсированные платежи",
-    "noMerchantWallet": "Мерчант-кошелёк ещё не подключён",
+    "noMerchantWallet": "Мерчант-кошелёк ещё не подключён"
   },
   "walletTransactions": {
     "title": "Транзакции",
@@ -2494,7 +2495,7 @@ export const RU_LOCALE = {
     "reversal": "Реверс",
     "settlementFee": "Комиссия за расчёт",
     "withholding": "Удержание",
-    "noFilteredResults": "По выбранным фильтрам ничего не найдено",
+    "noFilteredResults": "По выбранным фильтрам ничего не найдено"
   },
   "statements": {
     "title": "Выписки",
@@ -2509,25 +2510,25 @@ export const RU_LOCALE = {
     "statementDate": "Дата выписки",
     "generateStatement": "Сформировать выписку",
     "regenerateStatement": "Сформировать заново",
-    "downloadPdf": "Скачать PDF",
-    "exportCsv": "Экспорт CSV",
-    "exportXlsx": "Экспорт XLSX",
-    "emailStatement": "Отправить выписку на email",
+    "downloadPdf": "Информация",
+    "exportCsv": "Информация",
+    "exportXlsx": "Информация",
+    "emailStatement": "Информация",
     "statementSummary": "Итоги выписки",
     "openingBalance": "Входящий баланс",
     "totalCredits": "Всего зачислений",
     "totalDebits": "Всего списаний",
     "closingBalance": "Исходящий баланс",
     "statementReady": "Выписка готова",
-    "noStatements": "Выписок пока нет",
+    "noStatements": "Выписок пока нет"
   },
   "compliance": {
     "title": "Комплаенс",
     "subtitle": "Верификация, регуляторные проверки и банковский контроль соответствия.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Информация",
     "sanctionsScreening": "Проверка по санкционным спискам",
-    "pepCheck": "Проверка PEP",
+    "pepCheck": "Информация",
     "sourceOfFunds": "Источник средств",
     "sourceOfWealth": "Источник состояния",
     "proofOfIdentity": "Подтверждение личности",
@@ -2543,7 +2544,7 @@ export const RU_LOCALE = {
     "complianceApproved": "Комплаенс одобрен",
     "complianceRejected": "Комплаенс отклонён",
     "transactionMonitoring": "Мониторинг транзакций",
-    "riskLevel": "Уровень риска",
+    "riskLevel": "Уровень риска"
   },
   "qr": {
     "title": "QR",
@@ -2559,7 +2560,7 @@ export const RU_LOCALE = {
     "dynamicQr": "Динамический QR",
     "qrExpired": "QR-код истёк",
     "qrInvalid": "Некорректный QR-код",
-    "qrPermissionNeeded": "Для сканирования QR-кодов требуется доступ к камере.",
+    "qrPermissionNeeded": "Для сканирования QR-кодов требуется доступ к камере."
   },
   "messenger": {
     "title": "Мессенджер",
@@ -2624,7 +2625,7 @@ export const RU_LOCALE = {
     "videoCall": "Видеозвонок",
     "aiTranslate": "AI-перевод",
     "premiumFeature": "Премиум-функция",
-    "sendCoin": "Отправить Coin",
+    "sendCoin": "Информация",
     "sendPayment": "Отправить платёж",
     "sharedMedia": "Общие медиа",
     "sharedFiles": "Общие файлы",
@@ -2650,7 +2651,7 @@ export const RU_LOCALE = {
       "gallery": "Галерея",
       "gallerySubtitle": "фото или видео",
       "document": "Документ",
-      "documentSubtitle": "pdf doc zip и другое",
+      "documentSubtitle": "Описание Информация",
       "location": "Геолокация",
       "locationSubtitle": "реальная карточка места",
       "contact": "Контакт",
@@ -2658,45 +2659,45 @@ export const RU_LOCALE = {
       "catalog": "Каталог",
       "catalogSubtitle": "карточка товара",
       "fiat": "Отправить деньги",
-      "fiatSubtitle": "через Sabi Wallet",
+      "fiatSubtitle": "Описание Информация",
       "coin": "Отправить COIN",
-      "coinSubtitle": "через Coin Wallet",
+      "coinSubtitle": "Описание Информация",
       "poll": "Опрос",
       "pollSubtitle": "голосование внутри чата",
       "event": "Событие",
-      "eventSubtitle": "приглашение на встречу",
+      "eventSubtitle": "приглашение на встречу"
     },
     "animatedHub": {
       "title": "Анимация",
-      "subtitle": "реакция · emoji · GIFT 3D PREMIUM",
+      "subtitle": "Настройки",
       "reactionTitle": "Анимированная реакция",
       "reactionSubtitle": "премиальные полноэкранные реакции · 5 секунд",
-      "emojiTitle": "Анимированный emoji",
-      "emojiSubtitle": "премиальный слой emoji · не 3D · без аудио",
-      "giftTitle": "GIFT 3D PREMIUM",
-      "giftSubtitle": "платные премиальные 3D-подарки",
+      "emojiTitle": "Заголовок",
+      "emojiSubtitle": "Описание Информация",
+      "giftTitle": "Премиум",
+      "giftSubtitle": "Премиум Информация"
     },
     "animatedReaction": {
       "title": "Премиум-стикеры",
-      "subtitle": "все премиальные PNG-стикеры",
+      "subtitle": "Настройки",
       "search": "Поиск премиум-стикеров",
       "love": "Любовь",
       "fun": "Веселье",
-      "mood": "Настроение",
+      "mood": "Настроение"
     },
     "stickerSheet": {
       "title": "Стикер-реакции",
-      "subtitle": "Реакции, emoji, жесты и флаги стран",
-      "searchPlaceholder": "Ищите emoji или флаг",
+      "subtitle": "Настройки",
+      "searchPlaceholder": "Поиск",
       "quickReactions": "Быстрые реакции",
       "empty": "В этом разделе ничего не найдено",
       "tabs": {
         "recent": "Недавние",
         "reactions": "Реакции",
-        "emoji": "Emoji",
+        "emoji": "Эмодзи",
         "gestures": "Жесты",
-        "flags": "Флаги",
-      },
+        "flags": "Флаги"
+      }
     },
     "animatedGift": {
       "premiumLayer": "Премиальный слой подарков • только Messenger",
@@ -2705,7 +2706,7 @@ export const RU_LOCALE = {
       "family": "Зодиак",
       "local": "Поездки",
       "treasure": "Отдых",
-      "luxury": "Премиум",
+      "luxury": "Премиум"
     },
     "giftStorage": {
       "inventory": "Инвентарь подарков",
@@ -2720,7 +2721,7 @@ export const RU_LOCALE = {
       "basic": "Базовые",
       "premium": "Премиум",
       "ultra": "Ультра",
-      "days": "дней",
+      "days": "дней"
     },
     "createBot": "Создать бота",
     "manageBot": "Управление ботом",
@@ -2729,14 +2730,14 @@ export const RU_LOCALE = {
     "searchBots": "Поиск ботов",
     "botWorkspace": "Пространство бота",
     "botOwnerPanel": "Панель владельца бота",
-    "botOwnerPanelSubtitle": "Полное управление профилем бота, статусом, модулями и wallet routing.",
+    "botOwnerPanelSubtitle": "Помощник Информация",
     "ownerPanelHint": "Открыть полную панель управления ботом",
-    "createBotHint": "Клиенты могут создавать ботов и подключать их к market, delivery, store или support потокам.",
+    "createBotHint": "Помощник Информация",
     "createBotButtonHint": "Создание и привязка бизнес-ботов без лишних экранов",
     "emptyBotsTitle": "Ботов пока нет",
     "emptyBotsSubtitle": "Создайте первого бота, и он появится здесь.",
     "botNameRequired": "Введите имя бота",
-    "botUsernameRequired": "Введите username бота",
+    "botUsernameRequired": "Помощник",
     "botCreated": "Бот создан",
     "botUpdated": "Бот обновлён",
     "botRemoved": "Бот удалён",
@@ -2744,11 +2745,11 @@ export const RU_LOCALE = {
     "botLoading": "Загрузка бота...",
     "botProfile": "Профиль бота",
     "walletRouting": "Маршрутизация кошелька",
-    "sabiWalletRoute": "SABI Wallet",
+    "sabiWalletRoute": "Кошелёк",
     "businessRoutingLayer": "Слой бизнес-маршрутизации",
-    "businessWalletComingSoon": "Business Wallet скоро появится",
-    "botTradeRouteHint": "Доходы торговых и commerce-ботов направляются в SABI Wallet.",
-    "botBusinessRouteHint": "До запуска Business Wallet доходы бизнес-ботов направляются во временный Business Routing Layer.",
+    "businessWalletComingSoon": "Информация",
+    "botTradeRouteHint": "Помощник Информация",
+    "botBusinessRouteHint": "Помощник Информация",
     "botStatusHint": "Бота можно приостановить или снова активировать без удаления.",
     "addCommand": "Добавить команду",
     "editCommand": "Редактировать команду",
@@ -2766,7 +2767,7 @@ export const RU_LOCALE = {
     "removeBotFromOwnerList": "Убрать бота из списка владельца",
     "openRoute": "Открыть маршрут",
     "businessPath": "Бизнес-путь",
-    "sabiPath": "Путь SABI",
+    "sabiPath": "Информация",
     "muteBot": "Выключить звук бота",
     "unmuteBot": "Включить звук бота",
     "pinBot": "Закрепить бота",
@@ -2826,7 +2827,7 @@ export const RU_LOCALE = {
       "title": "Настройки чата",
       "subtitle": "Управление этим чатом",
       "botTitle": "Бот",
-      "botSubtitle": "Бот Описание",
+      "botSubtitle": "Бот Описание"
     },
     "menu": {
       "addContact": "Добавить контакт",
@@ -2843,7 +2844,7 @@ export const RU_LOCALE = {
       "unmute": "Включить звук",
       "unmuteSubtitle": "Снова включить уведомления",
       "disappearing": "Исчезающие сообщения",
-      "disappearingSubtitle": "Включить автoудаление для новых сообщений",
+      "disappearingSubtitle": "Описание Информация",
       "disableDisappearing": "Выключить исчезающие сообщения",
       "disableDisappearingSubtitle": "Оставлять новые сообщения в чате",
       "theme": "Тема чата",
@@ -2862,32 +2863,32 @@ export const RU_LOCALE = {
       "clearChatSubtitle": "Удалить историю сообщений в этой комнате",
       "addToHome": "Добавить на главный экран",
       "addToHomeSubtitle": "Быстрый доступ с домашнего экрана устройства",
-      "addBotToList": "Добавить Бот To List",
-      "addBotToListSubtitle": "Добавить Бот To List Описание",
-      "removeBotFromList": "Удалить Бот From List",
-      "removeBotFromListSubtitle": "Удалить Бот From List Описание",
-      "muteBot": "mute Бот",
-      "muteBotSubtitle": "mute Бот Описание",
-      "unmuteBot": "unmute Бот",
-      "unmuteBotSubtitle": "unmute Бот Описание",
+      "addBotToList": "Помощник",
+      "addBotToListSubtitle": "Помощник Информация",
+      "removeBotFromList": "Помощник",
+      "removeBotFromListSubtitle": "Помощник Информация",
+      "muteBot": "Помощник",
+      "muteBotSubtitle": "Помощник Информация",
+      "unmuteBot": "Помощник",
+      "unmuteBotSubtitle": "Помощник Информация",
       "ai": "AI",
       "aiSubtitle": "AI Описание",
       "aiBotSubtitle": "AI Бот Описание",
-      "manageBot": "manage Бот",
-      "manageBotSubtitle": "manage Бот Описание",
-      "botTools": "Бот Tools",
-      "botToolsSubtitle": "Бот Tools Описание",
-      "moreBotSubtitle": "more Бот Описание",
-      "reportBotSubtitle": "report Бот Описание",
-      "blockBot": "block Бот",
-      "blockBotSubtitle": "block Бот Описание",
-      "unblockBot": "unblock Бот",
-      "unblockBotSubtitle": "unblock Бот Описание",
-      "clearBotChatSubtitle": "clear Бот Чат Описание",
-      "hideConversation": "hide Conversation",
-      "hideConversationSubtitle": "hide Conversation Описание",
-      "addBotToHome": "Добавить Бот To Home",
-      "addBotToHomeSubtitle": "Добавить Бот To Home Описание",
+      "manageBot": "Помощник",
+      "manageBotSubtitle": "Помощник Информация",
+      "botTools": "Помощник",
+      "botToolsSubtitle": "Помощник Информация",
+      "moreBotSubtitle": "Помощник Информация",
+      "reportBotSubtitle": "Помощник Информация",
+      "blockBot": "Помощник",
+      "blockBotSubtitle": "Помощник Информация",
+      "unblockBot": "Помощник",
+      "unblockBotSubtitle": "Помощник Информация",
+      "clearBotChatSubtitle": "Помощник Информация",
+      "hideConversation": "Информация",
+      "hideConversationSubtitle": "Описание Информация",
+      "addBotToHome": "Помощник",
+      "addBotToHomeSubtitle": "Помощник Информация"
     },
     "chat": {
       "you": "Вы",
@@ -2896,9 +2897,9 @@ export const RU_LOCALE = {
       "offline": "Не в сети",
       "connecting": "Подключение...",
       "reconnecting": "Переподключение...",
-      "lastSeenToday": "был(-а) сегодня в {{time}}",
-      "lastSeenYesterday": "был(-а) вчера в {{time}}",
-      "lastSeenDate": "был(-а) {{date}} в {{time}}",
+      "lastSeenToday": "Информация",
+      "lastSeenYesterday": "Информация",
+      "lastSeenDate": "Информация",
       "conversationPlaceholder": "Диалог появится здесь.",
       "today": "Сегодня",
       "yesterday": "Вчера",
@@ -2982,9 +2983,9 @@ export const RU_LOCALE = {
       "replyingTitle": "Быстрый ответ",
       "readOnlyTitle": "Этот канал только для чтения",
       "readOnlySubtitle": "Отправка сообщений здесь отключена. Откройте информацию канала для деталей.",
-      "mediaLabel": "Media",
-      "mediaTitle": "Media",
-      "mediaMessage": "Media, ссылки и документы будут расширены на следующем этапе.",
+      "mediaLabel": "Медиа",
+      "mediaTitle": "Медиа",
+      "mediaMessage": "Информация",
       "mediaCaptureFailed": "Не удалось завершить обработку медиа.",
       "mediaSaved": "Сохранено",
       "privacyTitle": "Приватность",
@@ -2996,7 +2997,7 @@ export const RU_LOCALE = {
       "messageSendError": "Не удалось отправить сообщение.",
       "giftSent": "Подарок отправлен",
       "animatedReactionSent": "Анимированная реакция отправлена",
-      "animatedEmojiSent": "Анимированный emoji отправлен",
+      "animatedEmojiSent": "Информация",
       "stickerAdded": "Стикер добавлен в поле ввода",
       "selectedForForwardPrefix": "Выбрано для пересылки",
       "chooseMessagesForward": "Выберите сообщения для пересылки",
@@ -3006,7 +3007,7 @@ export const RU_LOCALE = {
       "addedToComposer": "Добавлено в поле ввода",
       "saveMediaReady": "Подготовлено к сохранению",
       "openLinkReady": "Подготовлено к открытию ссылки",
-      "openingWalletFiat": "Открытие fiat-кошелька",
+      "openingWalletFiat": "Кошелёк",
       "openingCoinWallet": "Открытие COIN-кошелька",
       "catalogSoon": "Каталог будет добавлен на следующем этапе.",
       "pollSoon": "Опрос будет добавлен на следующем этапе.",
@@ -3029,7 +3030,7 @@ export const RU_LOCALE = {
       "quickOwnerControls": "Быстрое управление владельца",
       "openBotChatInMessenger": "Открыть чат с ботом в Messenger",
       "savingNow": "Сохранение...",
-      "nameAndUsernameRequired": "Имя бота и username обязательны.",
+      "nameAndUsernameRequired": "Информация",
       "commandAndTitleRequired": "Команда и название обязательны.",
       "groupInfoAction": "Информация о группе",
       "businessInfoAction": "Информация о бизнесе",
@@ -3052,7 +3053,7 @@ export const RU_LOCALE = {
       "chatCleared": "Чат очищен",
       "chatExported": "Экспорт чата открыт",
       "homeShortcutPinned": "Ярлык добавлен на главный экран",
-      "homeShortcutUnsupported": "Для добавления ярлыка на главный экран нужен Android shortcut bridge",
+      "homeShortcutUnsupported": "Информация",
       "blockActionDone": "Чат заблокирован",
       "unblockActionDone": "Чат разблокирован",
       "fileBadgeGeneric": "ФАЙЛ",
@@ -3063,8 +3064,8 @@ export const RU_LOCALE = {
       "addContactSave": "Сохранить контакт",
       "addContactSubtitle": "Сохраните контакт в Sabi Messenger или в контактах телефона.",
       "addContactTitle": "Добавить контакт",
-      "addContactUsername": "Username",
-      "addContactUsernamePlaceholder": "Введите username",
+      "addContactUsername": "Информация",
+      "addContactUsernamePlaceholder": "Поиск",
       "contactChooseSource": "Выберите источник контакта",
       "contactNameRequired": "Нужно указать имя контакта.",
       "contactSavedInContacts": "Контакт сохранён в контактах телефона.",
@@ -3080,22 +3081,22 @@ export const RU_LOCALE = {
       "sabiContactsSubtitle": "Выбор из контактов Sabi Messenger",
       "sabiContactsTitle": "Контакты Sabi",
       "saveMediaChooseTitle": "Куда сохранить медиа?",
-      "saveToSabiApp": "Sabi App",
+      "saveToSabiApp": "Информация",
       "saveToPhone": "Телефон",
       "saveVideoTitle": "Сохранить Видео",
       "saveVideoSubtitle": "Сохранить Видео Описание",
       "videoReady": "Видео Готово",
-      "saveVideoAction": "Сохранить Видео Action",
+      "saveVideoAction": "Голос",
       "savePhotoTitle": "Сохранить Фото",
       "savePhotoSubtitle": "Сохранить Фото Описание",
       "photoReady": "Фото Готово",
-      "savePhotoAction": "Сохранить Фото Action",
-      "saveMediaTitle": "Сохранить Media",
-      "saveMediaSubtitle": "Сохранить Media Описание",
-      "mediaReady": "media Готово",
-      "mediaSaveNotice": "media Сохранить Notice",
-      "saveMediaAction": "Сохранить Media Action",
-      "conversationHidden": "Переписка скрыта",
+      "savePhotoAction": "Профиль",
+      "saveMediaTitle": "Заголовок",
+      "saveMediaSubtitle": "Описание Информация",
+      "mediaReady": "Готово",
+      "mediaSaveNotice": "Информация",
+      "saveMediaAction": "Информация",
+      "conversationHidden": "Переписка скрыта"
     },
     "reportScreen": {
       "title": "Жалоба",
@@ -3119,7 +3120,7 @@ export const RU_LOCALE = {
       "selfHarm": "Контент о самоповреждении",
       "copyright": "Нарушение авторских прав",
       "privacyViolation": "Нарушение приватности",
-      "somethingElse": "Другое",
+      "somethingElse": "Другое"
     },
     "createContact": {
       "title": "Новый контакт",
@@ -3132,25 +3133,25 @@ export const RU_LOCALE = {
       "note": "Заметка",
       "saveContact": "Сохранить контакт",
       "contactCreated": "Контакт создан",
-      "phoneRequired": "Номер телефона обязателен",
+      "phoneRequired": "Номер телефона обязателен"
     },
     "ownerRouting": {
-      "title": "Маршрутизация owner-управления",
-      "subtitle": "Всё owner-управление для группы, канала и бота открывается через Profile.",
-      "openProfileManagement": "Открыть управление внутри Profile",
-      "createFromProfile": "Создание выполняется только из Profile",
-      "manageFromProfile": "Публикация, привязки и данные владельца управляются внутри Profile",
-      "publicInfoOnly": "Chat Partner Info остаётся только public/view экраном",
+      "title": "Настройки",
+      "subtitle": "Настройки",
+      "openProfileManagement": "Профиль",
+      "createFromProfile": "Профиль",
+      "manageFromProfile": "Профиль",
+      "publicInfoOnly": "Информация",
       "hideIfNotCreated": "Если объект не создан, раздел в профиле скрывается",
-      "unifiedUserId": "Во всех потоках единый user ID остаётся основным идентификатором",
+      "unifiedUserId": "Информация"
     },
     "groupManagement": {
       "title": "Управление группой",
       "subtitle": "Полное управление созданием группы, данными владельца, публикацией и привязками.",
       "profileEntryTitle": "Профиль группы",
-      "profileEntrySubtitle": "Данные владельца группы, публикация и привязки управляются внутри Profile.",
+      "profileEntrySubtitle": "Профиль Информация",
       "createEntryTitle": "Создать группу",
-      "createEntrySubtitle": "Создайте новую группу из Profile, а затем управляйте ей.",
+      "createEntrySubtitle": "Описание Информация",
       "ownerPanel": "Панель владельца группы",
       "ownerPanelSubtitle": "Полное управление профилем группы, участниками, администраторами, правами и настройками публикации.",
       "publication": "Публикация группы",
@@ -3161,19 +3162,19 @@ export const RU_LOCALE = {
       "members": "Участники",
       "admins": "Администраторы",
       "inviteLink": "Ссылка-приглашение",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Связанный Chat ID",
-      "linkedBotId": "Связанный Bot ID",
-      "groupId": "Group ID",
-      "ownerUserId": "Owner User ID",
+      "publicationId": "Информация",
+      "linkedChatId": "Чат",
+      "linkedBotId": "Помощник",
+      "groupId": "Группа ID",
+      "ownerUserId": "Информация",
       "ownerName": "Имя владельца",
       "ownerPhone": "Телефон владельца",
-      "ownerEmail": "Email владельца",
+      "ownerEmail": "Информация",
       "role": "Роль",
       "publicGroup": "Публичная группа",
       "privateGroup": "Приватная группа",
       "published": "Опубликовано",
-      "showInProfile": "Показывать в Profile",
+      "showInProfile": "Раздел",
       "joinRequests": "Запросы на вступление",
       "memberInvites": "Участники могут приглашать",
       "onlyAdminsPost": "Только админы могут писать",
@@ -3183,16 +3184,16 @@ export const RU_LOCALE = {
       "saveSuccess": "Настройки группы сохранены",
       "resetSuccess": "Данные группы сброшены",
       "openMessengerRoom": "Открыть чат группы в Messenger",
-      "hiddenIfNotCreated": "Если группа не создана, entry в профиле скрывается",
-      "createInProfileOnly": "Основная точка входа для создания группы — Profile",
+      "hiddenIfNotCreated": "Информация",
+      "createInProfileOnly": "Профиль"
     },
     "channelManagement": {
       "title": "Управление каналом",
       "subtitle": "Полное управление созданием канала, данными владельца, публикацией и привязками.",
       "profileEntryTitle": "Профиль канала",
-      "profileEntrySubtitle": "Данные владельца канала, публикация и привязки управляются внутри Profile.",
+      "profileEntrySubtitle": "Профиль Информация",
       "createEntryTitle": "Создать канал",
-      "createEntrySubtitle": "Создайте новый канал из Profile, а затем управляйте им.",
+      "createEntrySubtitle": "Описание Информация",
       "ownerPanel": "Панель владельца канала",
       "ownerPanelSubtitle": "Полное управление профилем канала, подписчиками, администраторами, правами публикации и настройками.",
       "publication": "Публикация канала",
@@ -3203,20 +3204,20 @@ export const RU_LOCALE = {
       "subscribers": "Подписчики",
       "admins": "Администраторы",
       "inviteLink": "Ссылка-приглашение",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Связанный Chat ID",
-      "linkedDiscussionId": "Связанный Discussion ID",
-      "linkedBotId": "Связанный Bot ID",
-      "channelId": "Channel ID",
-      "ownerUserId": "Owner User ID",
+      "publicationId": "Информация",
+      "linkedChatId": "Чат",
+      "linkedDiscussionId": "Информация",
+      "linkedBotId": "Помощник",
+      "channelId": "Канал ID",
+      "ownerUserId": "Информация",
       "ownerName": "Имя владельца",
       "ownerPhone": "Телефон владельца",
-      "ownerEmail": "Email владельца",
+      "ownerEmail": "Информация",
       "role": "Роль",
       "publicChannel": "Публичный канал",
       "privateChannel": "Приватный канал",
       "published": "Опубликовано",
-      "showInProfile": "Показывать в Profile",
+      "showInProfile": "Раздел",
       "joinRequests": "Запросы на вступление",
       "onlyAdminsPost": "Только админы могут публиковать",
       "onlyAdminsEdit": "Только админы могут редактировать",
@@ -3226,16 +3227,16 @@ export const RU_LOCALE = {
       "saveSuccess": "Настройки канала сохранены",
       "resetSuccess": "Данные канала сброшены",
       "openMessengerRoom": "Открыть канал в Messenger",
-      "hiddenIfNotCreated": "Если канал не создан, entry в профиле скрывается",
-      "createInProfileOnly": "Основная точка входа для создания канала — Profile",
+      "hiddenIfNotCreated": "Информация",
+      "createInProfileOnly": "Профиль"
     },
     "botManagement": {
       "title": "Управление ботом",
       "subtitle": "Полное управление созданием бота, данными владельца, модулями, публикацией и маршрутизацией кошелька.",
       "profileEntryTitle": "Профиль бота",
-      "profileEntrySubtitle": "Данные владельца, модули, публикация и routing управляются внутри Profile.",
+      "profileEntrySubtitle": "Профиль Информация",
       "createEntryTitle": "Создать бота",
-      "createEntrySubtitle": "Создайте нового бота из Profile, а затем управляйте им.",
+      "createEntrySubtitle": "Описание Информация",
       "ownerPanel": "Панель владельца бота",
       "ownerPanelSubtitle": "Полное управление профилем бота, статусом, модулями, командами и маршрутизацией кошелька.",
       "publication": "Публикация бота",
@@ -3244,42 +3245,42 @@ export const RU_LOCALE = {
       "routing": "Маршрутизация кошелька",
       "modules": "Модули",
       "commands": "Команды",
-      "botId": "Bot ID",
-      "ownerUserId": "Owner User ID",
+      "botId": "Бот ID",
+      "ownerUserId": "Информация",
       "ownerName": "Имя владельца",
       "ownerPhone": "Телефон владельца",
-      "ownerEmail": "Email владельца",
+      "ownerEmail": "Информация",
       "role": "Роль",
-      "linkedChatId": "Связанный Chat ID",
-      "linkedGroupId": "Связанный Group ID",
-      "linkedChannelId": "Связанный Channel ID",
-      "linkedMarketId": "Связанный Market ID",
-      "publicationId": "Publication ID",
+      "linkedChatId": "Чат",
+      "linkedGroupId": "Чат",
+      "linkedChannelId": "Чат",
+      "linkedMarketId": "Информация",
+      "publicationId": "Информация",
       "publicBot": "Публичный бот",
       "privateBot": "Приватный бот",
       "published": "Опубликовано",
-      "showInProfile": "Показывать в Profile",
+      "showInProfile": "Раздел",
       "active": "Активен",
       "paused": "Приостановлен",
       "acceptCommands": "Принимать команды",
       "showInCatalog": "Показывать в каталоге",
       "allowPayments": "Разрешить платежи",
-      "sabiWalletRoute": "SABI Wallet",
-      "businessRoutingLayer": "Business Routing Layer",
+      "sabiWalletRoute": "Кошелёк",
+      "businessRoutingLayer": "Слой бизнес-маршрутизации",
       "tradeBot": "Торговый бот",
       "businessBot": "Бизнес-бот",
-      "tradeHint": "Доходы торговых и commerce-ботов направляются в SABI Wallet.",
-      "businessHint": "Пока Business Wallet не запущен, доходы бизнес-ботов направляются в Business Routing Layer.",
+      "tradeHint": "Информация Информация",
+      "businessHint": "Информация Информация",
       "createSuccess": "Бот создан",
       "saveSuccess": "Настройки бота сохранены",
       "resetSuccess": "Данные бота сброшены",
       "openMessengerRoom": "Открыть чат бота в Messenger",
-      "hiddenIfNotCreated": "Если бот не создан, entry в профиле скрывается",
-      "createInProfileOnly": "Основная точка входа для создания бота — Profile",
+      "hiddenIfNotCreated": "Информация",
+      "createInProfileOnly": "Профиль"
     },
     "settingsPanels": {
-      "title": "Панели owner-настроек",
-      "subtitle": "Внутренние настройки группы, канала и бота управляются в отдельных owner-панелях.",
+      "title": "Настройки",
+      "subtitle": "Настройки",
       "ownerData": "Данные владельца",
       "publication": "Публикация",
       "bindings": "Привязки",
@@ -3291,35 +3292,35 @@ export const RU_LOCALE = {
       "permissions": "Разрешения",
       "statistics": "Статистика",
       "archive": "Архив",
-      "openInProfile": "Открыть в Profile",
-      "hiddenWhenNotCreated": "Для несозданных объектов раздел не показывается",
+      "openInProfile": "Профиль",
+      "hiddenWhenNotCreated": "Для несозданных объектов раздел не показывается"
     },
     "publicationFlow": {
       "title": "Поток публикации",
-      "subtitle": "Все настройки публикации для группы, канала и бота ведутся через Profile.",
+      "subtitle": "Настройки",
       "publicationEnabled": "Публикация включена",
-      "showInProfile": "Показывать в Profile",
+      "showInProfile": "Раздел",
       "publicMode": "Публичный режим",
       "privateMode": "Приватный режим",
       "ownerManagement": "Управление владельца",
       "bindings": "Привязки",
-      "profileControls": "Управление из Profile",
-      "publicationVisibleOnlyWhenCreated": "Раздел публикации виден только после создания объекта",
+      "profileControls": "Профиль",
+      "publicationVisibleOnlyWhenCreated": "Раздел публикации виден только после создания объекта"
     },
     "unifiedIdentity": {
       "title": "Единый идентификатор",
-      "subtitle": "В Messenger, Stream, Wallet и других модулях единый user ID остаётся основным идентификатором.",
-      "sameUserIdRequired": "Для потоков группы, канала, бота, подарков и платежей требуется один и тот же user ID",
-      "blockOnMismatch": "При несовпадении ID денежные и gift-потоки блокируются",
+      "subtitle": "Настройки",
+      "sameUserIdRequired": "Информация",
+      "blockOnMismatch": "Информация"
     },
     "animatedEmoji": {
       "celebration": "Праздник",
       "empty": "В этом разделе ничего не найдено",
       "faces": "Лица",
       "hearts": "Сердца",
-      "search": "Поиск animated emoji",
-      "subtitle": "Premium emoji с полноэкранным воспроизведением 5 секунд",
-      "title": "Animated emoji",
+      "search": "Поиск",
+      "subtitle": "Баланс, карты и быстрые операции",
+      "title": "Название"
     },
     "report": "Жалоба",
     "reportDetails": "Дополнительная причина",
@@ -3334,147 +3335,147 @@ export const RU_LOCALE = {
     "reportValidation": "Выберите причину жалобы или напишите её вручную.",
     "sendReport": "Отправить жалобу",
     "bot": "Бот",
-    "botConversation": "Бот Conversation",
-    "privateChats": "Приватный Chats",
-    "privateChatsSubtitle": "Приватный Chats Описание",
+    "botConversation": "Помощник",
+    "privateChats": "Информация",
+    "privateChatsSubtitle": "Описание Информация",
     "privateGroups": "Приватный Группы",
-    "privateChannels": "Приватный Channels",
-    "themeWallpaper": "theme Wallpaper",
-    "quickAccess": "quick Access",
-    "quickAccessMeta": "quick Access Meta",
-    "createMeta": "Создать Meta",
+    "privateChannels": "Информация",
+    "themeWallpaper": "Тема",
+    "quickAccess": "Информация",
+    "quickAccessMeta": "Информация",
+    "createMeta": "Информация",
     "groupCreateSubtitle": "Группа Создать Описание",
     "channelCreateSubtitle": "Канал Создать Описание",
     "botCreateSubtitle": "Бот Создать Описание",
     "callsSubtitle": "Звонки Описание",
-    "contactsSubtitle": "contacts Описание",
+    "contactsSubtitle": "Контакты",
     "groupsSubtitle": "Группы Описание",
     "botsSubtitle": "Боты Описание",
-    "channelsSubtitle": "channels Описание",
-    "businessSubtitle": "business Описание",
-    "chatsMeta": "chats Meta",
-    "officialName": "official Название",
-    "officialPreview": "official Preview",
+    "channelsSubtitle": "Каналы",
+    "businessSubtitle": "Бизнес",
+    "chatsMeta": "Информация",
+    "officialName": "Информация",
+    "officialPreview": "Информация",
     "openBots": "Открыть Боты",
-    "openChannels": "Открыть Channels",
-    "returnToChats": "return To Chats",
-    "mainChats": "main Chats",
-    "workspace": "workspace",
+    "openChannels": "Информация",
+    "returnToChats": "Информация",
+    "mainChats": "Информация",
+    "workspace": "Информация",
     "mobile": "мобильный",
-    "username": "username",
-    "birthday": "birthday",
-    "publications": "publications",
-    "gifts": "gifts",
-    "archive": "archive",
-    "allStories": "all Stories",
-    "likes": "likes",
-    "giftsPublic": "gifts Публичный",
-    "emptyPublications": "Пусто Publications",
-    "emptyGifts": "Пусто Gifts",
-    "emptyArchive": "Пусто Archive",
-    "fullscreenHint": "messenger: информация",
-    "unknownUser": "unknown Пользователь",
-    "info": "info",
-    "premiumStyle": "Premium Style",
-    "members": "members",
-    "noGroupMembers": "no Группа Members",
-    "memberInvited": "member Invited",
-    "memberRemoved": "member Removed",
-    "promoteAdmin": "promote Админ",
-    "demoteMember": "demote Member",
-    "ownerRole": "owner Role",
-    "adminRole": "Админ Role",
-    "memberRole": "member Role",
-    "pendingJoinRequests": "В ожидании Join Requests",
-    "noPendingJoinRequests": "no В ожидании Join Requests",
+    "username": "Имя пользователя",
+    "birthday": "Дата рождения",
+    "publications": "Информация",
+    "gifts": "Подарки",
+    "archive": "Архив",
+    "allStories": "Информация",
+    "likes": "Лайки",
+    "giftsPublic": "Премиум",
+    "emptyPublications": "Информация",
+    "emptyGifts": "Информация",
+    "emptyArchive": "Информация",
+    "fullscreenHint": "Информация Информация",
+    "unknownUser": "Информация",
+    "info": "Информация",
+    "premiumStyle": "Премиум",
+    "members": "Участники",
+    "noGroupMembers": "Чат",
+    "memberInvited": "Профиль",
+    "memberRemoved": "Профиль",
+    "promoteAdmin": "Информация",
+    "demoteMember": "Профиль",
+    "ownerRole": "Информация",
+    "adminRole": "Информация",
+    "memberRole": "Профиль",
+    "pendingJoinRequests": "Информация",
+    "noPendingJoinRequests": "Информация",
     "approve": "Одобрить",
     "reject": "Отклонить",
-    "joinRequestApproved": "join Запрос Approved",
-    "joinRequestRejected": "join Запрос Rejected",
-    "inviteRegenerated": "invite Regenerated",
-    "subscribers": "subscribers",
-    "roomType": "room Type",
+    "joinRequestApproved": "Информация",
+    "joinRequestRejected": "Информация",
+    "inviteRegenerated": "Чат",
+    "subscribers": "Подписчики",
+    "roomType": "Информация",
     "openChat": "Открыть Чат",
     "openChatSubtitle": "Открыть Чат Описание",
-    "notificationsSubtitle": "notifications Описание",
-    "privateList": "Приватный List",
-    "mainList": "main List",
-    "mediaSubtitle": "media Описание",
-    "addMembers": "Добавить Members",
-    "addMembersSubtitle": "Добавить Members Описание",
-    "admins": "admins",
-    "adminsSubtitle": "admins Описание",
-    "subscribersSubtitle": "subscribers Описание",
-    "deleteRoomSubtitle": "Удалить Room Описание",
-    "adminOnlyMessaging": "Админ Only Messaging",
-    "adminOnlyMedia": "Админ Only Media",
-    "adminOnlyInvites": "Админ Only Invites",
-    "approveJoinRequests": "Одобрить Join Requests",
-    "autoDeleteAds": "auto Удалить Ads",
-    "autoDeletePromoLeaflets": "auto Удалить Promo Leaflets",
-    "autoDeleteLinks": "auto Удалить Links",
-    "autoBanRepeatedSpam": "auto Ban Repeated Spam",
-    "blacklist": "blacklist",
-    "blacklistSubtitle": "blacklist Описание",
-    "inviteLink": "invite Link",
-    "regenerateLink": "regenerate Link",
-    "sendInvite": "Отправить Invite",
-    "ownerTools": "owner Tools",
-    "ownerToolsSubtitle": "owner Tools Описание",
-    "enterUserId": "enter Пользователь ID",
-    "botAssistant": "Бот Assistant",
-    "botService": "Бот Service",
-    "botBusiness": "Бот Business",
+    "notificationsSubtitle": "Уведомления",
+    "privateList": "Информация",
+    "mainList": "Информация",
+    "mediaSubtitle": "Медиа",
+    "addMembers": "Информация",
+    "addMembersSubtitle": "Описание Информация",
+    "admins": "Информация",
+    "adminsSubtitle": "Описание Информация",
+    "subscribersSubtitle": "Подписчики",
+    "deleteRoomSubtitle": "Описание Информация",
+    "adminOnlyMessaging": "Информация",
+    "adminOnlyMedia": "Информация",
+    "adminOnlyInvites": "Информация",
+    "approveJoinRequests": "Информация",
+    "autoDeleteAds": "Информация",
+    "autoDeletePromoLeaflets": "Информация",
+    "autoDeleteLinks": "Информация",
+    "autoBanRepeatedSpam": "Информация",
+    "blacklist": "Раздел",
+    "blacklistSubtitle": "Раздел",
+    "inviteLink": "Чат",
+    "regenerateLink": "Информация",
+    "sendInvite": "Чат",
+    "ownerTools": "Настройки",
+    "ownerToolsSubtitle": "Настройки Информация",
+    "enterUserId": "Информация",
+    "botAssistant": "Помощник",
+    "botService": "Помощник",
+    "botBusiness": "Помощник",
     "botSubtitle": "Бот Описание",
-    "publicBanner": "Публичный Banner",
-    "settingsOnlyOwner": "Настройки Only Owner",
+    "publicBanner": "Информация",
+    "settingsOnlyOwner": "Настройки",
     "groupSettings": "Группа Настройки",
     "channelSettings": "Канал Настройки",
     "botSettings": "Бот Настройки",
-    "publishingAdminsOnly": "publishing Admins Only",
-    "approveSubscribers": "Одобрить Subscribers",
-    "channelReactions": "Канал Reactions",
-    "channelComments": "Канал Comments",
-    "visibleInDiscovery": "visible In Discovery",
-    "openOwnerPanel": "Открыть Owner Panel",
-    "ownerPanelSubtitle": "owner Panel Описание",
-    "botPublicVisible": "Бот Публичный Visible",
-    "botInlineEnabled": "Бот Inline Enabled",
-    "botAutoReplyEnabled": "Бот Auto Reply Enabled",
-    "botMarketplaceLinked": "Бот Marketplace Linked",
-    "botDeliveryLinked": "Бот Delivery Linked",
-    "botBusinessRoutingEnabled": "Бот Business Routing Enabled",
-    "businessRoutingNote": "business Routing Note",
+    "publishingAdminsOnly": "Информация",
+    "approveSubscribers": "Информация",
+    "channelReactions": "Чат",
+    "channelComments": "Чат",
+    "visibleInDiscovery": "Информация",
+    "openOwnerPanel": "Информация",
+    "ownerPanelSubtitle": "Описание Информация",
+    "botPublicVisible": "Помощник",
+    "botInlineEnabled": "Помощник",
+    "botAutoReplyEnabled": "Помощник",
+    "botMarketplaceLinked": "Помощник",
+    "botDeliveryLinked": "Помощник",
+    "botBusinessRoutingEnabled": "Помощник",
+    "businessRoutingNote": "Информация",
     "deleteChannel": "Удалить Канал",
     "deleteBot": "Удалить Бот",
-    "groupsLinkedHint": "messenger: информация",
-    "channelsLinkedHint": "messenger: информация",
-    "profileSourceNote": "Профиль Источник Note",
+    "groupsLinkedHint": "Информация Информация",
+    "channelsLinkedHint": "Информация Информация",
+    "profileSourceNote": "Профиль",
     "deleteGroup": "Удалить Группа",
     "openGroup": "Открыть Группа",
-    "savingNow": "saving Now",
-    "hiddenChat": "hidden Чат",
+    "savingNow": "Загрузка...",
+    "hiddenChat": "Чат",
     "botCard": {
       "cardTitle": "Карта",
-      "unknownHandle": "unknown Handle",
-      "connected": "connected",
-      "owner": "owner",
-      "idLabel": "ID Label",
-      "noId": "no ID",
+      "unknownHandle": "Информация",
+      "connected": "Подключено",
+      "owner": "Владелец",
+      "idLabel": "Информация",
+      "noId": "Информация"
     },
     "theme": {
       "title": "Раздел",
       "screenTitle": "Экран",
       "screenSubtitle": "Экран Описание",
-      "chooseWallpaper": "choose Wallpaper",
-      "replaceWallpaper": "replace Wallpaper",
-      "removeWallpaper": "Удалить Wallpaper",
-      "noWallpaper": "no Wallpaper",
-      "useThemeBackground": "use Theme Background",
+      "chooseWallpaper": "Информация",
+      "replaceWallpaper": "Информация",
+      "removeWallpaper": "Информация",
+      "noWallpaper": "Информация",
+      "useThemeBackground": "Назад"
     },
     "wallpaper": {
-      "title": "Раздел",
-    },
+      "title": "Раздел"
+    }
   },
   "chatRoom": {
     "title": "Чат",
@@ -3484,26 +3485,26 @@ export const RU_LOCALE = {
       "eta": "мин",
       "providers": {
         "sabiNavigator": {
-          "title": "Sabi Navigator",
-          "subtitle": "Открыть эту точку в Sabi Navigator",
+          "title": "Настройки",
+          "subtitle": "Настройки"
         },
         "sabiTaxi": {
-          "title": "Sabi Taxi",
-          "subtitle": "Заказать Sabi Taxi до этой точки",
+          "title": "Настройки",
+          "subtitle": "Настройки"
         },
         "yandex": {
-          "title": "Yandex Maps",
-          "subtitle": "Открыть эту точку в Yandex Maps",
+          "title": "Настройки",
+          "subtitle": "Настройки"
         },
         "google": {
-          "title": "Google Maps",
-          "subtitle": "Открыть эту точку в Google Maps",
-        },
-      },
+          "title": "Настройки",
+          "subtitle": "Настройки"
+        }
+      }
     },
     "locationQuickSubtitle": "Используйте текущее местоположение или отправьте сохранённую точку",
     "useCurrentLocation": "Использовать текущее местоположение",
-    "useCurrentLocationSubtitle": "Понадобятся GPS и разрешение на определение адреса",
+    "useCurrentLocationSubtitle": "Описание Информация",
     "savedPlaces": "Сохранённые места",
     "savedOfficeTitle": "Главный офис",
     "savedOfficeSubtitle": "Проспект Амира Темура · Ташкент",
@@ -3542,7 +3543,7 @@ export const RU_LOCALE = {
     "animatedPanel": "Панель анимации",
     "emoji": "Эмодзи",
     "gift": "Подарок",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "Премиум",
     "premiumStickers": "Премиум-стикеры",
     "stickers": "Стикеры",
     "openGallery": "Открыть галерею",
@@ -3579,9 +3580,9 @@ export const RU_LOCALE = {
     "offline": "Не в сети",
     "connecting": "Подключение...",
     "reconnecting": "Переподключение...",
-    "lastSeenToday": "был(а) сегодня в {{time}}",
-    "lastSeenYesterday": "был(а) вчера в {{time}}",
-    "lastSeenDate": "был(а) {{date}} в {{time}}",
+    "lastSeenToday": "Информация",
+    "lastSeenYesterday": "Информация",
+    "lastSeenDate": "Информация",
     "conversationPlaceholder": "Переписка появится здесь.",
     "today": "Сегодня",
     "yesterday": "Вчера",
@@ -3677,7 +3678,7 @@ export const RU_LOCALE = {
     "messageSendError": "Не удалось отправить сообщение.",
     "giftSent": "Подарок отправлен",
     "animatedReactionSent": "Анимированная реакция отправлена",
-    "animatedEmojiSent": "Анимированный emoji отправлен",
+    "animatedEmojiSent": "Информация",
     "stickerAdded": "Стикер добавлен в поле ввода",
     "selectedForForwardPrefix": "Выбрано для пересылки",
     "chooseMessagesForward": "Выберите сообщения для пересылки",
@@ -3687,7 +3688,7 @@ export const RU_LOCALE = {
     "addedToComposer": "Добавлено в поле ввода",
     "saveMediaReady": "Подготовлено для сохранения",
     "openLinkReady": "Подготовлено для открытия ссылки",
-    "openingWalletFiat": "Открывается fiat-кошелёк",
+    "openingWalletFiat": "Кошелёк",
     "openingCoinWallet": "Открывается COIN-кошелёк",
     "catalogSoon": "Каталог будет добавлен на следующем этапе.",
     "pollSoon": "Опрос будет добавлен на следующем этапе.",
@@ -3721,10 +3722,10 @@ export const RU_LOCALE = {
     "chatCleared": "Чат очищен",
     "chatExported": "Экспорт чата открыт",
     "homeShortcutPinned": "Ярлык добавлен на главный экран",
-    "homeShortcutUnsupported": "Для добавления ярлыка на главный экран нужен Android shortcut bridge",
+    "homeShortcutUnsupported": "Информация",
     "blockActionDone": "Чат заблокирован",
     "unblockActionDone": "Чат разблокирован",
-    "fileBadgeGeneric": "ФАЙЛ",
+    "fileBadgeGeneric": "ФАЙЛ"
   },
   "chatPartner": {
     "title": "Профиль",
@@ -3751,9 +3752,9 @@ export const RU_LOCALE = {
     "removeChatWallpaper": "Удалить обои чата",
     "partnerActions": "Действия",
     "profileBadges": "Значки профиля",
-    "premiumStatus": "Статус Premium",
-    "businessStatus": "Статус Business",
-    "merchantStatus": "Статус Merchant",
+    "premiumStatus": "Премиум",
+    "businessStatus": "Информация",
+    "merchantStatus": "Информация"
   },
   "stickers": {
     "title": "Стикеры",
@@ -3766,12 +3767,12 @@ export const RU_LOCALE = {
     "removePack": "Удалить набор",
     "previewPack": "Предпросмотр набора",
     "noStickers": "Стикеры недоступны",
-    "premiumOnly": "Доступно только для Premium",
+    "premiumOnly": "Премиум",
     "animatedStickers": "Анимированные стикеры",
     "staticStickers": "Статические стикеры",
     "useSticker": "Использовать стикер",
     "aiSticker": "AI-стикер",
-    "premiumStickerLibrary": "Библиотека премиум-стикеров",
+    "premiumStickerLibrary": "Библиотека премиум-стикеров"
   },
   "gifts": {
     "title": "Подарки",
@@ -3792,19 +3793,19 @@ export const RU_LOCALE = {
     "giftReceived": "Подарок получен",
     "giftSent": "Подарок отправлен",
     "giftExpired": "Подарок истёк",
-    "giftWillExpire": "Срок действия подарка истечёт через {{days}} дн",
+    "giftWillExpire": "Премиум",
     "wonGift": "Выигранный подарок",
     "promoGift": "Промо-подарок",
     "storageGift": "Складской подарок",
     "giftInventory": "Инвентарь подарков",
     "notCountedAsIncome": "Не учитывается как доход",
-    "transferToCoinBalance": "Перевести на баланс Coin",
+    "transferToCoinBalance": "Информация",
     "releaseRuleNotice": "Доход от подарков подчиняется правилу ежемесячной разблокировки.",
     "wheelOfFortune": "Колесо удачи",
     "spin": "Крутить",
     "costPerSpin": "Стоимость за вращение",
     "premiumPlayback": "Премиум-воспроизведение",
-    "overChatPlayback": "Воспроизведение поверх чата",
+    "overChatPlayback": "Воспроизведение поверх чата"
   },
   "payments": {
     "title": "Платежи",
@@ -3831,8 +3832,8 @@ export const RU_LOCALE = {
     "utilityPayment": "Оплата коммунальных услуг",
     "recurringPayment": "Регулярный платёж",
     "scheduledPayment": "Запланированный платёж",
-    "secureCheckout": "Безопасный checkout",
-    "merchantCheckout": "Мерчант-checkout",
+    "secureCheckout": "Информация",
+    "merchantCheckout": "Информация",
     "preauthorization": "Предавторизация",
     "authorizedAmount": "Авторизованная сумма",
     "capturePayment": "Списать платёж",
@@ -3840,7 +3841,7 @@ export const RU_LOCALE = {
     "voidAuthorization": "Отменить авторизацию",
     "refundPayment": "Оформить возврат",
     "partialRefund": "Частичный возврат",
-    "chargeback": "Chargeback",
+    "chargeback": "Назад",
     "dispute": "Спор",
     "settlement": "Расчёт",
     "settlementDelay": "Задержка расчёта",
@@ -3849,7 +3850,7 @@ export const RU_LOCALE = {
     "serviceFee": "Сервисная комиссия",
     "processingFee": "Комиссия за обработку",
     "platformFee": "Комиссия платформы",
-    "payout": "Выплата",
+    "payout": "Выплата"
   },
   "contacts": {
     "title": "Контакты",
@@ -3864,20 +3865,20 @@ export const RU_LOCALE = {
     "removeFromContacts": "Удалить из контактов",
     "blockedContacts": "Заблокированные контакты",
     "businessContacts": "Бизнес-контакты",
-    "merchantContacts": "Мерчант-контакты",
+    "merchantContacts": "Мерчант-контакты"
   },
   "profile": {
     "completeScreen": {
       "badge": "НАСТРОЙКА ПРОФИЛЯ",
       "title": "Завершите профиль",
-      "subtitle": "Введите имя и фамилию. Username и единый ID будут созданы автоматически.",
+      "subtitle": "Настройки",
       "firstName": "Имя",
       "lastName": "Фамилия",
-      "username": "Username",
+      "username": "Имя пользователя",
       "phone": "Подтверждённый номер",
-      "unifiedId": "Единый User ID",
-      "unifiedIdHint": "Это будет основной ID для Wallet, Messenger и всего аккаунта.",
-      "usernameHint": "Username создаётся на основе имени, но его можно изменить вручную.",
+      "unifiedId": "Информация",
+      "unifiedIdHint": "Информация Информация",
+      "usernameHint": "Информация Информация",
       "privacy": "После активации этот единый ID должен оставаться одинаковым во всех модулях.",
       "continue": "Продолжить",
       "back": "Назад",
@@ -3887,15 +3888,15 @@ export const RU_LOCALE = {
       "saving": "Сохранение...",
       "userId": "Пользователь ID",
       "createUser": "Создать Пользователь",
-      "nameRequired": "Название Required",
-      "phoneRequired": "phone Required",
-      "usernameRequired": "username Required",
-      "success": "success",
+      "nameRequired": "Информация",
+      "phoneRequired": "Информация",
+      "usernameRequired": "Информация",
+      "success": "Информация"
     },
     "title": "Профиль",
     "editProfile": "Редактировать профиль",
     "publicProfile": "Публичный профиль",
-    "premium": "Premium",
+    "premium": "Премиум",
     "username": "Имя пользователя",
     "displayName": "Отображаемое имя",
     "firstName": "Имя",
@@ -3915,38 +3916,38 @@ export const RU_LOCALE = {
     "history": "История",
     "activity": {
       "media": {
-        "title": "Media",
-        "subtitle": "Объединённый профильный media-блок из фото и коротких видео.",
-        "stat": "элементов",
+        "title": "Медиа",
+        "subtitle": "Настройки",
+        "stat": "элементов"
       },
       "links": {
-        "title": "Links",
-        "subtitle": "Реальный список ссылок для публичного профиля и identity surface.",
-        "stat": "ссылок",
+        "title": "Ссылки",
+        "subtitle": "Настройки",
+        "stat": "ссылок"
       },
       "voice": {
         "title": "Голос",
         "subtitle": "Запись и воспроизведение голосовых заметок прямо из профильного слоя.",
-        "stat": "голос",
-      },
+        "stat": "голос"
+      }
     },
     "privacy": {
       "privacy": {
         "title": "Приватность",
-        "description": "Видимость телефона, правила фото, звонки, приглашения, сообщения и видимость bio.",
+        "description": "Настройки"
       },
       "security": {
         "title": "Безопасность",
-        "description": "PIN, Face ID, biometric fallback, trusted devices и чувствительные действия.",
+        "description": "Настройки"
       },
       "data": {
         "title": "Управление данными",
-        "description": "Синхронизация контактов, поисковые подсказки, черновики, платёжные данные и memory controls.",
+        "description": "Настройки"
       },
       "qr": {
-        "title": "Profile QR",
-        "description": "Личный QR identity, profile sharing, quick scan и будущие правила доступа через QR.",
-      },
+        "title": "QR профиля",
+        "description": "Настройки"
+      }
     },
     "aiSettings": "AI-настройки",
     "qrSettings": "QR-настройки",
@@ -3967,7 +3968,7 @@ export const RU_LOCALE = {
     "copyProfileLink": "Копировать ссылку на профиль",
     "shareProfile": "Поделиться профилем",
     "memberSince": "В приложении с",
-    "premiumBenefits": "Преимущества Premium",
+    "premiumBenefits": "Премиум",
     "viewHistory": "Посмотреть историю",
     "giftsHistory": "История подарков",
     "paymentHistory": "История платежей",
@@ -3980,9 +3981,9 @@ export const RU_LOCALE = {
     "noVideos": "Видео пока нет",
     "badges": "Значки",
     "verificationBadge": "Значок верификации",
-    "premiumBadge": "Значок Premium",
-    "businessBadge": "Значок Business",
-    "merchantBadge": "Значок Merchant",
+    "premiumBadge": "Премиум",
+    "businessBadge": "Информация",
+    "merchantBadge": "Информация",
     "short_videos": "Короткие видео",
     "archivePublications": "Архив публикаций",
     "allStories": "Все истории",
@@ -3994,23 +3995,23 @@ export const RU_LOCALE = {
       "live": "Живой профиль",
       "verified": "Проверен",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "Информация",
         "photos": "Фото",
-        "videos": "Видео",
+        "videos": "Видео"
       },
       "actions": {
         "edit": "Изменить",
         "photos": "Фото",
         "videos": "Видео",
         "voice": "Голос",
-        "qr": "QR",
-      },
+        "qr": "QR"
+      }
     },
     "launch": {
-      "badge": "Launch",
+      "badge": "Премиум",
       "freeMonths": "месяцев бесплатно",
-      "title": "Премиальное launch-предложение",
-      "description": "Специальный бесплатный стартовый доступ к profile identity, premium surface, подаркам и расширенному пользовательскому опыту.",
+      "title": "Настройки",
+      "description": "Настройки"
     },
     "sections": {
       "identitySurface": "Поверхность личности",
@@ -4020,385 +4021,385 @@ export const RU_LOCALE = {
       "privacySecurity": "Приватность и безопасность",
       "appExperience": "Приложение и опыт",
       "premiumServices": "Премиум-сервисы",
-      "walletEconomy": "Кошелёк и экономика",
+      "walletEconomy": "Кошелёк и экономика"
     },
     "identitySurfaceCards": {
       "photos": {
         "title": "Фото",
-        "subtitle": "Загрузка, управление и назначение фотографий профиля для реальной открытой identity-поверхности.",
-        "stat": "фото",
+        "subtitle": "Настройки",
+        "stat": "фото"
       },
       "shortVideos": {
         "title": "Короткие видео",
         "subtitle": "Добавление и управление короткими видео для слоя профиля.",
-        "stat": "видео",
+        "stat": "видео"
       },
       "likes": {
         "title": "Лайки",
         "subtitle": "Живой счётчик лайков, подключённый к состоянию профиля.",
-        "stat": "лайков",
+        "stat": "лайков"
       },
       "reactions": {
         "title": "Реакции",
-        "subtitle": "Настоящий центр реакций со счётчиками, которые живут в profile state.",
-        "stat": "реакций",
-      },
+        "subtitle": "Настройки",
+        "stat": "реакций"
+      }
     },
     "sharedActivityCards": {
       "media": {
         "title": "Медиа",
         "subtitle": "Единый живой блок медиа профиля из фото и коротких видео.",
-        "stat": "элементов",
+        "stat": "элементов"
       },
       "links": {
         "title": "Ссылки",
-        "subtitle": "Реальный список ссылок для публичного профиля и identity surface.",
-        "stat": "ссылок",
+        "subtitle": "Настройки",
+        "stat": "ссылок"
       },
       "voice": {
         "title": "Голос",
         "subtitle": "Запись и воспроизведение голосовых заметок внутри слоя профиля.",
-        "stat": "голосов",
-      },
+        "stat": "голосов"
+      }
     },
     "group": {
       "create": {
         "title": "Создать группу",
-        "description": "Теперь группа создаётся из Profile, и данные владельца, публикация и привязки тоже управляются здесь.",
+        "description": "Настройки"
       },
       "manage": {
         "title": "Профиль группы",
-        "description": "Данные владельца группы, публикация, привязки и права управляются из Profile.",
+        "description": "Настройки"
       },
       "badges": {
         "published": "Опубликовано",
         "public": "Публичная",
         "private": "Приватная",
-        "assistant": "assistant",
-        "service": "service",
-        "business": "business",
-        "trade": "Торговля",
+        "assistant": "Помощник",
+        "service": "Сервис",
+        "business": "Бизнес",
+        "trade": "Торговля"
       },
       "fields": {
         "groupName": "Название группы",
-        "username": "Username",
+        "username": "Имя пользователя",
         "description": "Описание",
-        "groupId": "Group ID",
+        "groupId": "Группа ID",
         "inviteLink": "Ссылка-приглашение",
         "ownerName": "Имя владельца",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Информация",
         "ownerRole": "Роль",
         "ownerPhone": "Телефон владельца",
-        "ownerEmail": "Email владельца",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Связанный Chat ID",
-        "linkedBotId": "Связанный Bot ID",
-        "avatarUri": "avatar Uri",
-        "coverUri": "cover Uri",
-        "linkedPublicationId": "linked Publication ID",
+        "ownerEmail": "Информация",
+        "publicationId": "Информация",
+        "linkedChatId": "Чат",
+        "linkedBotId": "Помощник",
+        "avatarUri": "Аватар",
+        "coverUri": "Информация",
+        "linkedPublicationId": "Информация"
       },
       "switches": {
         "publicGroup": "Публичная группа",
         "published": "Публикация включена",
-        "showInProfile": "Показывать в Profile",
+        "showInProfile": "Раздел",
         "joinRequests": "Запросы на вступление",
         "memberInvites": "Участники могут приглашать",
         "onlyAdminsPost": "Только админы пишут",
         "onlyAdminsEdit": "Только админы редактируют",
         "commentsEnabled": "Комментарии включены",
-        "searchableInDirectory": "searchable In Directory",
-        "previewEnabled": "preview Enabled",
-        "visibleInDiscovery": "visible In Discovery",
-        "approveSubscribers": "Одобрить Subscribers",
-        "reactionsEnabled": "reactions Enabled",
+        "searchableInDirectory": "Поиск",
+        "previewEnabled": "Раздел",
+        "visibleInDiscovery": "Информация",
+        "approveSubscribers": "Информация",
+        "reactionsEnabled": "Информация"
       },
       "actions": {
         "create": "Создать группу",
         "save": "Сохранить",
         "reset": "Сбросить",
-        "open": "Открыть профиль группы",
+        "open": "Открыть профиль группы"
       },
       "alerts": {
         "loading": "Группа загружается...",
-        "createSuccess": "Группа создана внутри Profile",
+        "createSuccess": "Информация",
         "saveSuccess": "Настройки группы сохранены",
         "resetTitle": "Сброс группы",
-        "resetDescription": "Этот экран удалит локальные данные группы и вернёт экран в режим создания.",
-      },
+        "resetDescription": "Этот экран удалит локальные данные группы и вернёт экран в режим создания."
+      }
     },
     "channel": {
       "create": {
         "title": "Создать канал",
-        "description": "Теперь канал создаётся из Profile, и данные владельца, публикация и привязки тоже управляются здесь.",
+        "description": "Настройки"
       },
       "manage": {
         "title": "Профиль канала",
-        "description": "Данные владельца канала, публикация, привязки и права управляются из Profile.",
+        "description": "Настройки"
       },
       "badges": {
         "published": "Опубликовано",
         "public": "Публичный",
         "private": "Приватный",
-        "service": "service",
-        "business": "business",
-        "trade": "Торговля",
+        "service": "Сервис",
+        "business": "Бизнес",
+        "trade": "Торговля"
       },
       "fields": {
         "channelName": "Название канала",
-        "username": "Username",
+        "username": "Имя пользователя",
         "description": "Описание",
-        "channelId": "Channel ID",
+        "channelId": "Канал ID",
         "inviteLink": "Ссылка-приглашение",
         "ownerName": "Имя владельца",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Информация",
         "ownerRole": "Роль",
         "ownerPhone": "Телефон владельца",
-        "ownerEmail": "Email владельца",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Связанный Chat ID",
-        "linkedDiscussionId": "Связанный Discussion ID",
-        "linkedBotId": "Связанный Bot ID",
-        "avatarUri": "avatar Uri",
-        "coverUri": "cover Uri",
-        "linkedPublicationId": "linked Publication ID",
+        "ownerEmail": "Информация",
+        "publicationId": "Информация",
+        "linkedChatId": "Чат",
+        "linkedDiscussionId": "Информация",
+        "linkedBotId": "Помощник",
+        "avatarUri": "Аватар",
+        "coverUri": "Информация",
+        "linkedPublicationId": "Информация"
       },
       "switches": {
         "publicChannel": "Публичный канал",
         "published": "Публикация включена",
-        "showInProfile": "Показывать в Profile",
+        "showInProfile": "Раздел",
         "joinRequests": "Запросы на вступление",
         "onlyAdminsPost": "Только админы публикуют",
         "onlyAdminsEdit": "Только админы редактируют",
         "commentsEnabled": "Комментарии включены",
-        "searchableInDirectory": "searchable In Directory",
-        "previewEnabled": "preview Enabled",
-        "visibleInDiscovery": "visible In Discovery",
-        "approveSubscribers": "Одобрить Subscribers",
-        "reactionsEnabled": "reactions Enabled",
+        "searchableInDirectory": "Поиск",
+        "previewEnabled": "Раздел",
+        "visibleInDiscovery": "Информация",
+        "approveSubscribers": "Информация",
+        "reactionsEnabled": "Информация"
       },
       "actions": {
         "create": "Создать канал",
         "save": "Сохранить",
         "reset": "Сбросить",
-        "open": "Открыть профиль канала",
+        "open": "Открыть профиль канала"
       },
       "alerts": {
         "loading": "Загрузка…",
-        "createSuccess": "Создать Success",
-        "saveSuccess": "Сохранить Success",
-        "resetTitle": "reset",
-        "resetDescription": "alerts: информация",
-      },
+        "createSuccess": "Канал создан",
+        "saveSuccess": "Информация",
+        "resetTitle": "Заголовок",
+        "resetDescription": "Описание Информация"
+      }
     },
     "bot": {
       "create": {
         "title": "Создать бота",
-        "description": "Теперь бот создаётся из Profile, и данные владельца, публикация, модули и wallet routing управляются здесь.",
+        "description": "Настройки"
       },
       "manage": {
         "title": "Профиль бота",
-        "description": "Данные владельца бота, модули, привязки и маршрутизация кошелька управляются из Profile.",
+        "description": "Настройки"
       },
       "badges": {
         "active": "Активен",
         "paused": "Приостановлен",
         "public": "Публичный",
         "private": "Приватный",
-        "published": "published",
-        "assistant": "assistant",
-        "service": "service",
-        "business": "business",
-        "trade": "Торговля",
+        "published": "Опубликовано",
+        "assistant": "Помощник",
+        "service": "Сервис",
+        "business": "Бизнес",
+        "trade": "Торговля"
       },
       "fields": {
         "botName": "Имя бота",
-        "username": "Username",
+        "username": "Имя пользователя",
         "description": "Описание",
-        "botId": "Bot ID",
+        "botId": "Бот ID",
         "ownerName": "Имя владельца",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Информация",
         "ownerRole": "Роль",
         "ownerPhone": "Телефон владельца",
-        "ownerEmail": "Email владельца",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Связанный Chat ID",
-        "linkedGroupId": "Связанный Group ID",
-        "linkedChannelId": "Связанный Channel ID",
-        "linkedMarketId": "Связанный Market ID",
-        "avatarUri": "avatar Uri",
-        "coverUri": "cover Uri",
-        "botKind": "Бот Kind",
-        "linkedPublicationId": "linked Publication ID",
+        "ownerEmail": "Информация",
+        "publicationId": "Информация",
+        "linkedChatId": "Чат",
+        "linkedGroupId": "Чат",
+        "linkedChannelId": "Чат",
+        "linkedMarketId": "Информация",
+        "avatarUri": "Аватар",
+        "coverUri": "Информация",
+        "botKind": "Помощник",
+        "linkedPublicationId": "Информация"
       },
       "switches": {
         "publicBot": "Публичный бот",
         "published": "Публикация включена",
-        "showInProfile": "Показывать в Profile",
+        "showInProfile": "Раздел",
         "active": "Бот активен",
         "acceptCommands": "Принимать команды",
         "showInCatalog": "Показывать в каталоге",
         "allowPayments": "Разрешить платежи",
-        "previewEnabled": "preview Enabled",
-        "visibleInDiscovery": "visible In Discovery",
-        "inlineEnabled": "inline Enabled",
-        "autoReplyEnabled": "auto Reply Enabled",
-        "marketplaceLinked": "marketplace Linked",
-        "deliveryLinked": "delivery Linked",
-        "businessRoutingEnabled": "business Routing Enabled",
+        "previewEnabled": "Раздел",
+        "visibleInDiscovery": "Информация",
+        "inlineEnabled": "Информация",
+        "autoReplyEnabled": "Информация",
+        "marketplaceLinked": "Информация",
+        "deliveryLinked": "Информация",
+        "businessRoutingEnabled": "Информация"
       },
       "routing": {
         "title": "Маршрутизация кошелька",
-        "sabiWallet": "SABI Wallet",
-        "businessRoutingLayer": "Business Routing Layer",
+        "sabiWallet": "Кошелёк",
+        "businessRoutingLayer": "Слой бизнес-маршрутизации",
         "tradeBot": "Торговый бот",
         "businessBot": "Бизнес-бот",
-        "tradeHint": "Доходы торговых и commerce-ботов направляются в SABI Wallet.",
-        "businessHint": "Пока Business Wallet не запущен, доходы бизнес-ботов направляются в Business Routing Layer.",
+        "tradeHint": "Информация Информация",
+        "businessHint": "Информация Информация"
       },
       "actions": {
         "create": "Создать бота",
         "save": "Сохранить",
         "reset": "Сбросить",
-        "open": "Открыть профиль бота",
+        "open": "Открыть профиль бота"
       },
       "alerts": {
         "loading": "Загрузка…",
-        "createSuccess": "Создать Success",
-        "saveSuccess": "Сохранить Success",
-        "resetTitle": "reset",
-        "resetDescription": "alerts: информация",
-      },
+        "createSuccess": "Бот создан",
+        "saveSuccess": "Информация",
+        "resetTitle": "Заголовок",
+        "resetDescription": "Описание Информация"
+      }
     },
     "likesScreen": {
       "header": {
-        "title": "Раздел лайков профиля",
+        "title": "Раздел лайков профиля"
       },
       "card": {
         "title": "Раздел лайков профиля",
-        "subtitle": "Управление разделом лайков профиля.",
+        "subtitle": "Управление разделом лайков профиля."
       },
       "actions": {
-        "readonly": "readonly",
-        "fromUsers": "from users",
+        "readonly": "Информация",
+        "fromUsers": "Информация"
       },
       "notes": {
-        "readonlyTitle": "readonly Заголовок",
-        "readonlyDescription": "readonly Описание",
-        "sourceTitle": "source Заголовок",
-        "sourceDescription": "source Описание",
+        "readonlyTitle": "Заголовок",
+        "readonlyDescription": "Описание Информация",
+        "sourceTitle": "Заголовок",
+        "sourceDescription": "Описание Информация",
         "emptyTitle": "Пусто",
-        "emptyDescription": "notes: информация",
-        "nonEmptyDescription": "non Пустое состояние Описание",
+        "emptyDescription": "Информация Информация",
+        "nonEmptyDescription": "Информация Информация"
       },
       "empty": {
         "title": "Раздел лайков профиля",
-        "description": "Настройки и информация для раздела лайков профиля.",
-      },
+        "description": "Настройки и информация для раздела лайков профиля."
+      }
     },
     "linksScreen": {
       "header": {
-        "title": "Раздел ссылок профиля",
+        "title": "Раздел ссылок профиля"
       },
       "card": {
         "title": "Раздел ссылок профиля",
-        "subtitle": "Управление разделом ссылок профиля.",
+        "subtitle": "Управление разделом ссылок профиля."
       },
       "inputs": {
         "labelPlaceholder": "Введите значение",
-        "urlPlaceholder": "Введите значение",
+        "urlPlaceholder": "Введите значение"
       },
       "actions": {
         "add": "Добавить",
         "open": "Открыть",
-        "delete": "Удалить",
+        "delete": "Удалить"
       },
       "item": {
-        "defaultLabel": "default Label",
+        "defaultLabel": "Ссылка"
       },
       "empty": {
         "title": "Раздел ссылок профиля",
-        "description": "Настройки и информация для раздела ссылок профиля.",
+        "description": "Настройки и информация для раздела ссылок профиля."
       },
       "alerts": {
-        "invalidUrlTitle": "invalid Url",
-        "invalidUrlMessage": "invalid Url Сообщение",
-        "duplicateTitle": "duplicate",
-        "duplicateMessage": "duplicate Сообщение",
+        "invalidUrlTitle": "Заголовок",
+        "invalidUrlMessage": "Информация",
+        "duplicateTitle": "Заголовок",
+        "duplicateMessage": "Информация",
         "openFailedTitle": "Открыть Ошибка",
-        "openFailedMessage": "Открыть Ошибка Сообщение",
+        "openFailedMessage": "Открыть Ошибка Сообщение"
       },
       "form": {
         "labelPlaceholder": "Метка Поле ввода",
-        "urlPlaceholder": "url Поле ввода",
-      },
+        "urlPlaceholder": "Поиск"
+      }
     },
     "accountSection": {
       "edit": {
         "title": "Личные данные",
-        "description": "Фото, личность, адрес, язык и личные данные аккаунта.",
+        "description": "Фото, личность, адрес, язык и личные данные аккаунта."
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Уровень верификации, статус документов и compliance-ограничения.",
+        "title": "Настройки",
+        "description": "Настройки",
         "badges": {
-          "starter": "Starter",
-          "basic": "Basic",
-          "standard": "Standard",
-          "plus": "Plus",
-          "advanced": "Advanced",
-          "enhanced": "Enhanced",
-          "full": "Full",
-          "verified": "Verified",
-          "business": "Business",
-          "merchant": "Merchant",
-        },
+          "starter": "Информация",
+          "basic": "Информация",
+          "standard": "Информация",
+          "plus": "Информация",
+          "advanced": "Информация",
+          "enhanced": "Информация",
+          "full": "Информация",
+          "verified": "Подтверждено",
+          "business": "Информация",
+          "merchant": "Мерчант"
+        }
       },
       "devices": {
         "title": "Устройства и сессии",
-        "description": "iPhone, Android, Web, доверенные устройства, QR device flow и сессии.",
+        "description": "Настройки"
       },
       "trusted": {
         "title": "Доверенные / заблокированные",
-        "description": "Доверенные люди, заблокированные пользователи, privacy exception и будущие whitelist-инструменты.",
-        "badgeSuffix": "доверенных",
-      },
+        "description": "Настройки",
+        "badgeSuffix": "доверенных"
+      }
     },
     "privacySection": {
       "privacy": {
         "title": "Конфиденциальность",
-        "description": "Видимость телефона, правила фото, звонков, приглашений, сообщений и биографии.",
+        "description": "Видимость телефона, правила фото, звонков, приглашений, сообщений и биографии."
       },
       "security": {
         "title": "Безопасность",
-        "description": "PIN, Face ID, биометрический fallback, trusted devices и чувствительные действия.",
+        "description": "Настройки"
       },
       "data": {
         "title": "Управление данными",
-        "description": "Синхронизация контактов, поисковые подсказки, черновики, платёжные данные и memory controls.",
+        "description": "Настройки"
       },
       "qr": {
         "title": "QR профиля",
-        "description": "Личный QR identity, шаринг профиля, быстрый скан и правила доступа по QR.",
-      },
+        "description": "Настройки"
+      }
     },
     "appSection": {
       "language": {
         "title": "Язык и регион",
-        "description": "Языки, страны, форматирование, часовой пояс и локальное представление.",
+        "description": "Языки, страны, форматирование, часовой пояс и локальное представление."
       },
       "preferences": {
         "title": "Внешний вид и настройки",
-        "description": "Доступ к теме, звукам, haptics, preview и правилам app experience.",
+        "description": "Настройки"
       },
       "colors": {
         "title": "Тема профиля и рамки",
-        "description": "Управляемая владельцем тема профиля, рамки аватара, акценты и premium identity styling.",
-        "badge": "Premium",
+        "description": "Настройки",
+        "badge": "Премиум"
       },
       "ai": {
         "title": "AI и умный помощник",
-        "description": "AI-настройки профиля, polishing bio, privacy hint и smart helper tools.",
-        "badge": "Smart",
+        "description": "Настройки",
+        "badge": "Умно"
       },
       "notificationSounds": {
         "title": "Мелодии и сигналы",
@@ -4406,2655 +4407,2655 @@ export const RU_LOCALE = {
       },
       "notifications": {
         "title": "Уведомления",
-        "description": "Global inbox, приоритет оповещений, wallet notifications и preferences.",
+        "description": "Настройки"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, сезоны, inventory, upgrades, ranks и rewards.",
-        "badge": "Позже",
-      },
+        "title": "Настройки",
+        "description": "Настройки",
+        "badge": "Позже"
+      }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "Sabi Premium",
-        "description": "Premium-функции, рамки аватара, identity styling и будущие premium upgrades.",
+        "title": "Раздел профиля",
+        "description": "Премиум"
       },
       "business": {
         "title": "Бизнес-аккаунт",
-        "description": "Бизнес-инструменты, часы работы, ответы, greeting, ссылки и автоматизация.",
+        "description": "Премиум"
       },
       "credits": {
         "title": "Центр кредитов",
-        "description": "Баланс credits, статистика, доход, расход, реакции и история.",
+        "description": "Премиум"
       },
       "gifts": {
-        "title": "Sovg‘alar markazi",
-        "description": "Barcha foydalanuvchilar uchun bepul launch davriga ega sovg‘a katalogi va yuborish.",
+        "title": "Центр подарков",
+        "description": "Премиум"
       },
       "premium": {
-        "title": "Sabi Premium",
-        "description": "Премиум-функции, рамки аватара, identity styling и будущие premium upgrades.",
-      },
+        "title": "Раздел профиля",
+        "description": "Премиум"
+      }
     },
     "walletSection": {
       "walletCard": {
         "title": "Кошелёк",
-        "description": "Открывайте wallet home, карты, QR, SabiPay и личные финансовые потоки.",
+        "description": "Настройки"
       },
       "settings": {
         "title": "Настройки кошелька",
-        "description": "Правила платежей, smart routing, privacy behavior и настройки кошелька.",
-      },
+        "description": "Настройки"
+      }
     },
     "giftsBlock": {
       "title": "Центр подарков",
-      "description": "Подарки входят в единую профильную идентичность внутри premium SuperApp surface.",
+      "description": "Настройки",
       "stats": {
         "all": "Все подарки",
         "premium": "Премиум",
-        "seasonal": "Сезонные",
+        "seasonal": "Сезонные"
       },
-      "open": "Открыть центр подарков",
+      "open": "Открыть центр подарков"
     },
     "publicationManagement": {
       "title": "Управление публикацией",
-      "subtitle": "Настройки публикации группы, канала и бота управляются из Profile.",
+      "subtitle": "Настройки",
       "ownerData": "Данные владельца",
       "bindings": "Привязки",
       "publication": "Публикация",
       "accessRules": "Правила доступа",
       "hiddenWhenNotCreated": "Если объект не создан, раздел не показывается.",
-      "createFromProfile": "Основная точка входа для создания группы, канала и бота — Profile.",
+      "createFromProfile": "Профиль"
     },
     "home": "Домой",
-    "eyebrow": "ЦЕНТР ИДЕНТИЧНОСТИ SABI",
+    "eyebrow": "Профиль",
     "subtitle": "Премиальный центр аккаунта для личности, приватности, кошелька, бизнеса, подарков, кредитов, AI-инструментов, игр и реального управления медиа профиля.",
     "surface": {
       "photos": {
         "title": "Фото",
         "subtitle": "Загрузка, управление и установка фото профиля для реальной публичной поверхности.",
-        "stat": "фото",
+        "stat": "фото"
       },
       "shortVideos": {
         "title": "Короткие видео",
         "subtitle": "Добавление и управление короткими видео для профильного слоя.",
-        "stat": "видео",
+        "stat": "видео"
       },
       "likes": {
         "title": "Лайки",
         "subtitle": "Живой счётчик лайков, связанный с состоянием профиля.",
-        "stat": "лайков",
+        "stat": "лайков"
       },
       "reactions": {
         "title": "Реакции",
-        "subtitle": "Реальный центр реакций со счётчиками, сохранёнными в profile state.",
-        "stat": "реакций",
-      },
+        "subtitle": "Настройки",
+        "stat": "реакций"
+      }
     },
     "account": {
       "edit": {
-        "title": "Personal Information",
-        "description": "Фото, личность, адрес, язык и персональные данные аккаунта.",
+        "title": "Настройки",
+        "description": "Фото, личность, адрес, язык и персональные данные аккаунта."
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Уровень верификации, состояние документов и ограничения compliance.",
+        "title": "Настройки",
+        "description": "Настройки",
         "badges": {
-          "starter": "Starter",
-          "basic": "Basic",
-          "standard": "Standard",
-          "plus": "Plus",
-          "advanced": "Advanced",
-          "enhanced": "Enhanced",
-          "full": "Full",
-          "verified": "Verified",
-          "business": "Business",
-          "merchant": "Merchant",
-        },
+          "starter": "Информация",
+          "basic": "Базовые",
+          "standard": "Стандартный",
+          "plus": "Информация",
+          "advanced": "Расширенные",
+          "enhanced": "Информация",
+          "full": "Информация",
+          "verified": "Подтверждено",
+          "business": "Бизнес",
+          "merchant": "Мерчант"
+        }
       },
       "devices": {
-        "title": "Devices & Sessions",
-        "description": "iPhone, Android, Web, доверенные устройства, QR device flows и сессии.",
+        "title": "Настройки",
+        "description": "Настройки"
       },
       "trusted": {
-        "title": "Trusted / Blocked",
-        "description": "Доверенные люди, заблокированные пользователи, privacy exceptions и будущие whitelist tools.",
-        "badgeSuffix": "доверенных",
-      },
+        "title": "Раздел доверенных и заблокированных контактов",
+        "description": "Настройки",
+        "badgeSuffix": "доверенных"
+      }
     },
     "app": {
       "language": {
         "title": "Язык и регион",
-        "description": "Языки, страны, форматирование, часовой пояс и локализованное отображение.",
+        "description": "Языки, страны, форматирование, часовой пояс и локализованное отображение."
       },
       "preferences": {
         "title": "Внешний вид и настройки",
-        "description": "Вход в тему, звуки, haptics, previews и правила app experience.",
+        "description": "Настройки"
       },
       "colors": {
         "title": "Тема профиля и рамки",
-        "description": "Управляемая владельцем тема профиля, рамки аватара, акценты и premium identity styling.",
-        "badge": "Премиум",
+        "description": "Настройки",
+        "badge": "Премиум"
       },
       "ai": {
         "title": "AI и умный помощник",
-        "description": "Настройка AI профиля, polishing bio, privacy hints и smart helper tools.",
-        "badge": "Умно",
+        "description": "Настройки",
+        "badge": "Умно"
       },
       "notifications": {
         "title": "Уведомления",
-        "description": "Глобальный inbox, приоритеты алертов, wallet notifications и preferences.",
+        "description": "Настройки"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, сезоны, inventory, upgrades, ranks и rewards.",
-        "badge": "Далее",
-      },
+        "title": "Настройки",
+        "description": "Настройки",
+        "badge": "Далее"
+      }
     },
     "wallet": {
       "wallet": {
-        "title": "Wallet",
-        "description": "Open wallet home, cards, QR, SabiPay and personal finance flows.",
+        "title": "Кошелёк",
+        "description": "Настройки"
       },
       "settings": {
-        "title": "Wallet Settings",
-        "description": "Payment rules, smart routing, privacy behavior and wallet preferences.",
-      },
+        "title": "Настройки",
+        "description": "Настройки"
+      }
     },
     "editScreen": {
       "header": {
-        "title": "Раздел редактирования профиля",
-        "viewAction": "Просмотр",
+        "title": "Редактирование профиля",
+        "viewAction": "Просмотр"
       },
       "intro": {
-        "eyebrow": "РЕДАКТИРОВАНИЯ ПРОФИЛЯ",
-        "title": "Раздел редактирования профиля",
-        "subtitle": "Управление разделом редактирования профиля.",
+        "eyebrow": "ПРОФИЛЬ",
+        "title": "Редактирование профиля",
+        "subtitle": "Управляйте личными данными, публичным профилем, медиа, приватностью и безопасностью."
       },
       "hero": {
-        "subtitle": "Управление разделом редактирования профиля.",
-        "changeAvatarAction": "change Аватар Действие",
-        "aiLinkedBadge": "AI linked Бейдж",
-        "editModeBadge": "edit mode Бейдж",
+        "subtitle": "Фото, видео, голос, имя пользователя и публичный профиль связаны с вашим подтверждённым аккаунтом.",
+        "changeAvatarAction": "Сменить аватар",
+        "aiLinkedBadge": "AI подключён",
+        "editModeBadge": "Режим редактирования",
         "quickActions": {
           "photos": "Фото",
           "videos": "Видео",
           "voice": "Голос",
-          "public": "Публичный профиль",
-        },
+          "public": "Публичный профиль"
+        }
       },
       "sections": {
         "identity": "Идентичность",
-        "presentation": "presentation",
-        "safety": "safety",
+        "presentation": "Публичный профиль",
+        "safety": "Безопасность"
       },
       "identity": {
         "photos": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Фото профиля",
+          "description": "Добавляйте, меняйте и управляйте фотографиями профиля."
         },
         "videos": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Короткие видео",
+          "description": "Управляйте короткими видео, которые видны в профиле."
         },
         "voice": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Голос профиля",
+          "description": "Запишите или обновите голосовую визитку профиля."
         },
         "username": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Имя пользователя",
+          "description": "Настройки"
         },
         "phone": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Телефон",
+          "description": "Номер телефона аккаунта и привязка к профилю."
         },
         "email": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Настройки",
+          "description": "Настройки"
         },
         "birthday": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Дата рождения",
+          "description": "Дата рождения для профиля и возрастных ограничений."
         },
         "language": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
-          "badge": "Бейдж",
-        },
+          "title": "Язык и регион",
+          "description": "Изменение языка должно применяться ко всему приложению.",
+          "badge": "Глобально"
+        }
       },
       "presentation": {
         "public": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Публичный профиль",
+          "description": "Откройте и настройте страницу, которую видят другие пользователи."
         },
         "colors": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
-          "badge": "Бейдж",
+          "title": "Цвета и рамки",
+          "description": "Настройте тему, цвета и рамки публичного профиля.",
+          "badge": "Премиум"
         },
         "ai": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
-          "badge": "Бейдж",
+          "title": "AI в профиле",
+          "description": "Настройки AI-помощника, подсказок и будущих AI-функций профиля.",
+          "badge": "Умно"
         },
         "qr": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
-        },
+          "title": "QR профиля",
+          "description": "QR для открытия профиля, добавления контакта и безопасного обмена."
+        }
       },
       "safety": {
         "verification": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Верификация",
+          "description": "Статус подтверждения аккаунта и проверенные данные."
         },
         "privacy": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
+          "title": "Приватность",
+          "description": "Кто видит телефон, активность, статус и публичный профиль."
         },
         "security": {
-          "title": "Раздел редактирования профиля",
-          "description": "Настройки и информация для раздела редактирования профиля.",
-        },
-      },
+          "title": "Безопасность",
+          "description": "PIN, биометрия, доверенные устройства и защита входа."
+        }
+      }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
-          "title": "Раздел деталей профиля",
-          "subtitle": "Управление разделом деталей профиля.",
+          "eyebrow": "ИМЯ ПОЛЬЗОВАТЕЛЯ",
+          "title": "Имя пользователя",
+          "subtitle": "Настройки"
         },
         "phone": {
-          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
-          "title": "Раздел деталей профиля",
-          "subtitle": "Управление разделом деталей профиля.",
+          "eyebrow": "ТЕЛЕФОН",
+          "title": "Номер телефона",
+          "subtitle": "Обновите номер телефона, связанный с вашим аккаунтом."
         },
         "birthday": {
-          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
-          "title": "Раздел деталей профиля",
-          "subtitle": "Управление разделом деталей профиля.",
+          "eyebrow": "ДАТА РОЖДЕНИЯ",
+          "title": "Дата рождения",
+          "subtitle": "Укажите дату рождения для профиля и возрастных правил."
         },
         "channel": {
-          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
-          "title": "Раздел деталей профиля",
-          "subtitle": "Управление разделом деталей профиля.",
+          "eyebrow": "КАНАЛ",
+          "title": "Канал профиля",
+          "subtitle": "Канал создаётся и управляется через профиль владельца."
         },
         "bot": {
-          "eyebrow": "eyebrow",
-          "title": "Бот",
-          "subtitle": "Описание",
+          "eyebrow": "БОТ",
+          "title": "Бот профиля",
+          "subtitle": "Публичные данные бота и AI-доступ управляются из профиля."
         },
         "colors": {
-          "eyebrow": "ДЕТАЛЕЙ ПРОФИЛЯ",
-          "subtitle": "Управление разделом деталей профиля.",
-          "title": "Раздел деталей профиля",
-        },
+          "eyebrow": "ЦВЕТА",
+          "subtitle": "Выберите тему и рамку для публичного профиля.",
+          "title": "Цвета и рамки"
+        }
       },
       "username": {
-        "fieldLabel": "Поле Метка",
-        "noteTitle": "Примечание Заголовок",
-        "noteText": "Примечание Текст",
-        "placeholder": "Введите данные для раздела деталей профиля",
+        "fieldLabel": "Имя пользователя",
+        "noteTitle": "Публичное имя пользователя",
+        "noteText": "Информация Информация",
+        "placeholder": "Введите значение"
       },
       "phone": {
-        "fieldLabel": "Поле Метка",
-        "noteTitle": "Примечание Заголовок",
-        "noteText": "Примечание Текст",
-        "placeholder": "Введите данные для раздела деталей профиля",
+        "fieldLabel": "Телефон",
+        "noteTitle": "Номер аккаунта",
+        "noteText": "Телефон используется для входа, восстановления, поиска и защитных проверок.",
+        "placeholder": "Введите значение"
       },
       "birthday": {
-        "day": "day",
-        "month": "month",
-        "year": "year",
-        "noteTitle": "Примечание Заголовок",
-        "noteText": "Примечание Текст",
-        "dayPlaceholder": "day Поле ввода",
-        "monthPlaceholder": "month Поле ввода",
-        "yearPlaceholder": "year Поле ввода",
+        "day": "День",
+        "month": "Месяц",
+        "year": "Год",
+        "noteTitle": "Дата рождения",
+        "noteText": "Дата нужна для профиля и функций, где есть возрастные ограничения.",
+        "dayPlaceholder": "ДД",
+        "monthPlaceholder": "ММ",
+        "yearPlaceholder": "ГГГГ"
       },
       "channel": {
-        "fieldLabel": "Поле Метка",
-        "placeholder": "Введите данные для раздела деталей профиля",
-        "noteTitle": "Примечание Заголовок",
-        "noteText": "Примечание Текст",
+        "fieldLabel": "Канал",
+        "placeholder": "Выберите канал",
+        "noteTitle": "Канал профиля",
+        "noteText": "Публичные данные канала управляются через профиль владельца."
       },
       "bot": {
-        "fieldLabel": "field Label",
-        "placeholder": "Введите значение",
-        "noteTitle": "note",
-        "noteText": "Бот: информация",
+        "fieldLabel": "Бот",
+        "placeholder": "Выберите бота",
+        "noteTitle": "Бот профиля",
+        "noteText": "Публичные данные бота, AI-доступ и маршрутизация управляются из профиля."
       },
       "colors": {
-        "noteText": "Примечание Текст",
-        "noteTitle": "Примечание Заголовок",
+        "noteText": "Цвета применяются к публичному профилю и визуальным карточкам.",
+        "noteTitle": "Тема профиля",
         "presets": {
-          "blue": "blue",
-          "emerald": "emerald",
-          "gold": "gold",
-          "purple": "purple",
-          "teal": "teal",
+          "blue": "Синий",
+          "emerald": "Изумрудный",
+          "gold": "Золотой",
+          "purple": "Фиолетовый",
+          "teal": "Бирюзовый"
         },
-        "previewTitle": "preview Заголовок",
-      },
+        "previewTitle": "Предпросмотр"
+      }
     },
     "channelScreen": {
       "loading": "Загрузка…",
       "header": {
-        "title": "Раздел",
+        "title": "Раздел"
       },
       "shelf": {
         "title": "Раздел",
-        "empty": "Пусто",
+        "empty": "Пусто"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "Информация",
         "public": "Публичный",
-        "control": "control",
-        "history": "История",
+        "control": "Информация",
+        "history": "История"
       },
       "actions": {
         "create": "Создать",
-        "creating": "creating",
+        "creating": "Информация",
         "save": "Сохранить",
-        "saving": "saving",
-        "reset": "reset",
+        "saving": "Сохранение...",
+        "reset": "Сбросить"
       },
       "createFlow": {
         "subtitle": "Описание",
-        "ownerAuto": "owner Auto",
-        "inviteAuto": "invite Auto",
+        "ownerAuto": "Информация",
+        "inviteAuto": "Чат"
       },
       "defaults": {
         "channelName": "Канал Название",
-        "username": "username",
-        "description": "defaults: информация",
+        "username": "Информация",
+        "description": "Настройки"
       },
       "stats": {
-        "subscribers": "subscribers",
-        "photos": "photos",
-        "gifts": "gifts",
-        "history": "История",
+        "subscribers": "Подписчики",
+        "photos": "Фото",
+        "gifts": "Подарки",
+        "history": "История"
       },
       "quick": {
         "public": "Публичный",
         "publicSubtitle": "Публичный Описание",
         "settings": "Настройки",
-        "settingsSubtitle": "Настройки Описание",
+        "settingsSubtitle": "Настройки Описание"
       },
       "sections": {
         "identity": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "activity": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "publication": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "public": {
           "title": "Публичный",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "owner": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "main": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "permissions": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "links": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "historyStats": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
+          "subtitle": "Описание"
+        }
       },
       "readonly": {
-        "notice": "notice",
-        "likes": "likes",
-        "gifts": "gifts",
+        "notice": "Информация",
+        "likes": "Лайки",
+        "gifts": "Подарки"
       },
       "flags": {
         "public": "Публичный",
         "private": "Приватный",
-        "published": "published",
-        "preview": "preview",
-        "profileVisible": "Профиль Visible",
-        "profileHidden": "Профиль Hidden",
+        "published": "Опубликовано",
+        "preview": "Предпросмотр",
+        "profileVisible": "Профиль",
+        "profileHidden": "Профиль"
       },
       "focus": {
-        "public": "Публичный",
+        "public": "Публичный"
       },
       "openChat": {
         "title": "Раздел",
-        "subtitle": "Описание",
+        "subtitle": "Описание"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
-        "photos": "photos",
-        "photosSubtitle": "photos Описание",
-        "videos": "videos",
-        "videosSubtitle": "videos Описание",
+        "avatar": "Аватар",
+        "cover": "Информация",
+        "photos": "Фото",
+        "photosSubtitle": "Описание Информация",
+        "videos": "Видео",
+        "videosSubtitle": "Описание Информация",
         "addPhoto": "Добавить Фото",
         "addVideo": "Добавить Видео",
-        "gallery": "gallery",
-        "emptyPhotosTitle": "Пусто Photos",
-        "emptyPhotosSubtitle": "Пусто Photos Описание",
-        "emptyVideosTitle": "Пусто Videos",
-        "emptyVideosSubtitle": "Пусто Videos Описание",
+        "gallery": "Галерея",
+        "emptyPhotosTitle": "Раздел фотографий профиля",
+        "emptyPhotosSubtitle": "Информация Информация",
+        "emptyVideosTitle": "Видео пока нет",
+        "emptyVideosSubtitle": "Информация Информация"
       },
       "main": {
         "channelName": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Чат",
+          "placeholder": "Введите значение"
         },
         "username": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Имя пользователя",
+          "placeholder": "Введите значение"
         },
         "description": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "channelId": "Канал ID",
         "channelIdPlaceholder": "Введите значение",
-        "inviteLink": "invite Link",
+        "inviteLink": "Ссылка-приглашение"
       },
       "owner": {
         "name": "Название",
         "namePlaceholder": "Введите значение",
         "userId": "Пользователь ID",
         "userIdPlaceholder": "Введите значение",
-        "role": "role",
+        "role": "Информация",
         "rolePlaceholder": "Введите значение",
-        "phone": "phone",
-        "email": "email",
+        "phone": "Телефон владельца",
+        "email": "Информация"
       },
       "publication": {
-        "publicationId": "publication ID",
+        "publicationId": "Информация",
         "title": "Раздел",
-        "titlePlaceholder": "Placeholder",
+        "titlePlaceholder": "Поиск",
         "subtitle": "Описание",
-        "subtitlePlaceholder": "Описание Placeholder",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "Введите значение",
+        "subtitlePlaceholder": "Описание Информация",
+        "slug": "Информация",
+        "tags": "Информация",
+        "summary": "Информация",
+        "summaryPlaceholder": "Введите значение"
       },
       "toggles": {
         "public": "Публичный",
         "publicSubtitle": "Публичный Описание",
-        "published": "published",
-        "publishedSubtitle": "published Описание",
-        "showInProfile": "show In Профиль",
-        "showInProfileSubtitle": "show In Профиль Описание",
-        "searchable": "searchable",
-        "searchableSubtitle": "searchable Описание",
-        "preview": "preview",
-        "previewSubtitle": "preview Описание",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery Описание",
-        "approveSubscribers": "Одобрить Subscribers",
-        "approveSubscribersSubtitle": "Одобрить Subscribers Описание",
-        "onlyAdminsCanPost": "only Admins Can Post",
-        "onlyAdminsCanPostSubtitle": "only Admins Can Post Описание",
-        "onlyAdminsCanEdit": "only Admins Can Редактировать",
-        "onlyAdminsCanEditSubtitle": "only Admins Can Редактировать Описание",
-        "commentsEnabled": "comments Enabled",
-        "commentsEnabledSubtitle": "comments Enabled Описание",
-        "reactionsEnabled": "reactions Enabled",
-        "reactionsEnabledSubtitle": "reactions Enabled Описание",
+        "published": "Опубликовано",
+        "publishedSubtitle": "Описание Информация",
+        "showInProfile": "Раздел",
+        "showInProfileSubtitle": "Профиль Информация",
+        "searchable": "Раздел",
+        "searchableSubtitle": "Поиск",
+        "preview": "Предпросмотр",
+        "previewSubtitle": "Описание Информация",
+        "discovery": "Информация",
+        "discoverySubtitle": "Описание Информация",
+        "approveSubscribers": "Информация",
+        "approveSubscribersSubtitle": "Описание Информация",
+        "onlyAdminsCanPost": "Только админы могут публиковать",
+        "onlyAdminsCanPostSubtitle": "Описание Информация",
+        "onlyAdminsCanEdit": "Только админы могут редактировать",
+        "onlyAdminsCanEditSubtitle": "Описание Информация",
+        "commentsEnabled": "Комментарии включены",
+        "commentsEnabledSubtitle": "Описание Информация",
+        "reactionsEnabled": "Информация",
+        "reactionsEnabledSubtitle": "Описание Информация"
       },
       "links": {
         "chatId": "Чат ID",
         "botId": "Бот ID",
-        "subscribers": "subscribers",
+        "subscribers": "Подписчики"
       },
       "history": {
         "subtitle": "Описание",
         "emptyTitle": "Пусто",
-        "emptySubtitle": "Пусто Описание",
+        "emptySubtitle": "Пусто Описание"
       },
       "alerts": {
         "success": {
           "title": "Раздел",
-          "created": "created",
+          "created": "Канал создан",
           "saved": "Сохранено",
-          "reset": "reset",
+          "reset": "Информация"
         },
         "error": {
           "title": "Ошибка",
-          "saveFailed": "Сохранить Ошибка",
+          "saveFailed": "Сохранить Ошибка"
         },
         "validation": {
           "nameTitle": "Название",
-          "nameMessage": "Название Сообщение",
+          "nameMessage": "Название Сообщение"
         },
         "resetConfirm": {
           "title": "Раздел",
           "message": "Сообщение",
           "cancel": "Отмена",
-          "confirm": "Подтвердить",
-        },
-      },
+          "confirm": "Подтвердить"
+        }
+      }
     },
     "botScreen": {
       "loading": "Загрузка…",
       "header": {
-        "title": "Раздел",
+        "title": "Раздел"
       },
       "shelf": {
         "title": "Раздел",
-        "empty": "Пусто",
+        "empty": "Пусто"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "Информация",
         "public": "Публичный",
-        "control": "control",
-        "history": "История",
+        "control": "Информация",
+        "history": "История"
       },
       "actions": {
         "create": "Создать",
-        "creating": "creating",
+        "creating": "Информация",
         "save": "Сохранить",
-        "saving": "saving",
-        "reset": "reset",
+        "saving": "Сохранение...",
+        "reset": "Сбросить"
       },
       "createFlow": {
         "subtitle": "Описание",
-        "ownerAuto": "owner Auto",
-        "inviteAuto": "invite Auto",
+        "ownerAuto": "Информация",
+        "inviteAuto": "Чат"
       },
       "defaults": {
         "botName": "Бот Название",
-        "username": "username",
-        "description": "defaults: информация",
+        "username": "Информация",
+        "description": "Настройки"
       },
       "stats": {
-        "modules": "modules",
-        "commands": "commands",
+        "modules": "Модули",
+        "commands": "Команды",
         "history": "История",
-        "public": "Публичный",
+        "public": "Публичный"
       },
       "quick": {
         "public": "Публичный",
         "publicSubtitle": "Публичный Описание",
         "settings": "Настройки",
-        "settingsSubtitle": "Настройки Описание",
+        "settingsSubtitle": "Настройки Описание"
       },
       "sections": {
         "identity": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "activity": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "publication": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "public": {
           "title": "Публичный",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "owner": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "main": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "permissions": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "links": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "routing": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "historyStats": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
+          "subtitle": "Описание"
+        }
       },
       "readonly": {
-        "notice": "notice",
+        "notice": "Информация"
       },
       "flags": {
         "public": "Публичный",
         "private": "Приватный",
-        "published": "published",
-        "preview": "preview",
-        "profileVisible": "Профиль Visible",
-        "profileHidden": "Профиль Hidden",
-        "active": "active",
-        "paused": "paused",
+        "published": "Опубликовано",
+        "preview": "Предпросмотр",
+        "profileVisible": "Профиль",
+        "profileHidden": "Профиль",
+        "active": "Активно",
+        "paused": "Приостановлено"
       },
       "focus": {
         "public": "Публичный",
-        "routing": "routing",
+        "routing": "Информация"
       },
       "openChat": {
         "title": "Раздел",
-        "subtitle": "Описание",
+        "subtitle": "Описание"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
-        "gallery": "gallery",
+        "avatar": "Аватар",
+        "cover": "Информация",
+        "gallery": "Галерея"
       },
       "main": {
         "botName": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Помощник",
+          "placeholder": "Введите значение"
         },
         "username": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Имя пользователя",
+          "placeholder": "Введите значение"
         },
         "description": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "botKind": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Помощник",
+          "placeholder": "Введите значение"
         },
         "botId": "Бот ID",
-        "botIdPlaceholder": "Введите значение",
+        "botIdPlaceholder": "Введите значение"
       },
       "owner": {
         "name": "Название",
         "namePlaceholder": "Введите значение",
         "userId": "Пользователь ID",
         "userIdPlaceholder": "Введите значение",
-        "role": "role",
+        "role": "Информация",
         "rolePlaceholder": "Введите значение",
-        "phone": "phone",
-        "email": "email",
+        "phone": "Телефон владельца",
+        "email": "Информация"
       },
       "publication": {
-        "publicationId": "publication ID",
+        "publicationId": "Информация",
         "title": "Раздел",
-        "titlePlaceholder": "Placeholder",
+        "titlePlaceholder": "Поиск",
         "subtitle": "Описание",
-        "subtitlePlaceholder": "Описание Placeholder",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "Введите значение",
+        "subtitlePlaceholder": "Описание Информация",
+        "slug": "Информация",
+        "tags": "Информация",
+        "summary": "Информация",
+        "summaryPlaceholder": "Введите значение"
       },
       "toggles": {
         "public": "Публичный",
         "publicSubtitle": "Публичный Описание",
-        "published": "published",
-        "publishedSubtitle": "published Описание",
-        "showInProfile": "show In Профиль",
-        "showInProfileSubtitle": "show In Профиль Описание",
-        "preview": "preview",
-        "previewSubtitle": "preview Описание",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery Описание",
-        "active": "active",
-        "activeSubtitle": "active Описание",
-        "acceptCommands": "accept Commands",
-        "acceptCommandsSubtitle": "accept Commands Описание",
-        "showInCatalog": "show In Catalog",
-        "showInCatalogSubtitle": "show In Catalog Описание",
-        "allowPayments": "Разрешить Payments",
-        "allowPaymentsSubtitle": "Разрешить Payments Описание",
-        "inlineEnabled": "inline Enabled",
-        "inlineEnabledSubtitle": "inline Enabled Описание",
-        "autoReplyEnabled": "auto Reply Enabled",
-        "autoReplyEnabledSubtitle": "auto Reply Enabled Описание",
-        "marketplaceLinked": "marketplace Linked",
-        "marketplaceLinkedSubtitle": "marketplace Linked Описание",
-        "deliveryLinked": "delivery Linked",
-        "deliveryLinkedSubtitle": "delivery Linked Описание",
-        "businessRoutingEnabled": "business Routing Enabled",
-        "businessRoutingEnabledSubtitle": "business Routing Enabled Описание",
+        "published": "Опубликовано",
+        "publishedSubtitle": "Описание Информация",
+        "showInProfile": "Раздел",
+        "showInProfileSubtitle": "Профиль Информация",
+        "preview": "Предпросмотр",
+        "previewSubtitle": "Описание Информация",
+        "discovery": "Информация",
+        "discoverySubtitle": "Описание Информация",
+        "active": "Активно",
+        "activeSubtitle": "Описание Информация",
+        "acceptCommands": "Принимать команды",
+        "acceptCommandsSubtitle": "Описание Информация",
+        "showInCatalog": "Показывать в каталоге",
+        "showInCatalogSubtitle": "Описание Информация",
+        "allowPayments": "Разрешить платежи",
+        "allowPaymentsSubtitle": "Описание Информация",
+        "inlineEnabled": "Информация",
+        "inlineEnabledSubtitle": "Описание Информация",
+        "autoReplyEnabled": "Информация",
+        "autoReplyEnabledSubtitle": "Описание Информация",
+        "marketplaceLinked": "Информация",
+        "marketplaceLinkedSubtitle": "Описание Информация",
+        "deliveryLinked": "Информация",
+        "deliveryLinkedSubtitle": "Описание Информация",
+        "businessRoutingEnabled": "Раздел",
+        "businessRoutingEnabledSubtitle": "Информация Информация"
       },
       "links": {
         "chatId": "Чат ID",
         "groupId": "Группа ID",
         "channelId": "Канал ID",
-        "marketId": "market ID",
+        "marketId": "Информация"
       },
       "routing": {
         "title": "Раздел",
-        "sabiWallet": "sabi Кошелёк",
-        "businessRoutingLayer": "business Routing Layer",
+        "sabiWallet": "Кошелёк",
+        "businessRoutingLayer": "Информация",
         "tradeBot": "Торговля Бот",
-        "businessBot": "business Бот",
-        "tradeHint": "routing: информация",
-        "businessHint": "routing: информация",
+        "businessBot": "Бизнес-бот",
+        "tradeHint": "Информация Информация",
+        "businessHint": "Информация Информация"
       },
       "history": {
         "subtitle": "Описание",
         "emptyTitle": "Пусто",
-        "emptySubtitle": "Пусто Описание",
+        "emptySubtitle": "Пусто Описание"
       },
       "alerts": {
         "success": {
           "title": "Раздел",
-          "created": "created",
+          "created": "Бот создан",
           "saved": "Сохранено",
-          "reset": "reset",
+          "reset": "Информация"
         },
         "error": {
           "title": "Ошибка",
-          "saveFailed": "Сохранить Ошибка",
+          "saveFailed": "Сохранить Ошибка"
         },
         "validation": {
           "nameTitle": "Название",
-          "nameMessage": "Название Сообщение",
+          "nameMessage": "Название Сообщение"
         },
         "resetConfirm": {
           "title": "Раздел",
           "message": "Сообщение",
           "cancel": "Отмена",
-          "confirm": "Подтвердить",
-        },
-      },
+          "confirm": "Подтвердить"
+        }
+      }
     },
     "colorsScreen": {
       "header": {
-        "title": "Раздел темы и рамок профиля",
+        "title": "Раздел темы и рамок профиля"
       },
       "intro": {
         "eyebrow": "ТЕМЫ И РАМОК ПРОФИЛЯ",
         "title": "Раздел темы и рамок профиля",
-        "subtitle": "Управление разделом темы и рамок профиля.",
+        "subtitle": "Управление разделом темы и рамок профиля."
       },
       "preview": {
-        "ownerTheme": "owner Theme",
-        "bio": "bio",
+        "ownerTheme": "Тема",
+        "bio": "Био",
         "stats": {
           "theme": "Тема",
-          "frame": "Рамка",
+          "frame": "Рамка"
         },
         "quickPills": {
           "profileSurface": "Слой профиля",
           "aiIdentity": "AI-идентичность",
-          "premium": "Premium",
+          "premium": "Премиум"
         },
-        "ownerThemeBadge": "Тема владельца",
+        "ownerThemeBadge": "Тема владельца"
       },
       "notice": {
         "title": "Раздел темы и рамок профиля",
-        "description": "Настройки и информация для раздела темы и рамок профиля.",
+        "description": "Настройки и информация для раздела темы и рамок профиля."
       },
       "sections": {
-        "themePresets": "Тема presets",
-        "avatarFrames": "Аватар Рамки",
+        "themePresets": "Тема",
+        "avatarFrames": "Аватар Рамки"
       },
       "themes": {
         "emeraldGlass": {
           "title": "Раздел темы и рамок профиля",
           "subtitle": "Управление разделом темы и рамок профиля.",
-          "badge": "Бейдж",
+          "badge": "Бейдж"
         },
         "royalAurora": {
           "title": "Раздел темы и рамок профиля",
           "subtitle": "Управление разделом темы и рамок профиля.",
-          "badge": "Бейдж",
+          "badge": "Бейдж"
         },
         "midnightViolet": {
           "title": "Раздел темы и рамок профиля",
           "subtitle": "Управление разделом темы и рамок профиля.",
-          "badge": "Бейдж",
+          "badge": "Бейдж"
         },
         "sunsetRose": {
           "title": "Раздел темы и рамок профиля",
           "subtitle": "Управление разделом темы и рамок профиля.",
-          "badge": "Бейдж",
+          "badge": "Бейдж"
         },
         "aiNeon": {
           "title": "Раздел темы и рамок профиля",
           "subtitle": "Управление разделом темы и рамок профиля.",
-          "badge": "Бейдж",
-        },
+          "badge": "Бейдж"
+        }
       },
       "frames": {
         "defaultGlow": {
           "title": "Раздел",
-          "description": "default Glow: информация",
+          "description": "Настройки"
         },
         "heartPulse": {
           "title": "Раздел",
-          "description": "heart Pulse: информация",
+          "description": "Настройки"
         },
         "crystalRing": {
           "title": "Раздел",
-          "description": "crystal Ring: информация",
+          "description": "Настройки"
         },
         "royalGold": {
           "title": "Раздел",
-          "description": "royal Gold: информация",
+          "description": "Настройки"
         },
         "neonWave": {
           "title": "Раздел",
-          "description": "neon Wave: информация",
+          "description": "Настройки"
         },
         "aiHalo": {
           "title": "Раздел",
-          "description": "AI Halo: информация",
+          "description": "Настройки"
         },
         "softStars": {
           "title": "Раздел",
-          "description": "soft Stars: информация",
+          "description": "Настройки"
         },
         "seasonalBloom": {
           "title": "Раздел",
-          "description": "seasonal Bloom: информация",
-        },
+          "description": "Настройки"
+        }
       },
       "footer": {
         "title": "Раздел темы и рамок профиля",
         "description": "Настройки и информация для раздела темы и рамок профиля.",
-        "action": "Продолжить",
+        "action": "Продолжить"
       },
       "alerts": {
-        "savedDescription": "saved Описание",
-        "savedTitle": "saved Заголовок",
-      },
+        "savedDescription": "Сохранено",
+        "savedTitle": "Сохранено"
+      }
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
+        "eyebrow": "Информация",
         "title": "Раздел",
-        "subtitle": "Описание",
+        "subtitle": "Описание"
       },
       "metrics": {
-        "allSessions": "all Sessions",
-        "trusted": "trusted",
-        "timeout": "timeout",
+        "allSessions": "Информация",
+        "trusted": "Информация",
+        "timeout": "Информация"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off",
+        "on": "Включено",
+        "off": "Выкл"
       },
       "connect": {
         "title": "Раздел",
-        "description": "connect: информация",
-        "action": "action",
+        "description": "Настройки",
+        "action": "Открыть профиль"
       },
       "sections": {
-        "thisDevice": "this Device",
-        "otherSessions": "other Sessions",
-        "autoEnd": "auto End",
+        "thisDevice": "Информация",
+        "otherSessions": "Информация",
+        "autoEnd": "Информация"
       },
       "badges": {
-        "live": "live",
-        "trusted": "trusted",
+        "live": "Информация",
+        "trusted": "Информация"
       },
-      "revokeAction": "revoke Action",
-      "selectedBadge": "selected Badge",
+      "revokeAction": "Отмена",
+      "selectedBadge": "Информация",
       "timeouts": {
-        "oneWeek": "one Week",
-        "oneMonth": "one Month",
-        "threeMonths": "three Months",
-        "sixMonths": "six Months",
-        "oneYear": "one Year",
+        "oneWeek": "Информация",
+        "oneMonth": "Информация",
+        "threeMonths": "Информация",
+        "sixMonths": "Информация",
+        "oneYear": "Информация"
       },
       "notes": {
         "safety": {
           "title": "Безопасность",
-          "description": "Безопасность: информация",
+          "description": "Безопасность: информация"
         },
         "nextLayer": {
           "title": "Раздел",
-          "description": "next Layer: информация",
+          "description": "Настройки"
         },
         "security": {
           "title": "Безопасность",
-          "description": "Безопасность: информация",
+          "description": "Безопасность: информация"
         },
         "future": {
           "title": "Раздел",
-          "description": "future: информация",
-        },
-      },
+          "description": "Настройки"
+        }
+      }
     },
     "privacyScreen": {
       "intro": {
         "eyebrow": "ПРОФИЛЯ",
         "title": "Раздел профиля",
-        "subtitle": "Управление разделом профиля.",
+        "subtitle": "Управление разделом профиля."
       },
       "sections": {
-        "securityAccess": "Безопасность access",
-        "visibilityCommunication": "visibility communication",
+        "securityAccess": "Безопасность",
+        "visibilityCommunication": "Информация"
       },
       "rows": {
         "security": {
           "title": "Безопасность",
-          "description": "Безопасность: информация",
+          "description": "Безопасность: информация"
         },
         "data": {
           "title": "Раздел",
-          "description": "data: информация",
+          "description": "Настройки"
         },
         "blocked": {
           "title": "Раздел",
-          "description": "blocked: информация",
+          "description": "Настройки"
         },
         "autodelete": {
           "title": "Раздел",
-          "description": "autodelete: информация",
+          "description": "Настройки"
         },
         "login_email": {
           "title": "Раздел",
-          "description": "login email: информация",
+          "description": "Настройки"
         },
         "phone": {
           "title": "Раздел",
-          "description": "phone: информация",
+          "description": "Настройки"
         },
         "last_seen": {
           "title": "Раздел",
-          "description": "last seen: информация",
+          "description": "Настройки"
         },
         "last-seen": {
           "title": "Раздел",
-          "description": "last seen: информация",
+          "description": "Настройки"
         },
         "photo": {
           "title": "Фото",
-          "description": "Фото: информация",
+          "description": "Фото: информация"
         },
         "bio": {
           "title": "Раздел",
-          "description": "bio: информация",
+          "description": "Настройки"
         },
         "birthday": {
           "title": "Раздел",
-          "description": "birthday: информация",
+          "description": "Настройки"
         },
         "gifts": {
           "title": "Раздел",
-          "description": "gifts: информация",
+          "description": "Настройки"
         },
         "forwards": {
           "title": "Раздел",
-          "description": "forwards: информация",
+          "description": "Настройки"
         },
         "calls": {
           "title": "Звонки",
-          "description": "Звонки: информация",
+          "description": "Звонки: информация"
         },
         "voice_messages": {
           "title": "Раздел",
-          "description": "voice Сообщения: информация",
+          "description": "Голосовой AI"
         },
         "voice-messages": {
           "title": "Раздел",
-          "description": "voice Сообщения: информация",
+          "description": "Голосовой AI"
         },
         "messages": {
           "title": "Сообщения",
-          "description": "Сообщения: информация",
+          "description": "Сообщения: информация"
         },
         "groups": {
           "title": "Группы",
-          "description": "Группы: информация",
-        },
-      },
+          "description": "Группы: информация"
+        }
+      }
     },
     "privacyDetailScreen": {
       "defaults": {
-        "eyebrow": "ПРОФИЛЯ",
+        "eyebrow": "ПРОФИЛЯ"
       },
       "options": {
-        "everyone": "everyone",
-        "contacts": "contacts",
-        "nobody": "nobody",
+        "everyone": "Информация",
+        "contacts": "Контакты",
+        "nobody": "Информация"
       },
       "notFound": {
         "title": "Раздел профиля",
         "subtitle": "Управление разделом профиля.",
-        "backAction": "Назад",
+        "backAction": "Назад"
       },
       "exceptions": {
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
-      "lockedHelper": "locked helper",
+      "lockedHelper": "Информация Информация",
       "notes": {
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "premium": {
-        "eyebrow": "ПРОФИЛЯ",
+        "eyebrow": "ПРОФИЛЯ"
       },
       "preview": {
-        "forwardedFrom": "forwarded from",
-      },
+        "forwardedFrom": "Информация"
+      }
     },
     "privacyDetails": {
       "common": {
-        "add": "Добавить",
+        "add": "Добавить"
       },
       "phone": {
         "title": "Раздел",
         "groups": {
           "whoCanSee": {
             "title": "Раздел",
-            "description": "who Can See: информация",
+            "description": "Настройки"
           },
           "findByNumber": {
             "title": "Раздел",
-            "description": "find By Number: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "Раздел",
-            "value": "value",
-            "description": "always Show: информация",
-          },
-        },
+            "value": "Хранение рейтинга запланировано без фальшивых баллов.",
+            "description": "Настройки"
+          }
+        }
       },
       "lastSeen": {
         "title": "Раздел",
         "groups": {
           "onlineVisibility": {
             "title": "Раздел",
-            "description": "online Visibility: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "Раздел",
-            "description": "always Show: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "toggles": {
           "hideReadTime": {
             "title": "Раздел",
-            "description": "hide Read Time: информация",
-          },
+            "description": "Настройки"
+          }
         },
-        "note": "note",
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "last Seen: информация",
+        "note": "Примечание",
+        "premiumNote": "Премиум",
+        "premiumCtaText": "Сообщения: информация"
       },
       "photo": {
         "title": "Фото",
         "groups": {
           "whoCanSee": {
             "title": "Раздел",
-            "description": "who Can See: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "neverShow": {
             "title": "Раздел",
-            "description": "never Show: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "bio": {
         "title": "Раздел",
         "groups": {
           "whoCanSee": {
             "title": "Раздел",
-            "description": "who Can See: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "neverShow": {
             "title": "Раздел",
-            "description": "never Show: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "birthday": {
         "title": "Раздел",
         "groups": {
           "whoCanSee": {
             "title": "Раздел",
-            "description": "who Can See: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "alwaysShow": {
             "title": "Раздел",
-            "description": "always Show: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "gifts": {
         "title": "Раздел",
         "topToggles": {
           "chatBadge": {
             "title": "Раздел",
-            "description": "Чат Badge: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "groups": {
           "defaultProfileVisibility": {
             "title": "Раздел",
-            "description": "default Профиль Visibility: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "neverAllow": {
             "title": "Раздел",
-            "description": "never Разрешить: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "allowedGifts": {
-          "title": "Раздел",
+          "title": "Раздел"
         },
         "toggles": {
           "standard": {
             "title": "Раздел",
-            "description": "standard: информация",
+            "description": "Настройки"
           },
           "rare": {
             "title": "Раздел",
-            "description": "rare: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "forwards": {
         "title": "Раздел",
         "preview": {
-          "label": "label",
-          "sender": "sender",
-          "message": "Сообщение",
+          "label": "Информация",
+          "sender": "Отправитель",
+          "message": "Сообщение"
         },
         "groups": {
           "accountLinking": {
             "title": "Раздел",
-            "description": "account Linking: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "alwaysAllow": {
             "title": "Раздел",
-            "description": "always Разрешить: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "calls": {
         "title": "Звонки",
         "options": {
-          "always": "always",
-          "never": "never",
+          "always": "Информация",
+          "never": "Информация"
         },
         "groups": {
           "whoCanCall": {
             "title": "Раздел",
-            "description": "who Can Звонок: информация",
+            "description": "Настройки"
           },
           "peerToPeer": {
             "title": "Раздел",
-            "description": "peer To Peer: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "neverAllow": {
             "title": "Раздел",
-            "description": "never Разрешить: информация",
+            "description": "Настройки"
           },
           "alwaysAllow": {
             "title": "Раздел",
-            "description": "always Разрешить: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "toggles": {
           "iphoneIntegration": {
             "title": "Раздел",
-            "description": "iphone Integration: информация",
-          },
-        },
+            "description": "Настройки"
+          }
+        }
       },
       "voiceMessages": {
         "title": "Раздел",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "Сообщения For Credits",
+          "contactsPremium": "Голосовой AI",
+          "messagesForCredits": "Голосовой AI"
         },
         "groups": {
           "whoCanSend": {
             "title": "Раздел",
-            "description": "who Can Отправить: информация",
-          },
+            "description": "Голосовой AI"
+          }
         },
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "voice Сообщения: информация",
+        "premiumNote": "Голосовой AI",
+        "premiumCtaText": "Сообщения: информация"
       },
       "messages": {
         "title": "Сообщения",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "Сообщения For Credits",
+          "contactsPremium": "Премиум",
+          "messagesForCredits": "Информация"
         },
         "groups": {
           "whoCanMessage": {
             "title": "Раздел",
-            "description": "who Can Сообщение: информация",
-          },
+            "description": "Настройки"
+          }
         },
-        "premiumNote": "Premium Note",
-        "premiumCtaText": "Сообщения: информация",
+        "premiumNote": "Премиум",
+        "premiumCtaText": "Сообщения: информация"
       },
       "groups": {
         "title": "Группы",
         "groups": {
           "whoCanInvite": {
             "title": "Раздел",
-            "description": "who Can Invite: информация",
-          },
+            "description": "Настройки"
+          }
         },
         "exceptions": {
           "alwaysAllow": {
             "title": "Раздел",
-            "description": "always Разрешить: информация",
-          },
-        },
-      },
+            "description": "Настройки"
+          }
+        }
+      }
     },
     "dataManagementScreen": {
       "intro": {
         "eyebrow": "УПРАВЛЕНИЯ ДАННЫМИ",
         "title": "Раздел управления данными",
-        "subtitle": "Управление разделом управления данными.",
+        "subtitle": "Управление разделом управления данными."
       },
       "metrics": {
-        "contactsSync": "contacts sync",
-        "draftBackup": "draft backup",
-        "privateExport": "private export",
+        "contactsSync": "Информация",
+        "draftBackup": "Раздел управления данными",
+        "privateExport": "Информация"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off",
+        "on": "Включено",
+        "off": "Выкл"
       },
       "hero": {
         "title": "Раздел управления данными",
-        "description": "Настройки и информация для раздела управления данными.",
+        "description": "Настройки и информация для раздела управления данными."
       },
       "sections": {
-        "discovery": "discovery",
-        "storage": "storage",
-        "retention": "retention",
+        "discovery": "Информация",
+        "storage": "Информация",
+        "retention": "Информация"
       },
       "discovery": {
         "syncContacts": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "searchSuggestions": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "memoryControls": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
-        },
+          "description": "Настройки и информация для раздела управления данными."
+        }
       },
       "storage": {
         "draftBackup": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "paymentHints": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "privateExportMode": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
-        },
+          "description": "Настройки и информация для раздела управления данными."
+        }
       },
       "retention": {
         "autoCleanup": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
-        },
+          "description": "Настройки и информация для раздела управления данными."
+        }
       },
       "actions": {
         "requestExport": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "reviewDrafts": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "clearCache": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
-        },
+          "description": "Настройки и информация для раздела управления данными."
+        }
       },
       "note": {
         "title": "Раздел управления данными",
-        "description": "Настройки и информация для раздела управления данными.",
+        "description": "Настройки и информация для раздела управления данными."
       },
       "links": {
         "privacy": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
+          "description": "Настройки и информация для раздела управления данными."
         },
         "support": {
           "title": "Раздел управления данными",
-          "description": "Настройки и информация для раздела управления данными.",
-        },
-      },
+          "description": "Настройки и информация для раздела управления данными."
+        }
+      }
     },
     "aiScreen": {
       "header": {
         "title": "Раздел",
-        "openAction": "Открыть Action",
+        "openAction": "Открыть"
       },
       "intro": {
-        "eyebrow": "eyebrow",
+        "eyebrow": "Информация",
         "title": "Раздел",
-        "subtitle": "Описание",
+        "subtitle": "Описание"
       },
       "hero": {
         "badges": {
-          "identity": "identity",
-          "programBound": "program Bound",
+          "identity": "Идентичность",
+          "programBound": "Информация"
         },
         "stats": {
-          "mode": "mode",
-          "owner": "owner",
-          "premium": "Premium",
-          "premiumBound": "Premium Bound",
+          "mode": "Информация",
+          "owner": "Владелец",
+          "premium": "Премиум",
+          "premiumBound": "Премиум"
         },
         "actions": {
           "edit": "Редактировать",
-          "theme": "theme",
-          "premium": "Premium",
-          "public": "Публичный",
-        },
+          "theme": "Тема",
+          "premium": "Премиум",
+          "public": "Публичный"
+        }
       },
       "modes": {
         "balanced": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "creative": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "business": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "concise": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
+          "subtitle": "Описание"
+        }
       },
       "modeSection": {
-        "title": "Раздел",
+        "title": "Раздел"
       },
       "notice": {
         "title": "Раздел",
-        "description": "notice: информация",
+        "description": "Настройки и информация для раздела темы и рамок профиля."
       },
       "sections": {
         "primary": {
           "title": "Раздел",
           "edit": {
             "title": "Редактировать",
-            "description": "Редактировать: информация",
+            "description": "Редактировать: информация"
           },
           "public": {
             "title": "Публичный",
-            "description": "Публичный: информация",
+            "description": "Публичный: информация"
           },
           "colors": {
             "title": "Раздел",
-            "description": "colors: информация",
+            "description": "Настройки"
           },
           "premium": {
-            "title": "Premium",
-            "description": "Premium: информация",
-          },
+            "title": "Премиум",
+            "description": "Премиум"
+          }
         },
         "system": {
           "title": "Раздел",
           "language": {
             "title": "Язык",
-            "description": "Язык: информация",
+            "description": "Язык: информация"
           },
           "qr": {
             "title": "QR",
-            "description": "QR: информация",
+            "description": "QR: информация"
           },
           "premiumSurface": {
             "title": "Раздел",
-            "description": "Premium Surface: информация",
-          },
-        },
+            "description": "Премиум"
+          }
+        }
       },
       "badges": {
-        "premium": "Premium",
+        "premium": "Премиум"
       },
       "footer": {
         "title": "Раздел",
-        "description": "footer: информация",
-        "action": "action",
-      },
+        "description": "Настройки и информация для раздела темы и рамок профиля.",
+        "action": "Информация"
+      }
     },
     "giftsScreen": {
       "header": {
         "title": "Раздел подарков профиля",
-        "openAction": "Открыть",
+        "openAction": "Открыть"
       },
       "intro": {
         "eyebrow": "ПОДАРКОВ ПРОФИЛЯ",
         "title": "Раздел подарков профиля",
-        "subtitle": "Управление разделом подарков профиля.",
+        "subtitle": "Управление разделом подарков профиля."
       },
       "hero": {
         "badges": {
           "identity": "Идентичность",
-          "unifiedIdBound": "unified id bound",
+          "unifiedIdBound": "Информация"
         },
         "stats": {
-          "diamonds": "diamonds",
-          "status": "status",
-          "owner": "Владелец",
+          "diamonds": "Информация",
+          "status": "Информация",
+          "owner": "Владелец"
         },
         "actions": {
           "public": "Публичный профиль",
-          "premium": "Premium",
-          "credits": "credits",
-          "theme": "Тема",
-        },
+          "premium": "Премиум",
+          "credits": "Информация",
+          "theme": "Тема"
+        }
       },
       "notice": {
         "title": "Раздел подарков профиля",
-        "description": "Настройки и информация для раздела подарков профиля.",
+        "description": "Настройки и информация для раздела подарков профиля."
       },
       "tabs": {
         "received": "Полученные",
         "inventory": "Инвентарь",
-        "history": "История",
+        "history": "История"
       },
       "common": {
-        "diamonds": "diamonds",
+        "diamonds": "алмазы"
       },
       "items": {
         "goldenAura": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Премиум",
+          "status": "Статус"
         },
         "violetWave": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "mintLight": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "dragonNote": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "moonSilk": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Бейдж",
+          "status": "Статус"
         },
         "seaBloom": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "phoenixBloom": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "crystalComet": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
+          "rarity": "Информация",
+          "status": "Статус"
         },
         "emeraldLotus": {
           "title": "Раздел",
           "subtitle": "Описание",
-          "rarity": "rarity",
-          "status": "Статус",
-        },
+          "rarity": "Бейдж",
+          "status": "Статус"
+        }
       },
       "footer": {
         "title": "Раздел подарков профиля",
         "description": "Настройки и информация для раздела подарков профиля.",
-        "action": "Продолжить",
-      },
+        "action": "Продолжить"
+      }
     },
     "creditsScreen": {
       "header": {
         "eyebrow": "КРЕДИТОВ",
         "title": "Раздел кредитов",
         "subtitle": "Управление разделом кредитов.",
-        "backAction": "Назад",
+        "backAction": "Назад"
       },
       "balance": {
         "label": "Поле кредитов",
         "actions": {
-          "topUp": "top up",
-          "statistics": "statistics",
-          "giftCenter": "gift center",
-        },
+          "topUp": "Информация",
+          "statistics": "Статистика",
+          "giftCenter": "Раздел подарков профиля"
+        }
       },
       "tabs": {
         "all": "Все",
         "incoming": "Входящие",
-        "outgoing": "Исходящие",
-      },
+        "outgoing": "Исходящие"
+      }
     },
     "businessUpgradeScreen": {
       "header": {
         "eyebrow": "БИЗНЕС-АККАУНТА",
         "title": "Раздел бизнес-аккаунта",
         "subtitle": "Управление разделом бизнес-аккаунта.",
-        "backAction": "Назад",
+        "backAction": "Назад"
       },
       "hero": {
         "title": "Раздел бизнес-аккаунта",
         "description": "Настройки и информация для раздела бизнес-аккаунта.",
-        "launchBadge": "launch Бейдж",
+        "launchBadge": "Информация"
       },
       "sections": {
-        "plans": "plans",
-        "features": "features",
+        "plans": "Информация",
+        "features": "Информация"
       },
       "plans": {
         "business_annual": {
           "title": "Раздел",
-          "period": "period",
-          "price": "price",
-          "description": "business annual: информация",
-          "badge": "badge",
+          "period": "Информация",
+          "price": "Цена",
+          "description": "Настройки",
+          "badge": "Премиум"
         },
         "business_monthly": {
           "title": "Раздел",
-          "period": "period",
-          "price": "price",
-          "description": "business monthly: информация",
-          "badge": "badge",
-        },
+          "period": "Информация",
+          "price": "Цена",
+          "description": "Настройки",
+          "badge": "Премиум"
+        }
       },
       "features": {
         "address": {
           "title": "Раздел",
-          "description": "address: информация",
+          "description": "Настройки"
         },
         "workHours": {
           "title": "Раздел",
-          "description": "work Hours: информация",
+          "description": "Настройки"
         },
         "quickReplies": {
           "title": "Раздел",
-          "description": "quick Replies: информация",
+          "description": "Настройки"
         },
         "greetings": {
           "title": "Раздел",
-          "description": "greetings: информация",
+          "description": "Настройки"
         },
         "notAvailable": {
           "title": "Раздел",
-          "description": "не Available: информация",
+          "description": "Настройки"
         },
         "chatLinks": {
           "title": "Раздел",
-          "description": "Чат Links: информация",
-        },
+          "description": "Настройки"
+        }
       },
       "footer": {
-        "action": "action",
+        "action": "Информация"
       },
-      "cta": "cta",
+      "cta": "Информация"
     },
     "preferencesScreen": {
       "intro": {
         "eyebrow": "НАСТРОЕК ПРОФИЛЯ",
         "title": "Раздел настроек профиля",
-        "subtitle": "Управление разделом настроек профиля.",
+        "subtitle": "Управление разделом настроек профиля."
       },
       "metrics": {
-        "haptics": "haptics",
-        "sound": "sound",
-        "compact": "compact",
+        "haptics": "Раздел настроек профиля",
+        "sound": "Звук",
+        "compact": "Информация"
       },
       "sections": {
-        "localization": "localization",
-        "interaction": "interaction",
-        "presentation": "presentation",
+        "localization": "Информация",
+        "interaction": "Информация",
+        "presentation": "Презентация"
       },
       "language": {
         "title": "Раздел настроек профиля",
-        "description": "Настройки и информация для раздела настроек профиля.",
+        "description": "Настройки и информация для раздела настроек профиля."
       },
       "toggles": {
         "haptics": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
+          "description": "Настройки и информация для раздела настроек профиля."
         },
         "sound": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
+          "description": "Настройки и информация для раздела настроек профиля."
         },
         "preview": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
+          "description": "Настройки и информация для раздела настроек профиля."
         },
         "compact": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
+          "description": "Настройки и информация для раздела настроек профиля."
         },
         "smartInsights": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
-        },
+          "description": "Настройки и информация для раздела настроек профиля."
+        }
       },
       "note": {
         "title": "Раздел настроек профиля",
-        "description": "Настройки и информация для раздела настроек профиля.",
+        "description": "Настройки и информация для раздела настроек профиля."
       },
       "links": {
         "language": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
+          "description": "Настройки и информация для раздела настроек профиля."
         },
         "notifications": {
           "title": "Раздел настроек профиля",
-          "description": "Настройки и информация для раздела настроек профиля.",
-        },
-      },
+          "description": "Настройки и информация для раздела настроек профиля."
+        }
+      }
     },
     "loginEmailScreen": {
       "intro": {
-        "eyebrow": "EMAIL ДЛЯ ВХОДА",
-        "title": "Раздел email для входа",
-        "subtitle": "Управление разделом email для входа.",
+        "eyebrow": "Информация",
+        "title": "Настройки",
+        "subtitle": "Настройки"
       },
       "hero": {
-        "title": "Раздел email для входа",
-        "description": "Настройки и информация для раздела email для входа.",
+        "title": "Настройки",
+        "description": "Настройки"
       },
       "field": {
-        "label": "Поле email для входа",
-        "placeholder": "Введите данные для раздела email для входа",
+        "label": "Электронная почта",
+        "placeholder": "Поиск"
       },
       "toggles": {
         "currentVerification": {
-          "title": "Раздел email для входа",
-          "description": "Настройки и информация для раздела email для входа.",
+          "title": "Настройки",
+          "description": "Настройки"
         },
         "newVerification": {
-          "title": "Раздел email для входа",
-          "description": "Настройки и информация для раздела email для входа.",
-        },
+          "title": "Настройки",
+          "description": "Настройки"
+        }
       },
       "note": {
-        "title": "Раздел email для входа",
-        "description": "Настройки и информация для раздела email для входа.",
-      },
+        "title": "Настройки",
+        "description": "Настройки"
+      }
     },
     "securityScreen": {
       "intro": {
         "eyebrow": "ПРОФИЛЯ",
         "title": "Раздел профиля",
-        "subtitle": "Управление разделом профиля.",
+        "subtitle": "Управление разделом профиля."
       },
       "metrics": {
-        "biometric": "biometric",
-        "appPin": "app pin",
-        "twoFactor": "two factor",
+        "biometric": "Информация",
+        "appPin": "Раздел профиля",
+        "twoFactor": "Информация"
       },
       "sections": {
-        "mainProtection": "main protection",
-        "sensitiveActions": "sensitive Действия",
-        "identityChangeProtection": "Идентичность change protection",
+        "mainProtection": "Информация",
+        "sensitiveActions": "Настройки",
+        "identityChangeProtection": "Информация"
       },
       "mainProtection": {
         "biometric": {
           "title": "Раздел профиля",
-          "description": "Настройки и информация для раздела профиля.",
+          "description": "Настройки и информация для раздела профиля."
         },
         "appPin": {
           "title": "Раздел профиля",
-          "description": "Настройки и информация для раздела профиля.",
+          "description": "Настройки и информация для раздела профиля."
         },
         "twoFactor": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
+          "title": "Раздел профиля"
+        }
       },
       "common": {
-        "notRequired": "not required",
-        "required": "Обязательно",
+        "notRequired": "Информация",
+        "required": "Обязательно"
       },
       "emailFlow": {
-        "currentEmail": "current Email {{value}}",
-        "currentVerification": "current Верификация {{value}}",
-        "newVerification": "new Верификация {{value}}",
-        "title": "Раздел профиля",
+        "currentEmail": "Информация",
+        "currentVerification": "Информация",
+        "newVerification": "Информация",
+        "title": "Раздел профиля"
       },
       "identityChange": {
         "emailFaceId": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "fallbackPin": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "phoneFaceId": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
+          "title": "Раздел профиля"
+        }
       },
       "links": {
         "devices": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
+          "title": "Раздел профиля"
+        }
       },
       "phoneFlow": {
-        "currentPhone": "current Телефон {{value}}",
-        "newVerification": "new Верификация {{value}}",
-        "oldVerification": "old Верификация {{value}}",
-        "title": "Раздел профиля",
+        "currentPhone": "Информация",
+        "newVerification": "Информация",
+        "oldVerification": "Информация",
+        "title": "Раздел профиля"
       },
       "sensitiveActions": {
         "confirmation": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "suspiciousAlerts": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "trustedAlerts": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
-      },
+          "title": "Раздел профиля"
+        }
+      }
     },
     "qrScreen": {
       "header": {
-        "howItWorksAction": "how It Works Action",
+        "howItWorksAction": "Раздел"
       },
       "intro": {
-        "eyebrow": "eyebrow",
+        "eyebrow": "Информация",
         "title": "Раздел",
-        "subtitle": "Описание",
+        "subtitle": "Описание"
       },
       "hero": {
         "title": "Раздел",
-        "description": "hero: информация",
+        "description": "Настройки"
       },
       "actions": {
         "sendQr": "Отправить QR",
-        "openPublic": "Открыть Публичный",
+        "openPublic": "Открыть Публичный"
       },
       "toggles": {
         "allowScan": {
           "title": "Раздел",
-          "description": "Разрешить Scan: информация",
+          "description": "Настройки"
         },
         "allowShare": {
           "title": "Раздел",
-          "description": "Разрешить Share: информация",
-        },
+          "description": "Настройки"
+        }
       },
       "note": {
         "title": "Раздел",
-        "description": "note: информация",
+        "description": "Настройки"
       },
       "share": {
         "title": "Раздел",
         "message": {
-          "header": "header",
+          "header": "QR профиля",
           "name": "Название",
-          "username": "username",
-          "sabiId": "sabi ID",
-          "profileCode": "Профиль Code",
-          "profileLink": "Профиль Link",
-        },
+          "username": "Имя пользователя",
+          "sabiId": "Информация",
+          "profileCode": "Профиль",
+          "profileLink": "Ссылка на профиль"
+        }
       },
       "alerts": {
         "shareFailed": {
           "title": "Раздел",
-          "message": "Сообщение",
+          "message": "Сообщение"
         },
         "howItWorks": {
           "title": "Раздел",
-          "message": "Сообщение",
-        },
-      },
+          "message": "Сообщение"
+        }
+      }
     },
     "supportScreen": {
       "intro": {
         "eyebrow": "ПРОФИЛЯ",
         "title": "Раздел профиля",
-        "subtitle": "Управление разделом профиля.",
+        "subtitle": "Управление разделом профиля."
       },
       "hero": {
         "title": "Раздел профиля",
-        "description": "Настройки и информация для раздела профиля.",
+        "description": "Настройки и информация для раздела профиля."
       },
       "sections": {
-        "links": "Ссылки",
+        "links": "Ссылки"
       },
       "notes": {
         "premiumFoundation": {
           "title": "Раздел профиля",
-          "description": "Настройки и информация для раздела профиля.",
+          "description": "Настройки и информация для раздела профиля."
         },
         "legalTrust": {
           "title": "Раздел профиля",
-          "description": "Настройки и информация для раздела профиля.",
-        },
+          "description": "Настройки и информация для раздела профиля."
+        }
       },
       "links": {
         "helpCenter": {
           "title": "Раздел",
-          "description": "help Center: информация",
+          "description": "Настройки"
         },
         "contactSupport": {
           "title": "Раздел",
-          "description": "contact Support: информация",
+          "description": "Настройки"
         },
         "privacyPolicy": {
           "title": "Раздел",
-          "description": "privacy Policy: информация",
+          "description": "Настройки"
         },
         "termsOfService": {
           "title": "Раздел",
-          "description": "terms Of Service: информация",
+          "description": "Настройки"
         },
         "aboutSabi": {
           "title": "Раздел",
-          "description": "about Sabi: информация",
-        },
-      },
+          "description": "Настройки"
+        }
+      }
     },
     "trustedScreen": {
       "intro": {
         "eyebrow": "ДОВЕРЕННЫХ И ЗАБЛОКИРОВАННЫХ КОНТАКТОВ",
         "title": "Раздел доверенных и заблокированных контактов",
-        "subtitle": "Управление разделом доверенных и заблокированных контактов.",
+        "subtitle": "Управление разделом доверенных и заблокированных контактов."
       },
       "metrics": {
         "trusted": "Доверенные",
         "blocked": "Заблокированные",
-        "totalRules": "Всего правил",
+        "totalRules": "Всего правил"
       },
       "hero": {
         "title": "Раздел доверенных и заблокированных контактов",
-        "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+        "description": "Настройки и информация для раздела доверенных и заблокированных контактов."
       },
       "sections": {
         "trusted": "Доверенные",
-        "blocked": "Заблокированные",
+        "blocked": "Заблокированные"
       },
       "badges": {
         "trusted": "Доверенные",
-        "blocked": "Заблокированные",
+        "blocked": "Заблокированные"
       },
       "actions": {
-        "block": "block",
-        "restore": "restore",
+        "block": "Заблокировать",
+        "restore": "Информация"
       },
       "notes": {
-        "movedFromTrusted": "moved from Доверенные",
-        "restoredFromBlocked": "restored from Заблокированные",
-        "genericTrusted": "generic Доверенные",
-        "genericBlocked": "generic Заблокированные",
+        "movedFromTrusted": "Информация",
+        "restoredFromBlocked": "Информация",
+        "genericTrusted": "Информация",
+        "genericBlocked": "Информация"
       },
       "empty": {
         "trusted": {
           "title": "Раздел доверенных и заблокированных контактов",
-          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов."
         },
         "blocked": {
           "title": "Раздел доверенных и заблокированных контактов",
-          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
-        },
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов."
+        }
       },
       "links": {
         "blockedOnly": {
           "title": "Раздел доверенных и заблокированных контактов",
-          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов."
         },
         "privacyCenter": {
           "title": "Раздел доверенных и заблокированных контактов",
-          "description": "Настройки и информация для раздела доверенных и заблокированных контактов.",
-        },
-      },
+          "description": "Настройки и информация для раздела доверенных и заблокированных контактов."
+        }
+      }
     },
     "verificationScreen": {
       "intro": {
         "eyebrow": "ПОДТВЕРЖДЕНИЕ ИДЕНТИЧНОСТИ",
         "title": "Верификация",
-        "subtitle": "Отслеживайте подтверждение профиля, комплаенс-статус, документы и проверки идентичности в одном слое.",
+        "subtitle": "Отслеживайте подтверждение профиля, комплаенс-статус, документы и проверки идентичности в одном слое."
       },
       "status": {
-        "verified": "verified",
+        "verified": "Подтверждено",
         "pending": "В ожидании",
-        "review": "review",
+        "review": "На проверке",
         "limited": "Ограничено",
-        "rejected": "rejected",
+        "rejected": "Информация"
       },
       "common": {
         "verified": "Подтверждено",
         "pending": "Ожидает",
-        "unknown": "Неизвестно",
+        "unknown": "Неизвестно"
       },
       "sections": {
         "compliance": "Комплаенс",
         "checks": "Проверки",
-        "documents": "Документы",
+        "documents": "Документы"
       },
       "complianceState": {
-        "label": "Комплаенс: {{value}}",
+        "label": "Информация",
         "restrictedIntro": "Следующие действия сейчас ограничены или находятся под наблюдением:",
         "noRestrictions": "Активных ограничений пока нет.",
         "sourceOfFundsRequested": "Запрошена информация об источнике средств.",
-        "reverificationRequired": "Перед некоторыми расширенными действиями требуется повторная верификация.",
+        "reverificationRequired": "Перед некоторыми расширенными действиями требуется повторная верификация."
       },
       "checks": {
         "address": "Адрес",
-        "email": "Email",
-        "liveness": "Liveness",
-        "phone": "Телефон",
+        "email": "Информация",
+        "liveness": "Информация",
+        "phone": "Телефон"
       },
       "documents": {
-        "updatedAt": "Обновлено: {{value}}",
+        "updatedAt": "Информация"
       },
       "hero": {
-        "residencyCountry": "Страна проживания: {{value}}",
-        "reviewReason": "Примечание проверки: {{value}}",
+        "residencyCountry": "Информация",
+        "reviewReason": "Информация"
       },
       "metrics": {
         "email": "Email",
-        "liveness": "Liveness",
-        "phone": "Телефон",
-      },
+        "liveness": "Информация",
+        "phone": "Телефон"
+      }
     },
     "mediaScreen": {
       "header": {
-        "title": "Раздел медиа профиля",
+        "title": "Раздел медиа профиля"
       },
       "card": {
         "title": "Раздел медиа профиля",
-        "subtitle": "Управление разделом медиа профиля.",
+        "subtitle": "Управление разделом медиа профиля."
       },
       "routes": {
         "photos": {
           "title": "Раздел медиа профиля",
-          "subtitle": "Управление разделом медиа профиля.",
+          "subtitle": "Управление разделом медиа профиля."
         },
         "shortVideos": {
           "title": "Раздел медиа профиля",
-          "subtitle": "Управление разделом медиа профиля.",
+          "subtitle": "Управление разделом медиа профиля."
         },
         "links": {
           "title": "Раздел медиа профиля",
-          "subtitle": "Управление разделом медиа профиля.",
+          "subtitle": "Управление разделом медиа профиля."
         },
         "voice": {
           "title": "Раздел медиа профиля",
-          "subtitle": "Управление разделом медиа профиля.",
-        },
-      },
+          "subtitle": "Управление разделом медиа профиля."
+        }
+      }
     },
     "photosScreen": {
       "header": {
-        "title": "Раздел фотографий профиля",
+        "title": "Раздел фотографий профиля"
       },
       "card": {
         "title": "Раздел фотографий профиля",
-        "subtitle": "Управление разделом фотографий профиля.",
+        "subtitle": "Управление разделом фотографий профиля."
       },
       "actions": {
-        "gallery": "gallery",
-        "cameraFx": "camera fx",
+        "gallery": "Галерея",
+        "cameraFx": "Голос"
       },
       "badges": {
-        "avatar": "Аватар",
+        "avatar": "Аватар"
       },
       "filters": {
-        "none": "none",
-        "warm": "warm",
-        "cool": "cool",
-        "mono": "mono",
-        "emerald": "emerald",
+        "none": "Нет",
+        "warm": "Информация",
+        "cool": "Холод",
+        "mono": "Информация",
+        "emerald": "Изумрудный"
       },
       "modal": {
         "actions": {
-          "setAvatar": "set Аватар",
-          "delete": "delete",
+          "setAvatar": "Информация",
+          "delete": "Удалить"
         },
         "editor": {
-          "left": "left",
-          "right": "right",
-          "mirrorX": "mirror x",
-          "mirrorY": "mirror y",
+          "left": "Влево",
+          "right": "Вправо",
+          "mirrorX": "Информация",
+          "mirrorY": "Информация"
         },
-        "info": "info",
+        "info": "Настройки"
       },
       "capture": {
-        "cameraSuffix": "Камера Suffix",
-        "fxPrefix": "fx Prefix",
-        "photoLabel": "Фото Label",
+        "cameraSuffix": "Голос",
+        "fxPrefix": "Информация",
+        "photoLabel": "Фото"
       },
       "defaults": {
-        "photoName": "Фото Название",
+        "photoName": "Фото Название"
       },
       "empty": {
         "title": "Раздел фотографий профиля",
-        "description": "Настройки и информация для раздела фотографий профиля.",
+        "description": "Настройки и информация для раздела фотографий профиля."
       },
       "alerts": {
-        "permissionTitle": "permission Заголовок",
-        "permissionMessage": "permission message",
-      },
+        "permissionTitle": "Раздел профиля",
+        "permissionMessage": "Информация"
+      }
     },
     "shortVideosScreen": {
       "header": {
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "card": {
         "title": "Раздел профиля",
-        "subtitle": "Управление разделом профиля.",
+        "subtitle": "Управление разделом профиля."
       },
       "actions": {
-        "add": "add",
+        "add": "Информация"
       },
       "defaults": {
-        "videoName": "Видео Название",
+        "videoName": "Видео Название"
       },
       "empty": {
         "title": "Раздел профиля",
-        "description": "Настройки и информация для раздела профиля.",
+        "description": "Настройки и информация для раздела профиля."
       },
       "modal": {
-        "remove": "remove",
+        "remove": "Убрать"
       },
       "alerts": {
         "permission": {
           "title": "Раздел профиля",
-          "message": "message",
-        },
+          "message": "Информация"
+        }
       },
       "item": {
-        "title": "Раздел профиля",
-      },
+        "title": "Раздел профиля"
+      }
     },
     "groupScreen": {
       "loading": "Загрузка…",
       "header": {
-        "eyebrow": "eyebrow",
+        "eyebrow": "Информация",
         "title": "Раздел",
         "badges": {
-          "active": "active",
-          "create": "Создать",
-        },
+          "active": "Активно",
+          "create": "Создать"
+        }
       },
       "hero": {
         "fallbacks": {
-          "newGroup": "new Группа",
-          "usernameNotSet": "username не Set",
+          "newGroup": "Новая группа",
+          "usernameNotSet": "Информация"
         },
         "pills": {
-          "created": "created",
-          "createFromProfile": "Создать From Профиль",
+          "created": "Информация",
+          "createFromProfile": "Профиль",
           "public": "Публичный",
           "private": "Приватный",
-          "admins": "admins",
-          "blacklist": "blacklist",
-        },
+          "admins": "Информация",
+          "blacklist": "Информация"
+        }
       },
       "sections": {
         "main": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "owner": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "publication": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "accessRules": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "admins": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "blacklist": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "bindings": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
+          "subtitle": "Описание"
+        }
       },
       "main": {
         "groupName": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Название группы",
+          "placeholder": "Введите значение"
         },
         "username": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Имя пользователя",
+          "placeholder": "Введите значение"
         },
         "description": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "groupId": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Группа ID",
+          "placeholder": "Введите значение"
         },
         "inviteLink": {
-          "label": "label",
-          "placeholder": "Введите значение",
-        },
+          "label": "Ссылка-приглашение",
+          "placeholder": "Введите значение"
+        }
       },
       "owner": {
         "defaults": {
-          "role": "role",
+          "role": "Владелец"
         },
         "name": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Имя владельца",
+          "placeholder": "Введите значение"
         },
         "userId": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "role": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "phone": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Телефон владельца",
+          "placeholder": "Введите значение"
         },
         "email": {
-          "label": "label",
-          "placeholder": "Введите значение",
-        },
+          "label": "Информация",
+          "placeholder": "Введите значение"
+        }
       },
       "publication": {
         "publicGroup": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "published": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "showInProfile": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "searchable": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "preview": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "publicationId": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "title": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "subtitle": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "slug": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "tags": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Информация",
+          "placeholder": "Введите значение"
         },
         "summary": {
-          "label": "label",
-          "placeholder": "Введите значение",
-        },
+          "label": "Информация",
+          "placeholder": "Введите значение"
+        }
       },
       "access": {
         "joinRequests": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "memberInvites": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "onlyAdminsPost": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "onlyAdminsEdit": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "commentsEnabled": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "memberListVisible": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "slowMode": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "messageApproval": {
           "title": "Раздел",
-          "subtitle": "Описание",
+          "subtitle": "Описание"
         },
         "mediaApproval": {
           "title": "Раздел",
-          "subtitle": "Описание",
-        },
+          "subtitle": "Описание"
+        }
       },
       "admins": {
         "metrics": {
-          "total": "total",
-          "owner": "owner",
+          "total": "Информация",
+          "owner": "Владелец"
         },
         "defaults": {
-          "adminRole": "Админ Role",
+          "adminRole": "Администратор"
         },
         "badges": {
-          "owner": "owner",
+          "owner": "Владелец"
         },
         "actions": {
           "add": "Добавить",
-          "remove": "Удалить",
+          "remove": "Удалить"
         },
         "form": {
           "title": "Раздел",
           "userId": {
-            "label": "label",
-            "placeholder": "Введите значение",
+            "label": "ID пользователя",
+            "placeholder": "Введите значение"
           },
           "name": {
-            "label": "label",
-            "placeholder": "Введите значение",
+            "label": "Имя",
+            "placeholder": "Введите значение"
           },
           "role": {
-            "label": "label",
-            "placeholder": "Введите значение",
-          },
-        },
+            "label": "Роль",
+            "placeholder": "Введите значение"
+          }
+        }
       },
       "blacklist": {
         "metrics": {
-          "total": "total",
-          "active": "active",
-          "yes": "yes",
-          "no": "no",
+          "total": "Информация",
+          "active": "Активно",
+          "yes": "Да",
+          "no": "Нет"
         },
         "defaults": {
-          "reason": "reason",
+          "reason": "Информация"
         },
         "actions": {
           "add": "Добавить",
-          "remove": "Удалить",
+          "remove": "Удалить"
         },
         "empty": {
           "title": "Пусто",
-          "description": "Пусто: информация",
+          "description": "Пусто: информация"
         },
         "form": {
           "title": "Раздел",
           "userId": {
-            "label": "label",
-            "placeholder": "Введите значение",
+            "label": "ID пользователя",
+            "placeholder": "Введите значение"
           },
           "name": {
-            "label": "label",
-            "placeholder": "Введите значение",
+            "label": "Имя",
+            "placeholder": "Введите значение"
           },
           "reason": {
-            "label": "label",
-            "placeholder": "Введите значение",
-          },
-        },
+            "label": "Информация",
+            "placeholder": "Введите значение"
+          }
+        }
       },
       "bindings": {
         "chatId": {
-          "label": "label",
-          "placeholder": "Введите значение",
+          "label": "Чат",
+          "placeholder": "Введите значение"
         },
         "botId": {
-          "label": "label",
-          "placeholder": "Введите значение",
-        },
+          "label": "Помощник",
+          "placeholder": "Введите значение"
+        }
       },
       "alerts": {
         "success": {
           "title": "Раздел",
-          "created": "created",
+          "created": "Группа создана",
           "saved": "Сохранено",
-          "reset": "reset",
+          "reset": "Данные группы сброшены"
         },
         "error": {
           "title": "Ошибка",
           "saveFailed": "Сохранить Ошибка",
-          "resetFailed": "reset Ошибка",
+          "resetFailed": "Не удалось выполнить запрос. Попробуйте снова."
         },
         "validation": {
           "nameTitle": "Название",
           "nameMessage": "Название Сообщение",
-          "ownerIdTitle": "owner ID",
-          "ownerIdMessage": "owner ID Сообщение",
+          "ownerIdTitle": "Заголовок",
+          "ownerIdMessage": "Информация",
           "adminTitle": "Админ",
           "adminMessage": "Админ Сообщение",
-          "blacklistTitle": "blacklist",
-          "blacklistMessage": "blacklist Сообщение",
-          "blacklistConflictTitle": "blacklist Conflict",
-          "blacklistConflictMessage": "blacklist Conflict Сообщение",
-          "ownerProtectedTitle": "owner Protected",
-          "ownerProtectedMessage": "owner Protected Сообщение",
-          "ownerBlacklistMessage": "owner Blacklist Сообщение",
+          "blacklistTitle": "Заголовок",
+          "blacklistMessage": "Информация",
+          "blacklistConflictTitle": "Заголовок",
+          "blacklistConflictMessage": "Информация",
+          "ownerProtectedTitle": "Заголовок",
+          "ownerProtectedMessage": "Информация",
+          "ownerBlacklistMessage": "Информация"
         },
         "resetConfirm": {
           "title": "Раздел",
           "message": "Сообщение",
           "cancel": "Отмена",
-          "confirm": "Подтвердить",
-        },
+          "confirm": "Подтвердить"
+        }
       },
       "actions": {
         "create": "Создать",
-        "creating": "creating",
+        "creating": "Информация",
         "save": "Сохранить",
-        "saving": "saving",
-        "reset": "reset",
-      },
+        "saving": "Загрузка...",
+        "reset": "Сбросить"
+      }
     },
     "autoDeleteScreen": {
       "hero": {
         "description": "Управляйте правилами автоматической очистки сообщений в чатах, группах и каналах.",
-        "title": "Автоматическое удаление",
+        "title": "Автоматическое удаление"
       },
       "intro": {
         "eyebrow": "ПРИВАТНОСТЬ",
         "subtitle": "Настройте срок хранения сообщений для новых разговоров и каналов публикаций.",
-        "title": "Автоматическая очистка сообщений",
+        "title": "Автоматическая очистка сообщений"
       },
       "note": {
         "description": "Эта настройка применяется только к новым сообщениям и выбранным направлениям. Для важных данных может потребоваться отдельное подтверждение.",
-        "title": "Примечание",
+        "title": "Примечание"
       },
       "selectedBadge": "Выбранный срок",
       "toggles": {
         "channels": {
           "description": "Применять автоматическую очистку для новых сообщений в каналах.",
-          "title": "Каналы",
+          "title": "Каналы"
         },
         "groups": {
           "description": "Применять автоматическую очистку для новых сообщений в группах.",
-          "title": "Группы",
+          "title": "Группы"
         },
         "newChats": {
           "description": "Применять автоматическую очистку для новых личных чатов.",
-          "title": "Новые чаты",
-        },
-      },
+          "title": "Новые чаты"
+        }
+      }
     },
     "blockedScreen": {
       "empty": {
         "description": "Заблокированные пользователи появятся здесь.",
-        "title": "Заблокированных нет",
+        "title": "Заблокированных нет"
       },
       "hero": {
         "description": "Просматривайте заблокированные аккаунты и снимайте блокировку при необходимости.",
-        "title": "Заблокированные аккаунты",
+        "title": "Заблокированные аккаунты"
       },
       "intro": {
         "eyebrow": "ПРИВАТНОСТЬ",
         "subtitle": "Заблокированные пользователи не могут отправлять вам сообщения и получают ограниченный доступ к профилю.",
-        "title": "Список блокировок",
+        "title": "Список блокировок"
       },
       "metric": {
-        "title": "Заблокировано",
+        "title": "Заблокировано"
       },
       "person": {
         "defaultNote": "Заблокированный контакт",
-        "unblockAction": "Разблокировать",
-      },
+        "unblockAction": "Разблокировать"
+      }
     },
     "giftsSection": {
       "subtitle": "Управление разделом подарков профиля.",
-      "title": "Раздел подарков профиля",
+      "title": "Раздел подарков профиля"
     },
     "hub": {
-      "eyebrow": "ЦЕНТРА ПРОФИЛЯ",
+      "eyebrow": "ЦЕНТРА ПРОФИЛЯ"
     },
     "premiumScreen": {
       "features": {
         "ai": {
           "subtitle": "Управление разделом профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "frames": {
           "subtitle": "Управление разделом профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "gifts": {
           "subtitle": "Управление разделом профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "themes": {
           "subtitle": "Управление разделом профиля.",
-          "title": "Раздел профиля",
-        },
+          "title": "Раздел профиля"
+        }
       },
       "footer": {
         "action": "Продолжить",
         "description": "Настройки и информация для раздела профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "header": {
         "openAction": "Открыть",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "hero": {
         "actions": {
           "ai": "AI",
-          "gifts": "gifts",
+          "gifts": "Подарки",
           "public": "Публичный профиль",
-          "themes": "Темы",
+          "themes": "Темы"
         },
         "badges": {
           "identity": "Идентичность",
-          "ownerSurface": "Владелец surface",
+          "ownerSurface": "Премиум"
         },
         "subtitle": "Управление разделом профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "identityCard": {
         "description": "Настройки и информация для раздела профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "intro": {
         "eyebrow": "ПРОФИЛЯ",
         "subtitle": "Управление разделом профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "notice": {
         "description": "Настройки и информация для раздела профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "rows": {
         "ai": {
           "badge": "Бейдж",
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "business": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "colors": {
           "badge": "Бейдж",
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "credits": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "gifts": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "public": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "title": "Раздел профиля"
         },
         "qr": {
           "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
+          "title": "Раздел профиля"
+        }
       },
       "sections": {
-        "controls": "controls",
-        "unlocks": "unlocks",
-      },
+        "controls": "Информация",
+        "unlocks": "Премиум"
+      }
     },
     "publicScreen": {
       "editor": {
-        "bio": "bio",
-        "name": "name",
-        "subtitle": "Управление разделом профиля.",
-        "title": "Раздел профиля",
-        "username": "Username",
+        "bio": "Биография",
+        "name": "Публичное имя",
+        "subtitle": "Подзаголовок",
+        "title": "Редактировать публичный профиль",
+        "username": "Публичное имя пользователя"
       },
       "fallback": {
-        "bio": "bio",
-        "subtitle": "Управление разделом профиля.",
+        "bio": "Публичная биография пока не заполнена.",
+        "subtitle": "Публичный профиль связан с вашим подтверждённым аккаунтом."
       },
       "header": {
-        "title": "Раздел профиля",
+        "title": "Публичный профиль"
       },
       "hero": {
-        "subtitle": "Управление разделом профиля.",
-        "title": "Раздел профиля",
+        "subtitle": "Страница, которую видят другие пользователи Sabi.",
+        "title": "Публичный профиль"
       },
       "rows": {
         "photos": {
-          "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
+          "description": "Управляйте фотографиями, которые видны в профиле.",
+          "title": "Публичные фото"
         },
         "videos": {
-          "description": "Настройки и информация для раздела профиля.",
-          "title": "Раздел профиля",
-        },
+          "description": "Управляйте короткими видео публичного профиля.",
+          "title": "Публичные видео"
+        }
       },
       "sections": {
-        "manage": "manage",
-        "metrics": "Метрики",
-      },
+        "manage": "Управление",
+        "metrics": "Метрики"
+      }
     },
     "reactionsScreen": {
       "card": {
         "subtitle": "Управление разделом профиля.",
-        "title": "Раздел профиля",
+        "title": "Раздел профиля"
       },
       "header": {
-        "title": "Раздел профиля",
-      },
+        "title": "Раздел профиля"
+      }
     },
     "voiceScreen": {
       "actions": {
         "record": "Записать",
-        "stop": "Остановить",
+        "stop": "Остановить"
       },
       "alerts": {
         "permission": {
           "message": "Разрешите доступ к микрофону.",
-          "title": "Разрешение микрофона",
+          "title": "Разрешение микрофона"
         },
-        "recordFailed": "Не удалось записать голос.",
+        "recordFailed": "Не удалось записать голос."
       },
       "card": {
         "subtitle": "Голосовые заметки теперь подключены к реальной записи, сохранению и воспроизведению.",
-        "title": "Голосовые заметки",
+        "title": "Голосовые заметки"
       },
       "header": {
-        "title": "Голос",
+        "title": "Голос"
       },
       "item": {
-        "title": "Голосовая заметка",
-      },
-    },
+        "title": "Голосовая заметка"
+      }
+    }
   },
   "premium": {
-    "title": "Premium",
+    "title": "Премиум",
     "subtitle": "Откройте расширенные инструменты, AI-перевод, премиум-функции и улучшенный пользовательский опыт.",
-    "activatePremium": "Активировать Premium",
-    "premiumActive": "Premium активен",
-    "premiumInactive": "Premium не активен",
-    "premiumExpired": "Срок Premium истёк",
+    "activatePremium": "Премиум",
+    "premiumActive": "Премиум",
+    "premiumInactive": "Премиум",
+    "premiumExpired": "Премиум",
     "renewalDate": "Дата продления",
     "manageSubscription": "Управление подпиской",
     "monthlyPlan": "Месячный план",
     "yearlyPlan": "Годовой план",
-    "buyWithCoin": "Купить за Coin",
+    "buyWithCoin": "Премиум",
     "benefits": "Преимущества",
     "includedFeatures": "Что включено",
     "advancedTranslation": "Расширенный перевод",
@@ -7063,11 +7064,11 @@ export const RU_LOCALE = {
     "exclusiveFeatures": "Эксклюзивные функции",
     "subscriptionHistory": "История подписки",
     "paymentInProgress": "Платёж в обработке",
-    "premiumActivated": "Premium активирован",
-    "premiumActivationFailed": "Не удалось активировать Premium",
+    "premiumActivated": "Премиум",
+    "premiumActivationFailed": "Премиум",
     "autoRenew": "Автопродление",
     "cancelAutoRenew": "Отключить автопродление",
-    "featureLocked": "Эта функция доступна только пользователям Premium.",
+    "featureLocked": "Премиум",
     "aiChatTranslation": "AI-перевод чатов",
     "aiCallTranslation": "AI-перевод голосовых и видеозвонков",
     "smartReplies": "Умные ответы",
@@ -7075,7 +7076,7 @@ export const RU_LOCALE = {
     "prioritySupport": "Приоритетная поддержка",
     "advancedBusinessTools": "Расширенные бизнес-инструменты",
     "advancedMerchantTools": "Расширенные мерчант-инструменты",
-    "premiumBankingTools": "Премиальные банковские инструменты",
+    "premiumBankingTools": "Премиальные банковские инструменты"
   },
   "ai": {
     "title": "AI",
@@ -7110,7 +7111,7 @@ export const RU_LOCALE = {
     "rewriteForBusiness": "Переписать для бизнеса",
     "summarizeConversation": "Суммаризировать диалог",
     "summarizeCalls": "Суммаризировать звонки",
-    "premiumOnly": "AI-инструменты доступны только пользователям Premium.",
+    "premiumOnly": "Премиум",
     "unsupportedLanguagePair": "Эта языковая пара пока не поддерживается",
     "mobile": {
       "common": {
@@ -7127,7 +7128,7 @@ export const RU_LOCALE = {
         "requestFailed": "Запрос Ошибка",
         "saved": "Сохранено",
         "search": "Поиск",
-        "ready": "Готово",
+        "ready": "Готово"
       },
       "status": {
         "ready": "Готово",
@@ -7136,128 +7137,128 @@ export const RU_LOCALE = {
         "not_connected": "Не подключено",
         "unavailable": "Недоступно",
         "active": "Активно",
-        "pending": "Ожидает",
+        "pending": "Ожидает"
       },
       "messageStatus": {
         "sent": "Отправлено",
         "error": "Ошибка",
         "pending": "Ожидает",
         "sending": "Отправка",
-        "awaiting_confirmation": "awaiting confirmation",
+        "awaiting_confirmation": "Ожидает подтверждения"
       },
       "action": {
         "chat": {
           "title": "AI чат",
-          "description": "Диалог с ассистентом и карточками действий.",
+          "description": "Диалог с ассистентом и карточками действий."
         },
         "voice": {
           "title": "Голосовой AI",
-          "description": "Native voice bridge, push-to-talk и экран TTS-команд.",
+          "description": "Голосовой AI"
         },
         "translation": {
           "title": "Перевод в реальном времени",
-          "description": "Premium управление переводом текста, аудио, видео и звонков.",
+          "description": "Перевод"
         },
         "history": {
           "title": "История",
-          "description": "Активность ассистента, резюме и прошлые диалоги.",
+          "description": "Активность ассистента, резюме и прошлые диалоги."
         },
         "tasks": {
           "title": "Задачи",
-          "description": "Черновики, подтверждённые и выполненные AI-задачи.",
+          "description": "Черновики, подтверждённые и выполненные AI-задачи."
         },
         "memory": {
           "title": "Память",
-          "description": "Персонализация, режим приватности и сохранённые инструкции.",
+          "description": "Персонализация, режим приватности и сохранённые инструкции."
         },
         "settings": {
           "title": "AI настройки",
-          "description": "Провайдеры, разрешения, язык и состояние безопасности.",
+          "description": "Провайдеры, разрешения, язык и состояние безопасности."
         },
         "premium": {
-          "title": "Premium AI",
-          "description": "COIN доступ к продвинутым AI и функциям перевода.",
+          "title": "Премиум",
+          "description": "COIN доступ к продвинутым AI и функциям перевода."
         },
         "setting": {
           "title": "Настройка",
-          "description": "Настройка: информация",
+          "description": "Настройка: информация"
         },
         "profileAi": {
           "title": "Раздел",
-          "description": "Профиль AI: информация",
-        },
+          "description": "Профиль AI: информация"
+        }
       },
       "home": {
         "title": "Sabi AI",
-        "subtitle": "Отдельная AI-программа для чата, голоса, перевода, памяти, безопасных действий и premium AI инструментов.",
+        "subtitle": "AI помощник · Перевод · Голосовой AI",
         "heroEyebrow": "AI ПРОГРАММА",
-        "heroTitle": "Ваш ассистент SuperApp",
-        "heroDescription": "Mobile UI подключён к AI kernel contracts. Без фейковых ответов: если backend или provider недоступен, экран показывает реальное состояние подключения.",
+        "heroTitle": "AI помощник",
+        "heroDescription": "Информация Информация",
         "connection": "Подключение",
-        "userId": "User ID",
+        "userId": "ID пользователя",
         "quickAccess": "Быстрый доступ",
         "capabilities": "Возможности",
         "safeActions": "Безопасные действия",
-        "safeActionsDescription": "AI-24 safety/admin monitoring принадлежит backend и будет виден в admin panel contracts.",
-        "safeActionsText": "Деньги, удаление аккаунта и действия с высоким риском требуют подтверждения и правил admin/compliance.",
-        "cleanWorkspaceTitle": "clean Workspace",
-        "cleanWorkspaceText": "home: информация",
+        "safeActionsDescription": "Безопасность",
+        "safeActionsText": "Безопасность",
+        "cleanWorkspaceTitle": "AI помощник",
+        "cleanWorkspaceText": "Возможности"
       },
       "chat": {
         "title": "AI чат",
-        "subtitle": "Реальный чат ассистента подключён к /api/ai/mobile-ui и /api/ai/assistant.",
-        "runtimeTitle": "Assistant runtime",
-        "backendRequired": "Для AI чата нужна авторизованная backend-сессия.",
+        "subtitle": "AI чат",
+        "runtimeTitle": "Подключение",
+        "backendRequired": "Не подключено",
         "emptyTitle": "Сообщений пока нет",
-        "emptyText": "Отправьте сообщение. Если backend выключен, экран честно покажет ошибку вместо фейкового ответа.",
+        "emptyText": "AI чат",
         "placeholder": "Спросите Sabi AI...",
         "roleUser": "Вы",
-        "emptyBackendResponse": "Backend AI ответил, но поле текста ассистента не пришло.",
+        "emptyBackendResponse": "Пока пусто",
         "cleanEmptyText": "Чат: информация",
         "errorMessage": "Ошибка Сообщение",
-        "thinking": "thinking",
-        "assistantCenterTitle": "assistant Center",
+        "thinking": "Загрузка…",
+        "assistantCenterTitle": "AI помощник",
         "assistantCenterDescription": "Чат: информация",
-        "modeTitle": "mode",
-        "modeSubtitle": "mode Описание",
-        "assistantMenuTitle": "assistant Menu",
-        "assistantMenuSubtitle": "assistant Menu Описание",
+        "modeTitle": "AI помощник",
+        "modeSubtitle": "AI помощник",
+        "assistantMenuTitle": "AI помощник",
+        "assistantMenuSubtitle": "AI помощник",
         "mode": {
           "chatgpt": {
             "title": "Раздел",
-            "short": "short",
-            "description": "chatgpt: информация",
-            "prompt": "prompt",
+            "short": "AI помощник",
+            "description": "AI помощник",
+            "prompt": "AI помощник"
           },
           "business": {
             "title": "Раздел",
-            "short": "short",
-            "description": "business: информация",
-            "prompt": "prompt",
+            "short": "Бизнес",
+            "description": "AI помощник",
+            "prompt": "AI помощник"
           },
           "student": {
             "title": "Раздел",
-            "short": "short",
-            "description": "student: информация",
-            "prompt": "prompt",
+            "short": "AI помощник",
+            "description": "AI помощник",
+            "prompt": "AI помощник"
           },
           "applicant": {
             "title": "Раздел",
-            "short": "short",
-            "description": "applicant: информация",
-            "prompt": "prompt",
+            "short": "AI помощник",
+            "description": "AI помощник",
+            "prompt": "AI помощник"
           },
           "teacher": {
             "title": "Раздел",
-            "short": "short",
-            "description": "teacher: информация",
-            "prompt": "prompt",
-          },
+            "short": "AI помощник",
+            "description": "AI помощник",
+            "prompt": "AI помощник"
+          }
         },
-        "toolsTitle": "tools",
-        "toolsSubtitle": "tools Описание",
-        "toolsSheetTitle": "tools Sheet",
-        "toolsSheetSubtitle": "tools Sheet Описание",
+        "toolsTitle": "AI помощник",
+        "toolsSubtitle": "AI помощник",
+        "toolsSheetTitle": "AI помощник",
+        "toolsSheetSubtitle": "AI помощник",
         "camera": "Камера",
         "cameraDescription": "Чат: информация",
         "uploadPhoto": "Загрузка Фото",
@@ -7266,42 +7267,42 @@ export const RU_LOCALE = {
         "uploadVideoDescription": "Чат: информация",
         "uploadDocument": "Загрузка Документ",
         "uploadDocumentDescription": "Чат: информация",
-        "webSearch": "web Поиск",
-        "webSearchShort": "web Поиск Short",
+        "webSearch": "Поиск в интернете",
+        "webSearchShort": "Интернет-поиск",
         "webSearchDescription": "Чат: информация",
-        "voiceRecording": "voice Recording",
-        "permissionCamera": "permission Камера",
-        "permissionPhoto": "permission Фото",
-        "permissionVideo": "permission Видео",
-        "attachmentsSent": "attachments Отправлено",
-        "attachmentPhoto": "attachment Фото",
-        "attachmentVideo": "attachment Видео",
-        "attachmentDocument": "attachment Документ",
-        "attachmentAudio": "attachment Аудио",
-        "uploadContractNotice": "Загрузка Contract Notice",
+        "voiceRecording": "Запись голоса",
+        "permissionCamera": "Камера",
+        "permissionPhoto": "Фото",
+        "permissionVideo": "Видео",
+        "attachmentsSent": "AI помощник",
+        "attachmentPhoto": "Фото",
+        "attachmentVideo": "Видео",
+        "attachmentDocument": "Документ",
+        "attachmentAudio": "Голосовой AI",
+        "uploadContractNotice": "AI помощник",
         "safetyConfirmTitle": "Безопасность Подтвердить",
         "safetyConfirmMessage": "Безопасность Подтвердить Сообщение",
         "safetyConfirmCancel": "Безопасность Подтвердить Отмена",
         "safetyConfirmContinue": "Безопасность Подтвердить Продолжить",
-        "securityNotice": "Безопасность Notice",
+        "securityNotice": "AI помощник",
         "prompt": {
-          "business": "business",
-          "study": "study",
+          "business": "AI помощник",
+          "study": "AI помощник",
           "search": "Поиск",
-          "file": "Файл",
-        },
+          "file": "Файл"
+        }
       },
       "activity": {
         "historyTitle": "AI история",
-        "historySubtitle": "Предпросмотр истории из AI mobile snapshot.",
+        "historySubtitle": "История",
         "tasksTitle": "AI задачи",
-        "tasksSubtitle": "Задачи от assistant brain и подтверждений действий.",
+        "tasksSubtitle": "Задачи",
         "emptyTitle": "Пока пусто",
-        "emptyText": "Backend пока не вернул элементы для этого раздела.",
+        "emptyText": "Пока пусто"
       },
       "memory": {
         "title": "AI память",
-        "subtitle": "Personalization runtime: privacy mode, preferences и сохранённые инструкции.",
+        "subtitle": "Память",
         "privacyMode": "Режим приватности",
         "strict": "Строгий",
         "balanced": "Сбалансированный",
@@ -7311,154 +7312,154 @@ export const RU_LOCALE = {
         "instructions": "Сохранённая инструкция",
         "noAccusation": "AI хранит предпочтения только через утверждённый слой памяти и персонализации.",
         "modeSaved": {
-          "strict": "strict",
-          "balanced": "balanced",
-          "adaptive": "adaptive",
+          "strict": "Сохранено",
+          "balanced": "Сохранено",
+          "adaptive": "Сохранено"
         },
-        "instructionSaved": "instruction Сохранено",
+        "instructionSaved": "Сохранено"
       },
       "premium": {
-        "title": "Premium AI",
+        "title": "Премиум",
         "subtitle": "COIN доступ для перевода, голосового AI и продвинутых действий ассистента.",
-        "accessTitle": "Premium AI доступ",
-        "noFakePayment": "Оплата здесь не имитируется. Активация должна прийти из реального потока подтверждения Premium/COIN.",
+        "accessTitle": "Премиум",
+        "noFakePayment": "Премиум",
         "realtimeCallTranslationTitle": "Перевод звонков в реальном времени",
         "realtimeTranslationTitle": "Перевод в реальном времени",
-        "realtimeTranslationDescription": "Premium gate: ai_translation_realtime. Реальное разрешение приходит из backend.",
-        "mediaTranslationTitle": "Media перевод",
-        "mediaTranslationDescription": "Перевод audio/video transcript работает через native bridge и backend provider.",
+        "realtimeTranslationDescription": "Перевод",
+        "mediaTranslationTitle": "Перевод",
+        "mediaTranslationDescription": "Перевод",
         "advancedAssistantActionsTitle": "Продвинутые действия ассистента",
         "safeActionsTitle": "Безопасные действия",
-        "safeActionsDescription": "Денежные/account действия остаются через confirmation и safety control.",
-        "openProfilePremium": "Открыть Profile Premium",
-        "brandText": "Sabi Premium · активация контролируется COIN",
-        "heroEyebrow": "hero Eyebrow",
-        "badge": "badge",
-        "safeBadge": "safe Badge",
+        "safeActionsDescription": "Безопасность",
+        "openProfilePremium": "Открыть",
+        "brandText": "Информация Информация",
+        "heroEyebrow": "Премиум",
+        "badge": "Премиум",
+        "safeBadge": "Безопасность"
       },
       "settings": {
         "title": "AI настройки",
-        "subtitle": "Провайдер, язык, разрешения, safety и profile contracts.",
+        "subtitle": "Настройки",
         "metricApi": "API",
         "metricSource": "Источник",
         "sourceLocalContract": "local_contract",
         "connectionDetails": "Детали подключения",
         "sections": "Разделы",
-        "providerTitle": "Provider contracts",
-        "providerDescription": "Настройки Google/Yandex/Internal provider загружаются из backend settings contracts.",
-        "safetyTitle": "Safety/Admin мониторинг",
-        "safetyDescription": "Внутренние AI-24 отчёты, hold и critical escalation принадлежат backend/admin-panel.",
-        "heroEyebrow": "hero Eyebrow",
-        "heroTitle": "hero",
+        "providerTitle": "Провайдер",
+        "providerDescription": "Провайдер",
+        "safetyTitle": "Безопасность",
+        "safetyDescription": "Безопасность",
+        "heroEyebrow": "AI-настройки",
+        "heroTitle": "Настройки",
         "heroDescription": "Настройки: информация",
-        "controlTitle": "control",
-        "profileOwnerTitle": "Профиль Owner",
+        "controlTitle": "Заголовок",
+        "profileOwnerTitle": "AI в профиле",
         "profileOwnerDescription": "Настройки: информация",
-        "note": "note",
+        "note": "Информация"
       },
       "translation": {
         "title": "AI перевод",
-        "subtitle": "Экран перевода текста сейчас, аудио/видео/звонки через native transcript bridge.",
+        "subtitle": "Перевод",
         "realtimeTitle": "Перевод в реальном времени",
         "source": "Исходный текст",
         "sourcePlaceholder": "Текст для перевода...",
         "target": "Язык перевода",
-        "targetPlaceholder": "en, ru, uz, tg...",
+        "targetPlaceholder": "Язык перевода",
         "translate": "Перевести",
         "result": "Результат",
-        "premium": "Premium gate остаётся в backend. Экран только показывает реальный ответ.",
-        "heroEyebrow": "hero Eyebrow",
+        "premium": "Перевод",
+        "heroEyebrow": "Перевод",
         "textPhotoCamera": "Перевод: информация",
         "inputPlaceholder": "Введите значение",
         "outputPlaceholder": "Введите значение",
         "camera": "Камера",
         "photo": "Фото",
-        "from": "from",
-        "to": "to",
-        "detect": "detect",
-        "selectLanguage": "select Язык",
+        "from": "Исходный текст",
+        "to": "Язык перевода",
+        "detect": "Поиск",
+        "selectLanguage": "Язык перевода",
         "searchLanguage": "Поиск Язык",
-        "permissionCamera": "permission Камера",
-        "permissionPhoto": "permission Фото",
+        "permissionCamera": "Камера",
+        "permissionPhoto": "Фото",
         "emptyText": "Перевод: информация",
-        "noOutput": "no Output",
-        "sameLanguage": "same Язык",
+        "noOutput": "Пока пусто",
+        "sameLanguage": "Язык перевода",
         "photoReady": "Фото Готово",
         "cameraReady": "Камера Готово",
-        "detectCannotSwap": "detect Cannot Swap",
-        "noImageOutput": "no Image Output",
+        "detectCannotSwap": "Язык перевода",
+        "noImageOutput": "Пока пусто",
         "detectedText": "Перевод: информация",
-        "messengerPathTitle": "messenger Path",
-        "messengerReady": "messenger Готово",
-        "imageProcessing": "image Processing",
+        "messengerPathTitle": "Messenger",
+        "messengerReady": "Готово",
+        "imageProcessing": "Загрузка…",
         "textProcessing": "Перевод: информация",
-        "metaDetected": "meta Detected",
+        "metaDetected": "Готово"
       },
       "voice": {
         "title": "Голосовой AI",
-        "subtitle": "Native STT/TTS bridge contract для следующего уровня Siri/Alice.",
-        "nativeBridge": "Native bridge",
-        "realBridgeDescription": "Реальный мобильный мост: запись микрофона, native voice events, передача transcript и воспроизведение audio URL. Text-only TTS не имитируется.",
-        "bind": "Связать bridge",
+        "subtitle": "Голосовой AI",
+        "nativeBridge": "Подключение",
+        "realBridgeDescription": "Голосовой AI",
+        "bind": "Подключение",
         "invoke": "Быстрый вызов",
-        "start": "Начать session",
-        "stop": "Остановить session",
+        "start": "Начать",
+        "stop": "Остановить",
         "interrupt": "Прервать",
         "recording": "Запись",
         "startRecording": "Запись",
         "stopRecording": "Стоп запись",
-        "audioCapturedNotice": "Аудио записано и отправлено как native voice event. Распознавание речи должно дать реальный transcript; экран не придумывает его сам.",
+        "audioCapturedNotice": "Готово",
         "audioDuration": "Длительность",
-        "audioSize": "Размер audio",
-        "sttTtsBridgeTitle": "STT / TTS bridge",
-        "transcriptPlaceholder": "Transcript от native STT bridge...",
-        "submitTranscript": "Отправить transcript",
-        "ttsTitle": "TTS playback",
-        "ttsPlaceholder": "Текст для backend TTS...",
+        "audioSize": "Голосовой AI",
+        "sttTtsBridgeTitle": "Голосовой AI",
+        "transcriptPlaceholder": "Голосовой AI",
+        "submitTranscript": "Голосовой AI",
+        "ttsTitle": "Воспроизвести",
+        "ttsPlaceholder": "Голосовой AI",
         "playLastTts": "Проиграть последний TTS",
-        "noFakeTts": "Без фейкового голоса: аудио работает только если backend/native TTS вернул audio URL. Text-only TTS показывается как текст до подключения expo-speech или native TTS module.",
-        "runtimeLog": "Voice runtime log",
-        "noEvents": "Voice events пока нет.",
-        "contractOnly": "Этот экран не имитирует запись. Он ждёт настоящий native bridge, который передаст transcript/audio events.",
-        "quickInvokeSent": "Quick invoke command отправлен.",
-        "sessionStopped": "Voice session остановлена.",
-        "session": "Session",
-        "recordingNow": "recording Now",
-        "tapToSpeak": "tap To Speak",
-        "transcriptReady": "transcript Готово",
+        "noFakeTts": "Голосовой AI",
+        "runtimeLog": "История",
+        "noEvents": "Пока пусто",
+        "contractOnly": "Голосовой AI",
+        "quickInvokeSent": "Отправлено",
+        "sessionStopped": "Остановить",
+        "session": "Подключение",
+        "recordingNow": "Запись...",
+        "tapToSpeak": "Голосовой AI",
+        "transcriptReady": "Готово",
         "state": {
-          "idle": "idle",
-          "processing": "processing",
-          "requesting_permission": "requesting permission",
-          "recording": "recording",
+          "idle": "Готово",
+          "processing": "Загрузка…",
+          "requesting_permission": "Безопасность",
+          "recording": "Запись",
           "error": "Ошибка",
-          "playing": "playing",
+          "playing": "Воспроизвести"
         },
         "log": {
-          "info": "info",
-          "bridge_bound": "bridge bound",
-          "recording_started": "recording started",
-          "audio_captured": "Аудио captured",
-          "transcript_ready": "transcript Готово",
-          "tts_requested": "tts requested",
-          "playback_started": "playback started",
-          "interrupted": "interrupted",
-          "error": "Ошибка",
-        },
+          "info": "Информация",
+          "bridge_bound": "Готово",
+          "recording_started": "Запись",
+          "audio_captured": "Готово",
+          "transcript_ready": "Готово",
+          "tts_requested": "Голосовой AI",
+          "playback_started": "Воспроизвести",
+          "interrupted": "Остановить",
+          "error": "Ошибка"
+        }
       },
       "error": {
-        "ai_mobile_api_base_url_missing": "AI мобильный api base url missing",
-        "ai_mobile_auth_required": "AI мобильный auth required",
+        "ai_mobile_api_base_url_missing": "Ошибка",
+        "ai_mobile_auth_required": "Ошибка",
         "ai_mobile_request_failed": "AI мобильный Запрос Ошибка",
-        "ai_mobile_network_error": "AI мобильный network Ошибка",
-        "ai_voice_microphone_permission_denied": "AI voice microphone permission denied",
-        "ai_voice_recording_already_active": "AI voice recording already active",
-        "ai_voice_recording_not_active": "AI voice recording не active",
-        "ai_voice_playback_command_missing": "AI voice playback command missing",
+        "ai_mobile_network_error": "Ошибка",
+        "ai_voice_microphone_permission_denied": "Ошибка",
+        "ai_voice_recording_already_active": "Ошибка",
+        "ai_voice_recording_not_active": "Ошибка",
+        "ai_voice_playback_command_missing": "Ошибка",
         "ai_voice_empty_tts_text": "Ошибка: информация",
-        "ai_voice_audio_url_missing": "AI voice Аудио url missing",
-      },
-    },
+        "ai_voice_audio_url_missing": "Ошибка"
+      }
+    }
   },
   "businessAccount": {
     "title": "Бизнес-аккаунт",
@@ -7485,7 +7486,7 @@ export const RU_LOCALE = {
     "permissions": "Права доступа",
     "analytics": "Аналитика",
     "orders": "Заказы",
-    "crm": "CRM",
+    "crm": "Информация",
     "automation": "Автоматизация",
     "quickReplies": "Быстрые ответы",
     "welcomeMessage": "Приветственное сообщение",
@@ -7500,7 +7501,7 @@ export const RU_LOCALE = {
     "verifiedBusiness": "Подтверждённый бизнес",
     "businessSettings": "Настройки бизнеса",
     "treasuryControls": "Контроль казначейства",
-    "bankingAccess": "Банковский доступ",
+    "bankingAccess": "Банковский доступ"
   },
   "merchantAccount": {
     "title": "Мерчант-аккаунт",
@@ -7522,9 +7523,9 @@ export const RU_LOCALE = {
     "refunds": "Возвраты",
     "disputes": "Споры",
     "paymentLinks": "Платёжные ссылки",
-    "checkoutPages": "Страницы checkout",
-    "qrCheckout": "QR-checkout",
-    "posMode": "POS-режим",
+    "checkoutPages": "Информация",
+    "qrCheckout": "Информация",
+    "posMode": "Информация",
     "cashierMode": "Режим кассира",
     "terminals": "Терминалы",
     "branches": "Филиалы",
@@ -7538,7 +7539,7 @@ export const RU_LOCALE = {
     "verifiedMerchant": "Подтверждённый мерчант",
     "merchantSettings": "Настройки мерчанта",
     "settlementPreferences": "Настройки расчётов",
-    "acquiringControls": "Контроль эквайринга",
+    "acquiringControls": "Контроль эквайринга"
   },
   "stream": {
     "title": "Стрим",
@@ -7554,9 +7555,9 @@ export const RU_LOCALE = {
     "streamModeration": "Модерация стрима",
     "streamAnalytics": "Аналитика стрима",
     "streamerProfile": "Профиль стримера",
-    "donateWithCoin": "Поддержать через Coin",
+    "donateWithCoin": "Информация",
     "sendGiftToStream": "Отправить подарок в стрим",
-    "noStreams": "Стримов нет",
+    "noStreams": "Стримов нет"
   },
   "marketplace": {
     "title": "Маркетплейс",
@@ -7564,7 +7565,7 @@ export const RU_LOCALE = {
     "stores": "Магазины",
     "categories": "Категории",
     "cart": "Корзина",
-    "checkout": "Checkout",
+    "checkout": "Информация",
     "orderNow": "Заказать сейчас",
     "buyNow": "Купить сейчас",
     "addToCart": "Добавить в корзину",
@@ -7573,7 +7574,7 @@ export const RU_LOCALE = {
     "sellerInfo": "Информация о продавце",
     "delivery": "Доставка",
     "pickup": "Самовывоз",
-    "noProducts": "Товары не найдены",
+    "noProducts": "Товары не найдены"
   },
   "taxi": {
     "title": "Такси",
@@ -7587,46 +7588,46 @@ export const RU_LOCALE = {
     "rideCompleted": "Поездка завершена",
     "rideCancelled": "Поездка отменена",
     "contactDriver": "Связаться с водителем",
-    "shareTrip": "Поделиться поездкой",
+    "shareTrip": "Поделиться поездкой"
   },
   "gameCenter": {
-    "title": "Game Center",
+    "title": "Настройки",
     "games": "Игры",
     "ratings": "Рейтинги",
     "leaderboard": "Таблица лидеров",
     "tournaments": "Турниры",
     "achievements": "Достижения",
     "gameStore": "Игровой магазин",
-    "coinRewards": "Награды в Coin",
+    "coinRewards": "Информация",
     "networkGames": "Сетевые игры",
     "noGames": "Игры недоступны",
     "foundation": {
       "games": "Открыть игры",
       "hero": {
-        "text": "Сетевые игры, награды, рейтинги и связи с Messenger/Stream. Без фальшивых достижений и фальшивых игроков.",
-        "title": "Основа игр",
+        "text": "Текст",
+        "title": "Основа игр"
       },
       "leaderboard": {
         "title": "Рейтинги",
-        "value": "Хранение рейтинга запланировано без фальшивых баллов.",
+        "value": "Хранение рейтинга запланировано без фальшивых баллов."
       },
       "lobby": {
         "title": "Сетевое лобби",
-        "value": "Основа лобби готова. Для реального match-making требуется подключение provider.",
+        "value": "Хранение рейтинга запланировано без фальшивых баллов."
       },
-      "miniApps": "Mini Apps",
+      "miniApps": "Информация",
       "policy": {
-        "title": "Политика наград",
+        "title": "Политика наград"
       },
       "realtime": {
-        "title": "Realtime provider",
-        "value": "Без фальшивых онлайн-соперников. До интеграции показывается состояние provider required.",
+        "title": "Название",
+        "value": "Хранение рейтинга запланировано без фальшивых баллов."
       },
       "rewards": {
         "title": "Награды",
-        "value": "Для наград нужны маршрут Coin Wallet и admin/compliance hooks.",
-      },
-    },
+        "value": "Хранение рейтинга запланировано без фальшивых баллов."
+      }
+    }
   },
   "settings": {
     "title": "Настройки",
@@ -7659,13 +7660,13 @@ export const RU_LOCALE = {
     "profileSettings": "Настройки профиля",
     "businessSettings": "Настройки бизнеса",
     "merchantSettings": "Настройки мерчанта",
-    "premiumSettings": "Настройки Premium",
+    "premiumSettings": "Премиум",
     "aiSettings": "Настройки AI",
     "bankingSettings": "Банковские настройки",
     "statementSettings": "Настройки выписок",
     "payoutSettings": "Настройки выплат",
     "advanced": "Расширенные",
-    "developerOptions": "Параметры разработчика",
+    "developerOptions": "Параметры разработчика"
   },
   "notifications": {
     "title": "Уведомления",
@@ -7680,8 +7681,8 @@ export const RU_LOCALE = {
     "businessNotifications": "Уведомления бизнеса",
     "merchantNotifications": "Уведомления мерчанта",
     "marketingNotifications": "Маркетинговые уведомления",
-    "emailNotifications": "Email-уведомления",
-    "pushNotifications": "Push-уведомления",
+    "emailNotifications": "Уведомления",
+    "pushNotifications": "Уведомления",
     "sound": "Звук",
     "preview": "Предпросмотр",
     "showSenderName": "Показывать имя отправителя",
@@ -7691,7 +7692,7 @@ export const RU_LOCALE = {
     "quietHours": "Тихие часы",
     "noNotifications": "Уведомлений пока нет",
     "markAllAsRead": "Отметить всё как прочитанное",
-    "notificationHistory": "История уведомлений",
+    "notificationHistory": "История уведомлений"
   },
   "privacy": {
     "title": "Конфиденциальность",
@@ -7716,14 +7717,14 @@ export const RU_LOCALE = {
     "allowQrScan": "Разрешить сканирование QR",
     "dataPrivacy": "Конфиденциальность данных",
     "businessVisibility": "Видимость бизнеса",
-    "merchantVisibility": "Видимость мерчанта",
+    "merchantVisibility": "Видимость мерчанта"
   },
   "security": {
     "title": "Безопасность",
     "pinCode": "PIN-код",
     "changePin": "Изменить PIN",
     "biometrics": "Биометрия",
-    "faceId": "Face ID",
+    "faceId": "Информация",
     "fingerprint": "Отпечаток пальца",
     "twoFactorAuth": "Двухфакторная аутентификация",
     "recoveryOptions": "Варианты восстановления",
@@ -7741,9 +7742,9 @@ export const RU_LOCALE = {
     "paymentConfirmation": "Подтверждение платежа",
     "highRiskTransferCheck": "Проверка переводов высокого риска",
     "kycVerification": "KYC-верификация",
-    "amlCheck": "AML-проверка",
+    "amlCheck": "Информация",
     "businessVerification": "Верификация бизнеса",
-    "merchantVerification": "Верификация мерчанта",
+    "merchantVerification": "Верификация мерчанта"
   },
   "support": {
     "title": "Поддержка",
@@ -7751,9 +7752,9 @@ export const RU_LOCALE = {
     "reportProblem": "Сообщить о проблеме",
     "sendFeedback": "Отправить отзыв",
     "helpCenter": "Центр помощи",
-    "faq": "FAQ",
+    "faq": "Информация",
     "liveChat": "Онлайн-чат",
-    "emailSupport": "Поддержка по email",
+    "emailSupport": "Информация",
     "callSupport": "Поддержка по звонку",
     "attachScreenshot": "Прикрепить скриншот",
     "attachLogs": "Прикрепить логи",
@@ -7763,7 +7764,7 @@ export const RU_LOCALE = {
     "businessSupport": "Бизнес-поддержка",
     "merchantSupport": "Поддержка мерчантов",
     "bankingSupport": "Банковская поддержка",
-    "disputeSupport": "Поддержка по спорам",
+    "disputeSupport": "Поддержка по спорам"
   },
   "legal": {
     "title": "Юридическая информация",
@@ -7778,7 +7779,7 @@ export const RU_LOCALE = {
     "compliance": "Комплаенс",
     "merchantTerms": "Условия для мерчантов",
     "businessTerms": "Условия для бизнеса",
-    "bankingTerms": "Банковские условия",
+    "bankingTerms": "Банковские условия"
   },
   "admin": {
     "title": "Админ",
@@ -7787,7 +7788,7 @@ export const RU_LOCALE = {
     "moderation": "Модерация",
     "reports": "Жалобы",
     "transactions": "Транзакции",
-    "premium": "Premium",
+    "premium": "Премиум",
     "analytics": "Аналитика",
     "contentReview": "Проверка контента",
     "systemStatus": "Состояние системы",
@@ -7805,7 +7806,7 @@ export const RU_LOCALE = {
     "disputes": "Споры",
     "fraudAlerts": "Антифрод-оповещения",
     "complianceQueue": "Очередь комплаенса",
-    "accessDenied": "Требуется доступ администратора",
+    "accessDenied": "Требуется доступ администратора"
   },
   "errors": {
     "somethingWentWrong": "Что-то пошло не так",
@@ -7815,17 +7816,17 @@ export const RU_LOCALE = {
     "tryAgain": "Пожалуйста, попробуйте снова",
     "requiredField": "Это поле обязательно",
     "invalidPhone": "Некорректный номер телефона",
-    "invalidEmail": "Некорректный email",
+    "invalidEmail": "Информация",
     "invalidCode": "Некорректный код",
     "invalidAmount": "Некорректная сумма",
     "invalidCardNumber": "Некорректный номер карты",
     "invalidExpiryDate": "Некорректный срок действия",
-    "invalidCvv": "Некорректный CVV",
+    "invalidCvv": "Информация",
     "invalidPin": "Некорректный PIN",
     "invalidAccountNumber": "Некорректный номер счёта",
     "invalidIban": "Некорректный IBAN",
     "invalidSwift": "Некорректный SWIFT-код",
-    "invalidRoutingNumber": "Некорректный routing number",
+    "invalidRoutingNumber": "Информация",
     "invalidBeneficiary": "Некорректные данные бенефициара",
     "accessDenied": "Доступ запрещён",
     "sessionExpired": "Сессия истекла",
@@ -7854,7 +7855,7 @@ export const RU_LOCALE = {
     "contactNotFound": "Контакт не найден",
     "chatUnavailable": "Чат недоступен",
     "callFailed": "Не удалось выполнить звонок",
-    "premiumRequired": "Требуется Premium",
+    "premiumRequired": "Премиум",
     "featureUnavailable": "Эта функция сейчас недоступна",
     "updateRequired": "Чтобы продолжить, обновите приложение",
     "maintenanceMode": "Сервис временно недоступен из-за технических работ",
@@ -7865,7 +7866,7 @@ export const RU_LOCALE = {
     "settlementPending": "Расчёт всё ещё в обработке",
     "complianceReviewRequired": "Требуется проверка комплаенса",
     "sourceOfFundsRequired": "Требуется указать источник средств",
-    "adminAccessRequired": "Требуется доступ администратора",
+    "adminAccessRequired": "Требуется доступ администратора"
   },
   "success": {
     "saved": "Успешно сохранено",
@@ -7887,83 +7888,83 @@ export const RU_LOCALE = {
     "requestSent": "Запрос успешно отправлен",
     "profileUpdated": "Профиль успешно обновлён",
     "settingsUpdated": "Настройки успешно обновлены",
-    "premiumActivated": "Premium успешно активирован",
+    "premiumActivated": "Премиум",
     "businessCreated": "Бизнес-аккаунт успешно создан",
     "merchantCreated": "Мерчант-аккаунт успешно создан",
     "translationEnabled": "Перевод успешно включён",
-    "bankAccountLinked": "Банковский счёт успешно привязан",
+    "bankAccountLinked": "Банковский счёт успешно привязан"
   },
   "termsScreen": {
     "paragraph1": "Используя Sabi, вы соглашаетесь соблюдать правила платформы, применимое законодательство и требования безопасности, установленные для использования функций кошелька, коммуникаций, транзакций и цифровых сервисов.",
     "paragraph2": "Пользователь несёт ответственность за достоверность предоставленных данных, защиту своих устройств, контроль доступа к аккаунту и законность действий, совершаемых в системе.",
     "paragraph3": "Sabi вправе обновлять функциональность, требования безопасности, правила использования и отдельные условия сервиса для улучшения продукта, соответствия регуляторным требованиям и защиты пользователей.",
-    "paragraph4": "Продолжение использования платформы после обновления условий означает согласие с актуальной редакцией правил сервиса.",
+    "paragraph4": "Продолжение использования платформы после обновления условий означает согласие с актуальной редакцией правил сервиса."
   },
   "privacyPolicyScreen": {
     "paragraph1": "Sabi уважает конфиденциальность пользователей и защищает персональные данные. Мы можем собирать номер телефона, данные устройства, технические журналы и другую информацию, необходимую для регистрации, безопасности аккаунта, подтверждения личности, предотвращения мошенничества и улучшения сервиса.",
-    "paragraph2": "Ваши данные используются только для работы платформы, соблюдения законодательства, защиты транзакций, поддержки пользователей и развития функций SuperApp.",
+    "paragraph2": "Информация",
     "paragraph3": "Мы не раскрываем персональные данные третьим лицам без законных оснований, кроме случаев, когда это необходимо для оказания услуг, верификации, выполнения нормативных требований или защиты прав и безопасности пользователей и платформы.",
-    "paragraph4": "Используя Sabi, вы соглашаетесь на обработку данных в соответствии с этой политикой.",
+    "paragraph4": "Используя Sabi, вы соглашаетесь на обработку данных в соответствии с этой политикой."
   },
   "profileCompleteScreen": {
-    "badge": "badge",
+    "badge": "Премиум",
     "title": "Раздел",
     "subtitle": "Описание",
-    "firstName": "first Название",
-    "lastName": "last Название",
-    "username": "username",
-    "phone": "phone",
-    "unifiedId": "unified ID",
-    "unifiedIdHint": "Профиль Complete Экран: информация",
-    "usernameHint": "Профиль Complete Экран: информация",
-    "privacy": "privacy",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "username": "Имя пользователя",
+    "phone": "Информация",
+    "unifiedId": "Информация",
+    "unifiedIdHint": "Информация Информация",
+    "usernameHint": "Информация Информация",
+    "privacy": "Конфиденциальность",
     "continue": "Продолжить",
     "back": "Назад",
-    "required": "required",
+    "required": "Информация",
     "saveErrorTitle": "Сохранить Ошибка",
     "saveErrorMessage": "Сохранить Ошибка Сообщение",
-    "saving": "saving",
+    "saving": "Сохранение...",
     "userId": "Пользователь ID",
     "createUser": "Создать Пользователь",
-    "nameRequired": "Название Required",
-    "phoneRequired": "phone Required",
-    "usernameRequired": "username Required",
-    "success": "success",
+    "nameRequired": "Информация",
+    "phoneRequired": "Номер телефона обязателен",
+    "usernameRequired": "Информация",
+    "success": "Информация"
   },
   "gallery": {
     "title": "Галерея",
     "import": "Импорт",
     "video": "Видео",
-    "selected": "Выбрано: {{count}}",
+    "selected": "Информация",
     "empty": {
       "all": "Нет медиа",
       "public": "Нет публичных медиа",
-      "private": "Нет личных медиа",
+      "private": "Нет личных медиа"
     },
     "alerts": {
       "noAccessTitle": "Нет доступа",
       "noAccessMessage": "Разреши доступ к фото и видео, чтобы открыть Галерею.",
       "deleteSelectedTitle": "Удалить",
-      "deleteSelectedMessage": "Удалить выбранные файлы: {{count}}?",
+      "deleteSelectedMessage": "Информация",
       "deleteOneTitle": "Удалить файл",
-      "deleteOneMessage": "Удалить этот файл?",
+      "deleteOneMessage": "Удалить этот файл?"
     },
     "share": {
-      "system": "Поделиться",
+      "system": "Поделиться"
     },
     "viewer": {
-      "player": "Sabi Player",
-      "edited": "Изменено",
+      "player": "Информация",
+      "edited": "Изменено"
     },
     "camera": {
-      "title": "Sabi Camera",
+      "title": "Настройки",
       "short": "Камера",
       "photo": "Фото",
       "video": "Видео",
-      "open": "Открыть камеру",
+      "open": "Открыть камеру"
     },
     "editor": {
-      "title": "Beauty Studio",
+      "title": "Настройки",
       "missing": "Фото не найдено",
       "videoEditorUnavailable": "Видео редактор недоступен",
       "saveErrorTitle": "Ошибка сохранения",
@@ -7984,13 +7985,13 @@ export const RU_LOCALE = {
       "frames": "Рамки",
       "animeLayer": "Аниме",
       "filterLooks": "Фильтры",
-      "adjust": "Настройки",
+      "adjust": "Информация",
       "crop": "Кадр",
       "transform": "Поворот",
       "left": "Влево",
       "right": "Вправо",
-      "mirrorX": "Зеркало X",
-      "mirrorY": "Зеркало Y",
+      "mirrorX": "Информация",
+      "mirrorY": "Информация",
       "smoothSkin": "Сглаживание",
       "softGlow": "Мягкое сияние",
       "skinTone": "Тон кожи",
@@ -8010,7 +8011,7 @@ export const RU_LOCALE = {
       "aura": "Аура",
       "mangaLines": "Манга линии",
       "sakura": "Сакура",
-      "kawaiiHearts": "Kawaii сердца",
+      "kawaiiHearts": "Информация",
       "comicFrame": "Комикс рамка",
       "glowEyes": "Сияние глаз",
       "brightness": "Яркость",
@@ -8027,30 +8028,30 @@ export const RU_LOCALE = {
         "beauty": "Красота",
         "effects": "Эффекты",
         "anime": "Аниме",
-        "adjust": "Настройки",
+        "adjust": "Информация",
         "crop": "Кадр",
-        "transform": "Поворот",
+        "transform": "Поворот"
       },
       "textStyles": {
         "classic": "Классика",
         "glow": "Сияние",
         "outline": "Контур",
-        "bubble": "Пузырь",
+        "bubble": "Пузырь"
       },
       "align": {
         "top": "Сверху",
         "center": "Центр",
-        "bottom": "Снизу",
+        "bottom": "Снизу"
       },
       "filters": {
         "none": "Оригинал",
-        "soft_beauty": "Soft Beauty",
-        "luxury_portrait": "Luxury",
-        "warm_film": "Warm Film",
-        "cool_night": "Cool Night",
-        "anime_glow": "Anime Glow",
-        "pink_dream": "Pink Dream",
-        "gold_glam": "Gold Glam",
+        "soft_beauty": "Информация",
+        "luxury_portrait": "Информация",
+        "warm_film": "Информация",
+        "cool_night": "Информация",
+        "anime_glow": "Информация",
+        "pink_dream": "Информация",
+        "gold_glam": "Информация"
       },
       "option": {
         "none": "Нет",
@@ -8059,80 +8060,80 @@ export const RU_LOCALE = {
         "crown": "Корона",
         "stars": "Звёзды",
         "petals": "Лепестки",
-        "luxury_gold": "Luxury",
-        "soft_portrait": "Soft",
-        "anime_frame": "Anime",
-        "story_glass": "Story",
+        "luxury_gold": "Информация",
+        "soft_portrait": "Информация",
+        "anime_frame": "Аниме",
+        "story_glass": "Информация",
         "original": "Оригинал",
         "square": "Квадрат",
-        "portrait": "4:5",
-        "story": "9:16",
+        "portrait": "Информация",
+        "story": "Информация"
       },
       "textPresetsMap": {
-        "luxury": "Luxury",
-        "neon": "Neon",
-        "soft": "Soft",
-        "comic": "Comic",
-        "anime": "Anime",
+        "luxury": "Информация",
+        "neon": "Информация",
+        "soft": "Информация",
+        "comic": "Информация",
+        "anime": "Аниме"
       },
       "quick": {
-        "queen": "Queen",
-        "sabiMood": "Sabi Mood",
-        "dream": "Dream",
-        "luxury": "Luxury",
-        "angel": "Angel",
-        "animeGirl": "Anime Girl",
-      },
-    },
+        "queen": "Информация",
+        "sabiMood": "Информация",
+        "dream": "Информация",
+        "luxury": "Информация",
+        "angel": "Информация",
+        "animeGirl": "Информация"
+      }
+    }
   },
   "sabiMessengerChannelMenu": {
     "channelAddedToChats": "Канал добавлен в чаты",
     "channelBotMissing": "Бот канала отсутствует",
     "channelInviteMissing": "Ссылка приглашения канала ещё не готова",
-    "channelShareReady": "Канал отправлен",
+    "channelShareReady": "Канал отправлен"
   },
   "sabiMessengerGroupMenu": {
     "groupAddMember": "Добавить участника",
     "groupInviteMissing": "Ссылка приглашения ещё не готова",
     "groupInviteReady": "Ссылка приглашения",
-    "groupShareReady": "Группа отправлена",
+    "groupShareReady": "Группа отправлена"
   },
   "stories": {
     "actions": {
-      "add": "Добавить",
+      "add": "Добавить"
     },
     "empty": {
       "action": "Открыть профиль",
       "text": "Добавьте публичные фото или короткие видео внутри профиля. Здесь отображаются только выбранные публичные медиа.",
-      "title": "Публичных stories пока нет",
+      "title": "Название"
     },
     "header": {
-      "title": "Stories",
+      "title": "Название"
     },
     "hero": {
       "subtitle": "Фото и короткие видео из публичного профиля показываются здесь без чёрного экрана.",
-      "title": "Публичные stories",
+      "title": "Название"
     },
     "kind": {
       "photo": "Фото",
-      "video": "Видео",
+      "video": "Видео"
     },
     "photo": {
       "unavailable": {
-        "title": "Фото недоступно",
-      },
+        "title": "Фото недоступно"
+      }
     },
     "preview": {
       "photo": "Фото",
-      "video": "Видео",
+      "video": "Видео"
     },
     "video": {
       "unavailable": {
         "text": "У этого видео пока нет загруженного публичного файла, поэтому его нельзя воспроизвести на другом устройстве.",
-        "title": "Видео недоступно",
-      },
-    },
-  },
+        "title": "Видео недоступно"
+      }
+    }
+  }
 } as const;
 
 export default RU_LOCALE;

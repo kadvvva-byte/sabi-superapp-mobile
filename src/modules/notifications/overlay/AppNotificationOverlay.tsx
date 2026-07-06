@@ -1,7 +1,8 @@
 import { router, usePathname } from "expo-router";
 import { Bell, MessageCircle, PhoneMissed, WalletCards, X } from "lucide-react-native";
-import { useCallback, useEffect, useMemo, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useSyncExternalStore } from "react";
 import { DeviceEventEmitter, Platform, Pressable, StyleSheet, Text, View } from "react-native";
+import { Audio } from "expo-av";
 
 import { getAuthSessionState, subscribeAuthSessionState } from "../../../core/kernel/auth/session.store";
 import { useI18n } from "../../../shared/i18n";
@@ -21,6 +22,8 @@ import {
   subscribeAppOverlayNotificationState,
   type AppOverlayNotificationKind,
 } from "./app-notification-overlay-store";
+import { resolveSabiSoundForKind } from "../sounds/sabiSoundPreferences";
+import type { SabiNotificationSoundKind } from "../sounds/sabiNotificationSounds";
 
 type OverlayTexts = {
   messages: string;
@@ -514,6 +517,49 @@ function formatMoney(amount?: number, currency?: string) {
   return cleanCurrency ? `${cleanAmount} ${cleanCurrency}` : cleanAmount;
 }
 
+
+function overlayKindToSoundKind(kind: AppOverlayNotificationKind): SabiNotificationSoundKind | null {
+  if (kind === "message") return null;
+  if (kind === "wallet") return "wallet";
+  if (kind === "ai") return "ai";
+  if (kind === "missed_call" || kind === "security" || kind === "system") return "system";
+  return "system";
+}
+
+async function playSabiOverlayNotificationTone(kind: AppOverlayNotificationKind) {
+  const soundKind = overlayKindToSoundKind(kind);
+  if (!soundKind) return;
+
+  const selected = await resolveSabiSoundForKind(soundKind);
+  await Audio.setAudioModeAsync({
+    allowsRecordingIOS: false,
+    staysActiveInBackground: false,
+    playsInSilentModeIOS: true,
+    shouldDuckAndroid: true,
+    playThroughEarpieceAndroid: false,
+  });
+
+  const { sound } = await Audio.Sound.createAsync(selected.source, {
+    shouldPlay: false,
+    volume: 0.82,
+  });
+
+  let unloaded = false;
+  const unload = () => {
+    if (unloaded) return;
+    unloaded = true;
+    void sound.unloadAsync().catch(() => undefined);
+  };
+
+  sound.setOnPlaybackStatusUpdate((status) => {
+    if (status.isLoaded && status.didJustFinish) unload();
+  });
+
+  await sound.setPositionAsync(0).catch(() => undefined);
+  await sound.playAsync();
+  setTimeout(unload, 3500);
+}
+
 function useOverlayState() {
   return useSyncExternalStore(
     subscribeAppOverlayNotificationState,
@@ -528,6 +574,7 @@ export default function AppNotificationOverlay() {
   const state = useOverlayState();
   const texts = useMemo(() => pickRuntimeDictionary(language, OVERLAY_TEXTS), [language]);
   const latest = state.items[0];
+  const latestToneKeyRef = useRef("");
   const hasCounters = state.unreadMessages > 0 || state.missedCalls > 0 || state.moneyEvents > 0;
 
   const auth = useSyncExternalStore(
@@ -546,6 +593,19 @@ export default function AppNotificationOverlay() {
     if (!latest) return;
     clearAppOverlayNotificationCounters(latest.kind);
   }, [latest]);
+
+  useEffect(() => {
+    if (!latest) return;
+    const toneKey = [latest.kind, latest.id, latest.createdAt].join(":");
+    if (latestToneKeyRef.current === toneKey) return;
+    latestToneKeyRef.current = toneKey;
+    void playSabiOverlayNotificationTone(latest.kind).catch((error) => {
+      console.warn(
+        "[sabi-notification:overlay-tone] play failed",
+        error instanceof Error ? error.message : error,
+      );
+    });
+  }, [latest?.createdAt, latest?.id, latest?.kind]);
 
   useEffect(() => {
     if (!currentUserId) return undefined;

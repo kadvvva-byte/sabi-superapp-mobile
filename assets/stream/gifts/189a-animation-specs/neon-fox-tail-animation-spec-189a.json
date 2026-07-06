@@ -1,0 +1,87 @@
+{
+  "version": "STREAM-GIFT-ANIMATION-SPEC-189A",
+  "giftId": "neon-fox-tail",
+  "displayNameRu": "Неоновый Лис",
+  "displayName": "Neon Fox Tail",
+  "assetKind": "lottie_spec_plus_svg_sequence_plan",
+  "previewOnlyNow": true,
+  "runtimeIncludedNow": false,
+  "audioAutoplayIncludedNow": false,
+  "realSendIncludedNow": false,
+  "fps": 30,
+  "totalDurationMs": 3340,
+  "safeArea": {
+    "topPct": 8,
+    "bottomPct": 12,
+    "horizontalPct": 6
+  },
+  "phases": [
+    {
+      "key": "entrance",
+      "durationMs": 720,
+      "labelRu": "neon swipe entrance",
+      "motion": "scale-up + stage fade + hero glow"
+    },
+    {
+      "key": "loop",
+      "durationMs": 2020,
+      "labelRu": "tail trail loop",
+      "motion": "soft orbit + glow breathing + controlled trail"
+    },
+    {
+      "key": "finale",
+      "durationMs": 600,
+      "labelRu": "electric fox finale",
+      "motion": "burst + spotlight hit + clean fade-out"
+    }
+  ],
+  "layers": [
+    {
+      "key": "background_dim",
+      "labelRu": "кинематографическое затемнение фона",
+      "blend": "multiply",
+      "intensity": 0.38
+    },
+    {
+      "key": "stage_light",
+      "labelRu": "дорогой stage light",
+      "blend": "screen",
+      "intensity": 0.74
+    },
+    {
+      "key": "hero_gift",
+      "labelRu": "Неоновый Лис",
+      "blend": "normal",
+      "intensity": 1
+    },
+    {
+      "key": "particles",
+      "labelRu": "violet fox sparks",
+      "blend": "screen",
+      "intensity": 0.82
+    },
+    {
+      "key": "trail",
+      "labelRu": "мягкий premium trail",
+      "blend": "plus-lighter",
+      "intensity": 0.68
+    },
+    {
+      "key": "finale_burst",
+      "labelRu": "electric fox finale",
+      "blend": "screen",
+      "intensity": 0.9
+    }
+  ],
+  "exports": {
+    "posterFallback": "assets/stream/gifts/187a-premium-pack/neon-fox-tail.svg",
+    "lottieTarget": "assets/stream/gifts/production/lottie/neon-fox-tail.json",
+    "mp4LoopTarget": "assets/stream/gifts/production/mp4/neon-fox-tail.mp4",
+    "spriteSheetTarget": "assets/stream/gifts/production/sprites/neon-fox-tail.webp"
+  },
+  "fallbacks": {
+    "reduceMotion": "poster + glow pulse only",
+    "liteDevice": "poster + 12 particles + short fade",
+    "mutedAudio": "visual-only impact label"
+  }
+}

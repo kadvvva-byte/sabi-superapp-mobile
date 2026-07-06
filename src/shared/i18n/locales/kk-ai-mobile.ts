@@ -1,404 +1,348 @@
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
 const KK_AI_MOBILE_LOCALE = {
-  ai: {
-    mobile: {
-      common: {
-        back: "артқа",
-        cancel: "бас тарту",
-        close: "жабу",
-        loading: "жүктелуде",
-        notConnected: "not қосылды",
-        open: "ашу",
-        refresh: "жаңарту",
-        requestFailed: "сұрау сәтсіз",
-        retry: "қайта көру",
-        save: "сақтау",
-        saved: "Сақталды",
-        search: "іздеу",
-        send: "жіберу",
-        ready: "Дайын",
+  "ai": {
+    "mobile": {
+      "common": {
+        "back": "артқа",
+        "cancel": "бас тарту",
+        "close": "жабу",
+        "loading": "жүктелуде",
+        "notConnected": "Қосылмаған",
+        "open": "ашу",
+        "refresh": "жаңарту",
+        "requestFailed": "сұрау сәтсіз",
+        "retry": "қайта көру",
+        "save": "сақтау",
+        "saved": "Сақталды",
+        "search": "іздеу",
+        "send": "жіберу",
+        "ready": "Дайын"
       },
-
-      status: {
-        ready: "Дайын",
-        limited: "limited",
-        not_connected: "not қосылды",
-        error: "error",
+      "status": {
+        "ready": "Дайын",
+        "limited": "Шектеулі",
+        "not_connected": "Қосылмаған",
+        "error": "Қате"
       },
-
-      messageStatus: {
-        sending: "sending",
-        sent: "sent",
-        error: "error",
-        awaiting_confirmation: "awaiting confirmation",
+      "messageStatus": {
+        "sending": "Жүктелуде...",
+        "sent": "Жіберілді",
+        "error": "Қате",
+        "awaiting_confirmation": "Ақпарат"
       },
-
-      home: {
-        title: "title",
-        subtitle: "subtitle",
-        heroEyebrow: "hero",
-        heroTitle: "hero",
-        heroDescription:
-          "hero сипаттамасы",
-        quickAccess: "quick access",
-        capabilities: "capabilities",
-        safeActions: "safe әрекеттер",
-        safeActionsDescription:
-          "safe әрекеттер сипаттамасы",
-        safeActionsText:
-          "safe әрекеттер сипаттамасы",
-        connection: "connection",
-        userId: "пайдаланушы ID",
-        cleanWorkspaceTitle: "clean workspace",
-        cleanWorkspaceText:
-          "clean workspace сипаттамасы",
+      "home": {
+        "title": "Sabi AI",
+        "subtitle": "Баптаулар",
+        "heroEyebrow": "Ақпарат",
+        "heroTitle": "Ақпарат",
+        "heroDescription": "Ақпарат Ақпарат",
+        "quickAccess": "Жылдам қолжетімділік",
+        "capabilities": "Көмекші",
+        "safeActions": "Қауіпсіздік",
+        "safeActionsDescription": "Қауіпсіздік Ақпарат",
+        "safeActionsText": "Қауіпсіздік Ақпарат",
+        "connection": "Баптаулар",
+        "userId": "пайдаланушы ID",
+        "cleanWorkspaceTitle": "Тақырып",
+        "cleanWorkspaceText": "Ақпарат Ақпарат"
       },
-
-      action: {
-        chat: {
-          title: "title",
-          description: "description",
+      "action": {
+        "chat": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
-        voice: {
-          title: "title",
-          description: "description",
+        "voice": {
+          "title": "Дауыстық AI",
+          "description": "Дауыстық AI"
         },
-        translation: {
-          title: "title",
-          description: "description",
+        "translation": {
+          "title": "нақты уақыт аударма",
+          "description": "Аударма"
         },
-        history: {
-          title: "title",
-          description: "description",
+        "history": {
+          "title": "Тарих",
+          "description": "Баптаулар"
         },
-        tasks: {
-          title: "title",
-          description: "description",
+        "tasks": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
-        memory: {
-          title: "title",
-          description: "description",
+        "memory": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
-        setting: {
-          title: "title",
-          description: "description",
+        "setting": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
-        settings: {
-          title: "title",
-          description: "description",
+        "settings": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
         },
-        premium: {
-          title: "title",
-          description: "description",
+        "premium": {
+          "title": "Премиум",
+          "description": "Премиум"
         },
-        profileAi: {
-          title: "title",
-          description: "description",
-        },
+        "profileAi": {
+          "title": "Баптаулар",
+          "description": "Баптаулар"
+        }
       },
-
-      chat: {
-        title: "title",
-        subtitle: "subtitle",
-        roleUser: "role пайдаланушы",
-        runtimeTitle: "runtime",
-        backendRequired: "backend міндетті",
-        emptyTitle: "бос",
-        emptyText: "бос сипаттамасы",
-        cleanEmptyText:
-          "clean бос сипаттамасы",
-        placeholder: "толтырғыш",
-        emptyBackendResponse: "бос backend response",
-        errorMessage: "error message",
-        thinking: "thinking",
-
-        assistantCenterTitle: "көмекші орталық",
-        assistantCenterDescription:
-          "көмекші орталық сипаттамасы",
-        modeTitle: "mode",
-        modeSubtitle: "mode сипаттамасы",
-        assistantMenuTitle: "көмекші menu",
-        assistantMenuSubtitle:
-          "көмекші menu сипаттамасы",
-
-        mode: {
-          chatgpt: {
-            title: "title",
-            short: "short",
-            description: "description",
-            prompt: "prompt",
+      "chat": {
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "roleUser": "Сіз",
+        "runtimeTitle": "Баптаулар",
+        "backendRequired": "Артқа",
+        "emptyTitle": "бос",
+        "emptyText": "бос сипаттамасы",
+        "cleanEmptyText": "Ақпарат Ақпарат",
+        "placeholder": "толтырғыш",
+        "emptyBackendResponse": "Артқа",
+        "errorMessage": "Сұрау орындалмады. Қайталап көріңіз.",
+        "thinking": "Ақпарат",
+        "assistantCenterTitle": "көмекші орталық",
+        "assistantCenterDescription": "көмекші орталық сипаттамасы",
+        "modeTitle": "Тақырып",
+        "modeSubtitle": "Сипаттама Ақпарат",
+        "assistantMenuTitle": "Көмекші",
+        "assistantMenuSubtitle": "Көмекші Ақпарат",
+        "mode": {
+          "chatgpt": {
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
-          business: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "business": {
+            "title": "Баптаулар",
+            "short": "Бизнес",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
-          student: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "student": {
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
-          applicant: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "applicant": {
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
           },
-          teacher: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
-          },
+          "teacher": {
+            "title": "Баптаулар",
+            "short": "Ақпарат",
+            "description": "Баптаулар",
+            "prompt": "Ақпарат"
+          }
         },
-
-        toolsTitle: "tools",
-        toolsSubtitle:
-          "tools сипаттамасы {mode}",
-        toolsSheetTitle: "tools sheet",
-        toolsSheetSubtitle:
-          "tools sheet сипаттамасы",
-
-        camera: "камера",
-        cameraDescription: "камера сипаттамасы",
-        uploadPhoto: "жүктеу фото",
-        uploadPhotoDescription: "жүктеу фото сипаттамасы",
-        uploadVideo: "жүктеу видео",
-        uploadVideoDescription: "жүктеу видео сипаттамасы",
-        uploadDocument: "жүктеу құжат",
-        uploadDocumentDescription: "жүктеу құжат сипаттамасы",
-        webSearch: "web іздеу",
-        webSearchShort: "web іздеу short",
-        webSearchDescription:
-          "web іздеу сипаттамасы",
-
-        voiceRecording: "дауыс recording",
-        permissionCamera: "permission камера",
-        permissionPhoto: "permission фото",
-        permissionVideo: "permission видео",
-
-        attachmentsSent: "attachments sent",
-        attachmentPhoto: "attachment фото",
-        attachmentVideo: "attachment видео",
-        attachmentDocument: "attachment құжат",
-        attachmentAudio: "attachment аудио",
-        uploadContractNotice:
-          "жүктеу contract notice",
-
-        safetyConfirmTitle: "safety растау",
-        safetyConfirmMessage: "safety растау message",
-        safetyConfirmCancel: "safety растау бас тарту",
-        safetyConfirmContinue: "safety растау жалғастыру",
-        securityNotice:
-          "security notice",
-
-        prompt: {
-          business: "бизнес",
-          study: "study",
-          search: "іздеу",
-          file: "файл",
+        "toolsTitle": "Баптаулар",
+        "toolsSubtitle": "Баптаулар Ақпарат",
+        "toolsSheetTitle": "Баптаулар",
+        "toolsSheetSubtitle": "Баптаулар Ақпарат",
+        "camera": "камера",
+        "cameraDescription": "камера сипаттамасы",
+        "uploadPhoto": "жүктеу фото",
+        "uploadPhotoDescription": "жүктеу фото сипаттамасы",
+        "uploadVideo": "жүктеу видео",
+        "uploadVideoDescription": "жүктеу видео сипаттамасы",
+        "uploadDocument": "жүктеу құжат",
+        "uploadDocumentDescription": "жүктеу құжат сипаттамасы",
+        "webSearch": "Веб-іздеу",
+        "webSearchShort": "Іздеу",
+        "webSearchDescription": "Іздеу",
+        "voiceRecording": "Дауыстық AI",
+        "permissionCamera": "Дауыс",
+        "permissionPhoto": "Профиль",
+        "permissionVideo": "Дауыс",
+        "attachmentsSent": "Ақпарат",
+        "attachmentPhoto": "Фото",
+        "attachmentVideo": "Бейне",
+        "attachmentDocument": "Құжат",
+        "attachmentAudio": "Ақпарат",
+        "uploadContractNotice": "Ақпарат",
+        "safetyConfirmTitle": "Тақырып",
+        "safetyConfirmMessage": "Ақпарат",
+        "safetyConfirmCancel": "Болдырмау",
+        "safetyConfirmContinue": "Жалғастыру",
+        "securityNotice": "Қауіпсіздік",
+        "prompt": {
+          "business": "бизнес",
+          "study": "Ақпарат",
+          "search": "іздеу",
+          "file": "файл"
+        }
+      },
+      "translation": {
+        "title": "Аударма",
+        "subtitle": "Аударма",
+        "heroEyebrow": "Аударма",
+        "realtimeTitle": "нақты уақыт",
+        "premium": "Аударма",
+        "source": "дереккөз",
+        "sourcePlaceholder": "дереккөз үшін кеңес",
+        "textPhotoCamera": "Аударма",
+        "target": "мақсат",
+        "targetPlaceholder": "мақсат үшін кеңес",
+        "translate": "аудару",
+        "result": "Аударма",
+        "inputPlaceholder": "Аударма",
+        "outputPlaceholder": "Аударма",
+        "camera": "камера",
+        "photo": "фото",
+        "from": "кімнен",
+        "to": "Аударма",
+        "detect": "Аударма",
+        "selectLanguage": "таңдау тіл",
+        "searchLanguage": "іздеу тіл",
+        "permissionCamera": "Аударма",
+        "permissionPhoto": "Аударма",
+        "emptyText": "бос сипаттамасы",
+        "noOutput": "Аударма",
+        "sameLanguage": "Аударма",
+        "photoReady": "фото дайын",
+        "cameraReady": "камера дайын",
+        "detectCannotSwap": "Аударма",
+        "noImageOutput": "Аударма",
+        "detectedText": "Аударма",
+        "messengerPathTitle": "Аударма",
+        "messengerReady": "Messenger дайын",
+        "imageProcessing": "Аударма",
+        "textProcessing": "Аударма",
+        "metaDetected": "Аударма"
+      },
+      "voice": {
+        "title": "Дауыстық AI",
+        "subtitle": "Дауыстық AI",
+        "nativeBridge": "Дауыстық AI",
+        "sttTtsBridgeTitle": "Дауыстық AI",
+        "realBridgeDescription": "Дауыстық AI",
+        "bind": "Дауыстық AI",
+        "start": "бастау",
+        "stop": "тоқтату",
+        "invoke": "Дауыстық AI",
+        "interrupt": "Дауыстық AI",
+        "startRecording": "Жазу",
+        "stopRecording": "Дауыстық AI",
+        "recordingNow": "Жазылып жатыр...",
+        "tapToSpeak": "Дауыстық AI",
+        "session": "Дауыстық AI",
+        "recording": "Дауыстық AI",
+        "audioSize": "Дауыстық AI",
+        "audioDuration": "Дауыстық AI",
+        "audioCapturedNotice": "Дауыстық AI",
+        "transcriptPlaceholder": "Дауыстық AI",
+        "ttsTitle": "Дауыстық AI",
+        "ttsPlaceholder": "Дауыстық AI",
+        "playLastTts": "Дауыстық AI",
+        "noFakeTts": "Дауыстық AI",
+        "runtimeLog": "Дауыстық AI",
+        "noEvents": "Дауыстық AI",
+        "sessionStopped": "Дауыстық AI",
+        "quickInvokeSent": "Дауыстық AI",
+        "transcriptReady": "Дауыстық AI",
+        "state": {
+          "idle": "Дауыстық AI",
+          "processing": "Дауыстық AI",
+          "requesting_permission": "Дауыстық AI",
+          "recording": "Дауыстық AI",
+          "error": "Қате",
+          "playing": "Дауыстық AI"
         },
+        "log": {
+          "info": "ақпарат",
+          "bridge_bound": "Дауыстық AI",
+          "recording_started": "Дауыстық AI",
+          "audio_captured": "Дауыстық AI",
+          "transcript_ready": "Дауыстық AI",
+          "tts_requested": "Дауыстық AI",
+          "playback_started": "Дауыстық AI",
+          "interrupted": "Дауыстық AI",
+          "error": "Қате"
+        }
       },
-
-      translation: {
-        title: "title",
-        subtitle: "subtitle",
-        heroEyebrow: "hero",
-        realtimeTitle: "нақты уақыт",
-        premium:
-          "Premium",
-        source: "дереккөз",
-        sourcePlaceholder: "дереккөз үшін кеңес",
-        textPhotoCamera: "text фото камера",
-        target: "мақсат",
-        targetPlaceholder: "мақсат үшін кеңес",
-        translate: "аудару",
-        result: "result",
-        inputPlaceholder: "input үшін кеңес",
-        outputPlaceholder: "output үшін кеңес",
-        camera: "камера",
-        photo: "фото",
-        from: "кімнен",
-        to: "to",
-        detect: "detect",
-        selectLanguage: "таңдау тіл",
-        searchLanguage: "іздеу тіл",
-        permissionCamera: "permission камера",
-        permissionPhoto: "permission фото",
-        emptyText: "бос сипаттамасы",
-        noOutput: "жоқ output",
-        sameLanguage: "same тіл",
-        photoReady: "фото дайын",
-        cameraReady: "камера дайын",
-        detectCannotSwap: "detect cannot ауыстыру",
-        noImageOutput: "жоқ image output",
-        detectedText: "detected сипаттамасы",
-        messengerPathTitle: "Messenger path",
-        messengerReady:
-          "Messenger дайын",
-        imageProcessing: "image processing",
-        textProcessing: "text processing",
-        metaDetected: "meta detected",
+      "settings": {
+        "title": "Баптаулар",
+        "heroEyebrow": "AI параметрлері",
+        "heroTitle": "Баптаулар",
+        "heroDescription": "Баптаулар Ақпарат",
+        "subtitle": "Баптаулар",
+        "metricApi": "API",
+        "metricSource": "Дереккөз",
+        "sourceLocalContract": "local_contract",
+        "connectionDetails": "Баптаулар",
+        "sections": "Ақпарат",
+        "safetyTitle": "Тақырып",
+        "safetyDescription": "Сипаттама Ақпарат",
+        "providerTitle": "Баптаулар",
+        "providerDescription": "Баптаулар Ақпарат",
+        "controlTitle": "Тақырып",
+        "profileOwnerTitle": "Профиль",
+        "profileOwnerDescription": "Профиль Ақпарат",
+        "note": "Ақпарат"
       },
-
-      voice: {
-        title: "title",
-        subtitle: "subtitle",
-        nativeBridge: "native bridge",
-        sttTtsBridgeTitle: "stt tts bridge",
-        realBridgeDescription:
-          "Нақты мобильді bridge: микрофон жазбасы, native дауыс оқиғалары, transcript беру және audio URL ойнату. Text-only TTS жалған жасалмайды.",
-        bind: "bind",
-        start: "бастау",
-        stop: "тоқтату",
-        invoke: "invoke",
-        interrupt: "interrupt",
-        startRecording: "бастау recording",
-        stopRecording: "тоқтату recording",
-        recordingNow: "recording now",
-        tapToSpeak: "tap to speak",
-        session: "session",
-        recording: "recording",
-        audioSize: "аудио size",
-        audioDuration: "аудио duration",
-        audioCapturedNotice:
-          "аудио captured notice",
-        transcriptPlaceholder: "transcript үшін кеңес",
-        ttsTitle: "tts",
-        ttsPlaceholder: "tts үшін кеңес",
-        playLastTts: "play соңғы tts",
-        noFakeTts:
-          "Жалған дауыс жоқ: audio playback тек backend/native TTS audio URL қайтарғанда ғана жұмыс істейді. expo-speech немесе native TTS module қосылғанша Text-only TTS мәтін ретінде көрсетіледі.",
-        runtimeLog: "runtime log",
-        noEvents: "жоқ events",
-        sessionStopped: "session stopped",
-        quickInvokeSent: "quick invoke sent",
-        transcriptReady: "transcript дайын",
-        state: {
-          idle: "idle",
-          processing: "processing",
-          requesting_permission: "requesting permission",
-          recording: "recording",
-          error: "error",
-          playing: "playing",
+      "memory": {
+        "title": "Баптаулар",
+        "subtitle": "Баптаулар",
+        "privacyMode": "Құпиялық",
+        "strict": "Ақпарат",
+        "balanced": "Ақпарат",
+        "adaptive": "Ақпарат",
+        "addInstruction": "Ақпарат",
+        "instructions": "Ақпарат",
+        "instructionPlaceholder": "Іздеу",
+        "noAccusation": "Ақпарат",
+        "modeSaved": {
+          "strict": "Ақпарат",
+          "balanced": "Ақпарат",
+          "adaptive": "Ақпарат"
         },
-        log: {
-          info: "ақпарат",
-          bridge_bound: "bridge bound",
-          recording_started: "recording started",
-          audio_captured: "аудио captured",
-          transcript_ready: "transcript дайын",
-          tts_requested: "tts requested",
-          playback_started: "playback started",
-          interrupted: "interrupted",
-          error: "error",
-        },
+        "instructionSaved": "Ақпарат"
       },
-
-      settings: {
-        title: "title",
-        heroEyebrow: "hero",
-        heroTitle: "hero",
-        heroDescription:
-          "hero сипаттамасы",
-        subtitle: "subtitle",
-        metricApi: "metric api",
-        metricSource: "metric дереккөз",
-        sourceLocalContract: "дереккөз local contract",
-        connectionDetails: "connection мәліметтер",
-        sections: "sections",
-        safetyTitle: "safety",
-        safetyDescription:
-          "safety сипаттамасы",
-        providerTitle: "provider",
-        providerDescription:
-          "provider сипаттамасы",
-        controlTitle: "control",
-        profileOwnerTitle: "профиль owner",
-        profileOwnerDescription:
-          "профиль owner сипаттамасы",
-        note: "note",
+      "premium": {
+        "title": "Премиум",
+        "heroEyebrow": "Премиум",
+        "subtitle": "Премиум",
+        "accessTitle": "Премиум",
+        "noFakePayment": "Премиум",
+        "realtimeCallTranslationTitle": "нақты уақыт қоңырау аударма",
+        "realtimeTranslationTitle": "нақты уақыт аударма",
+        "realtimeTranslationDescription": "нақты уақыт аударма сипаттамасы",
+        "mediaTranslationTitle": "медиа аударма",
+        "mediaTranslationDescription": "медиа аударма сипаттамасы",
+        "advancedAssistantActionsTitle": "Премиум",
+        "safeActionsTitle": "Премиум",
+        "safeActionsDescription": "Премиум",
+        "openProfilePremium": "Премиум",
+        "brandText": "Ақпарат Ақпарат",
+        "badge": "Премиум",
+        "safeBadge": "Премиум"
       },
-
-      memory: {
-        title: "title",
-        subtitle: "subtitle",
-        privacyMode: "құпиялылық mode",
-        strict: "strict",
-        balanced: "balanced",
-        adaptive: "adaptive",
-        addInstruction: "қосу instruction",
-        instructions: "instructions",
-        instructionPlaceholder: "instruction үшін кеңес",
-        noAccusation:
-          "жоқ accusation",
-        modeSaved: {
-          strict: "strict",
-          balanced: "balanced",
-          adaptive: "adaptive",
-        },
-        instructionSaved:
-          "instruction saved",
+      "activity": {
+        "historyTitle": "тарих",
+        "historySubtitle": "тарих сипаттамасы",
+        "tasksTitle": "тапсырмалар",
+        "tasksSubtitle": "тапсырмалар сипаттамасы",
+        "emptyTitle": "бос",
+        "emptyText": "бос сипаттамасы"
       },
-
-      premium: {
-        title: "title",
-        heroEyebrow: "hero",
-        subtitle: "subtitle",
-        accessTitle: "access",
-        noFakePayment:
-          "Төлем мұнда жалған жасалмайды. Белсендіру нақты Premium/COIN растау ағымынан келуі керек.",
-        realtimeCallTranslationTitle: "нақты уақыт қоңырау аударма",
-        realtimeTranslationTitle: "нақты уақыт аударма",
-        realtimeTranslationDescription:
-          "нақты уақыт аударма сипаттамасы",
-        mediaTranslationTitle: "медиа аударма",
-        mediaTranslationDescription:
-          "медиа аударма сипаттамасы",
-        advancedAssistantActionsTitle: "advanced көмекші әрекеттер",
-        safeActionsTitle: "safe әрекеттер",
-        safeActionsDescription:
-          "safe әрекеттер сипаттамасы",
-        openProfilePremium: "ашу профиль Premium",
-        brandText: "brand сипаттамасы",
-        badge: "badge",
-        safeBadge: "safe badge",
-      },
-
-      activity: {
-        historyTitle: "тарих",
-        historySubtitle: "тарих сипаттамасы",
-        tasksTitle: "тапсырмалар",
-        tasksSubtitle: "тапсырмалар сипаттамасы",
-        emptyTitle: "бос",
-        emptyText:
-          "бос сипаттамасы",
-      },
-
-      error: {
-        ai_mobile_api_base_url_missing: "AI mobile api base url missing",
-        ai_mobile_auth_required:
-          "AI mobile auth міндетті",
-        ai_mobile_request_failed: "AI mobile сұрау сәтсіз",
-        ai_mobile_network_error:
-          "AI mobile желі error",
-        ai_voice_microphone_permission_denied:
-          "AI дауыс микрофон permission denied",
-        ai_voice_recording_already_active:
-          "AI дауыс recording already active",
-        ai_voice_recording_not_active: "AI дауыс recording not active",
-        ai_voice_playback_command_missing: "AI дауыс playback command missing",
-        ai_voice_empty_tts_text: "AI дауыс бос tts text",
-        ai_voice_audio_url_missing:
-          "AI дауыс аудио url missing",
-      },
-    },
-  },
+      "error": {
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "Сұрау орындалмады. Қайталап көріңіз.",
+        "ai_mobile_network_error": "Сұрау орындалмады. Қайталап көріңіз.",
+        "ai_voice_microphone_permission_denied": "Дауыстық AI",
+        "ai_voice_recording_already_active": "Дауыстық AI",
+        "ai_voice_recording_not_active": "Дауыстық AI",
+        "ai_voice_playback_command_missing": "Дауыстық AI",
+        "ai_voice_empty_tts_text": "Дауыстық AI",
+        "ai_voice_audio_url_missing": "Дауыстық AI"
+      }
+    }
+  }
 } as const;
 
 export default KK_AI_MOBILE_LOCALE;

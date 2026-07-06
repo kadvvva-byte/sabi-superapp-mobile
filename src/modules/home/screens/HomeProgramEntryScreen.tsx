@@ -61,7 +61,7 @@ type HomeProgramEntryLabels = {
 
 const PROGRAM_ENTRY_CONFIG: Record<HomeProgramEntryKind, HomeProgramEntryConfig> = {
   marketplace: {
-    title: "Marketplace",
+    title: "SilkRoad",
     programCode: "marketplace",
     route: "/marketplace",
     icon: ShoppingBag,

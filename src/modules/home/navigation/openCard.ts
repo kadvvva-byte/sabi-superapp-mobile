@@ -53,10 +53,7 @@ export default function openCard(
       break;
 
     case "cast":
-      Alert.alert(
-        "Wi-Fi Cast",
-        "Screen casting will open from a separate module."
-      );
+      router.push("/wifi-cast" as never);
       break;
 
     case "games":

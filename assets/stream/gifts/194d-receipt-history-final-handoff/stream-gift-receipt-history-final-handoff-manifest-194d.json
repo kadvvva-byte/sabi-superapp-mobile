@@ -1,0 +1,37 @@
+{
+  "version": "STREAM-GAME-GIFTS-194D",
+  "status": "receipt_history_final_handoff_passed_user_facing_only",
+  "generatedAtUtc": "2026-06-10T17:51:32.215043+00:00",
+  "giftCount": 24,
+  "coverage": {
+    "receiptPreviewCoverage": 24,
+    "historyPreviewCoverage": 24,
+    "timelinePreviewCoverage": 24,
+    "localHistoryFilterCoverage": 24,
+    "finalQaCoverage": 24,
+    "finalHandoffCoverage": 24,
+    "filterCount": 4
+  },
+  "safety": {
+    "userFacingOnly": true,
+    "evidenceOnly": true,
+    "streamScreenChangedNow": false,
+    "indexChangedNow": false,
+    "backendRuntimeEnabledNow": false,
+    "dbReadRuntimeEnabledNow": false,
+    "dbWriteRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "sendRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  },
+  "sourceFilesAdded": [
+    "src/modules/stream/gifts/streamPremiumGiftReceiptHistoryFinalHandoff194D.ts"
+  ],
+  "uiFilesChangedNow": []
+}

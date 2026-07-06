@@ -1,3 +1,14 @@
+﻿const SABI_WALLET_CLIENT_POLICY_FIX4: any = {
+  walletMode: "restricted",
+  localWalletVisible: false,
+  cryptoWalletVisible: false,
+  cryptoCardVisible: false,
+  stripeIssuingVisible: false,
+  stripeCryptoOnrampVisible: false,
+  stripeStablecoinPaymentsVisible: false,
+  stripeStablecoinBackedCardVisible: false,
+  cryptoCardServiceEnabled: false,
+};
 import React, { useMemo } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import { router } from "expo-router";
@@ -34,6 +45,7 @@ import {
   useWalletFoundation,
 } from "../../src/shared/wallet/wallet-foundation";
 import { getWalletHomeTexts } from "../../src/shared/wallet/wallet-i18n";
+import { getSabiMobilePolicy, isWalletHeroBlockVisibleForSabiPolicy, isWalletHubActionVisibleForSabiPolicy, isWalletQuickActionVisibleForSabiPolicy } from "../../src/shared/policy/sabiMobilePolicy";
 
 const ROUTES = {
   SEND: "/wallet/send-internal",
@@ -95,6 +107,8 @@ function SectionHeader({
   hint: string;
   colors: { text: string; textSecondary: string };
 }) {
+  const visibleWalletHubActions = walletHubActions.filter((item: { id?: string; hidden?: boolean; disabled?: boolean; title?: string; subtitle?: string; label?: string }) => isWalletHubActionVisibleForSabiPolicy((item.id ?? ""), SABI_WALLET_CLIENT_POLICY_FIX4));
+
   return (
     <View style={styles.sectionHeader}>
       <Text style={[styles.sectionTitle, { color: colors.text }]}>{title}</Text>
@@ -215,8 +229,8 @@ function HeroBanner({
         ) : null}
 
         <View style={styles.heroPillsRow}>
-          {block.pills.map((pill) => (
-            <View key={pill} style={styles.heroInlinePill}>
+          {block.pills.map((pill, index) => (
+            <View key={`${block.id}-pill-${index}`} style={styles.heroInlinePill}>
               <Text style={styles.heroInlinePillText}>{pill}</Text>
             </View>
           ))}
@@ -297,10 +311,13 @@ function Divider({ color }: { color: string }) {
   return <View style={[styles.divider, { backgroundColor: color }]} />;
 }
 
+
+const walletHubActions: Array<{ id?: string; title?: string; subtitle?: string; label?: string; disabled?: boolean; hidden?: boolean }> = [];
 export default function WalletHomeScreen() {
   const { colors, radius } = useSabiTheme();
   const { t } = useI18n();
   const { snapshot, loading } = useWalletFoundation();
+  const SABI_WALLET_CLIENT_POLICY_FIX4 = useMemo(() => getSabiMobilePolicy(), []);
 
   const texts = useMemo(() => getWalletHomeTexts(t), [t]);
 
@@ -374,6 +391,8 @@ export default function WalletHomeScreen() {
       route: ROUTES.MY_SABI_ID,
     },
   ];
+
+  const visibleQuickActions = quickActions.filter((item) => isWalletQuickActionVisibleForSabiPolicy((item.id ?? ""), SABI_WALLET_CLIENT_POLICY_FIX4));
 
   const heroBlocks: HeroBlock[] = [
     {
@@ -455,6 +474,8 @@ export default function WalletHomeScreen() {
       pills: [texts.pillProvider, texts.pillCustody, texts.pillAssets],
     },
   ];
+
+  const visibleHeroBlocks = heroBlocks.filter((item) => isWalletHeroBlockVisibleForSabiPolicy((item.id ?? ""), SABI_WALLET_CLIENT_POLICY_FIX4));
 
   const walletHubActions: HubAction[] = [
     {
@@ -648,9 +669,9 @@ export default function WalletHomeScreen() {
           colors={colors}
         />
         <View style={styles.quickActionsRow}>
-          {quickActions.map((item) => (
+          {visibleQuickActions.map((item) => (
             <QuickActionButton
-              key={item.id}
+              key={(item.id ?? "")}
               title={item.title}
               icon={item.icon}
               onPress={() => router.push(item.route as never)}
@@ -666,7 +687,7 @@ export default function WalletHomeScreen() {
           colors={colors}
         />
         <View style={styles.heroGrid}>
-          {heroBlocks.map((block) => (
+          {visibleHeroBlocks.map((block) => (
             <HeroBanner key={block.id} block={block} radius={radius} />
           ))}
         </View>
@@ -747,7 +768,7 @@ export default function WalletHomeScreen() {
         <View style={styles.actionGrid}>
           {walletHubActions.map((item) => (
             <ActionCard
-              key={item.id}
+              key={(item.id ?? "")}
               title={item.title}
               subtitle={item.subtitle}
               icon={item.icon}
@@ -1382,3 +1403,6 @@ const styles = StyleSheet.create({
     marginVertical: 12,
   },
 });
+
+
+

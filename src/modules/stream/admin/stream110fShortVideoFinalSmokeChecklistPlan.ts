@@ -1,0 +1,22 @@
+export const stream110fShortVideoFinalSmokeChecklistPlan = {
+  version: "STREAM-110F",
+  title: "Short video final local smoke checklist",
+  scope: "Stream-only Shorts final smoke checklist before streamer/profile setup. No Wallet, payments, gifts, monetization, server, provider calls, or fake publish/playback/engagement.",
+  goals: [
+    "Verify Shorts draft metadata, source intent, timeline editor, cover/captions review, publish-readiness, feed acceptance, playback controls and engagement states.",
+    "Prepare explicit profile setup handoff without pretending Shorts are published.",
+    "Keep storage/CDN/backend/Admin requirements visible as provider blockers.",
+  ],
+  touchedAreas: ["src/modules/stream/mobile", "src/modules/stream/admin", "src/modules/stream/index.ts"],
+  forbiddenAreas: ["Wallet", "Messenger", "Calls", "server/foundation", "backend finance", "payments", "gifts", "monetization"],
+  fakeAllowed: false,
+  fakePublishAllowed: false,
+  fakePlaybackAllowed: false,
+  fakeEngagementAllowed: false,
+  fakeProviderAllowed: false,
+  paymentsAllowedNow: false,
+  giftsAllowedNow: false,
+  monetizationAllowedNow: false,
+  walletBridgeRequiredNow: false,
+  nextPhase: "streamer_profile_setup",
+} as const;

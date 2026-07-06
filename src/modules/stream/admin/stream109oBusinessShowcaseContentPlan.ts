@@ -1,0 +1,46 @@
+export const stream109oBusinessShowcaseContentPlan = {
+  version: "STREAM-109O",
+  title: "Business Stream showcase/content controls",
+  scope: "stream-only-mobile-source",
+  touches: {
+    stream: true,
+    wallet: false,
+    messenger: false,
+    calls: false,
+    server: false,
+    foundation: false,
+    backendFinance: false,
+    payments: false,
+    gifts: false,
+    monetization: false,
+  },
+  guarantees: {
+    fakeLiveAllowed: false,
+    fakeOnAirAllowed: false,
+    fakeProviderAllowed: false,
+    fakeContentPublishAllowed: false,
+    fakeBusinessLaunchAllowed: false,
+    fakePaymentAllowed: false,
+    fakeGiftAllowed: false,
+    fakeMonetizationAllowed: false,
+  },
+  capabilities: [
+    "Business Stream showcase content items are tracked as real local drafts",
+    "Hero card, contact card, policy notice and demo segments expose readiness and compliance blockers",
+    "Business showcase content events are queued into the existing local realtime event queue without provider ACK",
+    "Publishing, catalog delivery, media delivery, Admin review, payments, gifts and monetization remain blocked until real contracts are connected",
+  ],
+  blockersKept: [
+    "backend_business_content_contract_required",
+    "media_business_content_provider_required",
+    "catalog_content_provider_required",
+    "admin_business_content_review_required",
+    "fake_content_publish_forbidden",
+    "fake_payment_forbidden",
+    "fake_gift_forbidden",
+    "fake_monetization_forbidden",
+  ],
+  nextStep: "109P — Business Stream presenter/showcase interaction sequence, still no payments/gifts/Wallet/server",
+} as const;
+
+export type Stream109oBusinessShowcaseContentPlan = typeof stream109oBusinessShowcaseContentPlan;

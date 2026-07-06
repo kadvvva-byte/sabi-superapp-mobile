@@ -1,4 +1,4 @@
-﻿import React, { useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import {
   Modal,
   Pressable,
@@ -11,6 +11,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { Ionicons } from "@expo/vector-icons";
 
 import { GIFT_CATEGORY_ORDER, getCurrentlyAvailableGiftCatalog } from "./giftCatalog";
+import { MessengerUnifiedGiftsReadinessPanel197V } from "./MessengerUnifiedGiftsReadinessPanel197V";
 import {
   GiftCatalogItem,
   GiftCatalogSection,
@@ -238,7 +239,7 @@ export default function GiftCatalogSheet({
               </Text>
               <Text style={styles.title}>Gift Catalog</Text>
               <Text style={styles.subtitle}>
-                Paid 3D gifts, reward games, storage and event entries.
+                Unified Stream + Messenger gift catalog. Real send is backend-ledger only.
               </Text>
             </View>
 
@@ -272,9 +273,11 @@ export default function GiftCatalogSheet({
             </View>
 
             <Text style={styles.balanceHint}>
-              Gifts are purchased in real time. Reward games use the shared engine.
+              Preview catalog only: no local fake purchase, no fake receiver balance, backend ledger required.
             </Text>
           </LinearGradient>
+
+          <MessengerUnifiedGiftsReadinessPanel197V accent={accent} />
 
           <ScrollView keyboardDismissMode="on-drag" keyboardShouldPersistTaps="handled"
             horizontal

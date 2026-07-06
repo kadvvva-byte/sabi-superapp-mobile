@@ -27,14 +27,22 @@ type AuthSession = {
   currentUserId: string | null;
 };
 
-const AI_MOBILE_API_VERSION = "AI-115.1" as const;
+const AI_MOBILE_API_VERSION = "AI-115.7-STEP69G" as const;
+const SABI_AI_PRODUCTION_API_BASE_URL = "https://sabi-superapp-api-7srquvexva-ew.a.run.app" as const;
 
 const AI_PROVIDER_GATEWAY_ROUTES = {
-  textTranslation: "/api/ai/translation/realtime/text",
+  textTranslation: "/api/ai/provider-gateway/translation/text",
+  textTranslationRealtimeFallback: "/api/ai/translation/realtime/text",
   imageTranslation: "/api/ai/provider-gateway/translation/image",
   manifest: "/api/ai/provider-gateway/manifest",
   health: "/api/ai/provider-gateway/health",
 } as const;
+
+const AI_ASSISTANT_LIVE_ROUTES = [
+  "/api/ai/ask",
+  "/api/ai/assistant/run",
+  "/api/ai/mobile-ui/assistant/message",
+] as const;
 
 type AiProviderGatewayManifest = {
   version: string;
@@ -183,25 +191,25 @@ function providerGatewayStatusText(manifest: AiProviderGatewayManifest | null): 
   const language = getAppLanguage();
 
   if (!manifest) {
-    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib bo‘lmadi.";
-    if (language.startsWith("ru")) return "Статус AI provider gateway пока не удалось проверить.";
+    if (language.startsWith("uz")) return "AI provider gateway holati hozircha tekshirib boвЂlmadi.";
+    if (language.startsWith("ru")) return "РЎС‚Р°С‚СѓСЃ AI provider gateway РїРѕРєР° РЅРµ СѓРґР°Р»РѕСЃСЊ РїСЂРѕРІРµСЂРёС‚СЊ.";
     return "AI provider gateway status could not be checked yet.";
   }
 
   if (manifest.status === "ready" && manifest.translationConfigured) {
     if (language.startsWith("uz")) return "AI provider gateway tayyor. Real tarjima provayderi server orqali ulangan.";
-    if (language.startsWith("ru")) return "AI provider gateway готов. Реальный провайдер перевода подключён через сервер.";
+    if (language.startsWith("ru")) return "AI provider gateway РіРѕС‚РѕРІ. Р РµР°Р»СЊРЅС‹Р№ РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РїРѕРґРєР»СЋС‡С‘РЅ С‡РµСЂРµР· СЃРµСЂРІРµСЂ.";
     return "AI provider gateway is ready. A real translation provider is connected through the server.";
   }
 
   if (!manifest.translationConfigured) {
-    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima o‘chirilgan.";
-    if (language.startsWith("ru")) return "AI провайдер перевода на сервере пока не подключён. Локальный резервный перевод отключён.";
+    if (language.startsWith("uz")) return "AI tarjima provayderi serverda hali ulanmagan. Mahalliy zaxira tarjima oвЂchirilgan.";
+    if (language.startsWith("ru")) return "AI РїСЂРѕРІР°Р№РґРµСЂ РїРµСЂРµРІРѕРґР° РЅР° СЃРµСЂРІРµСЂРµ РїРѕРєР° РЅРµ РїРѕРґРєР»СЋС‡С‘РЅ. Р›РѕРєР°Р»СЊРЅС‹Р№ СЂРµР·РµСЂРІРЅС‹Р№ РїРµСЂРµРІРѕРґ РѕС‚РєР»СЋС‡С‘РЅ.";
     return "AI translation provider is not connected on the server yet. Local offline translation is disabled.";
   }
 
   if (language.startsWith("uz")) return `AI provider gateway holati: ${manifest.status}.`;
-  if (language.startsWith("ru")) return `Статус AI provider gateway: ${manifest.status}.`;
+  if (language.startsWith("ru")) return `РЎС‚Р°С‚СѓСЃ AI provider gateway: ${manifest.status}.`;
   return `AI provider gateway status: ${manifest.status}.`;
 }
 
@@ -296,10 +304,93 @@ function normalizeGatewayError(body: unknown, status: number): AiMobileApiError 
   return makeError(code, message, status);
 }
 
-function getEnvApiBaseUrl(): string | null {
-  const value = process.env.EXPO_PUBLIC_API_BASE_URL;
+function normalizeAiBaseUrl(value: unknown): string | null {
   if (typeof value !== "string" || !value.trim()) return null;
-  return value.trim().replace(/\/+$/, "");
+  const raw = value.trim();
+  const withProtocol = /^https?:\/\//i.test(raw) ? raw : `http://${raw}`;
+
+  try {
+    const parsed = new URL(withProtocol);
+    parsed.pathname = parsed.pathname.replace(/\/+$/, "");
+    parsed.search = "";
+    parsed.hash = "";
+    return parsed.toString().replace(/\/+$/, "");
+  } catch {
+    return withProtocol.replace(/\/+$/, "");
+  }
+}
+
+function addAiNginxBaseUrlCandidate(value: string | null): string | null {
+  if (!value) return null;
+
+  try {
+    const parsed = new URL(value);
+    const isHttp = parsed.protocol === "http:" || parsed.protocol === "https:";
+    if (!isHttp) return null;
+
+    if (parsed.hostname !== "https://sabi-superapp-api-7srquvexva-ew.a.run.app") return null;
+
+    parsed.port = "";
+    parsed.pathname = parsed.pathname.replace(/\/+$/, "");
+    parsed.search = "";
+    parsed.hash = "";
+    return parsed.toString().replace(/\/+$/, "");
+  } catch {
+    return null;
+  }
+}
+
+function pushUniqueAiBaseUrl(target: string[], value: unknown, options?: { alsoNginxFallback?: boolean }) {
+  const normalized = normalizeAiBaseUrl(value);
+  if (!normalized) return;
+
+  const nginxCandidate = options?.alsoNginxFallback === false ? null : addAiNginxBaseUrlCandidate(normalized);
+
+  if (nginxCandidate && !target.includes(nginxCandidate)) {
+    target.push(nginxCandidate);
+  }
+
+  if (!target.includes(normalized)) {
+    target.push(normalized);
+  }
+}
+
+function getEnvApiBaseUrl(): string | null {
+  return (
+    normalizeAiBaseUrl(process.env.EXPO_PUBLIC_AI_API_BASE_URL) ||
+    normalizeAiBaseUrl(process.env.EXPO_PUBLIC_API_BASE_URL) ||
+    normalizeAiBaseUrl(process.env.EXPO_PUBLIC_AUTH_API_BASE_URL) ||
+    normalizeAiBaseUrl(process.env.EXPO_PUBLIC_SOCKET_BASE_URL) ||
+    SABI_AI_PRODUCTION_API_BASE_URL
+  );
+}
+
+function getAiMobileServerBaseUrlCandidates(session: AuthSession): string[] {
+  const candidates: string[] = [];
+
+  pushUniqueAiBaseUrl(candidates, SABI_AI_PRODUCTION_API_BASE_URL, { alsoNginxFallback: false });
+  pushUniqueAiBaseUrl(candidates, process.env.EXPO_PUBLIC_AI_API_BASE_URL);
+  pushUniqueAiBaseUrl(candidates, session.apiBaseUrl);
+  pushUniqueAiBaseUrl(candidates, process.env.EXPO_PUBLIC_API_BASE_URL);
+  pushUniqueAiBaseUrl(candidates, process.env.EXPO_PUBLIC_AUTH_API_BASE_URL);
+  pushUniqueAiBaseUrl(candidates, process.env.EXPO_PUBLIC_SOCKET_BASE_URL);
+
+  return candidates;
+}
+
+function shouldTryNextAiServerBaseUrl(error: AiMobileApiError): boolean {
+  if (!error.status) return true;
+  if (error.status === 404 || error.status === 405 || error.status === 502 || error.status === 503 || error.status === 504) return true;
+
+  const normalized = `${error.code} ${error.message}`.toLowerCase();
+  return (
+    normalized.includes("network") ||
+    normalized.includes("failed to fetch") ||
+    normalized.includes("connection") ||
+    normalized.includes("route_unavailable") ||
+    normalized.includes("gateway_unavailable") ||
+    normalized.includes("provider_gateway")
+  );
 }
 
 export function getAiMobileAuthSession(): AuthSession | null {
@@ -358,41 +449,70 @@ async function requestAiMobile<T>(
   }
 
   const appLanguage = getAppLanguage();
-  const url = `${session.apiBaseUrl}${path.startsWith("/") ? path : `/${path}`}`;
+  const normalizedPath = path.startsWith("/") ? path : `/${path}`;
+  const baseUrls = getAiMobileServerBaseUrlCandidates(session);
+  let lastError: AiMobileApiError | null = null;
 
-  try {
-    const response = await fetch(url, {
-      ...init,
-      headers: {
-        Accept: "application/json",
-        ...(isFormDataBody ? {} : { "Content-Type": "application/json" }),
-        "x-user-id": session.currentUserId,
-        "x-app-language": appLanguage,
-        "Accept-Language": appLanguage,
-        ...(session.accessToken ? { Authorization: `Bearer ${session.accessToken}` } : {}),
-        ...normalizeRequestHeaders(init?.headers),
-      },
-    });
+  for (const baseUrl of baseUrls) {
+    const url = `${baseUrl}${normalizedPath}`;
 
-    const body = await readResponseBody(response);
+    try {
+      const response = await fetch(url, {
+        ...init,
+        headers: {
+          Accept: "application/json",
+          ...(isFormDataBody ? {} : { "Content-Type": "application/json" }),
+          "x-user-id": session.currentUserId,
+          "x-sabi-user-id": session.currentUserId,
+          "x-ai-user-id": session.currentUserId,
+          "x-app-language": appLanguage,
+          "Accept-Language": appLanguage,
+          ...(session.accessToken ? { Authorization: `Bearer ${session.accessToken}` } : {}),
+          ...normalizeRequestHeaders(init?.headers),
+        },
+      });
 
-    if (!response.ok) {
-      return {
-        ok: false,
-        error: normalizeGatewayError(body, response.status),
-      };
-    }
+      const body = await readResponseBody(response);
 
-    return { ok: true, data: body as T };
-  } catch (error) {
-    return {
-      ok: false,
-      error: makeError(
+      if (!response.ok) {
+        const error = normalizeGatewayError(body, response.status);
+        lastError = {
+          ...error,
+          message: error.message,
+        };
+
+        if (shouldTryNextAiServerBaseUrl(error) && baseUrl !== baseUrls[baseUrls.length - 1]) {
+          continue;
+        }
+
+        return {
+          ok: false,
+          error: lastError,
+        };
+      }
+
+      return { ok: true, data: body as T };
+    } catch (error) {
+      lastError = makeError(
         "ai_mobile_network_error",
         error instanceof Error ? error.message : String(error ?? "network error"),
-      ),
-    };
+      );
+
+      if (baseUrl !== baseUrls[baseUrls.length - 1]) {
+        continue;
+      }
+    }
   }
+
+  return {
+    ok: false,
+    error:
+      lastError ??
+      makeError(
+        "ai_mobile_network_error",
+        "Could not connect to the AI server.",
+      ),
+  };
 }
 
 async function ensureAiMobileTranslationConsent(): Promise<void> {
@@ -582,6 +702,352 @@ function mapProviderHint(
   return "yandex";
 }
 
+
+function isCompatibilityAssistantRouteError(error: AiMobileApiError): boolean {
+  if (error.status === 404 || error.status === 405) return true;
+  const normalized = `${error.code} ${error.message}`.toLowerCase();
+  return (
+    normalized.includes("not_found") ||
+    normalized.includes("not found") ||
+    normalized.includes("cannot post") ||
+    normalized.includes("method not allowed") ||
+    normalized.includes("ai_mobile_http_404") ||
+    normalized.includes("ai_mobile_http_405")
+  );
+}
+
+
+function normalizeConversationHistory(input: AiMobileAssistantMessageInput): Array<{ role: string; text: string; createdAt?: string | null }> {
+  return (input.conversationHistory ?? [])
+    .filter((item) => item && typeof item.text === "string" && item.text.trim().length > 0)
+    .slice(-12)
+    .map((item) => ({
+      role: item.role,
+      text: item.text.trim().slice(0, 900),
+      createdAt: typeof item.createdAt === "string" ? item.createdAt : null,
+    }));
+}
+
+function formatConversationHistoryForPrompt(input: AiMobileAssistantMessageInput): string {
+  const history = normalizeConversationHistory(input);
+  if (!history.length) return "No previous messages in this mobile chat yet.";
+
+  return history
+    .map((item, index) => {
+      const role = item.role === "assistant" ? "Sabi AI" : item.role === "user" ? "User" : "System";
+      return `${index + 1}. ${role}: ${item.text}`;
+    })
+    .join("\n");
+}
+
+// STEP73A_SELECTED_LANGUAGE_LOCK:
+// Normalize the Profile/App language once and pass it through every AI route.
+// The assistant must not switch languages based on text auto-detection.
+function normalizeAssistantLocale(value: string): string {
+  const clean = value.trim().replace(/_/g, "-").toLowerCase();
+  if (clean.startsWith("ru")) return "ru";
+  if (clean.startsWith("en")) return "en";
+  if (clean.startsWith("de")) return "de";
+  if (clean.startsWith("uz")) return "uz";
+  if (clean.startsWith("tr")) return "tr";
+  if (clean.startsWith("kk") || clean.startsWith("kz")) return "kk";
+  if (clean.startsWith("zh") || clean === "cn" || clean.startsWith("cmn")) return "zh";
+  if (clean.startsWith("fr")) return "fr";
+  if (clean.startsWith("es")) return "es";
+  if (clean.startsWith("ar")) return "ar";
+  if (clean.startsWith("he")) return "he";
+  if (clean.startsWith("ja")) return "ja";
+  if (clean.startsWith("ko")) return "ko";
+  if (clean.startsWith("az")) return "az";
+  if (clean.startsWith("tg")) return "tg";
+  if (clean.startsWith("tk")) return "tk";
+  if (clean.startsWith("ky")) return "ky";
+  if (clean.startsWith("uk")) return "uk";
+  if (clean.startsWith("be")) return "be";
+  if (clean === "fa-af" || clean.startsWith("fa")) return "fa-AF";
+  if (clean.startsWith("ps")) return "ps";
+  if (clean.startsWith("ur")) return "ur";
+  if (clean.startsWith("hi")) return "hi";
+  if (clean.startsWith("am")) return "am";
+  if (clean.startsWith("af")) return "af";
+  if (clean.startsWith("sw")) return "sw";
+  return clean || "en";
+}
+
+function plainArithmeticGuardLine(userMessage: string): string {
+  const message = userMessage.toLowerCase();
+  const hasMathSignal =
+    /\d+\s*([xС…Г—*В·]|СѓРјРЅРѕР¶|multiply|times|ko['вЂвЂ™`]?paytir|koвЂpaytir|РєСћРїР°Р№С‚РёСЂ)\s*\d+/.test(message) ||
+    /СЃРєРѕР»СЊРєРѕ\s+Р±СѓРґРµС‚\s+\d+/.test(message) ||
+    /what\s+is\s+\d+/.test(message) ||
+    /\d+\s*(\+|-|в€’|Г·|\/|:)\s*\d+/.test(message);
+  const hasCurrencySignal = /(РґРѕР»Р»Р°СЂ|dollar|usd|СЃСѓРј|so['вЂвЂ™`]?m|СЂСѓР±|ruble|eur|РµРІСЂРѕ|money|С†РµРЅР°|СЃС‚РѕРёРј|price|cost|РєРѕС€РµР»|wallet|coin|pay|РѕРїР»Р°С‚)/.test(message);
+
+  if (!hasMathSignal || hasCurrencySignal) {
+    return "For calculations, preserve the unit only when the user explicitly gave a unit.";
+  }
+
+  return "CRITICAL arithmetic rule for the current message: this is a plain math/calculation request, not a money request. Do NOT add dollars, USD, sums, rubles, coins, prices, wallet wording, or any currency unit. For multiplication, answer with the equation and number only, for example: 7 Г— 8 = 56.";
+}
+
+function buildSabiAssistantQualityPrompt(input: AiMobileAssistantMessageInput, locale: string): string {
+  const userMessage = input.message.trim();
+  const assistantMode = input.assistantMode ?? "chatgpt";
+  const normalizedLocale = normalizeAssistantLocale(locale);
+  const clientCapabilities = (input.clientCapabilities ?? []).filter(Boolean).join(", ") || "mobile app navigation, chat, translation, search, profile, wallet, QR";
+  const conversationHistory = formatConversationHistoryForPrompt(input);
+  const voiceSurface = String(input.source || "").includes("voice");
+  const webSearchLine = input.webSearchEnabled
+    ? "When the user asks for current internet/media/movie/news information, use the server provider if it is available. If live search is unavailable, say so honestly without faking results."
+    : "Do not pretend live internet search was performed when search is not enabled by the backend.";
+  const responseLengthLine = voiceSurface
+    ? "For voice responses, sound natural and human: usually 2-5 useful sentences. Do not answer like a robot, but do not make long lectures unless the user asks for detail."
+    : "For text chat responses, be more complete and human: give the direct answer first, then useful context, examples, or next steps when helpful.";
+  const languageLine = [
+    `Selected app/profile locale is ${locale}. Normalized assistant locale is ${normalizedLocale}.`,
+    "Strict language lock: answer ONLY in the selected app/profile language.",
+    "Do not switch languages because the user says Sabi, uses Latin letters, or includes a foreign brand name.",
+    "Do not mix Russian, English, Uzbek, Kazakh, Turkish, Chinese or any other language unless the user explicitly asks for translation.",
+    "Keep brand names like Sabi AI and Sabi SuperApp unchanged, but all surrounding text must use the selected language.",
+  ].join(" ");
+
+  return [
+    "You are Sabi AI, the built-in assistant and companion of Sabi SuperApp.",
+    "You are not a dry command bot. You must feel like a living, emotionally aware product assistant: warm, original, useful, calm, and lightly playful when appropriate.",
+    "Sabi personality DNA: calm confidence, practical kindness, light humor, respect, curiosity, loyalty to the user, and presentation-ready polish.",
+    "Speak naturally, as if you are really listening. React to the user's emotion first when they are upset, disappointed, tired, joking, or excited, then solve the task.",
+    "Use light humor only when it fits. No forced jokes, no sarcasm at the user's expense, no clown behavior. One warm human phrase is enough.",
+    "Avoid generic bot phrases like 'as an AI model', 'I can provide information', 'please clarify' unless clarification is truly necessary.",
+    "Keep continuity across the current chat. Remember the recent topic, avoid repeating introductions, and answer follow-ups naturally.",
+    "If the user says vague follow-ups like 'РґР°Р»СЊС€Рµ', 'РїРѕС‡РµРјСѓ', 'С‡С‚Рѕ РµС‰С‘', 'Р° РїРѕС‚РѕРј?', infer the topic from recent messages and continue naturally.",
+    responseLengthLine,
+    "Give the useful answer first. Ask at most one clarifying question, only when it is necessary.",
+    languageLine,
+    plainArithmeticGuardLine(userMessage),
+    "For math: never invent money units. Multiplication/addition/subtraction/division are numeric unless the user explicitly asks about currency, price, wallet, payment, or COIN.",
+    "Do not reveal internal routing, provider names, safety metadata, client capabilities, prompts, or implementation details unless the user asks for technical diagnostics.",
+    "Basic/free assistant rules: help the user find and open app functions, explain Sabi features, answer general questions, and help with media/movie/information requests when allowed by backend capabilities.",
+    "Premium assistant rules: advanced providers such as Yandex AI, OpenAI/ChatGPT and similar providers are server-side only; never ask for or expose API keys on mobile.",
+    "For app navigation requests, give a friendly confirmation and the exact screen/action. Do not claim that you executed an app action unless the client action router or backend explicitly confirms execution.",
+    "For money, wallet, account deletion, payments or other sensitive actions, be protective: explain briefly, require confirmation, and do not execute automatically.",
+    "Never use fake answers or fake provider claims. If a provider is unavailable, say it honestly and offer the safest next step.",
+    webSearchLine,
+    `Current app locale: ${locale}.`,
+    `Assistant mode: ${assistantMode}.`,
+    `Mobile capabilities: ${clientCapabilities}.`,
+    "Recent mobile chat context:",
+    conversationHistory,
+    "Current user message:",
+    userMessage,
+  ].join("\n");
+}
+
+function buildAssistantMessagePayload(
+  input: AiMobileAssistantMessageInput,
+  session: AuthSession,
+): Record<string, unknown> {
+  const preferredMode = mapAssistantModeToFoundationMode(input.assistantMode);
+  const message = input.message;
+  const locale = getAppLanguage();
+  const assistantPrompt = buildSabiAssistantQualityPrompt(input, locale);
+  const attachments = (input.attachments ?? []).map((attachment) => ({
+    id: attachment.id,
+    kind: attachment.kind,
+    uri: attachment.uri,
+    name: attachment.name,
+    mimeType: attachment.mimeType,
+    sizeBytes: attachment.size,
+    metadata: attachment.raw ?? {},
+  }));
+
+  return {
+    userId: session.currentUserId,
+    user_id: session.currentUserId,
+    actorUserId: session.currentUserId,
+    actorId: session.currentUserId,
+    requesterUserId: session.currentUserId,
+    // STEP72A: keep the provider prompt as the real user message.
+    // The long Sabi personality/instruction text must travel only as systemPrompt/instructions.
+    // Sending assistantPrompt as prompt made /api/ai/ask answer the instruction block instead of the user.
+    prompt: message,
+    message,
+    question: message,
+    input: message,
+    text: message,
+    userMessage: message,
+    originalMessage: message,
+    systemPrompt: assistantPrompt,
+    instructions: assistantPrompt,
+    assistantQualityProfile: {
+      name: "Sabi AI",
+      answerStyle: "direct_useful_assistant",
+      basicTier: true,
+      premiumTierServerSideOnly: true,
+      fakeAnswersAllowed: false,
+      mobileSecretsAllowed: false,
+    },
+    locale,
+    language: locale,
+    targetLanguage: locale,
+    responseLanguage: locale,
+    selectedAppLanguage: locale,
+    source: input.source ?? "text",
+    surface: String(input.source || "").includes("voice") ? "assistant_voice" : "assistant_chat",
+    mode: preferredMode,
+    preferredMode,
+    assistantMode: input.assistantMode ?? "chatgpt",
+    provider: "yandex",
+    preferredProvider: "yandex",
+    providerHint: "yandex",
+    attemptedProviders: ["yandex"],
+    gatewayRequired: true,
+    allowFallback: false,
+    fakeFallbackAllowed: false,
+    mobileSecretsAllowed: false,
+    webSearchEnabled: Boolean(input.webSearchEnabled),
+    voiceControlEnabled: Boolean(input.voiceOutput?.enabled),
+    attachments,
+    conversationHistory: normalizeConversationHistory(input),
+    clientCapabilities: input.clientCapabilities ?? [],
+    autoExecute: false,
+    client: "mobile",
+    version: AI_MOBILE_API_VERSION,
+    metadata: {
+      safetyPolicy: input.safetyPolicy,
+      providerRoute: input.providerRoute,
+      safetyApproval: input.safetyApproval,
+      voiceOutput: input.voiceOutput,
+      selectedAppLanguage: locale,
+      responseLanguage: locale,
+      arithmeticCurrencyGuard: true,
+    },
+  };
+}
+
+function buildAssistantRoutePayload(
+  route: (typeof AI_ASSISTANT_LIVE_ROUTES)[number],
+  payload: Record<string, unknown>,
+): Record<string, unknown> {
+  if (route === "/api/ai/ask") {
+    const userMessage =
+      toStringValue(payload.originalMessage) ||
+      toStringValue(payload.userMessage) ||
+      toStringValue(payload.message) ||
+      toStringValue(payload.prompt) ||
+      "";
+
+    return {
+      ...payload,
+      userId: payload.userId,
+      user_id: payload.userId,
+      actorUserId: payload.actorUserId ?? payload.userId,
+      // STEP72A: /api/ai/ask must receive the actual user request as prompt/message.
+      // The Sabi personality text remains in systemPrompt/instructions.
+      prompt: userMessage,
+      message: userMessage,
+      question: userMessage,
+      text: userMessage,
+      input: userMessage,
+      userMessage,
+      originalMessage: userMessage,
+      systemPrompt: payload.systemPrompt,
+      instructions: payload.instructions,
+      provider: "yandex",
+      preferredProvider: "yandex",
+      providerHint: "yandex",
+      providerKey: "yandex",
+    };
+  }
+
+  if (route === "/api/ai/mobile-ui/assistant/message") {
+    const userMessage =
+      toStringValue(payload.originalMessage) ||
+      toStringValue(payload.userMessage) ||
+      toStringValue(payload.message) ||
+      toStringValue(payload.prompt) ||
+      "";
+
+    return {
+      ...payload,
+      prompt: userMessage,
+      message: userMessage,
+      question: userMessage,
+      text: userMessage,
+      input: userMessage,
+      userMessage,
+      originalMessage: userMessage,
+      systemPrompt: payload.systemPrompt,
+      instructions: payload.instructions,
+      provider: "yandex",
+      preferredProvider: "yandex",
+      providerHint: "yandex",
+      providerKey: "yandex",
+      surface: payload.surface ?? "assistant_voice",
+    };
+  }
+
+  return {
+    ...payload,
+    provider: "yandex",
+    preferredProvider: "yandex",
+    providerHint: "yandex",
+    providerKey: "yandex",
+  };
+}
+
+async function requestAssistantLiveRoute(
+  route: (typeof AI_ASSISTANT_LIVE_ROUTES)[number],
+  payload: Record<string, unknown>,
+): Promise<AiMobileApiResult<Record<string, unknown>>> {
+  const result = await requestAiMobile<Record<string, unknown>>(route, {
+    method: "POST",
+    body: JSON.stringify(buildAssistantRoutePayload(route, payload)),
+  });
+
+  if (!result.ok) return result;
+
+  const data = toRecord(result.data) ?? { value: result.data };
+  return {
+    ok: true,
+    data: {
+      ...data,
+      mobileAssistantRoute: route,
+      fakeFallbackAllowed: false,
+      mobileSecretsAllowed: false,
+    },
+  };
+}
+
+async function sendAssistantMessageThroughLiveRoutes(
+  input: AiMobileAssistantMessageInput,
+  session: AuthSession,
+): Promise<AiMobileApiResult<Record<string, unknown>>> {
+  const payload = buildAssistantMessagePayload(input, session);
+  let lastCompatibilityError: AiMobileApiError | null = null;
+
+  for (const route of AI_ASSISTANT_LIVE_ROUTES) {
+    const result = await requestAssistantLiveRoute(route, payload);
+
+    if (result.ok) return result;
+
+    if (!isCompatibilityAssistantRouteError(result.error)) {
+      return result;
+    }
+
+    lastCompatibilityError = result.error;
+  }
+
+  return {
+    ok: false,
+    error:
+      lastCompatibilityError ??
+      makeError(
+        "ai_assistant_route_unavailable",
+        "AI assistant route is not available on the server.",
+      ),
+  };
+}
+
 function buildSafetyCategory(message: string): string {
   const lowered = message.toLowerCase();
 
@@ -589,9 +1055,9 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("send money") ||
     lowered.includes("transfer money") ||
     lowered.includes("pay") ||
-    lowered.includes("переведи деньги") ||
-    lowered.includes("отправь деньги") ||
-    lowered.includes("оплат")
+    lowered.includes("РїРµСЂРµРІРµРґРё РґРµРЅСЊРіРё") ||
+    lowered.includes("РѕС‚РїСЂР°РІСЊ РґРµРЅСЊРіРё") ||
+    lowered.includes("РѕРїР»Р°С‚")
   ) {
     return "money_movement";
   }
@@ -599,8 +1065,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send coin") ||
     lowered.includes("coin transfer") ||
-    lowered.includes("отправь коин") ||
-    lowered.includes("переведи coin")
+    lowered.includes("РѕС‚РїСЂР°РІСЊ РєРѕРёРЅ") ||
+    lowered.includes("РїРµСЂРµРІРµРґРё coin")
   ) {
     return "coin_movement";
   }
@@ -608,8 +1074,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("send message") ||
     lowered.includes("message to") ||
-    lowered.includes("отправь сообщение") ||
-    lowered.includes("напиши в чат")
+    lowered.includes("РѕС‚РїСЂР°РІСЊ СЃРѕРѕР±С‰РµРЅРёРµ") ||
+    lowered.includes("РЅР°РїРёС€Рё РІ С‡Р°С‚")
   ) {
     return "message_send";
   }
@@ -617,8 +1083,8 @@ function buildSafetyCategory(message: string): string {
   if (
     lowered.includes("delete account") ||
     lowered.includes("remove account") ||
-    lowered.includes("удалить аккаунт") ||
-    lowered.includes("удали аккаунт")
+    lowered.includes("СѓРґР°Р»РёС‚СЊ Р°РєРєР°СѓРЅС‚") ||
+    lowered.includes("СѓРґР°Р»Рё Р°РєРєР°СѓРЅС‚")
   ) {
     return "account_delete";
   }
@@ -627,12 +1093,12 @@ function buildSafetyCategory(message: string): string {
     lowered.includes("logout") ||
     lowered.includes("sign out") ||
     lowered.includes("log out") ||
-    lowered.includes("выйти из аккаунта")
+    lowered.includes("РІС‹Р№С‚Рё РёР· Р°РєРєР°СѓРЅС‚Р°")
   ) {
     return "account_security";
   }
 
-  if (lowered.includes("settings") || lowered.includes("настрой")) {
+  if (lowered.includes("settings") || lowered.includes("РЅР°СЃС‚СЂРѕР№")) {
     return "settings_change";
   }
 
@@ -852,6 +1318,184 @@ export function getAiMobilePrivacyMode(snapshot?: AiMobileSnapshot | null): AiMo
   return "balanced";
 }
 
+
+function normalizeTranslationTextForComparison(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[\s\u200B-\u200D\uFEFF]+/g, "")
+    .replace(/[.,!?;:'"`вЂ™вЂвЂњвЂќ()\[\]{}<>В«В»]/g, "")
+    .trim();
+}
+
+function looksLikeNonSemanticTranslation(sourceText: string, translatedText: string, targetLanguage: string, sourceLanguage?: string | null): boolean {
+  const source = normalizeTranslationTextForComparison(sourceText);
+  const translated = normalizeTranslationTextForComparison(translatedText);
+
+  if (!source || !translated) return false;
+  if (source === translated && targetLanguage !== (sourceLanguage || "auto")) return true;
+
+  const sourceLetters = source.replace(/[^a-zР°-СЏС‘С–С—С”Т“Т›СћТіКј']/gi, "");
+  const translatedLetters = translated.replace(/[^a-zР°-СЏС‘С–С—С”Т“Т›СћТіКј']/gi, "");
+  if (!sourceLetters || !translatedLetters) return false;
+
+  const minLength = Math.min(sourceLetters.length, translatedLetters.length);
+  if (minLength < 4) return false;
+
+  let samePosition = 0;
+  for (let index = 0; index < minLength; index += 1) {
+    if (sourceLetters[index] === translatedLetters[index]) samePosition += 1;
+  }
+
+  return samePosition / minLength > 0.82 && Math.abs(sourceLetters.length - translatedLetters.length) <= 2;
+}
+
+function buildStrictTranslationPrompt(input: {
+  text: string;
+  targetLanguage: string;
+  sourceLanguage?: string | null;
+}): string {
+  const sourceLanguage = input.sourceLanguage && input.sourceLanguage !== "auto" ? input.sourceLanguage : "auto-detect";
+  return [
+    "You are Sabi AI translation engine.",
+    "Translate the user's text semantically. Do not transliterate. Do not rewrite the same letters in another alphabet.",
+    "Return only the translated text, without explanations, quotes, labels, notes or language names.",
+    `Source language: ${sourceLanguage}.`,
+    `Target language: ${input.targetLanguage}.`,
+    "Text to translate:",
+    input.text,
+  ].join("\n");
+}
+
+async function translateTextViaStrictAssistantFallback(input: {
+  text: string;
+  targetLanguage: string;
+  sourceLanguage?: string | null;
+  session: AuthSession;
+}): Promise<AiMobileApiResult<AiMobileTranslationResult>> {
+  const prompt = buildStrictTranslationPrompt(input);
+  const result = await requestAiMobile<Record<string, unknown>>("/api/ai/ask", {
+    method: "POST",
+    body: JSON.stringify({
+      userId: input.session.currentUserId,
+      user_id: input.session.currentUserId,
+      actorUserId: input.session.currentUserId,
+      message: prompt,
+      prompt,
+      text: prompt,
+      question: prompt,
+      input: prompt,
+      provider: "yandex",
+      preferredProvider: "yandex",
+      providerHint: "yandex",
+      providerKey: "yandex",
+      allowFallback: false,
+      fakeFallbackAllowed: false,
+      mobileSecretsAllowed: false,
+      surface: "ai_strict_translation_fallback",
+      client: "mobile",
+      version: AI_MOBILE_API_VERSION,
+    }),
+  });
+
+  if (!result.ok) return { ok: false, error: result.error };
+
+  const root = toRecord(result.data) ?? {};
+  const data = toRecord(root.data) ?? root;
+  const answer = toRecord(data.answer) ?? {};
+  const translatedText =
+    toStringValue(answer.text) ||
+    toStringValue(data.text) ||
+    toStringValue(data.answer) ||
+    toStringValue(data.reply) ||
+    toStringValue(data.result) ||
+    null;
+
+  if (!translatedText) {
+    return {
+      ok: false,
+      error: makeError("ai_mobile_translation_missing_result", "Provider did not return translated text."),
+    };
+  }
+
+  return {
+    ok: true,
+    data: {
+      translatedText,
+      sourceLanguage: input.sourceLanguage || "auto",
+      targetLanguage: input.targetLanguage,
+      provider: "yandex",
+      inputKind: "text",
+      sourceText: input.text,
+      imageUri: null,
+      raw: data,
+    },
+  };
+}
+
+async function requestAiTextTranslationRoute(input: {
+  route: string;
+  text: string;
+  targetLanguage: string;
+  sourceLanguage?: string | null;
+  session: AuthSession;
+}): Promise<AiMobileApiResult<AiMobileTranslationResult>> {
+  const result = await requestAiMobile<Record<string, unknown>>(input.route, {
+    method: "POST",
+    body: JSON.stringify({
+      userId: input.session.currentUserId,
+      user_id: input.session.currentUserId,
+      actorUserId: input.session.currentUserId,
+      requesterUserId: input.session.currentUserId,
+      contentType: "text",
+      inputKind: "text",
+      text: input.text,
+      sourceText: input.text,
+      sourceLanguage: input.sourceLanguage && input.sourceLanguage !== "auto" ? input.sourceLanguage : "auto",
+      targetLanguage: input.targetLanguage,
+      surface: "ai_text_translation",
+      client: "mobile",
+      version: AI_MOBILE_API_VERSION,
+      preferredProvider: "yandex",
+      provider: "yandex",
+      providerHint: "yandex",
+      providerKey: "yandex",
+      gatewayRequired: true,
+      allowFallback: false,
+      fakeFallbackAllowed: false,
+      mobileSecretsAllowed: false,
+      preserveFormatting: true,
+      semanticTranslation: true,
+      strictTranslation: true,
+      transliterationAllowed: false,
+      returnOnlyTranslatedText: true,
+    }),
+  });
+
+  if (!result.ok) return { ok: false, error: result.error };
+
+  const responseRecord = toRecord(result.data) ?? {};
+  const dataRecord = toRecord(responseRecord.data) ?? responseRecord;
+  const data = toRecord(dataRecord.result) ?? dataRecord;
+  const normalized = normalizeTranslationResult(data, {
+    targetLanguage: input.targetLanguage,
+    sourceLanguage: input.sourceLanguage,
+    sourceText: input.text,
+    inputKind: "text",
+  });
+
+  if (!normalized.translatedText) {
+    return {
+      ok: false,
+      error: makeError(
+        "ai_mobile_translation_missing_result",
+        "Provider gateway did not return translated text.",
+      ),
+    };
+  }
+
+  return { ok: true, data: normalized };
+}
+
 export const aiMobileApi = {
   getSnapshot: getAiMobileSnapshot,
   getChatSnapshot: getAiMobileChatSnapshot,
@@ -946,6 +1590,7 @@ export const aiMobileApi = {
         prompt,
         category,
         source: input.source ?? "text",
+    surface: String(input.source || "").includes("voice") ? "assistant_voice" : "assistant_chat",
         requestedAutoExecute: input.requestedAutoExecute ?? false,
         metadata: input.metadata ?? {},
       }),
@@ -968,40 +1613,7 @@ export const aiMobileApi = {
       };
     }
 
-    return requestAiMobile<Record<string, unknown>>("/api/ai/mobile-ui/assistant/message", {
-      method: "POST",
-      body: JSON.stringify({
-        userId: session.currentUserId,
-        prompt: input.message,
-        message: input.message,
-        locale: getAppLanguage(),
-        source: input.source ?? "text",
-        preferredMode: mapAssistantModeToFoundationMode(input.assistantMode),
-        preferredProvider: "yandex",
-        providerHint: "yandex",
-
-        webSearchEnabled: Boolean(input.webSearchEnabled),
-        voiceControlEnabled: Boolean(input.voiceOutput?.enabled),
-        attachments: (input.attachments ?? []).map((attachment) => ({
-          id: attachment.id,
-          kind: attachment.kind,
-          uri: attachment.uri,
-          name: attachment.name,
-          mimeType: attachment.mimeType,
-          sizeBytes: attachment.size,
-          metadata: attachment.raw ?? {},
-        })),
-        clientCapabilities: input.clientCapabilities ?? [],
-        autoExecute: false,
-        surface: "assistant_chat",
-        metadata: {
-          safetyPolicy: input.safetyPolicy,
-          providerRoute: input.providerRoute,
-          safetyApproval: input.safetyApproval,
-          voiceOutput: input.voiceOutput,
-        },
-      }),
-    });
+    return sendAssistantMessageThroughLiveRoutes(input, session);
   },
 
   translateText: async (
@@ -1018,51 +1630,79 @@ export const aiMobileApi = {
       };
     }
 
-    await ensureAiMobileTranslationConsent();
+    const cleanText = String(text || "").trim();
+    const cleanTargetLanguage = String(targetLanguage || "").trim();
+    const cleanSourceLanguage = sourceLanguage && sourceLanguage !== "auto" ? String(sourceLanguage).trim() : null;
 
-    const result = await requestAiMobile<Record<string, unknown>>(AI_PROVIDER_GATEWAY_ROUTES.textTranslation, {
-      method: "POST",
-      body: JSON.stringify({
-        userId: session.currentUserId,
-        contentType: "text",
-        text,
-        sourceLanguage: sourceLanguage && sourceLanguage !== "auto" ? sourceLanguage : "auto",
-        targetLanguage,
-        surface: "ai_text_translation",
-        client: "mobile",
-        version: AI_MOBILE_API_VERSION,
-        preferredProvider: "yandex",
-        providerHint: "yandex_translation",
-
-        gatewayRequired: true,
-        allowFallback: false,
-        preserveFormatting: true,
-      }),
-    });
-
-    if (!result.ok) return { ok: false, error: result.error };
-
-    const responseRecord = toRecord(result.data) ?? {};
-    const dataRecord = toRecord(responseRecord.data) ?? responseRecord;
-    const data = toRecord(dataRecord.result) ?? dataRecord;
-    const normalized = normalizeTranslationResult(data, {
-      targetLanguage,
-      sourceLanguage,
-      sourceText: text,
-      inputKind: "text",
-    });
-
-    if (!normalized.translatedText) {
+    if (!cleanText) {
       return {
         ok: false,
-        error: makeError(
-          "ai_mobile_translation_missing_result",
-          "Provider gateway did not return translated text.",
-        ),
+        error: makeError("ai_mobile_translation_empty_text", "Text is required for translation."),
       };
     }
 
-    return { ok: true, data: normalized };
+    if (!cleanTargetLanguage) {
+      return {
+        ok: false,
+        error: makeError("ai_mobile_translation_target_required", "Target language is required for translation."),
+      };
+    }
+
+    await ensureAiMobileTranslationConsent();
+
+    const routes = [
+      AI_PROVIDER_GATEWAY_ROUTES.textTranslation,
+      AI_PROVIDER_GATEWAY_ROUTES.textTranslationRealtimeFallback,
+    ];
+    let lastError: AiMobileApiError | null = null;
+
+    for (const route of routes) {
+      const result = await requestAiTextTranslationRoute({
+        route,
+        text: cleanText,
+        targetLanguage: cleanTargetLanguage,
+        sourceLanguage: cleanSourceLanguage,
+        session,
+      });
+
+      if (!result.ok) {
+        lastError = result.error;
+        if (!shouldTryNextAiServerBaseUrl(result.error) && result.error.status !== 404 && result.error.status !== 405) {
+          break;
+        }
+        continue;
+      }
+
+      if (!looksLikeNonSemanticTranslation(cleanText, result.data.translatedText || "", cleanTargetLanguage, cleanSourceLanguage)) {
+        return result;
+      }
+
+      lastError = makeError(
+        "ai_mobile_translation_looks_like_transliteration",
+        "Provider returned transliteration instead of semantic translation.",
+      );
+    }
+
+    const strictFallback = await translateTextViaStrictAssistantFallback({
+      text: cleanText,
+      targetLanguage: cleanTargetLanguage,
+      sourceLanguage: cleanSourceLanguage,
+      session,
+    });
+
+    if (strictFallback.ok && !looksLikeNonSemanticTranslation(cleanText, strictFallback.data.translatedText || "", cleanTargetLanguage, cleanSourceLanguage)) {
+      return strictFallback;
+    }
+
+    if (strictFallback.ok) return strictFallback;
+
+    return {
+      ok: false,
+      error:
+        strictFallback.error ||
+        lastError ||
+        makeError("ai_mobile_translation_unavailable", "AI translation is unavailable right now."),
+    };
   },
 
   translateImage: async (
@@ -1145,7 +1785,10 @@ export const aiMobileApi = {
     const session = getAiMobileAuthSession();
 
     if (!session?.currentUserId) {
-      return { ok: true, data: { status: "ready", localOnly: true, input } };
+      return {
+        ok: false,
+        error: makeError("ai_mobile_auth_required", "Authenticated AI user is required for voice recording."),
+      };
     }
 
     const result = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/bridge/bind", {
@@ -1156,7 +1799,21 @@ export const aiMobileApi = {
       }),
     });
 
-    if (!result.ok) return { ok: true, data: { status: "ready", localOnly: true, input } };
+    if (result.ok) return result;
+
+    const health = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/health");
+    if (health.ok) {
+      return {
+        ok: true,
+        data: {
+          status: "ready",
+          voiceProviderReady: true,
+          bridgeBindRoute: "skipped_after_health_ready",
+          input: input ?? null,
+          health: health.data,
+        },
+      };
+    }
 
     return result;
   },
@@ -1167,7 +1824,10 @@ export const aiMobileApi = {
     const session = getAiMobileAuthSession();
 
     if (!session?.currentUserId) {
-      return { ok: true, data: { status: "recorded", localOnly: true, input } };
+      return {
+        ok: false,
+        error: makeError("ai_mobile_auth_required", "Authenticated AI user is required for voice events."),
+      };
     }
 
     const result = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/event", {
@@ -1178,7 +1838,16 @@ export const aiMobileApi = {
       }),
     });
 
-    if (!result.ok) return { ok: true, data: { status: "recorded", localOnly: true, input } };
+    if (!result.ok) {
+      return {
+        ok: true,
+        data: {
+          status: "voice_event_not_required",
+          telemetryOnly: true,
+          input: input ?? null,
+        },
+      };
+    }
 
     return result;
   },
@@ -1267,20 +1936,105 @@ export const aiMobileApi = {
     const session = getAiMobileAuthSession();
 
     if (!session?.currentUserId) {
-      return { ok: true, data: { transcript, sessionId, localOnly: true } };
+      return {
+        ok: false,
+        error: makeError("ai_mobile_auth_required", "Authenticated AI user is required for voice transcription."),
+      };
+    }
+
+    const result = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/event", {
+      method: "POST",
+      body: JSON.stringify({
+        userId: session.currentUserId,
+        type: "transcript_ready",
+        sessionId,
+        payload: {
+          transcript,
+          ...(typeof input === "string" ? {} : input),
+        },
+      }),
+    });
+
+    if (!result.ok) {
+      return {
+        ok: true,
+        data: {
+          status: "transcript_ready",
+          telemetryOnly: true,
+          transcript,
+          sessionId: sessionId ?? null,
+        },
+      };
+    }
+
+    return result;
+  },
+
+  transcribeVoiceAudio: async (
+    input: {
+      audioBase64?: string | null;
+      audioUri?: string | null;
+      fileName?: string | null;
+      mimeType?: string | null;
+      durationMillis?: number | null;
+      sizeBytes?: number | null;
+      language?: string | null;
+      source?: string | null;
+      listenForWakeWord?: boolean;
+      wakeWord?: string;
+      [key: string]: unknown;
+    },
+  ): Promise<AiMobileApiResult<Record<string, unknown>>> => {
+    const session = getAiMobileAuthSession();
+
+    if (!session?.currentUserId) {
+      return {
+        ok: false,
+        error: makeError("ai_mobile_auth_required", "Authenticated AI user is required for voice transcription."),
+      };
     }
 
     const result = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/transcribe", {
       method: "POST",
       body: JSON.stringify({
+        ...(input ?? {}),
         userId: session.currentUserId,
-        transcript,
-        sessionId,
-        ...(typeof input === "string" ? {} : input),
+        user_id: session.currentUserId,
+        actorUserId: session.currentUserId,
+        language: input.language ?? getAppLanguage(),
+        source: input.source ?? "sabi_ai_chat_voice",
+        contentType: input.mimeType ?? "audio/mp4",
+        audioContentType: input.mimeType ?? "audio/mp4",
+        audioMimeType: input.mimeType ?? "audio/mp4",
+        audioFormatHint: "mobile_m4a_aac_16khz_mono",
+        inputKind: "voice_command",
+        wakeWord: input.wakeWord ?? "sabi",
+        listenForWakeWord: input.listenForWakeWord ?? false,
+        semanticTranscription: true,
+        fakeSttAllowed: false,
+        fakeFallbackAllowed: false,
+        mobileSecretsAllowed: false,
+        audioBase64: input.audioBase64 ?? null,
+        audioUri: input.audioUri ?? null,
+        fileName: input.fileName ?? null,
+        mimeType: input.mimeType ?? "audio/mp4",
+        format: "m4a_aac_16khz_mono",
+        contentTypeCandidates: [input.mimeType ?? "audio/mp4", "audio/mp4", "audio/m4a", "audio/aac"],
+        durationMillis: input.durationMillis ?? null,
+        sizeBytes: input.sizeBytes ?? null,
+        client: "mobile",
+        version: AI_MOBILE_API_VERSION,
+        metadata: {
+          bridge: "expo-av",
+          mode: input.source ?? "sabi_ai_chat_voice",
+          noFakeStt: true,
+          audioFormatHint: "mobile_m4a_aac_16khz_mono",
+          audioBase64Length: typeof input.audioBase64 === "string" ? input.audioBase64.length : 0,
+        },
       }),
     });
 
-    if (!result.ok) return { ok: true, data: { transcript, sessionId, localOnly: true } };
+    if (!result.ok) return result;
 
     return result;
   },
@@ -1292,36 +2046,28 @@ export const aiMobileApi = {
 
     if (!session?.currentUserId) {
       return {
-        ok: true,
-        data: {
-          text: input.text,
-          sessionId: input.sessionId,
-          playbackRequired: true,
-          localOnly: true,
-        },
+        ok: false,
+        error: makeError("ai_mobile_auth_required", "Authenticated AI user is required for Sabi voice playback."),
       };
     }
 
+    const selectedLanguage = input.language ?? getAppLanguage();
     const result = await requestAiMobile<Record<string, unknown>>("/api/ai/voice/tts", {
       method: "POST",
       body: JSON.stringify({
         userId: session.currentUserId,
-        language: input.language ?? getAppLanguage(),
+        language: selectedLanguage,
+        sourceLanguage: selectedLanguage,
+        targetLanguage: selectedLanguage,
+        responseLanguage: selectedLanguage,
+        preferredVoiceGender: "female",
+        fakeFallbackAllowed: false,
+        mobileSecretsAllowed: false,
         ...input,
       }),
     });
 
-    if (!result.ok) {
-      return {
-        ok: true,
-        data: {
-          text: input.text,
-          sessionId: input.sessionId,
-          playbackRequired: true,
-          localOnly: true,
-        },
-      };
-    }
+    if (!result.ok) return result;
 
     return result;
   },
@@ -1369,19 +2115,41 @@ export const aiMobileApi = {
 export function extractAssistantText(value: unknown): string | null {
   const data = toRecord(value);
   const nested = toRecord(data?.data) ?? data;
+  const result = toRecord(nested?.result);
   const answer = toRecord(nested?.answer);
   const assistantRun = toRecord(nested?.assistantRun);
   const assistantRunAnswer = toRecord(assistantRun?.answer);
+  const output = toRecord(nested?.output) ?? toRecord(result?.output);
+  const firstChoice = toRecord(toArray(nested?.choices)[0]) ?? toRecord(toArray(result?.choices)[0]);
+  const firstChoiceMessage = toRecord(firstChoice?.message);
 
   return (
     toStringValue(nested?.text) ||
     toStringValue(nested?.message) ||
     toStringValue(nested?.reply) ||
     toStringValue(nested?.response) ||
+    toStringValue(nested?.answerText) ||
+    toStringValue(nested?.content) ||
+    toStringValue(result?.text) ||
+    toStringValue(result?.message) ||
+    toStringValue(result?.reply) ||
+    toStringValue(result?.response) ||
+    toStringValue(result?.answerText) ||
+    toStringValue(result?.content) ||
     toStringValue(answer?.text) ||
+    toStringValue(answer?.message) ||
+    toStringValue(answer?.content) ||
     toStringValue(assistantRunAnswer?.text) ||
+    toStringValue(assistantRunAnswer?.message) ||
+    toStringValue(assistantRunAnswer?.content) ||
+    toStringValue(output?.text) ||
+    toStringValue(output?.message) ||
+    toStringValue(output?.content) ||
+    toStringValue(firstChoice?.text) ||
+    toStringValue(firstChoiceMessage?.content) ||
     null
   );
 }
+
 
 

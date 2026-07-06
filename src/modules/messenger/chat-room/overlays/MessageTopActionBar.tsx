@@ -5,6 +5,7 @@ import {
   Copy,
   Edit3,
   Forward,
+  Languages,
   MoreHorizontal,
   Reply,
   Trash2,
@@ -68,6 +69,7 @@ export type ActionKey =
   | "reply"
   | "edit"
   | "copy"
+  | "translate"
   | "forward"
   | "delete"
   | "more";
@@ -93,6 +95,12 @@ const MINE_ACTIONS: readonly ActionDef[] = [
   { key: "edit", icon: Edit3, keys: ["common.edit"], fallback: "Edit" },
   { key: "copy", icon: Copy, keys: ["common.copy"], fallback: "Copy" },
   {
+    key: "translate",
+    icon: Languages,
+    keys: ["messenger.chat.translateAction", "ai.mobile.common.translate"],
+    fallback: "Translate",
+  },
+  {
     key: "forward",
     icon: Forward,
     keys: ["common.forward", "messenger.forward"],
@@ -110,6 +118,12 @@ const OTHER_ACTIONS: readonly ActionDef[] = [
     fallback: "Reply",
   },
   { key: "copy", icon: Copy, keys: ["common.copy"], fallback: "Copy" },
+  {
+    key: "translate",
+    icon: Languages,
+    keys: ["messenger.chat.translateAction", "ai.mobile.common.translate"],
+    fallback: "Translate",
+  },
   {
     key: "forward",
     icon: Forward,

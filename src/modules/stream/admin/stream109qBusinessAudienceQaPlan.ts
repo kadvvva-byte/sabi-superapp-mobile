@@ -1,0 +1,46 @@
+export const stream109qBusinessAudienceQaPlan = {
+  version: "STREAM-109Q",
+  title: "Business Stream Q&A / audience interaction controls",
+  scope: "stream-only-mobile-source",
+  businessStreamOnly: true,
+  touchesWallet: false,
+  touchesMessenger: false,
+  touchesCalls: false,
+  touchesServer: false,
+  touchesBackendFinance: false,
+  paymentsTouched: false,
+  giftsTouched: false,
+  monetizationTouched: false,
+  fakeAudienceQaAllowed: false,
+  fakeBusinessLaunchAllowed: false,
+  fakePaymentAllowed: false,
+  fakeGiftAllowed: false,
+  fakeMonetizationAllowed: false,
+  realLocalActions: [
+    "collect audience question drafts locally",
+    "select audience question",
+    "approve local question after moderation review",
+    "answer local question with informational-only answer draft",
+    "decline local question",
+    "hold local question for compliance review",
+    "acknowledge audience Q&A policy",
+    "acknowledge audience compliance review",
+    "queue audience Q&A local realtime event",
+    "request provider handoff as blocked until backend/realtime/moderation/Admin contracts exist"
+  ],
+  providerRequiredContracts: [
+    "backend audience Q&A contract",
+    "realtime audience Q&A provider",
+    "moderation audience Q&A queue",
+    "Admin audience Q&A review"
+  ],
+  forbiddenUntilLaterPhases: [
+    "payments",
+    "gifts",
+    "monetization",
+    "Wallet bridge",
+    "fake audience question delivery",
+    "fake answer delivery",
+    "fake Business Stream launch"
+  ],
+} as const;

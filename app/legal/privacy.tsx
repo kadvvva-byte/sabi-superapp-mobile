@@ -2,6 +2,13 @@ import React from "react";
 import { ScrollView, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useSabiTheme } from "../../src/theme/ThemeProvider";
+import {
+  SABI_ACCOUNT_DELETION_PATH,
+  SABI_ACCOUNT_DELETION_RETENTION_EXCEPTIONS,
+  SABI_ACCOUNT_DELETION_URL,
+  SABI_PRIVACY_POLICY_URL,
+  SABI_PRIVACY_POLICY_URL_STATUS,
+} from "../../src/modules/profile/data/privacy";
 
 export default function PrivacyScreen() {
   const theme = useSabiTheme();
@@ -60,8 +67,30 @@ export default function PrivacyScreen() {
           <SectionTitle themeColor={theme.colors.text} title="4. User controls" />
           <Paragraph color={theme.colors.textSecondary}>
             Users may be able to update profile details, manage permissions,
-            change app settings, and request support for account-related privacy
-            issues through the product support and policy flows.
+            change app settings, request account deletion, and request support for
+            account-related privacy issues through product support and policy flows.
+          </Paragraph>
+
+          <SectionTitle themeColor={theme.colors.text} title="5. Privacy and deletion links" />
+          <Paragraph color={theme.colors.textSecondary}>
+            Public Privacy Policy URL: {SABI_PRIVACY_POLICY_URL}
+          </Paragraph>
+          <Paragraph color={theme.colors.textSecondary}>
+            Account deletion path in app: {SABI_ACCOUNT_DELETION_PATH}
+          </Paragraph>
+          <Paragraph color={theme.colors.textSecondary}>
+            Web account deletion request URL: {SABI_ACCOUNT_DELETION_URL}
+          </Paragraph>
+          <Paragraph color={theme.colors.textSecondary}>
+            Link status before production submission: {SABI_PRIVACY_POLICY_URL_STATUS}.
+            Replace placeholder URLs with the final public company domain before
+            Google Play production submission.
+          </Paragraph>
+
+          <SectionTitle themeColor={theme.colors.text} title="6. Retention exceptions" />
+          <Paragraph color={theme.colors.textSecondary}>
+            Some records may be retained where required for{" "}
+            {SABI_ACCOUNT_DELETION_RETENTION_EXCEPTIONS.join(", ")}.
           </Paragraph>
         </View>
       </ScrollView>

@@ -1,6 +1,7 @@
 import React from "react";
-import SabiModuleEntryScreen from "../src/modules/home/screens/SabiModuleEntryScreen";
+
+import HotelScreen from "../src/modules/hotels/screens/HotelScreen";
 
 export default function HotelsEntryScreen() {
-  return <SabiModuleEntryScreen moduleCode="hotels" />;
+  return <HotelScreen />;
 }

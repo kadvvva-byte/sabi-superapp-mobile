@@ -1,404 +1,348 @@
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
 const FA_AF_AI_MOBILE_LOCALE = {
-  ai: {
-    mobile: {
-      common: {
-        back: "برگشت",
-        cancel: "لغو",
-        close: "بستن",
-        loading: "در حال بارگذاری",
-        notConnected: "not وصل شد",
-        open: "باز کردن",
-        refresh: "تازه‌سازی",
-        requestFailed: "درخواست ناموفق",
-        retry: "تلاش دوباره",
-        save: "ذخیره",
-        saved: "ذخیره شد",
-        search: "جستجو",
-        send: "ارسال",
-        ready: "آماده",
+  "ai": {
+    "mobile": {
+      "common": {
+        "back": "برگشت",
+        "cancel": "لغو",
+        "close": "بستن",
+        "loading": "در حال بارگذاری",
+        "notConnected": "وصل نیست",
+        "open": "باز کردن",
+        "refresh": "تازه‌سازی",
+        "requestFailed": "درخواست ناموفق",
+        "retry": "تلاش دوباره",
+        "save": "ذخیره",
+        "saved": "ذخیره شد",
+        "search": "جستجو",
+        "send": "ارسال",
+        "ready": "آماده"
       },
-
-      status: {
-        ready: "آماده",
-        limited: "limited",
-        not_connected: "not وصل شد",
-        error: "error",
+      "status": {
+        "ready": "آماده",
+        "limited": "محدود",
+        "not_connected": "وصل نیست",
+        "error": "خطا"
       },
-
-      messageStatus: {
-        sending: "sending",
-        sent: "sent",
-        error: "error",
-        awaiting_confirmation: "awaiting confirmation",
+      "messageStatus": {
+        "sending": "در حال بارگذاری...",
+        "sent": "ارسال شد",
+        "error": "خطا",
+        "awaiting_confirmation": "معلومات"
       },
-
-      home: {
-        title: "title",
-        subtitle: "subtitle",
-        heroEyebrow: "hero",
-        heroTitle: "hero",
-        heroDescription:
-          "hero توضیحات",
-        quickAccess: "quick access",
-        capabilities: "capabilities",
-        safeActions: "safe عمل‌ها",
-        safeActionsDescription:
-          "safe عمل‌ها توضیحات",
-        safeActionsText:
-          "safe عمل‌ها توضیحات",
-        connection: "connection",
-        userId: "کاربر ID",
-        cleanWorkspaceTitle: "clean workspace",
-        cleanWorkspaceText:
-          "clean workspace توضیحات",
+      "home": {
+        "title": "Sabi AI",
+        "subtitle": "تنظیمات",
+        "heroEyebrow": "معلومات",
+        "heroTitle": "معلومات",
+        "heroDescription": "معلومات — معلومات",
+        "quickAccess": "دسترسی سریع",
+        "capabilities": "دستیار",
+        "safeActions": "امنیت",
+        "safeActionsDescription": "امنیت — معلومات",
+        "safeActionsText": "امنیت — معلومات",
+        "connection": "تنظیمات",
+        "userId": "کاربر ID",
+        "cleanWorkspaceTitle": "عنوان",
+        "cleanWorkspaceText": "معلومات — معلومات"
       },
-
-      action: {
-        chat: {
-          title: "title",
-          description: "description",
+      "action": {
+        "chat": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
-        voice: {
-          title: "title",
-          description: "description",
+        "voice": {
+          "title": "AI صوتی",
+          "description": "AI صوتی"
         },
-        translation: {
-          title: "title",
-          description: "description",
+        "translation": {
+          "title": "زمان واقعی ترجمه",
+          "description": "ترجمه"
         },
-        history: {
-          title: "title",
-          description: "description",
+        "history": {
+          "title": "تاریخچه",
+          "description": "تنظیمات"
         },
-        tasks: {
-          title: "title",
-          description: "description",
+        "tasks": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
-        memory: {
-          title: "title",
-          description: "description",
+        "memory": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
-        setting: {
-          title: "title",
-          description: "description",
+        "setting": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
-        settings: {
-          title: "title",
-          description: "description",
+        "settings": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
-        premium: {
-          title: "title",
-          description: "description",
+        "premium": {
+          "title": "پریمیوم",
+          "description": "پریمیوم"
         },
-        profileAi: {
-          title: "title",
-          description: "description",
-        },
+        "profileAi": {
+          "title": "تنظیمات",
+          "description": "تنظیمات"
+        }
       },
-
-      chat: {
-        title: "title",
-        subtitle: "subtitle",
-        roleUser: "role کاربر",
-        runtimeTitle: "runtime",
-        backendRequired: "backend ضروری",
-        emptyTitle: "خالی",
-        emptyText: "خالی توضیحات",
-        cleanEmptyText:
-          "clean خالی توضیحات",
-        placeholder: "جای‌نگهدار",
-        emptyBackendResponse: "خالی backend response",
-        errorMessage: "error message",
-        thinking: "thinking",
-
-        assistantCenterTitle: "دستیار مرکز",
-        assistantCenterDescription:
-          "دستیار مرکز توضیحات",
-        modeTitle: "mode",
-        modeSubtitle: "mode توضیحات",
-        assistantMenuTitle: "دستیار menu",
-        assistantMenuSubtitle:
-          "دستیار menu توضیحات",
-
-        mode: {
-          chatgpt: {
-            title: "title",
-            short: "short",
-            description: "description",
-            prompt: "prompt",
+      "chat": {
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "roleUser": "شما",
+        "runtimeTitle": "تنظیمات",
+        "backendRequired": "بازگشت",
+        "emptyTitle": "خالی",
+        "emptyText": "خالی توضیحات",
+        "cleanEmptyText": "معلومات — معلومات",
+        "placeholder": "جای‌نگهدار",
+        "emptyBackendResponse": "بازگشت",
+        "errorMessage": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "thinking": "معلومات",
+        "assistantCenterTitle": "دستیار مرکز",
+        "assistantCenterDescription": "دستیار مرکز توضیحات",
+        "modeTitle": "عنوان",
+        "modeSubtitle": "توضیحات — معلومات",
+        "assistantMenuTitle": "دستیار",
+        "assistantMenuSubtitle": "دستیار — معلومات",
+        "mode": {
+          "chatgpt": {
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
-          business: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "business": {
+            "title": "تنظیمات",
+            "short": "کسب‌وکار",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
-          student: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "student": {
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
-          applicant: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
+          "applicant": {
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
-          teacher: {
-            title: "title",
-            short: "short",
-            description:
-              "description",
-            prompt: "prompt",
-          },
+          "teacher": {
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
+          }
         },
-
-        toolsTitle: "tools",
-        toolsSubtitle:
-          "tools توضیحات {mode}",
-        toolsSheetTitle: "tools sheet",
-        toolsSheetSubtitle:
-          "tools sheet توضیحات",
-
-        camera: "دوربین",
-        cameraDescription: "دوربین توضیحات",
-        uploadPhoto: "آپلود عکس",
-        uploadPhotoDescription: "آپلود عکس توضیحات",
-        uploadVideo: "آپلود ویدیو",
-        uploadVideoDescription: "آپلود ویدیو توضیحات",
-        uploadDocument: "آپلود سند",
-        uploadDocumentDescription: "آپلود سند توضیحات",
-        webSearch: "web جستجو",
-        webSearchShort: "web جستجو short",
-        webSearchDescription:
-          "web جستجو توضیحات",
-
-        voiceRecording: "صدا recording",
-        permissionCamera: "permission دوربین",
-        permissionPhoto: "permission عکس",
-        permissionVideo: "permission ویدیو",
-
-        attachmentsSent: "attachments sent",
-        attachmentPhoto: "attachment عکس",
-        attachmentVideo: "attachment ویدیو",
-        attachmentDocument: "attachment سند",
-        attachmentAudio: "attachment صدا",
-        uploadContractNotice:
-          "آپلود contract notice",
-
-        safetyConfirmTitle: "safety تأیید",
-        safetyConfirmMessage: "safety تأیید message",
-        safetyConfirmCancel: "safety تأیید لغو",
-        safetyConfirmContinue: "safety تأیید ادامه",
-        securityNotice:
-          "security notice",
-
-        prompt: {
-          business: "تجاری",
-          study: "study",
-          search: "جستجو",
-          file: "فایل",
+        "toolsTitle": "تنظیمات",
+        "toolsSubtitle": "تنظیمات — معلومات",
+        "toolsSheetTitle": "تنظیمات",
+        "toolsSheetSubtitle": "تنظیمات — معلومات",
+        "camera": "دوربین",
+        "cameraDescription": "دوربین توضیحات",
+        "uploadPhoto": "آپلود عکس",
+        "uploadPhotoDescription": "آپلود عکس توضیحات",
+        "uploadVideo": "آپلود ویدیو",
+        "uploadVideoDescription": "آپلود ویدیو توضیحات",
+        "uploadDocument": "آپلود سند",
+        "uploadDocumentDescription": "آپلود سند توضیحات",
+        "webSearch": "جستجوی وب",
+        "webSearchShort": "جستجو",
+        "webSearchDescription": "جستجو",
+        "voiceRecording": "AI صوتی",
+        "permissionCamera": "صدا",
+        "permissionPhoto": "نمایه",
+        "permissionVideo": "صدا",
+        "attachmentsSent": "معلومات",
+        "attachmentPhoto": "عکس",
+        "attachmentVideo": "ویدیو",
+        "attachmentDocument": "سند",
+        "attachmentAudio": "معلومات",
+        "uploadContractNotice": "معلومات",
+        "safetyConfirmTitle": "عنوان",
+        "safetyConfirmMessage": "معلومات",
+        "safetyConfirmCancel": "لغو",
+        "safetyConfirmContinue": "ادامه",
+        "securityNotice": "امنیت",
+        "prompt": {
+          "business": "تجاری",
+          "study": "معلومات",
+          "search": "جستجو",
+          "file": "فایل"
+        }
+      },
+      "translation": {
+        "title": "ترجمه",
+        "subtitle": "ترجمه",
+        "heroEyebrow": "ترجمه",
+        "realtimeTitle": "زمان واقعی",
+        "premium": "ترجمه",
+        "source": "منبع",
+        "sourcePlaceholder": "منبع راهنما",
+        "textPhotoCamera": "ترجمه",
+        "target": "هدف",
+        "targetPlaceholder": "هدف راهنما",
+        "translate": "ترجمه",
+        "result": "ترجمه",
+        "inputPlaceholder": "ترجمه",
+        "outputPlaceholder": "ترجمه",
+        "camera": "دوربین",
+        "photo": "عکس",
+        "from": "از",
+        "to": "ترجمه",
+        "detect": "ترجمه",
+        "selectLanguage": "انتخاب زبان",
+        "searchLanguage": "جستجو زبان",
+        "permissionCamera": "ترجمه",
+        "permissionPhoto": "ترجمه",
+        "emptyText": "خالی توضیحات",
+        "noOutput": "ترجمه",
+        "sameLanguage": "ترجمه",
+        "photoReady": "عکس آماده",
+        "cameraReady": "دوربین آماده",
+        "detectCannotSwap": "ترجمه",
+        "noImageOutput": "ترجمه",
+        "detectedText": "ترجمه",
+        "messengerPathTitle": "ترجمه",
+        "messengerReady": "Messenger آماده",
+        "imageProcessing": "ترجمه",
+        "textProcessing": "ترجمه",
+        "metaDetected": "ترجمه"
+      },
+      "voice": {
+        "title": "AI صوتی",
+        "subtitle": "AI صوتی",
+        "nativeBridge": "AI صوتی",
+        "sttTtsBridgeTitle": "AI صوتی",
+        "realBridgeDescription": "AI صوتی",
+        "bind": "AI صوتی",
+        "start": "شروع",
+        "stop": "توقف",
+        "invoke": "AI صوتی",
+        "interrupt": "AI صوتی",
+        "startRecording": "ضبط",
+        "stopRecording": "AI صوتی",
+        "recordingNow": "در حال ضبط...",
+        "tapToSpeak": "AI صوتی",
+        "session": "AI صوتی",
+        "recording": "AI صوتی",
+        "audioSize": "AI صوتی",
+        "audioDuration": "AI صوتی",
+        "audioCapturedNotice": "AI صوتی",
+        "transcriptPlaceholder": "AI صوتی",
+        "ttsTitle": "AI صوتی",
+        "ttsPlaceholder": "AI صوتی",
+        "playLastTts": "AI صوتی",
+        "noFakeTts": "AI صوتی",
+        "runtimeLog": "AI صوتی",
+        "noEvents": "AI صوتی",
+        "sessionStopped": "AI صوتی",
+        "quickInvokeSent": "AI صوتی",
+        "transcriptReady": "AI صوتی",
+        "state": {
+          "idle": "AI صوتی",
+          "processing": "AI صوتی",
+          "requesting_permission": "AI صوتی",
+          "recording": "AI صوتی",
+          "error": "خطا",
+          "playing": "AI صوتی"
         },
+        "log": {
+          "info": "اطلاعات",
+          "bridge_bound": "AI صوتی",
+          "recording_started": "AI صوتی",
+          "audio_captured": "AI صوتی",
+          "transcript_ready": "AI صوتی",
+          "tts_requested": "AI صوتی",
+          "playback_started": "AI صوتی",
+          "interrupted": "AI صوتی",
+          "error": "خطا"
+        }
       },
-
-      translation: {
-        title: "title",
-        subtitle: "subtitle",
-        heroEyebrow: "hero",
-        realtimeTitle: "زمان واقعی",
-        premium:
-          "Premium",
-        source: "منبع",
-        sourcePlaceholder: "منبع راهنما",
-        textPhotoCamera: "text عکس دوربین",
-        target: "هدف",
-        targetPlaceholder: "هدف راهنما",
-        translate: "ترجمه",
-        result: "result",
-        inputPlaceholder: "input راهنما",
-        outputPlaceholder: "output راهنما",
-        camera: "دوربین",
-        photo: "عکس",
-        from: "از",
-        to: "to",
-        detect: "detect",
-        selectLanguage: "انتخاب زبان",
-        searchLanguage: "جستجو زبان",
-        permissionCamera: "permission دوربین",
-        permissionPhoto: "permission عکس",
-        emptyText: "خالی توضیحات",
-        noOutput: "نخیر output",
-        sameLanguage: "same زبان",
-        photoReady: "عکس آماده",
-        cameraReady: "دوربین آماده",
-        detectCannotSwap: "detect cannot جابجا کردن",
-        noImageOutput: "نخیر image output",
-        detectedText: "detected توضیحات",
-        messengerPathTitle: "Messenger path",
-        messengerReady:
-          "Messenger آماده",
-        imageProcessing: "image processing",
-        textProcessing: "text processing",
-        metaDetected: "meta detected",
+      "settings": {
+        "title": "تنظیمات",
+        "heroEyebrow": "تنظیمات AI",
+        "heroTitle": "تنظیمات",
+        "heroDescription": "تنظیمات — معلومات",
+        "subtitle": "تنظیمات",
+        "metricApi": "API",
+        "metricSource": "منبع",
+        "sourceLocalContract": "local_contract",
+        "connectionDetails": "تنظیمات",
+        "sections": "معلومات",
+        "safetyTitle": "عنوان",
+        "safetyDescription": "توضیحات — معلومات",
+        "providerTitle": "تنظیمات",
+        "providerDescription": "تنظیمات — معلومات",
+        "controlTitle": "عنوان",
+        "profileOwnerTitle": "نمایه",
+        "profileOwnerDescription": "نمایه — معلومات",
+        "note": "معلومات"
       },
-
-      voice: {
-        title: "title",
-        subtitle: "subtitle",
-        nativeBridge: "native bridge",
-        sttTtsBridgeTitle: "stt tts bridge",
-        realBridgeDescription:
-          "پل واقعی موبایل: ضبط میکروفون، رویدادهای صدای native، انتقال transcript و پخش audio URL. TTS فقط متنی شبیه‌سازی نمی‌شود.",
-        bind: "bind",
-        start: "شروع",
-        stop: "توقف",
-        invoke: "invoke",
-        interrupt: "interrupt",
-        startRecording: "شروع recording",
-        stopRecording: "توقف recording",
-        recordingNow: "recording now",
-        tapToSpeak: "tap to speak",
-        session: "session",
-        recording: "recording",
-        audioSize: "صدا size",
-        audioDuration: "صدا duration",
-        audioCapturedNotice:
-          "صدا captured notice",
-        transcriptPlaceholder: "transcript راهنما",
-        ttsTitle: "tts",
-        ttsPlaceholder: "tts راهنما",
-        playLastTts: "play آخر tts",
-        noFakeTts:
-          "صدای جعلی وجود ندارد: صدا فقط وقتی پخش می‌شود که backend/native TTS یک audio URL برگرداند. TTS فقط متنی تا زمان اتصال expo-speech یا ماژول native TTS به صورت متن نشان داده می‌شود.",
-        runtimeLog: "runtime log",
-        noEvents: "نخیر events",
-        sessionStopped: "session stopped",
-        quickInvokeSent: "quick invoke sent",
-        transcriptReady: "transcript آماده",
-        state: {
-          idle: "idle",
-          processing: "processing",
-          requesting_permission: "requesting permission",
-          recording: "recording",
-          error: "error",
-          playing: "playing",
+      "memory": {
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "privacyMode": "حریم خصوصی",
+        "strict": "معلومات",
+        "balanced": "معلومات",
+        "adaptive": "معلومات",
+        "addInstruction": "معلومات",
+        "instructions": "معلومات",
+        "instructionPlaceholder": "جستجو",
+        "noAccusation": "معلومات",
+        "modeSaved": {
+          "strict": "معلومات",
+          "balanced": "معلومات",
+          "adaptive": "معلومات"
         },
-        log: {
-          info: "اطلاعات",
-          bridge_bound: "bridge bound",
-          recording_started: "recording started",
-          audio_captured: "صدا captured",
-          transcript_ready: "transcript آماده",
-          tts_requested: "tts requested",
-          playback_started: "playback started",
-          interrupted: "interrupted",
-          error: "error",
-        },
+        "instructionSaved": "معلومات"
       },
-
-      settings: {
-        title: "title",
-        heroEyebrow: "hero",
-        heroTitle: "hero",
-        heroDescription:
-          "hero توضیحات",
-        subtitle: "subtitle",
-        metricApi: "metric api",
-        metricSource: "metric منبع",
-        sourceLocalContract: "منبع local contract",
-        connectionDetails: "connection جزئیات",
-        sections: "sections",
-        safetyTitle: "safety",
-        safetyDescription:
-          "safety توضیحات",
-        providerTitle: "provider",
-        providerDescription:
-          "provider توضیحات",
-        controlTitle: "control",
-        profileOwnerTitle: "پروفایل owner",
-        profileOwnerDescription:
-          "پروفایل owner توضیحات",
-        note: "note",
+      "premium": {
+        "title": "پریمیوم",
+        "heroEyebrow": "پریمیوم",
+        "subtitle": "پریمیوم",
+        "accessTitle": "پریمیوم",
+        "noFakePayment": "پریمیوم",
+        "realtimeCallTranslationTitle": "زمان واقعی تماس ترجمه",
+        "realtimeTranslationTitle": "زمان واقعی ترجمه",
+        "realtimeTranslationDescription": "زمان واقعی ترجمه توضیحات",
+        "mediaTranslationTitle": "رسانه ترجمه",
+        "mediaTranslationDescription": "رسانه ترجمه توضیحات",
+        "advancedAssistantActionsTitle": "پریمیوم",
+        "safeActionsTitle": "پریمیوم",
+        "safeActionsDescription": "پریمیوم",
+        "openProfilePremium": "پریمیوم",
+        "brandText": "معلومات — معلومات",
+        "badge": "پریمیوم",
+        "safeBadge": "پریمیوم"
       },
-
-      memory: {
-        title: "title",
-        subtitle: "subtitle",
-        privacyMode: "حریم خصوصی mode",
-        strict: "strict",
-        balanced: "balanced",
-        adaptive: "adaptive",
-        addInstruction: "افزودن instruction",
-        instructions: "instructions",
-        instructionPlaceholder: "instruction راهنما",
-        noAccusation:
-          "نخیر accusation",
-        modeSaved: {
-          strict: "strict",
-          balanced: "balanced",
-          adaptive: "adaptive",
-        },
-        instructionSaved:
-          "instruction saved",
+      "activity": {
+        "historyTitle": "تاریخچه",
+        "historySubtitle": "تاریخچه توضیحات",
+        "tasksTitle": "وظایف",
+        "tasksSubtitle": "وظایف توضیحات",
+        "emptyTitle": "خالی",
+        "emptyText": "خالی توضیحات"
       },
-
-      premium: {
-        title: "title",
-        heroEyebrow: "hero",
-        subtitle: "subtitle",
-        accessTitle: "access",
-        noFakePayment:
-          "پرداخت در اینجا شبیه‌سازی نمی‌شود. فعال‌سازی باید از جریان واقعی تأیید Premium/COIN بیاید.",
-        realtimeCallTranslationTitle: "زمان واقعی تماس ترجمه",
-        realtimeTranslationTitle: "زمان واقعی ترجمه",
-        realtimeTranslationDescription:
-          "زمان واقعی ترجمه توضیحات",
-        mediaTranslationTitle: "رسانه ترجمه",
-        mediaTranslationDescription:
-          "رسانه ترجمه توضیحات",
-        advancedAssistantActionsTitle: "advanced دستیار عمل‌ها",
-        safeActionsTitle: "safe عمل‌ها",
-        safeActionsDescription:
-          "safe عمل‌ها توضیحات",
-        openProfilePremium: "باز کردن پروفایل Premium",
-        brandText: "brand توضیحات",
-        badge: "badge",
-        safeBadge: "safe badge",
-      },
-
-      activity: {
-        historyTitle: "تاریخچه",
-        historySubtitle: "تاریخچه توضیحات",
-        tasksTitle: "وظایف",
-        tasksSubtitle: "وظایف توضیحات",
-        emptyTitle: "خالی",
-        emptyText:
-          "خالی توضیحات",
-      },
-
-      error: {
-        ai_mobile_api_base_url_missing: "AI mobile api base url missing",
-        ai_mobile_auth_required:
-          "AI mobile auth ضروری",
-        ai_mobile_request_failed: "AI mobile درخواست ناموفق",
-        ai_mobile_network_error:
-          "AI mobile شبکه error",
-        ai_voice_microphone_permission_denied:
-          "AI صدا میکروفون permission denied",
-        ai_voice_recording_already_active:
-          "AI صدا recording already active",
-        ai_voice_recording_not_active: "AI صدا recording not active",
-        ai_voice_playback_command_missing: "AI صدا playback command missing",
-        ai_voice_empty_tts_text: "AI صدا خالی tts text",
-        ai_voice_audio_url_missing:
-          "AI صدا صدا url missing",
-      },
-    },
-  },
+      "error": {
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "ai_mobile_network_error": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "ai_voice_microphone_permission_denied": "AI صوتی",
+        "ai_voice_recording_already_active": "AI صوتی",
+        "ai_voice_recording_not_active": "AI صوتی",
+        "ai_voice_playback_command_missing": "AI صوتی",
+        "ai_voice_empty_tts_text": "AI صوتی",
+        "ai_voice_audio_url_missing": "AI صوتی"
+      }
+    }
+  }
 } as const;
 
 export default FA_AF_AI_MOBILE_LOCALE;

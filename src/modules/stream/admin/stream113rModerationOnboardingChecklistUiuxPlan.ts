@@ -1,0 +1,28 @@
+export const stream113rModerationOnboardingChecklistUiuxPlan = {
+  version: "STREAM-113R",
+  title: "Moderation onboarding checklist UI/UX",
+  scope: "Stream live room only",
+  goal: "Перед эфиром ведущий получает понятную premium-инструкцию по 18+, правилам чата, Sabi AI контролю, жалобам/апелляциям и honest backend boundary.",
+  checkpoints: [
+    "Короткий ввод для ведущего без debug/QA-языка",
+    "18+ режим как UI checkpoint без fake age/legal verification",
+    "Правила чата против ругательств, оскорблений и травли",
+    "Sabi AI как reviewer/controller без fake auto-ban",
+    "Warning/mute/remove preview/hold review как честная лестница действий",
+    "Жалобы/evidence/appeal/audit без fake legal proof",
+    "Backend/provider/Admin enforcement не симулируются",
+    "One-thumb готовность ведущего к live-preview",
+  ],
+  forbidden: [
+    "no Wallet changes",
+    "no Messenger changes",
+    "no core AI module changes",
+    "no fake live",
+    "no fake realtime",
+    "no fake provider",
+    "no fake payment",
+    "no fake permanent ban",
+    "no fake age/legal approval",
+    "no cinema/anime/series mixing",
+  ],
+} as const;

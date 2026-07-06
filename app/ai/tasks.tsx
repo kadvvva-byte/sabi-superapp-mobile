@@ -1,5 +1,6 @@
-import AiMobileActivityScreen from "../../src/modules/ai/mobile/screens/AiMobileActivityScreen";
+import createLazyRouteScreen from "../../src/shared/navigation/createLazyRouteScreen";
 
-export default function AiTasksRoute() {
-  return <AiMobileActivityScreen kind="tasks" />;
-}
+export default createLazyRouteScreen(
+  () => import("../../src/modules/ai/mobile/screens/AiMobileTasksRouteScreen"),
+  "AiMobileTasksRoute",
+);

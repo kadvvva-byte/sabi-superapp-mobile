@@ -1,0 +1,24 @@
+{
+  "version": "STREAM-GAME-GIFTS-191B",
+  "scope": "premium_live_preview_overlay_polish_local_phase_playback_user_facing_only",
+  "giftCount": 24,
+  "overlayPolish": [
+    "stageFrame",
+    "phaseMeter",
+    "soundBadge",
+    "hapticBadge",
+    "cameraCopy",
+    "reduceMotionFallback"
+  ],
+  "runtimeLocks": {
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

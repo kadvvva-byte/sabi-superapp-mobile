@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyC66Tw8XvekAVHVJVSds6j_zWG_nhE0clI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>970072647981</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.sabiai.superapp</string>
+	<key>PROJECT_ID</key>
+	<string>sabi-official-prod-37629</string>
+	<key>STORAGE_BUCKET</key>
+	<string>sabi-official-prod-37629.firebasestorage.app</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:970072647981:ios:e365ee723a7ad0a3fb4ba4</string>
+</dict>
+</plist>

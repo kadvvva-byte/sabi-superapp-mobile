@@ -1,6 +1,6 @@
 import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+import SupermarketScreen from "../src/modules/supermarket/screens/SupermarketScreen";
 
-export default function SupermarketEntryScreen() {
-  return <HomeProgramEntryScreen kind="supermarket" />;
+export default function SupermarketRoute() {
+  return <SupermarketScreen />;
 }

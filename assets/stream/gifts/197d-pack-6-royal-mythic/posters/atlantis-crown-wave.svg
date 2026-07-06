@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Корона Атлантиды 1500 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="34%" r="72%"><stop offset="0%" stop-color="#67E8F9"/><stop offset="42%" stop-color="#2563EB"/><stop offset="100%" stop-color="#09070D"/></radialGradient>
+    <linearGradient id="stroke" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F2C75B"/></linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <circle cx="192" cy="176" r="122" fill="none" stroke="#FFFFFF" stroke-opacity=".30" stroke-width="3"/>
+  <circle cx="192" cy="176" r="94" fill="#09070D" fill-opacity=".24"/>
+  <path d="M70 243l18-126 59 58 49-90 49 90 59-58 18 126z" fill="none" stroke="url(#stroke)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#FFFFFF">Корона Атлантиды</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">1500 алмазов · preview only</text>
+</svg>

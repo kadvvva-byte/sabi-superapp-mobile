@@ -1,0 +1,830 @@
+{
+  "stage": "STREAM-GAME-GIFTS-189C",
+  "title": "Premium MP4/WebP export target plan for 16 stream gifts",
+  "generatedAtUtc": "2026-06-10T12:10:30.537095+00:00",
+  "giftCount": 16,
+  "targetJsonFiles": 16,
+  "actualMp4FilesIncludedNow": 0,
+  "actualWebpFilesIncludedNow": 0,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "entries": [
+    {
+      "stage": "189C",
+      "giftId": "sakura-heart-burst",
+      "displayNameRu": "Сакура Сердце",
+      "displayName": "Sakura Heart Burst",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/sakura-heart-burst-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/sakura-heart-burst-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/sakura-heart-burst-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/sakura-heart-burst-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/sakura-heart-burst-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3120,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#F6A8D8",
+        "light": "#FFD7EF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "koi-luck-splash",
+      "displayNameRu": "Карп Удачи",
+      "displayName": "Koi Luck Splash",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/koi-luck-splash-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/koi-luck-splash-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/koi-luck-splash-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/koi-luck-splash-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/koi-luck-splash-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3240,
+        "finaleDurationMs": 920
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#74D6FF",
+        "light": "#D7FAFF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "neon-fox-tail",
+      "displayNameRu": "Неоновый Лис",
+      "displayName": "Neon Fox Tail",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/neon-fox-tail-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/neon-fox-tail-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/neon-fox-tail-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/neon-fox-tail-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/neon-fox-tail-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3360,
+        "finaleDurationMs": 760
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#9B5CFF",
+        "light": "#F0D9FF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "moon-cat-guard",
+      "displayNameRu": "Лунный Кот",
+      "displayName": "Moon Cat Guard",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/moon-cat-guard-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/moon-cat-guard-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/moon-cat-guard-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/moon-cat-guard-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/moon-cat-guard-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3000,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#BFD7FF",
+        "light": "#F2F7FF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "dj-star-drop",
+      "displayNameRu": "DJ Звезда",
+      "displayName": "DJ Star Drop",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/dj-star-drop-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/dj-star-drop-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/dj-star-drop-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/dj-star-drop-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/dj-star-drop-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3120,
+        "finaleDurationMs": 920
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#F2C75B",
+        "light": "#FFF0B3"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "golden-lion-roar",
+      "displayNameRu": "Золотой Лев",
+      "displayName": "Golden Lion Roar",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/golden-lion-roar-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/golden-lion-roar-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/golden-lion-roar-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/golden-lion-roar-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/golden-lion-roar-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3240,
+        "finaleDurationMs": 760
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#F5B542",
+        "light": "#FFE6A3"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "royal-rose-stage",
+      "displayNameRu": "Королевская Роза",
+      "displayName": "Royal Rose Stage",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/royal-rose-stage-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/royal-rose-stage-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/royal-rose-stage-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/royal-rose-stage-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/royal-rose-stage-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3360,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#E84C7A",
+        "light": "#FFD0DF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "cosmic-dragon-gate",
+      "displayNameRu": "Космический Дракон",
+      "displayName": "Cosmic Dragon Gate",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/cosmic-dragon-gate-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/cosmic-dragon-gate-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/cosmic-dragon-gate-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/cosmic-dragon-gate-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/cosmic-dragon-gate-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3000,
+        "finaleDurationMs": 920
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#7C66FF",
+        "light": "#DCD5FF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "phoenix-crown-burst",
+      "displayNameRu": "Феникс Корона",
+      "displayName": "Phoenix Crown Burst",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/phoenix-crown-burst-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/phoenix-crown-burst-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/phoenix-crown-burst-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/phoenix-crown-burst-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/phoenix-crown-burst-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3120,
+        "finaleDurationMs": 760
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#FF7A45",
+        "light": "#FFE0C7"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "crystal-whale-wave",
+      "displayNameRu": "Кристальный Кит",
+      "displayName": "Crystal Whale Wave",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/crystal-whale-wave-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/crystal-whale-wave-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/crystal-whale-wave-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/crystal-whale-wave-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/crystal-whale-wave-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3240,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#7AE7FF",
+        "light": "#D9FBFF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "cyber-panda-beat",
+      "displayNameRu": "Кибер Панда",
+      "displayName": "Cyber Panda Beat",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/cyber-panda-beat-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/cyber-panda-beat-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/cyber-panda-beat-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/cyber-panda-beat-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/cyber-panda-beat-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3360,
+        "finaleDurationMs": 920
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#56F0C2",
+        "light": "#D8FFF4"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "velvet-butterfly-storm",
+      "displayNameRu": "Бархатные Бабочки",
+      "displayName": "Velvet Butterfly Storm",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/velvet-butterfly-storm-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/velvet-butterfly-storm-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/velvet-butterfly-storm-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/velvet-butterfly-storm-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/velvet-butterfly-storm-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3000,
+        "finaleDurationMs": 760
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#C48BFF",
+        "light": "#F3DFFF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "thunder-tiger-flash",
+      "displayNameRu": "Громовой Тигр",
+      "displayName": "Thunder Tiger Flash",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/thunder-tiger-flash-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/thunder-tiger-flash-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/thunder-tiger-flash-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/thunder-tiger-flash-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/thunder-tiger-flash-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3120,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#FFD24A",
+        "light": "#FFF2B8"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "aurora-unicorn-ride",
+      "displayNameRu": "Аврора Единорог",
+      "displayName": "Aurora Unicorn Ride",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/aurora-unicorn-ride-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/aurora-unicorn-ride-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/aurora-unicorn-ride-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/aurora-unicorn-ride-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/aurora-unicorn-ride-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3240,
+        "finaleDurationMs": 920
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#94F7D1",
+        "light": "#E5FFF6"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "diamond-genie-lamp",
+      "displayNameRu": "Алмазный Джинн",
+      "displayName": "Diamond Genie Lamp",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/diamond-genie-lamp-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/diamond-genie-lamp-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/diamond-genie-lamp-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/diamond-genie-lamp-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/diamond-genie-lamp-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3360,
+        "finaleDurationMs": 760
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#8EC5FF",
+        "light": "#E4F1FF"
+      }
+    },
+    {
+      "stage": "189C",
+      "giftId": "galaxy-idol-stage",
+      "displayNameRu": "Галакси Айдол",
+      "displayName": "Galaxy Idol Stage",
+      "exportPlanOnly": true,
+      "actualMp4FileIncludedNow": false,
+      "actualWebpFileIncludedNow": false,
+      "actualPlaybackRuntimeIncludedNow": false,
+      "realSendRuntimeIncludedNow": false,
+      "paymentRuntimeIncludedNow": false,
+      "targets": {
+        "mp4Loop": "assets/stream/gifts/production/mp4/galaxy-idol-stage-premium-loop.mp4",
+        "mp4Finale": "assets/stream/gifts/production/mp4/galaxy-idol-stage-premium-finale.mp4",
+        "webpSprite": "assets/stream/gifts/production/webp/galaxy-idol-stage-premium-sprite.webp",
+        "posterFallback": "assets/stream/gifts/production/posters/galaxy-idol-stage-premium-poster.webp",
+        "litePosterFallback": "assets/stream/gifts/production/posters/galaxy-idol-stage-lite-poster.webp"
+      },
+      "dimensions": {
+        "width": 720,
+        "height": 720,
+        "safeAreaInsetPercent": 8
+      },
+      "timing": {
+        "fps": 30,
+        "loopDurationMs": 3000,
+        "finaleDurationMs": 840
+      },
+      "webpSprite": {
+        "frameCount": 36,
+        "columns": 6,
+        "rows": 6,
+        "frameWidth": 360,
+        "frameHeight": 360
+      },
+      "qualityTargets": [
+        "lite",
+        "standard",
+        "ultra"
+      ],
+      "fallbackPolicy": [
+        "poster-first",
+        "mute-safe",
+        "reduce-motion-safe",
+        "low-memory-lite"
+      ],
+      "color": {
+        "primary": "#FF8BE8",
+        "light": "#FFE0FA"
+      }
+    }
+  ]
+}

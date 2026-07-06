@@ -200,6 +200,12 @@ import { getVideoEffectPreset } from "./videoEffects";
 import { VideoCaptureResult, VideoMessageCaptureScreen } from "./VideoMessageCaptureScreen";
 import { UniversalVideoPlayer } from "./UniversalVideoPlayer";
 import { resolveSabiApiBaseUrl } from "../../../shared/network/sabiApiBaseUrl";
+import { translateMessengerInlineMessage } from "../../ai/services/aiMessengerInlineTranslation";
+import {
+  AI_TRANSLATION_TARGET_LANGUAGES,
+  getTranslationLanguageLabel,
+  type AiTranslationLanguageCode,
+} from "../../ai/translation/aiTranslationLanguages";
 
 const ReactionPickerPopover = NamedReactionPickerPopover ?? DefaultReactionPickerPopover;
 const MessageTopActionBar = NamedMessageTopActionBar ?? DefaultMessageTopActionBar;
@@ -831,7 +837,7 @@ function formatLastSeenText(
 }
 
 
-type TopActionKey = "reply" | "edit" | "copy" | "forward" | "delete" | "more";
+type TopActionKey = "reply" | "edit" | "copy" | "translate" | "forward" | "delete" | "more";
 type ComposerPanel = null | "media";
 type RoomSettingsActionId = Exclude<RoomSettingsToolId, "theme" | "more"> | "ai" | "group_add_member" | "group_invite" | "group_share"
   | "channel_add_to_chats"
@@ -839,6 +845,91 @@ type RoomSettingsActionId = Exclude<RoomSettingsToolId, "theme" | "more"> | "ai"
   | "channel_recommend"
   | "channel_open_bot";
 type ReactionAnchor = { x: number; y: number; width: number; height: number };
+
+type InlineMessageTranslationState = {
+  status: "loading" | "success" | "error";
+  text?: string;
+  sourceLanguage?: string | null;
+  targetLanguage?: string | null;
+  error?: string;
+};
+
+const MESSENGER_INLINE_TRANSLATION_PRIORITY_LANGUAGES = [
+  "ru",
+  "uz",
+  "en",
+  "zh",
+  "ar",
+  "tr",
+  "de",
+  "fr",
+  "es",
+  "ko",
+  "ja",
+  "hi",
+  "fa",
+  "kk",
+  "ky",
+  "tg",
+] as const;
+
+function normalizeMessengerInlineTranslationLanguage(value?: string | null): AiTranslationLanguageCode {
+  const normalized = String(value || "").trim().replace(/_/g, "-");
+  const base = normalized.split("-")[0];
+
+  if (AI_TRANSLATION_TARGET_LANGUAGES.some((item) => item.code === normalized)) return normalized;
+  if (AI_TRANSLATION_TARGET_LANGUAGES.some((item) => item.code === base)) return base;
+  return "ru";
+}
+
+function getMessengerInlineTranslationLanguageOptions(appLanguage: string) {
+  const priority = MESSENGER_INLINE_TRANSLATION_PRIORITY_LANGUAGES
+    .map((code) => AI_TRANSLATION_TARGET_LANGUAGES.find((item) => item.code === code))
+    .filter((item): item is (typeof AI_TRANSLATION_TARGET_LANGUAGES)[number] => Boolean(item));
+
+  const rest = AI_TRANSLATION_TARGET_LANGUAGES.filter(
+    (item) => !MESSENGER_INLINE_TRANSLATION_PRIORITY_LANGUAGES.includes(item.code as any),
+  );
+
+  return [...priority, ...rest].map((item) => ({
+    code: item.code,
+    title: getTranslationLanguageLabel(item.code, appLanguage),
+    subtitle: item.englishName,
+    flag: item.flag,
+  }));
+}
+
+function normalizeMessengerTranslationErrorForUi(error: unknown, fallback: string, providerUnavailable: string): string {
+  const raw = error instanceof Error ? error.message : String(error ?? "");
+  const value = raw.trim();
+
+  if (!value) return fallback;
+
+  const lower = value.toLowerCase();
+
+  if (
+    lower.includes("ai_provider_gateway_unavailable") ||
+    lower.includes("provider_gateway_unavailable") ||
+    lower.includes("provider_not_configured") ||
+    lower.includes("gateway") ||
+    lower.includes("502") ||
+    lower.includes("503")
+  ) {
+    return providerUnavailable;
+  }
+
+  if (lower.includes("premium")) {
+    return "AI Premium required for this translation.";
+  }
+
+  if (lower.includes("auth")) {
+    return "Sign in again to use AI translation.";
+  }
+
+  if (/^[a-z][a-z0-9_:-]+$/i.test(value)) return fallback;
+
+  return value;
+}
 
 type SimpleLocation = {
   title: string;
@@ -1374,6 +1465,14 @@ const CHAT_ROOM_FALLBACKS = {
   messageTitle: "Message",
   messageContextMissing: "Message context is missing.",
   messageSendError: "Unable to send message.",
+  translateAction: "Translate",
+  translatingInline: "Translating…",
+  translatedInline: "Translation",
+  translationFailed: "Translation unavailable",
+  translationEmpty: "This message cannot be translated.",
+  translationLanguageTitle: "Translate to",
+  translationLanguageSubtitle: "Choose language for this message.",
+  translationProviderUnavailable: "AI translation provider is unavailable on the server.",
   photoTitle: "Photo",
   photoPreviewSubtitle: "Tap to preview",
   photoPreviewUnavailable: "Photo preview is unavailable.",
@@ -3098,6 +3197,9 @@ type MessageBubbleLabels = {
   editedLabel: string;
   mapLabel: string;
   fileBadgeGeneric: string;
+  translatingInline: string;
+  translatedInline: string;
+  translationFailed: string;
 };
 
 function MessageBubble({
@@ -3120,6 +3222,7 @@ function MessageBubble({
   onVideoToggle,
   onVideoStatus,
   labels,
+  inlineTranslation,
 }: {
   message: MessageItem;
   mine: boolean;
@@ -3140,6 +3243,7 @@ function MessageBubble({
   onVideoToggle: (message: MessageItem) => void;
   onVideoStatus: (messageId: string, status: any) => void;
   labels: MessageBubbleLabels;
+  inlineTranslation?: InlineMessageTranslationState | null;
 }) {
   const textColor = mine ? OUTGOING_TEXT : TEXT_MAIN;
   const metaColor = mine ? OUTGOING_META : "rgba(246,255,249,0.82)";
@@ -3824,6 +3928,38 @@ function MessageBubble({
           >
             {visibleMessageText}
           </Text>
+        ) : null}
+
+        {inlineTranslation ? (
+          <View
+            style={[
+              styles.inlineTranslationCard,
+              {
+                backgroundColor: mine ? "rgba(7,23,17,0.10)" : "rgba(255,255,255,0.06)",
+                borderColor: mine ? "rgba(7,23,17,0.14)" : `${accent}22`,
+              },
+            ]}
+          >
+            <View style={styles.inlineTranslationHeader}>
+              <Sparkles size={11} strokeWidth={2.3} color={mine ? OUTGOING_TEXT : accent} />
+              <Text style={[styles.inlineTranslationLabel, { color: mine ? OUTGOING_META : accent }]}>
+                {inlineTranslation.status === "loading"
+                  ? labels.translatingInline
+                  : inlineTranslation.status === "error"
+                    ? labels.translationFailed
+                    : labels.translatedInline}
+              </Text>
+            </View>
+            <Text
+              style={[styles.inlineTranslationText, { color: inlineTranslation.status === "error" ? metaColor : textColor }]}
+            >
+              {inlineTranslation.status === "loading"
+                ? labels.translatingInline
+                : inlineTranslation.status === "error"
+                  ? inlineTranslation.error || labels.translationFailed
+                  : inlineTranslation.text}
+            </Text>
+          </View>
         ) : null}
 
         <View
@@ -4620,6 +4756,14 @@ const texts = useMemo(
     messageEdited: tx("messenger.chat.messageEdited", CHAT_ROOM_FALLBACKS.messageEdited),
     messageSent: tx("messenger.chat.messageSent", CHAT_ROOM_FALLBACKS.messageSent),
     messageSendError: tx("messenger.chat.messageSendError", CHAT_ROOM_FALLBACKS.messageSendError),
+    translateAction: tx("messenger.chat.translateAction", CHAT_ROOM_FALLBACKS.translateAction),
+    translatingInline: tx("messenger.chat.translatingInline", CHAT_ROOM_FALLBACKS.translatingInline),
+    translatedInline: tx("messenger.chat.translatedInline", CHAT_ROOM_FALLBACKS.translatedInline),
+    translationFailed: tx("messenger.chat.translationFailed", CHAT_ROOM_FALLBACKS.translationFailed),
+    translationEmpty: tx("messenger.chat.translationEmpty", CHAT_ROOM_FALLBACKS.translationEmpty),
+    translationLanguageTitle: tx("messenger.chat.translationLanguageTitle", CHAT_ROOM_FALLBACKS.translationLanguageTitle),
+    translationLanguageSubtitle: tx("messenger.chat.translationLanguageSubtitle", CHAT_ROOM_FALLBACKS.translationLanguageSubtitle),
+    translationProviderUnavailable: tx("messenger.chat.translationProviderUnavailable", CHAT_ROOM_FALLBACKS.translationProviderUnavailable),
     photoTitle: tx("messenger.chat.photoTitle", CHAT_ROOM_FALLBACKS.photoTitle),
     photoPreviewSubtitle: tx("messenger.chat.photoPreviewSubtitle", CHAT_ROOM_FALLBACKS.photoPreviewSubtitle),
     photoPreviewUnavailable: tx("messenger.chat.photoPreviewUnavailable", CHAT_ROOM_FALLBACKS.photoPreviewUnavailable),
@@ -4762,6 +4906,9 @@ const [roomSnapshotVersion, setRoomSnapshotVersion] = useState(0);
   const [settingsVisible, setSettingsVisible] = useState(false);
   const [selectedMessage, setSelectedMessage] = useState<MessageItem | null>(null);
   const [localReactionByMessageId, setLocalReactionByMessageId] = useState<Record<string, string>>({});
+  const [inlineTranslationsByMessageId, setInlineTranslationsByMessageId] = useState<Record<string, InlineMessageTranslationState>>({});
+  const [translationLanguagePickerMessage, setTranslationLanguagePickerMessage] = useState<MessageItem | null>(null);
+  const [preferredTranslationTargetLanguage, setPreferredTranslationTargetLanguage] = useState<AiTranslationLanguageCode>(() => normalizeMessengerInlineTranslationLanguage(language));
   const [topActionMode, setTopActionMode] = useState<"mine" | "other" | null>(null);
   const [reactionVisible, setReactionVisible] = useState(false);
   const [reactionAnchor, setReactionAnchor] = useState<ReactionAnchor | null>(null);
@@ -7017,6 +7164,97 @@ const secondaryHeaderAction = () => {
     showNotice(copied ? texts.copiedText : texts.addedToComposer);
   };
 
+  const translationLanguageOptions = useMemo(
+    () => getMessengerInlineTranslationLanguageOptions(language),
+    [language],
+  );
+
+  const runTranslateMessage = useCallback(async (target: MessageItem, targetLanguage: AiTranslationLanguageCode) => {
+    const text = String(target?.text ?? "").trim();
+
+    if (!target || !text) {
+      setTranslationLanguagePickerMessage(null);
+      showNotice(texts.translationEmpty);
+      return;
+    }
+
+    const messageId = target.id;
+    const normalizedTargetLanguage = normalizeMessengerInlineTranslationLanguage(targetLanguage);
+    setPreferredTranslationTargetLanguage(normalizedTargetLanguage);
+    setTranslationLanguagePickerMessage(null);
+    setInlineTranslationsByMessageId((current) => ({
+      ...current,
+      [messageId]: {
+        status: "loading",
+        targetLanguage: normalizedTargetLanguage,
+      },
+    }));
+
+    try {
+      const result = await translateMessengerInlineMessage({
+        text,
+        sourceLanguage: "auto",
+        targetLanguage: normalizedTargetLanguage,
+        chatId: transportChatId || routeChatId,
+        messageId,
+        userId: transportUserId || routeUserId,
+      });
+
+      setInlineTranslationsByMessageId((current) => ({
+        ...current,
+        [messageId]: {
+          status: "success",
+          text: result.translatedText,
+          sourceLanguage: result.sourceLanguage,
+          targetLanguage: result.targetLanguage || normalizedTargetLanguage,
+        },
+      }));
+    } catch (error) {
+      const errorText = normalizeMessengerTranslationErrorForUi(
+        error,
+        texts.translationFailed,
+        texts.translationProviderUnavailable,
+      );
+      setInlineTranslationsByMessageId((current) => ({
+        ...current,
+        [messageId]: {
+          status: "error",
+          error: errorText,
+          targetLanguage: normalizedTargetLanguage,
+        },
+      }));
+      showNotice(errorText);
+    }
+  }, [
+    routeChatId,
+    routeUserId,
+    showNotice,
+    texts.translationEmpty,
+    texts.translationFailed,
+    texts.translationProviderUnavailable,
+    transportChatId,
+    transportUserId,
+  ]);
+
+  const handleTranslateSelectedMessage = useCallback(() => {
+    const target = selectedMessage;
+    const text = String(target?.text ?? "").trim();
+
+    if (!target || !text) {
+      closeSelection();
+      showNotice(texts.translationEmpty);
+      return;
+    }
+
+    setTranslationLanguagePickerMessage(target);
+    closeSelection();
+  }, [
+    closeSelection,
+    selectedMessage,
+    showNotice,
+    texts.translationEmpty,
+  ]);
+
   const sendHiddenReactionControl = (message: MessageItem, reaction: string) => {
     const normalizedReaction = String(reaction || "").trim();
     if (!message?.id || !normalizedReaction) return;
@@ -8473,6 +8711,9 @@ const secondaryHeaderAction = () => {
         ...(!selectedMessage.mine
           ? [{ id: "reply", label: texts.replyAction, icon: "arrow-undo-outline" as const }]
           : []),
+        ...(String(selectedMessage.text ?? "").trim()
+          ? [{ id: "translate", label: texts.translateAction, icon: "language-outline" as const }]
+          : []),
         { id: "delete_me", label: texts.deleteMe, icon: "trash-outline" as const, danger: true },
         ...(selectedMessage.mine
           ? [{ id: "delete_all", label: texts.deleteAllAction, icon: "trash-outline" as const, danger: true }]
@@ -8484,6 +8725,7 @@ const secondaryHeaderAction = () => {
     if (key === "reply") return handleReply();
     if (key === "edit") return handleEdit();
     if (key === "copy") return void handleCopy();
+    if (key === "translate") return void handleTranslateSelectedMessage();
     if (key === "forward") return handleForward();
     if (key === "delete") return startSelectionMode("delete");
     if (key === "more") return setOverflowVisible(true);
@@ -8588,6 +8830,7 @@ const secondaryHeaderAction = () => {
       return;
     }
     if (id === "reply") return handleReply();
+    if (id === "translate") return void handleTranslateSelectedMessage();
     if (id === "delete_me") return handleDelete("me");
     if (id === "delete_all") return handleDelete("all");
     closeSelection();
@@ -8863,7 +9106,11 @@ const secondaryHeaderAction = () => {
                           editedLabel: texts.editedLabel,
                           mapLabel: texts.mapLabel,
                           fileBadgeGeneric: texts.fileBadgeGeneric,
+                          translatingInline: texts.translatingInline,
+                          translatedInline: texts.translatedInline,
+                          translationFailed: texts.translationFailed,
                         }}
+                        inlineTranslation={inlineTranslationsByMessageId[message.id] ?? null}
                       />
                     </Pressable>
 
@@ -9598,6 +9845,75 @@ const secondaryHeaderAction = () => {
             </LinearGradient>
           </View>
         ) : null}
+
+        <Modal
+          visible={Boolean(translationLanguagePickerMessage)}
+          transparent
+          animationType="fade"
+          onRequestClose={() => setTranslationLanguagePickerMessage(null)}
+        >
+          <View style={styles.translationLanguageOverlay}>
+            <Pressable
+              style={StyleSheet.absoluteFill}
+              onPress={() => setTranslationLanguagePickerMessage(null)}
+            />
+            <View style={[styles.translationLanguageSheet, { borderColor: `${backgroundPreset.accent}22` }]}>
+              <LinearGradient
+                colors={["rgba(24,45,39,0.98)", "rgba(7,18,16,0.98)"]}
+                style={styles.translationLanguageGradient}
+              >
+                <View style={styles.translationLanguageHeader}>
+                  <View style={styles.translationLanguageTitleWrap}>
+                    <Text style={styles.translationLanguageTitle}>{texts.translationLanguageTitle}</Text>
+                    <Text style={styles.translationLanguageSubtitle}>{texts.translationLanguageSubtitle}</Text>
+                  </View>
+                  <Pressable
+                    onPress={() => setTranslationLanguagePickerMessage(null)}
+                    style={styles.translationLanguageClose}
+                  >
+                    <X size={16} strokeWidth={2.4} color={TEXT_MAIN} />
+                  </Pressable>
+                </View>
+
+                <ScrollView
+                  showsVerticalScrollIndicator={false}
+                  keyboardShouldPersistTaps="handled"
+                  contentContainerStyle={styles.translationLanguageList}
+                >
+                  {translationLanguageOptions.map((item) => {
+                    const active = preferredTranslationTargetLanguage === item.code;
+                    return (
+                      <Pressable
+                        key={item.code}
+                        onPress={() => {
+                          const target = translationLanguagePickerMessage;
+                          if (target) {
+                            void runTranslateMessage(target, item.code);
+                          }
+                        }}
+                        style={({ pressed }) => [
+                          styles.translationLanguageItem,
+                          {
+                            borderColor: active ? backgroundPreset.accent : "rgba(255,255,255,0.08)",
+                            backgroundColor: active ? `${backgroundPreset.accent}18` : "rgba(255,255,255,0.045)",
+                          },
+                          pressed ? styles.pressed : undefined,
+                        ]}
+                      >
+                        <Text style={[styles.translationLanguageFlag, { color: backgroundPreset.accent }]}>{item.flag}</Text>
+                        <View style={styles.translationLanguageItemText}>
+                          <Text style={styles.translationLanguageItemTitle}>{item.title}</Text>
+                          <Text style={styles.translationLanguageItemSubtitle}>{item.subtitle}</Text>
+                        </View>
+                        {active ? <Check size={17} strokeWidth={2.5} color={backgroundPreset.accent} /> : null}
+                      </Pressable>
+                    );
+                  })}
+                </ScrollView>
+              </LinearGradient>
+            </View>
+          </View>
+        </Modal>
 
         <MessageTopActionBar
           visible={!!topActionMode && !selectionMode}
@@ -10398,6 +10714,89 @@ const styles = StyleSheet.create<any>({
     fontSize: 10,
     fontWeight: "800",
   },
+  translationLanguageOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    zIndex: 80,
+    justifyContent: "flex-end",
+    backgroundColor: "rgba(0,0,0,0.42)",
+  },
+  translationLanguageSheet: {
+    marginHorizontal: 12,
+    marginBottom: 14,
+    maxHeight: "72%",
+    borderRadius: 28,
+    borderWidth: 1,
+    overflow: "hidden",
+  },
+  translationLanguageGradient: {
+    padding: 16,
+  },
+  translationLanguageHeader: {
+    flexDirection: "row",
+    alignItems: "flex-start",
+    gap: 12,
+    marginBottom: 12,
+  },
+  translationLanguageTitleWrap: {
+    flex: 1,
+  },
+  translationLanguageTitle: {
+    color: TEXT_MAIN,
+    fontSize: 18,
+    fontWeight: "900",
+  },
+  translationLanguageSubtitle: {
+    color: TEXT_MUTED,
+    fontSize: 12,
+    fontWeight: "700",
+    lineHeight: 17,
+    marginTop: 4,
+  },
+  translationLanguageClose: {
+    width: 36,
+    height: 36,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.10)",
+  },
+  translationLanguageList: {
+    gap: 8,
+    paddingBottom: 4,
+  },
+  translationLanguageItem: {
+    minHeight: 54,
+    borderRadius: 18,
+    borderWidth: 1,
+    paddingHorizontal: 12,
+    paddingVertical: 9,
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 10,
+  },
+  translationLanguageFlag: {
+    width: 34,
+    fontSize: 12,
+    fontWeight: "900",
+    textAlign: "center",
+  },
+  translationLanguageItemText: {
+    flex: 1,
+    minWidth: 0,
+  },
+  translationLanguageItemTitle: {
+    color: TEXT_MAIN,
+    fontSize: 14,
+    fontWeight: "900",
+  },
+  translationLanguageItemSubtitle: {
+    color: TEXT_MUTED,
+    fontSize: 11,
+    fontWeight: "700",
+    marginTop: 2,
+  },
   messageContentStretch: {
     alignSelf: "flex-start",
     minWidth: 0,
@@ -10411,6 +10810,30 @@ const styles = StyleSheet.create<any>({
     flexShrink: 1,
     fontSize: 14,
     lineHeight: 19,
+    fontWeight: "700",
+  },
+  inlineTranslationCard: {
+    marginTop: 8,
+    borderRadius: 14,
+    borderWidth: 1,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    maxWidth: "100%",
+  },
+  inlineTranslationHeader: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 5,
+    marginBottom: 4,
+  },
+  inlineTranslationLabel: {
+    fontSize: 10,
+    fontWeight: "900",
+    letterSpacing: 0.4,
+  },
+  inlineTranslationText: {
+    fontSize: 13,
+    lineHeight: 18,
     fontWeight: "700",
   },
   messageMetaStretch: {

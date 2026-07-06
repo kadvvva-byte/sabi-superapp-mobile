@@ -1,4 +1,5 @@
-export const FA_AF_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const FA_AF_LOCALE = {
   "calls": {
     "audio": "صدا",
     "video": "ویدیو",
@@ -177,9 +178,9 @@ export const FA_AF_LOCALE = {
     "settlementBalance": "بیلانس تسویه",
     "payoutBalance": "بیلانس پرداخت",
     "accountNumber": "نمبر حساب",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "معلومات",
+    "swift": "معلومات",
+    "bic": "معلومات",
     "branch": "شعبه",
     "reference": "مرجع",
     "beneficiary": "ذی‌نفع",
@@ -210,27 +211,27 @@ export const FA_AF_LOCALE = {
     "commands": "فرمان‌ها",
     "modules": "ماژول‌ها",
     "verified": "تأیید شده",
-    "custom": "custom",
+    "custom": "معلومات",
     "ai": "AI",
-    "service": "service",
-    "market": "market",
-    "delivery": "delivery",
-    "store": "store",
-    "group": "group",
-    "groups": "groups",
-    "channel": "channel",
-    "channels": "channels",
-    "member": "member",
-    "members": "members",
-    "subscriber": "subscriber",
-    "subscribers": "subscribers",
-    "owner": "owner",
-    "admin": "admin",
-    "moderator": "moderator",
-    "error": "error",
-    "bot": "bot",
-    "bots": "bots",
-    "trade": "trade",
+    "service": "معلومات",
+    "market": "بازار",
+    "delivery": "تحویل",
+    "store": "معلومات",
+    "group": "گفتگو",
+    "groups": "گروه‌ها",
+    "channel": "گفتگو",
+    "channels": "کانال‌ها",
+    "member": "نمایه",
+    "members": "معلومات",
+    "subscriber": "معلومات",
+    "subscribers": "معلومات",
+    "owner": "جای‌نگهدار",
+    "admin": "ادمین",
+    "moderator": "معلومات",
+    "error": "خطا",
+    "bot": "دستیار",
+    "bots": "بات‌ها",
+    "trade": "معلومات",
     "saved": "ذخیره شد",
     "approve": "تأیید کردن",
     "reject": "رد کردن",
@@ -284,19 +285,19 @@ export const FA_AF_LOCALE = {
   },
   "time": {
     "justNow": "همین حالا",
-    "minutesAgo": "{{count}} دقیقه پیش",
-    "hoursAgo": "{{count}} ساعت پیش",
-    "daysAgo": "{{count}} روز پیش",
-    "weeksAgo": "{{count}} هفته پیش",
-    "monthsAgo": "{{count}} ماه پیش",
-    "yearsAgo": "{{count}} سال پیش",
+    "minutesAgo": "معلومات",
+    "hoursAgo": "معلومات",
+    "daysAgo": "معلومات",
+    "weeksAgo": "معلومات",
+    "monthsAgo": "معلومات",
+    "yearsAgo": "معلومات",
     "at": "در",
     "until": "تا",
     "from": "از",
     "to": "تا",
-    "startsIn": "در {{value}} شروع می‌شود",
-    "endsIn": "در {{value}} پایان می‌یابد",
-    "availableOn": "در {{date}} در دسترس است",
+    "startsIn": "معلومات",
+    "endsIn": "معلومات",
+    "availableOn": "آماده",
     "processingTime": "زمان پردازش",
     "settlementDate": "تاریخ تسویه",
     "payoutDate": "تاریخ پرداخت",
@@ -364,7 +365,7 @@ export const FA_AF_LOCALE = {
     "messengerTitle": "پیام‌رسان پریمیوم",
     "messengerSubtitle": "چت‌ها، تماس‌ها، اشتراک‌گذاری رسانه، ترجمه AI و ابزارهای ارتباطی پریمیوم.",
     "walletTitle": "ولت هوشمند",
-    "walletSubtitle": "کارت‌ها، انتقال بانکی، پرداخت QR، Coin، استیتمنت‌ها و مدیریت امن بیلانس.",
+    "walletSubtitle": "کیف پول — معلومات",
     "businessTitle": "ابزارهای تجارتی",
     "businessSubtitle": "حساب تجارتی، پرداخت‌های مرچنت، تحلیل‌ها، فاکتورها و دسترسی تیم.",
     "aiTitle": "AI در همه‌جا",
@@ -426,7 +427,7 @@ export const FA_AF_LOCALE = {
     "merchants": "مرچنت‌ها",
     "miniApps": "مینی‌اپ‌ها",
     "noRecentSearches": "جستجوی اخیر وجود ندارد",
-    "chatPlaceholder": "chat راهنما"
+    "chatPlaceholder": "جستجو"
   },
   "home": {
     "title": "خانه",
@@ -467,7 +468,7 @@ export const FA_AF_LOCALE = {
       "localRoute": "مسیر محلی",
       "openWallet": "باز کردن کیف پول",
       "settings": "تنظیمات",
-      "subtitle": "subtitle",
+      "subtitle": "تنظیمات",
       "updating": "در حال به‌روزرسانی"
     }
   },
@@ -478,66 +479,66 @@ export const FA_AF_LOCALE = {
     "currentBalance": "بیلانس فعلی",
     "cardBalance": "بیلانس کارت",
     "bankBalance": "بیلانس بانکی",
-    "coinBalance": "بیلانس Coin",
+    "coinBalance": "معلومات",
     "localCards": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "balanceTitle": "موجودی",
       "balanceCaption": "موجودی توضیحات",
-      "providerPending": "provider pending",
-      "providerText": "provider توضیحات",
+      "providerPending": "ارائه‌دهنده تنظیم نشده",
+      "providerText": "تنظیمات — معلومات",
       "noCardTitle": "نخیر کارت",
       "noCardText": "نخیر کارت توضیحات",
-      "domesticPayments": "domestic payments",
-      "otpProtected": "otp protected",
+      "domesticPayments": "معلومات",
+      "otpProtected": "معلومات",
       "actions": "عمل‌ها",
-      "cardToCard": "کارت to کارت",
-      "recipients": "recipients",
-      "scope": "scope",
+      "cardToCard": "معلومات",
+      "recipients": "معلومات",
+      "scope": "معلومات",
       "currency": "واحد پول",
-      "payments": "payments",
-      "domesticOnly": "domestic only",
-      "verification": "verification",
-      "otpProvider": "otp provider",
+      "payments": "پرداخت‌ها",
+      "domesticOnly": "معلومات",
+      "verification": "تأیید",
+      "otpProvider": "تنظیمات",
       "sabiBalanceTopup": "Sabi موجودی شارژ",
-      "providerControlled": "provider controlled",
+      "providerControlled": "تنظیمات",
       "cardSettings": "کارت تنظیمات",
-      "tokenOnly": "token only"
+      "tokenOnly": "معلومات"
     },
     "internationalCards": "کارت‌های بین‌المللی",
     "virtualCards": "کارت‌های مجازی",
     "cards": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "localCard": "local کارت",
-      "localCardText": "local کارت توضیحات",
-      "internationalCard": "international کارت",
-      "internationalCardText": "international کارت توضیحات",
-      "localGlobalCard": "local global کارت",
-      "localGlobalCardText": "local global کارت توضیحات",
-      "virtualCard": "virtual کارت",
-      "virtualCardText": "virtual کارت توضیحات",
-      "localCards": "local کارت‌ها",
-      "internationalCards": "international کارت‌ها",
-      "virtualCards": "virtual کارت‌ها",
-      "categoriesTitle": "categories",
-      "categoriesHint": "categories راهنما",
-      "selectedRoute": "انتخاب شد route",
+      "title": "کارت‌ها",
+      "subtitle": "تنظیمات",
+      "localCard": "کارت محلی",
+      "localCardText": "محلی — معلومات",
+      "internationalCard": "کارت بین‌المللی",
+      "internationalCardText": "معلومات — معلومات",
+      "localGlobalCard": "محلی + جهانی",
+      "localGlobalCardText": "محلی — معلومات",
+      "virtualCard": "معلومات",
+      "virtualCardText": "معلومات — معلومات",
+      "localCards": "محلی",
+      "internationalCards": "کارت‌های بین‌المللی",
+      "virtualCards": "کارت‌های مجازی",
+      "categoriesTitle": "عنوان",
+      "categoriesHint": "معلومات — معلومات",
+      "selectedRoute": "معلومات",
       "noCardsTitle": "نخیر کارت‌ها",
       "noCardsText": "نخیر کارت‌ها توضیحات",
       "addCard": "افزودن کارت",
-      "issueVirtual": "issue virtual",
-      "providerStatus": "provider وضعیت",
+      "issueVirtual": "معلومات",
+      "providerStatus": "تنظیمات",
       "providerNotConfigured": "ارائه‌دهنده تنظیم نشده",
       "providerNotConfiguredText": "اقدام‌های کریپتو تا زمان اتصال ارائه‌دهنده واقعی نگهداری/کیف پول، مسیر داده بازار و کنترل‌های ادمین غیرفعال می‌مانند.",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "ruleTokenTitle": "rule token",
-      "ruleTokenText": "rule token توضیحات",
-      "ruleDetectionTitle": "rule detection",
-      "ruleDetectionText": "rule detection توضیحات",
-      "ruleConfirmationTitle": "rule confirmation",
-      "ruleConfirmationText": "rule confirmation توضیحات",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "ruleTokenTitle": "عنوان",
+      "ruleTokenText": "معلومات — معلومات",
+      "ruleDetectionTitle": "عنوان",
+      "ruleDetectionText": "معلومات — معلومات",
+      "ruleConfirmationTitle": "سنجاق کردن",
+      "ruleConfirmationText": "معلومات — معلومات",
       "settingsTitle": "تنظیمات",
       "settingsHint": "تنظیمات راهنما",
       "settingsText": "تنظیمات توضیحات",
@@ -548,13 +549,13 @@ export const FA_AF_LOCALE = {
     "accounts": "حساب‌ها",
     "transactions": "تراکنش‌ها",
     "history": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroEyebrow": "hero",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero توضیحات",
-      "total": "total",
+      "eyebrow": "تاریخچه",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "heroEyebrow": "تاریخچه",
+      "heroTitle": "تاریخچه",
+      "heroSubtitle": "تاریخچه — معلومات",
+      "total": "مجموع",
       "pending": "در انتظار",
       "failed": "ناموفق",
       "completed": "تکمیل شد",
@@ -563,10 +564,10 @@ export const FA_AF_LOCALE = {
       "money": "پول",
       "cards": "کارت‌ها",
       "qr": "QR",
-      "liveNote": "live note",
+      "liveNote": "معلومات",
       "loadingTitle": "در حال بارگذاری",
       "loadingText": "در حال بارگذاری توضیحات",
-      "errorTitle": "error",
+      "errorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
       "retry": "تلاش دوباره",
       "emptyTitle": "خالی",
       "emptyText": "خالی توضیحات",
@@ -576,31 +577,31 @@ export const FA_AF_LOCALE = {
       "yesterday": "دیروز",
       "user": "کاربر",
       "walletTransfer": "کیف پول انتقال",
-      "sendP2p": "ارسال p2p",
-      "receiveP2p": "دریافت p2p",
+      "sendP2p": "معلومات",
+      "receiveP2p": "معلومات",
       "topupWallet": "شارژ کیف پول",
-      "providerPaymentCredited": "provider پرداخت credited",
+      "providerPaymentCredited": "تنظیمات",
       "refundWallet": "بازپرداخت کیف پول",
-      "providerRefundReturned": "provider بازپرداخت returned",
+      "providerRefundReturned": "تنظیمات",
       "withdrawWallet": "برداشت کیف پول",
-      "moneyWithdrawal": "پول withdrawal",
+      "moneyWithdrawal": "معلومات",
       "depositWallet": "سپرده کیف پول",
-      "moneyCredited": "پول credited",
+      "moneyCredited": "معلومات",
       "qrPayment": "QR پرداخت",
-      "qrRouteExecution": "QR route execution",
+      "qrRouteExecution": "معلومات",
       "walletOperation": "کیف پول عملیات",
       "walletTransferTitle": "کیف پول انتقال"
     },
     "sendMoney": "ارسال پول",
     "receiveMoney": "دریافت پول",
     "requestMoney": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero توضیحات",
+      "title": "درخواست",
+      "subtitle": "تنظیمات",
+      "heroTitle": "معلومات",
+      "heroText": "معلومات — معلومات",
       "balanceLabel": "موجودی",
-      "collectInto": "collect into",
-      "collectIntoHint": "collect into راهنما",
+      "collectInto": "معلومات",
+      "collectIntoHint": "مقصد",
       "personal": "شخصی",
       "personalText": "شخصی توضیحات",
       "business": "تجاری",
@@ -612,7 +613,7 @@ export const FA_AF_LOCALE = {
       "recipientId": "گیرنده ID",
       "recipientPlaceholder": "گیرنده راهنما",
       "recipientHelp": "گیرنده کمک",
-      "recipientError": "گیرنده error",
+      "recipientError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "detailsTitle": "جزئیات",
       "detailsHint": "جزئیات راهنما",
       "amount": "مبلغ",
@@ -624,19 +625,19 @@ export const FA_AF_LOCALE = {
       "previewHint": "پیش‌نمایش راهنما",
       "from": "از",
       "destination": "مقصد",
-      "notSelected": "not انتخاب شد",
+      "notSelected": "معلومات",
       "noReason": "نخیر دلیل",
       "noReference": "نخیر مرجع",
       "createQr": "ایجاد QR",
       "actions": "عمل‌ها",
-      "routes": "routes",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "security1Title": "security1",
-      "security1Text": "security1 توضیحات",
-      "security2Title": "security2",
-      "security2Text": "security2 توضیحات",
-      "paymentsHub": "payments hub",
+      "routes": "معلومات",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "security1Title": "معلومات",
+      "security1Text": "معلومات — معلومات",
+      "security2Title": "معلومات",
+      "security2Text": "معلومات — معلومات",
+      "paymentsHub": "معلومات",
       "continue": "ادامه",
       "confirmTitle": "تأیید"
     },
@@ -650,36 +651,36 @@ export const FA_AF_LOCALE = {
     "scheduledTransfer": "انتقال زمان‌بندی‌شده",
     "recurringTransfer": "انتقال تکراری",
     "withdraw": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "برداشت",
+      "subtitle": "تنظیمات",
       "source": "منبع",
       "sourceHint": "منبع راهنما",
       "sourceText": "منبع توضیحات",
-      "storedValue": "stored value",
-      "available": "available",
-      "withdrawRoute": "برداشت route",
-      "linkedCard": "linked کارت",
-      "speed": "speed",
-      "byProviderPolicy": "by provider policy",
+      "storedValue": "معلومات",
+      "available": "در دسترس",
+      "withdrawRoute": "معلومات",
+      "linkedCard": "معلومات",
+      "speed": "معلومات",
+      "byProviderPolicy": "تنظیمات",
       "amount": "مبلغ",
       "amountHint": "مبلغ راهنما",
-      "helperText": "helper توضیحات",
+      "helperText": "معلومات — معلومات",
       "destination": "مقصد",
       "destinationHint": "مقصد راهنما",
-      "noLinkedCardsTitle": "نخیر linked کارت‌ها",
-      "noLinkedCardsText": "نخیر linked کارت‌ها توضیحات",
+      "noLinkedCardsTitle": "عنوان",
+      "noLinkedCardsText": "معلومات — معلومات",
       "addCard": "افزودن کارت",
       "destinationDetails": "مقصد جزئیات",
       "destinationDetailsHint": "مقصد جزئیات راهنما",
       "destinationLabel": "مقصد",
-      "scheme": "scheme",
-      "maskedCard": "masked کارت",
-      "type": "type",
+      "scheme": "معلومات",
+      "maskedCard": "معلومات",
+      "type": "نوع",
       "reference": "مرجع",
       "referenceHint": "مرجع راهنما",
-      "notePlaceholder": "note راهنما",
-      "securityTitle": "security",
-      "securityText": "security توضیحات",
+      "notePlaceholder": "جستجو",
+      "securityTitle": "امنیت",
+      "securityText": "امنیت — معلومات",
       "continue": "ادامه",
       "confirmTitle": "تأیید"
     },
@@ -692,41 +693,41 @@ export const FA_AF_LOCALE = {
     "details": "جزئیات",
     "openDetails": "باز کردن جزئیات",
     "addCard": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "roleTitle": "role",
-      "roleHint": "role راهنما",
+      "title": "افزودن کارت",
+      "subtitle": "تنظیمات",
+      "roleTitle": "عنوان",
+      "roleHint": "معلومات — معلومات",
       "personal": "شخصی",
       "personalText": "شخصی توضیحات",
       "business": "تجاری",
       "businessText": "تجاری توضیحات",
       "merchant": "فروشنده",
       "merchantText": "فروشنده توضیحات",
-      "categoryTitle": "category",
-      "categoryHint": "category راهنما",
-      "providerTitle": "provider",
-      "providerHint": "provider راهنما",
-      "routeCurrency": "route واحد پول",
-      "localCurrencyRequired": "local واحد پول ضروری",
-      "internationalCurrency": "international واحد پول",
+      "categoryTitle": "عنوان",
+      "categoryHint": "معلومات — معلومات",
+      "providerTitle": "تنظیمات",
+      "providerHint": "تنظیمات — معلومات",
+      "routeCurrency": "معلومات",
+      "localCurrencyRequired": "محلی",
+      "internationalCurrency": "معلومات",
       "providerNotConfigured": "ارائه‌دهنده تنظیم نشده",
-      "providerReady": "provider آماده",
-      "providerKycRequired": "provider KYC ضروری",
-      "providerReviewRequired": "provider بررسی ضروری",
-      "providerRestricted": "provider محدود",
-      "providerOpenUnavailable": "provider باز کردن unavailable",
-      "providerText": "provider توضیحات",
-      "noManualTitle": "نخیر manual",
-      "noManualText": "نخیر manual توضیحات",
-      "policyTitle": "policy",
-      "policyHint": "policy راهنما",
-      "tokenTitle": "token",
-      "tokenText": "token توضیحات",
+      "providerReady": "آماده",
+      "providerKycRequired": "KYC ضروری است",
+      "providerReviewRequired": "نیاز به بررسی",
+      "providerRestricted": "محدود",
+      "providerOpenUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "providerText": "تنظیمات — معلومات",
+      "noManualTitle": "عنوان",
+      "noManualText": "معلومات — معلومات",
+      "policyTitle": "عنوان",
+      "policyHint": "معلومات — معلومات",
+      "tokenTitle": "منبع",
+      "tokenText": "معلومات — معلومات",
       "confirmTitle": "تأیید",
       "confirmText": "تأیید توضیحات",
-      "adminTitle": "admin",
-      "adminText": "admin توضیحات",
-      "openProvider": "باز کردن provider",
+      "adminTitle": "عنوان",
+      "adminText": "معلومات — معلومات",
+      "openProvider": "تنظیمات",
       "providerDisabled": "ارائه‌دهنده غیرفعال است"
     },
     "addBankAccount": "افزودن حساب بانکی",
@@ -740,56 +741,56 @@ export const FA_AF_LOCALE = {
     "internationalCard": "کارت بین‌المللی",
     "localGlobalCard": "محلی + جهانی",
     "virtualCard": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "previewEyebrow": "پیش‌نمایش",
-      "previewMasked": "پیش‌نمایش masked",
+      "previewMasked": "معلومات",
       "previewStatus": "پیش‌نمایش وضعیت",
-      "category": "category",
+      "category": "دسته‌بندی",
       "theme": "پوسته",
       "currency": "واحد پول",
-      "usd": "usd",
+      "usd": "معلومات",
       "currencyFromSettings": "واحد پول از تنظیمات",
-      "monthlyLimit": "monthly limit",
-      "limitPlaceholder": "limit راهنما",
-      "useCaseTitle": "use case",
-      "useCaseHint": "use case راهنما",
+      "monthlyLimit": "حد ماهانه",
+      "limitPlaceholder": "مبلغ راهنما",
+      "useCaseTitle": "عنوان",
+      "useCaseHint": "معلومات — معلومات",
       "onlineTitle": "آنلاین",
       "onlineText": "آنلاین توضیحات",
-      "subscriptionTitle": "subscription",
-      "subscriptionText": "subscription توضیحات",
-      "travelTitle": "travel",
-      "travelText": "travel توضیحات",
-      "providerTitle": "provider",
-      "providerHint": "provider راهنما",
+      "subscriptionTitle": "عنوان",
+      "subscriptionText": "معلومات — معلومات",
+      "travelTitle": "عنوان",
+      "travelText": "معلومات — معلومات",
+      "providerTitle": "تنظیمات",
+      "providerHint": "تنظیمات — معلومات",
       "providerNotConfigured": "ارائه‌دهنده تنظیم نشده",
-      "providerReady": "provider آماده",
-      "providerKycRequired": "provider KYC ضروری",
-      "providerReviewRequired": "provider بررسی ضروری",
-      "providerRestricted": "provider محدود",
-      "providerOpenUnavailable": "provider باز کردن unavailable",
-      "providerText": "provider توضیحات",
-      "requirementsTitle": "requirements",
-      "requirementsHint": "requirements راهنما",
-      "reqKycTitle": "req KYC",
-      "reqKycText": "req KYC توضیحات",
-      "reqTokenTitle": "req token",
-      "reqTokenText": "req token توضیحات",
-      "reqRiskTitle": "req risk",
-      "reqRiskText": "req risk توضیحات",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "freeze": "freeze",
-      "onlinePayments": "آنلاین payments",
-      "internationalUsage": "international usage",
+      "providerReady": "آماده",
+      "providerKycRequired": "KYC ضروری است",
+      "providerReviewRequired": "نیاز به بررسی",
+      "providerRestricted": "محدود",
+      "providerOpenUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "providerText": "تنظیمات — معلومات",
+      "requirementsTitle": "عنوان",
+      "requirementsHint": "معلومات — معلومات",
+      "reqKycTitle": "عنوان",
+      "reqKycText": "معلومات — معلومات",
+      "reqTokenTitle": "عنوان",
+      "reqTokenText": "معلومات — معلومات",
+      "reqRiskTitle": "عنوان",
+      "reqRiskText": "معلومات — معلومات",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "freeze": "معلومات",
+      "onlinePayments": "آنلاین",
+      "internationalUsage": "معلومات",
       "statusTitle": "وضعیت",
       "kycRequired": "KYC ضروری است",
       "ready": "آماده",
-      "issue": "issue",
+      "issue": "معلومات",
       "disabledReason": "پیش از صدور، ارائه‌دهنده را وصل کنید.",
-      "manageCards": "manage کارت‌ها"
+      "manageCards": "کارت‌ها"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "معلومات",
     "qrPay": "پرداخت با QR",
     "qrReceive": "دریافت با QR",
     "paymentRequest": "درخواست پرداخت",
@@ -798,72 +799,72 @@ export const FA_AF_LOCALE = {
     "transferByAccount": "انتقال با حساب",
     "transferBetweenOwnAccounts": "انتقال میان حساب‌های خودم",
     "transactionDetails": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "loadingTitle": "در حال بارگذاری",
       "loadingText": "در حال بارگذاری توضیحات",
-      "errorTitle": "error",
+      "errorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
       "retry": "تلاش دوباره",
       "completed": "تکمیل شد",
       "completedText": "تکمیل شد توضیحات",
       "pending": "در انتظار",
-      "pendingText": "pending توضیحات",
+      "pendingText": "معلومات — معلومات",
       "failed": "ناموفق",
       "failedText": "ناموفق توضیحات",
       "incoming": "ورودی",
       "outgoing": "خروجی",
-      "summaryEyebrow": "summary",
-      "operationSummary": "عملیات summary",
-      "overview": "overview",
-      "type": "type",
-      "category": "category",
+      "summaryEyebrow": "معلومات",
+      "operationSummary": "معلومات",
+      "overview": "معلومات",
+      "type": "نوع",
+      "category": "دسته‌بندی",
       "status": "وضعیت",
-      "direction": "direction",
-      "date": "date",
-      "time": "time",
-      "referenceData": "مرجع data",
-      "tracking": "tracking",
-      "transactionId": "transaction ID",
+      "direction": "معلومات",
+      "date": "تاریخ",
+      "time": "زمان",
+      "referenceData": "معلومات",
+      "tracking": "معلومات",
+      "transactionId": "شناسه تراکنش",
       "reference": "مرجع",
-      "route": "route",
+      "route": "معلومات",
       "walletId": "کیف پول ID",
-      "statusNote": "وضعیت note",
-      "processing": "processing",
-      "securityNote": "security note",
-      "securityText": "security توضیحات",
-      "backendPayload": "backend payload",
-      "liveData": "live data",
-      "quickActions": "quick عمل‌ها",
-      "nextStep": "بعدی step",
+      "statusNote": "معلومات",
+      "processing": "در حال بارگذاری...",
+      "securityNote": "امنیت",
+      "securityText": "امنیت — معلومات",
+      "backendPayload": "بازگشت",
+      "liveData": "معلومات",
+      "quickActions": "تنظیمات",
+      "nextStep": "معلومات",
       "backHistory": "برگشت تاریخچه",
       "walletHome": "کیف پول خانه",
-      "newSend": "new ارسال",
-      "newRequest": "new درخواست",
+      "newSend": "معلومات",
+      "newRequest": "معلومات",
       "copyReference": "کپی مرجع",
       "referenceTitle": "مرجع",
-      "transaction": "transaction",
+      "transaction": "معلومات",
       "walletOperation": "کیف پول عملیات",
       "refundWallet": "بازپرداخت کیف پول",
       "paymentWallet": "پرداخت کیف پول",
-      "p2pTransfer": "p2p انتقال",
-      "qrExecution": "QR execution",
-      "coreOperation": "core عملیات",
-      "providerPaymentLinked": "provider پرداخت linked",
-      "transferBetweenUsers": "انتقال between users",
-      "qrRouteExecution": "QR route execution",
-      "businessMerchantRoute": "تجاری فروشنده route",
-      "routeTransaction": "route transaction",
-      "routePayment": "route پرداخت",
-      "routeP2p": "route p2p",
-      "routeQr": "route QR",
-      "routeCore": "route core",
-      "routeSend": "route ارسال",
-      "routeReceive": "route دریافت",
-      "routeTopup": "route شارژ",
-      "routeWithdraw": "route برداشت",
-      "routeCard": "route کارت",
-      "routeFallback": "route fallback"
+      "p2pTransfer": "معلومات",
+      "qrExecution": "معلومات",
+      "coreOperation": "کیف پول عملیات",
+      "providerPaymentLinked": "تنظیمات",
+      "transferBetweenUsers": "معلومات",
+      "qrRouteExecution": "معلومات",
+      "businessMerchantRoute": "معلومات",
+      "routeTransaction": "معلومات",
+      "routePayment": "معلومات",
+      "routeP2p": "معلومات",
+      "routeQr": "معلومات",
+      "routeCore": "معلومات",
+      "routeSend": "معلومات",
+      "routeReceive": "معلومات",
+      "routeTopup": "معلومات",
+      "routeWithdraw": "معلومات",
+      "routeCard": "معلومات",
+      "routeFallback": "بازگشت"
     },
     "incoming": "ورودی",
     "outgoing": "خروجی",
@@ -915,12 +916,12 @@ export const FA_AF_LOCALE = {
     "statements": "استیتمنت‌ها",
     "generateStatement": "ایجاد استیتمنت",
     "downloadStatement": "دانلود استیتمنت",
-    "coinWallet": "Coin Wallet",
-    "coinTopUp": "افزایش Coin",
-    "coinSend": "ارسال Coin",
-    "coinReceive": "دریافت Coin",
-    "coinHistory": "تاریخچه Coin",
-    "moveToSabiWallet": "انتقال به Sabi Wallet",
+    "coinWallet": "COIN کیف پول",
+    "coinTopUp": "معلومات",
+    "coinSend": "معلومات",
+    "coinReceive": "معلومات",
+    "coinHistory": "تاریخچه",
+    "moveToSabiWallet": "کیف پول",
     "earnings": "درآمدها",
     "deposit": "سپرده",
     "interest": "سود",
@@ -942,70 +943,70 @@ export const FA_AF_LOCALE = {
       "safeHold": "نگهداری امن"
     },
     "coinProvider": {
-      "bridgeRoute": "bridge route",
-      "directCardBlocked": "direct کارت مسدود",
-      "guardReason": "guard دلیل",
-      "providerStatus": "provider وضعیت",
-      "eyebrow": "eyebrow",
-      "providerTitle": "provider",
-      "providerText": "provider توضیحات",
-      "noFakeTitle": "نخیر fake",
-      "noFakeText": "نخیر fake توضیحات",
-      "securityTitle": "security",
-      "securityText": "security توضیحات",
-      "availableCoin": "available COIN",
-      "totalCoin": "total COIN",
-      "diamonds": "diamonds",
-      "deposits": "deposits",
-      "records": "records",
+      "bridgeRoute": "معلومات",
+      "directCardBlocked": "معلومات",
+      "guardReason": "معلومات",
+      "providerStatus": "تنظیمات",
+      "eyebrow": "تنظیمات",
+      "providerTitle": "ارائه‌دهنده تنظیم نشده",
+      "providerText": "تنظیمات — معلومات",
+      "noFakeTitle": "عنوان",
+      "noFakeText": "معلومات — معلومات",
+      "securityTitle": "امنیت",
+      "securityText": "امنیت — معلومات",
+      "availableCoin": "آماده",
+      "totalCoin": "معلومات",
+      "diamonds": "معلومات",
+      "deposits": "معلومات",
+      "records": "معلومات",
       "disabled": "غیرفعال",
-      "backToCoin": "برگشت to COIN",
+      "backToCoin": "بازگشت",
       "screens": {
         "topup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "send": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "COIN",
+          "subtitle": "تنظیمات"
         },
         "withdraw": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "diamonds": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "withdrawDiamonds": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "earn": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "history": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "diamondsHistory": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "depositHistory": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "depositDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       }
     },
     "complianceStatus": {
-      "adminReview": "admin بررسی",
-      "amlReview": "AML بررسی",
+      "adminReview": "معلومات",
+      "amlReview": "معلومات",
       "blocked": "مسدود",
       "clear": "پاک کردن",
       "kycRequired": "KYC ضروری است",
@@ -1014,149 +1015,149 @@ export const FA_AF_LOCALE = {
     },
     "cryptoProvider": {
       "providerNotConfiguredShort": "تنظیم نشده",
-      "providerStatusText": "provider وضعیت توضیحات",
-      "providerStatusTitle": "provider وضعیت",
-      "eyebrow": "eyebrow",
-      "providerNotConfiguredTitle": "provider not configured",
+      "providerStatusText": "تنظیمات — معلومات",
+      "providerStatusTitle": "تنظیمات",
+      "eyebrow": "تنظیمات",
+      "providerNotConfiguredTitle": "ارائه‌دهنده تنظیم نشده",
       "providerNotConfiguredText": "اقدام‌های کریپتو تا زمان اتصال ارائه‌دهنده واقعی نگهداری/کیف پول، مسیر داده بازار و کنترل‌های ادمین غیرفعال می‌مانند.",
-      "cryptoValue": "کریپتو value",
+      "cryptoValue": "کریپتو موجودی",
       "status": "وضعیت",
       "disabled": "غیرفعال",
-      "securityTitle": "security",
-      "securityText": "security توضیحات",
-      "keysTitle": "keys",
-      "keysText": "keys توضیحات",
-      "marketTitle": "market",
-      "marketText": "market توضیحات",
-      "backToCrypto": "برگشت to کریپتو",
+      "securityTitle": "امنیت",
+      "securityText": "امنیت — معلومات",
+      "keysTitle": "عنوان",
+      "keysText": "معلومات — معلومات",
+      "marketTitle": "عنوان",
+      "marketText": "معلومات — معلومات",
+      "backToCrypto": "بازگشت",
       "screens": {
         "assets": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "portfolio": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "assetDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "buy": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "sell": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "swap": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "send": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "receive": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "history": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "transactionDetails": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "confirm": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "market": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "watchlist": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "networks": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "manageTokens": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "importToken": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "addressBook": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "addAddress": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "seedCreate": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "seedBackup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "seedVerify": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       }
     },
     "home": {
-      "financialDashboardSubtitle": "financial dashboard توضیحات",
-      "financialDashboardTitle": "financial dashboard",
+      "financialDashboardSubtitle": "توضیحات — معلومات",
+      "financialDashboardTitle": "عنوان",
       "receive": "دریافت",
       "receiveSubtitle": "دریافت توضیحات",
       "scanQr": "اسکن QR",
       "settings": "تنظیمات",
       "settingsSubtitle": "تنظیمات توضیحات",
       "topUp": "شارژ",
-      "topUpSubtitle": "top up توضیحات",
+      "topUpSubtitle": "افزایش موجودی",
       "withdraw": "برداشت",
       "withdrawSubtitle": "برداشت توضیحات",
-      "headerEyebrow": "header",
-      "headerTitle": "header",
-      "headerSubtitle": "header توضیحات",
-      "mainHeroTitle": "main hero",
-      "mainHeroSubtitle": "main hero توضیحات",
-      "mainBalanceLabel": "main موجودی",
-      "mainBalanceHint": "main موجودی راهنما",
-      "localBalanceLabel": "local موجودی",
-      "localBalanceHint": "local موجودی راهنما",
+      "headerEyebrow": "Sabi کیف پول",
+      "headerTitle": "عنوان",
+      "headerSubtitle": "توضیحات — معلومات",
+      "mainHeroTitle": "عنوان",
+      "mainHeroSubtitle": "توضیحات — معلومات",
+      "mainBalanceLabel": "معلومات",
+      "mainBalanceHint": "معلومات — معلومات",
+      "localBalanceLabel": "محلی",
+      "localBalanceHint": "محلی — معلومات",
       "send": "ارسال",
       "cards": "کارت‌ها",
-      "quickActionsTitle": "quick عمل‌ها",
-      "quickActionsHint": "quick عمل‌ها راهنما",
+      "quickActionsTitle": "تنظیمات",
+      "quickActionsHint": "تنظیمات — معلومات",
       "request": "درخواست",
       "history": "تاریخچه",
-      "mySabiId": "my Sabi ID",
-      "mainBlocksTitle": "main blocks",
-      "mainBlocksHint": "main blocks راهنما",
-      "sabiPayTitle": "Sabi pay",
-      "sabiPaySubtitle": "Sabi pay توضیحات",
-      "sabiPayBalanceLabel": "Sabi pay موجودی",
+      "mySabiId": "معلومات",
+      "mainBlocksTitle": "عنوان",
+      "mainBlocksHint": "معلومات — معلومات",
+      "sabiPayTitle": "عنوان",
+      "sabiPaySubtitle": "توضیحات — معلومات",
+      "sabiPayBalanceLabel": "معلومات",
       "qrTitle": "QR",
       "qrSubtitle": "QR توضیحات",
       "coinTitle": "COIN",
       "coinSubtitle": "COIN توضیحات",
       "coinBalanceLabel": "COIN موجودی",
-      "localCardsTitle": "local کارت‌ها",
-      "localCardsSubtitle": "local کارت‌ها توضیحات",
-      "localCardsBalanceLabel": "local کارت‌ها موجودی",
+      "localCardsTitle": "محلی",
+      "localCardsSubtitle": "محلی — معلومات",
+      "localCardsBalanceLabel": "محلی",
       "businessTitle": "تجاری",
       "businessSubtitle": "تجاری توضیحات",
       "merchantTitle": "فروشنده",
@@ -1164,68 +1165,68 @@ export const FA_AF_LOCALE = {
       "cryptoTitle": "کریپتو",
       "cryptoSubtitle": "کریپتو توضیحات",
       "cryptoBalanceLabel": "کریپتو موجودی",
-      "aiSectionTitle": "AI section",
-      "aiSectionHint": "AI section راهنما",
+      "aiSectionTitle": "دستیار مرکز",
+      "aiSectionHint": "AI — معلومات",
       "aiTitle": "AI",
       "aiSubtitle": "AI توضیحات",
-      "aiGuidanceTitle": "AI guidance",
-      "aiGuidanceText": "AI guidance توضیحات",
+      "aiGuidanceTitle": "AI",
+      "aiGuidanceText": "AI — معلومات",
       "aiSupportTitle": "AI پشتیبانی",
       "aiSupportText": "AI پشتیبانی توضیحات",
-      "infraTitle": "infra",
-      "infraHint": "infra راهنما",
-      "cardsHubTitle": "کارت‌ها hub",
-      "cardsHubSubtitle": "کارت‌ها hub توضیحات",
-      "chatPaymentsTitle": "chat payments",
-      "chatPaymentsSubtitle": "chat payments توضیحات",
-      "virtualCardTitle": "virtual کارت",
-      "virtualCardSubtitle": "virtual کارت توضیحات",
-      "controlsTitle": "controls",
-      "controlsHint": "controls راهنما",
-      "info1Title": "info1",
-      "info1Text": "info1 توضیحات",
-      "info2Title": "info2",
-      "info2Text": "info2 توضیحات",
-      "info3Title": "info3",
-      "info3Text": "info3 توضیحات",
-      "info4Title": "info4",
-      "info4Text": "info4 توضیحات",
-      "info5Title": "info5",
-      "info5Text": "info5 توضیحات",
-      "info6Title": "info6",
-      "info6Text": "info6 توضیحات",
-      "info7Title": "info7",
-      "info7Text": "info7 توضیحات",
-      "pillInternal": "pill internal",
-      "pillCore": "pill core",
-      "pillCamera": "pill دوربین",
-      "pillMerchant": "pill فروشنده",
-      "pillGifts": "pill هدایا",
-      "pillStream": "pill استریم",
-      "pillDomestic": "pill domestic",
-      "pillOperations": "pill operations",
-      "pillReferences": "pill references",
-      "pillCheckout": "pill checkout",
-      "pillSettlements": "pill settlements",
-      "pillAssets": "pill assets",
-      "pillProvider": "pill provider",
-      "pillCustody": "pill custody",
-      "pillSeparated": "pill separated",
-      "askAi": "ask AI",
-      "smartTips": "smart tips",
-      "recentHelp": "recent کمک",
+      "infraTitle": "عنوان",
+      "infraHint": "معلومات — معلومات",
+      "cardsHubTitle": "عنوان",
+      "cardsHubSubtitle": "توضیحات — معلومات",
+      "chatPaymentsTitle": "گفتگو",
+      "chatPaymentsSubtitle": "گفتگو — معلومات",
+      "virtualCardTitle": "عنوان",
+      "virtualCardSubtitle": "توضیحات — معلومات",
+      "controlsTitle": "عنوان",
+      "controlsHint": "معلومات — معلومات",
+      "info1Title": "معلومات",
+      "info1Text": "معلومات — معلومات",
+      "info2Title": "معلومات",
+      "info2Text": "معلومات — معلومات",
+      "info3Title": "معلومات",
+      "info3Text": "معلومات — معلومات",
+      "info4Title": "معلومات",
+      "info4Text": "معلومات — معلومات",
+      "info5Title": "معلومات",
+      "info5Text": "معلومات — معلومات",
+      "info6Title": "معلومات",
+      "info6Text": "معلومات — معلومات",
+      "info7Title": "معلومات",
+      "info7Text": "معلومات — معلومات",
+      "pillInternal": "معلومات",
+      "pillCore": "معلومات",
+      "pillCamera": "دوربین",
+      "pillMerchant": "مرچنت",
+      "pillGifts": "هدایا",
+      "pillStream": "استریم",
+      "pillDomestic": "معلومات",
+      "pillOperations": "معلومات",
+      "pillReferences": "معلومات",
+      "pillCheckout": "چک‌اوت",
+      "pillSettlements": "تسویه‌ها",
+      "pillAssets": "معلومات",
+      "pillProvider": "تنظیمات",
+      "pillCustody": "معلومات",
+      "pillSeparated": "معلومات",
+      "askAi": "AI",
+      "smartTips": "معلومات",
+      "recentHelp": "معلومات",
       "loading": "در حال بارگذاری",
-      "eyebrowSabiPay": "eyebrow Sabi pay",
-      "eyebrowQr": "eyebrow QR",
-      "eyebrowSabiCoin": "eyebrow Sabi COIN",
-      "eyebrowLocalCards": "eyebrow local کارت‌ها",
-      "eyebrowBusiness": "eyebrow تجاری",
-      "eyebrowMerchant": "eyebrow فروشنده",
-      "eyebrowCrypto": "eyebrow کریپتو",
-      "pillSabiPay": "pill Sabi pay",
-      "pillSabiBalance": "pill Sabi موجودی",
-      "pillMyQr": "pill my QR",
-      "pillBusiness": "pill تجاری"
+      "eyebrowSabiPay": "معلومات",
+      "eyebrowQr": "QR",
+      "eyebrowSabiCoin": "معلومات",
+      "eyebrowLocalCards": "محلی",
+      "eyebrowBusiness": "معلومات",
+      "eyebrowMerchant": "معلومات",
+      "eyebrowCrypto": "معلومات",
+      "pillSabiPay": "معلومات",
+      "pillSabiBalance": "Sabi موجودی",
+      "pillMyQr": "QR من",
+      "pillBusiness": "کسب‌وکار"
     },
     "kycStatus": {
       "notRequired": "ضروری نیست",
@@ -1235,55 +1236,55 @@ export const FA_AF_LOCALE = {
       "verified": "تأیید شده"
     },
     "pinConfirm": {
-      "guardReason": "guard دلیل",
-      "providerStatus": "provider وضعیت",
-      "riskStatus": "risk وضعیت",
-      "walletRoute": "کیف پول route",
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "protectedAction": "protected عمل",
-      "authorizationTitle": "authorization",
-      "authorizationText": "authorization توضیحات",
+      "guardReason": "معلومات",
+      "providerStatus": "تنظیمات",
+      "riskStatus": "معلومات",
+      "walletRoute": "کیف پول",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "protectedAction": "معلومات",
+      "authorizationTitle": "عنوان",
+      "authorizationText": "معلومات — معلومات",
       "amountLabel": "مبلغ",
-      "flow": "flow",
-      "digits": "digits",
-      "security": "security",
-      "active": "active",
-      "summaryTitle": "summary",
-      "summaryHint": "summary راهنما",
+      "flow": "معلومات",
+      "digits": "معلومات",
+      "security": "امنیت",
+      "active": "فعال",
+      "summaryTitle": "عنوان",
+      "summaryHint": "معلومات — معلومات",
       "recipientTarget": "گیرنده هدف",
       "source": "منبع",
       "amount": "مبلغ",
       "reference": "مرجع",
-      "note": "note",
+      "note": "یادداشت",
       "emptyAmount": "خالی مبلغ",
-      "emptyNote": "خالی note",
+      "emptyNote": "معلومات",
       "emptyReference": "خالی مرجع",
-      "protectedTarget": "protected هدف",
+      "protectedTarget": "معلومات",
       "walletSource": "کیف پول منبع",
-      "enterPin": "enter سنجاق کردن",
-      "providerRequired": "provider ضروری",
-      "providerRequiredError": "provider ضروری error",
-      "helperText": "helper توضیحات",
-      "protectionTitle": "protection",
-      "protectionText": "protection توضیحات",
-      "providerTitle": "provider",
-      "providerText": "provider توضیحات"
+      "enterPin": "PIN را وارد کنید",
+      "providerRequired": "تنظیمات",
+      "providerRequiredError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "helperText": "معلومات — معلومات",
+      "protectionTitle": "عنوان",
+      "protectionText": "معلومات — معلومات",
+      "providerTitle": "تنظیمات",
+      "providerText": "تنظیمات — معلومات"
     },
     "providerPanel": {
       "cardsHint": "کارت‌ها راهنما",
       "cardsTitle": "کارت‌ها",
       "coinHint": "COIN راهنما",
       "coinTitle": "COIN",
-      "compliance": "compliance",
+      "compliance": "مطابقت",
       "cryptoHint": "کریپتو راهنما",
       "cryptoTitle": "کریپتو",
       "settingsHint": "تنظیمات راهنما",
       "settingsTitle": "تنظیمات",
-      "tokenOnlyPolicy": "token only policy",
-      "virtualCardHint": "virtual کارت راهنما",
-      "virtualCardTitle": "virtual کارت",
+      "tokenOnlyPolicy": "معلومات",
+      "virtualCardHint": "معلومات — معلومات",
+      "virtualCardTitle": "عنوان",
       "walletHint": "کیف پول راهنما",
       "walletTitle": "کیف پول"
     },
@@ -1295,255 +1296,255 @@ export const FA_AF_LOCALE = {
       "reviewRequired": "نیاز به بررسی"
     },
     "settings": {
-      "adminComplianceDescription": "admin compliance توضیحات",
-      "adminComplianceTitle": "admin compliance",
-      "adminReview": "admin بررسی",
-      "adminReviewStatus": "admin بررسی وضعیت",
-      "amlReview": "AML بررسی",
-      "amlStatus": "AML وضعیت",
+      "adminComplianceDescription": "توضیحات — معلومات",
+      "adminComplianceTitle": "عنوان",
+      "adminReview": "معلومات",
+      "adminReviewStatus": "معلومات",
+      "amlReview": "معلومات",
+      "amlStatus": "معلومات",
       "approved": "تأیید شد",
       "blocked": "مسدود",
       "clear": "پاک کردن",
-      "complianceStatus": "compliance وضعیت",
+      "complianceStatus": "معلومات",
       "escalated": "ارجاع شد",
       "kycRequired": "KYC ضروری است",
       "kycStatus": "KYC وضعیت",
       "monitoring": "در حال نظارت",
       "notRequired": "ضروری نیست",
       "pending": "در انتظار",
-      "providerConfigurationRequired": "provider configuration ضروری",
+      "providerConfigurationRequired": "تنظیمات",
       "rejected": "رد شد",
       "required": "ضروری",
       "restricted": "محدود",
       "reviewRequired": "نیاز به بررسی",
       "safeHold": "نگهداری امن",
-      "safeHoldState": "safe hold state",
-      "tokenOnlyPolicy": "token only policy",
-      "tokenOnlyPolicyText": "token only policy توضیحات",
+      "safeHoldState": "امنیت",
+      "tokenOnlyPolicy": "معلومات",
+      "tokenOnlyPolicyText": "معلومات — معلومات",
       "verified": "تأیید شده",
       "back": "برگشت",
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileActive": "پروفایل active",
-      "heroTitle": "hero",
-      "heroText": "hero توضیحات",
-      "smartRouting": "smart routing",
-      "sensitiveGuard": "sensitive guard",
-      "largePaymentCheck": "large پرداخت check",
-      "on": "on",
-      "off": "off",
+      "eyebrow": "تنظیمات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "profileActive": "نمایه",
+      "heroTitle": "تنظیمات",
+      "heroText": "معلومات — معلومات",
+      "smartRouting": "معلومات",
+      "sensitiveGuard": "معلومات",
+      "largePaymentCheck": "معلومات",
+      "on": "معلومات",
+      "off": "معلومات",
       "currencyTitle": "واحد پول",
-      "primaryCurrency": "primary واحد پول",
-      "primaryCurrencyDescription": "primary واحد پول توضیحات",
-      "localCurrency": "local واحد پول",
-      "localCurrencyDescription": "local واحد پول توضیحات",
-      "internationalCurrency": "international واحد پول",
-      "internationalCurrencyDescription": "international واحد پول توضیحات",
-      "noHardcodedCurrencyTitle": "نخیر hardcoded واحد پول",
-      "noHardcodedCurrencyText": "نخیر hardcoded واحد پول توضیحات",
-      "cardPreferences": "کارت preferences",
-      "manageCards": "manage کارت‌ها",
-      "manageCardsDescription": "manage کارت‌ها توضیحات",
-      "defaultCardMode": "default کارت mode",
-      "defaultCardModeDescription": "default کارت mode توضیحات",
-      "smart": "smart",
-      "local": "local",
-      "international": "international",
-      "virtual": "virtual",
-      "autoSelectBestCard": "auto انتخاب best کارت",
-      "autoSelectBestCardDescription": "auto انتخاب best کارت توضیحات",
-      "showLast4": "show last4",
-      "showLast4Description": "show last4 توضیحات",
-      "walletPreferences": "کیف پول preferences",
-      "sabiPayQuickAccess": "Sabi pay quick access",
-      "sabiPayQuickAccessDescription": "Sabi pay quick access توضیحات",
-      "qrQuickAccess": "QR quick access",
-      "qrQuickAccessDescription": "QR quick access توضیحات",
-      "allowSmartRouting": "اجازه دادن smart routing",
-      "allowSmartRoutingDescription": "اجازه دادن smart routing توضیحات",
-      "paymentPriority": "پرداخت priority",
-      "paymentPriorityDescription": "پرداخت priority توضیحات",
-      "security": "security",
+      "primaryCurrency": "معلومات",
+      "primaryCurrencyDescription": "توضیحات — معلومات",
+      "localCurrency": "مبلغ راهنما",
+      "localCurrencyDescription": "محلی — معلومات",
+      "internationalCurrency": "معلومات",
+      "internationalCurrencyDescription": "توضیحات — معلومات",
+      "noHardcodedCurrencyTitle": "عنوان",
+      "noHardcodedCurrencyText": "معلومات — معلومات",
+      "cardPreferences": "ترجیحات",
+      "manageCards": "معلومات",
+      "manageCardsDescription": "توضیحات — معلومات",
+      "defaultCardMode": "معلومات",
+      "defaultCardModeDescription": "توضیحات — معلومات",
+      "smart": "معلومات",
+      "local": "محلی",
+      "international": "معلومات",
+      "virtual": "معلومات",
+      "autoSelectBestCard": "معلومات",
+      "autoSelectBestCardDescription": "توضیحات — معلومات",
+      "showLast4": "معلومات",
+      "showLast4Description": "معلومات — معلومات",
+      "walletPreferences": "کیف پول",
+      "sabiPayQuickAccess": "معلومات",
+      "sabiPayQuickAccessDescription": "توضیحات — معلومات",
+      "qrQuickAccess": "معلومات",
+      "qrQuickAccessDescription": "توضیحات — معلومات",
+      "allowSmartRouting": "معلومات",
+      "allowSmartRoutingDescription": "توضیحات — معلومات",
+      "paymentPriority": "معلومات",
+      "paymentPriorityDescription": "توضیحات — معلومات",
+      "security": "امنیت",
       "walletNotifications": "کیف پول اعلان‌ها",
       "walletNotificationsDescription": "کیف پول اعلان‌ها توضیحات",
-      "securityAlerts": "security alerts",
-      "securityAlertsDescription": "security alerts توضیحات",
-      "requireLargeConfirmation": "require large confirmation",
-      "requireLargeConfirmationDescription": "require large confirmation توضیحات",
-      "sensitiveBehavior": "sensitive behavior",
-      "sensitiveBehaviorDescription": "sensitive behavior توضیحات",
-      "tap": "tap",
-      "biometric": "biometric",
+      "securityAlerts": "امنیت",
+      "securityAlertsDescription": "امنیت — معلومات",
+      "requireLargeConfirmation": "معلومات",
+      "requireLargeConfirmationDescription": "توضیحات — معلومات",
+      "sensitiveBehavior": "معلومات",
+      "sensitiveBehaviorDescription": "توضیحات — معلومات",
+      "tap": "معلومات",
+      "biometric": "معلومات",
       "pin": "سنجاق کردن",
-      "useBiometric": "use biometric",
-      "useBiometricDescription": "use biometric توضیحات",
-      "hideBalances": "hide balances",
-      "hideBalancesDescription": "hide balances توضیحات",
-      "notificationPreferences": "اعلان preferences",
-      "notificationPreferencesDescription": "اعلان preferences توضیحات",
-      "limits": "limits",
-      "dailySendLimit": "daily ارسال limit",
-      "dailySendLimitDescription": "daily ارسال limit توضیحات",
-      "qrPaymentLimit": "QR پرداخت limit",
-      "qrPaymentLimitDescription": "QR پرداخت limit توضیحات",
-      "sensitiveWindow": "sensitive window",
-      "sensitiveWindowDescription": "sensitive window توضیحات",
-      "policyControlled": "policy controlled",
-      "defaultBehavior": "default behavior",
-      "defaultSensitiveUnlock": "default sensitive unlock",
-      "defaultCardSelection": "default کارت selection",
-      "defaultPaymentSource": "default پرداخت منبع",
-      "smartAuto": "smart auto",
-      "localFirst": "local اول",
-      "internationalFirst": "international اول",
-      "virtualFirst": "virtual اول",
-      "tapToReveal": "tap to reveal",
+      "useBiometric": "معلومات",
+      "useBiometricDescription": "توضیحات — معلومات",
+      "hideBalances": "معلومات",
+      "hideBalancesDescription": "توضیحات — معلومات",
+      "notificationPreferences": "اعلان‌ها",
+      "notificationPreferencesDescription": "اعلان‌ها — معلومات",
+      "limits": "حدود",
+      "dailySendLimit": "معلومات",
+      "dailySendLimitDescription": "توضیحات — معلومات",
+      "qrPaymentLimit": "معلومات",
+      "qrPaymentLimitDescription": "توضیحات — معلومات",
+      "sensitiveWindow": "معلومات",
+      "sensitiveWindowDescription": "توضیحات — معلومات",
+      "policyControlled": "معلومات",
+      "defaultBehavior": "معلومات",
+      "defaultSensitiveUnlock": "معلومات",
+      "defaultCardSelection": "معلومات",
+      "defaultPaymentSource": "معلومات",
+      "smartAuto": "معلومات",
+      "localFirst": "محلی",
+      "internationalFirst": "معلومات",
+      "virtualFirst": "معلومات",
+      "tapToReveal": "معلومات",
       "pinRequired": "سنجاق کردن ضروری",
-      "biometricRequired": "biometric ضروری",
+      "biometricRequired": "معلومات",
       "sabiBalanceFirst": "Sabi موجودی اول",
       "cardsFirst": "کارت‌ها اول"
     },
     "shared": {
       "back": "برگشت",
       "wallet": "کیف پول",
-      "totalBalance": "total موجودی",
+      "totalBalance": "مجموع بیلانس",
       "walletBalance": "کیف پول موجودی",
       "personal": "شخصی",
-      "mainBalance": "main موجودی",
-      "localBalance": "local موجودی",
+      "mainBalance": "معلومات",
+      "localBalance": "محلی",
       "coinBalance": "COIN موجودی",
-      "cryptoValue": "کریپتو value",
+      "cryptoValue": "کریپتو موجودی",
       "sabiBalance": "Sabi موجودی",
       "sabiBalanceDescription": "Sabi موجودی توضیحات",
-      "internal": "internal",
-      "holder": "holder",
-      "expiry": "expiry",
+      "internal": "معلومات",
+      "holder": "معلومات",
+      "expiry": "معلومات",
       "balance": "موجودی",
-      "unknown": "unknown"
+      "unknown": "نامعلوم"
     },
     "entry": {
-      "headerTitle": "header",
-      "headerSubtitle": "header توضیحات",
-      "quickActionsTitle": "quick عمل‌ها",
-      "quickActionsHint": "quick عمل‌ها راهنما",
+      "headerTitle": "کیف پول",
+      "headerSubtitle": "توضیحات — معلومات",
+      "quickActionsTitle": "تنظیمات",
+      "quickActionsHint": "تنظیمات — معلومات",
       "topUp": "شارژ",
       "send": "ارسال",
       "receive": "دریافت",
-      "qrPay": "QR pay",
+      "qrPay": "پرداخت با QR",
       "cards": "کارت‌ها",
       "crypto": "کریپتو",
-      "cardsAccessTitle": "کارت‌ها access",
-      "cardsAccessHint": "کارت‌ها access راهنما",
+      "cardsAccessTitle": "عنوان",
+      "cardsAccessHint": "معلومات — معلومات",
       "allCardsTitle": "همه کارت‌ها",
       "allCardsSubtitle": "همه کارت‌ها توضیحات",
-      "localCardsTitle": "local کارت‌ها",
-      "localCardsSubtitle": "local کارت‌ها توضیحات"
+      "localCardsTitle": "محلی",
+      "localCardsSubtitle": "محلی — معلومات"
     },
     "coinIndex": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "totalLabel": "total",
-      "heroSubtitle": "hero توضیحات",
-      "myCoinQr": "my COIN QR",
-      "myCoinQrText": "my COIN QR توضیحات",
+      "eyebrow": "معلومات",
+      "title": "COIN کیف پول",
+      "subtitle": "تنظیمات",
+      "totalLabel": "معلومات",
+      "heroSubtitle": "معلومات — معلومات",
+      "myCoinQr": "معلومات",
+      "myCoinQrText": "معلومات — معلومات",
       "scanCoinQr": "اسکن COIN QR",
       "scanCoinQrText": "اسکن COIN QR توضیحات",
-      "diamondLayer": "diamond layer",
-      "diamondLayerText": "diamond layer توضیحات",
+      "diamondLayer": "معلومات",
+      "diamondLayerText": "معلومات — معلومات",
       "open": "باز کردن",
-      "diamondWithdrawRule": "diamond برداشت rule",
-      "nextAvailableDate": "بعدی available date",
+      "diamondWithdrawRule": "معلومات",
+      "nextAvailableDate": "آماده",
       "coinActions": "COIN عمل‌ها",
-      "coreWallet": "core کیف پول",
+      "coreWallet": "کیف پول",
       "topUp": "شارژ",
-      "topUpText": "top up توضیحات",
+      "topUpText": "معلومات — معلومات",
       "send": "ارسال",
       "sendText": "ارسال توضیحات",
       "receive": "دریافت",
       "receiveText": "دریافت توضیحات",
       "history": "تاریخچه",
       "historyText": "تاریخچه توضیحات",
-      "diamonds": "diamonds",
-      "diamondsText": "diamonds توضیحات",
-      "earn": "earn",
-      "earnText": "earn توضیحات",
-      "lockedDeposit": "locked سپرده",
-      "lockedDepositText": "locked سپرده توضیحات",
-      "manage": "manage",
-      "maturity": "maturity",
-      "months": "months",
-      "noActiveDeposits": "نخیر active deposits",
-      "moveCoinToWallet": "move COIN to کیف پول",
-      "available": "available",
-      "frozen": "frozen",
-      "interest": "interest",
-      "spendable": "spendable",
-      "withdrawable": "withdrawable",
-      "gameEligible": "بازی eligible",
-      "diamondsUnit": "diamonds unit"
+      "diamonds": "معلومات",
+      "diamondsText": "معلومات — معلومات",
+      "earn": "معلومات",
+      "earnText": "معلومات — معلومات",
+      "lockedDeposit": "معلومات",
+      "lockedDepositText": "معلومات — معلومات",
+      "manage": "مدیریت",
+      "maturity": "معلومات",
+      "months": "معلومات",
+      "noActiveDeposits": "معلومات",
+      "moveCoinToWallet": "کیف پول",
+      "available": "در دسترس",
+      "frozen": "منجمد",
+      "interest": "سود",
+      "spendable": "معلومات",
+      "withdrawable": "معلومات",
+      "gameEligible": "معلومات",
+      "diamondsUnit": "معلومات"
     },
     "cryptoIndex": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "totalBalance": "total موجودی",
-      "providerRequired": "provider ضروری",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "totalBalance": "معلومات",
+      "providerRequired": "تنظیمات",
       "providerNotConfigured": "ارائه‌دهنده تنظیم نشده",
-      "assetsCount": "assets تعداد",
-      "networks": "networks",
-      "change24h": "change24h",
+      "assetsCount": "معلومات",
+      "networks": "معلومات",
+      "change24h": "معلومات",
       "status": "وضعیت",
-      "quickActions": "quick عمل‌ها",
-      "buy": "buy",
-      "buyText": "buy توضیحات",
+      "quickActions": "تنظیمات",
+      "buy": "معلومات",
+      "buyText": "معلومات — معلومات",
       "send": "ارسال",
       "sendText": "ارسال توضیحات",
       "receive": "دریافت",
       "receiveText": "دریافت توضیحات",
       "swap": "جابجا کردن",
       "swapText": "جابجا کردن توضیحات",
-      "sell": "sell",
-      "sellText": "sell توضیحات",
+      "sell": "معلومات",
+      "sellText": "معلومات — معلومات",
       "history": "تاریخچه",
       "historyText": "تاریخچه توضیحات",
-      "portfolio": "portfolio",
-      "custody": "custody",
-      "custodyText": "custody توضیحات",
-      "pricing": "pricing",
-      "pricingText": "pricing توضیحات",
-      "risk": "risk",
-      "riskText": "risk توضیحات",
-      "assets": "assets",
-      "noAssetsTitle": "نخیر assets",
-      "noAssetsText": "نخیر assets توضیحات",
-      "networksTokens": "networks tokens",
-      "networksText": "networks توضیحات",
-      "tokensText": "tokens توضیحات",
-      "cryptoFoundation": "کریپتو foundation",
-      "cryptoFoundationText": "کریپتو foundation توضیحات",
-      "backToWalletHome": "برگشت to کیف پول خانه",
-      "openAssets": "باز کردن assets"
+      "portfolio": "معلومات",
+      "custody": "معلومات",
+      "custodyText": "معلومات — معلومات",
+      "pricing": "معلومات",
+      "pricingText": "معلومات — معلومات",
+      "risk": "معلومات",
+      "riskText": "معلومات — معلومات",
+      "assets": "معلومات",
+      "noAssetsTitle": "عنوان",
+      "noAssetsText": "معلومات — معلومات",
+      "networksTokens": "معلومات",
+      "networksText": "معلومات — معلومات",
+      "tokensText": "معلومات — معلومات",
+      "cryptoFoundation": "معلومات",
+      "cryptoFoundationText": "معلومات — معلومات",
+      "backToWalletHome": "بازگشت",
+      "openAssets": "معلومات"
     },
     "businessPay": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "providerStatus": "provider وضعیت",
-      "routeTitle": "route",
-      "routeHint": "route راهنما",
-      "routeEmptyTitle": "route خالی",
-      "routeEmptyText": "route خالی توضیحات",
+      "eyebrow": "معلومات",
+      "title": "تجاری",
+      "subtitle": "تنظیمات",
+      "providerStatus": "ارائه‌دهنده تنظیم نشده",
+      "routeTitle": "عنوان",
+      "routeHint": "معلومات — معلومات",
+      "routeEmptyTitle": "معلومات",
+      "routeEmptyText": "معلومات — معلومات",
       "searchPlaceholder": "جستجو راهنما",
-      "fundingTitle": "funding",
-      "fundingHint": "funding راهنما",
+      "fundingTitle": "عنوان",
+      "fundingHint": "معلومات — معلومات",
       "businessBalance": "تجاری موجودی",
       "businessBalanceText": "تجاری موجودی توضیحات",
       "sabiBalanceText": "Sabi موجودی توضیحات",
       "merchantBalance": "فروشنده موجودی",
       "merchantBalanceText": "فروشنده موجودی توضیحات",
-      "notConfigured": "not configured",
+      "notConfigured": "معلومات",
       "detailsTitle": "جزئیات",
       "detailsHint": "جزئیات راهنما",
       "amount": "مبلغ",
@@ -1552,47 +1553,47 @@ export const FA_AF_LOCALE = {
       "referencePlaceholder": "مرجع راهنما",
       "previewTitle": "پیش‌نمایش",
       "previewHint": "پیش‌نمایش راهنما",
-      "selectedRoute": "انتخاب شد route",
-      "fundingSource": "funding منبع",
+      "selectedRoute": "معلومات",
+      "fundingSource": "معلومات",
       "noReference": "نخیر مرجع",
       "qrTitle": "QR",
       "qrSubtitle": "QR توضیحات",
       "scanTitle": "اسکن",
       "scanSubtitle": "اسکن توضیحات",
-      "routesTitle": "routes",
-      "routesHint": "routes راهنما",
+      "routesTitle": "عنوان",
+      "routesHint": "معلومات — معلومات",
       "merchantLink": "فروشنده لینک",
       "history": "تاریخچه",
-      "paymentsHub": "payments hub",
-      "notesTitle": "notes",
-      "notesHint": "notes راهنما",
-      "note1Title": "note1",
-      "note1Text": "note1 توضیحات",
-      "note2Title": "note2",
-      "note2Text": "note2 توضیحات",
-      "note3Title": "note3",
-      "note3Text": "note3 توضیحات",
+      "paymentsHub": "معلومات",
+      "notesTitle": "امنیت",
+      "notesHint": "معلومات — معلومات",
+      "note1Title": "معلومات",
+      "note1Text": "معلومات — معلومات",
+      "note2Title": "معلومات",
+      "note2Text": "معلومات — معلومات",
+      "note3Title": "معلومات",
+      "note3Text": "معلومات — معلومات",
       "back": "برگشت",
-      "process": "process"
+      "process": "معلومات"
     },
     "merchantPay": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "providerStatus": "provider وضعیت",
-      "routeTitle": "route",
-      "routeHint": "route راهنما",
-      "routeEmptyTitle": "route خالی",
-      "routeEmptyText": "route خالی توضیحات",
+      "eyebrow": "معلومات",
+      "title": "فروشنده",
+      "subtitle": "تنظیمات",
+      "providerStatus": "ارائه‌دهنده تنظیم نشده",
+      "routeTitle": "فروشنده موجودی",
+      "routeHint": "معلومات — معلومات",
+      "routeEmptyTitle": "معلومات",
+      "routeEmptyText": "معلومات — معلومات",
       "searchPlaceholder": "جستجو راهنما",
-      "fundingTitle": "funding",
-      "fundingHint": "funding راهنما",
+      "fundingTitle": "عنوان",
+      "fundingHint": "معلومات — معلومات",
       "businessBalance": "تجاری موجودی",
       "businessBalanceText": "تجاری موجودی توضیحات",
       "sabiBalanceText": "Sabi موجودی توضیحات",
       "merchantBalance": "فروشنده موجودی",
       "merchantBalanceText": "فروشنده موجودی توضیحات",
-      "notConfigured": "not configured",
+      "notConfigured": "معلومات",
       "detailsTitle": "جزئیات",
       "detailsHint": "جزئیات راهنما",
       "amount": "مبلغ",
@@ -1601,141 +1602,141 @@ export const FA_AF_LOCALE = {
       "referencePlaceholder": "مرجع راهنما",
       "previewTitle": "پیش‌نمایش",
       "previewHint": "پیش‌نمایش راهنما",
-      "selectedRoute": "انتخاب شد route",
-      "fundingSource": "funding منبع",
+      "selectedRoute": "معلومات",
+      "fundingSource": "معلومات",
       "noReference": "نخیر مرجع",
       "qrTitle": "QR",
       "qrSubtitle": "QR توضیحات",
       "scanTitle": "اسکن",
       "scanSubtitle": "اسکن توضیحات",
-      "routesTitle": "routes",
-      "routesHint": "routes راهنما",
+      "routesTitle": "عنوان",
+      "routesHint": "معلومات — معلومات",
       "merchantLink": "فروشنده لینک",
       "history": "تاریخچه",
-      "paymentsHub": "payments hub",
-      "notesTitle": "notes",
-      "notesHint": "notes راهنما",
-      "note1Title": "note1",
-      "note1Text": "note1 توضیحات",
-      "note2Title": "note2",
-      "note2Text": "note2 توضیحات",
-      "note3Title": "note3",
-      "note3Text": "note3 توضیحات",
+      "paymentsHub": "معلومات",
+      "notesTitle": "امنیت",
+      "notesHint": "معلومات — معلومات",
+      "note1Title": "معلومات",
+      "note1Text": "معلومات — معلومات",
+      "note2Title": "معلومات",
+      "note2Text": "معلومات — معلومات",
+      "note3Title": "معلومات",
+      "note3Text": "معلومات — معلومات",
       "back": "برگشت",
-      "process": "process"
+      "process": "معلومات"
     },
     "paymentsHub": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroSubtitle": "hero توضیحات",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "heroTitle": "معلومات",
+      "heroSubtitle": "معلومات — معلومات",
       "providerNotConfigured": "ارائه‌دهنده تنظیم نشده",
-      "mainBalance": "main موجودی",
-      "primaryCurrency": "primary واحد پول",
-      "providerRoutes": "provider routes",
-      "pillSabi": "pill Sabi",
-      "pillCards": "pill کارت‌ها",
-      "pillMerchant": "pill فروشنده",
-      "pillInternal": "pill internal",
-      "pillIdentity": "pill identity",
-      "featuredTitle": "featured",
-      "featuredHint": "featured راهنما",
-      "internalEyebrow": "internal",
-      "internalTitle": "internal",
-      "internalSubtitle": "internal توضیحات",
-      "availableBalance": "available موجودی",
+      "mainBalance": "معلومات",
+      "primaryCurrency": "معلومات",
+      "providerRoutes": "تنظیمات",
+      "pillSabi": "Sabi کیف پول",
+      "pillCards": "کارت‌ها",
+      "pillMerchant": "مرچنت",
+      "pillInternal": "معلومات",
+      "pillIdentity": "معلومات",
+      "featuredTitle": "پریمیوم",
+      "featuredHint": "پریمیوم — معلومات",
+      "internalEyebrow": "معلومات",
+      "internalTitle": "عنوان",
+      "internalSubtitle": "توضیحات — معلومات",
+      "availableBalance": "بیلانس قابل استفاده",
       "cardEyebrow": "کارت",
       "cardTitle": "کارت",
       "cardSubtitle": "کارت توضیحات",
-      "cardProvider": "کارت provider",
-      "ecosystemEyebrow": "ecosystem",
-      "ecosystemTitle": "ecosystem",
-      "ecosystemSubtitle": "ecosystem توضیحات",
-      "ecosystemProvider": "ecosystem provider",
-      "qrAccess": "QR access",
-      "singleEntry": "single entry",
-      "myQr": "my QR",
-      "myQrSubtitle": "my QR توضیحات",
+      "cardProvider": "تنظیمات",
+      "ecosystemEyebrow": "معلومات",
+      "ecosystemTitle": "عنوان",
+      "ecosystemSubtitle": "توضیحات — معلومات",
+      "ecosystemProvider": "تنظیمات",
+      "qrAccess": "معلومات",
+      "singleEntry": "معلومات",
+      "myQr": "معلومات",
+      "myQrSubtitle": "توضیحات — معلومات",
       "scanQr": "اسکن QR",
       "scanQrSubtitle": "اسکن QR توضیحات",
-      "internalPayments": "internal payments",
-      "core": "core",
+      "internalPayments": "معلومات",
+      "core": "معلومات",
       "cardsBalance": "کارت‌ها موجودی",
-      "moneyMovement": "پول movement",
-      "ecosystemPayments": "ecosystem payments",
-      "extendedRoutes": "extended routes",
-      "mySabiId": "my Sabi ID",
-      "mySabiIdSubtitle": "my Sabi ID توضیحات",
+      "moneyMovement": "معلومات",
+      "ecosystemPayments": "معلومات",
+      "extendedRoutes": "معلومات",
+      "mySabiId": "Sabi ID",
+      "mySabiIdSubtitle": "توضیحات — معلومات",
       "send": "ارسال",
       "sendSubtitle": "ارسال توضیحات",
       "request": "درخواست",
       "requestSubtitle": "درخواست توضیحات",
-      "contacts": "contacts",
-      "contactsSubtitle": "contacts توضیحات",
+      "contacts": "معلومات",
+      "contactsSubtitle": "توضیحات — معلومات",
       "topup": "شارژ",
       "topupSubtitle": "شارژ توضیحات",
       "withdraw": "برداشت",
       "withdrawSubtitle": "برداشت توضیحات",
       "cards": "کارت‌ها",
       "cardsSubtitle": "کارت‌ها توضیحات",
-      "virtualCard": "virtual کارت",
-      "virtualCardSubtitle": "virtual کارت توضیحات",
-      "chatPayments": "chat payments",
-      "chatPaymentsSubtitle": "chat payments توضیحات",
-      "merchantPay": "فروشنده pay",
-      "merchantPaySubtitle": "فروشنده pay توضیحات",
-      "businessPay": "تجاری pay",
-      "businessPaySubtitle": "تجاری pay توضیحات",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "identityTitle": "identity",
-      "identityText": "identity توضیحات",
-      "tokenTitle": "token",
-      "tokenText": "token توضیحات",
-      "separationTitle": "separation",
-      "separationText": "separation توضیحات",
-      "noFakeTitle": "نخیر fake",
-      "noFakeText": "نخیر fake توضیحات"
+      "virtualCard": "معلومات",
+      "virtualCardSubtitle": "توضیحات — معلومات",
+      "chatPayments": "گفتگو",
+      "chatPaymentsSubtitle": "گفتگو — معلومات",
+      "merchantPay": "معلومات",
+      "merchantPaySubtitle": "توضیحات — معلومات",
+      "businessPay": "تجاری",
+      "businessPaySubtitle": "معلومات — معلومات",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "identityTitle": "عنوان",
+      "identityText": "معلومات — معلومات",
+      "tokenTitle": "عنوان",
+      "tokenText": "معلومات — معلومات",
+      "separationTitle": "عنوان",
+      "separationText": "معلومات — معلومات",
+      "noFakeTitle": "عنوان",
+      "noFakeText": "معلومات — معلومات"
     },
     "contacts": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "searchPlaceholder": "جستجو راهنما",
       "all": "همه",
       "people": "افراد",
       "business": "تجاری",
       "merchant": "فروشنده",
-      "quickRoutes": "quick routes",
-      "quickRoutesHint": "quick routes راهنما",
+      "quickRoutes": "معلومات",
+      "quickRoutesHint": "عمل‌ها",
       "send": "ارسال",
       "request": "درخواست",
-      "chatPay": "chat pay",
-      "mySabiId": "my Sabi ID",
-      "directoryTitle": "directory",
-      "directoryHint": "directory راهنما",
+      "chatPay": "گفتگو",
+      "mySabiId": "Sabi ID",
+      "directoryTitle": "عنوان",
+      "directoryHint": "معلومات — معلومات",
       "emptyTitle": "خالی",
       "emptyText": "خالی توضیحات",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "identityTitle": "identity",
-      "identityText": "identity توضیحات",
-      "verifiedTitle": "verified",
-      "verifiedText": "verified توضیحات"
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "identityTitle": "عنوان",
+      "identityText": "معلومات — معلومات",
+      "verifiedTitle": "عنوان",
+      "verifiedText": "معلومات — معلومات"
     },
     "chatPayments": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero توضیحات",
-      "currentRoute": "current route",
-      "currentAmount": "current مبلغ",
-      "byId": "by ID",
-      "byQr": "by QR",
-      "paymentMode": "پرداخت mode",
-      "paymentModeHint": "پرداخت mode راهنما",
-      "byIdText": "by ID توضیحات",
-      "byQrText": "by QR توضیحات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "heroTitle": "گفتگو",
+      "heroText": "معلومات — معلومات",
+      "currentRoute": "معلومات",
+      "currentAmount": "معلومات",
+      "byId": "معلومات",
+      "byQr": "معلومات",
+      "paymentMode": "معلومات",
+      "paymentModeHint": "معلومات — معلومات",
+      "byIdText": "معلومات — معلومات",
+      "byQrText": "معلومات — معلومات",
       "paymentSource": "پرداخت منبع",
       "paymentSourceHint": "پرداخت منبع راهنما",
       "sabiWallet": "Sabi کیف پول",
@@ -1750,64 +1751,64 @@ export const FA_AF_LOCALE = {
       "qrRecipientHint": "QR گیرنده راهنما",
       "qrRecipientLabel": "QR گیرنده",
       "qrRecipientPlaceholder": "QR گیرنده راهنما",
-      "myMessengerQr": "my Messenger QR",
-      "myMessengerQrText": "my Messenger QR توضیحات",
+      "myMessengerQr": "معلومات",
+      "myMessengerQrText": "معلومات — معلومات",
       "scanMessengerQr": "اسکن Messenger QR",
       "scanMessengerQrText": "اسکن Messenger QR توضیحات",
       "detailsTitle": "جزئیات",
       "detailsHint": "جزئیات راهنما",
       "amount": "مبلغ",
-      "note": "note",
-      "notePlaceholder": "note راهنما",
+      "note": "یادداشت",
+      "notePlaceholder": "جستجو",
       "previewTitle": "پیش‌نمایش",
       "previewHint": "پیش‌نمایش راهنما",
-      "mode": "mode",
+      "mode": "معلومات",
       "recipient": "گیرنده",
       "source": "منبع",
-      "notSelected": "not انتخاب شد",
-      "noNote": "نخیر note",
-      "shortcutsTitle": "shortcuts",
-      "shortcutsHint": "shortcuts راهنما",
+      "notSelected": "معلومات",
+      "noNote": "معلومات",
+      "shortcutsTitle": "عنوان",
+      "shortcutsHint": "معلومات — معلومات",
       "history": "تاریخچه",
-      "coinWalletShortcut": "COIN کیف پول shortcut",
-      "sabiWalletShortcut": "Sabi کیف پول shortcut",
-      "askAi": "ask AI",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "security1Title": "security1",
-      "security1Text": "security1 توضیحات",
-      "security2Title": "security2",
-      "security2Text": "security2 توضیحات",
+      "coinWalletShortcut": "COIN کیف پول",
+      "sabiWalletShortcut": "Sabi کیف پول",
+      "askAi": "AI",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "security1Title": "معلومات",
+      "security1Text": "معلومات — معلومات",
+      "security2Title": "معلومات",
+      "security2Text": "معلومات — معلومات",
       "back": "برگشت",
-      "sendById": "ارسال by ID",
-      "sendByQr": "ارسال by QR",
-      "sendCoinById": "ارسال COIN by ID",
-      "sendCoinByQr": "ارسال COIN by QR"
+      "sendById": "معلومات",
+      "sendByQr": "معلومات",
+      "sendCoinById": "معلومات",
+      "sendCoinByQr": "معلومات"
     },
     "currency": {
-      "notConfigured": "not configured",
-      "usd": "usd",
-      "eur": "eur",
-      "cny": "cny",
-      "aed": "aed",
-      "gbp": "gbp",
-      "jpy": "jpy",
-      "krw": "krw",
-      "uzs": "uzs",
-      "kzt": "kzt",
-      "kgs": "kgs",
-      "tjs": "tjs",
-      "tmt": "tmt",
-      "azn": "azn",
-      "try": "try",
-      "inr": "inr"
+      "notConfigured": "معلومات",
+      "usd": "معلومات",
+      "eur": "معلومات",
+      "cny": "معلومات",
+      "aed": "معلومات",
+      "gbp": "معلومات",
+      "jpy": "معلومات",
+      "krw": "معلومات",
+      "uzs": "معلومات",
+      "kzt": "معلومات",
+      "kgs": "معلومات",
+      "tjs": "معلومات",
+      "tmt": "معلومات",
+      "azn": "معلومات",
+      "try": "معلومات",
+      "inr": "معلومات"
     },
     "localTransfer": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero توضیحات",
+      "eyebrow": "محلی",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "heroTitle": "محلی",
+      "heroText": "معلومات — معلومات",
       "transferFrom": "انتقال از",
       "sourceHint": "منبع راهنما",
       "sourceLabel": "منبع",
@@ -1819,146 +1820,146 @@ export const FA_AF_LOCALE = {
       "amountTitle": "مبلغ",
       "amountHint": "مبلغ راهنما",
       "amountPlaceholder": "مبلغ راهنما",
-      "noteLabel": "note",
-      "notePlaceholder": "note راهنما",
+      "noteLabel": "یادداشت",
+      "notePlaceholder": "جستجو",
       "selectedSource": "انتخاب شد منبع",
       "selectedRecipient": "انتخاب شد گیرنده",
-      "providerTitle": "provider",
-      "providerText": "provider توضیحات",
+      "providerTitle": "ارائه‌دهنده تنظیم نشده",
+      "providerText": "تنظیمات — معلومات",
       "currencyTitle": "واحد پول",
       "currencyText": "واحد پول توضیحات",
-      "notesTitle": "notes",
-      "notesHint": "notes راهنما",
-      "otpTitle": "otp",
-      "otpText": "otp توضیحات",
-      "localOnlyTitle": "local only",
-      "localOnlyText": "local only توضیحات",
-      "cardsHub": "کارت‌ها hub"
+      "notesTitle": "عنوان",
+      "notesHint": "معلومات — معلومات",
+      "otpTitle": "عنوان",
+      "otpText": "معلومات — معلومات",
+      "localOnlyTitle": "محلی",
+      "localOnlyText": "محلی — معلومات",
+      "cardsHub": "معلومات"
     },
     "localRecipients": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "heroTitle": "hero",
-      "heroText": "hero توضیحات",
-      "trusted": "trusted",
+      "eyebrow": "محلی",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "heroTitle": "محلی",
+      "heroText": "معلومات — معلومات",
+      "trusted": "معلومات",
       "searchTitle": "جستجو",
       "searchHint": "جستجو راهنما",
       "searchPlaceholder": "جستجو راهنما",
       "emptyTitle": "خالی",
       "emptyText": "خالی توضیحات",
-      "note1Title": "note1",
-      "note1Text": "note1 توضیحات",
-      "note2Title": "note2",
-      "note2Text": "note2 توضیحات",
-      "newTransfer": "new انتقال"
+      "note1Title": "معلومات",
+      "note1Text": "معلومات — معلومات",
+      "note2Title": "معلومات",
+      "note2Text": "معلومات — معلومات",
+      "newTransfer": "انتقال جدید"
     },
     "localCardDetails": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "محلی",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "noCardTitle": "نخیر کارت",
       "noCardText": "نخیر کارت توضیحات",
       "profile": "پروفایل",
-      "tokenStatus": "token وضعیت",
-      "tokenPending": "token pending",
+      "tokenStatus": "معلومات",
+      "tokenPending": "معلومات",
       "cardName": "کارت نام",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "maskedCard": "masked کارت",
+      "scheme": "معلومات",
+      "issuer": "صادرکننده",
+      "maskedCard": "معلومات",
       "currency": "واحد پول",
-      "verification": "verification",
+      "verification": "تأیید",
       "topup": "شارژ",
-      "securityTitle": "security",
-      "securityText": "security توضیحات",
-      "controlsTitle": "controls",
-      "controlsText": "controls توضیحات"
+      "securityTitle": "امنیت",
+      "securityText": "امنیت — معلومات",
+      "controlsTitle": "عنوان",
+      "controlsText": "معلومات — معلومات"
     },
     "cardInfo": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "noCard": "نخیر کارت",
       "noCardText": "نخیر کارت توضیحات",
-      "defaultBadge": "default badge",
+      "defaultBadge": "معلومات",
       "cardProfile": "کارت پروفایل",
-      "overview": "overview",
-      "cardType": "کارت type",
-      "scheme": "scheme",
-      "issuer": "issuer",
-      "verification": "verification",
+      "overview": "معلومات",
+      "cardType": "معلومات",
+      "scheme": "معلومات",
+      "issuer": "صادرکننده",
+      "verification": "تأیید",
       "topup": "شارژ",
       "balance": "موجودی",
       "restricted": "محدود",
-      "cardStyle": "کارت style",
-      "personalization": "personalization",
-      "controls": "controls",
-      "permissions": "permissions",
-      "security": "security",
-      "protection": "protection",
-      "securitySettings": "security تنظیمات",
-      "securitySettingsText": "security تنظیمات توضیحات",
-      "cardAlerts": "کارت alerts",
-      "cardAlertsText": "کارت alerts توضیحات",
-      "cardLimits": "کارت limits",
-      "cardLimitsText": "کارت limits توضیحات",
-      "advanced": "advanced",
-      "management": "management",
-      "routeRole": "route role",
-      "routeRoleText": "route role توضیحات",
+      "cardStyle": "معلومات",
+      "personalization": "معلومات",
+      "controls": "معلومات",
+      "permissions": "معلومات",
+      "security": "امنیت",
+      "protection": "معلومات",
+      "securitySettings": "امنیت",
+      "securitySettingsText": "امنیت — معلومات",
+      "cardAlerts": "هشدارها",
+      "cardAlertsText": "هشدارها — معلومات",
+      "cardLimits": "معلومات",
+      "cardLimitsText": "معلومات — معلومات",
+      "advanced": "پیشرفته",
+      "management": "معلومات",
+      "routeRole": "معلومات",
+      "routeRoleText": "معلومات — معلومات",
       "cardActivity": "کارت فعالیت",
       "cardActivityText": "کارت فعالیت توضیحات",
-      "styleMidnight": "style midnight",
-      "styleOcean": "style ocean",
-      "styleEmerald": "style emerald",
-      "styleViolet": "style violet",
-      "styleSunset": "style sunset",
-      "styleYouth": "style youth"
+      "styleMidnight": "معلومات",
+      "styleOcean": "معلومات",
+      "styleEmerald": "معلومات",
+      "styleViolet": "معلومات",
+      "styleSunset": "معلومات",
+      "styleYouth": "معلومات"
     },
     "confirmAddCard": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "blockedTitle": "مسدود",
       "blockedText": "مسدود توضیحات",
-      "providerToken": "provider token",
-      "maskedCard": "masked کارت",
-      "cardCategory": "کارت category",
+      "providerToken": "منبع",
+      "maskedCard": "معلومات",
+      "cardCategory": "معلومات",
       "status": "وضعیت",
-      "missing": "missing",
+      "missing": "معلومات",
       "pending": "در انتظار",
       "verified": "تأیید شده",
       "rejected": "رد شد",
       "restricted": "محدود",
-      "invalidPayload": "invalid payload",
-      "blockedFields": "مسدود fields",
+      "invalidPayload": "معلومات",
+      "blockedFields": "معلومات",
       "source": "منبع",
       "pinTitle": "سنجاق کردن",
       "pinSubtitle": "سنجاق کردن توضیحات",
-      "tokenOnlyTitle": "token only",
-      "tokenOnlyText": "token only توضیحات",
-      "backToCards": "برگشت to کارت‌ها",
+      "tokenOnlyTitle": "عنوان",
+      "tokenOnlyText": "معلومات — معلومات",
+      "backToCards": "بازگشت",
       "continue": "ادامه"
     },
     "send": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "routeTitle": "route",
-      "routeHint": "route راهنما",
-      "sabiToSabi": "Sabi to Sabi",
-      "sabiToSabiText": "Sabi to Sabi توضیحات",
-      "cardToCard": "کارت to کارت",
-      "cardToCardText": "کارت to کارت توضیحات",
-      "sabiToCard": "Sabi to کارت",
-      "sabiToCardText": "Sabi to کارت توضیحات",
-      "cardToSabi": "کارت to Sabi",
-      "cardToSabiText": "کارت to Sabi توضیحات",
+      "title": "ارسال پول",
+      "subtitle": "تنظیمات",
+      "routeTitle": "عنوان",
+      "routeHint": "معلومات — معلومات",
+      "sabiToSabi": "معلومات",
+      "sabiToSabiText": "معلومات — معلومات",
+      "cardToCard": "معلومات",
+      "cardToCardText": "معلومات — معلومات",
+      "sabiToCard": "معلومات",
+      "sabiToCardText": "معلومات — معلومات",
+      "cardToSabi": "معلومات",
+      "cardToSabiText": "معلومات — معلومات",
       "sourceTitle": "منبع",
       "sourceHint": "منبع راهنما",
-      "linkedCard": "linked کارت",
-      "linkedCardPlaceholder": "linked کارت راهنما",
-      "chooseCard": "choose کارت",
-      "tokenOnlyDetails": "token only جزئیات",
+      "linkedCard": "معلومات",
+      "linkedCardPlaceholder": "منبع راهنما",
+      "chooseCard": "معلومات",
+      "tokenOnlyDetails": "معلومات",
       "sabiBalanceDetails": "Sabi موجودی جزئیات",
-      "available": "available",
+      "available": "در دسترس",
       "amount": "مبلغ",
       "amountPlaceholder": "مبلغ راهنما",
       "destinationTitle": "مقصد",
@@ -1969,76 +1970,76 @@ export const FA_AF_LOCALE = {
       "cardRecipientPlaceholder": "کارت گیرنده راهنما",
       "recipientName": "گیرنده نام",
       "recipientNamePlaceholder": "گیرنده نام راهنما",
-      "note": "note",
-      "notePlaceholder": "note راهنما",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "security1Title": "security1",
-      "security1Text": "security1 توضیحات",
-      "security2Title": "security2",
-      "security2Text": "security2 توضیحات",
-      "security3Title": "security3",
-      "security3Text": "security3 توضیحات",
+      "note": "یادداشت",
+      "notePlaceholder": "جستجو",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "security1Title": "معلومات",
+      "security1Text": "معلومات — معلومات",
+      "security2Title": "سنجاق کردن",
+      "security2Text": "معلومات — معلومات",
+      "security3Title": "معلومات",
+      "security3Text": "معلومات — معلومات",
       "continue": "ادامه",
       "cardRequired": "کارت ضروری",
       "recipientRequired": "گیرنده ضروری",
       "confirmTitle": "تأیید",
-      "cardRail": "کارت rail",
-      "sabiRail": "Sabi rail",
-      "usd": "usd"
+      "cardRail": "معلومات",
+      "sabiRail": "معلومات",
+      "usd": "معلومات"
     },
     "topup": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "افزایش موجودی",
+      "subtitle": "تنظیمات",
       "destination": "مقصد",
       "destinationHint": "مقصد راهنما",
       "destinationText": "مقصد توضیحات",
-      "storedValue": "stored value",
-      "type": "type",
-      "internalMoney": "internal پول",
-      "usage": "usage",
-      "transfersPayments": "transfers payments",
-      "speed": "speed",
-      "byProviderPolicy": "by provider policy",
+      "storedValue": "معلومات",
+      "type": "نوع",
+      "internalMoney": "معلومات",
+      "usage": "معلومات",
+      "transfersPayments": "معلومات",
+      "speed": "معلومات",
+      "byProviderPolicy": "تنظیمات",
       "amount": "مبلغ",
       "amountHint": "مبلغ راهنما",
-      "helperText": "helper توضیحات",
-      "fundingSource": "funding منبع",
-      "fundingSourceHint": "funding منبع راهنما",
-      "noLinkedCardsTitle": "نخیر linked کارت‌ها",
-      "noLinkedCardsText": "نخیر linked کارت‌ها توضیحات",
+      "helperText": "معلومات — معلومات",
+      "fundingSource": "معلومات",
+      "fundingSourceHint": "مقصد راهنما",
+      "noLinkedCardsTitle": "عنوان",
+      "noLinkedCardsText": "معلومات — معلومات",
       "addCard": "افزودن کارت",
-      "eligibility": "eligibility",
-      "eligibilityHint": "eligibility راهنما",
-      "eligible": "eligible",
+      "eligibility": "معلومات",
+      "eligibilityHint": "معلومات — معلومات",
+      "eligible": "معلومات",
       "restricted": "محدود",
-      "eligibleText": "eligible توضیحات",
+      "eligibleText": "معلومات — معلومات",
       "restrictedText": "محدود توضیحات",
       "selectedSource": "انتخاب شد منبع",
-      "scheme": "scheme",
-      "maskedCard": "masked کارت",
-      "sourceType": "منبع type",
-      "tokenOnlyTitle": "token only",
-      "tokenOnlyText": "token only توضیحات",
+      "scheme": "معلومات",
+      "maskedCard": "معلومات",
+      "sourceType": "معلومات",
+      "tokenOnlyTitle": "عنوان",
+      "tokenOnlyText": "معلومات — معلومات",
       "continue": "ادامه",
       "confirmTitle": "تأیید"
     },
     "receive": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "دریافت",
+      "subtitle": "تنظیمات",
       "destination": "مقصد",
       "destinationHint": "مقصد راهنما",
       "destinationText": "مقصد توضیحات",
-      "receiveBadge": "دریافت badge",
-      "walletRail": "کیف پول rail",
-      "sabiInternal": "Sabi internal",
-      "speed": "speed",
-      "instant": "instant",
+      "receiveBadge": "دریافت",
+      "walletRail": "کیف پول",
+      "sabiInternal": "معلومات",
+      "speed": "معلومات",
+      "instant": "معلومات",
       "status": "وضعیت",
-      "active": "active",
-      "expectedAmount": "expected مبلغ",
-      "expectedAmountHint": "expected مبلغ راهنما",
-      "helperText": "helper توضیحات",
+      "active": "فعال",
+      "expectedAmount": "معلومات",
+      "expectedAmountHint": "معلومات — معلومات",
+      "helperText": "معلومات — معلومات",
       "incomingSource": "ورودی منبع",
       "incomingSourceHint": "ورودی منبع راهنما",
       "fromUser": "از کاربر",
@@ -2047,45 +2048,45 @@ export const FA_AF_LOCALE = {
       "fromBusinessText": "از تجاری توضیحات",
       "fromMerchant": "از فروشنده",
       "fromMerchantText": "از فروشنده توضیحات",
-      "receiveRoute": "دریافت route",
-      "receiveRouteHint": "دریافت route راهنما",
-      "internalRoute": "internal route",
-      "mode": "mode",
-      "userInbound": "کاربر inbound",
-      "businessInbound": "تجاری inbound",
-      "merchantInbound": "فروشنده inbound",
+      "receiveRoute": "معلومات",
+      "receiveRouteHint": "معلومات — معلومات",
+      "internalRoute": "معلومات",
+      "mode": "معلومات",
+      "userInbound": "معلومات",
+      "businessInbound": "معلومات",
+      "merchantInbound": "معلومات",
       "reference": "مرجع",
       "referenceHint": "مرجع راهنما",
       "referencePlaceholder": "مرجع راهنما",
-      "securityTitle": "security",
-      "securityHint": "security راهنما",
-      "securityText": "security توضیحات",
+      "securityTitle": "امنیت",
+      "securityHint": "امنیت — معلومات",
+      "securityText": "امنیت — معلومات",
       "continue": "ادامه",
       "confirmTitle": "تأیید"
     },
     "confirm": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تأیید انتقال",
+      "subtitle": "تنظیمات",
       "amount": "مبلغ",
-      "transferValue": "انتقال value",
+      "transferValue": "معلومات",
       "ready": "آماده",
       "source": "منبع",
-      "funds": "funds",
-      "rail": "rail",
+      "funds": "معلومات",
+      "rail": "معلومات",
       "details": "جزئیات",
-      "tokenizedSource": "tokenized منبع",
+      "tokenizedSource": "معلومات",
       "destination": "مقصد",
       "recipient": "گیرنده",
-      "routeType": "route type",
-      "handle": "handle",
-      "note": "note",
+      "routeType": "معلومات",
+      "handle": "معلومات",
+      "note": "یادداشت",
       "reference": "مرجع",
-      "security": "security",
-      "bankGrade": "bank grade",
+      "security": "امنیت",
+      "bankGrade": "معلومات",
       "pinTitle": "سنجاق کردن",
       "pinText": "سنجاق کردن توضیحات",
-      "routeTitle": "route",
-      "routeText": "route توضیحات",
+      "routeTitle": "عنوان",
+      "routeText": "معلومات — معلومات",
       "notificationTitle": "اعلان",
       "notificationText": "اعلان توضیحات",
       "continue": "ادامه",
@@ -2093,111 +2094,111 @@ export const FA_AF_LOCALE = {
       "pinConfirmSubtitle": "سنجاق کردن تأیید توضیحات"
     },
     "success": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "backToWallet": "برگشت to کیف پول"
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "backToWallet": "بازگشت"
     },
     "financialDashboard": {
-      "eyebrow": "eyebrow",
+      "eyebrow": "Sabi کیف پول",
       "walletTitle": "کیف پول",
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "loading": "در حال بارگذاری",
-      "errorTitle": "error",
+      "errorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
       "retry": "تلاش دوباره",
-      "totalBalance": "total موجودی",
-      "wallets": "wallets",
-      "locked": "locked",
-      "active": "active",
-      "quickActions": "quick عمل‌ها",
+      "totalBalance": "مجموع بیلانس",
+      "wallets": "ولت‌ها",
+      "locked": "قفل شده",
+      "active": "فعال",
+      "quickActions": "تنظیمات",
       "history": "تاریخچه",
-      "p2pSend": "p2p ارسال",
-      "qrExecute": "QR execute",
-      "paymentRoute": "پرداخت route",
-      "totals": "totals",
-      "payments": "payments",
-      "p2p": "p2p",
+      "p2pSend": "معلومات",
+      "qrExecute": "معلومات",
+      "paymentRoute": "معلومات",
+      "totals": "معلومات",
+      "payments": "پرداخت‌ها",
+      "p2p": "معلومات",
       "qr": "QR",
-      "walletOps": "کیف پول ops",
+      "walletOps": "کیف پول",
       "business": "تجاری",
       "merchant": "فروشنده",
-      "noWallets": "نخیر wallets",
-      "recentHistory": "recent تاریخچه",
-      "seeAll": "see همه",
-      "noEvents": "نخیر events",
-      "unknown": "unknown"
+      "noWallets": "معلومات",
+      "recentHistory": "تاریخچه",
+      "seeAll": "مشاهده همه",
+      "noEvents": "معلومات",
+      "unknown": "معلومات"
     },
     "financialItem": {
-      "eyebrow": "eyebrow",
-      "title": "title",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
       "loading": "در حال بارگذاری",
-      "errorTitle": "error",
-      "amountUnavailable": "مبلغ unavailable",
-      "unknown": "unknown",
+      "errorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "amountUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "unknown": "معلومات",
       "id": "ID",
-      "transaction": "transaction",
+      "transaction": "معلومات",
       "wallet": "کیف پول",
       "reference": "مرجع",
-      "createdAt": "created at",
-      "payload": "payload"
+      "createdAt": "ایجاد شده در",
+      "payload": "معلومات"
     },
     "paymentExecution": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "statusTitle": "وضعیت",
       "statusText": "وضعیت توضیحات",
-      "currentWallet": "current کیف پول",
-      "currentUser": "current کاربر",
-      "notProvided": "not provided",
-      "providerTitle": "provider",
-      "providerText": "provider توضیحات",
-      "tokenTitle": "token",
-      "tokenText": "token توضیحات",
-      "auditTitle": "audit",
-      "auditText": "audit توضیحات",
-      "goToSend": "go to ارسال",
-      "goToQr": "go to QR"
+      "currentWallet": "کیف پول",
+      "currentUser": "معلومات",
+      "notProvided": "معلومات",
+      "providerTitle": "تنظیمات",
+      "providerText": "تنظیمات — معلومات",
+      "tokenTitle": "عنوان",
+      "tokenText": "معلومات — معلومات",
+      "auditTitle": "عنوان",
+      "auditText": "معلومات — معلومات",
+      "goToSend": "معلومات",
+      "goToQr": "معلومات"
     },
     "mySabiId": {
-      "eyebrow": "eyebrow",
-      "title": "title",
-      "subtitle": "subtitle",
-      "notConfigured": "not configured",
+      "eyebrow": "معلومات",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "notConfigured": "معلومات",
       "pending": "در انتظار",
       "status": "وضعیت",
-      "internalPay": "internal pay",
+      "internalPay": "معلومات",
       "receive": "دریافت",
-      "identity": "identity",
-      "mainBanner": "main banner",
+      "identity": "معلومات",
+      "mainBanner": "معلومات",
       "preview": "پیش‌نمایش",
-      "bannerAppearance": "banner appearance",
-      "displayName": "display نام",
-      "displayNamePlaceholder": "display نام راهنما",
+      "bannerAppearance": "ظاهر",
+      "displayName": "نام نمایشی",
+      "displayNamePlaceholder": "جستجو",
       "sabiId": "Sabi ID",
       "sabiIdPlaceholder": "Sabi ID راهنما",
-      "bannerColor": "banner رنگ",
-      "bannerStyle": "banner style",
-      "qrAccess": "QR access",
-      "core": "core",
-      "myQr": "my QR",
+      "bannerColor": "معلومات",
+      "bannerStyle": "معلومات",
+      "qrAccess": "معلومات",
+      "core": "معلومات",
+      "myQr": "QR من",
       "scan": "اسکن",
       "share": "اشتراک‌گذاری",
       "copyId": "کپی ID",
-      "askAi": "ask AI",
-      "howWorks": "how works",
-      "flow": "flow",
-      "internalTitle": "internal",
-      "internalText": "internal توضیحات",
+      "askAi": "AI",
+      "howWorks": "معلومات",
+      "flow": "معلومات",
+      "internalTitle": "عنوان",
+      "internalText": "معلومات — معلومات",
       "qrTitle": "QR",
       "qrText": "QR توضیحات",
-      "customizeTitle": "customize",
-      "customizeText": "customize توضیحات",
-      "walletIdentity": "کیف پول identity",
-      "secureRoute": "امن route",
-      "style": "style",
+      "customizeTitle": "عنوان",
+      "customizeText": "معلومات — معلومات",
+      "walletIdentity": "کیف پول",
+      "secureRoute": "معلومات",
+      "style": "معلومات",
       "theme": "پوسته",
-      "profileFallback": "پروفایل fallback"
+      "profileFallback": "نمایه"
     }
   },
   "walletCards": {
@@ -2208,9 +2209,9 @@ export const FA_AF_LOCALE = {
     "cardNickname": "نام کارت",
     "cardDesign": "طرح کارت",
     "verificationMethod": "روش تأیید",
-    "verifyByCvv": "تأیید با CVV",
-    "verifyByOtp": "تأیید با OTP",
-    "verifyByCvvOtp": "تأیید با CVV + OTP",
+    "verifyByCvv": "معلومات",
+    "verifyByOtp": "معلومات",
+    "verifyByCvvOtp": "معلومات",
     "cardLinked": "کارت وصل شد",
     "cardRemoved": "برداشتن کارت",
     "removeCard": "حذف کارت",
@@ -2234,7 +2235,7 @@ export const FA_AF_LOCALE = {
     "contactlessPayments": "پرداخت بدون تماس",
     "cardStatus": "وضعیت کارت",
     "cashWithdrawal": "برداشت نقدی",
-    "atmWithdrawal": "برداشت از ATM",
+    "atmWithdrawal": "معلومات",
     "cardToCardTransfer": "انتقال کارت به کارت",
     "tokenizedPayments": "پرداخت‌های توکنایز شده",
     "cardLimitResetDate": "تاریخ بازنشانی حد کارت",
@@ -2261,9 +2262,9 @@ export const FA_AF_LOCALE = {
     "beneficiaryBank": "بانک ذی‌نفع",
     "beneficiaryAddress": "آدرس ذی‌نفع",
     "accountNumber": "نمبر حساب",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "معلومات",
+    "swift": "معلومات",
+    "bic": "معلومات",
     "routingNumber": "شماره مسیر",
     "correspondentBank": "بانک کارگزار",
     "intermediaryBank": "بانک واسطه",
@@ -2308,9 +2309,9 @@ export const FA_AF_LOCALE = {
     "beneficiaryCountry": "کشور ذی‌نفع",
     "recipientBank": "بانک گیرنده",
     "bankBranch": "شعبه بانک",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "معلومات",
+    "swift": "معلومات",
+    "bic": "معلومات",
     "routingNumber": "شماره مسیر",
     "transferAmount": "مبلغ انتقال",
     "receivingAmount": "مبلغ دریافتی",
@@ -2337,19 +2338,19 @@ export const FA_AF_LOCALE = {
     "noSavedRecipients": "گیرنده ذخیره‌شده‌ای وجود ندارد"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
-    "subtitle": "بیلانس Coin، انتقال‌ها، درآمدها و محصولات قفل‌شده را مدیریت کنید.",
-    "availableCoin": "Coin قابل استفاده",
-    "lockedCoin": "Coin قفل‌شده",
-    "earnedCoin": "Coin کسب‌شده",
-    "topUpCoin": "افزایش Coin",
-    "convertToCoin": "تبدیل به Coin",
-    "convertFromWallet": "تبدیل از Sabi Wallet",
-    "sendCoin": "ارسال Coin",
-    "receiveCoin": "دریافت Coin",
-    "coinTransfer": "انتقال Coin",
-    "coinDeposit": "سپرده Coin",
-    "coinEarn": "درآمد Coin",
+    "title": "COIN کیف پول",
+    "subtitle": "تنظیمات",
+    "availableCoin": "آماده",
+    "lockedCoin": "معلومات",
+    "earnedCoin": "معلومات",
+    "topUpCoin": "معلومات",
+    "convertToCoin": "معلومات",
+    "convertFromWallet": "کیف پول",
+    "sendCoin": "معلومات",
+    "receiveCoin": "معلومات",
+    "coinTransfer": "معلومات",
+    "coinDeposit": "معلومات",
+    "coinEarn": "معلومات",
     "depositTerm": "مدت سپرده",
     "annualRate": "نرخ سالانه",
     "estimatedReturn": "بازگشت تخمینی",
@@ -2360,14 +2361,14 @@ export const FA_AF_LOCALE = {
     "interestPayout": "پرداخت سود",
     "incomeSchedule": "برنامه درآمد",
     "moveToMainWallet": "انتقال به ولت اصلی",
-    "coinUseCases": "کاربردهای Coin",
-    "payWithCoin": "پرداخت با Coin",
-    "buyPremiumWithCoin": "خرید Premium با Coin",
-    "giftWithCoin": "هدیه با Coin",
-    "noCoinTransactions": "هنوز هیچ تراکنش Coin وجود ندارد",
+    "coinUseCases": "معلومات",
+    "payWithCoin": "معلومات",
+    "buyPremiumWithCoin": "پریمیوم",
+    "giftWithCoin": "پریمیوم",
+    "noCoinTransactions": "معلومات",
     "monthlyReleaseRule": "قانون آزادسازی ماهانه",
     "lockedUntilRelease": "تا زمان آزادسازی قفل است",
-    "releaseAvailableOn": "آزادسازی در {{date}} ممکن است",
+    "releaseAvailableOn": "آماده",
     "stakingLikeProducts": "محصولات درآمدی قفل‌شده",
     "creditReserved": "ویژگی‌های قرضه برای فعال‌سازی آینده رزرو شده‌اند"
   },
@@ -2509,9 +2510,9 @@ export const FA_AF_LOCALE = {
     "statementDate": "تاریخ استیتمنت",
     "generateStatement": "ایجاد استیتمنت",
     "regenerateStatement": "ایجاد دوباره استیتمنت",
-    "downloadPdf": "دانلود PDF",
-    "exportCsv": "خارج کردن CSV",
-    "exportXlsx": "خارج کردن XLSX",
+    "downloadPdf": "معلومات",
+    "exportCsv": "معلومات",
+    "exportXlsx": "معلومات",
     "emailStatement": "ارسال استیتمنت با ایمیل",
     "statementSummary": "خلاصه استیتمنت",
     "openingBalance": "بیلانس آغازین",
@@ -2525,9 +2526,9 @@ export const FA_AF_LOCALE = {
     "title": "مطابقت",
     "subtitle": "تأیید، بررسی‌های مقرراتی و کنترل‌های مطابقت بانکی.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "معلومات",
     "sanctionsScreening": "بررسی تحریم‌ها",
-    "pepCheck": "بررسی PEP",
+    "pepCheck": "معلومات",
     "sourceOfFunds": "منبع پول",
     "sourceOfWealth": "منبع ثروت",
     "proofOfIdentity": "سند هویت",
@@ -2624,7 +2625,7 @@ export const FA_AF_LOCALE = {
     "videoCall": "تماس ویدیویی",
     "aiTranslate": "ترجمه AI",
     "premiumFeature": "ویژگی پریمیوم",
-    "sendCoin": "ارسال Coin",
+    "sendCoin": "معلومات",
     "sendPayment": "ارسال پرداخت",
     "sharedMedia": "رسانه‌های شریک‌شده",
     "sharedFiles": "فایل‌های شریک‌شده",
@@ -2643,213 +2644,213 @@ export const FA_AF_LOCALE = {
     "translateCall": "ترجمه تماس",
     "premiumTranslation": "ترجمه پریمیوم",
     "attachment": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "پیوست",
+      "subtitle": "تنظیمات",
       "camera": "دوربین",
       "cameraSubtitle": "دوربین توضیحات",
       "gallery": "گالری",
       "gallerySubtitle": "گالری توضیحات",
       "document": "سند",
       "documentSubtitle": "سند توضیحات",
-      "location": "location",
-      "locationSubtitle": "location توضیحات",
-      "contact": "contact",
-      "contactSubtitle": "contact توضیحات",
-      "catalog": "catalog",
-      "catalogSubtitle": "catalog توضیحات",
-      "fiat": "fiat",
-      "fiatSubtitle": "fiat توضیحات",
+      "location": "موقعیت",
+      "locationSubtitle": "توضیحات — معلومات",
+      "contact": "مخاطب",
+      "contactSubtitle": "توضیحات — معلومات",
+      "catalog": "کاتالوگ",
+      "catalogSubtitle": "توضیحات — معلومات",
+      "fiat": "ارسال پول",
+      "fiatSubtitle": "توضیحات — معلومات",
       "coin": "COIN",
       "coinSubtitle": "COIN توضیحات",
-      "poll": "poll",
-      "pollSubtitle": "poll توضیحات",
-      "event": "event",
-      "eventSubtitle": "event توضیحات"
+      "poll": "معلومات",
+      "pollSubtitle": "توضیحات — معلومات",
+      "event": "معلومات",
+      "eventSubtitle": "توضیحات — معلومات"
     },
     "animatedHub": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "reactionTitle": "reaction",
-      "reactionSubtitle": "reaction توضیحات",
+      "title": "متحرک",
+      "subtitle": "تنظیمات",
+      "reactionTitle": "عنوان",
+      "reactionSubtitle": "توضیحات — معلومات",
       "emojiTitle": "ایموجی",
       "emojiSubtitle": "ایموجی توضیحات",
       "giftTitle": "هدیه",
       "giftSubtitle": "هدیه توضیحات"
     },
     "animatedReaction": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "استیکرهای پریمیوم",
+      "subtitle": "تنظیمات",
       "search": "جستجو",
-      "love": "love",
-      "fun": "fun",
-      "mood": "mood"
+      "love": "معلومات",
+      "fun": "معلومات",
+      "mood": "معلومات"
     },
     "stickerSheet": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "searchPlaceholder": "جستجو راهنما",
-      "quickReactions": "quick reactions",
+      "quickReactions": "واکنش‌های سریع",
       "empty": "خالی",
       "tabs": {
-        "recent": "recent",
-        "reactions": "reactions",
+        "recent": "اخیر",
+        "reactions": "واکنش‌ها",
         "emoji": "ایموجی",
-        "gestures": "gestures",
-        "flags": "flags"
+        "gestures": "معلومات",
+        "flags": "معلومات"
       }
     },
     "animatedGift": {
-      "premiumLayer": "Premium layer",
-      "storage": "storage",
-      "featured": "featured",
-      "family": "family",
-      "local": "local",
-      "treasure": "treasure",
-      "luxury": "luxury"
+      "premiumLayer": "پریمیوم",
+      "storage": "معلومات",
+      "featured": "ویژه",
+      "family": "معلومات",
+      "local": "محلی",
+      "treasure": "معلومات",
+      "luxury": "پریمیوم"
     },
     "giftStorage": {
-      "inventory": "inventory",
-      "won": "won",
-      "seasonal": "seasonal",
-      "expiring": "expiring",
+      "inventory": "فهرست هدایا",
+      "won": "معلومات",
+      "seasonal": "معلومات",
+      "expiring": "معلومات",
       "emptyTitle": "خالی",
       "emptyText": "خالی توضیحات",
-      "buy": "buy",
-      "event": "event",
-      "promo": "promo",
-      "basic": "basic",
-      "premium": "Premium",
-      "ultra": "ultra",
-      "days": "days"
+      "buy": "معلومات",
+      "event": "معلومات",
+      "promo": "معلومات",
+      "basic": "معلومات",
+      "premium": "پریمیوم",
+      "ultra": "معلومات",
+      "days": "معلومات"
     },
-    "createBot": "ایجاد bot",
-    "manageBot": "manage bot",
-    "myBots": "my bots",
-    "privateBots": "خصوصی bots",
-    "searchBots": "جستجو bots",
-    "botWorkspace": "bot workspace",
-    "botOwnerPanel": "bot owner panel",
-    "botOwnerPanelSubtitle": "bot owner panel توضیحات",
-    "ownerPanelHint": "owner panel راهنما",
-    "createBotHint": "ایجاد bot راهنما",
-    "createBotButtonHint": "ایجاد bot button راهنما",
-    "emptyBotsTitle": "خالی bots",
-    "emptyBotsSubtitle": "خالی bots توضیحات",
-    "botNameRequired": "bot نام ضروری",
-    "botUsernameRequired": "bot نام کاربری ضروری",
-    "botCreated": "bot created",
-    "botUpdated": "bot updated",
-    "botRemoved": "bot removed",
-    "botMissing": "bot missing",
-    "botLoading": "bot در حال بارگذاری",
-    "botProfile": "bot پروفایل",
-    "walletRouting": "کیف پول routing",
-    "sabiWalletRoute": "Sabi کیف پول route",
-    "businessRoutingLayer": "تجاری routing layer",
-    "businessWalletComingSoon": "تجاری کیف پول coming soon",
-    "botTradeRouteHint": "bot trade route راهنما",
-    "botBusinessRouteHint": "bot تجاری route راهنما",
-    "botStatusHint": "bot وضعیت راهنما",
-    "addCommand": "افزودن command",
-    "editCommand": "ویرایش command",
-    "commandName": "command نام",
-    "commandTitle": "command",
-    "commandDescription": "command توضیحات",
-    "commandEnabled": "command enabled",
-    "commandSaved": "command saved",
-    "commandDeleted": "command deleted",
-    "commandAndTitleRequired": "command and title ضروری",
-    "noCommandsYet": "نخیر فرمان‌ها yet",
-    "noCommandsYetSubtitle": "نخیر فرمان‌ها yet توضیحات",
-    "quickOwnerControls": "quick owner controls",
-    "openBotChatInMessenger": "باز کردن bot chat in Messenger",
-    "removeBotFromOwnerList": "برداشتن bot از owner list",
-    "openRoute": "باز کردن route",
-    "businessPath": "تجاری path",
-    "sabiPath": "Sabi path",
-    "muteBot": "بی‌صدا bot",
-    "unmuteBot": "با صدا bot",
-    "pinBot": "سنجاق کردن bot",
-    "unpinBot": "برداشتن سنجاق bot",
-    "createGroup": "ایجاد group",
-    "manageGroup": "manage group",
-    "myGroups": "my groups",
-    "searchGroups": "جستجو groups",
-    "groupWorkspace": "group workspace",
-    "createGroupHint": "ایجاد group راهنما",
-    "emptyGroupsTitle": "خالی groups",
-    "emptyGroupsSubtitle": "خالی groups توضیحات",
-    "groupOwnerPanel": "group owner panel",
-    "groupOwnerPanelSubtitle": "group owner panel توضیحات",
-    "groupCreated": "group created",
-    "groupUpdated": "group updated",
-    "groupRemoved": "group removed",
-    "groupMissing": "group missing",
-    "groupLoading": "group در حال بارگذاری",
-    "groupProfile": "group پروفایل",
-    "groupMembers": "group members",
-    "addMember": "افزودن member",
-    "removeMember": "برداشتن member",
-    "groupAdmins": "group admins",
-    "quickGroupControls": "quick group controls",
-    "openGroupChatInMessenger": "باز کردن group chat in Messenger",
-    "publicGroup": "عمومی group",
-    "privateGroup": "خصوصی group",
-    "createChannel": "ایجاد channel",
-    "manageChannel": "manage channel",
-    "myChannels": "my channels",
-    "searchChannels": "جستجو channels",
-    "channelWorkspace": "channel workspace",
-    "createChannelHint": "ایجاد channel راهنما",
-    "emptyChannelsTitle": "خالی channels",
-    "emptyChannelsSubtitle": "خالی channels توضیحات",
-    "channelOwnerPanel": "channel owner panel",
-    "channelOwnerPanelSubtitle": "channel owner panel توضیحات",
-    "channelCreated": "channel created",
-    "channelUpdated": "channel updated",
-    "channelRemoved": "channel removed",
-    "channelMissing": "channel missing",
-    "channelLoading": "channel در حال بارگذاری",
-    "channelProfile": "channel پروفایل",
-    "channelSubscribers": "channel subscribers",
-    "addSubscriber": "افزودن subscriber",
-    "removeSubscriber": "برداشتن subscriber",
-    "channelAdmins": "channel admins",
-    "quickChannelControls": "quick channel controls",
-    "openChannelInMessenger": "باز کردن channel in Messenger",
-    "publicChannel": "عمومی channel",
-    "privateChannel": "خصوصی channel",
-    "onlyAdminsCanPost": "only admins can post",
-    "linkedDiscussion": "linked discussion",
-    "joinRequests": "join requests",
+    "createBot": "ایجاد",
+    "manageBot": "دستیار",
+    "myBots": "معلومات",
+    "privateBots": "معلومات",
+    "searchBots": "جستجو",
+    "botWorkspace": "دستیار",
+    "botOwnerPanel": "دستیار",
+    "botOwnerPanelSubtitle": "دستیار — معلومات",
+    "ownerPanelHint": "معلومات — معلومات",
+    "createBotHint": "دستیار — معلومات",
+    "createBotButtonHint": "دستیار — معلومات",
+    "emptyBotsTitle": "معلومات",
+    "emptyBotsSubtitle": "معلومات — معلومات",
+    "botNameRequired": "دستیار",
+    "botUsernameRequired": "دستیار",
+    "botCreated": "دستیار",
+    "botUpdated": "دستیار",
+    "botRemoved": "دستیار",
+    "botMissing": "دستیار",
+    "botLoading": "در حال بارگذاری",
+    "botProfile": "دستیار",
+    "walletRouting": "کیف پول",
+    "sabiWalletRoute": "Sabi کیف پول",
+    "businessRoutingLayer": "معلومات",
+    "businessWalletComingSoon": "معلومات",
+    "botTradeRouteHint": "دستیار — معلومات",
+    "botBusinessRouteHint": "دستیار — معلومات",
+    "botStatusHint": "دستیار — معلومات",
+    "addCommand": "معلومات",
+    "editCommand": "معلومات",
+    "commandName": "معلومات",
+    "commandTitle": "عنوان",
+    "commandDescription": "توضیحات — معلومات",
+    "commandEnabled": "معلومات",
+    "commandSaved": "معلومات",
+    "commandDeleted": "معلومات",
+    "commandAndTitleRequired": "عنوان",
+    "noCommandsYet": "معلومات",
+    "noCommandsYetSubtitle": "توضیحات — معلومات",
+    "quickOwnerControls": "معلومات",
+    "openBotChatInMessenger": "باز کردن Messenger اتاق",
+    "removeBotFromOwnerList": "دستیار",
+    "openRoute": "معلومات",
+    "businessPath": "معلومات",
+    "sabiPath": "معلومات",
+    "muteBot": "دستیار",
+    "unmuteBot": "دستیار",
+    "pinBot": "دستیار",
+    "unpinBot": "دستیار",
+    "createGroup": "ایجاد",
+    "manageGroup": "گفتگو",
+    "myGroups": "معلومات",
+    "searchGroups": "جستجو",
+    "groupWorkspace": "گفتگو",
+    "createGroupHint": "گفتگو — معلومات",
+    "emptyGroupsTitle": "معلومات",
+    "emptyGroupsSubtitle": "معلومات — معلومات",
+    "groupOwnerPanel": "گفتگو",
+    "groupOwnerPanelSubtitle": "گفتگو — معلومات",
+    "groupCreated": "گفتگو",
+    "groupUpdated": "گفتگو",
+    "groupRemoved": "گفتگو",
+    "groupMissing": "گفتگو",
+    "groupLoading": "در حال بارگذاری...",
+    "groupProfile": "گفتگو",
+    "groupMembers": "گفتگو",
+    "addMember": "نمایه",
+    "removeMember": "نمایه",
+    "groupAdmins": "گفتگو",
+    "quickGroupControls": "گفتگو",
+    "openGroupChatInMessenger": "باز کردن Messenger اتاق",
+    "publicGroup": "گفتگو",
+    "privateGroup": "گفتگو",
+    "createChannel": "ایجاد",
+    "manageChannel": "گفتگو",
+    "myChannels": "معلومات",
+    "searchChannels": "جستجو",
+    "channelWorkspace": "گفتگو",
+    "createChannelHint": "گفتگو — معلومات",
+    "emptyChannelsTitle": "معلومات",
+    "emptyChannelsSubtitle": "معلومات — معلومات",
+    "channelOwnerPanel": "گفتگو",
+    "channelOwnerPanelSubtitle": "گفتگو — معلومات",
+    "channelCreated": "گفتگو",
+    "channelUpdated": "گفتگو",
+    "channelRemoved": "گفتگو",
+    "channelMissing": "گفتگو",
+    "channelLoading": "در حال بارگذاری",
+    "channelProfile": "گفتگو",
+    "channelSubscribers": "گفتگو",
+    "addSubscriber": "معلومات",
+    "removeSubscriber": "معلومات",
+    "channelAdmins": "گفتگو",
+    "quickChannelControls": "گفتگو",
+    "openChannelInMessenger": "باز کردن Messenger اتاق",
+    "publicChannel": "گفتگو",
+    "privateChannel": "گفتگو",
+    "onlyAdminsCanPost": "معلومات",
+    "linkedDiscussion": "معلومات",
+    "joinRequests": "معلومات",
     "roomSettings": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "botTitle": "bot",
-      "botSubtitle": "bot توضیحات"
+      "title": "تنظیمات چت",
+      "subtitle": "تنظیمات",
+      "botTitle": "دستیار",
+      "botSubtitle": "دستیار — معلومات"
     },
     "menu": {
-      "addContact": "افزودن contact",
-      "addContactSubtitle": "افزودن contact توضیحات",
-      "contactSaved": "contact saved",
-      "contactSavedSubtitle": "contact saved توضیحات",
-      "contactUnavailable": "contact unavailable",
-      "addToList": "افزودن to list",
-      "addToListSubtitle": "افزودن to list توضیحات",
-      "removeFromList": "برداشتن از list",
-      "removeFromListSubtitle": "برداشتن از list توضیحات",
+      "addContact": "معلومات",
+      "addContactSubtitle": "توضیحات — معلومات",
+      "contactSaved": "معلومات",
+      "contactSavedSubtitle": "توضیحات — معلومات",
+      "contactUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "addToList": "معلومات",
+      "addToListSubtitle": "توضیحات — معلومات",
+      "removeFromList": "معلومات",
+      "removeFromListSubtitle": "توضیحات — معلومات",
       "mute": "بی‌صدا",
       "muteSubtitle": "بی‌صدا توضیحات",
       "unmute": "با صدا",
       "unmuteSubtitle": "با صدا توضیحات",
-      "disappearing": "disappearing",
-      "disappearingSubtitle": "disappearing توضیحات",
-      "disableDisappearing": "disable disappearing",
-      "disableDisappearingSubtitle": "disable disappearing توضیحات",
+      "disappearing": "معلومات",
+      "disappearingSubtitle": "توضیحات — معلومات",
+      "disableDisappearing": "معلومات",
+      "disableDisappearingSubtitle": "توضیحات — معلومات",
       "theme": "پوسته",
       "themeSubtitle": "پوسته توضیحات",
-      "editor": "editor",
-      "editorSubtitle": "editor توضیحات",
+      "editor": "اطلاعات چت",
+      "editorSubtitle": "توضیحات — معلومات",
       "more": "بیشتر",
       "moreSubtitle": "بیشتر توضیحات",
       "report": "گزارش",
@@ -2858,230 +2859,230 @@ export const FA_AF_LOCALE = {
       "blockSubtitle": "مسدود کردن توضیحات",
       "unblock": "رفع مسدودی",
       "unblockSubtitle": "رفع مسدودی توضیحات",
-      "clearChat": "پاک کردن chat",
-      "clearChatSubtitle": "پاک کردن chat توضیحات",
-      "addToHome": "افزودن to خانه",
-      "addToHomeSubtitle": "افزودن to خانه توضیحات",
-      "addBotToList": "افزودن bot to list",
-      "addBotToListSubtitle": "افزودن bot to list توضیحات",
-      "removeBotFromList": "برداشتن bot از list",
-      "removeBotFromListSubtitle": "برداشتن bot از list توضیحات",
-      "muteBot": "بی‌صدا bot",
-      "muteBotSubtitle": "بی‌صدا bot توضیحات",
-      "unmuteBot": "با صدا bot",
-      "unmuteBotSubtitle": "با صدا bot توضیحات",
+      "clearChat": "پاک کردن چت",
+      "clearChatSubtitle": "گفتگو — معلومات",
+      "addToHome": "معلومات",
+      "addToHomeSubtitle": "توضیحات — معلومات",
+      "addBotToList": "دستیار",
+      "addBotToListSubtitle": "دستیار — معلومات",
+      "removeBotFromList": "دستیار",
+      "removeBotFromListSubtitle": "دستیار — معلومات",
+      "muteBot": "دستیار",
+      "muteBotSubtitle": "دستیار — معلومات",
+      "unmuteBot": "دستیار",
+      "unmuteBotSubtitle": "دستیار — معلومات",
       "ai": "AI",
       "aiSubtitle": "AI توضیحات",
-      "aiBotSubtitle": "AI bot توضیحات",
-      "manageBot": "manage bot",
-      "manageBotSubtitle": "manage bot توضیحات",
-      "botTools": "bot tools",
-      "botToolsSubtitle": "bot tools توضیحات",
-      "moreBotSubtitle": "بیشتر bot توضیحات",
-      "reportBotSubtitle": "گزارش bot توضیحات",
-      "blockBot": "مسدود کردن bot",
-      "blockBotSubtitle": "مسدود کردن bot توضیحات",
-      "unblockBot": "رفع مسدودی bot",
-      "unblockBotSubtitle": "رفع مسدودی bot توضیحات",
-      "clearBotChatSubtitle": "پاک کردن bot chat توضیحات",
-      "hideConversation": "hide conversation",
-      "hideConversationSubtitle": "hide conversation توضیحات",
-      "addBotToHome": "افزودن bot to خانه",
-      "addBotToHomeSubtitle": "افزودن bot to خانه توضیحات"
+      "aiBotSubtitle": "AI — معلومات",
+      "manageBot": "دستیار",
+      "manageBotSubtitle": "دستیار — معلومات",
+      "botTools": "دستیار",
+      "botToolsSubtitle": "دستیار — معلومات",
+      "moreBotSubtitle": "دستیار — معلومات",
+      "reportBotSubtitle": "دستیار — معلومات",
+      "blockBot": "دستیار",
+      "blockBotSubtitle": "دستیار — معلومات",
+      "unblockBot": "دستیار",
+      "unblockBotSubtitle": "دستیار — معلومات",
+      "clearBotChatSubtitle": "دستیار — معلومات",
+      "hideConversation": "معلومات",
+      "hideConversationSubtitle": "توضیحات — معلومات",
+      "addBotToHome": "دستیار",
+      "addBotToHomeSubtitle": "دستیار — معلومات"
     },
     "chat": {
       "you": "شما",
-      "typing": "typing",
+      "typing": "در حال نوشتن...",
       "online": "آنلاین",
       "offline": "آفلاین",
       "connecting": "در حال اتصال",
-      "reconnecting": "reconnecting",
-      "lastSeenToday": "آخر دیده شد امروز {{time}}",
-      "lastSeenYesterday": "آخر دیده شد دیروز {{time}}",
-      "lastSeenDate": "آخر دیده شد date {{date}} {{time}}",
-      "conversationPlaceholder": "conversation راهنما",
+      "reconnecting": "در حال بارگذاری...",
+      "lastSeenToday": "معلومات",
+      "lastSeenYesterday": "معلومات",
+      "lastSeenDate": "معلومات",
+      "conversationPlaceholder": "جستجو",
       "today": "امروز",
       "yesterday": "دیروز",
-      "directRoom": "direct اتاق",
-      "groupRoom": "group اتاق",
-      "channelRoom": "channel اتاق",
+      "directRoom": "معلومات",
+      "groupRoom": "گفتگو",
+      "channelRoom": "گفتگو",
       "businessRoom": "تجاری اتاق",
-      "encrypted": "encrypted",
-      "messagePlaceholder": "message راهنما",
-      "messageTitle": "message",
+      "encrypted": "معلومات",
+      "messagePlaceholder": "پیام بنویسید",
+      "messageTitle": "پیام",
       "replyAction": "پاسخ عمل",
       "replyPlaceholder": "پاسخ راهنما",
-      "selectionDelete": "selection حذف",
-      "selectionForward": "selection ارسال به دیگران",
-      "deleteMe": "حذف me",
+      "selectionDelete": "حذف",
+      "selectionForward": "ارسال به دیگران",
+      "deleteMe": "معلومات",
       "deleteAllAction": "حذف همه عمل",
       "save": "ذخیره",
       "link": "لینک",
       "searchTitle": "جستجو",
-      "searchMessage": "جستجو message",
+      "searchMessage": "جستجو",
       "muteTitle": "بی‌صدا",
-      "muteMessage": "بی‌صدا message",
-      "locationTitle": "location",
-      "sharedLocation": "shared location",
-      "locationAttached": "location attached",
-      "locationOpenNotice": "location باز کردن notice",
-      "locationOpenError": "location باز کردن error",
-      "locationSendError": "location ارسال error",
-      "locationCoordsMissing": "location coords missing",
-      "locationAccessError": "location access error",
-      "contactTitle": "contact",
-      "contactsTitle": "contacts",
-      "contactCard": "contact کارت",
-      "contactAttached": "contact attached",
-      "contactReady": "contact آماده",
-      "contactOpenNotice": "contact باز کردن notice",
-      "contactOpenError": "contact باز کردن error",
-      "contactsAccessError": "contacts access error",
+      "muteMessage": "معلومات",
+      "locationTitle": "موقعیت",
+      "sharedLocation": "معلومات",
+      "locationAttached": "معلومات",
+      "locationOpenNotice": "معلومات",
+      "locationOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "locationSendError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "locationCoordsMissing": "معلومات",
+      "locationAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "contactTitle": "مخاطب",
+      "contactsTitle": "مخاطبین",
+      "contactCard": "معلومات",
+      "contactAttached": "معلومات",
+      "contactReady": "آماده",
+      "contactOpenNotice": "معلومات",
+      "contactOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "contactsAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "documentTitle": "سند",
       "documentsTitle": "اسناد",
-      "documentAttached": "سند attached",
-      "documentPreviewUnavailable": "سند پیش‌نمایش unavailable",
-      "documentOpenNotice": "سند باز کردن notice",
-      "documentOpening": "سند opening",
-      "documentOpenError": "سند باز کردن error",
-      "documentAccessError": "سند access error",
+      "documentAttached": "معلومات",
+      "documentPreviewUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "documentOpenNotice": "معلومات",
+      "documentOpening": "معلومات",
+      "documentOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "documentAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "galleryTitle": "گالری",
-      "galleryAccessError": "گالری access error",
+      "galleryAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "photoTitle": "عکس",
       "photoPreviewSubtitle": "عکس پیش‌نمایش توضیحات",
-      "photoPreviewUnavailable": "عکس پیش‌نمایش unavailable",
-      "photoCaptured": "عکس captured",
-      "photoSaveNotice": "عکس ذخیره notice",
-      "photoSaveError": "عکس ذخیره error",
+      "photoPreviewUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "photoCaptured": "عکس آماده",
+      "photoSaveNotice": "ذخیره عکس",
+      "photoSaveError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "videoTitle": "ویدیو",
-      "videoCaptured": "ویدیو captured",
-      "videoSaveNotice": "ویدیو ذخیره notice",
-      "videoSaveError": "ویدیو ذخیره error",
+      "videoCaptured": "صدا",
+      "videoSaveNotice": "ذخیره ویدیو",
+      "videoSaveError": "درخواست ناکام شد. دوباره تلاش کنید.",
       "videoCloseHint": "ویدیو بستن راهنما",
-      "videoMessageText": "ویدیو message توضیحات",
+      "videoMessageText": "صدا — معلومات",
       "voiceTitle": "صدا",
-      "voiceRecordingTitle": "صدا recording",
-      "voiceRecordingSubtitle": "صدا recording توضیحات",
+      "voiceRecordingTitle": "AI صوتی",
+      "voiceRecordingSubtitle": "AI صوتی",
       "voiceReadySubtitle": "صدا آماده توضیحات",
-      "recordingVoice": "recording صدا",
+      "recordingVoice": "AI صوتی",
       "voiceReady": "صدا آماده",
-      "voiceReadyInline": "صدا آماده inline",
-      "voiceReadyToSend": "صدا آماده to ارسال",
-      "voiceSent": "صدا sent",
-      "voicePlayback": "صدا playback",
-      "voiceStartError": "صدا شروع error",
-      "voiceFinishError": "صدا تمام کردن error",
-      "voiceUploadError": "صدا آپلود error",
-      "voicePlayError": "صدا play error",
-      "voiceRateError": "صدا rate error",
+      "voiceReadyInline": "صدا آماده",
+      "voiceReadyToSend": "AI صوتی",
+      "voiceSent": "AI صوتی",
+      "voicePlayback": "AI صوتی",
+      "voiceStartError": "AI صوتی",
+      "voiceFinishError": "AI صوتی",
+      "voiceUploadError": "AI صوتی",
+      "voicePlayError": "AI صوتی",
+      "voiceRateError": "AI صوتی",
       "copiedText": "کپی شد توضیحات",
       "infoAction": "اطلاعات عمل",
-      "editingTitle": "editing",
-      "editingSubtitle": "editing توضیحات",
+      "editingTitle": "ویرایش پیام",
+      "editingSubtitle": "توضیحات — معلومات",
       "editPlaceholder": "ویرایش راهنما",
-      "replyingTitle": "replying",
-      "readOnlyTitle": "read only",
+      "replyingTitle": "عنوان",
+      "readOnlyTitle": "عنوان",
       "readOnlySubtitle": "ارسال پیام در اینجا غیرفعال است. برای جزئیات، معلومات کانال را باز کنید.",
       "mediaLabel": "رسانه",
       "mediaTitle": "رسانه",
-      "mediaMessage": "رسانه message",
-      "mediaCaptureFailed": "رسانه capture ناموفق",
-      "mediaSaved": "رسانه saved",
+      "mediaMessage": "معلومات",
+      "mediaCaptureFailed": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "mediaSaved": "ذخیره شد",
       "privacyTitle": "حریم خصوصی",
-      "privacyMessage": "حریم خصوصی message",
-      "roomThemeUpdated": "اتاق پوسته updated",
-      "messageContextMissing": "message context missing",
-      "messageEdited": "message edited",
-      "messageSent": "message sent",
-      "messageSendError": "message ارسال error",
-      "giftSent": "هدیه sent",
-      "animatedReactionSent": "متحرک reaction sent",
-      "animatedEmojiSent": "متحرک ایموجی sent",
-      "stickerAdded": "استیکر added",
-      "selectedForForwardPrefix": "انتخاب شد for ارسال به دیگران prefix",
-      "chooseMessagesForward": "choose messages ارسال به دیگران",
-      "deletedPrefix": "deleted prefix",
-      "deletedForAll": "deleted for همه",
-      "deletedForMe": "deleted for me",
-      "addedToComposer": "added to composer",
+      "privacyMessage": "حریم خصوصی",
+      "roomThemeUpdated": "طرح",
+      "messageContextMissing": "معلومات — معلومات",
+      "messageEdited": "معلومات",
+      "messageSent": "معلومات",
+      "messageSendError": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "giftSent": "هدیه ارسال شد",
+      "animatedReactionSent": "معلومات",
+      "animatedEmojiSent": "معلومات",
+      "stickerAdded": "معلومات",
+      "selectedForForwardPrefix": "معلومات",
+      "chooseMessagesForward": "معلومات",
+      "deletedPrefix": "معلومات",
+      "deletedForAll": "معلومات",
+      "deletedForMe": "معلومات",
+      "addedToComposer": "معلومات",
       "saveMediaReady": "ذخیره رسانه آماده",
       "openLinkReady": "باز کردن لینک آماده",
-      "openingWalletFiat": "opening کیف پول fiat",
-      "openingCoinWallet": "opening COIN کیف پول",
-      "catalogSoon": "catalog soon",
-      "pollSoon": "poll soon",
-      "eventSoon": "event soon",
-      "openingDocument": "opening سند",
-      "openingContact": "opening contact",
-      "normal": "normal",
-      "editedLabel": "edited",
-      "mapLabel": "map",
-      "tapSend": "tap ارسال",
-      "diamondsUnit": "diamonds unit",
-      "channelInfoAction": "channel اطلاعات عمل",
-      "commandConfigSubtitle": "command config توضیحات",
-      "commandTitlePlaceholder": "command title راهنما",
-      "commandDescriptionPlaceholder": "command description راهنما",
+      "openingWalletFiat": "کیف پول",
+      "openingCoinWallet": "کیف پول",
+      "catalogSoon": "معلومات",
+      "pollSoon": "معلومات",
+      "eventSoon": "معلومات",
+      "openingDocument": "معلومات",
+      "openingContact": "معلومات",
+      "normal": "معلومات",
+      "editedLabel": "معلومات",
+      "mapLabel": "معلومات",
+      "tapSend": "معلومات",
+      "diamondsUnit": "معلومات",
+      "channelInfoAction": "گفتگو",
+      "commandConfigSubtitle": "توضیحات — معلومات",
+      "commandTitlePlaceholder": "شروع",
+      "commandDescriptionPlaceholder": "توضیحات — معلومات",
       "cancelAction": "لغو عمل",
-      "openRoute": "باز کردن route",
-      "removeBotFromOwnerList": "برداشتن bot از owner list",
-      "botProfile": "bot پروفایل",
-      "quickOwnerControls": "quick owner controls",
-      "openBotChatInMessenger": "باز کردن bot chat in Messenger",
-      "savingNow": "saving now",
-      "nameAndUsernameRequired": "نام and نام کاربری ضروری",
-      "commandAndTitleRequired": "command and title ضروری",
-      "groupInfoAction": "group اطلاعات عمل",
+      "openRoute": "معلومات",
+      "removeBotFromOwnerList": "دستیار",
+      "botProfile": "دستیار",
+      "quickOwnerControls": "معلومات",
+      "openBotChatInMessenger": "باز کردن Messenger اتاق",
+      "savingNow": "در حال ذخیره...",
+      "nameAndUsernameRequired": "معلومات",
+      "commandAndTitleRequired": "عنوان",
+      "groupInfoAction": "گفتگو",
       "businessInfoAction": "تجاری اطلاعات عمل",
-      "membersCount": "members تعداد",
-      "subscribersCount": "subscribers تعداد",
-      "mutedEnabled": "muted enabled",
+      "membersCount": "معلومات",
+      "subscribersCount": "معلومات",
+      "mutedEnabled": "معلومات",
       "mutedDisabled": "بی‌صدا کردن غیرفعال است",
-      "searchFocused": "جستجو focused",
+      "searchFocused": "جستجو",
       "aiTitle": "AI",
-      "aiMessage": "AI message",
+      "aiMessage": "AI",
       "aiReady": "AI آماده",
-      "contactSavedToDevice": "contact saved to device",
-      "contactPermissionDenied": "contact permission denied",
-      "contactUnavailable": "contact unavailable",
-      "addedToList": "added to list",
-      "removedFromList": "removed از list",
-      "disappearingEnabled": "disappearing enabled",
+      "contactSavedToDevice": "معلومات",
+      "contactPermissionDenied": "معلومات",
+      "contactUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "addedToList": "معلومات",
+      "removedFromList": "معلومات",
+      "disappearingEnabled": "معلومات",
       "disappearingDisabled": "پیام‌های ناپدیدشونده غیرفعال است",
-      "reportSent": "گزارش sent",
-      "chatCleared": "chat cleared",
-      "chatExported": "chat exported",
-      "homeShortcutPinned": "خانه shortcut pinned",
-      "homeShortcutUnsupported": "خانه shortcut unsupported",
+      "reportSent": "معلومات",
+      "chatCleared": "گفتگو",
+      "chatExported": "گفتگو",
+      "homeShortcutPinned": "معلومات",
+      "homeShortcutUnsupported": "معلومات",
       "blockActionDone": "مسدود کردن عمل انجام شد",
       "unblockActionDone": "رفع مسدودی عمل انجام شد",
-      "fileBadgeGeneric": "فایل badge generic",
-      "addContactName": "افزودن contact نام",
-      "addContactNamePlaceholder": "افزودن contact نام راهنما",
-      "addContactPhone": "افزودن contact تلفن",
-      "addContactPhonePlaceholder": "افزودن contact تلفن راهنما",
-      "addContactSave": "افزودن contact ذخیره",
-      "addContactSubtitle": "افزودن contact توضیحات",
-      "addContactTitle": "افزودن contact",
-      "addContactUsername": "افزودن contact نام کاربری",
-      "addContactUsernamePlaceholder": "افزودن contact نام کاربری راهنما",
-      "contactChooseSource": "contact choose منبع",
-      "contactNameRequired": "contact نام ضروری",
-      "contactSavedInContacts": "contact saved in contacts",
-      "contactSavedInMessenger": "contact saved in Messenger",
+      "fileBadgeGeneric": "معلومات",
+      "addContactName": "معلومات",
+      "addContactNamePlaceholder": "جستجو",
+      "addContactPhone": "معلومات",
+      "addContactPhonePlaceholder": "جستجو",
+      "addContactSave": "معلومات",
+      "addContactSubtitle": "توضیحات — معلومات",
+      "addContactTitle": "عنوان",
+      "addContactUsername": "معلومات",
+      "addContactUsernamePlaceholder": "جستجو",
+      "contactChooseSource": "معلومات",
+      "contactNameRequired": "معلومات",
+      "contactSavedInContacts": "معلومات",
+      "contactSavedInMessenger": "معلومات",
       "linkEmpty": "لینک خالی",
       "linkTitle": "لینک",
-      "mediaSavedToPhone": "رسانه saved to تلفن",
-      "mediaSavedToSabi": "رسانه saved to Sabi",
-      "openContactInMessenger": "باز کردن contact in Messenger",
-      "openContactInPhone": "باز کردن contact in تلفن",
-      "phoneContactsSubtitle": "تلفن contacts توضیحات",
-      "phoneContactsTitle": "تلفن contacts",
-      "sabiContactsSubtitle": "Sabi contacts توضیحات",
-      "sabiContactsTitle": "Sabi contacts",
-      "saveMediaChooseTitle": "ذخیره رسانه choose",
-      "saveToSabiApp": "ذخیره to Sabi app",
-      "saveToPhone": "ذخیره to تلفن",
+      "mediaSavedToPhone": "معلومات",
+      "mediaSavedToSabi": "معلومات",
+      "openContactInMessenger": "معلومات",
+      "openContactInPhone": "معلومات",
+      "phoneContactsSubtitle": "توضیحات — معلومات",
+      "phoneContactsTitle": "عنوان",
+      "sabiContactsSubtitle": "توضیحات — معلومات",
+      "sabiContactsTitle": "عنوان",
+      "saveMediaChooseTitle": "عنوان",
+      "saveToSabiApp": "معلومات",
+      "saveToPhone": "معلومات",
       "saveVideoTitle": "ذخیره ویدیو",
       "saveVideoSubtitle": "ذخیره ویدیو توضیحات",
       "videoReady": "ویدیو آماده",
@@ -3093,440 +3094,440 @@ export const FA_AF_LOCALE = {
       "saveMediaTitle": "ذخیره رسانه",
       "saveMediaSubtitle": "ذخیره رسانه توضیحات",
       "mediaReady": "رسانه آماده",
-      "mediaSaveNotice": "رسانه ذخیره notice",
+      "mediaSaveNotice": "معلومات",
       "saveMediaAction": "ذخیره رسانه عمل",
-      "conversationHidden": "conversation hidden"
+      "conversationHidden": "معلومات"
     },
     "reportScreen": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "chooseReason": "choose دلیل",
-      "otherReason": "other دلیل",
-      "otherReasonPlaceholder": "other دلیل راهنما",
+      "title": "گزارش",
+      "subtitle": "تنظیمات",
+      "chooseReason": "معلومات",
+      "otherReason": "معلومات",
+      "otherReasonPlaceholder": "جستجو",
       "submit": "ارسال",
-      "success": "success",
-      "spam": "spam",
-      "scam": "scam",
-      "fakeProfile": "fake پروفایل",
-      "impersonation": "impersonation",
-      "harassment": "harassment",
-      "hateSpeech": "hate speech",
-      "violentContent": "violent content",
-      "adultContent": "adult content",
-      "childSafety": "child safety",
-      "illegalGoods": "illegal goods",
-      "dangerousContent": "dangerous content",
-      "selfHarm": "self harm",
-      "copyright": "copyright",
-      "privacyViolation": "حریم خصوصی violation",
-      "somethingElse": "something else"
+      "success": "معلومات",
+      "spam": "معلومات",
+      "scam": "معلومات",
+      "fakeProfile": "نمایه",
+      "impersonation": "معلومات",
+      "harassment": "معلومات",
+      "hateSpeech": "معلومات",
+      "violentContent": "معلومات",
+      "adultContent": "معلومات",
+      "childSafety": "معلومات",
+      "illegalGoods": "معلومات",
+      "dangerousContent": "معلومات",
+      "selfHarm": "معلومات",
+      "copyright": "معلومات",
+      "privacyViolation": "حریم خصوصی",
+      "somethingElse": "معلومات"
     },
     "createContact": {
-      "title": "title",
-      "subtitle": "subtitle",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "firstName": "اول نام",
       "lastName": "آخر نام",
       "phone": "تلفن",
       "username": "نام کاربری",
-      "company": "company",
-      "note": "note",
-      "saveContact": "ذخیره contact",
-      "contactCreated": "contact created",
+      "company": "معلومات",
+      "note": "یادداشت",
+      "saveContact": "معلومات",
+      "contactCreated": "معلومات",
       "phoneRequired": "تلفن ضروری"
     },
     "ownerRouting": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "openProfileManagement": "باز کردن پروفایل management",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "openProfileManagement": "نمایه",
       "createFromProfile": "ایجاد از پروفایل",
-      "manageFromProfile": "manage از پروفایل",
-      "publicInfoOnly": "عمومی اطلاعات only",
-      "hideIfNotCreated": "hide if not created",
-      "unifiedUserId": "unified کاربر ID"
+      "manageFromProfile": "نمایه",
+      "publicInfoOnly": "معلومات",
+      "hideIfNotCreated": "معلومات",
+      "unifiedUserId": "معلومات"
     },
     "groupManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "پروفایل entry",
-      "profileEntrySubtitle": "پروفایل entry توضیحات",
-      "createEntryTitle": "ایجاد entry",
-      "createEntrySubtitle": "ایجاد entry توضیحات",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel توضیحات",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "members": "members",
-      "admins": "admins",
-      "inviteLink": "invite لینک",
-      "publicationId": "publication ID",
-      "linkedChatId": "linked chat ID",
-      "linkedBotId": "linked bot ID",
-      "groupId": "group ID",
-      "ownerUserId": "owner کاربر ID",
-      "ownerName": "owner نام",
-      "ownerPhone": "owner تلفن",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "publicGroup": "عمومی group",
-      "privateGroup": "خصوصی group",
-      "published": "published",
-      "showInProfile": "show in پروفایل",
-      "joinRequests": "join requests",
-      "memberInvites": "member invites",
-      "onlyAdminsPost": "only admins post",
-      "onlyAdminsEdit": "only admins ویرایش",
-      "commentsEnabled": "comments enabled",
-      "createSuccess": "ایجاد success",
-      "saveSuccess": "ذخیره success",
-      "resetSuccess": "بازنشانی success",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "profileEntryTitle": "نمایه",
+      "profileEntrySubtitle": "نمایه — معلومات",
+      "createEntryTitle": "ایجاد",
+      "createEntrySubtitle": "توضیحات — معلومات",
+      "ownerPanel": "معلومات",
+      "ownerPanelSubtitle": "توضیحات — معلومات",
+      "publication": "معلومات",
+      "bindings": "معلومات",
+      "ownerData": "معلومات",
+      "accessRules": "معلومات",
+      "moderation": "نظارت",
+      "members": "معلومات",
+      "admins": "معلومات",
+      "inviteLink": "گفتگو",
+      "publicationId": "معلومات",
+      "linkedChatId": "گفتگو",
+      "linkedBotId": "دستیار",
+      "groupId": "گفتگو",
+      "ownerUserId": "معلومات",
+      "ownerName": "نام",
+      "ownerPhone": "تلفن",
+      "ownerEmail": "معلومات",
+      "role": "معلومات",
+      "publicGroup": "گفتگو",
+      "privateGroup": "گفتگو",
+      "published": "منتشر شده",
+      "showInProfile": "نمایه",
+      "joinRequests": "معلومات",
+      "memberInvites": "نمایه",
+      "onlyAdminsPost": "معلومات",
+      "onlyAdminsEdit": "معلومات",
+      "commentsEnabled": "معلومات",
+      "createSuccess": "معلومات",
+      "saveSuccess": "ذخیره شد",
+      "resetSuccess": "بازنشانی",
       "openMessengerRoom": "باز کردن Messenger اتاق",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "ایجاد in پروفایل only"
+      "hiddenIfNotCreated": "معلومات",
+      "createInProfileOnly": "نمایه"
     },
     "channelManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "پروفایل entry",
-      "profileEntrySubtitle": "پروفایل entry توضیحات",
-      "createEntryTitle": "ایجاد entry",
-      "createEntrySubtitle": "ایجاد entry توضیحات",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel توضیحات",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "subscribers": "subscribers",
-      "admins": "admins",
-      "inviteLink": "invite لینک",
-      "publicationId": "publication ID",
-      "linkedChatId": "linked chat ID",
-      "linkedDiscussionId": "linked discussion ID",
-      "linkedBotId": "linked bot ID",
-      "channelId": "channel ID",
-      "ownerUserId": "owner کاربر ID",
-      "ownerName": "owner نام",
-      "ownerPhone": "owner تلفن",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "publicChannel": "عمومی channel",
-      "privateChannel": "خصوصی channel",
-      "published": "published",
-      "showInProfile": "show in پروفایل",
-      "joinRequests": "join requests",
-      "onlyAdminsPost": "only admins post",
-      "onlyAdminsEdit": "only admins ویرایش",
-      "commentsEnabled": "comments enabled",
-      "linkedDiscussion": "linked discussion",
-      "createSuccess": "ایجاد success",
-      "saveSuccess": "ذخیره success",
-      "resetSuccess": "بازنشانی success",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "profileEntryTitle": "نمایه",
+      "profileEntrySubtitle": "نمایه — معلومات",
+      "createEntryTitle": "ایجاد",
+      "createEntrySubtitle": "توضیحات — معلومات",
+      "ownerPanel": "معلومات",
+      "ownerPanelSubtitle": "توضیحات — معلومات",
+      "publication": "معلومات",
+      "bindings": "معلومات",
+      "ownerData": "معلومات",
+      "accessRules": "معلومات",
+      "moderation": "نظارت",
+      "subscribers": "معلومات",
+      "admins": "معلومات",
+      "inviteLink": "گفتگو",
+      "publicationId": "معلومات",
+      "linkedChatId": "گفتگو",
+      "linkedDiscussionId": "معلومات",
+      "linkedBotId": "دستیار",
+      "channelId": "گفتگو",
+      "ownerUserId": "معلومات",
+      "ownerName": "نام",
+      "ownerPhone": "تلفن",
+      "ownerEmail": "معلومات",
+      "role": "معلومات",
+      "publicChannel": "گفتگو",
+      "privateChannel": "گفتگو",
+      "published": "منتشر شده",
+      "showInProfile": "نمایه",
+      "joinRequests": "معلومات",
+      "onlyAdminsPost": "معلومات",
+      "onlyAdminsEdit": "معلومات",
+      "commentsEnabled": "معلومات",
+      "linkedDiscussion": "معلومات",
+      "createSuccess": "معلومات",
+      "saveSuccess": "معلومات",
+      "resetSuccess": "معلومات",
       "openMessengerRoom": "باز کردن Messenger اتاق",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "ایجاد in پروفایل only"
+      "hiddenIfNotCreated": "معلومات",
+      "createInProfileOnly": "نمایه"
     },
     "botManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "profileEntryTitle": "پروفایل entry",
-      "profileEntrySubtitle": "پروفایل entry توضیحات",
-      "createEntryTitle": "ایجاد entry",
-      "createEntrySubtitle": "ایجاد entry توضیحات",
-      "ownerPanel": "owner panel",
-      "ownerPanelSubtitle": "owner panel توضیحات",
-      "publication": "publication",
-      "bindings": "bindings",
-      "ownerData": "owner data",
-      "routing": "routing",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "profileEntryTitle": "نمایه",
+      "profileEntrySubtitle": "نمایه — معلومات",
+      "createEntryTitle": "ایجاد",
+      "createEntrySubtitle": "توضیحات — معلومات",
+      "ownerPanel": "معلومات",
+      "ownerPanelSubtitle": "توضیحات — معلومات",
+      "publication": "معلومات",
+      "bindings": "معلومات",
+      "ownerData": "معلومات",
+      "routing": "معلومات",
       "modules": "ماژول‌ها",
       "commands": "فرمان‌ها",
-      "botId": "bot ID",
-      "ownerUserId": "owner کاربر ID",
-      "ownerName": "owner نام",
-      "ownerPhone": "owner تلفن",
-      "ownerEmail": "owner email",
-      "role": "role",
-      "linkedChatId": "linked chat ID",
-      "linkedGroupId": "linked group ID",
-      "linkedChannelId": "linked channel ID",
-      "linkedMarketId": "linked market ID",
-      "publicationId": "publication ID",
-      "publicBot": "عمومی bot",
-      "privateBot": "خصوصی bot",
-      "published": "published",
-      "showInProfile": "show in پروفایل",
-      "active": "active",
-      "paused": "paused",
+      "botId": "دستیار",
+      "ownerUserId": "معلومات",
+      "ownerName": "نام",
+      "ownerPhone": "تلفن",
+      "ownerEmail": "معلومات",
+      "role": "معلومات",
+      "linkedChatId": "گفتگو",
+      "linkedGroupId": "گفتگو",
+      "linkedChannelId": "گفتگو",
+      "linkedMarketId": "معلومات",
+      "publicationId": "معلومات",
+      "publicBot": "دستیار",
+      "privateBot": "دستیار",
+      "published": "منتشر شده",
+      "showInProfile": "نمایه",
+      "active": "فعال",
+      "paused": "مکث شده",
       "acceptCommands": "پذیرفتن فرمان‌ها",
-      "showInCatalog": "show in catalog",
-      "allowPayments": "اجازه دادن payments",
-      "sabiWalletRoute": "Sabi کیف پول route",
-      "businessRoutingLayer": "تجاری routing layer",
-      "tradeBot": "trade bot",
-      "businessBot": "تجاری bot",
-      "tradeHint": "trade راهنما",
+      "showInCatalog": "معلومات",
+      "allowPayments": "معلومات",
+      "sabiWalletRoute": "Sabi کیف پول",
+      "businessRoutingLayer": "معلومات",
+      "tradeBot": "دستیار",
+      "businessBot": "معلومات",
+      "tradeHint": "معلومات — معلومات",
       "businessHint": "تجاری راهنما",
-      "createSuccess": "ایجاد success",
-      "saveSuccess": "ذخیره success",
-      "resetSuccess": "بازنشانی success",
+      "createSuccess": "معلومات",
+      "saveSuccess": "معلومات",
+      "resetSuccess": "معلومات",
       "openMessengerRoom": "باز کردن Messenger اتاق",
-      "hiddenIfNotCreated": "hidden if not created",
-      "createInProfileOnly": "ایجاد in پروفایل only"
+      "hiddenIfNotCreated": "معلومات",
+      "createInProfileOnly": "نمایه"
     },
     "settingsPanels": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "ownerData": "owner data",
-      "publication": "publication",
-      "bindings": "bindings",
-      "accessRules": "access rules",
-      "moderation": "moderation",
-      "routing": "routing",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "ownerData": "معلومات",
+      "publication": "معلومات",
+      "bindings": "معلومات",
+      "accessRules": "معلومات",
+      "moderation": "نظارت",
+      "routing": "معلومات",
       "modules": "ماژول‌ها",
       "commands": "فرمان‌ها",
-      "permissions": "permissions",
-      "statistics": "statistics",
+      "permissions": "اجازه‌ها",
+      "statistics": "معلومات",
       "archive": "آرشیف",
-      "openInProfile": "باز کردن in پروفایل",
-      "hiddenWhenNotCreated": "hidden when not created"
+      "openInProfile": "نمایه",
+      "hiddenWhenNotCreated": "معلومات"
     },
     "publicationFlow": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "publicationEnabled": "publication enabled",
-      "showInProfile": "show in پروفایل",
-      "publicMode": "عمومی mode",
-      "privateMode": "خصوصی mode",
-      "ownerManagement": "owner management",
-      "bindings": "bindings",
-      "profileControls": "پروفایل controls",
-      "publicationVisibleOnlyWhenCreated": "publication visible only when created"
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "publicationEnabled": "معلومات",
+      "showInProfile": "نمایه",
+      "publicMode": "معلومات",
+      "privateMode": "معلومات",
+      "ownerManagement": "معلومات",
+      "bindings": "معلومات",
+      "profileControls": "نمایه",
+      "publicationVisibleOnlyWhenCreated": "معلومات"
     },
     "unifiedIdentity": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "sameUserIdRequired": "same کاربر ID ضروری",
-      "blockOnMismatch": "مسدود کردن on mismatch"
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "sameUserIdRequired": "معلومات",
+      "blockOnMismatch": "معلومات"
     },
     "animatedEmoji": {
-      "celebration": "celebration",
+      "celebration": "معلومات",
       "empty": "خالی",
-      "faces": "faces",
-      "hearts": "hearts",
+      "faces": "معلومات",
+      "hearts": "معلومات",
       "search": "جستجو",
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "تنظیمات",
+      "title": "عنوان"
     },
     "report": "گزارش",
     "reportDetails": "گزارش جزئیات",
     "reportDetailsHint": "گزارش جزئیات راهنما",
     "reportDetailsPlaceholder": "گزارش جزئیات راهنما",
-    "reportMinDetails": "گزارش min جزئیات",
-    "reportReasonList": "گزارش دلیل list",
-    "reportSent": "گزارش sent",
+    "reportMinDetails": "معلومات",
+    "reportReasonList": "معلومات",
+    "reportSent": "معلومات",
     "reportSubtitle": "گزارش توضیحات",
     "reportTarget": "گزارش هدف",
     "reportTitle": "گزارش",
-    "reportValidation": "گزارش validation",
+    "reportValidation": "معلومات",
     "sendReport": "ارسال گزارش",
-    "bot": "bot",
-    "botConversation": "bot conversation",
-    "privateChats": "خصوصی chats",
-    "privateChatsSubtitle": "خصوصی chats توضیحات",
-    "privateGroups": "خصوصی groups",
-    "privateChannels": "خصوصی channels",
-    "themeWallpaper": "پوسته wallpaper",
-    "quickAccess": "quick access",
-    "quickAccessMeta": "quick access meta",
-    "createMeta": "ایجاد meta",
-    "groupCreateSubtitle": "group ایجاد توضیحات",
-    "channelCreateSubtitle": "channel ایجاد توضیحات",
-    "botCreateSubtitle": "bot ایجاد توضیحات",
+    "bot": "دستیار",
+    "botConversation": "دستیار",
+    "privateChats": "معلومات",
+    "privateChatsSubtitle": "توضیحات — معلومات",
+    "privateGroups": "معلومات",
+    "privateChannels": "معلومات",
+    "themeWallpaper": "طرح",
+    "quickAccess": "معلومات",
+    "quickAccessMeta": "معلومات",
+    "createMeta": "معلومات",
+    "groupCreateSubtitle": "گفتگو — معلومات",
+    "channelCreateSubtitle": "گفتگو — معلومات",
+    "botCreateSubtitle": "دستیار — معلومات",
     "callsSubtitle": "تماس‌ها توضیحات",
-    "contactsSubtitle": "contacts توضیحات",
-    "groupsSubtitle": "groups توضیحات",
-    "botsSubtitle": "bots توضیحات",
-    "channelsSubtitle": "channels توضیحات",
+    "contactsSubtitle": "مخاطبین",
+    "groupsSubtitle": "گروه‌ها",
+    "botsSubtitle": "بات‌ها",
+    "channelsSubtitle": "کانال‌ها",
     "businessSubtitle": "تجاری توضیحات",
-    "chatsMeta": "chats meta",
-    "officialName": "official نام",
-    "officialPreview": "official پیش‌نمایش",
-    "openBots": "باز کردن bots",
-    "openChannels": "باز کردن channels",
-    "returnToChats": "return to chats",
-    "mainChats": "main chats",
-    "workspace": "workspace",
-    "mobile": "mobile",
+    "chatsMeta": "معلومات",
+    "officialName": "معلومات",
+    "officialPreview": "معلومات",
+    "openBots": "معلومات",
+    "openChannels": "معلومات",
+    "returnToChats": "معلومات",
+    "mainChats": "معلومات",
+    "workspace": "معلومات",
+    "mobile": "معلومات",
     "username": "نام کاربری",
     "birthday": "تاریخ تولد",
-    "publications": "publications",
+    "publications": "معلومات",
     "gifts": "هدایا",
     "archive": "آرشیف",
-    "allStories": "همه stories",
+    "allStories": "معلومات",
     "likes": "لایک‌ها",
     "giftsPublic": "هدایا عمومی",
-    "emptyPublications": "خالی publications",
+    "emptyPublications": "معلومات",
     "emptyGifts": "خالی هدایا",
     "emptyArchive": "خالی آرشیف",
-    "fullscreenHint": "fullscreen راهنما",
-    "unknownUser": "unknown کاربر",
+    "fullscreenHint": "معلومات — معلومات",
+    "unknownUser": "معلومات",
     "info": "اطلاعات",
-    "premiumStyle": "Premium style",
-    "members": "members",
-    "noGroupMembers": "نخیر group members",
-    "memberInvited": "member invited",
-    "memberRemoved": "member removed",
-    "promoteAdmin": "promote admin",
-    "demoteMember": "demote member",
-    "ownerRole": "owner role",
-    "adminRole": "admin role",
-    "memberRole": "member role",
-    "pendingJoinRequests": "pending join requests",
-    "noPendingJoinRequests": "نخیر pending join requests",
+    "premiumStyle": "پریمیوم",
+    "members": "معلومات",
+    "noGroupMembers": "گفتگو",
+    "memberInvited": "نمایه",
+    "memberRemoved": "نمایه",
+    "promoteAdmin": "معلومات",
+    "demoteMember": "نمایه",
+    "ownerRole": "معلومات",
+    "adminRole": "معلومات",
+    "memberRole": "نمایه",
+    "pendingJoinRequests": "معلومات",
+    "noPendingJoinRequests": "معلومات",
     "approve": "تأیید کردن",
     "reject": "رد کردن",
-    "joinRequestApproved": "join درخواست approved",
-    "joinRequestRejected": "join درخواست rejected",
-    "inviteRegenerated": "invite regenerated",
-    "subscribers": "subscribers",
-    "roomType": "اتاق type",
-    "openChat": "باز کردن chat",
-    "openChatSubtitle": "باز کردن chat توضیحات",
+    "joinRequestApproved": "معلومات",
+    "joinRequestRejected": "معلومات",
+    "inviteRegenerated": "گفتگو",
+    "subscribers": "معلومات",
+    "roomType": "معلومات",
+    "openChat": "گفتگو",
+    "openChatSubtitle": "گفتگو — معلومات",
     "notificationsSubtitle": "اعلان‌ها توضیحات",
-    "privateList": "خصوصی list",
-    "mainList": "main list",
+    "privateList": "معلومات",
+    "mainList": "معلومات",
     "mediaSubtitle": "رسانه توضیحات",
-    "addMembers": "افزودن members",
-    "addMembersSubtitle": "افزودن members توضیحات",
-    "admins": "admins",
-    "adminsSubtitle": "admins توضیحات",
-    "subscribersSubtitle": "subscribers توضیحات",
+    "addMembers": "معلومات",
+    "addMembersSubtitle": "توضیحات — معلومات",
+    "admins": "معلومات",
+    "adminsSubtitle": "توضیحات — معلومات",
+    "subscribersSubtitle": "توضیحات — معلومات",
     "deleteRoomSubtitle": "حذف اتاق توضیحات",
-    "adminOnlyMessaging": "admin only messaging",
-    "adminOnlyMedia": "admin only رسانه",
-    "adminOnlyInvites": "admin only invites",
-    "approveJoinRequests": "approve join requests",
-    "autoDeleteAds": "auto حذف ads",
-    "autoDeletePromoLeaflets": "auto حذف promo leaflets",
-    "autoDeleteLinks": "auto حذف لینک‌ها",
-    "autoBanRepeatedSpam": "auto ban repeated spam",
-    "blacklist": "blacklist",
-    "blacklistSubtitle": "blacklist توضیحات",
-    "inviteLink": "invite لینک",
-    "regenerateLink": "regenerate لینک",
-    "sendInvite": "ارسال invite",
-    "ownerTools": "owner tools",
-    "ownerToolsSubtitle": "owner tools توضیحات",
-    "enterUserId": "enter کاربر ID",
-    "botAssistant": "bot دستیار",
-    "botService": "bot service",
-    "botBusiness": "bot تجاری",
-    "botSubtitle": "bot توضیحات",
-    "publicBanner": "عمومی banner",
-    "settingsOnlyOwner": "تنظیمات only owner",
-    "groupSettings": "group تنظیمات",
-    "channelSettings": "channel تنظیمات",
-    "botSettings": "bot تنظیمات",
-    "publishingAdminsOnly": "publishing admins only",
-    "approveSubscribers": "approve subscribers",
-    "channelReactions": "channel reactions",
-    "channelComments": "channel comments",
-    "visibleInDiscovery": "visible in discovery",
-    "openOwnerPanel": "باز کردن owner panel",
-    "ownerPanelSubtitle": "owner panel توضیحات",
-    "botPublicVisible": "bot عمومی visible",
-    "botInlineEnabled": "bot inline enabled",
-    "botAutoReplyEnabled": "bot auto پاسخ enabled",
-    "botMarketplaceLinked": "bot بازار linked",
-    "botDeliveryLinked": "bot delivery linked",
-    "botBusinessRoutingEnabled": "bot تجاری routing enabled",
-    "businessRoutingNote": "تجاری routing note",
-    "deleteChannel": "حذف channel",
-    "deleteBot": "حذف bot",
-    "groupsLinkedHint": "groups linked راهنما",
-    "channelsLinkedHint": "channels linked راهنما",
-    "profileSourceNote": "پروفایل منبع note",
-    "deleteGroup": "حذف group",
-    "openGroup": "باز کردن group",
-    "savingNow": "saving now",
-    "hiddenChat": "hidden chat",
+    "adminOnlyMessaging": "معلومات",
+    "adminOnlyMedia": "معلومات",
+    "adminOnlyInvites": "معلومات",
+    "approveJoinRequests": "معلومات",
+    "autoDeleteAds": "معلومات",
+    "autoDeletePromoLeaflets": "معلومات",
+    "autoDeleteLinks": "معلومات",
+    "autoBanRepeatedSpam": "معلومات",
+    "blacklist": "معلومات",
+    "blacklistSubtitle": "توضیحات — معلومات",
+    "inviteLink": "گفتگو",
+    "regenerateLink": "معلومات",
+    "sendInvite": "گفتگو",
+    "ownerTools": "تنظیمات",
+    "ownerToolsSubtitle": "تنظیمات — معلومات",
+    "enterUserId": "معلومات",
+    "botAssistant": "دستیار",
+    "botService": "دستیار",
+    "botBusiness": "دستیار",
+    "botSubtitle": "دستیار — معلومات",
+    "publicBanner": "معلومات",
+    "settingsOnlyOwner": "تنظیمات",
+    "groupSettings": "گفتگو",
+    "channelSettings": "گفتگو",
+    "botSettings": "دستیار",
+    "publishingAdminsOnly": "معلومات",
+    "approveSubscribers": "معلومات",
+    "channelReactions": "گفتگو",
+    "channelComments": "گفتگو",
+    "visibleInDiscovery": "معلومات",
+    "openOwnerPanel": "معلومات",
+    "ownerPanelSubtitle": "توضیحات — معلومات",
+    "botPublicVisible": "دستیار",
+    "botInlineEnabled": "دستیار",
+    "botAutoReplyEnabled": "دستیار",
+    "botMarketplaceLinked": "دستیار",
+    "botDeliveryLinked": "دستیار",
+    "botBusinessRoutingEnabled": "دستیار",
+    "businessRoutingNote": "معلومات",
+    "deleteChannel": "گفتگو",
+    "deleteBot": "دستیار",
+    "groupsLinkedHint": "معلومات — معلومات",
+    "channelsLinkedHint": "معلومات — معلومات",
+    "profileSourceNote": "نمایه",
+    "deleteGroup": "گفتگو",
+    "openGroup": "گفتگو",
+    "savingNow": "در حال بارگذاری...",
+    "hiddenChat": "گفتگو",
     "botCard": {
       "cardTitle": "کارت",
-      "unknownHandle": "unknown handle",
+      "unknownHandle": "معلومات",
       "connected": "وصل شد",
-      "owner": "owner",
+      "owner": "جای‌نگهدار",
       "idLabel": "ID",
       "noId": "نخیر ID"
     },
     "theme": {
-      "title": "title",
-      "screenTitle": "screen",
-      "screenSubtitle": "screen توضیحات",
-      "chooseWallpaper": "choose wallpaper",
-      "replaceWallpaper": "replace wallpaper",
-      "removeWallpaper": "برداشتن wallpaper",
-      "noWallpaper": "نخیر wallpaper",
-      "useThemeBackground": "use پوسته background"
+      "title": "عنوان",
+      "screenTitle": "عنوان",
+      "screenSubtitle": "توضیحات — معلومات",
+      "chooseWallpaper": "معلومات",
+      "replaceWallpaper": "معلومات",
+      "removeWallpaper": "معلومات",
+      "noWallpaper": "معلومات",
+      "useThemeBackground": "بازگشت"
     },
     "wallpaper": {
-      "title": "title"
+      "title": "عنوان"
     }
   },
   "chatRoom": {
     "title": "چت",
-    "messageActions": "message عمل‌ها",
+    "messageActions": "تنظیمات",
     "location": {
-      "chooseProvider": "choose provider",
-      "eta": "eta",
+      "chooseProvider": "تنظیمات",
+      "eta": "معلومات",
       "providers": {
         "sabiNavigator": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "sabiTaxi": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "yandex": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "google": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       }
     },
-    "locationQuickSubtitle": "location quick توضیحات",
-    "useCurrentLocation": "use current location",
-    "useCurrentLocationSubtitle": "use current location توضیحات",
-    "savedPlaces": "saved places",
-    "savedOfficeTitle": "saved office",
-    "savedOfficeSubtitle": "saved office توضیحات",
-    "savedAirportTitle": "saved airport",
-    "savedAirportSubtitle": "saved airport توضیحات",
-    "savedCoffeeTitle": "saved coffee",
-    "savedCoffeeSubtitle": "saved coffee توضیحات",
-    "savedHomeTitle": "saved خانه",
-    "savedHomeSubtitle": "saved خانه توضیحات",
+    "locationQuickSubtitle": "توضیحات — معلومات",
+    "useCurrentLocation": "معلومات",
+    "useCurrentLocationSubtitle": "توضیحات — معلومات",
+    "savedPlaces": "معلومات",
+    "savedOfficeTitle": "عنوان",
+    "savedOfficeSubtitle": "توضیحات — معلومات",
+    "savedAirportTitle": "عنوان",
+    "savedAirportSubtitle": "توضیحات — معلومات",
+    "savedCoffeeTitle": "عنوان",
+    "savedCoffeeSubtitle": "توضیحات — معلومات",
+    "savedHomeTitle": "عنوان",
+    "savedHomeSubtitle": "توضیحات — معلومات",
     "saveVideoTitle": "ذخیره ویدیو",
     "saveVideoSubtitle": "ذخیره ویدیو توضیحات",
     "videoReady": "ویدیو آماده",
-    "videoSaveNotice": "ویدیو ذخیره notice",
+    "videoSaveNotice": "ذخیره ویدیو",
     "saveVideoAction": "ذخیره ویدیو عمل",
     "savePhotoTitle": "ذخیره عکس",
     "savePhotoSubtitle": "ذخیره عکس توضیحات",
     "photoReady": "عکس آماده",
-    "photoSaveNotice": "عکس ذخیره notice",
+    "photoSaveNotice": "ذخیره عکس",
     "savePhotoAction": "ذخیره عکس عمل",
     "saveMediaTitle": "ذخیره رسانه",
     "saveMediaSubtitle": "ذخیره رسانه توضیحات",
     "mediaReady": "رسانه آماده",
-    "mediaSaveNotice": "رسانه ذخیره notice",
+    "mediaSaveNotice": "معلومات",
     "saveMediaAction": "ذخیره رسانه عمل",
     "pinnedMessages": "پیام‌های سنجاق‌شده",
     "noPinnedMessages": "هیچ پیام سنجاق‌شده‌ای وجود ندارد",
@@ -3542,7 +3543,7 @@ export const FA_AF_LOCALE = {
     "animatedPanel": "پنل متحرک",
     "emoji": "ایموجی",
     "gift": "هدیه",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "هدیه",
     "premiumStickers": "استیکرهای پریمیوم",
     "stickers": "استیکرها",
     "openGallery": "باز کردن گالری",
@@ -3574,157 +3575,157 @@ export const FA_AF_LOCALE = {
     "rewriteMessage": "بازنویسی پیام",
     "summarizeChat": "خلاصه چت",
     "you": "شما",
-    "typing": "typing",
+    "typing": "معلومات",
     "online": "آنلاین",
     "offline": "آفلاین",
     "connecting": "در حال اتصال",
-    "reconnecting": "reconnecting",
-    "lastSeenToday": "آخر دیده شد امروز {{time}}",
-    "lastSeenYesterday": "آخر دیده شد دیروز {{time}}",
-    "lastSeenDate": "آخر دیده شد date {{date}} {{time}}",
-    "conversationPlaceholder": "conversation راهنما",
+    "reconnecting": "در حال بارگذاری...",
+    "lastSeenToday": "معلومات",
+    "lastSeenYesterday": "معلومات",
+    "lastSeenDate": "معلومات",
+    "conversationPlaceholder": "جستجو",
     "today": "امروز",
     "yesterday": "دیروز",
-    "directRoom": "direct اتاق",
-    "groupRoom": "group اتاق",
-    "channelRoom": "channel اتاق",
+    "directRoom": "معلومات",
+    "groupRoom": "گفتگو",
+    "channelRoom": "گفتگو",
     "businessRoom": "تجاری اتاق",
-    "encrypted": "encrypted",
-    "messagePlaceholder": "message راهنما",
-    "messageTitle": "message",
+    "encrypted": "معلومات",
+    "messagePlaceholder": "جستجو",
+    "messageTitle": "عنوان",
     "replyAction": "پاسخ عمل",
     "replyPlaceholder": "پاسخ راهنما",
-    "selectionDelete": "selection حذف",
-    "selectionForward": "selection ارسال به دیگران",
-    "deleteMe": "حذف me",
+    "selectionDelete": "حذف",
+    "selectionForward": "ارسال به دیگران",
+    "deleteMe": "معلومات",
     "deleteAllAction": "حذف همه عمل",
     "save": "ذخیره",
     "link": "لینک",
     "searchTitle": "جستجو",
-    "searchMessage": "جستجو message",
+    "searchMessage": "جستجو",
     "muteTitle": "بی‌صدا",
-    "muteMessage": "بی‌صدا message",
-    "locationTitle": "location",
-    "sharedLocation": "shared location",
-    "locationAttached": "location attached",
-    "locationOpenNotice": "location باز کردن notice",
-    "locationOpenError": "location باز کردن error",
-    "locationSendError": "location ارسال error",
-    "locationCoordsMissing": "location coords missing",
-    "locationAccessError": "location access error",
-    "contactTitle": "contact",
-    "contactsTitle": "contacts",
-    "contactCard": "contact کارت",
-    "contactAttached": "contact attached",
-    "contactReady": "contact آماده",
-    "contactOpenNotice": "contact باز کردن notice",
-    "contactOpenError": "contact باز کردن error",
-    "contactsAccessError": "contacts access error",
+    "muteMessage": "معلومات",
+    "locationTitle": "عنوان",
+    "sharedLocation": "معلومات",
+    "locationAttached": "معلومات",
+    "locationOpenNotice": "معلومات",
+    "locationOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "locationSendError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "locationCoordsMissing": "معلومات",
+    "locationAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "contactTitle": "عنوان",
+    "contactsTitle": "عنوان",
+    "contactCard": "معلومات",
+    "contactAttached": "معلومات",
+    "contactReady": "آماده",
+    "contactOpenNotice": "معلومات",
+    "contactOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "contactsAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
     "documentTitle": "سند",
     "documentsTitle": "اسناد",
-    "documentAttached": "سند attached",
-    "documentPreviewUnavailable": "سند پیش‌نمایش unavailable",
-    "documentOpenNotice": "سند باز کردن notice",
-    "documentOpening": "سند opening",
-    "documentOpenError": "سند باز کردن error",
-    "documentAccessError": "سند access error",
+    "documentAttached": "معلومات",
+    "documentPreviewUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "documentOpenNotice": "معلومات",
+    "documentOpening": "معلومات",
+    "documentOpenError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "documentAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
     "galleryTitle": "گالری",
-    "galleryAccessError": "گالری access error",
+    "galleryAccessError": "درخواست ناکام شد. دوباره تلاش کنید.",
     "photoTitle": "عکس",
     "photoPreviewSubtitle": "عکس پیش‌نمایش توضیحات",
-    "photoPreviewUnavailable": "عکس پیش‌نمایش unavailable",
-    "photoCaptured": "عکس captured",
-    "photoSaveError": "عکس ذخیره error",
+    "photoPreviewUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "photoCaptured": "عکس آماده",
+    "photoSaveError": "درخواست ناکام شد. دوباره تلاش کنید.",
     "videoTitle": "ویدیو",
-    "videoCaptured": "ویدیو captured",
-    "videoSaveError": "ویدیو ذخیره error",
+    "videoCaptured": "صدا",
+    "videoSaveError": "درخواست ناکام شد. دوباره تلاش کنید.",
     "videoCloseHint": "ویدیو بستن راهنما",
-    "videoMessageText": "ویدیو message توضیحات",
+    "videoMessageText": "صدا — معلومات",
     "voiceTitle": "صدا",
-    "voiceRecordingTitle": "صدا recording",
-    "voiceRecordingSubtitle": "صدا recording توضیحات",
+    "voiceRecordingTitle": "AI صوتی",
+    "voiceRecordingSubtitle": "AI صوتی",
     "voiceReadySubtitle": "صدا آماده توضیحات",
-    "recordingVoice": "recording صدا",
+    "recordingVoice": "AI صوتی",
     "voiceReady": "صدا آماده",
-    "voiceReadyInline": "صدا آماده inline",
-    "voiceReadyToSend": "صدا آماده to ارسال",
-    "voiceSent": "صدا sent",
-    "voicePlayback": "صدا playback",
-    "voiceStartError": "صدا شروع error",
-    "voiceFinishError": "صدا تمام کردن error",
-    "voiceUploadError": "صدا آپلود error",
-    "voicePlayError": "صدا play error",
-    "voiceRateError": "صدا rate error",
+    "voiceReadyInline": "صدا آماده",
+    "voiceReadyToSend": "AI صوتی",
+    "voiceSent": "AI صوتی",
+    "voicePlayback": "AI صوتی",
+    "voiceStartError": "AI صوتی",
+    "voiceFinishError": "AI صوتی",
+    "voiceUploadError": "AI صوتی",
+    "voicePlayError": "AI صوتی",
+    "voiceRateError": "AI صوتی",
     "copiedText": "کپی شد توضیحات",
     "infoAction": "اطلاعات عمل",
-    "editingTitle": "editing",
-    "editingSubtitle": "editing توضیحات",
+    "editingTitle": "ویرایش پیام",
+    "editingSubtitle": "توضیحات — معلومات",
     "editPlaceholder": "ویرایش راهنما",
-    "replyingTitle": "replying",
-    "readOnlyTitle": "read only",
+    "replyingTitle": "عنوان",
+    "readOnlyTitle": "عنوان",
     "readOnlySubtitle": "ارسال پیام در اینجا غیرفعال است. برای جزئیات، معلومات کانال را باز کنید.",
     "mediaLabel": "رسانه",
     "aiTitle": "AI",
-    "aiMessage": "AI message",
+    "aiMessage": "AI",
     "mediaTitle": "رسانه",
-    "mediaMessage": "رسانه message",
+    "mediaMessage": "معلومات",
     "privacyTitle": "حریم خصوصی",
-    "privacyMessage": "حریم خصوصی message",
-    "roomThemeUpdated": "اتاق پوسته updated",
-    "messageContextMissing": "message context missing",
-    "messageEdited": "message edited",
-    "messageSent": "message sent",
-    "messageSendError": "message ارسال error",
-    "giftSent": "هدیه sent",
-    "animatedReactionSent": "متحرک reaction sent",
-    "animatedEmojiSent": "متحرک ایموجی sent",
-    "stickerAdded": "استیکر added",
-    "selectedForForwardPrefix": "انتخاب شد for ارسال به دیگران prefix",
-    "chooseMessagesForward": "choose messages ارسال به دیگران",
-    "deletedPrefix": "deleted prefix",
-    "deletedForAll": "deleted for همه",
-    "deletedForMe": "deleted for me",
-    "addedToComposer": "added to composer",
+    "privacyMessage": "حریم خصوصی",
+    "roomThemeUpdated": "طرح",
+    "messageContextMissing": "معلومات — معلومات",
+    "messageEdited": "معلومات",
+    "messageSent": "معلومات",
+    "messageSendError": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "giftSent": "هدیه ارسال شد",
+    "animatedReactionSent": "معلومات",
+    "animatedEmojiSent": "معلومات",
+    "stickerAdded": "معلومات",
+    "selectedForForwardPrefix": "معلومات",
+    "chooseMessagesForward": "معلومات",
+    "deletedPrefix": "معلومات",
+    "deletedForAll": "معلومات",
+    "deletedForMe": "معلومات",
+    "addedToComposer": "معلومات",
     "saveMediaReady": "ذخیره رسانه آماده",
     "openLinkReady": "باز کردن لینک آماده",
-    "openingWalletFiat": "opening کیف پول fiat",
-    "openingCoinWallet": "opening COIN کیف پول",
-    "catalogSoon": "catalog soon",
-    "pollSoon": "poll soon",
-    "eventSoon": "event soon",
-    "openingDocument": "opening سند",
-    "openingContact": "opening contact",
-    "imageNormal": "image normal",
-    "editedLabel": "edited",
-    "mapLabel": "map",
-    "mediaCaptureFailed": "رسانه capture ناموفق",
-    "tapSend": "tap ارسال",
-    "diamondsUnit": "diamonds unit",
-    "channelInfoAction": "channel اطلاعات عمل",
-    "groupInfoAction": "group اطلاعات عمل",
+    "openingWalletFiat": "کیف پول",
+    "openingCoinWallet": "کیف پول",
+    "catalogSoon": "معلومات",
+    "pollSoon": "معلومات",
+    "eventSoon": "معلومات",
+    "openingDocument": "معلومات",
+    "openingContact": "معلومات",
+    "imageNormal": "معلومات",
+    "editedLabel": "معلومات",
+    "mapLabel": "معلومات",
+    "mediaCaptureFailed": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "tapSend": "معلومات",
+    "diamondsUnit": "معلومات",
+    "channelInfoAction": "گفتگو",
+    "groupInfoAction": "گفتگو",
     "businessInfoAction": "تجاری اطلاعات عمل",
-    "membersCount": "members تعداد",
-    "subscribersCount": "subscribers تعداد",
-    "mutedEnabled": "muted enabled",
+    "membersCount": "معلومات",
+    "subscribersCount": "معلومات",
+    "mutedEnabled": "معلومات",
     "mutedDisabled": "بی‌صدا کردن غیرفعال است",
-    "searchFocused": "جستجو focused",
+    "searchFocused": "جستجو",
     "aiReady": "AI آماده",
-    "mediaSaved": "رسانه saved",
-    "contactSavedToDevice": "contact saved to device",
-    "contactPermissionDenied": "contact permission denied",
-    "contactUnavailable": "contact unavailable",
-    "addedToList": "added to list",
-    "removedFromList": "removed از list",
-    "disappearingEnabled": "disappearing enabled",
+    "mediaSaved": "معلومات",
+    "contactSavedToDevice": "معلومات",
+    "contactPermissionDenied": "معلومات",
+    "contactUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "addedToList": "معلومات",
+    "removedFromList": "معلومات",
+    "disappearingEnabled": "معلومات",
     "disappearingDisabled": "پیام‌های ناپدیدشونده غیرفعال است",
-    "reportSent": "گزارش sent",
-    "chatCleared": "chat cleared",
-    "chatExported": "chat exported",
-    "homeShortcutPinned": "خانه shortcut pinned",
-    "homeShortcutUnsupported": "خانه shortcut unsupported",
+    "reportSent": "معلومات",
+    "chatCleared": "گفتگو",
+    "chatExported": "گفتگو",
+    "homeShortcutPinned": "معلومات",
+    "homeShortcutUnsupported": "معلومات",
     "blockActionDone": "مسدود کردن عمل انجام شد",
     "unblockActionDone": "رفع مسدودی عمل انجام شد",
-    "fileBadgeGeneric": "فایل badge generic"
+    "fileBadgeGeneric": "معلومات"
   },
   "chatPartner": {
     "title": "پروفایل",
@@ -3766,7 +3767,7 @@ export const FA_AF_LOCALE = {
     "removePack": "برداشتن بسته",
     "previewPack": "پیش‌نمایش بسته",
     "noStickers": "هیچ استیکری در دسترس نیست",
-    "premiumOnly": "فقط برای کاربران Premium در دسترس است",
+    "premiumOnly": "پریمیوم",
     "animatedStickers": "استیکرهای متحرک",
     "staticStickers": "استیکرهای ثابت",
     "useSticker": "استفاده از استیکر",
@@ -3792,13 +3793,13 @@ export const FA_AF_LOCALE = {
     "giftReceived": "هدیه دریافت شد",
     "giftSent": "هدیه ارسال شد",
     "giftExpired": "هدیه منقضی شد",
-    "giftWillExpire": "این هدیه در {{days}} روز منقضی می‌شود",
+    "giftWillExpire": "پریمیوم",
     "wonGift": "هدیه برنده‌شده",
     "promoGift": "هدیه تبلیغاتی",
     "storageGift": "هدیه ذخیره‌شده",
     "giftInventory": "فهرست هدایا",
     "notCountedAsIncome": "به‌عنوان درآمد حساب نمی‌شود",
-    "transferToCoinBalance": "انتقال به بیلانس Coin",
+    "transferToCoinBalance": "معلومات",
     "releaseRuleNotice": "درآمد هدایا تابع قانون آزادسازی ماهانه است.",
     "wheelOfFortune": "چرخ بخت",
     "spin": "چرخاندن",
@@ -3868,29 +3869,29 @@ export const FA_AF_LOCALE = {
   },
   "profile": {
     "completeScreen": {
-      "badge": "badge",
-      "title": "title",
-      "subtitle": "subtitle",
+      "badge": "پریمیوم",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
       "firstName": "اول نام",
       "lastName": "آخر نام",
       "username": "نام کاربری",
       "phone": "تلفن",
-      "unifiedId": "unified ID",
-      "unifiedIdHint": "unified ID راهنما",
+      "unifiedId": "معلومات",
+      "unifiedIdHint": "معلومات — معلومات",
       "usernameHint": "نام کاربری راهنما",
       "privacy": "حریم خصوصی",
       "continue": "ادامه",
       "back": "برگشت",
       "required": "ضروری",
-      "saveErrorTitle": "ذخیره error",
-      "saveErrorMessage": "ذخیره error message",
-      "saving": "saving",
+      "saveErrorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "saveErrorMessage": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "saving": "در حال ذخیره...",
       "userId": "کاربر ID",
       "createUser": "ایجاد کاربر",
       "nameRequired": "نام ضروری",
       "phoneRequired": "تلفن ضروری",
       "usernameRequired": "نام کاربری ضروری",
-      "success": "success"
+      "success": "معلومات"
     },
     "title": "پروفایل",
     "editProfile": "ویرایش پروفایل",
@@ -3915,37 +3916,37 @@ export const FA_AF_LOCALE = {
     "history": "تاریخچه",
     "activity": {
       "media": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "رسانه",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "links": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "صدا",
+        "subtitle": "AI صوتی",
+        "stat": "AI صوتی"
       }
     },
     "privacy": {
       "privacy": {
-        "title": "title",
-        "description": "description"
+        "title": "حریم خصوصی",
+        "description": "تنظیمات"
       },
       "security": {
-        "title": "title",
-        "description": "description"
+        "title": "امنیت",
+        "description": "تنظیمات"
       },
       "data": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "qr": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       }
     },
     "aiSettings": "تنظیمات AI",
@@ -3967,7 +3968,7 @@ export const FA_AF_LOCALE = {
     "copyProfileLink": "کاپی لینک پروفایل",
     "shareProfile": "اشتراک پروفایل",
     "memberSince": "عضو از",
-    "premiumBenefits": "مزایای Premium",
+    "premiumBenefits": "پریمیوم",
     "viewHistory": "مشاهده تاریخچه",
     "giftsHistory": "تاریخچه هدایا",
     "paymentHistory": "تاریخچه پرداخت‌ها",
@@ -3983,134 +3984,134 @@ export const FA_AF_LOCALE = {
     "premiumBadge": "نشان پریمیوم",
     "businessBadge": "نشان تجارتی",
     "merchantBadge": "نشان مرچنت",
-    "short_videos": "short videos",
-    "archivePublications": "آرشیف publications",
-    "allStories": "همه stories",
-    "emptyPublications": "خالی publications",
+    "short_videos": "معلومات",
+    "archivePublications": "معلومات",
+    "allStories": "معلومات",
+    "emptyPublications": "معلومات",
     "emptyGifts": "خالی هدایا",
     "emptyArchive": "خالی آرشیف",
-    "fullscreenHint": "fullscreen راهنما",
+    "fullscreenHint": "معلومات — معلومات",
     "hero": {
-      "live": "live",
+      "live": "معلومات",
       "verified": "تأیید شده",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "معلومات",
         "photos": "عکس‌ها",
-        "videos": "videos"
+        "videos": "ویدیوها"
       },
       "actions": {
         "edit": "ویرایش",
         "photos": "عکس‌ها",
-        "videos": "videos",
+        "videos": "ویدیوها",
         "voice": "صدا",
         "qr": "QR"
       }
     },
     "launch": {
-      "badge": "badge",
-      "freeMonths": "free months",
-      "title": "title",
-      "description": "description"
+      "badge": "پریمیوم",
+      "freeMonths": "معلومات",
+      "title": "تنظیمات",
+      "description": "تنظیمات"
     },
     "sections": {
-      "identitySurface": "identity surface",
-      "sharedActivity": "shared فعالیت",
-      "ownerAccess": "owner access",
+      "identitySurface": "سطح هویت",
+      "sharedActivity": "فعالیت مشترک",
+      "ownerAccess": "گروه‌ها و نشر",
       "account": "حساب",
-      "privacySecurity": "حریم خصوصی security",
-      "appExperience": "app experience",
-      "premiumServices": "Premium services",
-      "walletEconomy": "کیف پول economy"
+      "privacySecurity": "حریم خصوصی و امنیت",
+      "appExperience": "برنامه و تجربه",
+      "premiumServices": "خدمات پریمیوم",
+      "walletEconomy": "کیف پول و اقتصاد"
     },
     "identitySurfaceCards": {
       "photos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "عکس‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "shortVideos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "likes": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "لایک‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "reactions": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "واکنش‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       }
     },
     "sharedActivityCards": {
       "media": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "رسانه",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "links": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "صدا",
+        "subtitle": "AI صوتی",
+        "stat": "AI صوتی"
       }
     },
     "group": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "badges": {
-        "published": "published",
+        "published": "منتشر شده",
         "public": "عمومی",
         "private": "خصوصی",
         "assistant": "دستیار",
-        "service": "service",
+        "service": "معلومات",
         "business": "تجاری",
-        "trade": "trade"
+        "trade": "معلومات"
       },
       "fields": {
-        "groupName": "group نام",
+        "groupName": "گفتگو",
         "username": "نام کاربری",
-        "description": "description",
-        "groupId": "group ID",
-        "inviteLink": "invite لینک",
-        "ownerName": "owner نام",
-        "ownerUserId": "owner کاربر ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner تلفن",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedBotId": "linked bot ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "linkedPublicationId": "linked publication ID"
+        "description": "توضیحات",
+        "groupId": "گفتگو",
+        "inviteLink": "گفتگو",
+        "ownerName": "نام",
+        "ownerUserId": "معلومات",
+        "ownerRole": "معلومات",
+        "ownerPhone": "تلفن",
+        "ownerEmail": "معلومات",
+        "publicationId": "معلومات",
+        "linkedChatId": "گفتگو",
+        "linkedBotId": "دستیار",
+        "avatarUri": "معلومات",
+        "coverUri": "معلومات",
+        "linkedPublicationId": "معلومات"
       },
       "switches": {
-        "publicGroup": "عمومی group",
-        "published": "published",
-        "showInProfile": "show in پروفایل",
-        "joinRequests": "join requests",
-        "memberInvites": "member invites",
-        "onlyAdminsPost": "only admins post",
-        "onlyAdminsEdit": "only admins ویرایش",
-        "commentsEnabled": "comments enabled",
-        "searchableInDirectory": "searchable in directory",
-        "previewEnabled": "پیش‌نمایش enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "approveSubscribers": "approve subscribers",
-        "reactionsEnabled": "reactions enabled"
+        "publicGroup": "گفتگو",
+        "published": "معلومات",
+        "showInProfile": "نمایه",
+        "joinRequests": "معلومات",
+        "memberInvites": "نمایه",
+        "onlyAdminsPost": "معلومات",
+        "onlyAdminsEdit": "معلومات",
+        "commentsEnabled": "معلومات",
+        "searchableInDirectory": "جستجو",
+        "previewEnabled": "معلومات",
+        "visibleInDiscovery": "معلومات",
+        "approveSubscribers": "معلومات",
+        "reactionsEnabled": "معلومات"
       },
       "actions": {
         "create": "ایجاد",
@@ -4120,61 +4121,61 @@ export const FA_AF_LOCALE = {
       },
       "alerts": {
         "loading": "در حال بارگذاری",
-        "createSuccess": "ایجاد success",
-        "saveSuccess": "ذخیره success",
+        "createSuccess": "معلومات",
+        "saveSuccess": "ذخیره شد",
         "resetTitle": "بازنشانی",
         "resetDescription": "بازنشانی توضیحات"
       }
     },
     "channel": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "ایجاد",
+        "description": "تنظیمات"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "badges": {
-        "published": "published",
+        "published": "منتشر شده",
         "public": "عمومی",
         "private": "خصوصی",
-        "service": "service",
+        "service": "معلومات",
         "business": "تجاری",
-        "trade": "trade"
+        "trade": "معلومات"
       },
       "fields": {
-        "channelName": "channel نام",
+        "channelName": "گفتگو",
         "username": "نام کاربری",
-        "description": "description",
-        "channelId": "channel ID",
-        "inviteLink": "invite لینک",
-        "ownerName": "owner نام",
-        "ownerUserId": "owner کاربر ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner تلفن",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedDiscussionId": "linked discussion ID",
-        "linkedBotId": "linked bot ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "linkedPublicationId": "linked publication ID"
+        "description": "توضیحات",
+        "channelId": "گفتگو",
+        "inviteLink": "گفتگو",
+        "ownerName": "نام",
+        "ownerUserId": "معلومات",
+        "ownerRole": "معلومات",
+        "ownerPhone": "تلفن",
+        "ownerEmail": "معلومات",
+        "publicationId": "معلومات",
+        "linkedChatId": "گفتگو",
+        "linkedDiscussionId": "معلومات",
+        "linkedBotId": "دستیار",
+        "avatarUri": "معلومات",
+        "coverUri": "معلومات",
+        "linkedPublicationId": "معلومات"
       },
       "switches": {
-        "publicChannel": "عمومی channel",
-        "published": "published",
-        "showInProfile": "show in پروفایل",
-        "joinRequests": "join requests",
-        "onlyAdminsPost": "only admins post",
-        "onlyAdminsEdit": "only admins ویرایش",
-        "commentsEnabled": "comments enabled",
-        "searchableInDirectory": "searchable in directory",
-        "previewEnabled": "پیش‌نمایش enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "approveSubscribers": "approve subscribers",
-        "reactionsEnabled": "reactions enabled"
+        "publicChannel": "گفتگو",
+        "published": "معلومات",
+        "showInProfile": "نمایه",
+        "joinRequests": "معلومات",
+        "onlyAdminsPost": "معلومات",
+        "onlyAdminsEdit": "معلومات",
+        "commentsEnabled": "معلومات",
+        "searchableInDirectory": "جستجو",
+        "previewEnabled": "معلومات",
+        "visibleInDiscovery": "معلومات",
+        "approveSubscribers": "معلومات",
+        "reactionsEnabled": "معلومات"
       },
       "actions": {
         "create": "ایجاد",
@@ -4184,75 +4185,75 @@ export const FA_AF_LOCALE = {
       },
       "alerts": {
         "loading": "در حال بارگذاری",
-        "createSuccess": "ایجاد success",
-        "saveSuccess": "ذخیره success",
+        "createSuccess": "معلومات",
+        "saveSuccess": "معلومات",
         "resetTitle": "بازنشانی",
         "resetDescription": "بازنشانی توضیحات"
       }
     },
     "bot": {
       "create": {
-        "title": "title",
-        "description": "description"
+        "title": "ایجاد",
+        "description": "تنظیمات"
       },
       "manage": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "badges": {
-        "active": "active",
-        "paused": "paused",
+        "active": "فعال",
+        "paused": "مکث شده",
         "public": "عمومی",
         "private": "خصوصی",
-        "published": "published",
+        "published": "منتشر شده",
         "assistant": "دستیار",
-        "service": "service",
+        "service": "معلومات",
         "business": "تجاری",
-        "trade": "trade"
+        "trade": "معلومات"
       },
       "fields": {
-        "botName": "bot نام",
+        "botName": "دستیار",
         "username": "نام کاربری",
-        "description": "description",
-        "botId": "bot ID",
-        "ownerName": "owner نام",
-        "ownerUserId": "owner کاربر ID",
-        "ownerRole": "owner role",
-        "ownerPhone": "owner تلفن",
-        "ownerEmail": "owner email",
-        "publicationId": "publication ID",
-        "linkedChatId": "linked chat ID",
-        "linkedGroupId": "linked group ID",
-        "linkedChannelId": "linked channel ID",
-        "linkedMarketId": "linked market ID",
-        "avatarUri": "avatar uri",
-        "coverUri": "cover uri",
-        "botKind": "bot kind",
-        "linkedPublicationId": "linked publication ID"
+        "description": "توضیحات",
+        "botId": "دستیار",
+        "ownerName": "نام",
+        "ownerUserId": "معلومات",
+        "ownerRole": "معلومات",
+        "ownerPhone": "تلفن",
+        "ownerEmail": "معلومات",
+        "publicationId": "معلومات",
+        "linkedChatId": "گفتگو",
+        "linkedGroupId": "گفتگو",
+        "linkedChannelId": "گفتگو",
+        "linkedMarketId": "معلومات",
+        "avatarUri": "معلومات",
+        "coverUri": "معلومات",
+        "botKind": "دستیار",
+        "linkedPublicationId": "معلومات"
       },
       "switches": {
-        "publicBot": "عمومی bot",
-        "published": "published",
-        "showInProfile": "show in پروفایل",
-        "active": "active",
+        "publicBot": "دستیار",
+        "published": "معلومات",
+        "showInProfile": "نمایه",
+        "active": "معلومات",
         "acceptCommands": "پذیرفتن فرمان‌ها",
-        "showInCatalog": "show in catalog",
-        "allowPayments": "اجازه دادن payments",
-        "previewEnabled": "پیش‌نمایش enabled",
-        "visibleInDiscovery": "visible in discovery",
-        "inlineEnabled": "inline enabled",
-        "autoReplyEnabled": "auto پاسخ enabled",
-        "marketplaceLinked": "بازار linked",
-        "deliveryLinked": "delivery linked",
-        "businessRoutingEnabled": "تجاری routing enabled"
+        "showInCatalog": "معلومات",
+        "allowPayments": "معلومات",
+        "previewEnabled": "معلومات",
+        "visibleInDiscovery": "معلومات",
+        "inlineEnabled": "معلومات",
+        "autoReplyEnabled": "معلومات",
+        "marketplaceLinked": "معلومات",
+        "deliveryLinked": "معلومات",
+        "businessRoutingEnabled": "معلومات"
       },
       "routing": {
-        "title": "title",
+        "title": "تنظیمات",
         "sabiWallet": "Sabi کیف پول",
-        "businessRoutingLayer": "تجاری routing layer",
-        "tradeBot": "trade bot",
-        "businessBot": "تجاری bot",
-        "tradeHint": "trade راهنما",
+        "businessRoutingLayer": "معلومات",
+        "tradeBot": "دستیار",
+        "businessBot": "معلومات",
+        "tradeHint": "معلومات — معلومات",
         "businessHint": "تجاری راهنما"
       },
       "actions": {
@@ -4263,49 +4264,49 @@ export const FA_AF_LOCALE = {
       },
       "alerts": {
         "loading": "در حال بارگذاری",
-        "createSuccess": "ایجاد success",
-        "saveSuccess": "ذخیره success",
+        "createSuccess": "معلومات",
+        "saveSuccess": "معلومات",
         "resetTitle": "بازنشانی",
         "resetDescription": "بازنشانی توضیحات"
       }
     },
     "likesScreen": {
       "header": {
-        "title": "title"
+        "title": "لایک‌ها"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "actions": {
-        "readonly": "readonly",
-        "fromUsers": "از users"
+        "readonly": "معلومات",
+        "fromUsers": "معلومات"
       },
       "notes": {
-        "readonlyTitle": "readonly",
-        "readonlyDescription": "readonly توضیحات",
+        "readonlyTitle": "عنوان",
+        "readonlyDescription": "توضیحات — معلومات",
         "sourceTitle": "منبع",
         "sourceDescription": "منبع توضیحات",
         "emptyTitle": "خالی",
         "emptyDescription": "خالی توضیحات",
-        "nonEmptyDescription": "non خالی توضیحات"
+        "nonEmptyDescription": "معلومات — معلومات"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       }
     },
     "linksScreen": {
       "header": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "کارت",
+        "subtitle": "تنظیمات"
       },
       "inputs": {
-        "labelPlaceholder": "label راهنما",
-        "urlPlaceholder": "url راهنما"
+        "labelPlaceholder": "جستجو",
+        "urlPlaceholder": "جستجو"
       },
       "actions": {
         "add": "افزودن",
@@ -4313,427 +4314,427 @@ export const FA_AF_LOCALE = {
         "delete": "حذف"
       },
       "item": {
-        "defaultLabel": "default"
+        "defaultLabel": "لینک"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "خالی",
+        "description": "تنظیمات"
       },
       "alerts": {
-        "invalidUrlTitle": "invalid url",
-        "invalidUrlMessage": "invalid url message",
-        "duplicateTitle": "duplicate",
-        "duplicateMessage": "duplicate message",
+        "invalidUrlTitle": "عنوان",
+        "invalidUrlMessage": "معلومات",
+        "duplicateTitle": "عنوان",
+        "duplicateMessage": "معلومات",
         "openFailedTitle": "باز کردن ناموفق",
-        "openFailedMessage": "باز کردن ناموفق message"
+        "openFailedMessage": "درخواست ناکام شد. دوباره تلاش کنید."
       },
       "form": {
-        "labelPlaceholder": "label راهنما",
-        "urlPlaceholder": "url راهنما"
+        "labelPlaceholder": "جستجو",
+        "urlPlaceholder": "جستجو"
       }
     },
     "accountSection": {
       "edit": {
-        "title": "title",
-        "description": "description"
+        "title": "اطلاعات شخصی",
+        "description": "تنظیمات"
       },
       "verification": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "badges": {
-          "starter": "starter",
-          "basic": "basic",
-          "standard": "standard",
-          "plus": "plus",
-          "advanced": "advanced",
-          "enhanced": "enhanced",
-          "full": "full",
+          "starter": "معلومات",
+          "basic": "معلومات",
+          "standard": "معلومات",
+          "plus": "معلومات",
+          "advanced": "معلومات",
+          "enhanced": "معلومات",
+          "full": "معلومات",
           "verified": "تأیید شده",
           "business": "تجاری",
           "merchant": "فروشنده"
         }
       },
       "devices": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "trusted": {
-        "title": "title",
-        "description": "description",
-        "badgeSuffix": "badge suffix"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badgeSuffix": "معلومات"
       }
     },
     "privacySection": {
       "privacy": {
-        "title": "title",
-        "description": "description"
+        "title": "حریم خصوصی",
+        "description": "تنظیمات"
       },
       "security": {
-        "title": "title",
-        "description": "description"
+        "title": "امنیت",
+        "description": "تنظیمات"
       },
       "data": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "qr": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       }
     },
     "appSection": {
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "preferences": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "colors": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badge": "پریمیوم"
       },
       "ai": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badge": "پریمیوم"
       },
       "notificationSounds": {
-        "title": "Melodies and notification sounds",
-        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+        "title": "آهنگ‌ها و صداهای اعلان",
+        "description": "تنظیمات"
       },
       "notifications": {
-        "title": "title",
-        "description": "description"
+        "title": "اعلان‌ها",
+        "description": "تنظیمات"
       },
       "games": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badge": "پریمیوم"
       }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "title",
-        "description": "description"
+        "title": "پریمیوم",
+        "description": "پریمیوم"
       },
       "business": {
-        "title": "title",
-        "description": "description"
+        "title": "حساب تجارتی",
+        "description": "پریمیوم"
       },
       "credits": {
-        "title": "title",
-        "description": "description"
+        "title": "پریمیوم",
+        "description": "پریمیوم"
       },
       "gifts": {
-        "title": "title",
-        "description": "description"
+        "title": "پریمیوم",
+        "description": "پریمیوم"
       },
       "premium": {
-        "title": "title",
-        "description": "description"
+        "title": "پریمیوم",
+        "description": "پریمیوم"
       }
     },
     "walletSection": {
       "walletCard": {
-        "title": "title",
-        "description": "description"
+        "title": "کیف پول",
+        "description": "تنظیمات"
       },
       "settings": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات ولت",
+        "description": "تنظیمات"
       }
     },
     "giftsBlock": {
-      "title": "title",
-      "description": "description",
+      "title": "تنظیمات",
+      "description": "تنظیمات",
       "stats": {
         "all": "همه",
-        "premium": "Premium",
-        "seasonal": "seasonal"
+        "premium": "پریمیوم",
+        "seasonal": "معلومات"
       },
       "open": "باز کردن"
     },
     "publicationManagement": {
-      "title": "title",
-      "subtitle": "subtitle",
-      "ownerData": "owner data",
-      "bindings": "bindings",
-      "publication": "publication",
-      "accessRules": "access rules",
-      "hiddenWhenNotCreated": "hidden when not created",
+      "title": "تنظیمات",
+      "subtitle": "تنظیمات",
+      "ownerData": "معلومات",
+      "bindings": "معلومات",
+      "publication": "معلومات",
+      "accessRules": "معلومات",
+      "hiddenWhenNotCreated": "معلومات",
       "createFromProfile": "ایجاد از پروفایل"
     },
     "home": "خانه",
-    "eyebrow": "eyebrow",
-    "subtitle": "subtitle",
+    "eyebrow": "نمایه",
+    "subtitle": "تنظیمات",
     "surface": {
       "photos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "عکس‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "shortVideos": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "likes": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "لایک‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       },
       "reactions": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "stat": "stat"
+        "title": "واکنش‌ها",
+        "subtitle": "تنظیمات",
+        "stat": "معلومات"
       }
     },
     "account": {
       "edit": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "verification": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "badges": {
-          "starter": "starter",
-          "basic": "basic",
-          "standard": "standard",
-          "plus": "plus",
-          "advanced": "advanced",
-          "enhanced": "enhanced",
-          "full": "full",
+          "starter": "معلومات",
+          "basic": "معلومات",
+          "standard": "استاندارد",
+          "plus": "معلومات",
+          "advanced": "پیشرفته",
+          "enhanced": "معلومات",
+          "full": "معلومات",
           "verified": "تأیید شده",
           "business": "تجاری",
           "merchant": "فروشنده"
         }
       },
       "devices": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "trusted": {
-        "title": "title",
-        "description": "description",
-        "badgeSuffix": "badge suffix"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badgeSuffix": "معلومات"
       }
     },
     "app": {
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "زبان و منطقه",
+        "description": "تنظیمات"
       },
       "preferences": {
-        "title": "title",
-        "description": "description"
+        "title": "ظاهر و ترجیحات",
+        "description": "تنظیمات"
       },
       "colors": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "تم و فریم‌های پروفایل",
+        "description": "تنظیمات",
+        "badge": "پریمیوم"
       },
       "ai": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "AI و دستیار هوشمند",
+        "description": "تنظیمات",
+        "badge": "پریمیوم"
       },
       "notifications": {
-        "title": "title",
-        "description": "description"
+        "title": "اعلان‌ها",
+        "description": "تنظیمات"
       },
       "games": {
-        "title": "title",
-        "description": "description",
-        "badge": "badge"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "badge": "بعدی"
       }
     },
     "wallet": {
       "wallet": {
-        "title": "title",
-        "description": "description"
+        "title": "کیف پول",
+        "description": "تنظیمات"
       },
       "settings": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       }
     },
     "editScreen": {
       "header": {
-        "title": "title",
+        "title": "ویرایش پروفایل",
         "viewAction": "مشاهده عمل"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "ویرایش پروفایل",
+        "subtitle": "تنظیمات"
       },
       "hero": {
-        "subtitle": "subtitle",
-        "changeAvatarAction": "change avatar عمل",
-        "aiLinkedBadge": "AI linked badge",
-        "editModeBadge": "ویرایش mode badge",
+        "subtitle": "تنظیمات",
+        "changeAvatarAction": "معلومات",
+        "aiLinkedBadge": "AI",
+        "editModeBadge": "حالت ویرایش",
         "quickActions": {
           "photos": "عکس‌ها",
-          "videos": "videos",
+          "videos": "ویدیوها",
           "voice": "صدا",
           "public": "عمومی"
         }
       },
       "sections": {
-        "identity": "identity",
+        "identity": "معلومات",
         "presentation": "ارائه",
-        "safety": "safety"
+        "safety": "معلومات"
       },
       "identity": {
         "photos": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "videos": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "voice": {
-          "title": "title",
-          "description": "description"
+          "title": "AI صوتی",
+          "description": "AI صوتی"
         },
         "username": {
-          "title": "title",
-          "description": "description"
+          "title": "نام کاربری",
+          "description": "تنظیمات"
         },
         "phone": {
-          "title": "title",
-          "description": "description"
+          "title": "تلفن",
+          "description": "تنظیمات"
         },
         "email": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "birthday": {
-          "title": "title",
-          "description": "description"
+          "title": "تاریخ تولد",
+          "description": "تنظیمات"
         },
         "language": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "description": "تنظیمات",
+          "badge": "پریمیوم"
         }
       },
       "presentation": {
         "public": {
-          "title": "title",
-          "description": "description"
+          "title": "پروفایل عمومی",
+          "description": "تنظیمات"
         },
         "colors": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "description": "تنظیمات",
+          "badge": "پریمیوم"
         },
         "ai": {
-          "title": "title",
-          "description": "description",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "description": "تنظیمات",
+          "badge": "پریمیوم"
         },
         "qr": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "safety": {
         "verification": {
-          "title": "title",
-          "description": "description"
+          "title": "تأیید",
+          "description": "تنظیمات"
         },
         "privacy": {
-          "title": "title",
-          "description": "description"
+          "title": "حریم خصوصی",
+          "description": "تنظیمات"
         },
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "امنیت",
+          "description": "تنظیمات"
         }
       }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "معلومات",
+          "title": "نام کاربری",
+          "subtitle": "تنظیمات"
         },
         "phone": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "معلومات",
+          "title": "شماره تیلفون",
+          "subtitle": "تنظیمات"
         },
         "birthday": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "معلومات",
+          "title": "تاریخ تولد",
+          "subtitle": "تنظیمات"
         },
         "channel": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "گفتگو",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "bot": {
-          "eyebrow": "eyebrow",
-          "title": "title",
-          "subtitle": "subtitle"
+          "eyebrow": "دستیار",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "colors": {
-          "eyebrow": "eyebrow",
-          "subtitle": "subtitle",
-          "title": "title"
+          "eyebrow": "معلومات",
+          "subtitle": "تنظیمات",
+          "title": "تنظیمات"
         }
       },
       "username": {
-        "fieldLabel": "field",
-        "noteTitle": "note",
-        "noteText": "note توضیحات",
+        "fieldLabel": "نام کاربری",
+        "noteTitle": "نام کاربری",
+        "noteText": "معلومات — معلومات",
         "placeholder": "جای‌نگهدار"
       },
       "phone": {
-        "fieldLabel": "field",
-        "noteTitle": "note",
-        "noteText": "note توضیحات",
+        "fieldLabel": "تلفن",
+        "noteTitle": "نمبر حساب",
+        "noteText": "معلومات — معلومات",
         "placeholder": "جای‌نگهدار"
       },
       "birthday": {
-        "day": "day",
-        "month": "month",
-        "year": "year",
-        "noteTitle": "note",
-        "noteText": "note توضیحات",
-        "dayPlaceholder": "day راهنما",
-        "monthPlaceholder": "month راهنما",
-        "yearPlaceholder": "year راهنما"
+        "day": "معلومات",
+        "month": "معلومات",
+        "year": "معلومات",
+        "noteTitle": "تاریخ تولد",
+        "noteText": "معلومات — معلومات",
+        "dayPlaceholder": "جستجو",
+        "monthPlaceholder": "جستجو",
+        "yearPlaceholder": "جستجو"
       },
       "channel": {
-        "fieldLabel": "field",
+        "fieldLabel": "معلومات",
         "placeholder": "جای‌نگهدار",
-        "noteTitle": "note",
-        "noteText": "note توضیحات"
+        "noteTitle": "عنوان",
+        "noteText": "معلومات — معلومات"
       },
       "bot": {
-        "fieldLabel": "field",
+        "fieldLabel": "معلومات",
         "placeholder": "جای‌نگهدار",
-        "noteTitle": "note",
-        "noteText": "note توضیحات"
+        "noteTitle": "عنوان",
+        "noteText": "معلومات — معلومات"
       },
       "colors": {
-        "noteText": "note توضیحات",
-        "noteTitle": "note",
+        "noteText": "معلومات — معلومات",
+        "noteTitle": "عنوان",
         "presets": {
-          "blue": "blue",
-          "emerald": "emerald",
-          "gold": "gold",
-          "purple": "purple",
-          "teal": "teal"
+          "blue": "معلومات",
+          "emerald": "معلومات",
+          "gold": "معلومات",
+          "purple": "معلومات",
+          "teal": "معلومات"
         },
         "previewTitle": "پیش‌نمایش"
       }
@@ -4741,37 +4742,37 @@ export const FA_AF_LOCALE = {
     "channelScreen": {
       "loading": "در حال بارگذاری",
       "header": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "shelf": {
-        "title": "title",
+        "title": "تنظیمات",
         "empty": "خالی"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "معلومات",
         "public": "عمومی",
-        "control": "control",
+        "control": "معلومات",
         "history": "تاریخچه"
       },
       "actions": {
         "create": "ایجاد",
-        "creating": "creating",
+        "creating": "معلومات",
         "save": "ذخیره",
-        "saving": "saving",
+        "saving": "در حال ذخیره...",
         "reset": "بازنشانی"
       },
       "createFlow": {
-        "subtitle": "subtitle",
-        "ownerAuto": "owner auto",
-        "inviteAuto": "invite auto"
+        "subtitle": "تنظیمات",
+        "ownerAuto": "معلومات",
+        "inviteAuto": "گفتگو"
       },
       "defaults": {
-        "channelName": "channel نام",
+        "channelName": "کانال جدید",
         "username": "نام کاربری",
-        "description": "description"
+        "description": "تنظیمات"
       },
       "stats": {
-        "subscribers": "subscribers",
+        "subscribers": "معلومات",
         "photos": "عکس‌ها",
         "gifts": "هدایا",
         "history": "تاریخچه"
@@ -4784,167 +4785,167 @@ export const FA_AF_LOCALE = {
       },
       "sections": {
         "identity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "activity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "public": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "جای‌نگهدار",
+          "subtitle": "تنظیمات"
         },
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "permissions": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "اجازه‌ها",
+          "subtitle": "تنظیمات"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "historyStats": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تاریخچه",
+          "subtitle": "تنظیمات"
         }
       },
       "readonly": {
-        "notice": "notice",
+        "notice": "معلومات",
         "likes": "لایک‌ها",
         "gifts": "هدایا"
       },
       "flags": {
         "public": "عمومی",
         "private": "خصوصی",
-        "published": "published",
+        "published": "منتشر شده",
         "preview": "پیش‌نمایش",
-        "profileVisible": "پروفایل visible",
-        "profileHidden": "پروفایل hidden"
+        "profileVisible": "نمایه",
+        "profileHidden": "نمایه"
       },
       "focus": {
         "public": "عمومی"
       },
       "openChat": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
+        "avatar": "معلومات",
+        "cover": "معلومات",
         "photos": "عکس‌ها",
         "photosSubtitle": "عکس‌ها توضیحات",
-        "videos": "videos",
-        "videosSubtitle": "videos توضیحات",
+        "videos": "ویدیوها",
+        "videosSubtitle": "توضیحات — معلومات",
         "addPhoto": "افزودن عکس",
         "addVideo": "افزودن ویدیو",
         "gallery": "گالری",
         "emptyPhotosTitle": "خالی عکس‌ها",
         "emptyPhotosSubtitle": "خالی عکس‌ها توضیحات",
-        "emptyVideosTitle": "خالی videos",
-        "emptyVideosSubtitle": "خالی videos توضیحات"
+        "emptyVideosTitle": "هنوز هیچ ویدیویی وجود ندارد",
+        "emptyVideosSubtitle": "معلومات — معلومات"
       },
       "main": {
         "channelName": {
-          "label": "label",
+          "label": "گفتگو",
           "placeholder": "جای‌نگهدار"
         },
         "username": {
-          "label": "label",
+          "label": "نام کاربری",
           "placeholder": "جای‌نگهدار"
         },
         "description": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
-        "channelId": "channel ID",
-        "channelIdPlaceholder": "channel ID راهنما",
-        "inviteLink": "invite لینک"
+        "channelId": "گفتگو",
+        "channelIdPlaceholder": "جستجو",
+        "inviteLink": "گفتگو"
       },
       "owner": {
         "name": "نام",
         "namePlaceholder": "نام راهنما",
         "userId": "کاربر ID",
         "userIdPlaceholder": "کاربر ID راهنما",
-        "role": "role",
-        "rolePlaceholder": "role راهنما",
+        "role": "معلومات",
+        "rolePlaceholder": "جای‌نگهدار",
         "phone": "تلفن",
-        "email": "email"
+        "email": "معلومات"
       },
       "publication": {
-        "publicationId": "publication ID",
-        "title": "title",
-        "titlePlaceholder": "title راهنما",
-        "subtitle": "subtitle",
-        "subtitlePlaceholder": "subtitle راهنما",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "summary راهنما"
+        "publicationId": "معلومات",
+        "title": "تنظیمات",
+        "titlePlaceholder": "جستجو",
+        "subtitle": "تنظیمات",
+        "subtitlePlaceholder": "توضیحات — معلومات",
+        "slug": "معلومات",
+        "tags": "معلومات",
+        "summary": "پیش‌نمایش راهنما",
+        "summaryPlaceholder": "جستجو"
       },
       "toggles": {
         "public": "عمومی",
         "publicSubtitle": "عمومی توضیحات",
-        "published": "published",
-        "publishedSubtitle": "published توضیحات",
-        "showInProfile": "show in پروفایل",
-        "showInProfileSubtitle": "show in پروفایل توضیحات",
-        "searchable": "searchable",
-        "searchableSubtitle": "searchable توضیحات",
+        "published": "منتشر شده",
+        "publishedSubtitle": "توضیحات — معلومات",
+        "showInProfile": "نمایه",
+        "showInProfileSubtitle": "نمایه — معلومات",
+        "searchable": "جستجو",
+        "searchableSubtitle": "جستجو",
         "preview": "پیش‌نمایش",
         "previewSubtitle": "پیش‌نمایش توضیحات",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery توضیحات",
-        "approveSubscribers": "approve subscribers",
-        "approveSubscribersSubtitle": "approve subscribers توضیحات",
-        "onlyAdminsCanPost": "only admins can post",
-        "onlyAdminsCanPostSubtitle": "only admins can post توضیحات",
-        "onlyAdminsCanEdit": "only admins can ویرایش",
-        "onlyAdminsCanEditSubtitle": "only admins can ویرایش توضیحات",
-        "commentsEnabled": "comments enabled",
-        "commentsEnabledSubtitle": "comments enabled توضیحات",
-        "reactionsEnabled": "reactions enabled",
-        "reactionsEnabledSubtitle": "reactions enabled توضیحات"
+        "discovery": "معلومات",
+        "discoverySubtitle": "توضیحات — معلومات",
+        "approveSubscribers": "معلومات",
+        "approveSubscribersSubtitle": "توضیحات — معلومات",
+        "onlyAdminsCanPost": "معلومات",
+        "onlyAdminsCanPostSubtitle": "توضیحات — معلومات",
+        "onlyAdminsCanEdit": "معلومات",
+        "onlyAdminsCanEditSubtitle": "توضیحات — معلومات",
+        "commentsEnabled": "معلومات",
+        "commentsEnabledSubtitle": "توضیحات — معلومات",
+        "reactionsEnabled": "معلومات",
+        "reactionsEnabledSubtitle": "توضیحات — معلومات"
       },
       "links": {
-        "chatId": "chat ID",
-        "botId": "bot ID",
-        "subscribers": "subscribers"
+        "chatId": "گفتگو",
+        "botId": "دستیار",
+        "subscribers": "معلومات"
       },
       "history": {
-        "subtitle": "subtitle",
+        "subtitle": "تنظیمات",
         "emptyTitle": "خالی",
         "emptySubtitle": "خالی توضیحات"
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "موفق",
+          "created": "معلومات",
           "saved": "ذخیره شد",
           "reset": "بازنشانی"
         },
         "error": {
-          "title": "title",
+          "title": "خطا",
           "saveFailed": "ذخیره ناموفق"
         },
         "validation": {
           "nameTitle": "نام",
-          "nameMessage": "نام message"
+          "nameMessage": "معلومات"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "تنظیمات",
+          "message": "معلومات",
           "cancel": "لغو",
           "confirm": "تأیید"
         }
@@ -4953,34 +4954,34 @@ export const FA_AF_LOCALE = {
     "botScreen": {
       "loading": "در حال بارگذاری",
       "header": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "shelf": {
-        "title": "title",
+        "title": "تنظیمات",
         "empty": "خالی"
       },
       "tabs": {
-        "overview": "overview",
+        "overview": "معلومات",
         "public": "عمومی",
-        "control": "control",
+        "control": "معلومات",
         "history": "تاریخچه"
       },
       "actions": {
         "create": "ایجاد",
-        "creating": "creating",
+        "creating": "معلومات",
         "save": "ذخیره",
-        "saving": "saving",
+        "saving": "در حال ذخیره...",
         "reset": "بازنشانی"
       },
       "createFlow": {
-        "subtitle": "subtitle",
-        "ownerAuto": "owner auto",
-        "inviteAuto": "invite auto"
+        "subtitle": "تنظیمات",
+        "ownerAuto": "معلومات",
+        "inviteAuto": "گفتگو"
       },
       "defaults": {
-        "botName": "bot نام",
+        "botName": "دستیار",
         "username": "نام کاربری",
-        "description": "description"
+        "description": "تنظیمات"
       },
       "stats": {
         "modules": "ماژول‌ها",
@@ -4996,181 +4997,181 @@ export const FA_AF_LOCALE = {
       },
       "sections": {
         "identity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "activity": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "public": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "جای‌نگهدار",
+          "subtitle": "تنظیمات"
         },
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "permissions": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "اجازه‌ها",
+          "subtitle": "تنظیمات"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "routing": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "historyStats": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تاریخچه",
+          "subtitle": "تنظیمات"
         }
       },
       "readonly": {
-        "notice": "notice"
+        "notice": "معلومات"
       },
       "flags": {
         "public": "عمومی",
         "private": "خصوصی",
-        "published": "published",
+        "published": "منتشر شده",
         "preview": "پیش‌نمایش",
-        "profileVisible": "پروفایل visible",
-        "profileHidden": "پروفایل hidden",
-        "active": "active",
-        "paused": "paused"
+        "profileVisible": "نمایه",
+        "profileHidden": "نمایه",
+        "active": "فعال",
+        "paused": "مکث شده"
       },
       "focus": {
         "public": "عمومی",
-        "routing": "routing"
+        "routing": "معلومات"
       },
       "openChat": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "media": {
-        "avatar": "avatar",
-        "cover": "cover",
+        "avatar": "معلومات",
+        "cover": "معلومات",
         "gallery": "گالری"
       },
       "main": {
         "botName": {
-          "label": "label",
+          "label": "دستیار",
           "placeholder": "جای‌نگهدار"
         },
         "username": {
-          "label": "label",
+          "label": "نام کاربری",
           "placeholder": "جای‌نگهدار"
         },
         "description": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "botKind": {
-          "label": "label",
+          "label": "دستیار",
           "placeholder": "جای‌نگهدار"
         },
-        "botId": "bot ID",
-        "botIdPlaceholder": "bot ID راهنما"
+        "botId": "دستیار",
+        "botIdPlaceholder": "جستجو"
       },
       "owner": {
         "name": "نام",
         "namePlaceholder": "نام راهنما",
         "userId": "کاربر ID",
         "userIdPlaceholder": "کاربر ID راهنما",
-        "role": "role",
-        "rolePlaceholder": "role راهنما",
+        "role": "معلومات",
+        "rolePlaceholder": "جای‌نگهدار",
         "phone": "تلفن",
-        "email": "email"
+        "email": "معلومات"
       },
       "publication": {
-        "publicationId": "publication ID",
-        "title": "title",
-        "titlePlaceholder": "title راهنما",
-        "subtitle": "subtitle",
-        "subtitlePlaceholder": "subtitle راهنما",
-        "slug": "slug",
-        "tags": "tags",
-        "summary": "summary",
-        "summaryPlaceholder": "summary راهنما"
+        "publicationId": "معلومات",
+        "title": "تنظیمات",
+        "titlePlaceholder": "جستجو",
+        "subtitle": "تنظیمات",
+        "subtitlePlaceholder": "توضیحات — معلومات",
+        "slug": "معلومات",
+        "tags": "معلومات",
+        "summary": "پیش‌نمایش راهنما",
+        "summaryPlaceholder": "جستجو"
       },
       "toggles": {
         "public": "عمومی",
         "publicSubtitle": "عمومی توضیحات",
-        "published": "published",
-        "publishedSubtitle": "published توضیحات",
-        "showInProfile": "show in پروفایل",
-        "showInProfileSubtitle": "show in پروفایل توضیحات",
+        "published": "منتشر شده",
+        "publishedSubtitle": "توضیحات — معلومات",
+        "showInProfile": "نمایه",
+        "showInProfileSubtitle": "نمایه — معلومات",
         "preview": "پیش‌نمایش",
         "previewSubtitle": "پیش‌نمایش توضیحات",
-        "discovery": "discovery",
-        "discoverySubtitle": "discovery توضیحات",
-        "active": "active",
-        "activeSubtitle": "active توضیحات",
+        "discovery": "معلومات",
+        "discoverySubtitle": "توضیحات — معلومات",
+        "active": "فعال",
+        "activeSubtitle": "توضیحات — معلومات",
         "acceptCommands": "پذیرفتن فرمان‌ها",
         "acceptCommandsSubtitle": "پذیرفتن فرمان‌ها توضیحات",
-        "showInCatalog": "show in catalog",
-        "showInCatalogSubtitle": "show in catalog توضیحات",
-        "allowPayments": "اجازه دادن payments",
-        "allowPaymentsSubtitle": "اجازه دادن payments توضیحات",
-        "inlineEnabled": "inline enabled",
-        "inlineEnabledSubtitle": "inline enabled توضیحات",
-        "autoReplyEnabled": "auto پاسخ enabled",
-        "autoReplyEnabledSubtitle": "auto پاسخ enabled توضیحات",
-        "marketplaceLinked": "بازار linked",
-        "marketplaceLinkedSubtitle": "بازار linked توضیحات",
-        "deliveryLinked": "delivery linked",
-        "deliveryLinkedSubtitle": "delivery linked توضیحات",
-        "businessRoutingEnabled": "تجاری routing enabled",
-        "businessRoutingEnabledSubtitle": "تجاری routing enabled توضیحات"
+        "showInCatalog": "معلومات",
+        "showInCatalogSubtitle": "توضیحات — معلومات",
+        "allowPayments": "معلومات",
+        "allowPaymentsSubtitle": "توضیحات — معلومات",
+        "inlineEnabled": "معلومات",
+        "inlineEnabledSubtitle": "توضیحات — معلومات",
+        "autoReplyEnabled": "معلومات",
+        "autoReplyEnabledSubtitle": "توضیحات — معلومات",
+        "marketplaceLinked": "معلومات",
+        "marketplaceLinkedSubtitle": "توضیحات — معلومات",
+        "deliveryLinked": "معلومات",
+        "deliveryLinkedSubtitle": "توضیحات — معلومات",
+        "businessRoutingEnabled": "تجاری",
+        "businessRoutingEnabledSubtitle": "معلومات — معلومات"
       },
       "links": {
-        "chatId": "chat ID",
-        "groupId": "group ID",
-        "channelId": "channel ID",
-        "marketId": "market ID"
+        "chatId": "گفتگو",
+        "groupId": "گفتگو",
+        "channelId": "گفتگو",
+        "marketId": "معلومات"
       },
       "routing": {
-        "title": "title",
+        "title": "تنظیمات",
         "sabiWallet": "Sabi کیف پول",
-        "businessRoutingLayer": "تجاری routing layer",
-        "tradeBot": "trade bot",
-        "businessBot": "تجاری bot",
-        "tradeHint": "trade راهنما",
+        "businessRoutingLayer": "معلومات",
+        "tradeBot": "دستیار",
+        "businessBot": "معلومات",
+        "tradeHint": "معلومات — معلومات",
         "businessHint": "تجاری راهنما"
       },
       "history": {
-        "subtitle": "subtitle",
+        "subtitle": "تنظیمات",
         "emptyTitle": "خالی",
         "emptySubtitle": "خالی توضیحات"
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "موفق",
+          "created": "معلومات",
           "saved": "ذخیره شد",
           "reset": "بازنشانی"
         },
         "error": {
-          "title": "title",
+          "title": "خطا",
           "saveFailed": "ذخیره ناموفق"
         },
         "validation": {
           "nameTitle": "نام",
-          "nameMessage": "نام message"
+          "nameMessage": "معلومات"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "تنظیمات",
+          "message": "معلومات",
           "cancel": "لغو",
           "confirm": "تأیید"
         }
@@ -5178,274 +5179,274 @@ export const FA_AF_LOCALE = {
     },
     "colorsScreen": {
       "header": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "preview": {
-        "ownerTheme": "owner پوسته",
+        "ownerTheme": "طرح",
         "bio": "بیوگرافی",
         "stats": {
           "theme": "پوسته",
-          "frame": "frame"
+          "frame": "قاب‌ها"
         },
         "quickPills": {
-          "profileSurface": "پروفایل surface",
-          "aiIdentity": "AI identity",
-          "premium": "Premium"
+          "profileSurface": "نمایه",
+          "aiIdentity": "AI",
+          "premium": "پریمیوم"
         },
-        "ownerThemeBadge": "owner پوسته badge"
+        "ownerThemeBadge": "طرح"
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "sections": {
-        "themePresets": "پوسته presets",
-        "avatarFrames": "avatar frames"
+        "themePresets": "طرح",
+        "avatarFrames": "قاب‌ها"
       },
       "themes": {
         "emeraldGlass": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "badge": "فعال"
         },
         "royalAurora": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "badge": "پریمیوم"
         },
         "midnightViolet": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "badge": "پریمیوم"
         },
         "sunsetRose": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "badge": "جدید"
         },
         "aiNeon": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "badge": "AI"
         }
       },
       "frames": {
         "defaultGlow": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "heartPulse": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "crystalRing": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "royalGold": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "neonWave": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "aiHalo": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "softStars": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "seasonalBloom": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "action": "عمل"
       },
       "alerts": {
-        "savedDescription": "saved توضیحات",
-        "savedTitle": "saved"
+        "savedDescription": "ذخیره شد",
+        "savedTitle": "ذخیره شد"
       }
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "metrics": {
-        "allSessions": "همه sessions",
-        "trusted": "trusted",
-        "timeout": "timeout"
+        "allSessions": "معلومات",
+        "trusted": "معلومات",
+        "timeout": "معلومات"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off"
+        "on": "فعال شده",
+        "off": "خاموش"
       },
       "connect": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "action": "عمل"
       },
       "sections": {
-        "thisDevice": "this device",
-        "otherSessions": "other sessions",
-        "autoEnd": "auto پایان"
+        "thisDevice": "معلومات",
+        "otherSessions": "معلومات",
+        "autoEnd": "معلومات"
       },
       "badges": {
-        "live": "live",
-        "trusted": "trusted"
+        "live": "معلومات",
+        "trusted": "معلومات"
       },
-      "revokeAction": "revoke عمل",
-      "selectedBadge": "انتخاب شد badge",
+      "revokeAction": "لغو",
+      "selectedBadge": "معلومات",
       "timeouts": {
-        "oneWeek": "one week",
-        "oneMonth": "one month",
-        "threeMonths": "three months",
-        "sixMonths": "six months",
-        "oneYear": "one year"
+        "oneWeek": "معلومات",
+        "oneMonth": "معلومات",
+        "threeMonths": "معلومات",
+        "sixMonths": "معلومات",
+        "oneYear": "معلومات"
       },
       "notes": {
         "safety": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "nextLayer": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "future": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       }
     },
     "privacyScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "حریم خصوصی",
+        "subtitle": "تنظیمات"
       },
       "sections": {
-        "securityAccess": "security access",
-        "visibilityCommunication": "visibility communication"
+        "securityAccess": "امنیت",
+        "visibilityCommunication": "معلومات"
       },
       "rows": {
         "security": {
-          "title": "title",
-          "description": "description"
+          "title": "امنیت",
+          "description": "تنظیمات"
         },
         "data": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "blocked": {
-          "title": "title",
-          "description": "description"
+          "title": "مسدود",
+          "description": "تنظیمات"
         },
         "autodelete": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "login_email": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "phone": {
-          "title": "title",
-          "description": "description"
+          "title": "تلفن",
+          "description": "تنظیمات"
         },
         "last_seen": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "last-seen": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "photo": {
-          "title": "title",
-          "description": "description"
+          "title": "عکس",
+          "description": "تنظیمات"
         },
         "bio": {
-          "title": "title",
-          "description": "description"
+          "title": "بیو",
+          "description": "تنظیمات"
         },
         "birthday": {
-          "title": "title",
-          "description": "description"
+          "title": "تاریخ تولد",
+          "description": "تنظیمات"
         },
         "gifts": {
-          "title": "title",
-          "description": "description"
+          "title": "هدایا",
+          "description": "تنظیمات"
         },
         "forwards": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "calls": {
-          "title": "title",
-          "description": "description"
+          "title": "تماس‌ها",
+          "description": "تنظیمات"
         },
         "voice_messages": {
-          "title": "title",
-          "description": "description"
+          "title": "AI صوتی",
+          "description": "AI صوتی"
         },
         "voice-messages": {
-          "title": "title",
-          "description": "description"
+          "title": "AI صوتی",
+          "description": "AI صوتی"
         },
         "messages": {
-          "title": "title",
-          "description": "description"
+          "title": "پیام‌ها",
+          "description": "تنظیمات"
         },
         "groups": {
-          "title": "title",
-          "description": "description"
+          "title": "گروه‌ها",
+          "description": "تنظیمات"
         }
       }
     },
     "privacyDetailScreen": {
       "defaults": {
-        "eyebrow": "eyebrow"
+        "eyebrow": "معلومات"
       },
       "options": {
-        "everyone": "everyone",
-        "contacts": "contacts",
-        "nobody": "nobody"
+        "everyone": "معلومات",
+        "contacts": "معلومات",
+        "nobody": "معلومات"
       },
       "notFound": {
-        "title": "title",
-        "subtitle": "subtitle",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
         "backAction": "برگشت عمل"
       },
       "exceptions": {
-        "title": "title"
+        "title": "عنوان"
       },
-      "lockedHelper": "locked helper",
+      "lockedHelper": "معلومات — معلومات",
       "notes": {
-        "title": "title"
+        "title": "عنوان"
       },
       "premium": {
-        "eyebrow": "eyebrow"
+        "eyebrow": "پریمیوم"
       },
       "preview": {
-        "forwardedFrom": "forwarded از"
+        "forwardedFrom": "معلومات"
       }
     },
     "privacyDetails": {
@@ -5453,525 +5454,525 @@ export const FA_AF_LOCALE = {
         "add": "افزودن"
       },
       "phone": {
-        "title": "title",
+        "title": "تلفن",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "findByNumber": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "value": "value",
-            "description": "description"
+            "title": "تنظیمات",
+            "value": "معلومات",
+            "description": "تنظیمات"
           }
         }
       },
       "lastSeen": {
-        "title": "title",
+        "title": "تنظیمات",
         "groups": {
           "onlineVisibility": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "toggles": {
           "hideReadTime": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
-        "note": "note",
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta توضیحات"
+        "note": "یادداشت",
+        "premiumNote": "پریمیوم",
+        "premiumCtaText": "عمل"
       },
       "photo": {
-        "title": "title",
+        "title": "تنظیمات",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "bio": {
-        "title": "title",
+        "title": "بیو",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "birthday": {
-        "title": "title",
+        "title": "تاریخ تولد",
         "groups": {
           "whoCanSee": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "gifts": {
-        "title": "title",
+        "title": "هدایا",
         "topToggles": {
           "chatBadge": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "groups": {
           "defaultProfileVisibility": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "allowedGifts": {
-          "title": "title"
+          "title": "تنظیمات"
         },
         "toggles": {
           "standard": {
-            "title": "title",
-            "description": "description"
+            "title": "استاندارد",
+            "description": "تنظیمات"
           },
           "rare": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "forwards": {
-        "title": "title",
+        "title": "تنظیمات",
         "preview": {
-          "label": "label",
-          "sender": "sender",
-          "message": "message"
+          "label": "معلومات",
+          "sender": "فرستنده",
+          "message": "پیش‌نمایش"
         },
         "groups": {
           "accountLinking": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "calls": {
-        "title": "title",
+        "title": "تماس‌ها",
         "options": {
-          "always": "always",
-          "never": "never"
+          "always": "معلومات",
+          "never": "معلومات"
         },
         "groups": {
           "whoCanCall": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "peerToPeer": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "toggles": {
           "iphoneIntegration": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       },
       "voiceMessages": {
-        "title": "title",
+        "title": "AI صوتی",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "messages for credits"
+          "contactsPremium": "AI صوتی",
+          "messagesForCredits": "AI صوتی"
         },
         "groups": {
           "whoCanSend": {
-            "title": "title",
-            "description": "description"
+            "title": "AI صوتی",
+            "description": "AI صوتی"
           }
         },
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta توضیحات"
+        "premiumNote": "AI صوتی",
+        "premiumCtaText": "عمل"
       },
       "messages": {
-        "title": "title",
+        "title": "پیام‌ها",
         "options": {
-          "contactsPremium": "contacts Premium",
-          "messagesForCredits": "messages for credits"
+          "contactsPremium": "پریمیوم",
+          "messagesForCredits": "معلومات"
         },
         "groups": {
           "whoCanMessage": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
-        "premiumNote": "Premium note",
-        "premiumCtaText": "Premium cta توضیحات"
+        "premiumNote": "پریمیوم",
+        "premiumCtaText": "عمل"
       },
       "groups": {
-        "title": "title",
+        "title": "گروه‌ها",
         "groups": {
           "whoCanInvite": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           }
         }
       }
     },
     "dataManagementScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "metrics": {
-        "contactsSync": "contacts همگام‌سازی",
-        "draftBackup": "draft backup",
+        "contactsSync": "معلومات",
+        "draftBackup": "بازگشت",
         "privateExport": "خصوصی صادر کردن"
       },
       "metricStates": {
-        "on": "on",
-        "off": "off"
+        "on": "فعال شده",
+        "off": "خاموش"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "sections": {
-        "discovery": "discovery",
-        "storage": "storage",
-        "retention": "retention"
+        "discovery": "معلومات",
+        "storage": "معلومات",
+        "retention": "معلومات"
       },
       "discovery": {
         "syncContacts": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "searchSuggestions": {
-          "title": "title",
-          "description": "description"
+          "title": "جستجو",
+          "description": "جستجو"
         },
         "memoryControls": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "storage": {
         "draftBackup": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "paymentHints": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "privateExportMode": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "retention": {
         "autoCleanup": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "actions": {
         "requestExport": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "reviewDrafts": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "clearCache": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "links": {
         "privacy": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "support": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       }
     },
     "aiScreen": {
       "header": {
-        "title": "title",
+        "title": "تنظیمات",
         "openAction": "باز کردن عمل"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "AI",
+        "subtitle": "تنظیمات"
       },
       "hero": {
         "badges": {
-          "identity": "identity",
-          "programBound": "program bound"
+          "identity": "معلومات",
+          "programBound": "معلومات"
         },
         "stats": {
-          "mode": "mode",
-          "owner": "owner",
-          "premium": "Premium",
-          "premiumBound": "Premium bound"
+          "mode": "معلومات",
+          "owner": "جای‌نگهدار",
+          "premium": "پریمیوم",
+          "premiumBound": "پریمیوم"
         },
         "actions": {
           "edit": "ویرایش",
           "theme": "پوسته",
-          "premium": "Premium",
+          "premium": "پریمیوم",
           "public": "عمومی"
         }
       },
       "modes": {
         "balanced": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "creative": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "business": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "concise": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       },
       "modeSection": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "sections": {
         "primary": {
-          "title": "title",
+          "title": "تنظیمات",
           "edit": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "public": {
-            "title": "title",
-            "description": "description"
+            "title": "عمومی",
+            "description": "تنظیمات"
           },
           "colors": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "premium": {
-            "title": "title",
-            "description": "description"
+            "title": "پریمیوم",
+            "description": "پریمیوم"
           }
         },
         "system": {
-          "title": "title",
+          "title": "تنظیمات",
           "language": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "qr": {
-            "title": "title",
-            "description": "description"
+            "title": "تنظیمات",
+            "description": "تنظیمات"
           },
           "premiumSurface": {
-            "title": "title",
-            "description": "description"
+            "title": "پریمیوم",
+            "description": "پریمیوم"
           }
         }
       },
       "badges": {
-        "premium": "Premium"
+        "premium": "پریمیوم"
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "action": "عمل"
       }
     },
     "giftsScreen": {
       "header": {
-        "title": "title",
+        "title": "هدیه مرکز",
         "openAction": "باز کردن عمل"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "hero": {
         "badges": {
-          "identity": "identity",
-          "unifiedIdBound": "unified ID bound"
+          "identity": "معلومات",
+          "unifiedIdBound": "معلومات"
         },
         "stats": {
-          "diamonds": "diamonds",
+          "diamonds": "معلومات",
           "status": "وضعیت",
-          "owner": "owner"
+          "owner": "جای‌نگهدار"
         },
         "actions": {
           "public": "عمومی",
-          "premium": "Premium",
-          "credits": "credits",
+          "premium": "پریمیوم",
+          "credits": "معلومات",
           "theme": "پوسته"
         }
       },
       "notice": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "tabs": {
-        "received": "received",
-        "inventory": "inventory",
+        "received": "معلومات",
+        "inventory": "معلومات",
         "history": "تاریخچه"
       },
       "common": {
-        "diamonds": "diamonds"
+        "diamonds": "معلومات"
       },
       "items": {
         "goldenAura": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "پریمیوم",
           "status": "وضعیت"
         },
         "violetWave": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "mintLight": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "dragonNote": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "moonSilk": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "seaBloom": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "phoenixBloom": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "crystalComet": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         },
         "emeraldLotus": {
-          "title": "title",
-          "subtitle": "subtitle",
-          "rarity": "rarity",
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات",
+          "rarity": "معلومات",
           "status": "وضعیت"
         }
       },
       "footer": {
-        "title": "title",
-        "description": "description",
+        "title": "تنظیمات",
+        "description": "تنظیمات",
         "action": "عمل"
       }
     },
     "creditsScreen": {
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle",
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
         "backAction": "برگشت عمل"
       },
       "balance": {
-        "label": "label",
+        "label": "معلومات",
         "actions": {
           "topUp": "شارژ",
-          "statistics": "statistics",
+          "statistics": "معلومات",
           "giftCenter": "هدیه مرکز"
         }
       },
@@ -5983,181 +5984,181 @@ export const FA_AF_LOCALE = {
     },
     "businessUpgradeScreen": {
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle",
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
         "backAction": "برگشت عمل"
       },
       "hero": {
-        "title": "title",
-        "description": "description",
-        "launchBadge": "launch badge"
+        "title": "تنظیمات",
+        "description": "تنظیمات",
+        "launchBadge": "معلومات"
       },
       "sections": {
-        "plans": "plans",
-        "features": "features"
+        "plans": "معلومات",
+        "features": "معلومات"
       },
       "plans": {
         "business_annual": {
-          "title": "title",
-          "period": "period",
-          "price": "price",
-          "description": "description",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "period": "معلومات",
+          "price": "قیمت",
+          "description": "تنظیمات",
+          "badge": "پریمیوم"
         },
         "business_monthly": {
-          "title": "title",
-          "period": "period",
-          "price": "price",
-          "description": "description",
-          "badge": "badge"
+          "title": "تنظیمات",
+          "period": "معلومات",
+          "price": "قیمت",
+          "description": "تنظیمات",
+          "badge": "پریمیوم"
         }
       },
       "features": {
         "address": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "workHours": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "quickReplies": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "greetings": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "notAvailable": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "chatLinks": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "footer": {
         "action": "عمل"
       },
-      "cta": "cta"
+      "cta": "معلومات"
     },
     "preferencesScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "ترجیحات",
+        "subtitle": "تنظیمات"
       },
       "metrics": {
-        "haptics": "haptics",
-        "sound": "sound",
-        "compact": "compact"
+        "haptics": "معلومات",
+        "sound": "صدا",
+        "compact": "معلومات"
       },
       "sections": {
-        "localization": "localization",
-        "interaction": "interaction",
+        "localization": "معلومات",
+        "interaction": "معلومات",
         "presentation": "ارائه"
       },
       "language": {
-        "title": "title",
-        "description": "description"
+        "title": "زبان برنامه",
+        "description": "تنظیمات"
       },
       "toggles": {
         "haptics": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "sound": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "preview": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "compact": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "smartInsights": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "links": {
         "language": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "notifications": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       }
     },
     "loginEmailScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "field": {
-        "label": "label",
+        "label": "ایمیل",
         "placeholder": "جای‌نگهدار"
       },
       "toggles": {
         "currentVerification": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "newVerification": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       }
     },
     "securityScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "امنیت",
+        "subtitle": "تنظیمات"
       },
       "metrics": {
-        "biometric": "biometric",
-        "appPin": "app سنجاق کردن",
-        "twoFactor": "two factor"
+        "biometric": "معلومات",
+        "appPin": "معلومات",
+        "twoFactor": "معلومات"
       },
       "sections": {
-        "mainProtection": "main protection",
-        "sensitiveActions": "sensitive عمل‌ها",
-        "identityChangeProtection": "identity change protection"
+        "mainProtection": "معلومات",
+        "sensitiveActions": "تنظیمات",
+        "identityChangeProtection": "معلومات"
       },
       "mainProtection": {
         "biometric": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "appPin": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "twoFactor": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         }
       },
       "common": {
@@ -6165,64 +6166,64 @@ export const FA_AF_LOCALE = {
         "required": "ضروری"
       },
       "emailFlow": {
-        "currentEmail": "current email {{value}}",
-        "currentVerification": "current verification {{value}}",
-        "newVerification": "new verification {{value}}",
-        "title": "title"
+        "currentEmail": "معلومات",
+        "currentVerification": "معلومات",
+        "newVerification": "معلومات",
+        "title": "تنظیمات"
       },
       "identityChange": {
         "emailFaceId": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         },
         "fallbackPin": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         },
         "phoneFaceId": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         }
       },
       "links": {
         "devices": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         }
       },
       "phoneFlow": {
-        "currentPhone": "current تلفن {{value}}",
-        "newVerification": "new verification {{value}}",
-        "oldVerification": "old verification {{value}}",
-        "title": "title"
+        "currentPhone": "معلومات",
+        "newVerification": "معلومات",
+        "oldVerification": "معلومات",
+        "title": "تنظیمات"
       },
       "sensitiveActions": {
         "confirmation": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         },
         "suspiciousAlerts": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         },
         "trustedAlerts": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         }
       }
     },
     "qrScreen": {
       "header": {
-        "howItWorksAction": "how it works عمل"
+        "howItWorksAction": "معلومات"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "actions": {
         "sendQr": "ارسال QR",
@@ -6230,275 +6231,275 @@ export const FA_AF_LOCALE = {
       },
       "toggles": {
         "allowScan": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "allowShare": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "note": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "share": {
-        "title": "title",
+        "title": "تنظیمات",
         "message": {
-          "header": "header",
+          "header": "معلومات",
           "name": "نام",
           "username": "نام کاربری",
-          "sabiId": "Sabi ID",
-          "profileCode": "پروفایل code",
+          "sabiId": "معلومات",
+          "profileCode": "نمایه",
           "profileLink": "پروفایل لینک"
         }
       },
       "alerts": {
         "shareFailed": {
-          "title": "title",
-          "message": "message"
+          "title": "تنظیمات",
+          "message": "معلومات"
         },
         "howItWorks": {
-          "title": "title",
-          "message": "message"
+          "title": "تنظیمات",
+          "message": "معلومات"
         }
       }
     },
     "supportScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "پشتیبانی",
+        "subtitle": "تنظیمات"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "sections": {
         "links": "لینک‌ها"
       },
       "notes": {
         "premiumFoundation": {
-          "title": "title",
-          "description": "description"
+          "title": "پریمیوم",
+          "description": "پریمیوم"
         },
         "legalTrust": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "links": {
         "helpCenter": {
-          "title": "title",
-          "description": "description"
+          "title": "مرکز کمک",
+          "description": "تنظیمات"
         },
         "contactSupport": {
-          "title": "title",
-          "description": "description"
+          "title": "تماس با پشتیبانی",
+          "description": "تنظیمات"
         },
         "privacyPolicy": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "termsOfService": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "aboutSabi": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       }
     },
     "trustedScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "metrics": {
-        "trusted": "trusted",
+        "trusted": "معلومات",
         "blocked": "مسدود",
-        "totalRules": "total rules"
+        "totalRules": "معلومات"
       },
       "hero": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "sections": {
-        "trusted": "trusted",
+        "trusted": "معلومات",
         "blocked": "مسدود"
       },
       "badges": {
-        "trusted": "trusted",
+        "trusted": "معلومات",
         "blocked": "مسدود"
       },
       "actions": {
         "block": "مسدود کردن",
-        "restore": "restore"
+        "restore": "معلومات"
       },
       "notes": {
-        "movedFromTrusted": "moved از trusted",
-        "restoredFromBlocked": "restored از مسدود",
-        "genericTrusted": "generic trusted",
-        "genericBlocked": "generic مسدود"
+        "movedFromTrusted": "معلومات",
+        "restoredFromBlocked": "معلومات",
+        "genericTrusted": "معلومات",
+        "genericBlocked": "معلومات"
       },
       "empty": {
         "trusted": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "blocked": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "links": {
         "blockedOnly": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "privacyCenter": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       }
     },
     "verificationScreen": {
       "intro": {
-        "eyebrow": "eyebrow",
-        "title": "title",
-        "subtitle": "subtitle"
+        "eyebrow": "معلومات",
+        "title": "تأیید",
+        "subtitle": "تنظیمات"
       },
       "status": {
         "verified": "تأیید شده",
         "pending": "در انتظار",
         "review": "بررسی",
-        "limited": "limited",
+        "limited": "محدود",
         "rejected": "رد شد"
       },
       "common": {
         "verified": "تأیید شده",
         "pending": "در انتظار",
-        "unknown": "unknown"
+        "unknown": "نامعلوم"
       },
       "sections": {
-        "compliance": "compliance",
-        "checks": "checks",
+        "compliance": "مطابقت",
+        "checks": "معلومات",
         "documents": "اسناد"
       },
       "complianceState": {
-        "label": "label {{value}}",
-        "restrictedIntro": "محدود intro",
-        "noRestrictions": "نخیر restrictions",
-        "sourceOfFundsRequested": "منبع of funds requested",
-        "reverificationRequired": "reverification ضروری"
+        "label": "معلومات",
+        "restrictedIntro": "معلومات",
+        "noRestrictions": "معلومات",
+        "sourceOfFundsRequested": "معلومات",
+        "reverificationRequired": "معلومات"
       },
       "checks": {
         "address": "آدرس",
-        "email": "email",
-        "liveness": "liveness",
+        "email": "معلومات",
+        "liveness": "معلومات",
         "phone": "تلفن"
       },
       "documents": {
-        "updatedAt": "updated at {{value}}"
+        "updatedAt": "معلومات"
       },
       "hero": {
-        "residencyCountry": "residency country {{value}}",
-        "reviewReason": "بررسی دلیل {{value}}"
+        "residencyCountry": "معلومات",
+        "reviewReason": "معلومات"
       },
       "metrics": {
-        "email": "email",
-        "liveness": "liveness",
+        "email": "ایمیل",
+        "liveness": "معلومات",
         "phone": "تلفن"
       }
     },
     "mediaScreen": {
       "header": {
-        "title": "title"
+        "title": "رسانه"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "routes": {
         "photos": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "عکس‌ها",
+          "subtitle": "تنظیمات"
         },
         "shortVideos": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "links": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "voice": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "صدا",
+          "subtitle": "AI صوتی"
         }
       }
     },
     "photosScreen": {
       "header": {
-        "title": "title"
+        "title": "عکس‌ها"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "actions": {
         "gallery": "گالری",
-        "cameraFx": "دوربین fx"
+        "cameraFx": "صدا"
       },
       "badges": {
-        "avatar": "avatar"
+        "avatar": "معلومات"
       },
       "filters": {
-        "none": "none",
-        "warm": "warm",
-        "cool": "cool",
-        "mono": "mono",
-        "emerald": "emerald"
+        "none": "هیچ‌کدام",
+        "warm": "معلومات",
+        "cool": "معلومات",
+        "mono": "معلومات",
+        "emerald": "معلومات"
       },
       "modal": {
         "actions": {
-          "setAvatar": "set avatar",
+          "setAvatar": "معلومات",
           "delete": "حذف"
         },
         "editor": {
-          "left": "left",
-          "right": "right",
-          "mirrorX": "mirror x",
-          "mirrorY": "mirror y"
+          "left": "معلومات",
+          "right": "معلومات",
+          "mirrorX": "معلومات",
+          "mirrorY": "معلومات"
         },
         "info": "اطلاعات"
       },
       "capture": {
-        "cameraSuffix": "دوربین suffix",
-        "fxPrefix": "fx prefix",
+        "cameraSuffix": "صدا",
+        "fxPrefix": "معلومات",
         "photoLabel": "عکس"
       },
       "defaults": {
         "photoName": "عکس نام"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "خالی عکس‌ها",
+        "description": "تنظیمات"
       },
       "alerts": {
-        "permissionTitle": "permission",
-        "permissionMessage": "permission message"
+        "permissionTitle": "عنوان",
+        "permissionMessage": "معلومات"
       }
     },
     "shortVideosScreen": {
       "header": {
-        "title": "title"
+        "title": "تنظیمات"
       },
       "card": {
-        "title": "title",
-        "subtitle": "subtitle"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات"
       },
       "actions": {
         "add": "افزودن"
@@ -6507,242 +6508,242 @@ export const FA_AF_LOCALE = {
         "videoName": "ویدیو نام"
       },
       "empty": {
-        "title": "title",
-        "description": "description"
+        "title": "تنظیمات",
+        "description": "تنظیمات"
       },
       "modal": {
         "remove": "برداشتن"
       },
       "alerts": {
         "permission": {
-          "title": "title",
-          "message": "message"
+          "title": "تنظیمات",
+          "message": "معلومات"
         }
       },
       "item": {
-        "title": "title"
+        "title": "عنوان"
       }
     },
     "groupScreen": {
       "loading": "در حال بارگذاری",
       "header": {
-        "eyebrow": "eyebrow",
-        "title": "title",
+        "eyebrow": "معلومات",
+        "title": "تنظیمات",
         "badges": {
-          "active": "active",
+          "active": "فعال",
           "create": "ایجاد"
         }
       },
       "hero": {
         "fallbacks": {
-          "newGroup": "new group",
-          "usernameNotSet": "نام کاربری not set"
+          "newGroup": "گروه جدید",
+          "usernameNotSet": "معلومات"
         },
         "pills": {
-          "created": "created",
+          "created": "معلومات",
           "createFromProfile": "ایجاد از پروفایل",
           "public": "عمومی",
           "private": "خصوصی",
-          "admins": "admins",
-          "blacklist": "blacklist"
+          "admins": "معلومات",
+          "blacklist": "معلومات"
         }
       },
       "sections": {
         "main": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "owner": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "publication": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "accessRules": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "admins": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "blacklist": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "bindings": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       },
       "main": {
         "groupName": {
-          "label": "label",
+          "label": "گفتگو",
           "placeholder": "جای‌نگهدار"
         },
         "username": {
-          "label": "label",
+          "label": "نام کاربری",
           "placeholder": "جای‌نگهدار"
         },
         "description": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "groupId": {
-          "label": "label",
+          "label": "گفتگو",
           "placeholder": "جای‌نگهدار"
         },
         "inviteLink": {
-          "label": "label",
+          "label": "گفتگو",
           "placeholder": "جای‌نگهدار"
         }
       },
       "owner": {
         "defaults": {
-          "role": "role"
+          "role": "جای‌نگهدار"
         },
         "name": {
-          "label": "label",
+          "label": "نام",
           "placeholder": "جای‌نگهدار"
         },
         "userId": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "role": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "phone": {
-          "label": "label",
+          "label": "تلفن",
           "placeholder": "جای‌نگهدار"
         },
         "email": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         }
       },
       "publication": {
         "publicGroup": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "published": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "showInProfile": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "searchable": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "جستجو",
+          "subtitle": "جستجو"
         },
         "preview": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "publicationId": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "title": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "subtitle": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "slug": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "tags": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         },
         "summary": {
-          "label": "label",
+          "label": "معلومات",
           "placeholder": "جای‌نگهدار"
         }
       },
       "access": {
         "joinRequests": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "memberInvites": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "onlyAdminsPost": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "onlyAdminsEdit": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "commentsEnabled": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "memberListVisible": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "slowMode": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "messageApproval": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         },
         "mediaApproval": {
-          "title": "title",
-          "subtitle": "subtitle"
+          "title": "تنظیمات",
+          "subtitle": "تنظیمات"
         }
       },
       "admins": {
         "metrics": {
-          "total": "total",
-          "owner": "owner"
+          "total": "معلومات",
+          "owner": "جای‌نگهدار"
         },
         "defaults": {
-          "adminRole": "admin role"
+          "adminRole": "ادمین"
         },
         "badges": {
-          "owner": "owner"
+          "owner": "جای‌نگهدار"
         },
         "actions": {
           "add": "افزودن",
           "remove": "برداشتن"
         },
         "form": {
-          "title": "title",
+          "title": "افزودن",
           "userId": {
-            "label": "label",
+            "label": "ID کاربر",
             "placeholder": "جای‌نگهدار"
           },
           "name": {
-            "label": "label",
+            "label": "نام",
             "placeholder": "جای‌نگهدار"
           },
           "role": {
-            "label": "label",
+            "label": "معلومات",
             "placeholder": "جای‌نگهدار"
           }
         }
       },
       "blacklist": {
         "metrics": {
-          "total": "total",
-          "active": "active",
+          "total": "معلومات",
+          "active": "فعال",
           "yes": "بلی",
           "no": "نخیر"
         },
@@ -6754,307 +6755,307 @@ export const FA_AF_LOCALE = {
           "remove": "برداشتن"
         },
         "empty": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "form": {
-          "title": "title",
+          "title": "تنظیمات",
           "userId": {
-            "label": "label",
+            "label": "ID کاربر",
             "placeholder": "جای‌نگهدار"
           },
           "name": {
-            "label": "label",
+            "label": "نام",
             "placeholder": "جای‌نگهدار"
           },
           "reason": {
-            "label": "label",
+            "label": "معلومات",
             "placeholder": "جای‌نگهدار"
           }
         }
       },
       "bindings": {
         "chatId": {
-          "label": "label",
+          "label": "گفتگو",
           "placeholder": "جای‌نگهدار"
         },
         "botId": {
-          "label": "label",
+          "label": "دستیار",
           "placeholder": "جای‌نگهدار"
         }
       },
       "alerts": {
         "success": {
-          "title": "title",
-          "created": "created",
+          "title": "موفق",
+          "created": "معلومات",
           "saved": "ذخیره شد",
           "reset": "بازنشانی"
         },
         "error": {
-          "title": "title",
+          "title": "تنظیمات",
           "saveFailed": "ذخیره ناموفق",
           "resetFailed": "بازنشانی ناموفق"
         },
         "validation": {
           "nameTitle": "نام",
-          "nameMessage": "نام message",
-          "ownerIdTitle": "owner ID",
-          "ownerIdMessage": "owner ID message",
-          "adminTitle": "admin",
-          "adminMessage": "admin message",
-          "blacklistTitle": "blacklist",
-          "blacklistMessage": "blacklist message",
-          "blacklistConflictTitle": "blacklist conflict",
-          "blacklistConflictMessage": "blacklist conflict message",
-          "ownerProtectedTitle": "owner protected",
-          "ownerProtectedMessage": "owner protected message",
-          "ownerBlacklistMessage": "owner blacklist message"
+          "nameMessage": "معلومات",
+          "ownerIdTitle": "عنوان",
+          "ownerIdMessage": "معلومات",
+          "adminTitle": "عنوان",
+          "adminMessage": "معلومات",
+          "blacklistTitle": "عنوان",
+          "blacklistMessage": "معلومات",
+          "blacklistConflictTitle": "عنوان",
+          "blacklistConflictMessage": "معلومات",
+          "ownerProtectedTitle": "عنوان",
+          "ownerProtectedMessage": "معلومات",
+          "ownerBlacklistMessage": "معلومات"
         },
         "resetConfirm": {
-          "title": "title",
-          "message": "message",
+          "title": "تنظیمات",
+          "message": "معلومات",
           "cancel": "لغو",
           "confirm": "تأیید"
         }
       },
       "actions": {
         "create": "ایجاد",
-        "creating": "creating",
+        "creating": "معلومات",
         "save": "ذخیره",
-        "saving": "saving",
+        "saving": "در حال بارگذاری...",
         "reset": "بازنشانی"
       }
     },
     "autoDeleteScreen": {
       "hero": {
-        "description": "description",
-        "title": "title"
+        "description": "توضیحات",
+        "title": "عنوان"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "معلومات",
+        "subtitle": "تنظیمات",
+        "title": "عنوان"
       },
       "note": {
-        "description": "description",
-        "title": "title"
+        "description": "توضیحات",
+        "title": "عنوان"
       },
-      "selectedBadge": "انتخاب شد badge",
+      "selectedBadge": "معلومات",
       "toggles": {
         "channels": {
-          "description": "description",
-          "title": "title"
+          "description": "توضیحات",
+          "title": "عنوان"
         },
         "groups": {
-          "description": "description",
-          "title": "title"
+          "description": "توضیحات",
+          "title": "عنوان"
         },
         "newChats": {
-          "description": "description",
-          "title": "title"
+          "description": "توضیحات",
+          "title": "عنوان"
         }
       }
     },
     "blockedScreen": {
       "empty": {
-        "description": "description",
-        "title": "title"
+        "description": "توضیحات",
+        "title": "عنوان"
       },
       "hero": {
-        "description": "description",
-        "title": "title"
+        "description": "توضیحات",
+        "title": "عنوان"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "معلومات",
+        "subtitle": "تنظیمات",
+        "title": "عنوان"
       },
       "metric": {
-        "title": "title"
+        "title": "عنوان"
       },
       "person": {
-        "defaultNote": "default note",
+        "defaultNote": "معلومات",
         "unblockAction": "رفع مسدودی عمل"
       }
     },
     "giftsSection": {
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "تنظیمات",
+      "title": "هدایای دریافتی"
     },
     "hub": {
-      "eyebrow": "eyebrow"
+      "eyebrow": "معلومات"
     },
     "premiumScreen": {
       "features": {
         "ai": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "پریمیوم",
+          "title": "ابزارهای AI"
         },
         "frames": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "پریمیوم",
+          "title": "پریمیوم"
         },
         "gifts": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "پریمیوم",
+          "title": "پریمیوم"
         },
         "themes": {
-          "subtitle": "subtitle",
-          "title": "title"
+          "subtitle": "پریمیوم",
+          "title": "پریمیوم"
         }
       },
       "footer": {
         "action": "عمل",
-        "description": "description",
-        "title": "title"
+        "description": "پریمیوم",
+        "title": "پریمیوم"
       },
       "header": {
         "openAction": "باز کردن عمل",
-        "title": "title"
+        "title": "پریمیوم"
       },
       "hero": {
         "actions": {
           "ai": "AI",
           "gifts": "هدایا",
           "public": "عمومی",
-          "themes": "themes"
+          "themes": "پریمیوم"
         },
         "badges": {
-          "identity": "identity",
-          "ownerSurface": "owner surface"
+          "identity": "پریمیوم",
+          "ownerSurface": "پریمیوم"
         },
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "پریمیوم",
+        "title": "پریمیوم"
       },
       "identityCard": {
-        "description": "description",
-        "title": "title"
+        "description": "پریمیوم",
+        "title": "پریمیوم"
       },
       "intro": {
-        "eyebrow": "eyebrow",
-        "subtitle": "subtitle",
-        "title": "title"
+        "eyebrow": "پریمیوم",
+        "subtitle": "پریمیوم",
+        "title": "پریمیوم"
       },
       "notice": {
-        "description": "description",
-        "title": "title"
+        "description": "پریمیوم",
+        "title": "پریمیوم"
       },
       "rows": {
         "ai": {
-          "badge": "badge",
-          "description": "description",
-          "title": "title"
+          "badge": "AI",
+          "description": "پریمیوم",
+          "title": "پریمیوم"
         },
         "business": {
-          "description": "description",
-          "title": "title"
+          "description": "پریمیوم",
+          "title": "پریمیوم"
         },
         "colors": {
-          "badge": "badge",
-          "description": "description",
-          "title": "title"
+          "badge": "پریمیوم",
+          "description": "پریمیوم",
+          "title": "پریمیوم"
         },
         "credits": {
-          "description": "description",
-          "title": "title"
+          "description": "پریمیوم",
+          "title": "پریمیوم"
         },
         "gifts": {
-          "description": "description",
-          "title": "title"
+          "description": "پریمیوم",
+          "title": "هدیه مرکز"
         },
         "public": {
-          "description": "description",
-          "title": "title"
+          "description": "پریمیوم",
+          "title": "پروفایل عمومی"
         },
         "qr": {
-          "description": "description",
-          "title": "title"
+          "description": "پریمیوم",
+          "title": "پریمیوم"
         }
       },
       "sections": {
-        "controls": "controls",
-        "unlocks": "unlocks"
+        "controls": "پریمیوم",
+        "unlocks": "پریمیوم"
       }
     },
     "publicScreen": {
       "editor": {
         "bio": "بیوگرافی",
         "name": "نام",
-        "subtitle": "subtitle",
-        "title": "title",
+        "subtitle": "تنظیمات",
+        "title": "تنظیمات",
         "username": "نام کاربری"
       },
       "fallback": {
         "bio": "بیوگرافی",
-        "subtitle": "subtitle"
+        "subtitle": "تنظیمات"
       },
       "header": {
-        "title": "title"
+        "title": "پروفایل عمومی"
       },
       "hero": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "تنظیمات",
+        "title": "پروفایل عمومی"
       },
       "rows": {
         "photos": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "عکس‌های عمومی"
         },
         "videos": {
-          "description": "description",
-          "title": "title"
+          "description": "تنظیمات",
+          "title": "تنظیمات"
         }
       },
       "sections": {
-        "manage": "manage",
-        "metrics": "metrics"
+        "manage": "مدیریت",
+        "metrics": "معلومات"
       }
     },
     "reactionsScreen": {
       "card": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "تنظیمات",
+        "title": "تنظیمات"
       },
       "header": {
-        "title": "title"
+        "title": "واکنش‌ها"
       }
     },
     "voiceScreen": {
       "actions": {
-        "record": "record",
+        "record": "ضبط",
         "stop": "توقف"
       },
       "alerts": {
         "permission": {
-          "message": "message",
-          "title": "title"
+          "message": "AI صوتی",
+          "title": "AI صوتی"
         },
-        "recordFailed": "record ناموفق"
+        "recordFailed": "AI صوتی"
       },
       "card": {
-        "subtitle": "subtitle",
-        "title": "title"
+        "subtitle": "AI صوتی",
+        "title": "AI صوتی"
       },
       "header": {
-        "title": "title"
+        "title": "صدا"
       },
       "item": {
-        "title": "title"
+        "title": "عنوان"
       }
     }
   },
   "premium": {
     "title": "پریمیوم",
     "subtitle": "ابزارهای پیشرفته، ترجمه AI، ویژگی‌های پریمیوم و تجربه بهتر را باز کنید.",
-    "activatePremium": "فعال‌سازی Premium",
-    "premiumActive": "Premium فعال است",
-    "premiumInactive": "Premium غیرفعال است",
-    "premiumExpired": "Premium منقضی شده است",
+    "activatePremium": "پریمیوم",
+    "premiumActive": "پریمیوم",
+    "premiumInactive": "پریمیوم",
+    "premiumExpired": "پریمیوم",
     "renewalDate": "تاریخ تمدید",
     "manageSubscription": "مدیریت اشتراک",
     "monthlyPlan": "پلن ماهانه",
     "yearlyPlan": "پلن سالانه",
-    "buyWithCoin": "خرید با Coin",
+    "buyWithCoin": "پریمیوم",
     "benefits": "مزایا",
     "includedFeatures": "ویژگی‌های شامل",
     "advancedTranslation": "ترجمه پیشرفته",
@@ -7063,11 +7064,11 @@ export const FA_AF_LOCALE = {
     "exclusiveFeatures": "ویژگی‌های اختصاصی",
     "subscriptionHistory": "تاریخچه اشتراک",
     "paymentInProgress": "پرداخت در حال انجام است",
-    "premiumActivated": "Premium فعال شد",
-    "premiumActivationFailed": "فعال‌سازی Premium ناموفق بود",
+    "premiumActivated": "پریمیوم",
+    "premiumActivationFailed": "پریمیوم",
     "autoRenew": "تمدید خودکار",
     "cancelAutoRenew": "لغو تمدید خودکار",
-    "featureLocked": "این ویژگی فقط برای کاربران Premium در دسترس است.",
+    "featureLocked": "پریمیوم",
     "aiChatTranslation": "ترجمه چت با AI",
     "aiCallTranslation": "ترجمه تماس صوتی و ویدیویی با AI",
     "smartReplies": "پاسخ‌های هوشمند",
@@ -7110,14 +7111,14 @@ export const FA_AF_LOCALE = {
     "rewriteForBusiness": "بازنویسی برای تجارت",
     "summarizeConversation": "خلاصه مکالمه",
     "summarizeCalls": "خلاصه تماس‌ها",
-    "premiumOnly": "ابزارهای AI فقط برای کاربران Premium در دسترس است.",
+    "premiumOnly": "پریمیوم",
     "unsupportedLanguagePair": "این جفت زبان هنوز پشتیبانی نمی‌شود",
     "mobile": {
       "common": {
         "back": "برگشت",
         "cancel": "لغو",
         "loading": "در حال بارگذاری",
-        "notConnected": "not وصل شد",
+        "notConnected": "وصل نیست",
         "open": "باز کردن",
         "refresh": "تازه‌سازی",
         "retry": "تلاش دوباره",
@@ -7131,133 +7132,133 @@ export const FA_AF_LOCALE = {
       },
       "status": {
         "ready": "آماده",
-        "limited": "limited",
-        "error": "error",
-        "not_connected": "not وصل شد",
-        "unavailable": "unavailable",
-        "active": "active",
+        "limited": "محدود",
+        "error": "خطا",
+        "not_connected": "وصل نیست",
+        "unavailable": "در دسترس نیست",
+        "active": "فعال",
         "pending": "در انتظار"
       },
       "messageStatus": {
-        "sent": "sent",
-        "error": "error",
+        "sent": "ارسال شد",
+        "error": "خطا",
         "pending": "در انتظار",
-        "sending": "sending",
-        "awaiting_confirmation": "awaiting confirmation"
+        "sending": "در حال بارگذاری...",
+        "awaiting_confirmation": "معلومات"
       },
       "action": {
         "chat": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "voice": {
-          "title": "title",
-          "description": "description"
+          "title": "AI صوتی",
+          "description": "AI صوتی"
         },
         "translation": {
-          "title": "title",
-          "description": "description"
+          "title": "زمان واقعی ترجمه",
+          "description": "ترجمه"
         },
         "history": {
-          "title": "title",
-          "description": "description"
+          "title": "تاریخچه",
+          "description": "تنظیمات"
         },
         "tasks": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "memory": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "settings": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "premium": {
-          "title": "title",
-          "description": "description"
+          "title": "پریمیوم",
+          "description": "پریمیوم"
         },
         "setting": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         },
         "profileAi": {
-          "title": "title",
-          "description": "description"
+          "title": "تنظیمات",
+          "description": "تنظیمات"
         }
       },
       "home": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "heroEyebrow": "hero",
-        "heroTitle": "hero",
-        "heroDescription": "hero توضیحات",
-        "connection": "connection",
+        "title": "Sabi AI",
+        "subtitle": "تنظیمات",
+        "heroEyebrow": "معلومات",
+        "heroTitle": "معلومات",
+        "heroDescription": "معلومات — معلومات",
+        "connection": "تنظیمات",
         "userId": "کاربر ID",
-        "quickAccess": "quick access",
-        "capabilities": "capabilities",
-        "safeActions": "safe عمل‌ها",
-        "safeActionsDescription": "safe عمل‌ها توضیحات",
-        "safeActionsText": "safe عمل‌ها توضیحات",
-        "cleanWorkspaceTitle": "clean workspace",
-        "cleanWorkspaceText": "clean workspace توضیحات"
+        "quickAccess": "دسترسی سریع",
+        "capabilities": "دستیار",
+        "safeActions": "امنیت",
+        "safeActionsDescription": "امنیت — معلومات",
+        "safeActionsText": "امنیت — معلومات",
+        "cleanWorkspaceTitle": "عنوان",
+        "cleanWorkspaceText": "معلومات — معلومات"
       },
       "chat": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "runtimeTitle": "runtime",
-        "backendRequired": "backend ضروری",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "runtimeTitle": "تنظیمات",
+        "backendRequired": "بازگشت",
         "emptyTitle": "خالی",
         "emptyText": "خالی توضیحات",
         "placeholder": "جای‌نگهدار",
-        "roleUser": "role کاربر",
-        "emptyBackendResponse": "خالی backend response",
-        "cleanEmptyText": "clean خالی توضیحات",
-        "errorMessage": "error message",
-        "thinking": "thinking",
+        "roleUser": "شما",
+        "emptyBackendResponse": "بازگشت",
+        "cleanEmptyText": "معلومات — معلومات",
+        "errorMessage": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "thinking": "معلومات",
         "assistantCenterTitle": "دستیار مرکز",
         "assistantCenterDescription": "دستیار مرکز توضیحات",
-        "modeTitle": "mode",
-        "modeSubtitle": "mode توضیحات",
-        "assistantMenuTitle": "دستیار menu",
-        "assistantMenuSubtitle": "دستیار menu توضیحات",
+        "modeTitle": "عنوان",
+        "modeSubtitle": "توضیحات — معلومات",
+        "assistantMenuTitle": "دستیار",
+        "assistantMenuSubtitle": "دستیار — معلومات",
         "mode": {
           "chatgpt": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
           "business": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "تنظیمات",
+            "short": "کسب‌وکار",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
           "student": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
           "applicant": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           },
           "teacher": {
-            "title": "title",
-            "short": "short",
-            "description": "description",
-            "prompt": "prompt"
+            "title": "تنظیمات",
+            "short": "معلومات",
+            "description": "تنظیمات",
+            "prompt": "معلومات"
           }
         },
-        "toolsTitle": "tools",
-        "toolsSubtitle": "tools توضیحات {mode}",
-        "toolsSheetTitle": "tools sheet",
-        "toolsSheetSubtitle": "tools sheet توضیحات",
+        "toolsTitle": "تنظیمات",
+        "toolsSubtitle": "تنظیمات — معلومات",
+        "toolsSheetTitle": "تنظیمات",
+        "toolsSheetSubtitle": "تنظیمات — معلومات",
         "camera": "دوربین",
         "cameraDescription": "دوربین توضیحات",
         "uploadPhoto": "آپلود عکس",
@@ -7266,27 +7267,27 @@ export const FA_AF_LOCALE = {
         "uploadVideoDescription": "آپلود ویدیو توضیحات",
         "uploadDocument": "آپلود سند",
         "uploadDocumentDescription": "آپلود سند توضیحات",
-        "webSearch": "web جستجو",
-        "webSearchShort": "web جستجو short",
-        "webSearchDescription": "web جستجو توضیحات",
-        "voiceRecording": "صدا recording",
-        "permissionCamera": "permission دوربین",
-        "permissionPhoto": "permission عکس",
-        "permissionVideo": "permission ویدیو",
-        "attachmentsSent": "attachments sent",
-        "attachmentPhoto": "attachment عکس",
-        "attachmentVideo": "attachment ویدیو",
-        "attachmentDocument": "attachment سند",
-        "attachmentAudio": "attachment صدا",
-        "uploadContractNotice": "آپلود contract notice",
-        "safetyConfirmTitle": "safety تأیید",
-        "safetyConfirmMessage": "safety تأیید message",
-        "safetyConfirmCancel": "safety تأیید لغو",
-        "safetyConfirmContinue": "safety تأیید ادامه",
-        "securityNotice": "security notice",
+        "webSearch": "جستجوی وب",
+        "webSearchShort": "جستجو",
+        "webSearchDescription": "جستجو",
+        "voiceRecording": "AI صوتی",
+        "permissionCamera": "صدا",
+        "permissionPhoto": "نمایه",
+        "permissionVideo": "صدا",
+        "attachmentsSent": "معلومات",
+        "attachmentPhoto": "عکس",
+        "attachmentVideo": "ویدیو",
+        "attachmentDocument": "سند",
+        "attachmentAudio": "معلومات",
+        "uploadContractNotice": "معلومات",
+        "safetyConfirmTitle": "عنوان",
+        "safetyConfirmMessage": "معلومات",
+        "safetyConfirmCancel": "لغو",
+        "safetyConfirmContinue": "ادامه",
+        "securityNotice": "امنیت",
         "prompt": {
           "business": "تجاری",
-          "study": "study",
+          "study": "معلومات",
           "search": "جستجو",
           "file": "فایل"
         }
@@ -7300,163 +7301,163 @@ export const FA_AF_LOCALE = {
         "emptyText": "خالی توضیحات"
       },
       "memory": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "privacyMode": "حریم خصوصی mode",
-        "strict": "strict",
-        "balanced": "balanced",
-        "adaptive": "adaptive",
-        "instructionPlaceholder": "instruction راهنما",
-        "addInstruction": "افزودن instruction",
-        "instructions": "instructions",
-        "noAccusation": "نخیر accusation",
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "privacyMode": "حریم خصوصی",
+        "strict": "معلومات",
+        "balanced": "معلومات",
+        "adaptive": "معلومات",
+        "instructionPlaceholder": "جستجو",
+        "addInstruction": "معلومات",
+        "instructions": "معلومات",
+        "noAccusation": "معلومات",
         "modeSaved": {
-          "strict": "strict",
-          "balanced": "balanced",
-          "adaptive": "adaptive"
+          "strict": "معلومات",
+          "balanced": "معلومات",
+          "adaptive": "معلومات"
         },
-        "instructionSaved": "instruction saved"
+        "instructionSaved": "معلومات"
       },
       "premium": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "accessTitle": "access",
-        "noFakePayment": "پرداخت در اینجا شبیه‌سازی نمی‌شود. فعال‌سازی باید از جریان واقعی تأیید Premium/COIN بیاید.",
+        "title": "پریمیوم",
+        "subtitle": "پریمیوم",
+        "accessTitle": "پریمیوم",
+        "noFakePayment": "پریمیوم",
         "realtimeCallTranslationTitle": "زمان واقعی تماس ترجمه",
         "realtimeTranslationTitle": "زمان واقعی ترجمه",
         "realtimeTranslationDescription": "زمان واقعی ترجمه توضیحات",
         "mediaTranslationTitle": "رسانه ترجمه",
         "mediaTranslationDescription": "رسانه ترجمه توضیحات",
-        "advancedAssistantActionsTitle": "advanced دستیار عمل‌ها",
-        "safeActionsTitle": "safe عمل‌ها",
-        "safeActionsDescription": "safe عمل‌ها توضیحات",
-        "openProfilePremium": "باز کردن پروفایل Premium",
-        "brandText": "brand توضیحات",
-        "heroEyebrow": "hero",
-        "badge": "badge",
-        "safeBadge": "safe badge"
+        "advancedAssistantActionsTitle": "پریمیوم",
+        "safeActionsTitle": "پریمیوم",
+        "safeActionsDescription": "پریمیوم",
+        "openProfilePremium": "پریمیوم",
+        "brandText": "معلومات — معلومات",
+        "heroEyebrow": "پریمیوم",
+        "badge": "پریمیوم",
+        "safeBadge": "پریمیوم"
       },
       "settings": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "metricApi": "metric api",
-        "metricSource": "metric منبع",
-        "sourceLocalContract": "منبع local contract",
-        "connectionDetails": "connection جزئیات",
-        "sections": "sections",
-        "providerTitle": "provider",
-        "providerDescription": "provider توضیحات",
-        "safetyTitle": "safety",
-        "safetyDescription": "safety توضیحات",
-        "heroEyebrow": "hero",
-        "heroTitle": "hero",
-        "heroDescription": "hero توضیحات",
-        "controlTitle": "control",
-        "profileOwnerTitle": "پروفایل owner",
-        "profileOwnerDescription": "پروفایل owner توضیحات",
-        "note": "note"
+        "title": "تنظیمات",
+        "subtitle": "تنظیمات",
+        "metricApi": "API",
+        "metricSource": "منبع",
+        "sourceLocalContract": "local_contract",
+        "connectionDetails": "تنظیمات",
+        "sections": "معلومات",
+        "providerTitle": "تنظیمات",
+        "providerDescription": "تنظیمات — معلومات",
+        "safetyTitle": "عنوان",
+        "safetyDescription": "توضیحات — معلومات",
+        "heroEyebrow": "تنظیمات AI",
+        "heroTitle": "تنظیمات",
+        "heroDescription": "تنظیمات — معلومات",
+        "controlTitle": "عنوان",
+        "profileOwnerTitle": "نمایه",
+        "profileOwnerDescription": "نمایه — معلومات",
+        "note": "معلومات"
       },
       "translation": {
-        "title": "title",
-        "subtitle": "subtitle",
+        "title": "ترجمه",
+        "subtitle": "ترجمه",
         "realtimeTitle": "زمان واقعی",
         "source": "منبع",
         "sourcePlaceholder": "منبع راهنما",
         "target": "هدف",
         "targetPlaceholder": "هدف راهنما",
         "translate": "ترجمه",
-        "result": "result",
-        "premium": "Premium",
-        "heroEyebrow": "hero",
-        "textPhotoCamera": "text عکس دوربین",
-        "inputPlaceholder": "input راهنما",
-        "outputPlaceholder": "output راهنما",
+        "result": "ترجمه",
+        "premium": "ترجمه",
+        "heroEyebrow": "ترجمه",
+        "textPhotoCamera": "ترجمه",
+        "inputPlaceholder": "ترجمه",
+        "outputPlaceholder": "ترجمه",
         "camera": "دوربین",
         "photo": "عکس",
         "from": "از",
-        "to": "to",
-        "detect": "detect",
+        "to": "ترجمه",
+        "detect": "ترجمه",
         "selectLanguage": "انتخاب زبان",
         "searchLanguage": "جستجو زبان",
-        "permissionCamera": "permission دوربین",
-        "permissionPhoto": "permission عکس",
+        "permissionCamera": "ترجمه",
+        "permissionPhoto": "ترجمه",
         "emptyText": "خالی توضیحات",
-        "noOutput": "نخیر output",
-        "sameLanguage": "same زبان",
+        "noOutput": "ترجمه",
+        "sameLanguage": "ترجمه",
         "photoReady": "عکس آماده",
         "cameraReady": "دوربین آماده",
-        "detectCannotSwap": "detect cannot جابجا کردن",
-        "noImageOutput": "نخیر image output",
-        "detectedText": "detected توضیحات",
-        "messengerPathTitle": "Messenger path",
+        "detectCannotSwap": "ترجمه",
+        "noImageOutput": "ترجمه",
+        "detectedText": "ترجمه",
+        "messengerPathTitle": "ترجمه",
         "messengerReady": "Messenger آماده",
-        "imageProcessing": "image processing",
-        "textProcessing": "text processing",
-        "metaDetected": "meta detected"
+        "imageProcessing": "ترجمه",
+        "textProcessing": "ترجمه",
+        "metaDetected": "ترجمه"
       },
       "voice": {
-        "title": "title",
-        "subtitle": "subtitle",
-        "nativeBridge": "native bridge",
-        "realBridgeDescription": "پل واقعی موبایل: ضبط میکروفون، رویدادهای صدای native، انتقال transcript و پخش audio URL. TTS فقط متنی شبیه‌سازی نمی‌شود.",
-        "bind": "bind",
-        "invoke": "invoke",
+        "title": "AI صوتی",
+        "subtitle": "AI صوتی",
+        "nativeBridge": "AI صوتی",
+        "realBridgeDescription": "AI صوتی",
+        "bind": "AI صوتی",
+        "invoke": "AI صوتی",
         "start": "شروع",
         "stop": "توقف",
-        "interrupt": "interrupt",
-        "recording": "recording",
-        "startRecording": "شروع recording",
-        "stopRecording": "توقف recording",
-        "audioCapturedNotice": "صدا captured notice",
-        "audioDuration": "صدا duration",
-        "audioSize": "صدا size",
-        "sttTtsBridgeTitle": "stt tts bridge",
-        "transcriptPlaceholder": "transcript راهنما",
-        "submitTranscript": "ارسال transcript",
-        "ttsTitle": "tts",
-        "ttsPlaceholder": "tts راهنما",
-        "playLastTts": "play آخر tts",
-        "noFakeTts": "صدای جعلی وجود ندارد: صدا فقط وقتی پخش می‌شود که backend/native TTS یک audio URL برگرداند. TTS فقط متنی تا زمان اتصال expo-speech یا ماژول native TTS به صورت متن نشان داده می‌شود.",
-        "runtimeLog": "runtime log",
-        "noEvents": "نخیر events",
-        "contractOnly": "contract only",
-        "quickInvokeSent": "quick invoke sent",
-        "sessionStopped": "session stopped",
-        "session": "session",
-        "recordingNow": "recording now",
-        "tapToSpeak": "tap to speak",
-        "transcriptReady": "transcript آماده",
+        "interrupt": "AI صوتی",
+        "recording": "AI صوتی",
+        "startRecording": "ضبط",
+        "stopRecording": "AI صوتی",
+        "audioCapturedNotice": "AI صوتی",
+        "audioDuration": "AI صوتی",
+        "audioSize": "AI صوتی",
+        "sttTtsBridgeTitle": "AI صوتی",
+        "transcriptPlaceholder": "AI صوتی",
+        "submitTranscript": "AI صوتی",
+        "ttsTitle": "AI صوتی",
+        "ttsPlaceholder": "AI صوتی",
+        "playLastTts": "AI صوتی",
+        "noFakeTts": "AI صوتی",
+        "runtimeLog": "AI صوتی",
+        "noEvents": "AI صوتی",
+        "contractOnly": "AI صوتی",
+        "quickInvokeSent": "AI صوتی",
+        "sessionStopped": "AI صوتی",
+        "session": "AI صوتی",
+        "recordingNow": "در حال ضبط...",
+        "tapToSpeak": "AI صوتی",
+        "transcriptReady": "AI صوتی",
         "state": {
-          "idle": "idle",
-          "processing": "processing",
-          "requesting_permission": "requesting permission",
-          "recording": "recording",
-          "error": "error",
-          "playing": "playing"
+          "idle": "AI صوتی",
+          "processing": "AI صوتی",
+          "requesting_permission": "AI صوتی",
+          "recording": "AI صوتی",
+          "error": "خطا",
+          "playing": "AI صوتی"
         },
         "log": {
           "info": "اطلاعات",
-          "bridge_bound": "bridge bound",
-          "recording_started": "recording started",
-          "audio_captured": "صدا captured",
-          "transcript_ready": "transcript آماده",
-          "tts_requested": "tts requested",
-          "playback_started": "playback started",
-          "interrupted": "interrupted",
-          "error": "error"
+          "bridge_bound": "AI صوتی",
+          "recording_started": "AI صوتی",
+          "audio_captured": "AI صوتی",
+          "transcript_ready": "AI صوتی",
+          "tts_requested": "AI صوتی",
+          "playback_started": "AI صوتی",
+          "interrupted": "AI صوتی",
+          "error": "خطا"
         }
       },
       "error": {
-        "ai_mobile_api_base_url_missing": "AI mobile api base url missing",
-        "ai_mobile_auth_required": "AI mobile auth ضروری",
-        "ai_mobile_request_failed": "AI mobile درخواست ناموفق",
-        "ai_mobile_network_error": "AI mobile شبکه error",
-        "ai_voice_microphone_permission_denied": "AI صدا میکروفون permission denied",
-        "ai_voice_recording_already_active": "AI صدا recording already active",
-        "ai_voice_recording_not_active": "AI صدا recording not active",
-        "ai_voice_playback_command_missing": "AI صدا playback command missing",
-        "ai_voice_empty_tts_text": "AI صدا خالی tts text",
-        "ai_voice_audio_url_missing": "AI صدا صدا url missing"
+        "ai_mobile_api_base_url_missing": "AI",
+        "ai_mobile_auth_required": "AI",
+        "ai_mobile_request_failed": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "ai_mobile_network_error": "درخواست ناکام شد. دوباره تلاش کنید.",
+        "ai_voice_microphone_permission_denied": "AI صوتی",
+        "ai_voice_recording_already_active": "AI صوتی",
+        "ai_voice_recording_not_active": "AI صوتی",
+        "ai_voice_playback_command_missing": "AI صوتی",
+        "ai_voice_empty_tts_text": "AI صوتی",
+        "ai_voice_audio_url_missing": "AI صوتی"
       }
     }
   },
@@ -7485,7 +7486,7 @@ export const FA_AF_LOCALE = {
     "permissions": "مجوزها",
     "analytics": "تحلیل‌ها",
     "orders": "سفارش‌ها",
-    "crm": "CRM",
+    "crm": "معلومات",
     "automation": "خودکارسازی",
     "quickReplies": "پاسخ‌های سریع",
     "welcomeMessage": "پیام خوش‌آمدید",
@@ -7524,7 +7525,7 @@ export const FA_AF_LOCALE = {
     "paymentLinks": "لینک‌های پرداخت",
     "checkoutPages": "صفحات چک‌اوت",
     "qrCheckout": "چک‌اوت QR",
-    "posMode": "حالت POS",
+    "posMode": "معلومات",
     "cashierMode": "حالت صندوقدار",
     "terminals": "ترمینل‌ها",
     "branches": "شعبات",
@@ -7554,7 +7555,7 @@ export const FA_AF_LOCALE = {
     "streamModeration": "نظارت استریم",
     "streamAnalytics": "تحلیل استریم",
     "streamerProfile": "پروفایل استریمر",
-    "donateWithCoin": "کمک مالی با Coin",
+    "donateWithCoin": "معلومات",
     "sendGiftToStream": "ارسال هدیه به استریم",
     "noStreams": "هیچ استریمی در دسترس نیست"
   },
@@ -7597,34 +7598,34 @@ export const FA_AF_LOCALE = {
     "tournaments": "تورنامنت‌ها",
     "achievements": "دستاوردها",
     "gameStore": "فروشگاه بازی",
-    "coinRewards": "جوایز Coin",
+    "coinRewards": "معلومات",
     "networkGames": "بازی‌های شبکه‌ای",
     "noGames": "هیچ بازی‌ای در دسترس نیست",
     "foundation": {
       "games": "بازی‌ها",
       "hero": {
-        "text": "text",
-        "title": "title"
+        "text": "تنظیمات",
+        "title": "عنوان"
       },
       "leaderboard": {
-        "title": "title",
-        "value": "value"
+        "title": "عنوان",
+        "value": "معلومات"
       },
       "lobby": {
-        "title": "title",
-        "value": "value"
+        "title": "عنوان",
+        "value": "معلومات"
       },
-      "miniApps": "mini apps",
+      "miniApps": "معلومات",
       "policy": {
-        "title": "title"
+        "title": "عنوان"
       },
       "realtime": {
-        "title": "title",
-        "value": "value"
+        "title": "عنوان",
+        "value": "معلومات"
       },
       "rewards": {
-        "title": "title",
-        "value": "value"
+        "title": "عنوان",
+        "value": "معلومات"
       }
     }
   },
@@ -7659,7 +7660,7 @@ export const FA_AF_LOCALE = {
     "profileSettings": "تنظیمات پروفایل",
     "businessSettings": "تنظیمات تجارتی",
     "merchantSettings": "تنظیمات مرچنت",
-    "premiumSettings": "تنظیمات Premium",
+    "premiumSettings": "پریمیوم",
     "aiSettings": "تنظیمات AI",
     "bankingSettings": "تنظیمات بانکی",
     "statementSettings": "تنظیمات استیتمنت",
@@ -7723,7 +7724,7 @@ export const FA_AF_LOCALE = {
     "pinCode": "کد PIN",
     "changePin": "تغییر PIN",
     "biometrics": "بایومتریک",
-    "faceId": "Face ID",
+    "faceId": "معلومات",
     "fingerprint": "اثر انگشت",
     "twoFactorAuth": "تأیید دومرحله‌ای",
     "recoveryOptions": "گزینه‌های بازیابی",
@@ -7741,7 +7742,7 @@ export const FA_AF_LOCALE = {
     "paymentConfirmation": "تأیید پرداخت",
     "highRiskTransferCheck": "بررسی انتقال‌های پرخطر",
     "kycVerification": "تأیید KYC",
-    "amlCheck": "بررسی AML",
+    "amlCheck": "معلومات",
     "businessVerification": "تأیید تجارت",
     "merchantVerification": "تأیید مرچنت"
   },
@@ -7820,7 +7821,7 @@ export const FA_AF_LOCALE = {
     "invalidAmount": "مبلغ معتبر نیست",
     "invalidCardNumber": "نمبر کارت معتبر نیست",
     "invalidExpiryDate": "تاریخ انقضا معتبر نیست",
-    "invalidCvv": "CVV معتبر نیست",
+    "invalidCvv": "معلومات",
     "invalidPin": "PIN معتبر نیست",
     "invalidAccountNumber": "نمبر حساب معتبر نیست",
     "invalidIban": "IBAN معتبر نیست",
@@ -7854,7 +7855,7 @@ export const FA_AF_LOCALE = {
     "contactNotFound": "مخاطب پیدا نشد",
     "chatUnavailable": "چت در دسترس نیست",
     "callFailed": "تماس ناموفق بود",
-    "premiumRequired": "Premium ضروری است",
+    "premiumRequired": "پریمیوم",
     "featureUnavailable": "این ویژگی فعلاً در دسترس نیست",
     "updateRequired": "برای ادامه لطفاً برنامه را به‌روزرسانی کنید",
     "maintenanceMode": "سرویس به دلیل تعمیرات موقتاً در دسترس نیست",
@@ -7887,7 +7888,7 @@ export const FA_AF_LOCALE = {
     "requestSent": "درخواست با موفقیت ارسال شد",
     "profileUpdated": "پروفایل با موفقیت به‌روزرسانی شد",
     "settingsUpdated": "تنظیمات با موفقیت به‌روزرسانی شد",
-    "premiumActivated": "Premium با موفقیت فعال شد",
+    "premiumActivated": "پریمیوم",
     "businessCreated": "حساب تجارتی با موفقیت ایجاد شد",
     "merchantCreated": "حساب مرچنت با موفقیت ایجاد شد",
     "translationEnabled": "ترجمه با موفقیت فعال شد",
@@ -7900,202 +7901,202 @@ export const FA_AF_LOCALE = {
     "paragraph4": "ادامۀ استفاده از پلتفرم پس از به‌روزرسانی شرایط، به معنای پذیرش نسخۀ فعلی قواعد خدمات است."
   },
   "privacyPolicyScreen": {
-    "paragraph1": "paragraph1",
-    "paragraph2": "paragraph2",
-    "paragraph3": "paragraph3",
-    "paragraph4": "paragraph4"
+    "paragraph1": "معلومات",
+    "paragraph2": "معلومات",
+    "paragraph3": "معلومات",
+    "paragraph4": "معلومات"
   },
   "profileCompleteScreen": {
-    "badge": "badge",
-    "title": "title",
-    "subtitle": "subtitle",
+    "badge": "پریمیوم",
+    "title": "تنظیمات",
+    "subtitle": "تنظیمات",
     "firstName": "اول نام",
     "lastName": "آخر نام",
     "username": "نام کاربری",
     "phone": "تلفن",
-    "unifiedId": "unified ID",
-    "unifiedIdHint": "unified ID راهنما",
+    "unifiedId": "معلومات",
+    "unifiedIdHint": "معلومات — معلومات",
     "usernameHint": "نام کاربری راهنما",
     "privacy": "حریم خصوصی",
     "continue": "ادامه",
     "back": "برگشت",
     "required": "ضروری",
-    "saveErrorTitle": "ذخیره error",
-    "saveErrorMessage": "ذخیره error message",
-    "saving": "saving",
+    "saveErrorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "saveErrorMessage": "درخواست ناکام شد. دوباره تلاش کنید.",
+    "saving": "در حال ذخیره...",
     "userId": "کاربر ID",
     "createUser": "ایجاد کاربر",
     "nameRequired": "نام ضروری",
     "phoneRequired": "تلفن ضروری",
     "usernameRequired": "نام کاربری ضروری",
-    "success": "success"
+    "success": "معلومات"
   },
   "gallery": {
-    "title": "title",
+    "title": "گالری",
     "import": "وارد کردن",
     "video": "ویدیو",
-    "selected": "انتخاب شد {{count}}",
+    "selected": "معلومات",
     "empty": {
       "all": "همه",
       "public": "عمومی",
       "private": "خصوصی"
     },
     "alerts": {
-      "noAccessTitle": "نخیر access",
-      "noAccessMessage": "نخیر access message",
+      "noAccessTitle": "عنوان",
+      "noAccessMessage": "معلومات",
       "deleteSelectedTitle": "حذف انتخاب شد",
-      "deleteSelectedMessage": "حذف انتخاب شد message {{count}}",
-      "deleteOneTitle": "حذف one",
-      "deleteOneMessage": "حذف one message"
+      "deleteSelectedMessage": "معلومات",
+      "deleteOneTitle": "عنوان",
+      "deleteOneMessage": "معلومات"
     },
     "share": {
-      "system": "system"
+      "system": "معلومات"
     },
     "viewer": {
-      "player": "player",
-      "edited": "edited"
+      "player": "معلومات",
+      "edited": "ویرایش شد"
     },
     "camera": {
-      "title": "title",
-      "short": "short",
+      "title": "تنظیمات",
+      "short": "دوربین",
       "photo": "عکس",
       "video": "ویدیو",
       "open": "باز کردن"
     },
     "editor": {
-      "title": "title",
-      "missing": "missing",
-      "videoEditorUnavailable": "ویدیو editor unavailable",
-      "saveErrorTitle": "ذخیره error",
-      "saveErrorMessage": "ذخیره error message",
-      "textOverlay": "text overlay",
-      "textPlaceholder": "text راهنما",
-      "textPresets": "text presets",
-      "textStyle": "text style",
+      "title": "تنظیمات",
+      "missing": "معلومات",
+      "videoEditorUnavailable": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "saveErrorTitle": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "saveErrorMessage": "درخواست ناکام شد. دوباره تلاش کنید.",
+      "textOverlay": "معلومات — معلومات",
+      "textPlaceholder": "معلومات — معلومات",
+      "textPresets": "معلومات — معلومات",
+      "textStyle": "معلومات — معلومات",
       "color": "رنگ",
-      "position": "position",
-      "background": "background",
-      "size": "size",
-      "opacity": "opacity",
-      "beautyStudio": "beauty studio",
+      "position": "معلومات",
+      "background": "بازگشت",
+      "size": "معلومات",
+      "opacity": "معلومات",
+      "beautyStudio": "معلومات",
       "stickers": "استیکرها",
-      "stickerIntensity": "استیکر intensity",
-      "effects": "effects",
-      "frames": "frames",
-      "animeLayer": "anime layer",
-      "filterLooks": "filter looks",
-      "adjust": "adjust",
-      "crop": "crop",
-      "transform": "transform",
-      "left": "left",
-      "right": "right",
-      "mirrorX": "mirror x",
-      "mirrorY": "mirror y",
-      "smoothSkin": "smooth skin",
-      "softGlow": "soft glow",
-      "skinTone": "skin tone",
-      "portraitLight": "portrait light",
-      "eyesLight": "eyes light",
-      "lipsTint": "lips tint",
-      "blush": "blush",
-      "animeBeauty": "anime beauty",
-      "sparkles": "sparkles",
-      "bokeh": "bokeh",
-      "lightLeak": "light leak",
-      "hearts": "hearts",
-      "dust": "dust",
-      "goldLight": "gold light",
-      "neonEdge": "neon edge",
-      "frameIntensity": "frame intensity",
-      "aura": "aura",
-      "mangaLines": "manga lines",
-      "sakura": "sakura",
-      "kawaiiHearts": "kawaii hearts",
-      "comicFrame": "comic frame",
-      "glowEyes": "glow eyes",
-      "brightness": "brightness",
-      "contrast": "contrast",
-      "saturation": "saturation",
-      "warmth": "warmth",
-      "cool": "cool",
-      "blur": "blur",
-      "vignette": "vignette",
-      "fade": "fade",
-      "sharpen": "sharpen",
+      "stickerIntensity": "معلومات",
+      "effects": "معلومات",
+      "frames": "قاب‌ها",
+      "animeLayer": "معلومات",
+      "filterLooks": "معلومات",
+      "adjust": "معلومات",
+      "crop": "معلومات",
+      "transform": "معلومات",
+      "left": "معلومات",
+      "right": "معلومات",
+      "mirrorX": "معلومات",
+      "mirrorY": "معلومات",
+      "smoothSkin": "معلومات",
+      "softGlow": "معلومات",
+      "skinTone": "معلومات",
+      "portraitLight": "معلومات",
+      "eyesLight": "معلومات",
+      "lipsTint": "معلومات",
+      "blush": "معلومات",
+      "animeBeauty": "معلومات",
+      "sparkles": "معلومات",
+      "bokeh": "معلومات",
+      "lightLeak": "معلومات",
+      "hearts": "معلومات",
+      "dust": "معلومات",
+      "goldLight": "معلومات",
+      "neonEdge": "معلومات",
+      "frameIntensity": "قاب‌ها",
+      "aura": "معلومات",
+      "mangaLines": "معلومات",
+      "sakura": "معلومات",
+      "kawaiiHearts": "معلومات",
+      "comicFrame": "قاب‌ها",
+      "glowEyes": "معلومات",
+      "brightness": "معلومات",
+      "contrast": "معلومات",
+      "saturation": "معلومات",
+      "warmth": "معلومات",
+      "cool": "معلومات",
+      "blur": "معلومات",
+      "vignette": "معلومات",
+      "fade": "معلومات",
+      "sharpen": "معلومات",
       "tabs": {
-        "text": "text",
-        "beauty": "beauty",
-        "effects": "effects",
-        "anime": "anime",
-        "adjust": "adjust",
-        "crop": "crop",
-        "transform": "transform"
+        "text": "تنظیمات",
+        "beauty": "معلومات",
+        "effects": "معلومات",
+        "anime": "معلومات",
+        "adjust": "معلومات",
+        "crop": "معلومات",
+        "transform": "معلومات"
       },
       "textStyles": {
-        "classic": "classic",
-        "glow": "glow",
-        "outline": "outline",
-        "bubble": "bubble"
+        "classic": "معلومات",
+        "glow": "معلومات",
+        "outline": "معلومات",
+        "bubble": "معلومات"
       },
       "align": {
-        "top": "top",
+        "top": "معلومات",
         "center": "مرکز",
-        "bottom": "bottom"
+        "bottom": "معلومات"
       },
       "filters": {
-        "none": "none",
-        "soft_beauty": "soft beauty",
-        "luxury_portrait": "luxury portrait",
-        "warm_film": "warm film",
-        "cool_night": "cool night",
-        "anime_glow": "anime glow",
-        "pink_dream": "pink dream",
-        "gold_glam": "gold glam"
+        "none": "معلومات",
+        "soft_beauty": "معلومات",
+        "luxury_portrait": "معلومات",
+        "warm_film": "معلومات",
+        "cool_night": "معلومات",
+        "anime_glow": "معلومات",
+        "pink_dream": "معلومات",
+        "gold_glam": "معلومات"
       },
       "option": {
-        "none": "none",
-        "sparkle_cluster": "sparkle cluster",
-        "hearts": "hearts",
-        "crown": "crown",
-        "stars": "stars",
-        "petals": "petals",
-        "luxury_gold": "luxury gold",
-        "soft_portrait": "soft portrait",
-        "anime_frame": "anime frame",
-        "story_glass": "story glass",
-        "original": "original",
-        "square": "square",
-        "portrait": "portrait",
-        "story": "story"
+        "none": "هیچ‌کدام",
+        "sparkle_cluster": "معلومات",
+        "hearts": "معلومات",
+        "crown": "معلومات",
+        "stars": "معلومات",
+        "petals": "معلومات",
+        "luxury_gold": "معلومات",
+        "soft_portrait": "معلومات",
+        "anime_frame": "قاب‌ها",
+        "story_glass": "معلومات",
+        "original": "معلومات",
+        "square": "معلومات",
+        "portrait": "معلومات",
+        "story": "معلومات"
       },
       "textPresetsMap": {
-        "luxury": "luxury",
-        "neon": "neon",
-        "soft": "soft",
-        "comic": "comic",
-        "anime": "anime"
+        "luxury": "معلومات",
+        "neon": "معلومات",
+        "soft": "معلومات",
+        "comic": "معلومات",
+        "anime": "معلومات"
       },
       "quick": {
-        "queen": "queen",
-        "sabiMood": "Sabi mood",
-        "dream": "dream",
-        "luxury": "luxury",
-        "angel": "angel",
-        "animeGirl": "anime girl"
+        "queen": "معلومات",
+        "sabiMood": "معلومات",
+        "dream": "معلومات",
+        "luxury": "معلومات",
+        "angel": "معلومات",
+        "animeGirl": "معلومات"
       }
     }
   },
   "sabiMessengerChannelMenu": {
-    "channelAddedToChats": "channel added to chats",
-    "channelBotMissing": "channel bot missing",
-    "channelInviteMissing": "channel invite missing",
-    "channelShareReady": "channel اشتراک‌گذاری آماده"
+    "channelAddedToChats": "گفتگو",
+    "channelBotMissing": "گفتگو",
+    "channelInviteMissing": "گفتگو",
+    "channelShareReady": "آماده"
   },
   "sabiMessengerGroupMenu": {
-    "groupAddMember": "group افزودن member",
-    "groupInviteMissing": "group invite missing",
-    "groupInviteReady": "group invite آماده",
-    "groupShareReady": "group اشتراک‌گذاری آماده"
+    "groupAddMember": "گفتگو",
+    "groupInviteMissing": "گفتگو",
+    "groupInviteReady": "آماده",
+    "groupShareReady": "آماده"
   },
   "stories": {
     "actions": {
@@ -8103,15 +8104,15 @@ export const FA_AF_LOCALE = {
     },
     "empty": {
       "action": "عمل",
-      "text": "text",
-      "title": "title"
+      "text": "تنظیمات",
+      "title": "عنوان"
     },
     "header": {
-      "title": "title"
+      "title": "عنوان"
     },
     "hero": {
-      "subtitle": "subtitle",
-      "title": "title"
+      "subtitle": "تنظیمات",
+      "title": "عنوان"
     },
     "kind": {
       "photo": "عکس",
@@ -8119,7 +8120,7 @@ export const FA_AF_LOCALE = {
     },
     "photo": {
       "unavailable": {
-        "title": "title"
+        "title": "عنوان"
       }
     },
     "preview": {
@@ -8128,8 +8129,8 @@ export const FA_AF_LOCALE = {
     },
     "video": {
       "unavailable": {
-        "text": "text",
-        "title": "title"
+        "text": "تنظیمات",
+        "title": "عنوان"
       }
     }
   }

@@ -1,6 +1,3 @@
-import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+import TaxiScreen from "../src/modules/taxi/screens/TaxiScreen";
 
-export default function TaxiEntryScreen() {
-  return <HomeProgramEntryScreen kind="taxi" />;
-}
+export default TaxiScreen;

@@ -8,7 +8,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import SabiQrFunctionGrid from "../../src/modules/qr/components/SabiQrFunctionGrid";
 import { SABI_QR_FUNCTION_CATALOG } from "../../src/modules/qr/data/qrFunctionCatalog";
 import { useSabiQrActorIdentity } from "../../src/modules/qr/runtime/qrIdentityBinding";
-import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-hooks";
 import type { SabiQrFunctionCode, SabiQrFunctionDefinition } from "../../src/modules/qr/contracts/universalQr.contracts";
 
 type QrGroupId = "profile" | "wallets" | "business" | "mobility" | "attendance";
@@ -135,7 +135,7 @@ export default function SabiQrCenterScreen() {
             <Text style={styles.identityTitle}>{tq("qr.mobile.identity.autoTitle")}</Text>
             <Text numberOfLines={1} style={styles.identityName}>{resolveActorName(actor, tq("qr.mobile.identity.namePending"))}</Text>
             <Text numberOfLines={1} style={styles.identityValue}>
-              {actor.userId ? tq("qr.mobile.identity.userIdValue", { value: actor.userId }) : tq("qr.mobile.center.loginRequired")}
+              {actor.userId ? tq("qr.mobile.identity.userIdValue") : tq("qr.mobile.center.loginRequired")}
             </Text>
           </View>
         </View>

@@ -1,4 +1,5 @@
 import type { GiftCatalogItem, GiftProgramScope, GiftRewardTier } from "./giftTypes";
+import { messengerUnifiedStreamGiftCatalog197V } from "./messengerUnifiedStreamGifts197V";
 
 export type GiftCategory = GiftCatalogItem["category"];
 export type GiftItem = GiftCatalogItem;
@@ -220,6 +221,7 @@ export const GIFT_CATALOG: GiftCatalogItem[] = [
     durationMaxSec: 5,
     isEventGift: true,
   }),
+  ...messengerUnifiedStreamGiftCatalog197V,
 ].map((item, index) => createGift({ ...item, sortOrder: item.sortOrder ?? index + 1 }));
 
 export const GIFT_CATALOG_BY_ID = Object.freeze(

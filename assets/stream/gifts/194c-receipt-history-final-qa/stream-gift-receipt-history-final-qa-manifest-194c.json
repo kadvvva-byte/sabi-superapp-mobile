@@ -1,0 +1,15 @@
+{
+  "version": "STREAM-GAME-GIFTS-194C",
+  "scope": "receipt_history_final_qa_user_facing_only",
+  "giftCount": 24,
+  "filterCount": 4,
+  "receiptPreviewCoverage": 24,
+  "historyPreviewCoverage": 24,
+  "localHistoryFilterCoverage": 24,
+  "realSendRuntimeEnabledNow": false,
+  "backendDbReadWriteRuntimeEnabledNow": false,
+  "paymentProviderPayoutRuntimeEnabledNow": false,
+  "walletMutationEnabledNow": false,
+  "actualAnimationMediaPlaybackEnabledNow": false,
+  "actualSoundAutoplayEnabledNow": false
+}

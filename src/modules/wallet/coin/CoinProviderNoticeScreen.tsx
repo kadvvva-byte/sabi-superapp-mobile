@@ -16,6 +16,7 @@ import {
   type CoinWalletBridgeRouteKind,
 } from "../../../shared/wallet/wallet-coin-bridge";
 import { useSabiTheme } from "../../../theme/ThemeProvider";
+import PlayReadyBillingWalletSeparationEvidencePanel from "../../play-ready/mobile/PlayReadyBillingWalletSeparationEvidencePanel";
 
 type CoinProviderTone = "coin" | "diamond" | "earn" | "history";
 
@@ -176,6 +177,11 @@ export default function CoinProviderNoticeScreen({
             <Text style={[styles.statValue, { color: colors.text }]}>{wallet.coinHistory.length + wallet.diamondHistory.length}</Text>
           </View>
         </View>
+
+        <PlayReadyBillingWalletSeparationEvidencePanel
+          compact
+          contextLabel="Coin/Diamonds billing separation evidence"
+        />
 
         <View style={[styles.bridgeCard, { backgroundColor: colors.cardSoft, borderColor: colors.border, borderRadius: radius.xl }]}>
           <View style={styles.bridgeRow}>

@@ -1,5 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Alert, Pressable, ScrollView, Share, StatusBar, StyleSheet, Text, TextInput, View } from "react-native";
+import { Alert, Pressable, ScrollView, StatusBar, StyleSheet, Text, TextInput, View } from "react-native";
+import * as FileSystem from "expo-file-system/legacy";
+import * as Sharing from "expo-sharing";
 import { LinearGradient } from "expo-linear-gradient";
 import { router, useLocalSearchParams } from "expo-router";
 import { Ionicons } from "@expo/vector-icons";
@@ -9,7 +11,8 @@ import { findSabiQrFunction, SABI_QR_FUNCTION_CATALOG } from "../../src/modules/
 import { useSabiQrActorIdentity } from "../../src/modules/qr/runtime/qrIdentityBinding";
 import { generateSabiQrToken } from "../../src/modules/qr/runtime/qrRuntime";
 import { getSabiQrVisualTheme } from "../../src/modules/qr/runtime/qrVisualTheme";
-import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-hooks";
+import { isValidQrAmount, normalizeQrAmount } from "../../src/modules/qr/runtime/qrTokenPayload";
 import type { SabiQrFunctionCode, SabiQrTokenRecord } from "../../src/modules/qr/contracts/universalQr.contracts";
 import {
   getWalletFoundationSnapshot,
@@ -22,6 +25,27 @@ function pushQr(href: { pathname: string; params?: Record<string, string> }) {
 
 function resolveActorDisplayName(actor: ReturnType<typeof useSabiQrActorIdentity>, fallback: string) {
   return actor.displayName || [actor.firstName, actor.lastName].filter(Boolean).join(" ").trim() || actor.username || fallback;
+}
+
+function normalizeVisibleAmountInput(value: string): string {
+  const cleaned = value.replace(/,/g, ".").replace(/[^0-9.]/g, "");
+  const [whole = "", ...fractionParts] = cleaned.split(".");
+  const fraction = fractionParts.join("").slice(0, 8);
+  return fractionParts.length > 0 ? `${whole}.${fraction}` : whole;
+}
+
+function getQrAmountInputErrorKey(value: string): string | null {
+  const normalized = normalizeQrAmount(value);
+  if (!normalized) return "qr.mobile.error.amountRequired";
+  return isValidQrAmount(normalized) ? null : "qr.mobile.error.amountInvalid";
+}
+
+function normalizeQrImageBase64(value: string): string {
+  return value.replace(/^data:image\/png;base64,/, "").trim();
+}
+
+function getQrShareFileName(definitionCode: string): string {
+  return `sabi-qr-${definitionCode.replace(/[^a-z0-9_-]/gi, "-")}-${Date.now()}.png`;
 }
 
 export default function SabiQrCreateScreen() {
@@ -41,16 +65,33 @@ export default function SabiQrCreateScreen() {
   const [error, setError] = useState<string | null>(null);
 
   const actorName = resolveActorDisplayName(actor, tq("qr.mobile.identity.namePending"));
+  const actorPublicHandle = actor.username ? `@${String(actor.username).replace(/^@+/, "")}` : "";
 
   const lastAutoGenerateKeyRef = useRef<string | null>(null);
+  const amountInputErrorKey = definition.requiresAmount ? getQrAmountInputErrorKey(amount) : null;
+  const normalizedAmount = normalizeQrAmount(amount) ?? "";
+  const canGenerateQr = Boolean(actor.userId) && !busy && (!definition.requiresAmount || !amountInputErrorKey);
 
   const onGenerate = useCallback(async () => {
+    if (!actor.userId) {
+      setError("qr.mobile.error.authRequired");
+      setToken(null);
+      return;
+    }
+
+    const nextAmountErrorKey = definition.requiresAmount ? getQrAmountInputErrorKey(amount) : null;
+    if (nextAmountErrorKey) {
+      setError(nextAmountErrorKey);
+      setToken(null);
+      return;
+    }
+
     setBusy(true);
     setError(null);
 
     try {
       const nextToken = await generateSabiQrToken(definition, {
-        amount,
+        amount: definition.requiresAmount ? normalizeQrAmount(amount) : undefined,
         currency: definition.requiresAmount ? qrCurrencyCode || undefined : undefined,
       });
       setToken(nextToken);
@@ -60,7 +101,7 @@ export default function SabiQrCreateScreen() {
     } finally {
       setBusy(false);
     }
-  }, [amount, definition, qrCurrencyCode]);
+  }, [actor.userId, amount, definition, qrCurrencyCode]);
 
   useEffect(() => {
     setToken(null);
@@ -102,12 +143,26 @@ export default function SabiQrCreateScreen() {
     void onGenerate();
   }, [actor.userId, definition.code, definition.requiresAmount, onGenerate]);
 
-  const onShare = async () => {
+  const onShareQrImage = async (base64Png: string) => {
     if (!token) return;
+
     try {
-      await Share.share({
-        title: functionTitle(definition.code),
-        message: `${functionTitle(definition.code)}\n${token.shortValue}`,
+      const sharingAvailable = await Sharing.isAvailableAsync();
+      const cacheDirectory = FileSystem.cacheDirectory;
+
+      if (!sharingAvailable || !cacheDirectory) {
+        Alert.alert(tq("qr.mobile.common.shareFailedTitle"), tq("qr.mobile.common.shareFailedText"));
+        return;
+      }
+
+      const fileUri = `${cacheDirectory}${getQrShareFileName(definition.code)}`;
+      await FileSystem.writeAsStringAsync(fileUri, normalizeQrImageBase64(base64Png), {
+        encoding: FileSystem.EncodingType.Base64,
+      });
+
+      await Sharing.shareAsync(fileUri, {
+        dialogTitle: functionTitle(definition.code),
+        mimeType: "image/png",
       });
     } catch {
       Alert.alert(tq("qr.mobile.common.shareFailedTitle"), tq("qr.mobile.common.shareFailedText"));
@@ -119,6 +174,14 @@ export default function SabiQrCreateScreen() {
     setError(null);
     setAmount("");
     pushQr({ pathname: "/qr/create", params: { functionCode: code } });
+  };
+
+  const onChangeAmount = (value: string) => {
+    setAmount(normalizeVisibleAmountInput(value));
+    setToken(null);
+    if (error === "qr.mobile.error.amountRequired" || error === "qr.mobile.error.amountInvalid") {
+      setError(null);
+    }
   };
 
   return (
@@ -146,11 +209,11 @@ export default function SabiQrCreateScreen() {
             <Text style={styles.identityLabel}>{tq("qr.mobile.identity.autoTitle")}</Text>
             <Text numberOfLines={1} style={styles.identityName}>{actorName}</Text>
             <Text numberOfLines={1} style={styles.identityValue}>
-              {actor.userId ? tq("qr.mobile.identity.userIdValue", { value: actor.userId }) : tq("qr.mobile.center.loginRequired")}
+              {actor.userId ? tq("qr.mobile.identity.userIdValue") : tq("qr.mobile.center.loginRequired")}
             </Text>
-            {actor.sabiDisplayId ? (
-              <Text numberOfLines={1} style={styles.identitySubValue}>{tq("qr.mobile.identity.sabiIdValue", { value: actor.sabiDisplayId })}</Text>
-            ) : null}
+            <Text numberOfLines={1} style={styles.identitySubValue}>
+              {actorPublicHandle || tq("qr.mobile.create.userIdLocked")}
+            </Text>
           </View>
         </View>
 
@@ -171,7 +234,7 @@ export default function SabiQrCreateScreen() {
           <Text style={styles.lockedText}>{tq("qr.mobile.create.identityAutoFilled")}</Text>
           {definition.requiresAmount ? (
             <>
-              <Field label={tq("qr.mobile.common.amount")} value={amount} onChangeText={setAmount} keyboardType="decimal-pad" placeholder={tq("qr.mobile.create.amountPlaceholder")} />
+              <Field label={tq("qr.mobile.common.amount")} value={amount} onChangeText={onChangeAmount} keyboardType="decimal-pad" placeholder={tq("qr.mobile.create.amountPlaceholder")} />
               <Text style={styles.lockedText}>
                 {tq("qr.mobile.create.currencyAutoFilled", { value: qrCurrencyCode })}
               </Text>
@@ -194,10 +257,11 @@ export default function SabiQrCreateScreen() {
           token={token}
           loading={busy}
           error={error}
-          emptyTitleKey={definition.requiresAmount && !amount.trim() ? "qr.mobile.card.amountWaitingTitle" : undefined}
-          emptyTextKey={definition.requiresAmount && !amount.trim() ? "qr.mobile.card.amountWaitingText" : "qr.mobile.card.autoCreatingText"}
+          emptyTitleKey={definition.requiresAmount && !normalizedAmount ? "qr.mobile.card.amountWaitingTitle" : undefined}
+          emptyTextKey={definition.requiresAmount && !normalizedAmount ? "qr.mobile.card.amountWaitingText" : "qr.mobile.card.autoCreatingText"}
           onRefresh={onGenerate}
-          onShare={onShare}
+          refreshDisabled={!canGenerateQr}
+          onShareQrImage={onShareQrImage}
         />
       </ScrollView>
     </LinearGradient>

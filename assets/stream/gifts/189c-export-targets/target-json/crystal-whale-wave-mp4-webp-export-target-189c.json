@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "crystal-whale-wave",
+  "displayNameRu": "Кристальный Кит",
+  "displayName": "Crystal Whale Wave",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/crystal-whale-wave-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/crystal-whale-wave-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/crystal-whale-wave-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/crystal-whale-wave-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/crystal-whale-wave-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3240,
+    "finaleDurationMs": 840
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#7AE7FF",
+    "light": "#D9FBFF"
+  }
+}

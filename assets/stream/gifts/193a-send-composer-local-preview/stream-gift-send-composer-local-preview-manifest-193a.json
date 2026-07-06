@@ -1,0 +1,20 @@
+{
+  "version": "STREAM-GAME-GIFTS-193A",
+  "title": "Stream Gift Send Composer Local Preview Polish",
+  "giftCount": 24,
+  "localComposerPreviewOnly": true,
+  "userFacingOnly": true,
+  "files": [
+    "src/modules/stream/gifts/streamPremiumGiftSendComposerLocalPreview193A.ts"
+  ],
+  "runtimeLocks": {
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false
+  }
+}

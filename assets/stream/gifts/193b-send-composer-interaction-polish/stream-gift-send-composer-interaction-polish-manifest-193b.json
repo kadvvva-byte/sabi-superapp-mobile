@@ -1,0 +1,18 @@
+{
+  "version": "STREAM-GAME-GIFTS-193B",
+  "stage": "Stream Gift Send Composer Interaction Polish",
+  "scope": "local composer controls only / user-facing only",
+  "giftCount": 24,
+  "interactionModeCount": 4,
+  "controls": [
+    "recipient",
+    "quantity",
+    "message",
+    "confirm"
+  ],
+  "localComposerControlsOnly": true,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "walletMutationEnabledNow": false
+}

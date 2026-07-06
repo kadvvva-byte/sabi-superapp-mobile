@@ -1,3 +1,4 @@
+﻿/* eslint-disable react/display-name */
 import React from "react";
 import {
   BadgeCheck,
@@ -110,3 +111,4 @@ export function renderProfileIcon(
 ) {
   return PROFILE_ICON_MAP[key](args);
 }
+

@@ -1,5 +1,5 @@
 import { Audio } from "expo-av";
-import * as FileSystem from "expo-file-system";
+import * as FileSystem from "expo-file-system/legacy";
 
 import { aiMobileApi } from "../aiMobileApi";
 import type { AiMobileApiError, AiMobileApiResult } from "../aiMobileTypes";
@@ -24,6 +24,33 @@ const SABI_FEMALE_VOICE_PROFILE = {
   noFakePlayback: true,
 } as const;
 
+
+const SABI_AI_RECORDING_OPTIONS = {
+  android: {
+    extension: ".m4a",
+    outputFormat: (Audio as any).AndroidOutputFormat?.MPEG_4 ?? 2,
+    audioEncoder: (Audio as any).AndroidAudioEncoder?.AAC ?? 3,
+    sampleRate: 16000,
+    numberOfChannels: 1,
+    bitRate: 64000,
+  },
+  ios: {
+    extension: ".m4a",
+    outputFormat: (Audio as any).IOSOutputFormat?.MPEG4AAC ?? "aac ",
+    audioQuality: (Audio as any).IOSAudioQuality?.HIGH ?? 127,
+    sampleRate: 16000,
+    numberOfChannels: 1,
+    bitRate: 64000,
+    linearPCMBitDepth: 16,
+    linearPCMIsBigEndian: false,
+    linearPCMIsFloat: false,
+  },
+  web: {
+    mimeType: "audio/webm",
+    bitsPerSecond: 64000,
+  },
+};
+
 function nowIso() {
   return new Date().toISOString();
 }
@@ -46,10 +73,87 @@ function toNumberValue(value: unknown): number | null {
   return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
 
+function normalizeAudioMimeType(value: unknown): string | null {
+  const clean = toStringValue(value);
+  if (!clean) return null;
+  return clean.includes("/") ? clean : null;
+}
+
+function extensionForAudioMimeType(mimeType?: string | null): string {
+  const normalized = (mimeType || "").toLowerCase();
+  if (normalized.includes("ogg")) return "ogg";
+  if (normalized.includes("mpeg") || normalized.includes("mp3")) return "mp3";
+  if (normalized.includes("wav")) return "wav";
+  if (normalized.includes("3gpp") || normalized.includes("3gp")) return "3gp";
+  if (normalized.includes("mp4") || normalized.includes("m4a") || normalized.includes("aac")) return "m4a";
+  return "ogg";
+}
+
+function normalizeRecordedAudioMimeType(uri: string): string {
+  const cleanUri = uri.split("?")[0]?.toLowerCase() ?? "";
+  if (cleanUri.endsWith(".ogg") || cleanUri.endsWith(".opus")) return "audio/ogg";
+  if (cleanUri.endsWith(".mp3")) return "audio/mpeg";
+  if (cleanUri.endsWith(".wav")) return "audio/wav";
+  if (cleanUri.endsWith(".3gp") || cleanUri.endsWith(".3gpp")) return "audio/3gpp";
+  if (cleanUri.endsWith(".aac")) return "audio/aac";
+  return "audio/mp4";
+}
+
+function normalizeBase64Audio(value: string): string {
+  const clean = value.trim();
+  const dataPrefixIndex = clean.indexOf("base64,");
+  if (dataPrefixIndex >= 0) {
+    return clean.slice(dataPrefixIndex + "base64,".length).replace(/\s+/g, "");
+  }
+
+  return clean.replace(/\s+/g, "");
+}
+
+function pickFirstRecordWithAudio(records: Array<Record<string, unknown> | null>): Record<string, unknown> {
+  for (const record of records) {
+    if (!record) continue;
+    if (
+      toStringValue(record.audioBase64) ||
+      toStringValue(record.audio_base64) ||
+      toStringValue(record.audio) ||
+      toStringValue(record.audioUrl) ||
+      toStringValue(record.url) ||
+      toStringValue(record.fileUrl)
+    ) {
+      return record;
+    }
+  }
+
+  return records.find((record): record is Record<string, unknown> => Boolean(record)) ?? {};
+}
+
 function normalizePlaybackCommand(rawValue: unknown): AiVoicePlaybackCommand {
   const root = toRecord(rawValue) ?? {};
   const data = toRecord(root.data) ?? root;
-  const command = toRecord(data.command) ?? toRecord(data.playback) ?? data;
+  const result = toRecord(data.result) ?? toRecord(root.result);
+  const payload = toRecord(data.payload) ?? toRecord(root.payload);
+  const tts = toRecord(data.tts) ?? toRecord(result?.tts) ?? toRecord(payload?.tts);
+  const audio = toRecord(data.audio) ?? toRecord(result?.audio) ?? toRecord(payload?.audio);
+  const command = pickFirstRecordWithAudio([
+    toRecord(data.command),
+    toRecord(data.playback),
+    toRecord(result?.command),
+    toRecord(result?.playback),
+    toRecord(payload?.command),
+    toRecord(payload?.playback),
+    audio,
+    tts,
+    result,
+    payload,
+    data,
+    root,
+  ]);
+
+  const audioBase64 =
+    toStringValue(command.audioBase64) ||
+    toStringValue(command.audio_base64) ||
+    toStringValue(command.audio) ||
+    null;
 
   return {
     commandId:
@@ -66,8 +170,14 @@ function normalizePlaybackCommand(rawValue: unknown): AiVoicePlaybackCommand {
     audioUrl:
       toStringValue(command.audioUrl) ||
       toStringValue(command.url) ||
-      toStringValue(command.audio) ||
       toStringValue(command.fileUrl) ||
+      null,
+    audioBase64: audioBase64 ? normalizeBase64Audio(audioBase64) : null,
+    audioMimeType:
+      normalizeAudioMimeType(command.audioMimeType) ||
+      normalizeAudioMimeType(command.mimeType) ||
+      normalizeAudioMimeType(command.contentType) ||
+      normalizeAudioMimeType(command.type) ||
       null,
     language:
       toStringValue(command.language) ||
@@ -112,15 +222,18 @@ async function getFileSize(uri: string): Promise<number | null> {
   return null;
 }
 
-async function readBase64(uri: string): Promise<string | null> {
+async function readBase64(uri: string): Promise<{ base64: string | null; error: string | null }> {
   try {
-    const base64ReadOptions = {
-      encoding: "base64",
-    } as unknown as Parameters<typeof FileSystem.readAsStringAsync>[1];
-
-    return await FileSystem.readAsStringAsync(uri, base64ReadOptions);
-  } catch {
-    return null;
+    const base64 = await FileSystem.readAsStringAsync(uri, {
+      encoding: FileSystem.EncodingType.Base64,
+    });
+    const clean = typeof base64 === "string" ? base64.trim() : "";
+    return { base64: clean || null, error: clean ? null : "empty_base64" };
+  } catch (error) {
+    return {
+      base64: null,
+      error: error instanceof Error ? error.message : String(error ?? "base64_read_failed"),
+    };
   }
 }
 
@@ -200,7 +313,7 @@ export const aiVoiceMobileBridge = {
       await configureAudioModeForRecording();
 
       const recording = new Audio.Recording();
-      await recording.prepareToRecordAsync(Audio.RecordingOptionsPresets.HIGH_QUALITY);
+      await recording.prepareToRecordAsync(SABI_AI_RECORDING_OPTIONS as any);
       await recording.startAsync();
 
       activeRecording = recording;
@@ -269,13 +382,27 @@ export const aiVoiceMobileBridge = {
         };
       }
 
+      const base64Read = options?.includeBase64
+        ? await readBase64(uri)
+        : { base64: null, error: null };
+
+      if (options?.includeBase64 && !base64Read.base64) {
+        return {
+          ok: false,
+          error: createError(
+            "ai_voice_audio_base64_read_failed",
+            base64Read.error || "Recorded audio file could not be converted to base64.",
+          ),
+        };
+      }
+
       const asset: AiVoiceRecordingAsset = {
         uri,
         fileName: makeRecordingFileName(uri),
-        mimeType: "audio/m4a",
+        mimeType: normalizeRecordedAudioMimeType(uri),
         durationMillis: toNumberValue(statusBeforeStop.durationMillis),
         sizeBytes: await getFileSize(uri),
-        base64: options?.includeBase64 ? await readBase64(uri) : null,
+        base64: base64Read.base64,
         createdAt: nowIso(),
       };
 
@@ -337,12 +464,16 @@ export const aiVoiceMobileBridge = {
       },
     });
 
-    return aiMobileApi.submitVoiceTranscript({
-      transcript,
-      sessionId: input.sessionId,
-      language: input.language,
-      source: input.source ?? "mobile_live_voice_translation",
-    });
+    return {
+      ok: true,
+      data: {
+        status: "transcript_ready",
+        transcript,
+        sessionId: input.sessionId ?? null,
+        language: input.language ?? null,
+        source: input.source ?? "mobile_live_voice_translation",
+      },
+    };
   },
 
   requestTts: async (
@@ -389,12 +520,43 @@ export const aiVoiceMobileBridge = {
   playAudioUrl: async (
     command: AiVoicePlaybackCommand,
   ): Promise<AiMobileApiResult<{ finished: boolean }>> => {
-    if (!command.audioUrl) {
+    let playbackUri = command.audioUrl;
+
+    if (!playbackUri && command.audioBase64) {
+      try {
+        const cacheRoot = FileSystem.cacheDirectory || FileSystem.documentDirectory;
+        if (!cacheRoot) {
+          return {
+            ok: false,
+            error: createError(
+              "ai_voice_audio_cache_unavailable",
+              "Audio cache directory is unavailable for Sabi voice playback.",
+            ),
+          };
+        }
+
+        const extension = extensionForAudioMimeType(command.audioMimeType);
+        playbackUri = `${cacheRoot}sabi-ai-voice-${command.commandId || Date.now()}.${extension}`;
+        await FileSystem.writeAsStringAsync(playbackUri, normalizeBase64Audio(command.audioBase64), {
+          encoding: FileSystem.EncodingType.Base64,
+        });
+      } catch (error) {
+        return {
+          ok: false,
+          error: createError(
+            "ai_voice_audio_base64_write_failed",
+            error instanceof Error ? error.message : String(error ?? "voice audio write failed"),
+          ),
+        };
+      }
+    }
+
+    if (!playbackUri) {
       return {
         ok: false,
         error: createError(
-          "ai_voice_audio_url_missing",
-          "TTS returned text only. Audio playback is not faked without a backend audioUrl.",
+          "ai_voice_audio_missing",
+          "TTS did not return playable audio. Voice playback is not faked without server audio.",
         ),
       };
     }
@@ -404,7 +566,7 @@ export const aiVoiceMobileBridge = {
       await configureAudioModeForPlayback();
 
       const { sound } = await Audio.Sound.createAsync(
-        { uri: command.audioUrl },
+        { uri: playbackUri },
         { shouldPlay: true, volume: SABI_FEMALE_VOICE_PROFILE.volume },
       );
 
@@ -415,7 +577,9 @@ export const aiVoiceMobileBridge = {
         sessionId: command.sessionId,
         payload: {
           commandId: command.commandId,
-          audioUrl: command.audioUrl,
+          audioUrl: playbackUri,
+          hasAudioBase64: Boolean(command.audioBase64),
+          audioMimeType: command.audioMimeType,
           preferredVoiceGender: SABI_FEMALE_VOICE_PROFILE.preferredVoiceGender,
           voiceStyle: SABI_FEMALE_VOICE_PROFILE.voiceStyle,
           voiceName: SABI_FEMALE_VOICE_PROFILE.voiceName,

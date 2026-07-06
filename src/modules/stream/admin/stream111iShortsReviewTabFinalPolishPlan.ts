@@ -1,0 +1,32 @@
+export const stream111iShortsReviewTabFinalPolishPlan = {
+  version: "111I",
+  title: "Shorts Review tab final polish",
+  scope: "mobile_stream_only",
+  changedAreas: [
+    "Shorts Settings Review tab",
+    "final local readiness checklist",
+    "publish locked state copy",
+  ],
+  guarantees: {
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+    backendTouched: false,
+    paymentsTouched: false,
+    monetizationTouched: false,
+    fakePublishSuccessAdded: false,
+    fakeUploadSuccessAdded: false,
+    fakeProviderSuccessAdded: false,
+    systemCameraUsedForRecord: false,
+  },
+  reviewFlow: [
+    "Video",
+    "Edit",
+    "Text",
+    "Overlays",
+    "Effects",
+    "MP3",
+    "Social",
+    "Publish locked until real provider/backend connection",
+  ],
+} as const;

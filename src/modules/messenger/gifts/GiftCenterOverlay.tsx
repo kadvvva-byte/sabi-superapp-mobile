@@ -129,6 +129,7 @@ export default function GiftCenterOverlay({
         currentCoinBalance={currentCoinBalance}
         receiverLabel={sourceProgram === "stream" ? creatorLabel : receiverLabel}
         onClose={handleBackToCatalog}
+        sendRuntimeEnabled={false}
         onConfirmSend={handleConfirmDirectSend}
       />
 

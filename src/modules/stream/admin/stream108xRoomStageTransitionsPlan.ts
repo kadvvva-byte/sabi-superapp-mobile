@@ -1,0 +1,38 @@
+export const stream108xRoomStageTransitionsPlan = {
+  version: "STREAM-108X",
+  title: "Room stage transitions and layout states",
+  scope: "stream-only-mobile-source",
+  safeMode: true,
+  walletTouched: false,
+  messengerTouched: false,
+  callsTouched: false,
+  serverTouched: false,
+  backendFinanceTouched: false,
+  paymentsTouched: false,
+  giftsTouched: false,
+  monetizationTouched: false,
+  fakeLiveAllowed: false,
+  fakeOnAirAllowed: false,
+  fakeProviderAllowed: false,
+  fakePaymentAllowed: false,
+  fakeGiftAllowed: false,
+  fakeLaunchCompleteAllowed: false,
+  delivered: [
+    "Added Stream room stage runtime with local lobby, prelive check, room-ready, layout-preview, blocked broadcast handoff, and local stage end states.",
+    "Added layout state controls for ordinary single, group grid, audio stage, game overlay, video cinema, and business showcase room layouts.",
+    "Added UI actions bound to real local stage runtime, including lobby/prelive/layout/rails/handoff/end actions.",
+    "Added comments, participants, co-host, battle, and moderation rail visibility states for future backend/provider union.",
+    "Kept provider handoff blocked until backend room contract, realtime provider, media provider, Admin launch approval, and mode-specific contracts are real.",
+  ],
+  blockedUntilRealIntegration: [
+    "backend_room_contract",
+    "realtime_provider",
+    "media_provider",
+    "admin_launch_approval",
+    "game_capture_provider_for_game_rooms",
+    "video_storage_provider_for_video_rooms",
+    "business_admin_contract_for_business_rooms",
+  ],
+} as const;
+
+export type Stream108xRoomStageTransitionsPlan = typeof stream108xRoomStageTransitionsPlan;

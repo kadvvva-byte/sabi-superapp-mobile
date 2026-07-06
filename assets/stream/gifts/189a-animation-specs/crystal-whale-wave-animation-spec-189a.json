@@ -1,0 +1,87 @@
+{
+  "version": "STREAM-GIFT-ANIMATION-SPEC-189A",
+  "giftId": "crystal-whale-wave",
+  "displayNameRu": "Кристальный Кит",
+  "displayName": "Crystal Whale Wave",
+  "assetKind": "lottie_spec_plus_svg_sequence_plan",
+  "previewOnlyNow": true,
+  "runtimeIncludedNow": false,
+  "audioAutoplayIncludedNow": false,
+  "realSendIncludedNow": false,
+  "fps": 30,
+  "totalDurationMs": 2800,
+  "safeArea": {
+    "topPct": 8,
+    "bottomPct": 12,
+    "horizontalPct": 6
+  },
+  "phases": [
+    {
+      "key": "entrance",
+      "durationMs": 720,
+      "labelRu": "crystal wave entrance",
+      "motion": "scale-up + stage fade + hero glow"
+    },
+    {
+      "key": "loop",
+      "durationMs": 1480,
+      "labelRu": "whale arc loop",
+      "motion": "soft orbit + glow breathing + controlled trail"
+    },
+    {
+      "key": "finale",
+      "durationMs": 600,
+      "labelRu": "wave halo finale",
+      "motion": "burst + spotlight hit + clean fade-out"
+    }
+  ],
+  "layers": [
+    {
+      "key": "background_dim",
+      "labelRu": "кинематографическое затемнение фона",
+      "blend": "multiply",
+      "intensity": 0.38
+    },
+    {
+      "key": "stage_light",
+      "labelRu": "дорогой stage light",
+      "blend": "screen",
+      "intensity": 0.74
+    },
+    {
+      "key": "hero_gift",
+      "labelRu": "Кристальный Кит",
+      "blend": "normal",
+      "intensity": 1
+    },
+    {
+      "key": "particles",
+      "labelRu": "aqua prism particles",
+      "blend": "screen",
+      "intensity": 0.82
+    },
+    {
+      "key": "trail",
+      "labelRu": "мягкий premium trail",
+      "blend": "plus-lighter",
+      "intensity": 0.68
+    },
+    {
+      "key": "finale_burst",
+      "labelRu": "wave halo finale",
+      "blend": "screen",
+      "intensity": 0.9
+    }
+  ],
+  "exports": {
+    "posterFallback": "assets/stream/gifts/188a-premium-pack/crystal-whale-wave.svg",
+    "lottieTarget": "assets/stream/gifts/production/lottie/crystal-whale-wave.json",
+    "mp4LoopTarget": "assets/stream/gifts/production/mp4/crystal-whale-wave.mp4",
+    "spriteSheetTarget": "assets/stream/gifts/production/sprites/crystal-whale-wave.webp"
+  },
+  "fallbacks": {
+    "reduceMotion": "poster + glow pulse only",
+    "liteDevice": "poster + 12 particles + short fade",
+    "mutedAudio": "visual-only impact label"
+  }
+}

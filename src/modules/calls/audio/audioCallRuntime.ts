@@ -401,6 +401,15 @@ export function createStandardCallPeer(options: {
     try { emitSabiCallTransportEvent(options.socket, eventName, rich); } catch {
       try { options.socket?.emit?.(eventName, rich); } catch {}
     }
+
+    // CALLS-3.5:
+    // Do not mirror WebRTC offer/answer/ice into the generic call:signal lane.
+    // 3.4 used that as a speed fallback, but real device logs showed every
+    // offer/ice reaching the callee twice. The duplicate offer made one route
+    // own the peer while the visible incoming screen stayed in connecting,
+    // producing one-sided connection / “second phone is thinking”. Accepted still
+    // has its fast call:signal path from the screen; WebRTC payloads stay on
+    // their canonical call:webrtc:* events only.
   };
 
   const applyAudioMode = async (reason = "audio_mode") => {
@@ -428,15 +437,27 @@ export function createStandardCallPeer(options: {
           shouldPlayInBackground: true,
           duckOthers: false,
         }),
-        new Promise((resolve) => setTimeout(resolve, 220)),
+        new Promise((resolve) => setTimeout(resolve, 120)),
       ]);
 
       if (closed || (version !== audioRouteVersion && targetSpeakerEnabled !== speakerEnabled)) return;
 
-      const nativeCalls = await applyNativeSpeakerRoute(targetSpeakerEnabled);
       lastAppliedSpeakerEnabled = targetSpeakerEnabled;
       lastAudioRouteAppliedAt = Date.now();
-      debug("audio:route:applied", { reason, speakerEnabled: targetSpeakerEnabled, nativeCalls });
+
+      // Do not block WebRTC/media startup on slow Android native audio-route
+      // modules. Apply native route in the background and log once. This removes
+      // several seconds from accepted -> offer on devices where native routing is
+      // slow, while keeping the final speaker/earpiece state correct.
+      void applyNativeSpeakerRoute(targetSpeakerEnabled)
+        .then((nativeCalls) => {
+          if (!closed && version === audioRouteVersion) {
+            debug("audio:route:applied", { reason, speakerEnabled: targetSpeakerEnabled, nativeCalls });
+          }
+        })
+        .catch((error) => {
+          debug("audio:route:error", { reason, speakerEnabled: targetSpeakerEnabled, message: error instanceof Error ? error.message : String(error) });
+        });
     } catch (error) {
       debug("audio:route:error", { reason, speakerEnabled: targetSpeakerEnabled, message: error instanceof Error ? error.message : String(error) });
     }
@@ -457,7 +478,7 @@ export function createStandardCallPeer(options: {
     const iceServers = await timeout(
       "resolve_ice_servers",
       resolveSabiCallIceServers(),
-      600,
+      250,
     ).catch(() => [{ urls: "stun:stun.l.google.com:19302" }]);
     pc = new RTCPeerConnection({ iceServers } as any);
     debug("peer:created", { iceServers: summarizeSabiCallIceServersForDebug(iceServers) || "stun" });
@@ -528,7 +549,9 @@ export function createStandardCallPeer(options: {
 
     localStreamPromise = (async () => {
       debug("media:getUserMedia:start", { audioOnly: true });
-      await applyAudioMode();
+      // CALLS-3.3: do not block microphone startup on Android audio-route work.
+      // The route is still applied, but getUserMedia starts immediately.
+      void applyAudioMode();
 
       const stream = await timeout(
         "get_user_media_audio",
@@ -645,6 +668,26 @@ export function createStandardCallPeer(options: {
       }
     },
 
+    async resendLocalOffer(reason = "resend_local_offer") {
+      try {
+        if (!pc || closed) {
+          debug("offer:resend:ignored_no_peer", { reason });
+          return;
+        }
+        const description = pc.localDescription as AnyRecord | null | undefined;
+        const sdp = firstText(description?.sdp);
+        const type = firstText(description?.type);
+        if (type !== "offer" || !sdp) {
+          debug("offer:resend:ignored_no_offer", { reason, signalingState: pc.signalingState });
+          return;
+        }
+        debug("offer:resend", { reason, sdp: sdp.slice(0, 120) });
+        emit("call:webrtc:offer", { event: "offer", signalKind: "offer", descriptionType: "offer", description, sdp });
+      } catch (error) {
+        debug("offer:resend:error", { reason, message: error instanceof Error ? error.message : String(error) });
+      }
+    },
+
     async handleOffer(payload: unknown) {
       try {
         debug("offer:recv", summarizeSabiCallPayloadForDebug(payload));
@@ -741,7 +784,7 @@ export function createStandardCallPeer(options: {
       speakerEnabled = enabled;
       await applyAudioMode("speaker_toggle");
       if (changed) {
-        setTimeout(() => { if (!closed && speakerEnabled === enabled) void applyAudioMode("speaker_toggle_retry_1"); }, 260);
+        setTimeout(() => { if (!closed && speakerEnabled === enabled) void applyAudioMode("speaker_toggle_retry_1"); }, 160);
       }
     },
 

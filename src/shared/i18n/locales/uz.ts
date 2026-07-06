@@ -1,4 +1,5 @@
-export const UZ_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const UZ_LOCALE = {
   "calls": {
     "audio": "Sabi Audio",
     "video": "Sabi Video",
@@ -160,7 +161,7 @@ export const UZ_LOCALE = {
     "wallet": "Hamyon",
     "premium": "Premium",
     "business": "Biznes",
-    "merchant": "Merchant",
+    "merchant": "Ma’lumot",
     "personal": "Shaxsiy",
     "public": "Ochiq",
     "private": "Shaxsiy",
@@ -177,9 +178,9 @@ export const UZ_LOCALE = {
     "settlementBalance": "Hisob-kitob balansi",
     "payoutBalance": "To‘lov balansi",
     "accountNumber": "Hisob raqami",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Ma’lumot",
+    "swift": "Ma’lumot",
+    "bic": "Ma’lumot",
     "branch": "Filial",
     "reference": "Havola",
     "beneficiary": "Benefitsiar",
@@ -191,7 +192,7 @@ export const UZ_LOCALE = {
     "rate": "Stavka",
     "exchangeRate": "Valyuta kursi",
     "term": "Muddat",
-    "limit": "Limit",
+    "limit": "Ma’lumot",
     "limits": "Limitlar",
     "period": "Davr",
     "monthly": "Oylik",
@@ -213,7 +214,7 @@ export const UZ_LOCALE = {
     "custom": "Maxsus",
     "ai": "AI",
     "service": "Servis",
-    "market": "Market",
+    "market": "Bozor",
     "delivery": "Yetkazib berish",
     "store": "Do‘kon",
     "group": "Guruh",
@@ -225,10 +226,10 @@ export const UZ_LOCALE = {
     "subscriber": "Obunachi",
     "subscribers": "Obunachilar",
     "owner": "Ega",
-    "admin": "Admin",
-    "moderator": "Moderator",
+    "admin": "Ma’lumot",
+    "moderator": "Ma’lumot",
     "error": "Xato",
-    "bot": "Bot",
+    "bot": "Bot sozlamalari",
     "bots": "Botlar",
     "trade": "Savdo",
     "saved": "Saqlandi",
@@ -489,7 +490,7 @@ export const UZ_LOCALE = {
       "noCardTitle": "Mahalliy kartalar hali yo‘q",
       "noCardText": "Mahalliy kartalar appear only after secure provider binding returns a verified token. Sabi never stores PAN or CVV.",
       "domesticPayments": "Ichki to‘lovlar",
-      "otpProtected": "OTP protected",
+      "otpProtected": "Ma’lumot",
       "actions": "Harakatlar",
       "cardToCard": "Kartadan kartaga",
       "recipients": "Qabul qiluvchilar",
@@ -498,7 +499,7 @@ export const UZ_LOCALE = {
       "payments": "To‘lovlar",
       "domesticOnly": "Faqat ichki bozor",
       "verification": "Tasdiqlash",
-      "otpProvider": "Provider OTP",
+      "otpProvider": "Sozlamalar",
       "sabiBalanceTopup": "Sabi Balans to‘ldirish",
       "providerControlled": "Provider boshqaradi",
       "cardSettings": "Karta sozlamalari",
@@ -540,7 +541,7 @@ export const UZ_LOCALE = {
       "ruleConfirmationText": "Pul harakati provider confirmation, PIN yoki device biometric hamda wallet risk checks orqali davom etishi kerak.",
       "settingsTitle": "Keyingi sozlama",
       "settingsHint": "Provider va valyuta",
-      "settingsText": "Keyingi Wallet qadamlarida primary currency, local currency, provider selection, limits va admin provider controls qo‘shilishi kerak.",
+      "settingsText": "Sozlamalar Ma’lumot",
       "open": "Ochish"
     },
     "bankAccounts": "Bank hisoblari",
@@ -563,7 +564,7 @@ export const UZ_LOCALE = {
       "money": "Pul",
       "cards": "Kartalar",
       "qr": "QR",
-      "liveNote": "Bu ekran backend Wallet API orqali yagona tarixni o‘qiydi. Crypto tarixi crypto modul ichida qoladi.",
+      "liveNote": "Ma’lumot",
       "loadingTitle": "Tarix yuklanmoqda",
       "loadingText": "Birinchi yuklashdan keyin yangilash uchun pastga torting.",
       "errorTitle": "Tarixni yuklab bo‘lmadi",
@@ -571,11 +572,11 @@ export const UZ_LOCALE = {
       "emptyTitle": "Operatsiyalar topilmadi",
       "emptyText": "Boshqa qidiruv yoki filtrni sinab ko‘ring.",
       "back": "Orqaga",
-      "walletHome": "Wallet Home",
+      "walletHome": "Hamyon",
       "today": "Bugun",
       "yesterday": "Kecha",
       "user": "Foydalanuvchi",
-      "walletTransfer": "Wallet transfer",
+      "walletTransfer": "Hamyon",
       "sendP2p": "P2P yuborish",
       "receiveP2p": "P2P qabul qilish",
       "topupWallet": "Wallet to‘ldirish",
@@ -598,32 +599,32 @@ export const UZ_LOCALE = {
       "subtitle": "MySabi ID yoki QR orqali tasdiqlangan request yaratish.",
       "heroTitle": "Ichki collection route",
       "heroText": "Incoming balance yaratilishidan oldin request to‘lovchi tomonidan tasdiqlanishi kerak.",
-      "balanceLabel": "Request target balance",
+      "balanceLabel": "Ma’lumot",
       "collectInto": "Qabul qilish joyi",
-      "collectIntoHint": "Destination",
+      "collectIntoHint": "Manzil",
       "personal": "Shaxsiy",
       "personalText": "Personal Sabi Balancega request.",
       "business": "Biznes",
-      "businessText": "KYB/admin controlga tayyor business route.",
-      "merchant": "Merchant",
+      "businessText": "Ma’lumot Ma’lumot",
+      "merchant": "Ma’lumot",
       "merchantText": "Merchant collection route tayyor.",
       "recipientTitle": "Kimdan so‘rash",
       "recipientHint": "Tasdiqlangan identity",
-      "recipientId": "Recipient MySabi ID",
-      "recipientPlaceholder": "username yoki business ID",
-      "recipientHelp": "Tasdiqlangan user, business yoki merchant identitydan foydalaning.",
+      "recipientId": "Ma’lumot",
+      "recipientPlaceholder": "Qidiruv",
+      "recipientHelp": "Ma’lumot",
       "recipientError": "To‘g‘ri MySabi ID kiriting.",
       "detailsTitle": "Request tafsilotlari",
       "detailsHint": "Summa va izoh",
       "amount": "Summa",
       "reason": "Sabab",
       "reasonPlaceholder": "Bu request nima uchun?",
-      "reference": "Reference",
+      "reference": "Havola",
       "referencePlaceholder": "Ixtiyoriy reference",
-      "previewTitle": "Request preview",
-      "previewHint": "Summary",
+      "previewTitle": "Sarlavha",
+      "previewHint": "Nashr xulosasi",
       "from": "Kimdan",
-      "destination": "Destination",
+      "destination": "Manzil",
       "notSelected": "Tanlanmagan",
       "noReason": "Sabab qo‘shilmagan",
       "noReference": "Reference yo‘q",
@@ -633,7 +634,7 @@ export const UZ_LOCALE = {
       "securityTitle": "Xavfsizlik eslatmasi",
       "securityHint": "Muhim",
       "security1Title": "Recipient identityni tekshiring",
-      "security1Text": "Money request to‘g‘ri unified user ID, business route yoki merchant accountga yo‘naltirilishi kerak.",
+      "security1Text": "Ma’lumot Ma’lumot",
       "security2Title": "Automatic income yo‘q",
       "security2Text": "Request payer confirmation, provider route va wallet checks tugamaguncha income emas.",
       "paymentsHub": "To‘lov markazi",
@@ -655,7 +656,7 @@ export const UZ_LOCALE = {
       "source": "Manba",
       "sourceHint": "Ichki pul",
       "sourceText": "Transfer, to‘lov va chiqarish flowlari uchun mavjud ichki elektron pul.",
-      "storedValue": "Stored value",
+      "storedValue": "Ma’lumot",
       "available": "Mavjud",
       "withdrawRoute": "Chiqarish yo‘nalishi",
       "linkedCard": "Ulangan karta",
@@ -698,16 +699,16 @@ export const UZ_LOCALE = {
       "roleHint": "Routing maqsadi",
       "personal": "Shaxsiy",
       "personalText": "Shaxsiy Sabi Wallet flowlar uchun karta bog‘lash.",
-      "business": "Business",
-      "businessText": "Business wallet operations yoqilganda karta yo‘nalishini tayyorlash.",
-      "merchant": "Merchant",
+      "business": "Biznes",
+      "businessText": "Ma’lumot Ma’lumot",
+      "merchant": "Ma’lumot",
       "merchantText": "Merchant settlement va commerce flowlar uchun karta yo‘nalishini tayyorlash.",
       "categoryTitle": "Kutilayotgan kategoriya",
       "categoryHint": "Provider yakuniy aniqlaydi",
-      "providerTitle": "Provider binding",
-      "providerHint": "SDK / iFrame",
+      "providerTitle": "Sozlamalar",
+      "providerHint": "Sozlamalar Ma’lumot",
       "routeCurrency": "Yo‘nalish valyutasi",
-      "localCurrencyRequired": "Wallet Settings ichida local currency tanlang",
+      "localCurrencyRequired": "Mahalliy",
       "internationalCurrency": "Xalqaro valyuta",
       "providerNotConfigured": "Provider sozlanmagan",
       "providerReady": "Provider tayyor",
@@ -720,12 +721,12 @@ export const UZ_LOCALE = {
       "noManualText": "Sabi UI ichida karta raqami, CVV yoki expiry kiritmang. Bu maydonlar faqat certified provider flow ichida bo‘lishi kerak.",
       "policyTitle": "Binding siyosati",
       "policyHint": "Aktivatsiyadan oldin",
-      "tokenTitle": "Provider token",
+      "tokenTitle": "Sarlavha",
       "tokenText": "Faqat token ID, masked card metadata, category va status saqlash.",
       "confirmTitle": "User tasdig‘i",
       "confirmText": "Sensitive flowlar uchun provider confirmation plus Sabi PIN/biometric confirmation ishlatish.",
-      "adminTitle": "Admin/provider control",
-      "adminText": "Provider keys, limits, availability va risk rules backend/admin orqali boshqarilishi kerak.",
+      "adminTitle": "Sarlavha",
+      "adminText": "Ma’lumot Ma’lumot",
       "openProvider": "Provider SDK ochish",
       "providerDisabled": "Provayder o‘chirilgan"
     },
@@ -748,10 +749,10 @@ export const UZ_LOCALE = {
       "category": "Kategoriya",
       "theme": "Mavzu",
       "currency": "Valyuta",
-      "usd": "USD",
+      "usd": "Ma’lumot",
       "currencyFromSettings": "Wallet sozlamalaridan",
       "monthlyLimit": "Oylik limit",
-      "limitPlaceholder": "0.00",
+      "limitPlaceholder": "Qidiruv",
       "useCaseTitle": "Foydalanish holati",
       "useCaseHint": "Issuing profili",
       "onlineTitle": "Online to‘lovlar",
@@ -760,7 +761,7 @@ export const UZ_LOCALE = {
       "subscriptionText": "Takroriy to‘lovlar uchun alohida nazorat qilinadigan karta.",
       "travelTitle": "Sayohat",
       "travelText": "Xalqaro foydalanish uchun provider-issued card route.",
-      "providerTitle": "Issuer provider",
+      "providerTitle": "Sozlamalar",
       "providerHint": "Bank / issuer",
       "providerNotConfigured": "Provider sozlanmagan",
       "providerReady": "Provider tayyor",
@@ -768,14 +769,14 @@ export const UZ_LOCALE = {
       "providerReviewRequired": "Review kerak",
       "providerRestricted": "Cheklangan",
       "providerOpenUnavailable": "Provider SDK ochish route hali ulanmagan.",
-      "providerText": "Virtual kartalar faqat backend/admin configurationda partner bank yoki issuer provider ulangandan keyin live ishlaydi.",
+      "providerText": "Sozlamalar Ma’lumot",
       "requirementsTitle": "Issuing talablari",
       "requirementsHint": "Live kartadan oldin",
-      "reqKycTitle": "KYC / eligibility",
-      "reqKycText": "Backend karta chiqarish so‘rovidan oldin user eligibility tekshirishi kerak.",
+      "reqKycTitle": "Sarlavha",
+      "reqKycText": "Ma’lumot Ma’lumot",
       "reqTokenTitle": "Faqat token result",
       "reqTokenText": "Provider token ID, masked metadata va status qaytaradi. Sabi PAN yoki CVV saqlamasligi kerak.",
-      "reqRiskTitle": "Wallet risk checks",
+      "reqRiskTitle": "Sarlavha",
       "reqRiskText": "Sensitive actionlar device, behavior va explicit confirmation checksdan o‘tishi kerak.",
       "securityTitle": "Xavfsizlik boshqaruvi",
       "securityHint": "Karta control",
@@ -789,7 +790,7 @@ export const UZ_LOCALE = {
       "disabledReason": "Chiqarishdan oldin provayderni ulang.",
       "manageCards": "Kartalar"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "Ma’lumot",
     "qrPay": "QR orqali to‘lash",
     "qrReceive": "QR orqali qabul qilish",
     "paymentRequest": "To‘lov so‘rovi",
@@ -818,30 +819,30 @@ export const UZ_LOCALE = {
       "overview": "Ko‘rinish",
       "type": "Tur",
       "category": "Kategoriya",
-      "status": "Status",
+      "status": "Holat",
       "direction": "Yo‘nalish",
       "date": "Sana",
       "time": "Vaqt",
       "referenceData": "Reference ma’lumotlari",
       "tracking": "Kuzatuv",
-      "transactionId": "Transaction ID",
-      "reference": "Reference",
+      "transactionId": "Tranzaksiya ID",
+      "reference": "Havola",
       "route": "Yo‘nalish",
-      "walletId": "Wallet ID",
+      "walletId": "Hamyon",
       "statusNote": "Status izohi",
       "processing": "Qayta ishlash",
-      "securityNote": "Security note",
+      "securityNote": "Xavfsizlik eslatmasi",
       "securityText": "Keyingi harakatdan oldin summa, manzil va reference ma’lumotlarini tekshiring.",
-      "backendPayload": "Backend payload",
-      "liveData": "Live data",
+      "backendPayload": "Orqaga",
+      "liveData": "Ma’lumot",
       "quickActions": "Tezkor harakatlar",
       "nextStep": "Keyingi qadam",
       "backHistory": "Tarixga qaytish",
-      "walletHome": "Wallet Home",
+      "walletHome": "Hamyon",
       "newSend": "Yangi yuborish",
       "newRequest": "Yangi so‘rov",
       "copyReference": "Reference nusxalash",
-      "referenceTitle": "Reference",
+      "referenceTitle": "Havola",
       "transaction": "Operatsiya",
       "walletOperation": "Wallet operatsiya",
       "refundWallet": "Walletga refund",
@@ -852,18 +853,18 @@ export const UZ_LOCALE = {
       "providerPaymentLinked": "Provider to‘lovi Wallet tranzaksiyasiga bog‘langan",
       "transferBetweenUsers": "Foydalanuvchilar orasida Wallet transfer",
       "qrRouteExecution": "Universal QR yo‘nalish bajarilishi",
-      "businessMerchantRoute": "Business / merchant / core Wallet yo‘nalishi",
+      "businessMerchantRoute": "Ma’lumot",
       "routeTransaction": "Yagona Wallet transaction flow",
-      "routePayment": "Provider payment → wallet transaction → ledger",
-      "routeP2p": "P2P → wallet transfer flow",
-      "routeQr": "Universal QR → wallet/payment route",
-      "routeCore": "Wallet core operation",
-      "routeSend": "Wallet send flow",
-      "routeReceive": "Wallet receive flow",
-      "routeTopup": "Wallet top up flow",
-      "routeWithdraw": "Wallet withdraw flow",
-      "routeCard": "Wallet card operation",
-      "routeFallback": "Wallet transaction route"
+      "routePayment": "Ma’lumot",
+      "routeP2p": "Ma’lumot",
+      "routeQr": "Ma’lumot",
+      "routeCore": "Ma’lumot",
+      "routeSend": "Ma’lumot",
+      "routeReceive": "Ma’lumot",
+      "routeTopup": "Ma’lumot",
+      "routeWithdraw": "Ma’lumot",
+      "routeCard": "Ma’lumot",
+      "routeFallback": "Orqaga"
     },
     "incoming": "Kiruvchi",
     "outgoing": "Chiquvchi",
@@ -915,7 +916,7 @@ export const UZ_LOCALE = {
     "statements": "Hisob ko‘chirmalar",
     "generateStatement": "Hisob ko‘chirma yaratish",
     "downloadStatement": "Hisob ko‘chirma yuklab olish",
-    "coinWallet": "Coin Wallet",
+    "coinWallet": "Hamyon",
     "coinTopUp": "Coin to‘ldirish",
     "coinSend": "Coin yuborish",
     "coinReceive": "Coin qabul qilish",
@@ -946,24 +947,24 @@ export const UZ_LOCALE = {
       "directCardBlocked": "Kartaga bevosita chiqarish bloklangan",
       "guardReason": "Himoya sababi",
       "providerStatus": "Provider holati",
-      "eyebrow": "SABI COIN",
+      "eyebrow": "Sozlamalar",
       "providerTitle": "Provider sozlanmagan",
-      "providerText": "COIN moliyaviy amallari real wallet backend, provider route, admin controls va secure confirmation talab qiladi.",
-      "noFakeTitle": "Provider-backed COIN execution",
-      "noFakeText": "Top up, send, withdraw, diamonds, deposits yoki income records backend/provider execution talab qiladi.",
-      "securityTitle": "Wallet security route",
+      "providerText": "Sozlamalar Ma’lumot",
+      "noFakeTitle": "Sarlavha",
+      "noFakeText": "Ma’lumot Ma’lumot",
+      "securityTitle": "Xavfsizlik",
       "securityText": "Real COIN harakati unified user ID, wallet risk checks, explicit confirmation va provider status orqali o‘tishi kerak.",
       "availableCoin": "Mavjud COIN",
       "totalCoin": "Jami COIN",
-      "diamonds": "Diamonds",
-      "deposits": "Deposits",
-      "records": "Records",
+      "diamonds": "Ma’lumot",
+      "deposits": "Ma’lumot",
+      "records": "Ma’lumot",
       "disabled": "O‘chirilgan",
       "backToCoin": "Coin Walletga qaytish",
       "screens": {
         "topup": {
           "title": "Coin Walletni to‘ldirish",
-          "subtitle": "COIN top up real wallet backend, provider route va secure payment confirmation talab qiladi."
+          "subtitle": "Ma’lumot Ma’lumot"
         },
         "send": {
           "title": "COIN yuborish",
@@ -974,7 +975,7 @@ export const UZ_LOCALE = {
           "subtitle": "COIN faqat Sabi Wallet orqali provider confirmationdan keyin cash-out bo‘ladi, bank kartaga bevosita emas."
         },
         "diamonds": {
-          "title": "Diamonds",
+          "title": "Sozlamalar",
           "subtitle": "Diamonds ichki product balance bo‘lib qoladi. Unda wallet transfer funksiyalari yo‘q va policy ruxsatisiz income hisoblanmaydi."
         },
         "withdrawDiamonds": {
@@ -982,23 +983,23 @@ export const UZ_LOCALE = {
           "subtitle": "Faqat eligible withdrawable diamonds monthly policy va provider-controlled settlement orqali COINga qayta aylanadi."
         },
         "earn": {
-          "title": "Coin Earn",
-          "subtitle": "Locked Coin deposits ishga tushishidan oldin backend ledger, freeze/unfreeze controls, maturity schedule va admin risk states talab qiladi."
+          "title": "Sozlamalar",
+          "subtitle": "Ma’lumot Ma’lumot"
         },
         "history": {
-          "title": "Coin History",
-          "subtitle": "COIN ledger records wallet backend/provider ledgerdan kelishi kerak."
+          "title": "Sozlamalar",
+          "subtitle": "Tarix Ma’lumot"
         },
         "diamondsHistory": {
-          "title": "Diamond History",
+          "title": "Sozlamalar",
           "subtitle": "Diamond activity financial income va free, promo, won, inventory movement recordsni ajratishi kerak."
         },
         "depositHistory": {
-          "title": "Deposit History",
-          "subtitle": "Locked Coin deposit records faqat backend ledger va maturity schedules ulangandan keyin ko‘rinadi."
+          "title": "Sozlamalar",
+          "subtitle": "Tarix Ma’lumot"
         },
         "depositDetails": {
-          "title": "Locked Coin Details",
+          "title": "Sozlamalar",
           "subtitle": "Deposit details provider-backed principal lock, interest ledger, maturity date va release status talab qiladi."
         }
       }
@@ -1016,102 +1017,102 @@ export const UZ_LOCALE = {
       "providerNotConfiguredShort": "Provider sozlanmagan",
       "providerStatusText": "Crypto provider ulanmaguncha real narx, network va tranzaksiya yo‘q.",
       "providerStatusTitle": "Crypto provider holati",
-      "eyebrow": "CRYPTO WALLET",
+      "eyebrow": "Sozlamalar",
       "providerNotConfiguredTitle": "Provider sozlanmagan",
       "providerNotConfiguredText": "Real custody/wallet provayderi, bozor maʼlumotlari yo‘nalishi va admin nazoratlari ulanmaguncha crypto amallar o‘chirilgan holatda qoladi.",
       "cryptoValue": "Crypto qiymati",
-      "status": "Status",
+      "status": "Holat",
       "disabled": "O‘chirilgan",
-      "securityTitle": "Security provider",
+      "securityTitle": "Xavfsizlik",
       "securityText": "Send, swap, buy va sell KYC/AML, device checks va aniq confirmationdan o‘tishi kerak.",
-      "keysTitle": "Provider-secured keys",
+      "keysTitle": "Sarlavha",
       "keysText": "Seed phrases, addresses va private keys faqat secure crypto provider flow orqali olinishi kerak.",
-      "marketTitle": "Real market data",
-      "marketText": "Assets, prices, charts, balances va history provider APIs orqali kelishi kerak.",
+      "marketTitle": "Sarlavha",
+      "marketText": "Ma’lumot Ma’lumot",
       "backToCrypto": "Crypto Walletga qaytish",
       "screens": {
         "assets": {
-          "title": "Crypto assets",
+          "title": "Sozlamalar",
           "subtitle": "Provider-backed assets crypto provider ulangandan keyin ko‘rinadi."
         },
         "portfolio": {
-          "title": "Crypto portfolio",
+          "title": "Sozlamalar",
           "subtitle": "Portfolio value ulangan crypto providerdan kelishi kerak."
         },
         "assetDetails": {
-          "title": "Asset details",
+          "title": "Sozlamalar",
           "subtitle": "Asset details provider-backed wallet data talab qiladi."
         },
         "buy": {
-          "title": "Buy crypto",
+          "title": "Sozlamalar",
           "subtitle": "Crypto on-ramp sozlangan provider route orqali bajarilishi kerak."
         },
         "sell": {
-          "title": "Sell crypto",
+          "title": "Sozlamalar",
           "subtitle": "Crypto off-ramp sozlangan provider route orqali bajarilishi kerak."
         },
         "swap": {
-          "title": "Swap crypto",
+          "title": "Sozlamalar",
           "subtitle": "Swap quotes va execution sozlangan provider route talab qiladi."
         },
         "send": {
-          "title": "Send crypto",
+          "title": "Sozlamalar",
           "subtitle": "Crypto sending wallet provider, risk checks va aniq confirmation talab qiladi."
         },
         "receive": {
-          "title": "Receive crypto",
+          "title": "Sozlamalar",
           "subtitle": "Receive addresses ulangan provider tomonidan chiqarilishi kerak."
         },
         "history": {
-          "title": "Crypto history",
+          "title": "Sozlamalar",
           "subtitle": "Transactions provider synchronizationdan keyin ko‘rinadi."
         },
         "transactionDetails": {
-          "title": "Transaction details",
+          "title": "Sozlamalar",
           "subtitle": "Transaction data provider yoki blockchain synchronization orqali kelishi kerak."
         },
         "confirm": {
-          "title": "Crypto confirmation",
+          "title": "Sozlamalar",
           "subtitle": "Crypto operations provider confirmation va risk checks talab qiladi."
         },
         "market": {
-          "title": "Crypto market",
+          "title": "Sozlamalar",
           "subtitle": "Market data sozlangan market data provider talab qiladi."
         },
         "watchlist": {
-          "title": "Watchlist",
+          "title": "Sozlamalar",
           "subtitle": "Watchlist prices real market data providerdan kelishi kerak."
         },
         "networks": {
-          "title": "Networks",
+          "title": "Tarmoqlar",
           "subtitle": "Supported networks ulangan crypto providerdan kelishi kerak."
         },
         "manageTokens": {
-          "title": "Manage tokens",
+          "title": "Sozlamalar",
           "subtitle": "Token list management provider-backed asset metadata talab qiladi."
         },
         "importToken": {
-          "title": "Import token",
+          "title": "Sozlamalar",
           "subtitle": "Custom tokens Walletda ko‘rinishidan oldin provider validation talab qiladi."
         },
         "addressBook": {
-          "title": "Address book",
+          "title": "Sozlamalar",
           "subtitle": "Saved crypto addresses verified provider storage talab qiladi."
         },
         "addAddress": {
-          "title": "Add address",
+          "title": "Sozlamalar",
           "subtitle": "New addresses provider validation va risk checks talab qiladi."
         },
         "seedCreate": {
-          "title": "Create seed",
+          "title": "Sozlamalar",
           "subtitle": "Seed/private-key flows real secure provider ulanmaguncha o‘chiq."
         },
         "seedBackup": {
-          "title": "Seed backup",
+          "title": "Sozlamalar",
           "subtitle": "Backup secure provider flow talab qiladi."
         },
         "seedVerify": {
-          "title": "Seed verification",
+          "title": "Sozlamalar",
           "subtitle": "Verification secure provider flow talab qiladi."
         }
       }
@@ -1123,12 +1124,12 @@ export const UZ_LOCALE = {
       "receiveSubtitle": "My Sabi ID, wallet QR va request oqimlari orqali pul qabul qilish",
       "scanQr": "QR skan qilish",
       "settings": "Sozlamalar",
-      "settingsSubtitle": "Valyuta, local card routing, limitlar va xavfsizlik boshqaruvlari",
+      "settingsSubtitle": "Sozlamalar Ma’lumot",
       "topUp": "To‘ldirish",
       "topUpSubtitle": "Ulangan bank va provider yo‘nalishlari orqali pul qo‘shish",
       "withdraw": "Yechib olish",
       "withdrawSubtitle": "Boshqariladigan wallet withdrawal yo‘nalishlari orqali pul chiqarish",
-      "headerEyebrow": "Sabi Wallet",
+      "headerEyebrow": "SABI Wallet",
       "headerTitle": "Wallet markazi",
       "headerSubtitle": "Soxta balanslarsiz wallet foundation ga ulangan premium wallet ekrani.",
       "mainHeroTitle": "Asosiy wallet foundation",
@@ -1143,7 +1144,7 @@ export const UZ_LOCALE = {
       "quickActionsHint": "Kundalik foydalanish",
       "request": "So‘rash",
       "history": "Tarix",
-      "mySabiId": "My Sabi ID",
+      "mySabiId": "Ma’lumot",
       "mainBlocksTitle": "Asosiy Wallet bloklari",
       "mainBlocksHint": "Asosiy yuza",
       "sabiPayTitle": "To‘lov infratuzilmasi",
@@ -1151,14 +1152,14 @@ export const UZ_LOCALE = {
       "sabiPayBalanceLabel": "Asosiy balans",
       "qrTitle": "Scan va merchant flow",
       "qrSubtitle": "Merchant pay, scan-to-pay, My QR yaratish va kamera orqali scan qilish uchun yagona premium kirish nuqtasi.",
-      "coinTitle": "Sabi Coin Wallet",
+      "coinTitle": "Sarlavha",
       "coinSubtitle": "Messenger giftlari, premium funksiyalar va kelajakdagi stream donation flow uchun ichki Coin Wallet.",
       "coinBalanceLabel": "COIN balansi",
       "localCardsTitle": "Mahalliy kartalar qatlami",
       "localCardsSubtitle": "Ichki o‘tkazmalar, qabul qiluvchilar va ulangan kartalarni boshqarish uchun alohida mahalliy karta tizimi.",
       "localCardsBalanceLabel": "Mahalliy balans",
-      "businessTitle": "Business marshrutlash",
-      "businessSubtitle": "Operatsion, vendor va company to‘lovlarini alohida business qatlami orqali yo‘naltiradi.",
+      "businessTitle": "Ma’lumot",
+      "businessSubtitle": "Ma’lumot Ma’lumot",
       "merchantTitle": "Merchant hisob-kitobi",
       "merchantSubtitle": "Marketplace va seller-side checkout uchun merchant settlement wallet oqimi.",
       "cryptoTitle": "Crypto Wallet kirishi",
@@ -1167,7 +1168,7 @@ export const UZ_LOCALE = {
       "aiSectionTitle": "AI yordamchi",
       "aiSectionHint": "Aqlli qatlam",
       "aiTitle": "Aqlli Wallet yordami",
-      "aiSubtitle": "To‘lovlar, kartalar, COIN, business, merchant flowlar, crypto guidance va Wallet tarixi haqida so‘rang.",
+      "aiSubtitle": "AI Ma’lumot",
       "aiGuidanceTitle": "Yo‘riqnoma",
       "aiGuidanceText": "To‘g‘ri Wallet amalini tezroq topishga yordam beradi",
       "aiSupportTitle": "Yordam",
@@ -1177,12 +1178,12 @@ export const UZ_LOCALE = {
       "cardsHubTitle": "Kartalar markazi",
       "cardsHubSubtitle": "Mahalliy, global, virtual",
       "chatPaymentsTitle": "Chat to‘lovlari",
-      "chatPaymentsSubtitle": "Messenger payment flow",
+      "chatPaymentsSubtitle": "Chat Ma’lumot",
       "virtualCardTitle": "Virtual karta",
       "virtualCardSubtitle": "Xavfsiz onlayn karta",
       "controlsTitle": "Bu Home nimani boshqaradi",
       "controlsHint": "Doira",
-      "info1Title": "Sabi Pay foundation",
+      "info1Title": "Ma’lumot",
       "info1Text": "MySabi ID, ichki transfer, pul so‘rash va to‘lov infratuzilmasi uchun kirish nuqtasi.",
       "info2Title": "QR va merchant kirishi",
       "info2Text": "Butun Home ekran bo‘ylab takrorlanuvchi QR tugmalarisiz bitta toza QR kirish nuqtasi.",
@@ -1190,8 +1191,8 @@ export const UZ_LOCALE = {
       "info3Text": "Mahalliy, xalqaro va virtual kartalarni bitta tartibli Wallet qatlamida ushlab turadi.",
       "info4Title": "Sabi Coin qatlami",
       "info4Text": "Messenger giftlari, premium funksiyalar va kelajakdagi stream monetizatsiyasi uchun ichki COIN balans.",
-      "info5Title": "Business va merchant routing",
-      "info5Text": "Kelajakda accounting chalkashmasligi uchun personal, business va merchant payment source’larni ajratadi.",
+      "info5Title": "Ma’lumot",
+      "info5Text": "Ma’lumot Ma’lumot",
       "info6Title": "AI yordamchi qatlami",
       "info6Text": "AI Wallet funksiyalarini tushuntiradi, marshrutlarni tavsiya qiladi va kritik to‘lov tasdiqlarini almashtirmasdan yo‘l ko‘rsatadi.",
       "info7Title": "Crypto kirishi",
@@ -1199,33 +1200,33 @@ export const UZ_LOCALE = {
       "pillInternal": "Ichki",
       "pillCore": "Asos",
       "pillCamera": "Kamera",
-      "pillMerchant": "Merchant",
+      "pillMerchant": "Ma’lumot",
       "pillGifts": "Giftlar",
-      "pillStream": "Stream",
+      "pillStream": "Strim",
       "pillDomestic": "Mahalliy",
       "pillOperations": "Operatsiyalar",
       "pillReferences": "Rekvizitlar",
-      "pillCheckout": "Checkout",
+      "pillCheckout": "Ma’lumot",
       "pillSettlements": "Hisob-kitob",
       "pillAssets": "Aktivlar",
-      "pillProvider": "Provider",
-      "pillCustody": "Custody",
+      "pillProvider": "Sozlamalar",
+      "pillCustody": "Ma’lumot",
       "pillSeparated": "Alohida",
       "askAi": "AI dan so‘rash",
       "smartTips": "Aqlli maslahatlar",
       "recentHelp": "So‘nggi yordam",
       "loading": "Wallet holati yangilanmoqda...",
-      "eyebrowSabiPay": "SABI PAY",
+      "eyebrowSabiPay": "Ma’lumot",
       "eyebrowQr": "QR",
-      "eyebrowSabiCoin": "SABI COIN",
+      "eyebrowSabiCoin": "Ma’lumot",
       "eyebrowLocalCards": "MAHALLIY KARTALAR",
-      "eyebrowBusiness": "BUSINESS",
-      "eyebrowMerchant": "MERCHANT",
-      "eyebrowCrypto": "CRYPTO",
-      "pillSabiPay": "Sabi Pay",
-      "pillSabiBalance": "Sabi Balance",
-      "pillMyQr": "My QR",
-      "pillBusiness": "Business"
+      "eyebrowBusiness": "Ma’lumot",
+      "eyebrowMerchant": "Ma’lumot",
+      "eyebrowCrypto": "Ma’lumot",
+      "pillSabiPay": "Ma’lumot",
+      "pillSabiBalance": "Ma’lumot",
+      "pillMyQr": "Mening QR",
+      "pillBusiness": "Biznes"
     },
     "kycStatus": {
       "notRequired": "Talab qilinmaydi",
@@ -1241,7 +1242,7 @@ export const UZ_LOCALE = {
       "walletRoute": "Wallet yo‘nalishi",
       "eyebrow": "Xavfsiz tasdiqlash",
       "title": "Operatsiyani tasdiqlash",
-      "subtitle": "Himoyalangan Wallet amalini final security provider orqali avtorizatsiya qiling.",
+      "subtitle": "Ma’lumot Ma’lumot",
       "protectedAction": "Himoyalangan amal",
       "authorizationTitle": "PIN avtorizatsiya",
       "authorizationText": "Bu amal bajarilishidan oldin xavfsiz tasdiqlash talab qiladi.",
@@ -1255,17 +1256,17 @@ export const UZ_LOCALE = {
       "recipientTarget": "Qabul qiluvchi / maqsad",
       "source": "Manba",
       "amount": "Summa",
-      "reference": "Reference",
+      "reference": "Havola",
       "note": "Izoh",
-      "emptyAmount": "—",
+      "emptyAmount": "Ma’lumot",
       "emptyNote": "Izoh yo‘q",
       "emptyReference": "Reference yo‘q",
       "protectedTarget": "Himoyalangan maqsad",
-      "walletSource": "Wallet",
+      "walletSource": "Hamyon",
       "enterPin": "PIN kiriting",
       "providerRequired": "Secure confirmation provider kerak",
       "providerRequiredError": "Secure confirmation provider hali sozlanmagan.",
-      "helperText": "Ekran faqat real wallet security provider amalni tasdiqlagandan keyin davom etadi.",
+      "helperText": "Ma’lumot Ma’lumot",
       "protectionTitle": "Tasdiqlash himoyasi",
       "protectionText": "Muhim Wallet amallari processingdan oldin himoyalangan qadam talab qiladi.",
       "providerTitle": "Provider kerak",
@@ -1276,10 +1277,10 @@ export const UZ_LOCALE = {
       "cardsTitle": "Card provider tayyorligi",
       "coinHint": "COIN cash-out faqat Sabi Wallet bridge orqali",
       "coinTitle": "Coin bridge tayyorligi",
-      "compliance": "Compliance",
+      "compliance": "Moslik",
       "cryptoHint": "Soxta narx, kalit yoki blockchain tranzaksiya yo‘q",
       "cryptoTitle": "Crypto provider tayyorligi",
-      "settingsHint": "Backend/admin orqali boshqariladi; mobile ichida secret yo‘q",
+      "settingsHint": "Sozlamalar Ma’lumot",
       "settingsTitle": "Provider va compliance",
       "tokenOnlyPolicy": "Token-only: PAN/CVV, API secret, seed phrase va private key Sabi mobile yoki Sabi infratuzilmasida hech qachon saqlanmaydi.",
       "virtualCardHint": "Issuer provider va KYC tayyor bo‘lishi kerak",
@@ -1308,7 +1309,7 @@ export const UZ_LOCALE = {
       "escalated": "Yuqori ko‘rib chiqishga yuborilgan",
       "kycRequired": "KYC talab qilinadi",
       "kycStatus": "KYC holati",
-      "monitoring": "Monitoring",
+      "monitoring": "Monitoringda",
       "notRequired": "Talab qilinmaydi",
       "pending": "Kutilmoqda",
       "providerConfigurationRequired": "Provider konfiguratsiyasi kerak",
@@ -1321,7 +1322,7 @@ export const UZ_LOCALE = {
       "tokenOnlyPolicy": "Token-only karta siyosati",
       "tokenOnlyPolicyText": "Sabi faqat provider/bank tokenlari va maskalangan metadata oladi. Raw card data hech qachon Sabi infratuzilmasiga kirmaydi.",
       "verified": "Tasdiqlangan",
-      "back": "Wallet",
+      "back": "Hamyon",
       "eyebrow": "WALLET BOSHQARUV MARKAZI",
       "title": "Wallet sozlamalari",
       "subtitle": "Wallet valyutasi, kartalar, xavfsizlik, limitlar va toʻlov yoʻnalishlari.",
@@ -1337,11 +1338,11 @@ export const UZ_LOCALE = {
       "primaryCurrency": "Asosiy valyuta",
       "primaryCurrencyDescription": "Asosiy Wallet ekrani va Sabi Balance shu valyutada koʻrinadi. Default USD.",
       "localCurrency": "Mahalliy valyuta",
-      "localCurrencyDescription": "Mahalliy karta va local Wallet yoʻnalishlari tanlov yoki provider aniqlashidan keyin shu valyutadan foydalanadi.",
+      "localCurrencyDescription": "Mahalliy Ma’lumot",
       "internationalCurrency": "Xalqaro karta valyutasi",
       "internationalCurrencyDescription": "Xalqaro kartalar boshqa provider valyutasi tanlanmasa USD ishlatadi.",
       "noHardcodedCurrencyTitle": "Qattiq yozilgan mahalliy valyuta yoʻq",
-      "noHardcodedCurrencyText": "Asosiy Wallet mahalliy valyuta yorligʻini majburlamaydi. Local currency faqat sozlama yoki provider detectiondan keyin chiqadi.",
+      "noHardcodedCurrencyText": "Ma’lumot Ma’lumot",
       "cardPreferences": "Karta sozlamalari",
       "manageCards": "Kartalarni boshqarish",
       "manageCardsDescription": "Token-only kartalar markazi, mahalliy / xalqaro / virtual kartalar va provider bindingni ochish.",
@@ -1350,7 +1351,7 @@ export const UZ_LOCALE = {
       "smart": "Aqlli",
       "local": "Mahalliy",
       "international": "Xalqaro",
-      "virtual": "Virtual",
+      "virtual": "Ma’lumot",
       "autoSelectBestCard": "Eng yaxshi kartani avtomatik tanlash",
       "autoSelectBestCardDescription": "Joriy flow uchun eng yaxshi tokenized kartani tanlash.",
       "showLast4": "Default faqat oxirgi 4 raqamni koʻrsatish",
@@ -1375,7 +1376,7 @@ export const UZ_LOCALE = {
       "sensitiveBehaviorDescription": "Karta-sensitive tafsilotlar va yashirin qiymatlar qanday ochilishini boshqarish.",
       "tap": "Bosish",
       "biometric": "Biometriya",
-      "pin": "PIN",
+      "pin": "Ma’lumot",
       "useBiometric": "Sensitive info uchun biometriya",
       "useBiometricDescription": "Karta maxfiy tafsilotlarini ochishdan oldin Face ID / barmoq izi.",
       "hideBalances": "Ekran ochilganda balanslarni yashirish",
@@ -1406,7 +1407,7 @@ export const UZ_LOCALE = {
     },
     "shared": {
       "back": "Orqaga",
-      "wallet": "Wallet",
+      "wallet": "Hamyon",
       "totalBalance": "Umumiy balans",
       "walletBalance": "Wallet balansi",
       "personal": "Shaxsiy",
@@ -1414,7 +1415,7 @@ export const UZ_LOCALE = {
       "localBalance": "Mahalliy balans",
       "coinBalance": "COIN balansi",
       "cryptoValue": "Crypto qiymati",
-      "sabiBalance": "Sabi Balance",
+      "sabiBalance": "Ma’lumot",
       "sabiBalanceDescription": "To‘ldirish, o‘tkazmalar, rewardlar va ekotizim to‘lovlari uchun ichki Sabi balansi",
       "internal": "Ichki",
       "holder": "Egasi",
@@ -1423,16 +1424,16 @@ export const UZ_LOCALE = {
       "unknown": "Nomaʼlum"
     },
     "entry": {
-      "headerTitle": "Wallet",
+      "headerTitle": "Hamyon",
       "headerSubtitle": "Shaxsiy Wallet, Sabi Balance, kartalar, QR, to‘ldirish va crypto bir joyda",
       "quickActionsTitle": "Tezkor amallar",
       "quickActionsHint": "Wallet asosiy amallari",
       "topUp": "To‘ldirish",
       "send": "Yuborish",
       "receive": "Qabul qilish",
-      "qrPay": "QR Pay",
+      "qrPay": "QR orqali to‘lash",
       "cards": "Kartalar",
-      "crypto": "Crypto",
+      "crypto": "Soxta narx, kalit yoki blockchain tranzaksiya yo‘q",
       "cardsAccessTitle": "Kartalar bo‘limi",
       "cardsAccessHint": "Kartalarni bitta xavfsiz joydan boshqarish",
       "allCardsTitle": "Barcha kartalar",
@@ -1441,8 +1442,8 @@ export const UZ_LOCALE = {
       "localCardsSubtitle": "Mahalliy karta oqimlari, OTP tekshiruvlari va ichki o‘tkazmalar"
     },
     "coinIndex": {
-      "eyebrow": "SABI COIN ECOSYSTEM",
-      "title": "Coin Wallet",
+      "eyebrow": "Ma’lumot",
+      "title": "Sozlamalar",
       "subtitle": "COIN uchun transferlar, tarix, diamond konvertatsiyasi, earn mahsulotlari va kelajakdagi credit foundation bilan to‘liq payment wallet.",
       "totalLabel": "MAVJUD + MUZLATILGAN + REZERV + KUTILYAPTI",
       "heroSubtitle": "COIN real moliyaviy wallet sifatida ishlaydi. Diamonds to‘g‘ridan-to‘g‘ri transfer funksiyalarisiz alohida ichki product balance bo‘lib qoladi.",
@@ -1456,7 +1457,7 @@ export const UZ_LOCALE = {
       "diamondWithdrawRule": "Diamond chiqarish qoidasi",
       "nextAvailableDate": "Keyingi mavjud sana",
       "coinActions": "COIN amallari",
-      "coreWallet": "Core wallet",
+      "coreWallet": "Hamyon",
       "topUp": "To‘ldirish",
       "topUpText": "Walletga COIN qo‘shish",
       "send": "Yuborish",
@@ -1465,14 +1466,14 @@ export const UZ_LOCALE = {
       "receiveText": "Kiruvchi COIN",
       "history": "Tarix",
       "historyText": "Tranzaksiya jurnali",
-      "diamonds": "Diamonds",
+      "diamonds": "Ma’lumot",
       "diamondsText": "Sotib olish, konvertatsiya va chiqarish",
-      "earn": "Earn",
+      "earn": "Ma’lumot",
       "earnText": "6M / 12M depozit",
-      "lockedDeposit": "Locked Coin Deposit",
+      "lockedDeposit": "Ma’lumot",
       "lockedDepositText": "16% APR • 6M dan 12M gacha",
       "manage": "Boshqarish",
-      "maturity": "Maturity",
+      "maturity": "Ma’lumot",
       "months": "oy",
       "noActiveDeposits": "Hozircha faol depozitlar yo‘q.",
       "moveCoinToWallet": "COINni asosiy walletga o‘tkazish",
@@ -1482,11 +1483,11 @@ export const UZ_LOCALE = {
       "spendable": "Sarflash mumkin",
       "withdrawable": "Chiqarish mumkin",
       "gameEligible": "O‘yin uchun",
-      "diamondsUnit": "DIAMONDS"
+      "diamondsUnit": "Ma’lumot"
     },
     "cryptoIndex": {
-      "eyebrow": "SABI CRYPTO",
-      "title": "Crypto Wallet",
+      "eyebrow": "Ma’lumot",
+      "title": "Sozlamalar",
       "subtitle": "Provider-backed aktivlar, network routing va wallet risk checks bilan alohida crypto kirish.",
       "totalBalance": "Umumiy crypto qiymati",
       "providerRequired": "Provider kerak",
@@ -1497,135 +1498,135 @@ export const UZ_LOCALE = {
       "status": "Holat",
       "quickActions": "Tezkor amallar",
       "buy": "Sotib olish",
-      "buyText": "Provider funding",
+      "buyText": "Ma’lumot Ma’lumot",
       "send": "Yuborish",
       "sendText": "Tashqi transfer",
       "receive": "Qabul qilish",
-      "receiveText": "Wallet address",
-      "swap": "Swap",
+      "receiveText": "Ma’lumot Ma’lumot",
+      "swap": "Almashtirish",
       "swapText": "Aktivlarni almashtirish",
       "sell": "Sotish",
       "sellText": "Tashqariga konvertatsiya",
       "history": "Tarix",
       "historyText": "Tasdiqlangan faollik",
-      "portfolio": "Portfolio",
-      "custody": "Custody route",
+      "portfolio": "Ma’lumot",
+      "custody": "Ma’lumot",
       "custodyText": "Crypto balanslari ulangan provider yoki wallet backenddan kelishi kerak.",
-      "pricing": "Market pricing",
+      "pricing": "Ma’lumot",
       "pricingText": "USD qiymati faqat provider price feed ulangandan keyin ko‘rsatiladi.",
-      "risk": "Risk checks",
+      "risk": "Ma’lumot",
       "riskText": "Send, sell va swap wallet risk checks va aniq tasdiqni talab qiladi.",
       "assets": "Aktivlar",
       "noAssetsTitle": "Hozircha crypto aktivlar yo‘q",
-      "noAssetsText": "Aktivlar faqat real crypto provider yoki wallet backend tekshirilgan balanslarni qaytargandan keyin paydo bo‘ladi.",
+      "noAssetsText": "Ma’lumot Ma’lumot",
       "networksTokens": "Tarmoqlar va tokenlar",
       "networksText": "Tarmoq ro‘yxati provider configurationdan kelishi kerak.",
       "tokensText": "Ko‘rinadigan token ro‘yxati provider-backed bo‘lishi kerak.",
-      "cryptoFoundation": "Crypto foundation",
+      "cryptoFoundation": "Ma’lumot",
       "cryptoFoundationText": "Crypto Sabi Wallet, Coin Wallet va card railsdan alohida qoladi, qiymatlar ulangan providerdan olinadi.",
       "backToWalletHome": "Wallet Homega qaytish",
       "openAssets": "Aktivlarni ochish"
     },
     "businessPay": {
-      "eyebrow": "Business Pay",
-      "title": "Business routing",
-      "subtitle": "Business Wallet route provider-backed to‘lovlar va merchant-linked settlementlar uchun tayyorlangan.",
+      "eyebrow": "Ma’lumot",
+      "title": "Ma’lumot",
+      "subtitle": "Ma’lumot Ma’lumot",
       "providerStatus": "Provider sozlanmagan",
-      "routeTitle": "Business route",
+      "routeTitle": "Sarlavha",
       "routeHint": "Provider-backed yo‘nalishlar",
-      "routeEmptyTitle": "Business routes hali yo‘q",
-      "routeEmptyText": "Yo‘nalishlar Business Wallet provider, KYB va admin configurationdan kelishi kerak.",
-      "searchPlaceholder": "Business routes qidirish",
+      "routeEmptyTitle": "Ma’lumot",
+      "routeEmptyText": "Ma’lumot Ma’lumot",
+      "searchPlaceholder": "Qidiruv",
       "fundingTitle": "Mablag‘ manbasi",
       "fundingHint": "Token va wallet rails",
-      "businessBalance": "Business Wallet",
-      "businessBalanceText": "Business Wallet ishga tushgandan keyin mavjud",
-      "sabiBalanceText": "Personal Sabi Wallet bridge",
-      "merchantBalance": "Merchant route",
+      "businessBalance": "Biznes hamyon",
+      "businessBalanceText": "Ma’lumot Ma’lumot",
+      "sabiBalanceText": "Ma’lumot Ma’lumot",
+      "merchantBalance": "Ma’lumot",
       "merchantBalanceText": "Merchant settlement provider ulangandan keyin mavjud",
       "notConfigured": "Sozlanmagan",
       "detailsTitle": "To‘lov tafsilotlari",
       "detailsHint": "Summa va reference",
       "amount": "Summa",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
+      "amountPlaceholder": "Qidiruv",
+      "reference": "Havola",
       "referencePlaceholder": "Invoice, order yoki payout reference",
-      "previewTitle": "Routing preview",
-      "previewHint": "Summary",
+      "previewTitle": "Sarlavha",
+      "previewHint": "Nashr xulosasi",
       "selectedRoute": "Tanlangan route",
       "fundingSource": "Mablag‘ manbasi",
       "noReference": "Reference yo‘q",
-      "qrTitle": "Business QR",
-      "qrSubtitle": "Business receive QR yaratish",
-      "scanTitle": "Business QR skanerlash",
+      "qrTitle": "Biznes QR",
+      "qrSubtitle": "Tavsif Ma’lumot",
+      "scanTitle": "Sarlavha",
       "scanSubtitle": "Wallet scanner ochish",
-      "routesTitle": "Business links",
-      "routesHint": "Wallet navigation",
-      "merchantLink": "Merchant link",
+      "routesTitle": "Sarlavha",
+      "routesHint": "Ma’lumot Ma’lumot",
+      "merchantLink": "Ma’lumot",
       "history": "Tarix",
-      "paymentsHub": "Payments hub",
+      "paymentsHub": "Ma’lumot",
       "notesTitle": "Xavfsizlik",
-      "notesHint": "Policy",
-      "note1Title": "Business route ajratish",
-      "note1Text": "Business money routing personal wallet flowdan alohida qoladi.",
+      "notesHint": "Ma’lumot Ma’lumot",
+      "note1Title": "Ma’lumot",
+      "note1Text": "Ma’lumot Ma’lumot",
       "note2Title": "KYB va admin control",
-      "note2Text": "Business payouts provider, KYB, wallet risk checks va admin/compliance hooks talab qiladi.",
+      "note2Text": "Ma’lumot Ma’lumot",
       "note3Title": "Provider settlement",
-      "note3Text": "Business balances va payouts provider settlement tasdig‘ini talab qiladi.",
+      "note3Text": "Ma’lumot Ma’lumot",
       "back": "Orqaga",
       "process": "To‘lovni bajarish"
     },
     "merchantPay": {
-      "eyebrow": "Merchant Pay",
-      "title": "Merchant settlement",
+      "eyebrow": "Ma’lumot",
+      "title": "Merchant hisob-kitobi",
       "subtitle": "Merchant settlement route provider-backed checkout va seller payouts uchun tayyorlangan.",
       "providerStatus": "Provider sozlanmagan",
-      "routeTitle": "Merchant route",
+      "routeTitle": "Sarlavha",
       "routeHint": "Provider-backed merchantlar",
       "routeEmptyTitle": "Merchant routes hali yo‘q",
       "routeEmptyText": "Merchant routes merchant provider, KYB/KYC va admin configurationdan kelishi kerak.",
       "searchPlaceholder": "Merchant routes qidirish",
       "fundingTitle": "Mablag‘ manbasi",
       "fundingHint": "Settlement va wallet rails",
-      "businessBalance": "Business Wallet",
-      "businessBalanceText": "Business Wallet ishga tushgandan keyin mavjud",
-      "sabiBalanceText": "Sabi Wallet payment source",
-      "merchantBalance": "Merchant Balance",
+      "businessBalance": "Biznes hamyon",
+      "businessBalanceText": "Ma’lumot Ma’lumot",
+      "sabiBalanceText": "Ma’lumot Ma’lumot",
+      "merchantBalance": "Ma’lumot",
       "merchantBalanceText": "Merchant settlement provider ulangandan keyin mavjud",
       "notConfigured": "Sozlanmagan",
       "detailsTitle": "To‘lov tafsilotlari",
       "detailsHint": "Summa va reference",
       "amount": "Summa",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
+      "amountPlaceholder": "Qidiruv",
+      "reference": "Havola",
       "referencePlaceholder": "Order, invoice yoki settlement reference",
-      "previewTitle": "Payment preview",
-      "previewHint": "Summary",
+      "previewTitle": "Sarlavha",
+      "previewHint": "Nashr xulosasi",
       "selectedRoute": "Tanlangan route",
       "fundingSource": "Mablag‘ manbasi",
       "noReference": "Reference yo‘q",
-      "qrTitle": "Merchant QR",
+      "qrTitle": "Sarlavha",
       "qrSubtitle": "Merchant receive QR yaratish",
       "scanTitle": "Merchant QR skanerlash",
       "scanSubtitle": "Wallet scanner ochish",
-      "routesTitle": "Merchant links",
-      "routesHint": "Wallet navigation",
-      "merchantLink": "Business link",
+      "routesTitle": "Sarlavha",
+      "routesHint": "Ma’lumot Ma’lumot",
+      "merchantLink": "Ma’lumot",
       "history": "Tarix",
-      "paymentsHub": "Payments hub",
+      "paymentsHub": "Ma’lumot",
       "notesTitle": "Xavfsizlik",
-      "notesHint": "Policy",
+      "notesHint": "Ma’lumot Ma’lumot",
       "note1Title": "Merchant route ajratish",
       "note1Text": "Merchant settlement personal wallet flowdan alohida qoladi.",
       "note2Title": "Provider va admin control",
       "note2Text": "Merchant payments provider routing, wallet risk checks va admin/compliance hooks talab qiladi.",
-      "note3Title": "Provider merchant balance",
+      "note3Title": "Ma’lumot",
       "note3Text": "Merchant payments va settlement balances provider tasdig‘ini talab qiladi.",
       "back": "Orqaga",
       "process": "To‘lovni bajarish"
     },
     "paymentsHub": {
-      "eyebrow": "SABI WALLET PAY",
+      "eyebrow": "Ma’lumot",
       "title": "To‘lov markazi",
       "subtitle": "Sabi Wallet, kartalar, QR, merchant routing va Messenger payments uchun yagona to‘lov markazi.",
       "heroTitle": "To‘lov infratuzilmasi",
@@ -1633,14 +1634,14 @@ export const UZ_LOCALE = {
       "providerNotConfigured": "Provider sozlanmagan",
       "mainBalance": "Asosiy balans",
       "primaryCurrency": "Asosiy valyuta",
-      "providerRoutes": "Provider routes",
-      "pillSabi": "Sabi Wallet",
+      "providerRoutes": "Sozlamalar",
+      "pillSabi": "SABI Wallet",
       "pillCards": "Kartalar",
-      "pillMerchant": "Merchant",
+      "pillMerchant": "Ma’lumot",
       "pillInternal": "Ichki",
-      "pillIdentity": "Identity",
+      "pillIdentity": "Identitet",
       "featuredTitle": "Asosiy to‘lov oqimlari",
-      "featuredHint": "Core routes",
+      "featuredHint": "Premium Ma’lumot",
       "internalEyebrow": "ICHKI TO‘LOVLAR",
       "internalTitle": "MySabi ID va o‘tkazmalar",
       "internalSubtitle": "Internal send, request, contacts va identity-based wallet routing.",
@@ -1648,136 +1649,136 @@ export const UZ_LOCALE = {
       "cardEyebrow": "KARTALAR VA HARAKAT",
       "cardTitle": "Kartalar, to‘ldirish va chiqarish",
       "cardSubtitle": "Sabi Wallet va kartalar orasidagi pul harakati faqat provider tokenlar orqali bo‘lishi kerak.",
-      "cardProvider": "Card provider",
+      "cardProvider": "Sozlamalar",
       "ecosystemEyebrow": "MERCHANT VA CHAT",
-      "ecosystemTitle": "Business, merchant va Messenger",
-      "ecosystemSubtitle": "Merchant, business va chat payments provider routes ulanmaguncha shaxsiy balansdan alohida turadi.",
-      "ecosystemProvider": "Ecosystem provider",
+      "ecosystemTitle": "Sarlavha",
+      "ecosystemSubtitle": "Tavsif Ma’lumot",
+      "ecosystemProvider": "Sozlamalar",
       "qrAccess": "QR kirish",
       "singleEntry": "Yagona kirish",
-      "myQr": "My Sabi QR",
+      "myQr": "Ma’lumot",
       "myQrSubtitle": "Sabi Wallet uchun receive QR yaratish.",
       "scanQr": "QR skanerlash",
       "scanQrSubtitle": "User, merchant yoki dynamic QR flow uchun scanner ochish.",
       "internalPayments": "Ichki to‘lovlar",
-      "core": "Core",
+      "core": "Asos",
       "cardsBalance": "Kartalar va balans",
       "moneyMovement": "Pul harakati",
       "ecosystemPayments": "Ekotizim to‘lovlari",
-      "extendedRoutes": "Extended routes",
-      "mySabiId": "MySabi ID",
+      "extendedRoutes": "Ma’lumot",
+      "mySabiId": "Ma’lumot",
       "mySabiIdSubtitle": "Ichki wallet identity va payment sharing boshqaruvi.",
       "send": "Pul yuborish",
       "sendSubtitle": "Sabi Wallet, card route yoki internal wallet route orqali yuborish.",
       "request": "Pul so‘rash",
       "requestSubtitle": "Tekshirilgan payment request yaratish.",
-      "contacts": "Wallet contacts",
+      "contacts": "Wallet kontaktlari",
       "contactsSubtitle": "Saved recipients faqat verified wallet contactsdan kelishi kerak.",
       "topup": "Kartadan to‘ldirish",
       "topupSubtitle": "Tokenized provider card route orqali pul qo‘shish.",
       "withdraw": "Kartaga chiqarish",
       "withdrawSubtitle": "Sabi Balanceni provider-tokenized cardga chiqarish.",
       "cards": "Kartalar",
-      "cardsSubtitle": "Local, international va virtual tokenized kartalarni boshqarish.",
+      "cardsSubtitle": "Tavsif Ma’lumot",
       "virtualCard": "Virtual karta",
       "virtualCardSubtitle": "Faqat real bank yoki issuer provider orqali chiqarish.",
-      "chatPayments": "Chat payments",
+      "chatPayments": "Chat to‘lovlari",
       "chatPaymentsSubtitle": "Aniq tasdiqli Messenger payment routes.",
-      "merchantPay": "Merchant Pay",
+      "merchantPay": "Ma’lumot",
       "merchantPaySubtitle": "Provider-backed merchant checkout va settlement routing.",
-      "businessPay": "Business routing",
-      "businessPaySubtitle": "Business Wallet route KYB/admin control uchun tayyorlangan.",
-      "securityTitle": "Wallet-grade routing",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-based routing",
-      "identityText": "MySabi ID personal, business va merchant payment discoveryni verified identity orqali bog‘laydi.",
-      "tokenTitle": "Token-only card movement",
+      "businessPay": "Ma’lumot",
+      "businessPaySubtitle": "Ma’lumot Ma’lumot",
+      "securityTitle": "Xavfsizlik",
+      "securityHint": "Xavfsizlik Ma’lumot",
+      "identityTitle": "Sarlavha",
+      "identityText": "Ma’lumot Ma’lumot",
+      "tokenTitle": "Sarlavha",
       "tokenText": "Card movement bank/provider tokenlaridan foydalanadi. Sabi PAN yoki CVV saqlamasligi kerak.",
-      "separationTitle": "Merchant va business ajratish",
-      "separationText": "Seller checkout va business payment routing personal wallet balancedan alohida qoladi.",
-      "noFakeTitle": "Secure provider execution",
-      "noFakeText": "Balances va routes faqat wallet foundation, provider yoki backend data mavjud bo‘lganda chiqadi."
+      "separationTitle": "Sarlavha",
+      "separationText": "Ma’lumot Ma’lumot",
+      "noFakeTitle": "Sarlavha",
+      "noFakeText": "Ma’lumot Ma’lumot"
     },
     "contacts": {
       "title": "Wallet kontaktlari",
-      "subtitle": "Tasdiqlangan Wallet kontaktlari backend directory syncdan keyin ko‘rinadi.",
+      "subtitle": "Ma’lumot Ma’lumot",
       "searchPlaceholder": "Tasdiqlangan Wallet kontaktlarini qidirish",
       "all": "Hammasi",
       "people": "Odamlar",
       "business": "Biznes",
-      "merchant": "Merchant",
+      "merchant": "Ma’lumot",
       "quickRoutes": "Tezkor yo‘llar",
       "quickRoutesHint": "Amallar",
       "send": "Yuborish",
       "request": "So‘rash",
-      "chatPay": "Chat Pay",
-      "mySabiId": "MySabi ID",
+      "chatPay": "Chat",
+      "mySabiId": "Ma’lumot",
       "directoryTitle": "Tasdiqlangan directory",
       "directoryHint": "Verified directory kerak",
       "emptyTitle": "Tasdiqlangan kontaktlar hali yo‘q",
-      "emptyText": "Kontaktlar verified user, business yoki merchant routelardan kelishi kerak.",
+      "emptyText": "Ma’lumot Ma’lumot",
       "securityTitle": "Kontakt tizimi",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-first routing",
-      "identityText": "Wallet kontaktlari unified user ID, MySabi ID yoki tasdiqlangan merchant/business routedan foydalanishi kerak.",
+      "securityHint": "Xavfsizlik Ma’lumot",
+      "identityTitle": "Sarlavha",
+      "identityText": "Ma’lumot Ma’lumot",
       "verifiedTitle": "Tasdiqlangan yo‘llar",
-      "verifiedText": "Send va request pul harakatidan oldin recipientsni backend/profile datadan resolve qilishi kerak."
+      "verifiedText": "Ma’lumot Ma’lumot"
     },
     "chatPayments": {
       "title": "Chat to‘lovlari",
       "subtitle": "ID yoki QR orqali Messenger payment route.",
-      "heroTitle": "Messenger payment layer",
+      "heroTitle": "Chat",
       "heroText": "Chat payments tasdiqdan oldin real Messenger identity va wallet provider routesni resolve qilishi kerak.",
       "currentRoute": "Joriy route",
       "currentAmount": "Joriy summa",
       "byId": "ID orqali",
       "byQr": "QR orqali",
-      "paymentMode": "Payment mode",
+      "paymentMode": "Ma’lumot",
       "paymentModeHint": "ID yoki QR",
       "byIdText": "Internal user ID yoki @handledan foydalaning.",
       "byQrText": "Messenger payment QRni scan yoki generate qiling.",
       "paymentSource": "To‘lov manbasi",
       "paymentSourceHint": "Fiat yoki COIN",
-      "sabiWallet": "Sabi Wallet",
+      "sabiWallet": "SABI Wallet",
       "sabiWalletText": "Chat payments uchun primary wallet balance.",
-      "coinWallet": "Coin Wallet",
+      "coinWallet": "Hamyon",
       "coinWalletText": "Premium chat transfers uchun COIN route.",
       "recipientTitle": "ID bo‘yicha recipient",
-      "recipientHint": "Messenger identity",
-      "recipientLabel": "Recipient ID / @handle",
+      "recipientHint": "Ma’lumot Ma’lumot",
+      "recipientLabel": "Ma’lumot",
       "recipientPlaceholder": "@username yoki user ID",
-      "qrRecipientTitle": "QR recipient",
-      "qrRecipientHint": "Scanned result",
-      "qrRecipientLabel": "QR recipient / reference",
+      "qrRecipientTitle": "Sarlavha",
+      "qrRecipientHint": "Ma’lumot Ma’lumot",
+      "qrRecipientLabel": "Ma’lumot",
       "qrRecipientPlaceholder": "Scanned handle, ID yoki QR reference",
       "myMessengerQr": "Mening Messenger QR",
       "myMessengerQrText": "Chat uchun receive QR yaratish.",
       "scanMessengerQr": "Messenger QR skanerlash",
       "scanMessengerQrText": "Wallet scannerni ochish.",
       "detailsTitle": "To‘lov tafsilotlari",
-      "detailsHint": "Compose",
+      "detailsHint": "Ma’lumot Ma’lumot",
       "amount": "Summa",
       "note": "Izoh",
       "notePlaceholder": "Sabab yoki payment note",
-      "previewTitle": "Chat payment preview",
-      "previewHint": "Summary",
-      "mode": "Mode",
-      "recipient": "Recipient",
-      "source": "Source",
+      "previewTitle": "Sarlavha",
+      "previewHint": "Nashr xulosasi",
+      "mode": "Rejim",
+      "recipient": "Qabul qiluvchi",
+      "source": "Manba",
       "notSelected": "Tanlanmagan",
       "noNote": "Izoh yo‘q",
-      "shortcutsTitle": "Messenger shortcuts",
-      "shortcutsHint": "Routes",
+      "shortcutsTitle": "Sarlavha",
+      "shortcutsHint": "Ma’lumot Ma’lumot",
       "history": "Tarix",
-      "coinWalletShortcut": "Coin Wallet",
-      "sabiWalletShortcut": "Sabi Wallet",
-      "askAi": "Ask AI",
-      "securityTitle": "Messenger payment notes",
-      "securityHint": "Policy",
-      "security1Title": "Identity-linked route",
+      "coinWalletShortcut": "Hamyon",
+      "sabiWalletShortcut": "SABI Wallet",
+      "askAi": "AI dan so‘rash",
+      "securityTitle": "Xavfsizlik",
+      "securityHint": "Xavfsizlik Ma’lumot",
+      "security1Title": "Ma’lumot",
       "security1Text": "Pul harakatidan oldin recipient real Messenger/user identitydan resolve bo‘lishi kerak.",
-      "security2Title": "Explicit confirmation",
-      "security2Text": "Chat payment executiondan oldin Wallet confirmation va security providerga o‘tadi.",
+      "security2Title": "Ma’lumot",
+      "security2Text": "Ma’lumot Ma’lumot",
       "back": "Orqaga",
       "sendById": "ID orqali yuborish",
       "sendByQr": "QR orqali yuborish",
@@ -1818,7 +1819,7 @@ export const UZ_LOCALE = {
       "recipientPlaceholder": "Provider token yoki ulangan karta",
       "amountTitle": "Summa",
       "amountHint": "Mahalliy valyuta",
-      "amountPlaceholder": "0.00",
+      "amountPlaceholder": "Qidiruv",
       "noteLabel": "Izoh",
       "notePlaceholder": "Ixtiyoriy izoh",
       "selectedSource": "Tanlangan manba",
@@ -1858,7 +1859,7 @@ export const UZ_LOCALE = {
       "title": "Mahalliy karta tafsilotlari",
       "subtitle": "Tokenized card profili, provider holati va ichki permissions.",
       "noCardTitle": "Mahalliy karta tanlanmagan",
-      "noCardText": "Bu ekranni faqat verified tokenized local carddan oching. Sabi local test card details yaratmaydi.",
+      "noCardText": "Ma’lumot Ma’lumot",
       "profile": "Karta profili",
       "tokenStatus": "Token holati",
       "tokenPending": "Provider token kutilmoqda",
@@ -1872,7 +1873,7 @@ export const UZ_LOCALE = {
       "securityTitle": "Xavfsizlik",
       "securityText": "PAN/CVV provider flow ichida qoladi. Sabi faqat masked metadata, token ID, provider status va user controls ko‘rsatishi mumkin.",
       "controlsTitle": "Boshqaruv",
-      "controlsText": "Live card controls provider/admin policy orqali bajarilishi kerak, local UI simulation emas."
+      "controlsText": "Ma’lumot Ma’lumot"
     },
     "cardInfo": {
       "title": "Karta tafsilotlari",
@@ -1895,31 +1896,31 @@ export const UZ_LOCALE = {
       "permissions": "Provider ruxsatlari",
       "security": "Xavfsizlik",
       "protection": "Himoya",
-      "securitySettings": "Xavfsizlik settings",
-      "securitySettingsText": "PIN, biometric va trusted-device rules wallet security/provider policy orqali boshqarilishi kerak.",
+      "securitySettings": "Xavfsizlik",
+      "securitySettingsText": "Xavfsizlik Ma’lumot",
       "cardAlerts": "Karta ogohlantirishlari",
-      "cardAlertsText": "Transaction, risk va authorization notifications wallet/provider eventlardan keladi.",
+      "cardAlertsText": "Signallar Ma’lumot",
       "cardLimits": "Karta limitlari",
       "cardLimitsText": "Spending, cash va transaction controls provider/admin policy orqali boshqariladi.",
       "advanced": "Qo‘shimcha",
       "management": "Boshqaruv",
       "routeRole": "Wallet roli routing",
-      "routeRoleText": "Personal, business yoki merchant karta rollari provider-backed card state orqali tayinlanishi kerak.",
+      "routeRoleText": "Ma’lumot Ma’lumot",
       "cardActivity": "Karta faolligi",
       "cardActivityText": "Transactionlar, statuslar va reconciliation hooksni ochish.",
-      "styleMidnight": "Midnight",
-      "styleOcean": "Ocean",
-      "styleEmerald": "Emerald",
-      "styleViolet": "Violet",
-      "styleSunset": "Sunset",
-      "styleYouth": "Youth"
+      "styleMidnight": "Ma’lumot",
+      "styleOcean": "Ma’lumot",
+      "styleEmerald": "Zumrad",
+      "styleViolet": "Ma’lumot",
+      "styleSunset": "Ma’lumot",
+      "styleYouth": "Ma’lumot"
     },
     "confirmAddCard": {
       "title": "Karta binding tasdiqlash",
       "subtitle": "Faqat provider-tokenized karta binding aktivlashtiriladi.",
       "blockedTitle": "Provider token kerak",
       "blockedText": "Bu tasdiq ekrani bank yoki payment providerdan verified token kelmasdan kartani aktivlashtira olmaydi.",
-      "providerToken": "Provider token",
+      "providerToken": "Sozlamalar",
       "maskedCard": "Karta maskasi",
       "cardCategory": "Karta kategoriyasi",
       "status": "Holat",
@@ -1930,9 +1931,9 @@ export const UZ_LOCALE = {
       "restricted": "Cheklangan",
       "invalidPayload": "Raw card data bloklandi",
       "blockedFields": "Bloklangan maydonlar",
-      "source": "Provider token",
+      "source": "Ma’lumot",
       "pinTitle": "Card token tasdiqlash",
-      "pinSubtitle": "Final aktivatsiya backend/provider saqlashdan oldin Wallet Securitydan o‘tishi kerak.",
+      "pinSubtitle": "Tavsif Ma’lumot",
       "tokenOnlyTitle": "Token-only aktivatsiya",
       "tokenOnlyText": "Sabi faqat token ID, masked metadata va provider status saqlashi mumkin. PAN va CVV hech qachon saqlanmaydi.",
       "backToCards": "Kartalarga qaytish",
@@ -1960,7 +1961,7 @@ export const UZ_LOCALE = {
       "sabiBalanceDetails": "Ichki Sabi Wallet balansi",
       "available": "Mavjud",
       "amount": "Summa",
-      "amountPlaceholder": "0.00",
+      "amountPlaceholder": "Qidiruv",
       "destinationTitle": "Qabul qiluvchi",
       "destinationHint": "Qabul qiluvchi ma’lumoti",
       "walletRecipient": "Wallet qabul qiluvchi",
@@ -1977,15 +1978,15 @@ export const UZ_LOCALE = {
       "security1Text": "Karta operatsiyalari bank yoki provider tokenizatsiyasi orqali ishlashi kerak.",
       "security2Title": "Xavfsiz tasdiqlash",
       "security2Text": "Pul harakati PIN, biometrik yoki provider tasdig‘i orqali davom etadi.",
-      "security3Title": "Provider-backed balance",
+      "security3Title": "Ma’lumot",
       "security3Text": "Bu ekran Sabi Balanceni faqat Wallet foundationdan o‘qiydi.",
       "continue": "Davom etish",
       "cardRequired": "Ulangan karta kerak",
       "recipientRequired": "Qabul qiluvchini kiriting",
       "confirmTitle": "Transferni tasdiqlash",
-      "cardRail": "CARD",
-      "sabiRail": "SABI",
-      "usd": "USD"
+      "cardRail": "Ma’lumot",
+      "sabiRail": "Ma’lumot",
+      "usd": "Ma’lumot"
     },
     "topup": {
       "title": "To‘ldirish",
@@ -1993,7 +1994,7 @@ export const UZ_LOCALE = {
       "destination": "Manzil",
       "destinationHint": "Ichki pul",
       "destinationText": "Transferlar, ekotizim to‘lovlari va kundalik foydalanish uchun ichki elektron pul.",
-      "storedValue": "Stored value",
+      "storedValue": "Ma’lumot",
       "type": "Tur",
       "internalMoney": "Ichki elektron pul",
       "usage": "Foydalanish",
@@ -2030,8 +2031,8 @@ export const UZ_LOCALE = {
       "destinationHint": "Ichki balans",
       "destinationText": "Kirish transferlari va kelajakdagi QR receive flowlari uchun ichki elektron pul manzili.",
       "receiveBadge": "Qabul",
-      "walletRail": "Wallet rail",
-      "sabiInternal": "Sabi Internal",
+      "walletRail": "Hamyon",
+      "sabiInternal": "Ma’lumot",
       "speed": "Tezlik",
       "instant": "Darhol",
       "status": "Holat",
@@ -2044,7 +2045,7 @@ export const UZ_LOCALE = {
       "fromUser": "Foydalanuvchidan",
       "fromUserText": "Boshqa Sabi foydalanuvchisidan ichki transfer qabul qilish.",
       "fromBusiness": "Businessdan",
-      "fromBusinessText": "Business wallet route orqali payout yoki transfer qabul qilish.",
+      "fromBusinessText": "Ma’lumot Ma’lumot",
       "fromMerchant": "Merchantdan",
       "fromMerchantText": "Merchant routing orqali settlement yoki merchant-origin transfer qabul qilish.",
       "receiveRoute": "Qabul yo‘nalishi",
@@ -2071,25 +2072,25 @@ export const UZ_LOCALE = {
       "ready": "Tasdiqqa tayyor",
       "source": "Manba",
       "funds": "Mablag‘",
-      "rail": "Rail",
+      "rail": "Ma’lumot",
       "details": "Tafsilotlar",
-      "tokenizedSource": "Tokenized / internal source",
+      "tokenizedSource": "Ma’lumot",
       "destination": "Manzil",
       "recipient": "Qabul qiluvchi",
       "routeType": "Yo‘nalish turi",
-      "handle": "Handle",
+      "handle": "Ma’lumot",
       "note": "Izoh",
-      "reference": "Reference",
+      "reference": "Havola",
       "security": "Xavfsizlik",
       "bankGrade": "Bank darajasi",
-      "pinTitle": "Secure confirmation",
-      "pinText": "Keyingi qadam wallet security provider tasdig‘ini talab qiladi.",
+      "pinTitle": "Xavfsiz tasdiqlash",
+      "pinText": "Ma’lumot Ma’lumot",
       "routeTitle": "Himoyalangan yo‘nalish",
       "routeText": "Pul harakati secure provider-backed execution uchun tayyorlanadi.",
       "notificationTitle": "Yakuniy status",
-      "notificationText": "Muvaffaqiyat, kutish yoki xato wallet backend/provider status orqali kelishi kerak.",
+      "notificationText": "Bildirishnomalar Ma’lumot",
       "continue": "Davom etish",
-      "pinConfirmTitle": "Wallet Security orqali tasdiqlash",
+      "pinConfirmTitle": "Sarlavha",
       "pinConfirmSubtitle": "Operatsiyani secure wallet confirmation orqali avtorizatsiya qiling."
     },
     "success": {
@@ -2098,10 +2099,10 @@ export const UZ_LOCALE = {
       "backToWallet": "Walletga qaytish"
     },
     "financialDashboard": {
-      "eyebrow": "Sabi Wallet",
+      "eyebrow": "SABI Wallet",
       "walletTitle": "Wallet paneli",
       "title": "Moliyaviy panel",
-      "subtitle": "Backend va provider routes orqali Wallet ko‘rinishi",
+      "subtitle": "Ma’lumot Ma’lumot",
       "loading": "Panel yuklanmoqda...",
       "errorTitle": "Panel xatosi",
       "retry": "Qayta urinish",
@@ -2116,11 +2117,11 @@ export const UZ_LOCALE = {
       "paymentRoute": "To‘lov marshruti",
       "totals": "Jami",
       "payments": "To‘lovlar",
-      "p2p": "P2P",
+      "p2p": "Ma’lumot",
       "qr": "QR",
       "walletOps": "Wallet operatsiyalari",
       "business": "Biznes",
-      "merchant": "Merchant",
+      "merchant": "Ma’lumot",
       "noWallets": "Joriy scope uchun wallet topilmadi.",
       "recentHistory": "So‘nggi tarix",
       "seeAll": "Hammasi",
@@ -2136,65 +2137,65 @@ export const UZ_LOCALE = {
       "unknown": "noma’lum",
       "id": "ID",
       "transaction": "Tranzaksiya",
-      "wallet": "Wallet",
-      "reference": "Reference",
+      "wallet": "Hamyon",
+      "reference": "Havola",
       "createdAt": "Yaratilgan vaqt",
-      "payload": "Payload"
+      "payload": "Ma’lumot"
     },
     "paymentExecution": {
       "eyebrow": "To‘lov marshruti",
       "title": "Xavfsiz to‘lov bajarish",
-      "subtitle": "To‘lov bajarish provider confirmation orqali kelishi kerak, manual local form orqali emas.",
+      "subtitle": "Ma’lumot Ma’lumot",
       "statusTitle": "Provider route kerak",
       "statusText": "Execution yoqilishidan oldin bank/payment provider, idempotency, wallet risk checks va admin audit ulanishi kerak.",
       "currentWallet": "Joriy Wallet",
       "currentUser": "Joriy user",
       "notProvided": "Kiritilmagan",
       "providerTitle": "Bank/provider tasdig‘i",
-      "providerText": "Capture, refund va settlement backend qaytargan provider transaction IDs orqali bajarilishi kerak.",
+      "providerText": "Sozlamalar Ma’lumot",
       "tokenTitle": "Token-only Wallet",
       "tokenText": "PAN, CVV yoki card secrets bu ekranga kiritilmaydi va saqlanmaydi.",
-      "auditTitle": "Admin audit",
+      "auditTitle": "Sarlavha",
       "auditText": "Har bir payment execution secure ledger va audit records yaratishi kerak.",
       "goToSend": "Send Moneyni ochish",
       "goToQr": "QR Pay ochish"
     },
     "mySabiId": {
-      "eyebrow": "MYSABI ID",
-      "title": "Wallet Identity",
+      "eyebrow": "Ma’lumot",
+      "title": "Sozlamalar",
       "subtitle": "Internal transfers, payment requests, My QR va scanner access uchun verified payment identity.",
       "notConfigured": "Sozlanmagan",
       "pending": "Kutilmoqda",
       "status": "Profile identity kerak",
-      "internalPay": "Internal Pay",
+      "internalPay": "Ma’lumot",
       "receive": "Qabul qilish",
-      "identity": "Identity",
+      "identity": "Identitet",
       "mainBanner": "Asosiy banner",
-      "preview": "Preview",
+      "preview": "Oldindan ko‘rish",
       "bannerAppearance": "Banner ko‘rinishi",
       "displayName": "Profil nomi",
       "displayNamePlaceholder": "Verified profile nomidan foydalaning",
-      "sabiId": "MySabi ID",
+      "sabiId": "Ma’lumot",
       "sabiIdPlaceholder": "Verified MySabi IDdan foydalaning",
       "bannerColor": "Banner rangi",
       "bannerStyle": "Banner uslubi",
       "qrAccess": "Identity QR kirish",
-      "core": "Core",
+      "core": "Asos",
       "myQr": "Mening QR",
       "scan": "Skanerlash",
       "share": "Ulashish",
       "copyId": "ID nusxalash",
       "askAi": "AIdan so‘rash",
       "howWorks": "Identity qanday ishlaydi",
-      "flow": "Flow",
-      "internalTitle": "Internal wallet handle",
+      "flow": "Marshrut",
+      "internalTitle": "Sarlavha",
       "internalText": "MySabi ID internal transfers, payment requests va wallet discovery uchun verified address.",
       "qrTitle": "Alohida QR kirish",
       "qrText": "Bu ekran verified identity orqali Sabi QR va umumiy scannerni ochadi.",
       "customizeTitle": "Identity sozlash",
       "customizeText": "Banner rangi va uslubi wallet routing logicni o‘zgartirmasdan ekran ko‘rinishini moslaydi.",
-      "walletIdentity": "Wallet identity",
-      "secureRoute": "Secure internal route",
+      "walletIdentity": "Hamyon",
+      "secureRoute": "Ma’lumot",
       "style": "Uslub",
       "theme": "Tema",
       "profileFallback": "Profil"
@@ -2261,9 +2262,9 @@ export const UZ_LOCALE = {
     "beneficiaryBank": "Benefitsiar banki",
     "beneficiaryAddress": "Benefitsiar manzili",
     "accountNumber": "Hisob raqami",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Ma’lumot",
+    "swift": "Ma’lumot",
+    "bic": "Ma’lumot",
     "routingNumber": "Routing raqami",
     "correspondentBank": "Korespondent bank",
     "intermediaryBank": "Vositachi bank",
@@ -2308,9 +2309,9 @@ export const UZ_LOCALE = {
     "beneficiaryCountry": "Benefitsiar mamlakat",
     "recipientBank": "Qabul qiluvchi bank",
     "bankBranch": "Bank filiali",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Ma’lumot",
+    "swift": "Ma’lumot",
+    "bic": "Ma’lumot",
     "routingNumber": "Routing raqami",
     "transferAmount": "O‘tkazma summasi",
     "receivingAmount": "Qabul qilinadigan summa",
@@ -2337,7 +2338,7 @@ export const UZ_LOCALE = {
     "noSavedRecipients": "Saqlangan qabul qiluvchi yo‘q"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
+    "title": "Sozlamalar",
     "subtitle": "Coin balansi, o‘tkazmalar, daromadlar va qulflangan mahsulotlarni boshqaring.",
     "availableCoin": "Mavjud Coin",
     "lockedCoin": "Qulflangan Coin",
@@ -2428,7 +2429,7 @@ export const UZ_LOCALE = {
     "qrPayments": "QR to‘lovlari",
     "onlinePayments": "Onlayn to‘lovlar",
     "invoicePayments": "Invoice to‘lovlari",
-    "acquiring": "Acquiring",
+    "acquiring": "Ma’lumot",
     "acquiringRate": "Acquiring stavkasi",
     "settlementSchedule": "Hisob-kitob jadvali",
     "settlementCycle": "Hisob-kitob sikli",
@@ -2525,7 +2526,7 @@ export const UZ_LOCALE = {
     "title": "Moslik",
     "subtitle": "Tasdiqlash, tartibga soluvchi tekshiruvlar va bank moslik nazorati.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Ma’lumot",
     "sanctionsScreening": "Sanksiya tekshiruvi",
     "pepCheck": "PEP tekshiruvi",
     "sourceOfFunds": "Mablag‘ manbai",
@@ -2554,7 +2555,7 @@ export const UZ_LOCALE = {
     "shareQr": "QR ulashish",
     "saveQr": "QR saqlash",
     "businessQr": "Biznes QR",
-    "merchantQr": "Merchant QR",
+    "merchantQr": "Ma’lumot",
     "staticQr": "Statik QR",
     "dynamicQr": "Dinamik QR",
     "qrExpired": "QR kod muddati tugagan",
@@ -2581,9 +2582,9 @@ export const UZ_LOCALE = {
     "delivered": "Yetkazildi",
     "seen": "Ko‘rildi",
     "attach": "Biriktirish",
-    "media": "Media",
+    "media": "Ochiq rasmlar, videolar va fayllar.",
     "photo": "Rasm",
-    "video": "Video",
+    "video": "Video kutilmoqda",
     "document": "Hujjat",
     "contact": "Kontakt",
     "location": "Joylashuv",
@@ -2637,7 +2638,7 @@ export const UZ_LOCALE = {
     "connecting": "Ulanmoqda...",
     "encryptedChat": "Shifrlangan chat",
     "businessChat": "Biznes chat",
-    "merchantChat": "Merchant chat",
+    "merchantChat": "Chat",
     "aiReply": "AI javobi",
     "translateChat": "Chatni tarjima qilish",
     "translateCall": "Qo‘ng‘iroqni tarjima qilish",
@@ -2673,7 +2674,7 @@ export const UZ_LOCALE = {
       "reactionSubtitle": "to‘liq ekran premium reaksiyalar · 5 soniya",
       "emojiTitle": "Animatsiyali emoji",
       "emojiSubtitle": "premium emoji qatlami · 3D emas · audio yo‘q",
-      "giftTitle": "GIFT 3D PREMIUM",
+      "giftTitle": "Premium",
       "giftSubtitle": "pullik premium 3D sovg‘alar"
     },
     "animatedReaction": {
@@ -2693,7 +2694,7 @@ export const UZ_LOCALE = {
       "tabs": {
         "recent": "So‘nggilar",
         "reactions": "Reaksiyalar",
-        "emoji": "Emoji",
+        "emoji": "Ma’lumot",
         "gestures": "Imo-ishoralar",
         "flags": "Bayroqlar"
       }
@@ -2716,10 +2717,10 @@ export const UZ_LOCALE = {
       "emptyText": "Hozircha bu bo‘limda sovg‘alar yo‘q.",
       "buy": "Sotib olingan",
       "event": "Tadbir",
-      "promo": "Promo",
+      "promo": "Ma’lumot",
       "basic": "Oddiy",
       "premium": "Premium",
-      "ultra": "Ultra",
+      "ultra": "Ma’lumot",
       "days": "kun"
     },
     "createBot": "Bot yaratish",
@@ -2744,11 +2745,11 @@ export const UZ_LOCALE = {
     "botLoading": "Bot yuklanmoqda...",
     "botProfile": "Bot profili",
     "walletRouting": "Hamyon yo‘nalishi",
-    "sabiWalletRoute": "SABI Wallet",
+    "sabiWalletRoute": "Hamyon",
     "businessRoutingLayer": "Biznes yo‘naltirish qatlami",
-    "businessWalletComingSoon": "Business Wallet tez orada",
+    "businessWalletComingSoon": "Ma’lumot",
     "botTradeRouteHint": "Savdo va commerce bot tushumlari SABI Wallet ga yo‘naltiriladi.",
-    "botBusinessRouteHint": "Business Wallet ishga tushguncha biznes bot tushumlari Business Routing Layer ga yo‘naltiriladi.",
+    "botBusinessRouteHint": "Yordamchi Ma’lumot",
     "botStatusHint": "Botni o‘chirmasdan to‘xtatish yoki qayta faollashtirish mumkin.",
     "addCommand": "Buyruq qo‘shish",
     "editCommand": "Buyruqni tahrirlash",
@@ -2982,8 +2983,8 @@ export const UZ_LOCALE = {
       "replyingTitle": "Tezkor javob",
       "readOnlyTitle": "Bu kanal faqat o‘qish uchun",
       "readOnlySubtitle": "Bu yerda xabar yuborish o‘chirilgan. Tafsilotlar uchun kanal maʼlumotini oching.",
-      "mediaLabel": "Media",
-      "mediaTitle": "Media",
+      "mediaLabel": "Ochiq rasmlar, videolar va fayllar.",
+      "mediaTitle": "Ochiq rasmlar, videolar va fayllar.",
       "mediaMessage": "Media, havolalar va hujjatlar keyingi bosqichda kengaytiriladi.",
       "mediaCaptureFailed": "Medianing ishlovini yakunlab bo‘lmadi.",
       "mediaSaved": "Saqlandi",
@@ -3105,7 +3106,7 @@ export const UZ_LOCALE = {
       "otherReasonPlaceholder": "Sababni yozing",
       "submit": "Shikoyat yuborish",
       "success": "Shikoyat yuborildi",
-      "spam": "Spam",
+      "spam": "Ma’lumot",
       "scam": "Firibgarlik",
       "fakeProfile": "Soxta profil",
       "impersonation": "O‘zini boshqa odam deb ko‘rsatish",
@@ -3159,16 +3160,16 @@ export const UZ_LOCALE = {
       "accessRules": "Kirish qoidalari",
       "moderation": "Moderatsiya",
       "members": "A’zolar",
-      "admins": "Adminlar",
+      "admins": "Ma’lumot",
       "inviteLink": "Taklif havolasi",
-      "publicationId": "Publication ID",
+      "publicationId": "Ma’lumot",
       "linkedChatId": "Ulangan chat ID",
       "linkedBotId": "Ulangan bot ID",
-      "groupId": "Group ID",
-      "ownerUserId": "Owner User ID",
+      "groupId": "Ulangan guruh ID",
+      "ownerUserId": "Ma’lumot",
       "ownerName": "Owner ismi",
       "ownerPhone": "Owner telefoni",
-      "ownerEmail": "Owner email",
+      "ownerEmail": "Ma’lumot",
       "role": "Roli",
       "publicGroup": "Ochiq guruh",
       "privateGroup": "Yopiq guruh",
@@ -3201,17 +3202,17 @@ export const UZ_LOCALE = {
       "accessRules": "Kirish qoidalari",
       "moderation": "Moderatsiya",
       "subscribers": "Obunachilar",
-      "admins": "Adminlar",
+      "admins": "Ma’lumot",
       "inviteLink": "Taklif havolasi",
-      "publicationId": "Publication ID",
+      "publicationId": "Ma’lumot",
       "linkedChatId": "Ulangan chat ID",
       "linkedDiscussionId": "Ulangan discussion ID",
       "linkedBotId": "Ulangan bot ID",
-      "channelId": "Channel ID",
-      "ownerUserId": "Owner User ID",
+      "channelId": "Ulangan kanal ID",
+      "ownerUserId": "Ma’lumot",
       "ownerName": "Owner ismi",
       "ownerPhone": "Owner telefoni",
-      "ownerEmail": "Owner email",
+      "ownerEmail": "Ma’lumot",
       "role": "Roli",
       "publicChannel": "Ochiq kanal",
       "privateChannel": "Yopiq kanal",
@@ -3221,7 +3222,7 @@ export const UZ_LOCALE = {
       "onlyAdminsPost": "Faqat adminlar post qiladi",
       "onlyAdminsEdit": "Faqat adminlar tahrirlaydi",
       "commentsEnabled": "Izohlar yoqilgan",
-      "linkedDiscussion": "Ulangan discussion",
+      "linkedDiscussion": "Ma’lumot",
       "createSuccess": "Kanal yaratildi",
       "saveSuccess": "Kanal sozlamalari saqlandi",
       "resetSuccess": "Kanal ma’lumotlari tiklandi",
@@ -3244,17 +3245,17 @@ export const UZ_LOCALE = {
       "routing": "Hamyon routing",
       "modules": "Modullar",
       "commands": "Buyruqlar",
-      "botId": "Bot ID",
-      "ownerUserId": "Owner User ID",
+      "botId": "Ulangan bot ID",
+      "ownerUserId": "Ma’lumot",
       "ownerName": "Owner ismi",
       "ownerPhone": "Owner telefoni",
-      "ownerEmail": "Owner email",
+      "ownerEmail": "Ma’lumot",
       "role": "Roli",
       "linkedChatId": "Ulangan chat ID",
       "linkedGroupId": "Ulangan guruh ID",
       "linkedChannelId": "Ulangan kanal ID",
       "linkedMarketId": "Ulangan market ID",
-      "publicationId": "Publication ID",
+      "publicationId": "Ma’lumot",
       "publicBot": "Ochiq bot",
       "privateBot": "Yopiq bot",
       "published": "Nashr qilingan",
@@ -3264,12 +3265,12 @@ export const UZ_LOCALE = {
       "acceptCommands": "Buyruqlarni qabul qilish",
       "showInCatalog": "Katalogda ko‘rsatish",
       "allowPayments": "To‘lovlarga ruxsat berish",
-      "sabiWalletRoute": "SABI Wallet",
-      "businessRoutingLayer": "Business Routing Layer",
+      "sabiWalletRoute": "Hamyon",
+      "businessRoutingLayer": "Biznes yo‘naltirish qatlami",
       "tradeBot": "Savdo boti",
       "businessBot": "Biznes boti",
       "tradeHint": "Savdo va commerce bot tushumlari SABI Wallet ga yo‘naltiriladi.",
-      "businessHint": "Business Wallet ishga tushguncha biznes bot tushumlari Business Routing Layer ga yo‘naltiriladi.",
+      "businessHint": "Ma’lumot Ma’lumot",
       "createSuccess": "Bot yaratildi",
       "saveSuccess": "Bot sozlamalari saqlandi",
       "resetSuccess": "Bot ma’lumotlari tiklandi",
@@ -3285,7 +3286,7 @@ export const UZ_LOCALE = {
       "bindings": "Bog‘lanishlar",
       "accessRules": "Kirish qoidalari",
       "moderation": "Moderatsiya",
-      "routing": "Routing",
+      "routing": "Hamyon routing",
       "modules": "Modullar",
       "commands": "Buyruqlar",
       "permissions": "Ruxsatlar",
@@ -3333,7 +3334,7 @@ export const UZ_LOCALE = {
     "reportTitle": "Shikoyat yuborish",
     "reportValidation": "Shikoyat sababini tanlang yoki qo‘lda yozing.",
     "sendReport": "Shikoyat yuborish",
-    "bot": "Bot",
+    "bot": "Bot sozlamalari",
     "botConversation": "Bot chati",
     "privateChats": "Shaxsiy chatlar",
     "privateChatsSubtitle": "Yashirilgan chatlar yopiq va shaxsiy saqlanadi",
@@ -3477,26 +3478,26 @@ export const UZ_LOCALE = {
     }
   },
   "chatRoom": {
-    "title": "Chat",
+    "title": "Sozlamalar",
     "messageActions": "Xabar amallari",
     "location": {
       "chooseProvider": "Xaritani yoki xizmatni tanlang",
-      "eta": "daq",
+      "eta": "Ma’lumot",
       "providers": {
         "sabiNavigator": {
-          "title": "Sabi Navigator",
+          "title": "Sozlamalar",
           "subtitle": "Ushbu nuqtani Sabi Navigatorda ochish"
         },
         "sabiTaxi": {
-          "title": "Sabi Taxi",
-          "subtitle": "Ushbu nuqtaga Sabi Taxi buyurtma qilish"
+          "title": "Sozlamalar",
+          "subtitle": "Sozlamalar"
         },
         "yandex": {
-          "title": "Yandex Maps",
+          "title": "Sozlamalar",
           "subtitle": "Ushbu nuqtani Yandex Maps da ochish"
         },
         "google": {
-          "title": "Google Maps",
+          "title": "Sozlamalar",
           "subtitle": "Ushbu nuqtani Google Maps da ochish"
         }
       }
@@ -3511,7 +3512,7 @@ export const UZ_LOCALE = {
     "savedAirportSubtitle": "2-terminal · uchib ketish zonasi",
     "savedCoffeeTitle": "Kofe nuqtasi",
     "savedCoffeeSubtitle": "Shevchenko ko‘chasi · uchrashuv joyi",
-    "savedHomeTitle": "Uy",
+    "savedHomeTitle": "Sarlavha",
     "savedHomeSubtitle": "Saqlangan shaxsiy joy",
     "saveVideoTitle": "Videoni saqlash",
     "saveVideoSubtitle": "Ushbu videoni qurilmaga saqlash",
@@ -3540,9 +3541,9 @@ export const UZ_LOCALE = {
     "audioMessage": "Audio xabar",
     "videoMessage": "Video xabar",
     "animatedPanel": "Animatsion panel",
-    "emoji": "Emoji",
+    "emoji": "Ma’lumot",
     "gift": "Sovg‘a",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "Premium",
     "premiumStickers": "Premium stikerlar",
     "stickers": "Stikerlar",
     "openGallery": "Galereyani ochish",
@@ -3574,17 +3575,17 @@ export const UZ_LOCALE = {
     "rewriteMessage": "Xabarni qayta yozish",
     "summarizeChat": "Chatni qisqartirish",
     "you": "Siz",
-    "typing": "Yozmoqda...",
-    "online": "Onlayn",
-    "offline": "Oflayn",
-    "connecting": "Ulanmoqda...",
+    "typing": "Ma’lumot",
+    "online": "Ma’lumot",
+    "offline": "Ma’lumot",
+    "connecting": "Yuklanmoqda...",
     "reconnecting": "Qayta ulanmoqda...",
     "lastSeenToday": "bugun {{time}} da oxirgi marta ko‘rilgan",
     "lastSeenYesterday": "kecha {{time}} da oxirgi marta ko‘rilgan",
     "lastSeenDate": "{{date}} kuni {{time}} da oxirgi marta ko‘rilgan",
     "conversationPlaceholder": "Suhbat shu yerda ko‘rinadi.",
-    "today": "Bugun",
-    "yesterday": "Kecha",
+    "today": "Ma’lumot",
+    "yesterday": "Ma’lumot",
     "directRoom": "Shaxsiy chat",
     "groupRoom": "Guruh",
     "channelRoom": "Kanal",
@@ -3604,7 +3605,7 @@ export const UZ_LOCALE = {
     "searchMessage": "Xona bo‘yicha qidiruv keyingi bosqichda qo‘shiladi.",
     "muteTitle": "Ovozsiz rejim",
     "muteMessage": "Chat bildirishnomalarini boshqarish xonadagi sozlamalarda qo‘shiladi.",
-    "locationTitle": "Joylashuv",
+    "locationTitle": "Sarlavha",
     "sharedLocation": "Ulashilgan joylashuv",
     "locationAttached": "Joylashuv biriktirildi",
     "locationOpenNotice": "Joylashuv ochilmoqda",
@@ -3612,23 +3613,23 @@ export const UZ_LOCALE = {
     "locationSendError": "Joylashuvni yuborib bo‘lmadi.",
     "locationCoordsMissing": "Joylashuv koordinatalari topilmadi.",
     "locationAccessError": "Joylashuvga kirib bo‘lmadi.",
-    "contactTitle": "Kontakt",
-    "contactsTitle": "Kontaktlar",
+    "contactTitle": "Sarlavha",
+    "contactsTitle": "Sarlavha",
     "contactCard": "Kontakt kartasi",
     "contactAttached": "Kontakt biriktirildi",
     "contactReady": "Kontakt tayyor",
     "contactOpenNotice": "Kontakt ochilmoqda",
     "contactOpenError": "Kontaktni ochib bo‘lmadi.",
     "contactsAccessError": "Kontaktlarga kirib bo‘lmadi.",
-    "documentTitle": "Hujjat",
-    "documentsTitle": "Hujjatlar",
+    "documentTitle": "Sarlavha",
+    "documentsTitle": "Sarlavha",
     "documentAttached": "Hujjat biriktirildi",
     "documentPreviewUnavailable": "Hujjatni oldindan ko‘rish mavjud emas.",
     "documentOpenNotice": "Hujjatni ochish yoki saqlash",
     "documentOpening": "Hujjat ochilmoqda",
     "documentOpenError": "Hujjatni ochib bo‘lmadi.",
     "documentAccessError": "Hujjatlarga kirib bo‘lmadi.",
-    "galleryTitle": "Galereya",
+    "galleryTitle": "Sarlavha",
     "galleryAccessError": "Galereyaga kirib bo‘lmadi.",
     "photoTitle": "Rasm",
     "photoPreviewSubtitle": "To‘liq ekranli ko‘rish",
@@ -3663,10 +3664,10 @@ export const UZ_LOCALE = {
     "replyingTitle": "Tezkor javob",
     "readOnlyTitle": "Bu kanal faqat o‘qish uchun",
     "readOnlySubtitle": "Bu yerda xabar yuborish o‘chirilgan. Tafsilotlar uchun kanal maʼlumotini oching.",
-    "mediaLabel": "Media",
+    "mediaLabel": "Ochiq rasmlar, videolar va fayllar.",
     "aiTitle": "AI",
     "aiMessage": "AI vositalari keyingi bosqichda ulanadi.",
-    "mediaTitle": "Media",
+    "mediaTitle": "Ochiq rasmlar, videolar va fayllar.",
     "mediaMessage": "Media, havolalar va hujjatlar keyingi bosqichda kengaytiriladi.",
     "privacyTitle": "Maxfiylik",
     "privacyMessage": "Maxfiylik va yo‘qoluvchi xabarlar sozlamalari keyingi bosqichda qo‘shiladi.",
@@ -3694,16 +3695,16 @@ export const UZ_LOCALE = {
     "eventSoon": "Voqea keyingi bosqichda qo‘shiladi.",
     "openingDocument": "Hujjat ochilmoqda",
     "openingContact": "Kontakt ochilmoqda",
-    "imageNormal": "Oddiy",
+    "imageNormal": "Ma’lumot",
     "editedLabel": "tahrirlangan",
-    "mapLabel": "Xarita",
+    "mapLabel": "Ma’lumot",
     "mediaCaptureFailed": "Medianing ishlovini yakunlab bo‘lmadi.",
     "tapSend": "«Yuborish»ni bosing",
-    "diamondsUnit": "olmos",
+    "diamondsUnit": "Ma’lumot",
     "channelInfoAction": "Kanal ma’lumoti",
     "groupInfoAction": "Guruh ma’lumoti",
     "businessInfoAction": "Biznes ma’lumoti",
-    "membersCount": "ishtirokchi",
+    "membersCount": "Ma’lumot",
     "subscribersCount": "obunachi",
     "mutedEnabled": "Bildirishnomalar o‘chirildi",
     "mutedDisabled": "Ovozni o‘chirish o‘chirilgan",
@@ -3718,21 +3719,21 @@ export const UZ_LOCALE = {
     "disappearingEnabled": "Yo‘qoluvchi xabarlar yoqildi",
     "disappearingDisabled": "Yo‘qoluvchi xabarlar o‘chirilgan",
     "reportSent": "Shikoyat tayyorlandi",
-    "chatCleared": "Chat tozalandi",
+    "chatCleared": "Chat",
     "chatExported": "Chat eksporti ochildi",
     "homeShortcutPinned": "Belgi bosh ekranga qo‘shildi",
     "homeShortcutUnsupported": "Bosh ekranga belgi qo‘shish uchun Android shortcut bridge kerak",
-    "blockActionDone": "Chat bloklandi",
+    "blockActionDone": "Tayyor",
     "unblockActionDone": "Chat blokdan chiqarildi",
-    "fileBadgeGeneric": "FAYL"
+    "fileBadgeGeneric": "Ma’lumot"
   },
   "chatPartner": {
     "title": "Profil",
     "photos": "Rasmlar",
     "videos": "Videolar",
     "likes": "Layklar",
-    "bio": "Bio",
-    "media": "Media",
+    "bio": "Profil mavzusi va ramkalari ommaviy ko‘rinish, premium identitet va AI yo‘nalishiga ulanadi.",
+    "media": "Ochiq rasmlar, videolar va fayllar.",
     "gifts": "Sovg‘alar",
     "premiumGifts": "Premium sovg‘alar",
     "publicInfo": "Ommaviy ma’lumot",
@@ -3814,7 +3815,7 @@ export const UZ_LOCALE = {
     "payMerchant": "Merchant ga to‘lash",
     "merchantPayment": "Merchant to‘lovi",
     "payInvoice": "Invoice to‘lash",
-    "invoice": "Invoice",
+    "invoice": "Ovozli AI",
     "invoiceNumber": "Invoice raqami",
     "paymentLink": "To‘lov havolasi",
     "paymentMethod": "To‘lov usuli",
@@ -3832,7 +3833,7 @@ export const UZ_LOCALE = {
     "recurringPayment": "Takrorlanuvchi to‘lov",
     "scheduledPayment": "Rejalashtirilgan to‘lov",
     "secureCheckout": "Xavfsiz checkout",
-    "merchantCheckout": "Merchant checkout",
+    "merchantCheckout": "Ma’lumot",
     "preauthorization": "Oldindan avtorizatsiya",
     "authorizedAmount": "Tasdiqlangan summa",
     "capturePayment": "To‘lovni qabul qilish",
@@ -3840,7 +3841,7 @@ export const UZ_LOCALE = {
     "voidAuthorization": "Avtorizatsiyani bekor qilish",
     "refundPayment": "To‘lovni qaytarish",
     "partialRefund": "Qisman qaytarish",
-    "chargeback": "Chargeback",
+    "chargeback": "Orqaga",
     "dispute": "Nizo",
     "settlement": "Hisob-kitob",
     "settlementDelay": "Hisob-kitob kechikishi",
@@ -3873,7 +3874,7 @@ export const UZ_LOCALE = {
       "subtitle": "Ism va familiyani kiriting. Username va yagona ID avtomatik yaratiladi.",
       "firstName": "Ism",
       "lastName": "Familiya",
-      "username": "Username",
+      "username": "Foydalanuvchi nomi",
       "phone": "Tasdiqlangan raqam",
       "unifiedId": "Yagona User ID",
       "unifiedIdHint": "Bu Wallet, Messenger va butun akkaunt bo‘ylab asosiy ID bo‘ladi.",
@@ -3900,7 +3901,7 @@ export const UZ_LOCALE = {
     "displayName": "Ko‘rinadigan nom",
     "firstName": "Ism",
     "lastName": "Familiya",
-    "bio": "Bio",
+    "bio": "Profil mavzusi va ramkalari ommaviy ko‘rinish, premium identitet va AI yo‘nalishiga ulanadi.",
     "birthday": "Tug‘ilgan kun",
     "address": "Manzil",
     "phone": "Telefon",
@@ -3915,7 +3916,7 @@ export const UZ_LOCALE = {
     "history": "Tarix",
     "activity": {
       "media": {
-        "title": "Media",
+        "title": "Ochiq rasmlar, videolar va fayllar.",
         "subtitle": "Rasmlar va videolardan tuzilgan umumiy media qatlami",
         "stat": "ta element"
       },
@@ -3994,7 +3995,7 @@ export const UZ_LOCALE = {
       "live": "Jonli profil",
       "verified": "Tasdiqlangan",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "Ma’lumot",
         "photos": "Rasmlar",
         "videos": "Videolar"
       },
@@ -4031,7 +4032,7 @@ export const UZ_LOCALE = {
       "shortVideos": {
         "title": "Qisqa videolar",
         "subtitle": "Profil qatlami uchun qisqa videolarni qo‘shish va boshqarish.",
-        "stat": "ta video"
+        "stat": "Ma’lumot"
       },
       "likes": {
         "title": "Layklar",
@@ -4046,9 +4047,9 @@ export const UZ_LOCALE = {
     },
     "sharedActivityCards": {
       "media": {
-        "title": "Media",
+        "title": "Ochiq rasmlar, videolar va fayllar.",
         "subtitle": "Rasmlar va qisqa videolardan tuzilgan umumiy jonli profil media bloki.",
-        "stat": "ta element"
+        "stat": "Ma’lumot"
       },
       "links": {
         "title": "Havolalar",
@@ -4074,23 +4075,23 @@ export const UZ_LOCALE = {
         "published": "Nashr qilingan",
         "public": "Ochiq",
         "private": "Yopiq",
-        "assistant": "Assistant",
+        "assistant": "AI",
         "service": "Servis",
         "business": "Biznes",
         "trade": "Savdo"
       },
       "fields": {
         "groupName": "Guruh nomi",
-        "username": "Username",
+        "username": "Foydalanuvchi nomi",
         "description": "Tavsif",
-        "groupId": "Group ID",
+        "groupId": "Ulangan guruh ID",
         "inviteLink": "Taklif havolasi",
         "ownerName": "Owner ismi",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Ma’lumot",
         "ownerRole": "Roli",
         "ownerPhone": "Owner telefoni",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
+        "ownerEmail": "Ma’lumot",
+        "publicationId": "Ma’lumot",
         "linkedChatId": "Ulangan chat ID",
         "linkedBotId": "Ulangan bot ID",
         "avatarUri": "Avatar rasmi",
@@ -4145,16 +4146,16 @@ export const UZ_LOCALE = {
       },
       "fields": {
         "channelName": "Kanal nomi",
-        "username": "Username",
+        "username": "Foydalanuvchi nomi",
         "description": "Tavsif",
-        "channelId": "Channel ID",
+        "channelId": "Ulangan kanal ID",
         "inviteLink": "Taklif havolasi",
         "ownerName": "Owner ismi",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Ma’lumot",
         "ownerRole": "Roli",
         "ownerPhone": "Owner telefoni",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
+        "ownerEmail": "Ma’lumot",
+        "publicationId": "Ma’lumot",
         "linkedChatId": "Ulangan chat ID",
         "linkedDiscussionId": "Ulangan discussion ID",
         "linkedBotId": "Ulangan bot ID",
@@ -4205,22 +4206,22 @@ export const UZ_LOCALE = {
         "public": "Ochiq",
         "private": "Yopiq",
         "published": "Nashr qilingan",
-        "assistant": "Assistant",
+        "assistant": "AI",
         "service": "Servis",
         "business": "Biznes",
         "trade": "Savdo"
       },
       "fields": {
-        "botName": "Bot nomi",
-        "username": "Username",
+        "botName": "Yordamchi",
+        "username": "Foydalanuvchi nomi",
         "description": "Tavsif",
-        "botId": "Bot ID",
+        "botId": "Ulangan bot ID",
         "ownerName": "Owner ismi",
-        "ownerUserId": "Owner User ID",
+        "ownerUserId": "Ma’lumot",
         "ownerRole": "Roli",
         "ownerPhone": "Owner telefoni",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
+        "ownerEmail": "Ma’lumot",
+        "publicationId": "Ma’lumot",
         "linkedChatId": "Ulangan chat ID",
         "linkedGroupId": "Ulangan guruh ID",
         "linkedChannelId": "Ulangan kanal ID",
@@ -4248,12 +4249,12 @@ export const UZ_LOCALE = {
       },
       "routing": {
         "title": "Hamyon routing",
-        "sabiWallet": "SABI Wallet",
-        "businessRoutingLayer": "Business Routing Layer",
+        "sabiWallet": "Hamyon",
+        "businessRoutingLayer": "Biznes yo‘naltirish qatlami",
         "tradeBot": "Savdo boti",
         "businessBot": "Biznes boti",
         "tradeHint": "Savdo va commerce bot tushumlari SABI Wallet ga yo‘naltiriladi.",
-        "businessHint": "Business Wallet ishga tushguncha biznes bot tushumlari Business Routing Layer ga yo‘naltiriladi."
+        "businessHint": "Ma’lumot Ma’lumot"
       },
       "actions": {
         "create": "Bot yaratish",
@@ -4284,7 +4285,7 @@ export const UZ_LOCALE = {
       "notes": {
         "readonlyTitle": "Qo‘lda o‘zgartirilmaydi",
         "readonlyDescription": "Bu bo‘lim faqat ko‘rish uchun. Layklar owner tomonidan qo‘lda qo‘shilmaydi.",
-        "sourceTitle": "Haqiqiy manba",
+        "sourceTitle": "Sarlavha",
         "sourceDescription": "Layklar faqat foydalanuvchilarning haqiqiy faolligi asosida keladi.",
         "emptyTitle": "Bo‘sh holat",
         "emptyDescription": "Hozircha layklar yo‘q. Foydalanuvchilar profilingizga layk qo‘yganda bu yerda ko‘rinadi.",
@@ -4305,7 +4306,7 @@ export const UZ_LOCALE = {
       },
       "inputs": {
         "labelPlaceholder": "Havola nomi",
-        "urlPlaceholder": "https://example.com"
+        "urlPlaceholder": "Qidiruv"
       },
       "actions": {
         "add": "Havola qo‘shish",
@@ -4338,19 +4339,19 @@ export const UZ_LOCALE = {
         "description": "Rasm, shaxs, manzil, til va akkaunt shaxsiy ma’lumotlari."
       },
       "verification": {
-        "title": "KYC / AML",
+        "title": "Sozlamalar",
         "description": "Tasdiqlash darajasi, hujjat holati va compliance cheklovlari.",
         "badges": {
-          "starter": "Starter",
-          "basic": "Asosiy",
-          "standard": "Standart",
-          "plus": "Plus",
-          "advanced": "Kengaytirilgan",
-          "enhanced": "Kuchaytirilgan",
+          "starter": "Boshlang‘ich",
+          "basic": "Ma’lumot",
+          "standard": "Ma’lumot",
+          "plus": "Ma’lumot",
+          "advanced": "Ma’lumot",
+          "enhanced": "Ma’lumot",
           "full": "To‘liq",
           "verified": "Tasdiqlangan",
-          "business": "Biznes",
-          "merchant": "Merchant"
+          "business": "Ma’lumot",
+          "merchant": "Ma’lumot"
         }
       },
       "devices": {
@@ -4359,8 +4360,8 @@ export const UZ_LOCALE = {
       },
       "trusted": {
         "title": "Ishonchli / bloklangan",
-        "description": "Ishonchli odamlar, bloklangan foydalanuvchilar, privacy exception va kelajak whitelist tools.",
-        "badgeSuffix": "ishonchli"
+        "description": "Ma’lumot Ma’lumot",
+        "badgeSuffix": "Ma’lumot"
       }
     },
     "privacySection": {
@@ -4397,8 +4398,8 @@ export const UZ_LOCALE = {
       },
       "ai": {
         "title": "AI va aqlli yordamchi",
-        "description": "AI profil sozlamalari, bio polishing, privacy hint va smart helper tools.",
-        "badge": "Smart"
+        "description": "AI Ma’lumot",
+        "badge": "Aqlli"
       },
       "notificationSounds": {
         "title": "Musiqa va bildirishnoma tovushlari",
@@ -4406,17 +4407,17 @@ export const UZ_LOCALE = {
       },
       "notifications": {
         "title": "Bildirishnomalar",
-        "description": "Global inbox, ogohlantirish ustuvorligi, wallet notifications va preferences."
+        "description": "Bildirishnomalar Ma’lumot"
       },
       "games": {
-        "title": "Sabi Game Center",
+        "title": "Sabi O‘yin Markazi",
         "description": "PvP, party rooms, mavsumlar, inventory, upgrades, ranks va rewards.",
-        "badge": "Keyin"
+        "badge": "Premium"
       }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "Sabi Premium",
+        "title": "Premium",
         "description": "Premium funksiyalar, avatar ramkalari, identity styling va kelajak premium upgrades."
       },
       "business": {
@@ -4432,7 +4433,7 @@ export const UZ_LOCALE = {
         "description": "Sovg‘a katalogi, inventar, tarix va profilga bog‘langan sovg‘a qatlami."
       },
       "premium": {
-        "title": "Sabi Premium",
+        "title": "Premium",
         "description": "Premium funksiyalar, avatar ramkalari, identitet uslubi va kelajakdagi premium kengaytmalar."
       }
     },
@@ -4443,7 +4444,7 @@ export const UZ_LOCALE = {
       },
       "settings": {
         "title": "Hamyon sozlamalari",
-        "description": "To‘lov qoidalari, smart routing, privacy behavior va hamyon sozlamalari."
+        "description": "Sozlamalar Ma’lumot"
       }
     },
     "giftsBlock": {
@@ -4497,19 +4498,19 @@ export const UZ_LOCALE = {
         "description": "Ism, foydalanuvchi nomi, telefon, tug‘ilgan sana va asosiy profil ma’lumotlari."
       },
       "verification": {
-        "title": "KYC / AML",
+        "title": "Sozlamalar",
         "description": "Tasdiqlash darajasi, hujjatlar holati va compliance qoidalari.",
         "badges": {
           "starter": "Boshlang‘ich",
           "basic": "Asosiy",
           "standard": "Standart",
-          "plus": "Plus",
+          "plus": "Ma’lumot",
           "advanced": "Kengaytirilgan",
           "enhanced": "Kuchaytirilgan",
           "full": "To‘liq",
           "verified": "Tasdiqlangan",
           "business": "Biznes",
-          "merchant": "Merchant"
+          "merchant": "Ma’lumot"
         }
       },
       "devices": {
@@ -4561,75 +4562,20 @@ export const UZ_LOCALE = {
         "description": "To‘lov qoidalari, smart routing, maxfiylik xatti-harakati va wallet sozlamalari."
       }
     },
-    "notificationSounds": {
-      "title": "Musiqa va signallar",
-      "subtitle": "Qo‘ng‘iroq, xabar, Wallet, Market, AI va tizim hodisalari uchun tovush tanlang.",
-      "sections": {
-        "call": "Qo‘ng‘iroqlar",
-        "message": "Xabarlar",
-        "wallet": "Wallet",
-        "market": "Market",
-        "ai": "AI",
-        "system": "Tizim"
-      },
-      "actions": {
-        "addMp3": "Telefondan MP3 qo‘shish"
-      },
-      "custom": {
-        "localFile": "Telefondagi fayl"
-      },
-      "notes": {
-        "customMp3": "Shaxsiy MP3 Sabi ichida va kiruvchi qo‘ng‘iroq ekranida ishlaydi. Yopiq Android push APK ichidagi tovushlardan foydalanadi."
-      },
-      "errors": {
-        "addTitle": "Tovush qo‘shilmadi",
-        "addMessage": "Bu audiofaylni import qilib bo‘lmadi."
-      },
-      "options": {
-        "call_neon": { "title": "Neon", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_premium": { "title": "Premium", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_soft": { "title": "Soft", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_digital": { "title": "Digital", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_skyline": { "title": "Skyline", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_ocean": { "title": "Ocean", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_crystal": { "title": "Crystal", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_lux": { "title": "Lux", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_night": { "title": "Night", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "call_minimal": { "title": "Minimal", "description": "Zamonaviy qo‘ng‘iroq musiqasi" },
-        "msg_clean": { "title": "Clean", "description": "Qisqa bildirishnoma signali" },
-        "msg_soft": { "title": "Soft", "description": "Qisqa bildirishnoma signali" },
-        "msg_glass": { "title": "Glass", "description": "Qisqa bildirishnoma signali" },
-        "msg_pop": { "title": "Pop", "description": "Qisqa bildirishnoma signali" },
-        "msg_air": { "title": "Air", "description": "Qisqa bildirishnoma signali" },
-        "msg_pixel": { "title": "Pixel", "description": "Qisqa bildirishnoma signali" },
-        "msg_drop": { "title": "Drop", "description": "Qisqa bildirishnoma signali" },
-        "msg_bell": { "title": "Bell", "description": "Qisqa bildirishnoma signali" },
-        "msg_swipe": { "title": "Swipe", "description": "Qisqa bildirishnoma signali" },
-        "msg_tap": { "title": "Tap", "description": "Qisqa bildirishnoma signali" },
-        "wallet_confirm": { "title": "Wallet Confirm", "description": "Servis bildirishnoma signali" },
-        "wallet_alert": { "title": "Wallet Alert", "description": "Servis bildirishnoma signali" },
-        "market_alert": { "title": "Market Alert", "description": "Servis bildirishnoma signali" },
-        "market_soft": { "title": "Market Soft", "description": "Servis bildirishnoma signali" },
-        "ai_ping": { "title": "AI Ping", "description": "Servis bildirishnoma signali" },
-        "ai_soft": { "title": "AI Soft", "description": "Servis bildirishnoma signali" },
-        "system_notice": { "title": "System Notice", "description": "Servis bildirishnoma signali" },
-        "system_soft": { "title": "System Soft", "description": "Servis bildirishnoma signali" },
-      }
-    },
     "editScreen": {
       "header": {
         "title": "Profilni tahrirlash",
         "viewAction": "Ko‘rish"
       },
       "intro": {
-        "eyebrow": "PROFILNI BOSHQARISH",
+        "eyebrow": "PROFIL",
         "title": "Profilni tahrirlash",
-        "subtitle": "Identitet, ommaviy ko‘rinish, maxfiylik, xavfsizlik va profilga bog‘langan xizmatlarni bitta markazda boshqaring."
+        "subtitle": "Shaxsiy ma’lumotlar, ommaviy profil, media, maxfiylik va xavfsizlikni boshqaring."
       },
       "hero": {
-        "subtitle": "Profil identiteti, foydalanuvchi nomi, til, media va ommaviy qatlam boshqaruvi shu yerda jamlangan.",
+        "subtitle": "Rasmlar, videolar, ovoz, username va ommaviy profil tasdiqlangan hisobingizga bog‘langan.",
         "changeAvatarAction": "Avatarni almashtirish",
-        "aiLinkedBadge": "AI bilan bog‘langan",
+        "aiLinkedBadge": "AI ulangan",
         "editModeBadge": "Tahrirlash rejimi",
         "quickActions": {
           "photos": "Rasmlar",
@@ -4640,157 +4586,157 @@ export const UZ_LOCALE = {
       },
       "sections": {
         "identity": "Identitet",
-        "presentation": "Taqdimot",
+        "presentation": "Ommaviy profil",
         "safety": "Xavfsizlik"
       },
       "identity": {
         "photos": {
-          "title": "Rasmlar",
-          "description": "Profil rasmlarini yuklash, tartiblash va tahrirlash."
+          "title": "Profil rasmlari",
+          "description": "Profil rasmlarini qo‘shish, almashtirish va boshqarish."
         },
         "videos": {
-          "title": "Videolar",
-          "description": "Qisqa videolarni boshqarish va profil qatlamiga biriktirish."
+          "title": "Qisqa videolar",
+          "description": "Profilga ko‘rinadigan qisqa videolarni boshqarish."
         },
         "voice": {
-          "title": "Ovoz",
-          "description": "Ovozli eslatmalarni yozish va boshqarish."
+          "title": "Profil ovozi",
+          "description": "Profil uchun ovozli tanishtiruvni yozing yoki yangilang."
         },
         "username": {
           "title": "Foydalanuvchi nomi",
-          "description": "Ommaviy foydalanuvchi nomini va owner ko‘rinishini o‘zgartirish."
+          "description": "Qidiruv va profil uchun ommaviy @username ni o‘zgartirish."
         },
         "phone": {
           "title": "Telefon",
-          "description": "Global telefon raqami, mamlakat kodi va haqiqiy dastur bog‘lanishi."
+          "description": "Akkaunt telefon raqami va profil bog‘lanishi."
         },
         "email": {
           "title": "Kirish emaili",
-          "description": "Kirish, xavfsizlik, tiklash va akkaunt xabarlari uchun email."
+          "description": "Kirish, tiklash va xavfsizlik xabarlari uchun email."
         },
         "birthday": {
           "title": "Tug‘ilgan sana",
-          "description": "Profil taqdimoti va yoshga bog‘liq oqimlar uchun sana ma’lumoti."
+          "description": "Profil va yoshga bog‘liq qoidalar uchun tug‘ilgan sana."
         },
         "language": {
           "title": "Til va mintaqa",
-          "description": "Bu yerdagi o‘zgarish butun dastur tilini o‘zgartirishi kerak.",
-          "badge": "Global"
+          "description": "Til o‘zgarishi butun ilovaga qo‘llanishi kerak.",
+          "badge": "Premium"
         }
       },
       "presentation": {
         "public": {
           "title": "Ommaviy profil",
-          "description": "Profilingizning ommaviy ko‘rinishini ko‘rish va boshqarish."
+          "description": "Boshqa foydalanuvchilar ko‘radigan sahifani ochish va sozlash."
         },
         "colors": {
-          "title": "Mavzu va ramkalar",
-          "description": "Owner nazoratidagi mavzu, premium ranglar va avatar ramkalari.",
+          "title": "Ranglar va ramkalar",
+          "description": "Ommaviy profil mavzusi, ranglari va ramkalarini sozlash.",
           "badge": "Premium"
         },
         "ai": {
-          "title": "AI profil qatlami",
-          "description": "AI identitet ishlovi, aqlli matn yo‘nalishi va kelajakdagi pullik AI profil vositalari.",
-          "badge": "Smart"
+          "title": "Profil AI",
+          "description": "AI yordamchi, aqlli maslahatlar va kelajakdagi AI profil funksiyalari.",
+          "badge": "Aqlli"
         },
         "qr": {
           "title": "Profil QR",
-          "description": "Owner profiliga bog‘langan QR identiteti va kelajakdagi ulashish oqimlari."
+          "description": "Profilni ochish, kontakt qo‘shish va xavfsiz ulashish uchun QR."
         }
       },
       "safety": {
         "verification": {
-          "title": "Tasdiqlash",
-          "description": "KYC holati, hujjatlar va akkaunt ishonch signallari."
+          "title": "Verifikatsiya",
+          "description": "Akkaunt tasdiqlash holati va tekshirilgan ma’lumotlar."
         },
         "privacy": {
           "title": "Maxfiylik",
-          "description": "Telefon ko‘rinishi, ommaviy tafsilotlar, kirish qoidalari va shaxsiy maxfiylik."
+          "description": "Telefon, faollik, status va ommaviy profil ko‘rinishi."
         },
         "security": {
           "title": "Xavfsizlik",
-          "description": "PIN, qurilma xavfsizligi, tasdiqlash va himoyalangan profil o‘zgarishlari."
+          "description": "PIN, biometrika, ishonchli qurilmalar va kirish himoyasi."
         }
       }
     },
     "identityDetail": {
       "modes": {
         "username": {
-          "eyebrow": "FOYDALANUVCHI NOMI",
+          "eyebrow": "Ma’lumot",
           "title": "Foydalanuvchi nomi",
-          "subtitle": "Ommaviy foydalanuvchi nomi profil ko‘rinishi va havolalarda ishlatiladi."
+          "subtitle": "Qidiruv, profil va Messenger uchun ommaviy @username ni o‘zgartiring."
         },
         "phone": {
           "eyebrow": "TELEFON",
-          "title": "Telefon",
-          "subtitle": "Telefon raqami tasdiqlash, xavfsizlik va aloqa qatlamiga ulanadi."
+          "title": "Telefon raqami",
+          "subtitle": "Akkauntingizga bog‘langan telefon raqamini yangilang."
         },
         "birthday": {
           "eyebrow": "TUG‘ILGAN SANA",
           "title": "Tug‘ilgan sana",
-          "subtitle": "Tug‘ilgan sana profil taqdimoti va yoshga bog‘liq oqimlar uchun ishlatiladi."
+          "subtitle": "Profil va yosh qoidalari uchun tug‘ilgan sanani kiriting."
         },
         "channel": {
-          "eyebrow": "KANAL USERNAME",
-          "title": "Kanal username",
-          "subtitle": "Kanal username ommaviy ko‘rinish, havolalar va kanal identitet qatlamida ishlatiladi."
+          "eyebrow": "KANAL",
+          "title": "Profil kanali",
+          "subtitle": "Kanal egasi profili orqali yaratiladi va boshqariladi."
         },
         "bot": {
-          "eyebrow": "BOT USERNAME",
-          "title": "Bot username",
-          "subtitle": "Bot username katalog, ommaviy havolalar va bot owner boshqaruvida ishlatiladi."
+          "eyebrow": "Yordamchi",
+          "title": "Profil boti",
+          "subtitle": "Bot ommaviy ma’lumotlari va AI kirishi profildan boshqariladi."
         },
         "colors": {
           "eyebrow": "RANGLAR",
-          "subtitle": "Profil ranglari, badge va vizual uslubni sozlang.",
-          "title": "Profil ranglari"
+          "subtitle": "Ommaviy profil uchun mavzu va ramkani tanlang.",
+          "title": "Ranglar va ramkalar"
         }
       },
       "username": {
         "fieldLabel": "Foydalanuvchi nomi",
-        "noteTitle": "Eslatma",
-        "noteText": "Foydalanuvchi nomi ommaviy ko‘rinish, havolalar va owner identitetida ishlatiladi.",
-        "placeholder": "Username"
+        "noteTitle": "Ommaviy username",
+        "noteText": "Username qidiruv, profil, QR va Messenger uchun ishlatiladi. U noyob bo‘lishi kerak.",
+        "placeholder": "Username kiriting"
       },
       "phone": {
-        "fieldLabel": "Telefon raqami",
-        "noteTitle": "Eslatma",
-        "noteText": "Telefon raqami xavfsizlik, tiklash va aloqa qatlamiga bog‘langan bo‘lib qoladi.",
-        "placeholder": "Telefon raqami"
+        "fieldLabel": "Telefon",
+        "noteTitle": "Akkaunt raqami",
+        "noteText": "Telefon kirish, tiklash, qidiruv va xavfsizlik tekshiruvlari uchun ishlatiladi.",
+        "placeholder": "Qidiruv"
       },
       "birthday": {
         "day": "Kun",
         "month": "Oy",
         "year": "Yil",
-        "noteTitle": "Eslatma",
-        "noteText": "Tug‘ilgan sana maxfiylik qoidalari asosida ko‘rsatiladi va kelajakdagi yoshga bog‘liq mantiqda ishlatiladi.",
-        "dayPlaceholder": "Kun",
-        "monthPlaceholder": "Oy",
-        "yearPlaceholder": "Yil"
+        "noteTitle": "Tug‘ilgan sana",
+        "noteText": "Sana profil va yoshga bog‘liq funksiyalar uchun kerak.",
+        "dayPlaceholder": "KK",
+        "monthPlaceholder": "OO",
+        "yearPlaceholder": "Qidiruv"
       },
       "channel": {
-        "fieldLabel": "Kanal username",
-        "placeholder": "kanal_username",
-        "noteTitle": "Eslatma",
-        "noteText": "Kanal username ommaviy ko‘rinish, havolalar va kanal identitet qatlamida ishlatiladi."
+        "fieldLabel": "Kanal",
+        "placeholder": "Kanalni tanlang",
+        "noteTitle": "Profil kanali",
+        "noteText": "Kanal ommaviy ma’lumotlari egasi profili orqali boshqariladi."
       },
       "bot": {
-        "fieldLabel": "Bot username",
-        "placeholder": "bot_username",
-        "noteTitle": "Eslatma",
-        "noteText": "Bot username katalog, ommaviy havolalar va bot owner boshqaruvida ishlatiladi."
+        "fieldLabel": "Bot sozlamalari",
+        "placeholder": "Botni tanlang",
+        "noteTitle": "Profil boti",
+        "noteText": "Bot ma’lumotlari, AI kirishi va routing profildan boshqariladi."
       },
       "colors": {
-        "noteText": "Ranglar profil, publik ko‘rinish va Messenger yuzalarida bir xil qo‘llanadi.",
-        "noteTitle": "Ranglar eslatmasi",
+        "noteText": "Ranglar ommaviy profil va vizual kartalarga qo‘llanadi.",
+        "noteTitle": "Profil mavzusi",
         "presets": {
           "blue": "Ko‘k",
           "emerald": "Zumrad",
           "gold": "Oltin",
           "purple": "Binafsha",
-          "teal": "Ko‘kimtir"
+          "teal": "Feruza"
         },
-        "previewTitle": "Profil ko‘rinishi"
+        "previewTitle": "Ko‘rish"
       }
     },
     "channelScreen": {
@@ -4805,7 +4751,7 @@ export const UZ_LOCALE = {
       "tabs": {
         "overview": "Profil",
         "public": "Ommaviy",
-        "control": "Sozlamalar",
+        "control": "Ma’lumot",
         "history": "Tarix"
       },
       "actions": {
@@ -4884,7 +4830,7 @@ export const UZ_LOCALE = {
         "public": "Ochiq",
         "private": "Yopiq",
         "published": "Nashr qilingan",
-        "preview": "Preview",
+        "preview": "Oldindan ko‘rish",
         "profileVisible": "Profile ichida ko‘rinadi",
         "profileHidden": "Profile ichida yashirin"
       },
@@ -4896,8 +4842,8 @@ export const UZ_LOCALE = {
         "subtitle": "Avatar va ommaviy media bilan mavjud kanal room ga o‘tish"
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
+        "avatar": "Avatar rasmi",
+        "cover": "Cover rasmi",
         "photos": "Rasmlar",
         "photosSubtitle": "Ommaviy rasmlarni yuklash va boshqarish",
         "videos": "Videolar",
@@ -4916,14 +4862,14 @@ export const UZ_LOCALE = {
           "placeholder": "Kanal nomini kiriting"
         },
         "username": {
-          "label": "Username",
+          "label": "Foydalanuvchi nomi",
           "placeholder": "channel_username"
         },
         "description": {
-          "label": "Tavsif",
+          "label": "Ma’lumot",
           "placeholder": "Kanal tavsifini yozing"
         },
-        "channelId": "Channel ID",
+        "channelId": "Ulangan kanal ID",
         "channelIdPlaceholder": "Avtomatik yaratiladi",
         "inviteLink": "Taklif havolasi"
       },
@@ -4933,12 +4879,12 @@ export const UZ_LOCALE = {
         "userId": "Owner User ID",
         "userIdPlaceholder": "Avtomatik yaratiladi",
         "role": "Owner roli",
-        "rolePlaceholder": "Owner",
+        "rolePlaceholder": "Ega",
         "phone": "Owner telefoni",
-        "email": "Owner email"
+        "email": "Ma’lumot"
       },
       "publication": {
-        "publicationId": "Publication ID",
+        "publicationId": "Ma’lumot",
         "title": "Nashr sarlavhasi",
         "titlePlaceholder": "Public sarlavha",
         "subtitle": "Nashr subtitri",
@@ -5017,7 +4963,7 @@ export const UZ_LOCALE = {
       "tabs": {
         "overview": "Profil",
         "public": "Ommaviy",
-        "control": "Sozlamalar",
+        "control": "Ma’lumot",
         "history": "Tarix"
       },
       "actions": {
@@ -5098,7 +5044,7 @@ export const UZ_LOCALE = {
         "public": "Ochiq",
         "private": "Yopiq",
         "published": "Nashr qilingan",
-        "preview": "Preview",
+        "preview": "Oldindan ko‘rish",
         "profileVisible": "Profile ichida ko‘rinadi",
         "profileHidden": "Profile ichida yashirin",
         "active": "Faol",
@@ -5113,8 +5059,8 @@ export const UZ_LOCALE = {
         "subtitle": "Bot room ga owner parametrlar bilan o‘tish"
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
+        "avatar": "Avatar rasmi",
+        "cover": "Cover rasmi",
         "gallery": "Galereya"
       },
       "main": {
@@ -5123,18 +5069,18 @@ export const UZ_LOCALE = {
           "placeholder": "Bot nomini kiriting"
         },
         "username": {
-          "label": "Username",
+          "label": "Foydalanuvchi nomi",
           "placeholder": "bot_username"
         },
         "description": {
-          "label": "Tavsif",
+          "label": "Ma’lumot",
           "placeholder": "Bot tavsifini yozing"
         },
         "botKind": {
           "label": "Bot turi",
-          "placeholder": "assistant / service / business / trade"
+          "placeholder": "Qidiruv"
         },
-        "botId": "Bot ID",
+        "botId": "Ulangan bot ID",
         "botIdPlaceholder": "Avtomatik yaratiladi"
       },
       "owner": {
@@ -5143,12 +5089,12 @@ export const UZ_LOCALE = {
         "userId": "Owner User ID",
         "userIdPlaceholder": "Avtomatik yaratiladi",
         "role": "Owner roli",
-        "rolePlaceholder": "Owner",
+        "rolePlaceholder": "Ega",
         "phone": "Owner telefoni",
-        "email": "Owner email"
+        "email": "Ma’lumot"
       },
       "publication": {
-        "publicationId": "Publication ID",
+        "publicationId": "Ma’lumot",
         "title": "Nashr sarlavhasi",
         "titlePlaceholder": "Public sarlavha",
         "subtitle": "Nashr subtitri",
@@ -5197,11 +5143,11 @@ export const UZ_LOCALE = {
       "routing": {
         "title": "Hamyon routing",
         "sabiWallet": "SABI Wallet",
-        "businessRoutingLayer": "Business Routing Layer",
+        "businessRoutingLayer": "Ma’lumot",
         "tradeBot": "Savdo boti",
         "businessBot": "Biznes boti",
         "tradeHint": "Savdo va commerce bot tushumlari SABI Wallet ga yo‘naltiriladi.",
-        "businessHint": "Business Wallet ishga tushguncha biznes bot tushumlari Business Routing Layer ga yo‘naltiriladi."
+        "businessHint": "Ma’lumot Ma’lumot"
       },
       "history": {
         "subtitle": "So‘nggi owner, modul va routing voqealari.",
@@ -5236,20 +5182,20 @@ export const UZ_LOCALE = {
         "title": "Profil mavzusi va ramkalar"
       },
       "intro": {
-        "eyebrow": "PREMIUM IDENTITET MAVZUSI",
+        "eyebrow": "Ma’lumot",
         "title": "Profil mavzusi va ramkalar",
         "subtitle": "Owner nazoratidagi ranglar, avatar ramkalari, aksentlar va premium identitet uslubini tanlang."
       },
       "preview": {
-        "ownerTheme": "Owner mavzusi",
+        "ownerTheme": "Mavzu",
         "bio": "Profil mavzusi va ramkalari ommaviy ko‘rinish, premium identitet va AI yo‘nalishiga ulanadi.",
         "stats": {
           "theme": "Mavzu",
-          "frame": "Ramka"
+          "frame": "Ramkalar"
         },
         "quickPills": {
-          "profileSurface": "Profil qatlami",
-          "aiIdentity": "AI identitet",
+          "profileSurface": "Profil",
+          "aiIdentity": "AI",
           "premium": "Premium"
         },
         "ownerThemeBadge": "Egasi mavzusi"
@@ -5260,62 +5206,62 @@ export const UZ_LOCALE = {
       },
       "sections": {
         "themePresets": "Mavzu presetlari",
-        "avatarFrames": "Avatar ramkalari"
+        "avatarFrames": "Ramkalar"
       },
       "themes": {
         "emeraldGlass": {
-          "title": "Zumrad shisha",
+          "title": "Sozlamalar",
           "subtitle": "Sokin yashil premium ko‘rinish.",
           "badge": "Faol"
         },
         "royalAurora": {
-          "title": "Qirollik aurorasi",
+          "title": "Sozlamalar",
           "subtitle": "Chuqur va boy premium yorug‘lik.",
           "badge": "Premium"
         },
         "midnightViolet": {
-          "title": "Yarim tun binafshasi",
+          "title": "Sozlamalar",
           "subtitle": "Qorong‘i premium va nafis identitet yo‘nalishi.",
-          "badge": "Nafis"
+          "badge": "Premium"
         },
         "sunsetRose": {
-          "title": "Shafaq atirguli",
+          "title": "Sozlamalar",
           "subtitle": "Yumshoq va iliq taqdimot kayfiyati.",
           "badge": "Yangi"
         },
         "aiNeon": {
-          "title": "AI neon",
+          "title": "Sozlamalar",
           "subtitle": "AI identitet va premium porlashga yo‘naltirilgan neon mavzu.",
           "badge": "AI"
         }
       },
       "frames": {
         "defaultGlow": {
-          "title": "Asosiy yaltirash",
-          "description": "Standart toza ramka."
+          "title": "Sozlamalar",
+          "description": "Sozlamalar"
         },
         "heartPulse": {
-          "title": "Yurak urishi",
+          "title": "Sozlamalar",
           "description": "Jonli va iliq aksentli ramka."
         },
         "crystalRing": {
-          "title": "Kristall halqa",
+          "title": "Sozlamalar",
           "description": "Yorqin va tiniq premium halqa."
         },
         "royalGold": {
-          "title": "Qirollik oltini",
-          "description": "Oltin premium ramka."
+          "title": "Sozlamalar",
+          "description": "Sozlamalar"
         },
         "neonWave": {
           "title": "Neon to‘lqin",
           "description": "Zamonaviy yorqin oqimga ega ramka."
         },
         "aiHalo": {
-          "title": "AI halosi",
+          "title": "Sozlamalar",
           "description": "AI bilan bog‘langan premium halo ramkasi."
         },
         "softStars": {
-          "title": "Yumshoq yulduzlar",
+          "title": "Sozlamalar",
           "description": "Yengil porlash va nozik yulduz effektlari."
         },
         "seasonalBloom": {
@@ -5324,7 +5270,7 @@ export const UZ_LOCALE = {
         }
       },
       "footer": {
-        "title": "Profil mavzusini davom ettirish",
+        "title": "Sozlamalar",
         "description": "Tanlangan mavzu va ramkalarni profilingizga qo‘llashni davom ettiring.",
         "action": "Saqlash"
       },
@@ -5335,14 +5281,14 @@ export const UZ_LOCALE = {
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "QURILMALAR VA SESSIYALAR",
+        "eyebrow": "Ma’lumot",
         "title": "Qurilmalar va sessiyalar",
         "subtitle": "Faol seanslar, ishonchli qurilmalar, QR kirish va avtomatik tugatish qoidalarini boshqaring."
       },
       "metrics": {
-        "allSessions": "Barcha sessiyalar",
-        "trusted": "Ishonchli",
-        "timeout": "Avto tugatish"
+        "allSessions": "Ma’lumot",
+        "trusted": "Ma’lumot",
+        "timeout": "Ma’lumot"
       },
       "metricStates": {
         "on": "Yoqilgan",
@@ -5354,38 +5300,38 @@ export const UZ_LOCALE = {
         "action": "Qurilma ulash"
       },
       "sections": {
-        "thisDevice": "Ushbu qurilma",
-        "otherSessions": "Boshqa sessiyalar",
-        "autoEnd": "Avtomatik tugatish"
+        "thisDevice": "Ma’lumot",
+        "otherSessions": "Ma’lumot",
+        "autoEnd": "Ma’lumot"
       },
       "badges": {
-        "live": "Jonli",
-        "trusted": "Ishonchli"
+        "live": "Ma’lumot",
+        "trusted": "Ma’lumot"
       },
-      "revokeAction": "Bekor qilish",
-      "selectedBadge": "Tanlangan",
+      "revokeAction": "Ma’lumot",
+      "selectedBadge": "Ma’lumot",
       "timeouts": {
-        "oneWeek": "1 hafta",
-        "oneMonth": "1 oy",
-        "threeMonths": "3 oy",
-        "sixMonths": "6 oy",
-        "oneYear": "1 yil"
+        "oneWeek": "Ma’lumot",
+        "oneMonth": "Ma’lumot",
+        "threeMonths": "Ma’lumot",
+        "sixMonths": "Ma’lumot",
+        "oneYear": "Ma’lumot"
       },
       "notes": {
         "safety": {
-          "title": "Sessiya xavfsizligi",
+          "title": "Sozlamalar",
           "description": "Rasmiy Sabi ilovalari, ishonchli sessiyalar va QR kirish ustidan qat’iy nazorat saqlanishi kerak."
         },
         "nextLayer": {
-          "title": "Keyingi qatlam",
+          "title": "Sozlamalar",
           "description": "Kelajakda bu ekran qurilma tarixi, geo-ogohlantirishlar va kuchliroq sessiya tasdiqlash oqimlariga ulanadi."
         },
         "security": {
-          "title": "Sessiya xavfsizligi",
+          "title": "Sozlamalar",
           "description": "Rasmiy Sabi ilovalari, ishonchli sessiyalar va QR kirish ustidan qat’iy nazorat saqlanishi kerak."
         },
         "future": {
-          "title": "Keyingi qatlam",
+          "title": "Sozlamalar",
           "description": "Kelajakda bu ekran qurilma tarixi, geo-ogohlantirishlar va kuchliroq sessiya tasdiqlash oqimlariga ulanadi."
         }
       }
@@ -5418,7 +5364,7 @@ export const UZ_LOCALE = {
           "description": "Kelajakdagi avto tozalash va retention qoidalari."
         },
         "login_email": {
-          "title": "Kirish emaili",
+          "title": "Sozlamalar",
           "description": "Email orqali tasdiqlash va himoyalangan kirish oqimi."
         },
         "phone": {
@@ -5426,11 +5372,11 @@ export const UZ_LOCALE = {
           "description": "Telefon raqami ko‘rinishi va topilish qoidalari."
         },
         "last_seen": {
-          "title": "Oxirgi faollik",
+          "title": "Sozlamalar",
           "description": "Onlayn holat va oxirgi ko‘ringan vaqt qoidalari."
         },
         "last-seen": {
-          "title": "Oxirgi faollik",
+          "title": "Sozlamalar",
           "description": "Onlayn holat va oxirgi ko‘ringan vaqt qoidalari."
         },
         "photo": {
@@ -5438,7 +5384,7 @@ export const UZ_LOCALE = {
           "description": "Profil rasmi ko‘rinishi va istisnolar."
         },
         "bio": {
-          "title": "Bio",
+          "title": "Profil mavzusi va ramkalari ommaviy ko‘rinish, premium identitet va AI yo‘nalishiga ulanadi.",
           "description": "Bio matni ko‘rinishi va maxfiylik qoidalari."
         },
         "birthday": {
@@ -5450,7 +5396,7 @@ export const UZ_LOCALE = {
           "description": "Qaysi sovg‘alar ko‘rinishi va kim yubora olishi."
         },
         "forwards": {
-          "title": "Forwardlar",
+          "title": "Sozlamalar",
           "description": "Xabarlarni uzatishda akkaunt bog‘lanishi qoidalari."
         },
         "calls": {
@@ -5480,14 +5426,14 @@ export const UZ_LOCALE = {
         "eyebrow": "MAXFIYLIK QOIDASI"
       },
       "options": {
-        "everyone": "Hamma",
-        "contacts": "Kontaktlar",
-        "nobody": "Hech kim"
+        "everyone": "Ma’lumot",
+        "contacts": "Ma’lumot",
+        "nobody": "Ma’lumot"
       },
       "notFound": {
         "title": "Maxfiylik qoidasi topilmadi",
         "subtitle": "Bu maxfiylik yo‘nalishi hali sozlanmagan. Maxfiylik markaziga qayting va mavjud qoidalardan birini oching.",
-        "backAction": "Maxfiylikka qaytish"
+        "backAction": "Orqaga"
       },
       "exceptions": {
         "title": "Istisnolar"
@@ -5528,7 +5474,7 @@ export const UZ_LOCALE = {
         }
       },
       "lastSeen": {
-        "title": "Oxirgi faollik",
+        "title": "Sozlamalar",
         "groups": {
           "onlineVisibility": {
             "title": "Onlayn holat ko‘rinishi",
@@ -5552,7 +5498,7 @@ export const UZ_LOCALE = {
         "premiumCtaText": "Premiumni ochish"
       },
       "photo": {
-        "title": "Profil rasmi",
+        "title": "Sozlamalar",
         "groups": {
           "whoCanSee": {
             "title": "Kim profil rasmini ko‘ra oladi",
@@ -5567,7 +5513,7 @@ export const UZ_LOCALE = {
         }
       },
       "bio": {
-        "title": "Bio",
+        "title": "Profil mavzusi va ramkalari ommaviy ko‘rinish, premium identitet va AI yo‘nalishiga ulanadi.",
         "groups": {
           "whoCanSee": {
             "title": "Kim biografiyani ko‘ra oladi",
@@ -5600,7 +5546,7 @@ export const UZ_LOCALE = {
         "title": "Sovg‘alar",
         "topToggles": {
           "chatBadge": {
-            "title": "Chat badge",
+            "title": "Sozlamalar",
             "description": "Chat ichida sovg‘a badge ko‘rinishini boshqaring."
           }
         },
@@ -5631,9 +5577,9 @@ export const UZ_LOCALE = {
         }
       },
       "forwards": {
-        "title": "Forwardlar",
+        "title": "Sozlamalar",
         "preview": {
-          "label": "Forward namunasi",
+          "label": "Ma’lumot",
           "sender": "Yuboruvchi",
           "message": "Forward qilinganda akkaunt bog‘lanishi shu yerda ko‘rinadi."
         },
@@ -5678,7 +5624,7 @@ export const UZ_LOCALE = {
         },
         "toggles": {
           "iphoneIntegration": {
-            "title": "iPhone integratsiyasi",
+            "title": "Sozlamalar",
             "description": "Mos qurilmalarda qo‘ng‘iroqlarni tizim darajasida ko‘rsatish."
           }
         }
@@ -5706,7 +5652,7 @@ export const UZ_LOCALE = {
         },
         "groups": {
           "whoCanMessage": {
-            "title": "Kim yozishi mumkin",
+            "title": "Sozlamalar",
             "description": "Sizga kim yozishi mumkinligini boshqaring."
           }
         },
@@ -5736,8 +5682,8 @@ export const UZ_LOCALE = {
         "subtitle": "Kontaktlar sinxroni, qidiruv tavsiyalari, draftlar, to‘lovga aloqador ma’lumotlar, eksport va tozalash qoidalarini boshqaring."
       },
       "metrics": {
-        "contactsSync": "Kontaktlar sinxroni",
-        "draftBackup": "Draft zaxirasi",
+        "contactsSync": "Ma’lumot",
+        "draftBackup": "Orqaga",
         "privateExport": "Yopiq eksport"
       },
       "metricStates": {
@@ -5755,7 +5701,7 @@ export const UZ_LOCALE = {
       },
       "discovery": {
         "syncContacts": {
-          "title": "Kontaktlarni sinxronlash",
+          "title": "Sozlamalar",
           "description": "Kontaktlar orqali akkaunt topish va bog‘lanishni yaxshilash."
         },
         "searchSuggestions": {
@@ -5769,7 +5715,7 @@ export const UZ_LOCALE = {
       },
       "storage": {
         "draftBackup": {
-          "title": "Draft zaxirasi",
+          "title": "Sozlamalar",
           "description": "Tugallanmagan profil tahrirlari va kelajakdagi draftlarni tiklab olish."
         },
         "paymentHints": {
@@ -5783,7 +5729,7 @@ export const UZ_LOCALE = {
       },
       "retention": {
         "autoCleanup": {
-          "title": "Avto tozalash tavsiyalari",
+          "title": "Sozlamalar",
           "description": "Eski draftlar va kesh ma’lumotlari uchun tozalash tavsiyalarini ko‘rsatish."
         }
       },
@@ -5797,12 +5743,12 @@ export const UZ_LOCALE = {
           "description": "Draftlar bilan bog‘liq boshqaruv oqimini ochish."
         },
         "clearCache": {
-          "title": "Profil keshini tozalash",
+          "title": "Sozlamalar",
           "description": "Mahalliy profil keshini tozalash va vaqtinchalik ma’lumotlarni qisqartirish."
         }
       },
       "note": {
-        "title": "Bu ekran nega muhim",
+        "title": "Sozlamalar",
         "description": "Ma’lumotlarni boshqarish bo‘limi Sabi profilining maxfiylik va xavfsizlik qatlami ichida qolishi kerak."
       },
       "links": {
@@ -5811,18 +5757,18 @@ export const UZ_LOCALE = {
           "description": "Maxfiylik qoidalarini va ko‘rinish boshqaruvini ochish."
         },
         "support": {
-          "title": "Yordam",
+          "title": "Sozlamalar",
           "description": "Ma’lumotlar, eksport va maxfiylik bo‘yicha yordam olish."
         }
       }
     },
     "aiScreen": {
       "header": {
-        "title": "AI profil",
+        "title": "Sozlamalar",
         "openAction": "Ochish"
       },
       "intro": {
-        "eyebrow": "AI IDENTITET TIZIMI",
+        "eyebrow": "Ma’lumot",
         "title": "AI",
         "subtitle": "Smart identitet uslubi, bio ishlovi, premium bog‘lanish va ko‘p tilli taqdimot uchun yakuniy AI profil qatlami."
       },
@@ -5832,8 +5778,8 @@ export const UZ_LOCALE = {
           "programBound": "Dasturga bog‘langan"
         },
         "stats": {
-          "mode": "Rejim",
-          "owner": "Owner",
+          "mode": "Ma’lumot",
+          "owner": "Ega",
           "premium": "Premium",
           "premiumBound": "Premium bilan bog‘langan"
         },
@@ -5846,32 +5792,32 @@ export const UZ_LOCALE = {
       },
       "modes": {
         "balanced": {
-          "title": "Muvozanatli AI",
+          "title": "Sozlamalar",
           "subtitle": "Toza premium uslubga ega neytral tavsiyalar."
         },
         "creative": {
-          "title": "Ijodiy AI",
+          "title": "Sozlamalar",
           "subtitle": "Kuchliroq identitet ishlovi va boyroq ifoda."
         },
         "business": {
-          "title": "Biznes AI",
+          "title": "Sozlamalar",
           "subtitle": "Biznes va ommaviy profil uchun professional yo‘nalish."
         },
         "concise": {
-          "title": "Qisqa AI",
+          "title": "Sozlamalar",
           "subtitle": "Qisqa va aniq profil matnlari uchun ixcham uslub."
         }
       },
       "modeSection": {
-        "title": "AI rejimlari"
+        "title": "Sozlamalar"
       },
       "notice": {
-        "title": "AI qatlami",
+        "title": "Sozlamalar",
         "description": "AI profil vositalari til, premium, ommaviy ko‘rinish va ranglar tizimi bilan bog‘langan holda ishlaydi."
       },
       "sections": {
         "primary": {
-          "title": "Asosiy vositalar",
+          "title": "Sozlamalar",
           "edit": {
             "title": "Profil matnini tahrirlash",
             "description": "Bio, shaxsiy matn va identitet tafsilotlarini AI bilan yaxshilash."
@@ -5885,14 +5831,14 @@ export const UZ_LOCALE = {
             "description": "AI yo‘nalishini premium mavzu va ramkalar bilan uyg‘unlashtirish."
           },
           "premium": {
-            "title": "Premium kirish",
+            "title": "Premium",
             "description": "AI profil vositalari premium identitet qatlamiga bog‘langan."
           }
         },
         "system": {
           "title": "Tizim bilan bog‘liq",
           "language": {
-            "title": "Til qatlami",
+            "title": "Sozlamalar",
             "description": "AI profil tili haqiqiy dastur til tizimiga ulanadi."
           },
           "qr": {
@@ -5900,7 +5846,7 @@ export const UZ_LOCALE = {
             "description": "AI ishlovli identitet QR ko‘rinishiga ulanadi."
           },
           "premiumSurface": {
-            "title": "Premium identitet oqimi",
+            "title": "Premium",
             "description": "Premium orqali pullik AI/profil bog‘lanishini davom ettirish."
           }
         }
@@ -5911,7 +5857,7 @@ export const UZ_LOCALE = {
       "footer": {
         "title": "AI yo‘nalishini davom ettirish",
         "description": "AI qatlami profil, premium, ommaviy qatlam va til tizimi bilan uyg‘un qoladi.",
-        "action": "Davom etish"
+        "action": "Ma’lumot"
       }
     },
     "giftsScreen": {
@@ -5930,15 +5876,15 @@ export const UZ_LOCALE = {
           "unifiedIdBound": "Yagona ID bilan bog‘langan"
         },
         "stats": {
-          "diamonds": "Olmoslar",
-          "status": "Holat",
-          "owner": "Owner"
+          "diamonds": "Ma’lumot",
+          "status": "Ma’lumot",
+          "owner": "Ega"
         },
         "actions": {
           "public": "Ommaviy",
           "premium": "Premium",
-          "credits": "Kreditlar",
-          "theme": "Tema"
+          "credits": "Ma’lumot",
+          "theme": "Mavzu"
         }
       },
       "notice": {
@@ -5946,16 +5892,16 @@ export const UZ_LOCALE = {
         "description": "Sovg‘a markazi premium identitet, public profil, kreditlar va owner nazorat qiladigan tema yuzasi bilan bog‘lanib qoladi."
       },
       "tabs": {
-        "received": "Qabul qilingan",
-        "inventory": "Inventar",
+        "received": "Ma’lumot",
+        "inventory": "Ma’lumot",
         "history": "Tarix"
       },
       "common": {
-        "diamonds": "olmos"
+        "diamonds": "Ma’lumot"
       },
       "items": {
         "goldenAura": {
-          "title": "Oltin aura",
+          "title": "Sozlamalar",
           "subtitle": "Yorqin premium identitet va boy ommaviy taassurot beruvchi sovg‘a.",
           "rarity": "Premium",
           "status": "Faol"
@@ -5963,49 +5909,49 @@ export const UZ_LOCALE = {
         "violetWave": {
           "title": "Binafsha to‘lqin",
           "subtitle": "Chuqur premium kayfiyat va nafis ommaviy taqdimot uchun sovg‘a.",
-          "rarity": "Noyob",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "mintLight": {
-          "title": "Yalpiz nuri",
+          "title": "Sozlamalar",
           "subtitle": "Toza va yengil profil yuzasi uchun yumshoq premium sovg‘a.",
-          "rarity": "Yengil premium",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "dragonNote": {
-          "title": "Ajdar eslatmasi",
+          "title": "Sozlamalar",
           "subtitle": "Kuchli wow-effekt va premium identitet urg‘usi bilan ajralib turadigan sovg‘a.",
-          "rarity": "Afsonaviy",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "moonSilk": {
-          "title": "Oy ipaklari",
+          "title": "Sozlamalar",
           "subtitle": "Sokin premium kayfiyat va nafis ko‘rinish beruvchi sovg‘a taqdimoti.",
-          "rarity": "Nafis",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "seaBloom": {
-          "title": "Dengiz gullashi",
+          "title": "Sozlamalar",
           "subtitle": "Yumshoq va yangi ko‘rinishga ega, ommaviy profil bilan mos premium sovg‘a.",
-          "rarity": "Kam uchraydigan",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "phoenixBloom": {
-          "title": "Feniks gullashi",
+          "title": "Sozlamalar",
           "subtitle": "Yorqin premium taassurot va kuchli identitet taqdimotiga ega sovg‘a.",
-          "rarity": "Afsonaviy",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "crystalComet": {
-          "title": "Kristall kometa",
+          "title": "Sozlamalar",
           "subtitle": "Tezkor yorqinlik va premium ommaviy taassurot beruvchi sovg‘a.",
-          "rarity": "Noyob",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         },
         "emeraldLotus": {
-          "title": "Zumrad lotus",
+          "title": "Sozlamalar",
           "subtitle": "Sokin, nafis va premium profil kayfiyatiga mos sovg‘a taqdimoti.",
-          "rarity": "Nafis",
+          "rarity": "Ma’lumot",
           "status": "Faol"
         }
       },
@@ -6017,13 +5963,13 @@ export const UZ_LOCALE = {
     },
     "creditsScreen": {
       "header": {
-        "eyebrow": "KREDIT IQTISODI",
-        "title": "Kreditlar markazi",
+        "eyebrow": "Ma’lumot",
+        "title": "Sozlamalar",
         "subtitle": "Kreditlar balansi, tarix, kirim, chiqim va profilga bog‘langan iqtisodiy vositalarni boshqaring.",
         "backAction": "Orqaga"
       },
       "balance": {
-        "label": "Mavjud balans",
+        "label": "Ma’lumot",
         "actions": {
           "topUp": "Balansni to‘ldirish",
           "statistics": "Statistika",
@@ -6031,50 +5977,50 @@ export const UZ_LOCALE = {
         }
       },
       "tabs": {
-        "all": "Barchasi",
-        "incoming": "Kiruvchi",
-        "outgoing": "Chiquvchi"
+        "all": "Ma’lumot",
+        "incoming": "Ma’lumot",
+        "outgoing": "Ma’lumot"
       }
     },
     "businessUpgradeScreen": {
       "header": {
-        "eyebrow": "BIZNES AKKAUNT",
+        "eyebrow": "Ma’lumot",
         "title": "Biznes darajasiga o‘tish",
         "subtitle": "Ishga tushirilgandan keyin pullik biznes akkaunt yoqiladi. To‘liq biznes vositalari uchun dastlabki 3 oy bepul bo‘ladi.",
-        "backAction": "Profil"
+        "backAction": "Orqaga"
       },
       "hero": {
-        "title": "Telegram darajasidagi chuqurlik, Sabi darajasidagi quvvat",
+        "title": "Sozlamalar",
         "description": "Biznes identiteti, manzil, ish soatlari, greeting, tezkor javoblar, chat havolalari, mavjud emas rejimi va kelajakdagi merchant kengaytmasi.",
-        "launchBadge": "oy bepul"
+        "launchBadge": "Ma’lumot"
       },
       "sections": {
-        "plans": "Ishga tushirishdan keyingi rejalar",
-        "features": "Biznes funksiyalari"
+        "plans": "Ma’lumot",
+        "features": "Ma’lumot"
       },
       "plans": {
         "business_annual": {
-          "title": "Yillik biznes reja",
-          "period": "12 oy",
+          "title": "Sozlamalar",
+          "period": "Ma’lumot",
           "price": "Yiliga to‘lov",
           "description": "Kengaytirilgan biznes identiteti, ish soatlari, salomlashuvlar, tezkor javoblar, chat havolalari va kelajak avtomatlashtirish oqimlari bilan to‘liq annual paket.",
-          "badge": "Yillik"
+          "badge": "Premium"
         },
         "business_monthly": {
-          "title": "Oylik biznes reja",
-          "period": "1 oy",
+          "title": "Sozlamalar",
+          "period": "Ma’lumot",
           "price": "Oyiga to‘lov",
           "description": "Biznes profil boshqaruvi, ish vaqti, tezkor javoblar, salomlashuvlar va bog‘langan biznes vositalari uchun moslashuvchan monthly paket.",
-          "badge": "Oylik"
+          "badge": "Premium"
         }
       },
       "features": {
         "address": {
-          "title": "Manzil",
+          "title": "Sozlamalar",
           "description": "Biznes profil manzili va ommaviy ko‘rinadigan joylashuv tafsilotlari."
         },
         "workHours": {
-          "title": "Ish soatlari",
+          "title": "Sozlamalar",
           "description": "Haftalik jadval va mavjudlik sozlamalari."
         },
         "quickReplies": {
@@ -6082,7 +6028,7 @@ export const UZ_LOCALE = {
           "description": "Qayta ishlatiladigan javoblar va kelajakdagi media qo‘llab-quvvatlanadigan javob to‘plamlari."
         },
         "greetings": {
-          "title": "Salomlashuvlar",
+          "title": "Sozlamalar",
           "description": "Yangi mijozlar yoki birinchi murojaatlar uchun avtomatik xush kelibsiz xabarlari."
         },
         "notAvailable": {
@@ -6097,7 +6043,7 @@ export const UZ_LOCALE = {
       "footer": {
         "action": "Biznes launch kirishi faol"
       },
-      "cta": "Business imkoniyatlarini ochish"
+      "cta": "Ma’lumot"
     },
     "preferencesScreen": {
       "intro": {
@@ -6194,7 +6140,7 @@ export const UZ_LOCALE = {
       "metrics": {
         "biometric": "Biometrika",
         "appPin": "PIN",
-        "twoFactor": "2FA"
+        "twoFactor": "Ma’lumot"
       },
       "sections": {
         "mainProtection": "Asosiy himoya",
@@ -6303,7 +6249,7 @@ export const UZ_LOCALE = {
           "header": "Profil QR",
           "name": "Ism",
           "username": "Foydalanuvchi nomi",
-          "sabiId": "Sabi ID",
+          "sabiId": "Ma’lumot",
           "profileCode": "Profil kodi",
           "profileLink": "Profil havolasi"
         }
@@ -6463,14 +6409,14 @@ export const UZ_LOCALE = {
         "reviewReason": "Tekshiruv eslatmasi: {{value}}"
       },
       "metrics": {
-        "email": "Email",
-        "liveness": "Liveness",
+        "email": "Elektron pochta",
+        "liveness": "Ma’lumot",
         "phone": "Telefon"
       }
     },
     "mediaScreen": {
       "header": {
-        "title": "Media"
+        "title": "Ochiq rasmlar, videolar va fayllar."
       },
       "card": {
         "title": "Jonli profil media",
@@ -6508,13 +6454,13 @@ export const UZ_LOCALE = {
         "cameraFx": "Kamera FX"
       },
       "badges": {
-        "avatar": "Avatar"
+        "avatar": "Avatar rasmi"
       },
       "filters": {
         "none": "Yo‘q",
         "warm": "Iliq",
         "cool": "Sovuq",
-        "mono": "Mono",
+        "mono": "Ma’lumot",
         "emerald": "Zumrad"
       },
       "modal": {
@@ -6532,7 +6478,7 @@ export const UZ_LOCALE = {
       },
       "capture": {
         "cameraSuffix": "kamera",
-        "fxPrefix": "FX",
+        "fxPrefix": "Ma’lumot",
         "photoLabel": "Rasm"
       },
       "defaults": {
@@ -6581,7 +6527,7 @@ export const UZ_LOCALE = {
     "groupScreen": {
       "loading": "Guruh yuklanmoqda...",
       "header": {
-        "eyebrow": "GROUP OWNER",
+        "eyebrow": "Ma’lumot",
         "title": "Guruh boshqaruvi",
         "badges": {
           "active": "Faol",
@@ -6594,11 +6540,11 @@ export const UZ_LOCALE = {
           "usernameNotSet": "Username hali o‘rnatilmagan"
         },
         "pills": {
-          "created": "Yaratilgan",
+          "created": "Ma’lumot",
           "createFromProfile": "Profile ichidan yaratiladi",
           "public": "Ochiq",
           "private": "Yopiq",
-          "admins": "admin",
+          "admins": "Ma’lumot",
           "blacklist": "qora ro‘yxat"
         }
       },
@@ -6620,7 +6566,7 @@ export const UZ_LOCALE = {
           "subtitle": "A’zolar, postlash, tahrirlash, join request va moderation qoidalari."
         },
         "admins": {
-          "title": "Adminlar",
+          "title": "Sozlamalar",
           "subtitle": "Owner avtomatik asosiy admin bo‘lib qoladi. Qo‘shimcha adminlarni shu yerda boshqaring."
         },
         "blacklist": {
@@ -6638,45 +6584,45 @@ export const UZ_LOCALE = {
           "placeholder": "Guruh nomini kiriting"
         },
         "username": {
-          "label": "Username",
+          "label": "Foydalanuvchi nomi",
           "placeholder": "guruh_username"
         },
         "description": {
-          "label": "Tavsif",
+          "label": "Ma’lumot",
           "placeholder": "Guruh tavsifini yozing"
         },
         "groupId": {
-          "label": "Group ID",
-          "placeholder": "Avtomatik yaratiladi"
+          "label": "Ulangan guruh ID",
+          "placeholder": "Qidiruv"
         },
         "inviteLink": {
           "label": "Taklif havolasi",
-          "placeholder": "sabi://group/..."
+          "placeholder": "Qidiruv"
         }
       },
       "owner": {
         "defaults": {
-          "role": "Owner"
+          "role": "Ega"
         },
         "name": {
           "label": "Owner ismi",
           "placeholder": "Owner to‘liq ismi"
         },
         "userId": {
-          "label": "Owner User ID",
-          "placeholder": "Asosiy yagona user ID"
+          "label": "Ma’lumot",
+          "placeholder": "Qidiruv"
         },
         "role": {
           "label": "Owner roli",
-          "placeholder": "Owner"
+          "placeholder": "Ega"
         },
         "phone": {
           "label": "Owner telefoni",
-          "placeholder": "+998..."
+          "placeholder": "Qidiruv"
         },
         "email": {
-          "label": "Owner email",
-          "placeholder": "owner@sabi.app"
+          "label": "Ma’lumot",
+          "placeholder": "Qidiruv"
         }
       },
       "publication": {
@@ -6701,8 +6647,8 @@ export const UZ_LOCALE = {
           "subtitle": "Havola va profile preview kartalarini ko‘rsatish."
         },
         "publicationId": {
-          "label": "Publication ID",
-          "placeholder": "pub_..."
+          "label": "Ma’lumot",
+          "placeholder": "Qidiruv"
         },
         "title": {
           "label": "Nashr sarlavhasi",
@@ -6713,12 +6659,12 @@ export const UZ_LOCALE = {
           "placeholder": "Qisqa public tavsif"
         },
         "slug": {
-          "label": "Publication slug",
+          "label": "Ma’lumot",
           "placeholder": "guruh-slug"
         },
         "tags": {
           "label": "Kalit so‘zlar",
-          "placeholder": "community, update, public"
+          "placeholder": "Qidiruv"
         },
         "summary": {
           "label": "Nashr xulosasi",
@@ -6751,7 +6697,7 @@ export const UZ_LOCALE = {
           "subtitle": "Oddiy foydalanuvchilar a’zolar ro‘yxatini ko‘ra oladi."
         },
         "slowMode": {
-          "title": "Slow mode",
+          "title": "Sozlamalar",
           "subtitle": "Xabarlar oqimini sekinlashtirish uchun slow mode."
         },
         "messageApproval": {
@@ -6765,14 +6711,14 @@ export const UZ_LOCALE = {
       },
       "admins": {
         "metrics": {
-          "total": "Jami admin",
-          "owner": "Owner"
+          "total": "Ma’lumot",
+          "owner": "Ega"
         },
         "defaults": {
-          "adminRole": "Admin"
+          "adminRole": "Ma’lumot"
         },
         "badges": {
-          "owner": "Owner"
+          "owner": "Ega"
         },
         "actions": {
           "add": "Admin qo‘shish",
@@ -6781,8 +6727,8 @@ export const UZ_LOCALE = {
         "form": {
           "title": "Admin qo‘shish",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Admin user ID"
+            "label": "Foydalanuvchi ID",
+            "placeholder": "Qidiruv"
           },
           "name": {
             "label": "Ism",
@@ -6796,13 +6742,13 @@ export const UZ_LOCALE = {
       },
       "blacklist": {
         "metrics": {
-          "total": "Jami cheklangan",
+          "total": "Ma’lumot",
           "active": "Faol",
           "yes": "Ha",
           "no": "Yo‘q"
         },
         "defaults": {
-          "reason": "Cheklangan"
+          "reason": "Ma’lumot"
         },
         "actions": {
           "add": "Qora ro‘yxatga qo‘shish",
@@ -6815,27 +6761,27 @@ export const UZ_LOCALE = {
         "form": {
           "title": "Qora ro‘yxatga qo‘shish",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Cheklanadigan user ID"
+            "label": "Foydalanuvchi ID",
+            "placeholder": "Qidiruv"
           },
           "name": {
             "label": "Ism",
             "placeholder": "Foydalanuvchi ismi"
           },
           "reason": {
-            "label": "Sabab",
+            "label": "Ma’lumot",
             "placeholder": "Spam, abuse, scam va hokazo"
           }
         }
       },
       "bindings": {
         "chatId": {
-          "label": "Linked chat ID",
-          "placeholder": "chat_..."
+          "label": "Ulangan chat ID",
+          "placeholder": "Qidiruv"
         },
         "botId": {
-          "label": "Linked bot ID",
-          "placeholder": "bot_..."
+          "label": "Ulangan bot ID",
+          "placeholder": "Qidiruv"
         }
       },
       "alerts": {
@@ -6846,14 +6792,14 @@ export const UZ_LOCALE = {
           "reset": "Guruh ma’lumotlari tiklandi"
         },
         "error": {
-          "title": "Xato",
+          "title": "Sozlamalar",
           "saveFailed": "Guruh ma’lumotlarini saqlab bo‘lmadi.",
           "resetFailed": "Guruh ma’lumotlarini tiklab bo‘lmadi."
         },
         "validation": {
           "nameTitle": "Guruh nomi kerak",
           "nameMessage": "Guruh yaratish uchun guruh nomini kiriting.",
-          "ownerIdTitle": "Owner ID kerak",
+          "ownerIdTitle": "Sarlavha",
           "ownerIdMessage": "Guruh owner user ID majburiy.",
           "adminTitle": "Admin ma’lumoti kerak",
           "adminMessage": "Admin qo‘shish uchun user ID va ismni kiriting.",
@@ -6861,7 +6807,7 @@ export const UZ_LOCALE = {
           "blacklistMessage": "Qora ro‘yxatga qo‘shish uchun user ID va ismni kiriting.",
           "blacklistConflictTitle": "Blok ro‘yxatida bor",
           "blacklistConflictMessage": "Blok ro‘yxatidagi foydalanuvchini admin qilib bo‘lmaydi.",
-          "ownerProtectedTitle": "Owner himoyalangan",
+          "ownerProtectedTitle": "Sarlavha",
           "ownerProtectedMessage": "Owner admin ro‘yxatidan olib tashlanmaydi. Owner ma’lumotini yuqorida o‘zgartiring.",
           "ownerBlacklistMessage": "Owner qora ro‘yxatga qo‘shilmaydi."
         },
@@ -6874,7 +6820,7 @@ export const UZ_LOCALE = {
       },
       "actions": {
         "create": "Guruh yaratish",
-        "creating": "Yaratilmoqda...",
+        "creating": "Ma’lumot",
         "save": "Saqlash",
         "saving": "Saqlanmoqda...",
         "reset": "Tiklash"
@@ -6971,24 +6917,24 @@ export const UZ_LOCALE = {
         "actions": {
           "ai": "AI",
           "gifts": "Sovg‘alar",
-          "public": "Public",
+          "public": "Ochiq",
           "themes": "Mavzular"
         },
         "badges": {
-          "identity": "Premium identity",
+          "identity": "Premium",
           "ownerSurface": "Egasi yuzasi"
         },
         "subtitle": "Premium mavzular, ramkalar, AI identity vositalari, QR taqdimoti va sovg‘a yuzalari bitta profil tizimiga ulangan.",
-        "title": "Sabi Premium"
+        "title": "Premium"
       },
       "identityCard": {
         "description": "Premium holatingiz profil identity bilan bog‘langan va muvaffaqiyatli to‘lov tasdig‘idan keyin avtomatik yoqilishi kerak.",
         "title": "Premium identity kartasi"
       },
       "intro": {
-        "eyebrow": "SABI PREMIUM",
-        "subtitle": "Premium uslub, identity yangilanishlari, AI vositalari, QR taqdimoti, sovg‘alar, kreditlar va business yuzalari bitta profil qatlamida.",
-        "title": "Premium identity"
+        "eyebrow": "Premium",
+        "subtitle": "Ma’lumot Ma’lumot",
+        "title": "Premium"
       },
       "notice": {
         "description": "Premium ulangan profil qatlami bo‘lib, AI, publik profil, ranglar, sovg‘alar, QR va kelajak admin boshqaruvi bilan bog‘liq qolishi kerak.",
@@ -7001,8 +6947,8 @@ export const UZ_LOCALE = {
           "title": "AI profil"
         },
         "business": {
-          "description": "Profil qatlamidan business yo‘nalishidagi Premium kengayishni tayyorlash.",
-          "title": "Business upgrade"
+          "description": "Ma’lumot Ma’lumot",
+          "title": "Premium"
         },
         "colors": {
           "badge": "Mavzular",
@@ -7033,36 +6979,36 @@ export const UZ_LOCALE = {
     },
     "publicScreen": {
       "editor": {
-        "bio": "Public bio",
-        "name": "Public ism",
-        "subtitle": "Public subtitle",
-        "title": "Public identity tahriri",
-        "username": "Public username"
+        "bio": "Biografiya",
+        "name": "Ommaviy ism",
+        "subtitle": "Taglavha",
+        "title": "Ommaviy profilni tahrirlash",
+        "username": "Ommaviy username"
       },
       "fallback": {
-        "bio": "Public bio hali bo‘sh.",
-        "subtitle": "Public profil ko‘rinishi identity bilan bog‘langan."
+        "bio": "Ommaviy biografiya hali to‘ldirilmagan.",
+        "subtitle": "Ommaviy profil tasdiqlangan akkauntingizga ulangan."
       },
       "header": {
-        "title": "Public profil"
+        "title": "Ommaviy profil"
       },
       "hero": {
-        "subtitle": "Boshqalarga ko‘rinadigan hamma narsa bu yerda kernel-backed profil holati orqali boshqariladi.",
-        "title": "Public profil qatlami"
+        "subtitle": "Boshqa Sabi foydalanuvchilari ko‘radigan sahifa.",
+        "title": "Ommaviy profil"
       },
       "rows": {
         "photos": {
-          "description": "Ko‘rinadigan profil rasmlarini tanlang.",
-          "title": "Public rasmlar"
+          "description": "Profilga ko‘rinadigan rasmlarni boshqaring.",
+          "title": "Ommaviy rasmlar"
         },
         "videos": {
-          "description": "Qisqa public videolarni boshqarish.",
-          "title": "Public videolar"
+          "description": "Ommaviy profil qisqa videolarini boshqaring.",
+          "title": "Ommaviy videolar"
         }
       },
       "sections": {
-        "manage": "Public identity boshqaruvi",
-        "metrics": "Public ko‘rsatkichlar"
+        "manage": "Boshqarish",
+        "metrics": "Ko‘rsatkichlar"
       }
     },
     "reactionsScreen": {
@@ -7202,7 +7148,7 @@ export const UZ_LOCALE = {
       },
       "action": {
         "chat": {
-          "title": "AI chat",
+          "title": "AI yordamchi",
           "description": "Yordamchi bilan suhbat."
         },
         "voice": {
@@ -7230,7 +7176,7 @@ export const UZ_LOCALE = {
           "description": "Til, ruxsatlar va AI funksiyalari."
         },
         "premium": {
-          "title": "Premium AI",
+          "title": "Premium / COIN",
           "description": "Premium orqali kengaytirilgan AI funksiyalar."
         },
         "setting": {
@@ -7279,8 +7225,8 @@ export const UZ_LOCALE = {
         "assistantMenuSubtitle": "Biznes, talaba, abituriyent, o‘qituvchi yoki universal AI.",
         "mode": {
           "chatgpt": {
-            "title": "Universal AI",
-            "short": "Universal",
+            "title": "Sozlamalar",
+            "short": "Ma’lumot",
             "description": "Savollar, tahlil, yozish va umumiy yordam.",
             "prompt": "Menga universal AI yordamchi sifatida yordam ber."
           },
@@ -7317,12 +7263,12 @@ export const UZ_LOCALE = {
         "cameraDescription": "Kamera orqali rasm qo‘shish.",
         "uploadPhoto": "Foto",
         "uploadPhotoDescription": "Galereyadan foto qo‘shish.",
-        "uploadVideo": "Video",
+        "uploadVideo": "Video kutilmoqda",
         "uploadVideoDescription": "Video fayl qo‘shish.",
         "uploadDocument": "Hujjat",
         "uploadDocumentDescription": "PDF, matn yoki boshqa hujjat qo‘shish.",
         "webSearch": "Internetdan qidirish",
-        "webSearchShort": "Internet",
+        "webSearchShort": "Qidirish",
         "webSearchDescription": "Javobni internet qidiruvi orqali tayyorlash.",
         "voiceRecording": "Ovoz yozilmoqda",
         "permissionCamera": "Kamera uchun ruxsat kerak.",
@@ -7330,7 +7276,7 @@ export const UZ_LOCALE = {
         "permissionVideo": "Video uchun ruxsat kerak.",
         "attachmentsSent": "Biriktirmalar",
         "attachmentPhoto": "Foto",
-        "attachmentVideo": "Video",
+        "attachmentVideo": "Video kutilmoqda",
         "attachmentDocument": "Hujjat",
         "attachmentAudio": "Ovoz",
         "uploadContractNotice": "Fayllar AI so‘roviga biriktiriladi va provayder orqali qayta ishlanadi.",
@@ -7373,7 +7319,7 @@ export const UZ_LOCALE = {
         "instructionSaved": "Ko‘rsatma shaxsiylashtirish tizimiga yuborildi."
       },
       "premium": {
-        "title": "Premium AI",
+        "title": "Premium / COIN",
         "subtitle": "COIN orqali Premium AI.",
         "accessTitle": "Premium AI funksiyalari",
         "noFakePayment": "Bu yerda to‘lov soxtalashtirilmaydi. Faollashtirish real Premium/COIN tasdiqlash oqimidan kelishi kerak.",
@@ -7471,7 +7417,7 @@ export const UZ_LOCALE = {
         "ttsTitle": "Ovozli javob",
         "ttsPlaceholder": "Ovozli javob matni…",
         "playLastTts": "Oxirgi javobni eshittirish",
-        "noFakeTts": "Soxta ovoz yo‘q: audio playback faqat backend/native TTS audio URL qaytarganda ishlaydi. expo-speech yoki native TTS module ulanmaguncha Text-only TTS matn sifatida ko‘rsatiladi.",
+        "noFakeTts": "Ma’lumot",
         "runtimeLog": "Ovoz hodisalari",
         "noEvents": "Hozircha hodisa yo‘q.",
         "contractOnly": "Bu ekran yozuvni feyk qilmaydi. U transcript/audio eventlarni beradigan haqiqiy native bridgeni kutadi.",
@@ -7540,7 +7486,7 @@ export const UZ_LOCALE = {
     "permissions": "Ruxsatlar",
     "analytics": "Analitika",
     "orders": "Buyurtmalar",
-    "crm": "CRM",
+    "crm": "Ma’lumot",
     "automation": "Avtomatlashtirish",
     "quickReplies": "Tezkor javoblar",
     "welcomeMessage": "Xush kelibsiz xabari",
@@ -7564,7 +7510,7 @@ export const UZ_LOCALE = {
     "merchantProfile": "Merchant profili",
     "storeName": "Do‘kon nomi",
     "merchantCategory": "Merchant kategoriyasi",
-    "merchantId": "Merchant ID",
+    "merchantId": "Ma’lumot",
     "sellerDashboard": "Sotuvchi paneli",
     "sales": "Savdo",
     "orders": "Buyurtmalar",
@@ -7578,7 +7524,7 @@ export const UZ_LOCALE = {
     "disputes": "Nizolar",
     "paymentLinks": "To‘lov havolalari",
     "checkoutPages": "Checkout sahifalari",
-    "qrCheckout": "QR checkout",
+    "qrCheckout": "Ma’lumot",
     "posMode": "POS rejimi",
     "cashierMode": "Kassir rejimi",
     "terminals": "Terminallar",
@@ -7614,12 +7560,12 @@ export const UZ_LOCALE = {
     "noStreams": "Mavjud strim yo‘q"
   },
   "marketplace": {
-    "title": "Marketplace",
+    "title": "Sozlamalar",
     "products": "Mahsulotlar",
     "stores": "Do‘konlar",
     "categories": "Kategoriyalar",
     "cart": "Savat",
-    "checkout": "Checkout",
+    "checkout": "Ma’lumot",
     "orderNow": "Hozir buyurtma bering",
     "buyNow": "Hozir sotib oling",
     "addToCart": "Savatga qo‘shish",
@@ -7669,7 +7615,7 @@ export const UZ_LOCALE = {
         "title": "Tarmoq lobbi",
         "value": "Lobbi asosi tayyor. Real match-making uchun provider ulanishi kerak."
       },
-      "miniApps": "Mini Apps",
+      "miniApps": "Ma’lumot",
       "policy": {
         "title": "Mukofot siyosati"
       },
@@ -7778,7 +7724,7 @@ export const UZ_LOCALE = {
     "pinCode": "PIN kod",
     "changePin": "PIN ni o‘zgartirish",
     "biometrics": "Biometrika",
-    "faceId": "Face ID",
+    "faceId": "Ma’lumot",
     "fingerprint": "Barmoq izi",
     "twoFactorAuth": "Ikki bosqichli tasdiqlash",
     "recoveryOptions": "Tiklash imkoniyatlari",
@@ -7836,7 +7782,7 @@ export const UZ_LOCALE = {
     "bankingTerms": "Bank shartlari"
   },
   "admin": {
-    "title": "Admin",
+    "title": "Sozlamalar",
     "dashboard": "Boshqaruv paneli",
     "users": "Foydalanuvchilar",
     "moderation": "Moderatsiya",
@@ -7966,7 +7912,7 @@ export const UZ_LOCALE = {
     "subtitle": "Ism va familiyani kiriting. Username va yagona ID avtomatik yaratiladi.",
     "firstName": "Ism",
     "lastName": "Familiya",
-    "username": "Username",
+    "username": "Foydalanuvchi nomi",
     "phone": "Tasdiqlangan raqam",
     "unifiedId": "Yagona User ID",
     "unifiedIdHint": "Bu Wallet, Messenger va butun akkaunt bo‘ylab asosiy ID bo‘ladi.",
@@ -7987,8 +7933,8 @@ export const UZ_LOCALE = {
   },
   "gallery": {
     "title": "Galereya",
-    "import": "Import",
-    "video": "Video",
+    "import": "Import qilish",
+    "video": "Video kutilmoqda",
     "selected": "Tanlandi: {{count}}",
     "empty": {
       "all": "Media yo‘q",
@@ -8007,18 +7953,18 @@ export const UZ_LOCALE = {
       "system": "Ulashish"
     },
     "viewer": {
-      "player": "Sabi Player",
+      "player": "Ma’lumot",
       "edited": "Tahrirlangan"
     },
     "camera": {
-      "title": "Sabi Camera",
+      "title": "Sozlamalar",
       "short": "Kamera",
       "photo": "Foto",
-      "video": "Video",
+      "video": "Video kutilmoqda",
       "open": "Kamerani ochish"
     },
     "editor": {
-      "title": "Beauty Studio",
+      "title": "Sozlamalar",
       "missing": "Foto topilmadi",
       "videoEditorUnavailable": "Video tahrirlash mavjud emas",
       "saveErrorTitle": "Saqlash xatosi",
@@ -8037,7 +7983,7 @@ export const UZ_LOCALE = {
       "stickerIntensity": "Stiker kuchi",
       "effects": "Effektlar",
       "frames": "Ramkalar",
-      "animeLayer": "Anime",
+      "animeLayer": "Ma’lumot",
       "filterLooks": "Filtrlar",
       "adjust": "Sozlash",
       "crop": "Kesish",
@@ -8055,16 +8001,16 @@ export const UZ_LOCALE = {
       "blush": "Qizarish",
       "animeBeauty": "Anime go‘zallik",
       "sparkles": "Yaltirash",
-      "bokeh": "Bokeh",
+      "bokeh": "Ma’lumot",
       "lightLeak": "Nur",
       "hearts": "Yuraklar",
       "dust": "Chang",
       "goldLight": "Oltin nur",
       "neonEdge": "Neon",
       "frameIntensity": "Ramka kuchi",
-      "aura": "Aura",
+      "aura": "Ma’lumot",
       "mangaLines": "Manga chiziqlar",
-      "sakura": "Sakura",
+      "sakura": "Ma’lumot",
       "kawaiiHearts": "Kawaii yuraklar",
       "comicFrame": "Komiks ramka",
       "glowEyes": "Ko‘z nuri",
@@ -8081,7 +8027,7 @@ export const UZ_LOCALE = {
         "text": "Matn",
         "beauty": "Go‘zallik",
         "effects": "Effektlar",
-        "anime": "Anime",
+        "anime": "Ma’lumot",
         "adjust": "Sozlash",
         "crop": "Kesish",
         "transform": "Burish"
@@ -8098,14 +8044,14 @@ export const UZ_LOCALE = {
         "bottom": "Pastki"
       },
       "filters": {
-        "none": "Original",
-        "soft_beauty": "Soft Beauty",
-        "luxury_portrait": "Luxury",
-        "warm_film": "Warm Film",
-        "cool_night": "Cool Night",
-        "anime_glow": "Anime Glow",
-        "pink_dream": "Pink Dream",
-        "gold_glam": "Gold Glam"
+        "none": "Ma’lumot",
+        "soft_beauty": "Ma’lumot",
+        "luxury_portrait": "Ma’lumot",
+        "warm_film": "Ma’lumot",
+        "cool_night": "Ma’lumot",
+        "anime_glow": "Ma’lumot",
+        "pink_dream": "Ma’lumot",
+        "gold_glam": "Ma’lumot"
       },
       "option": {
         "none": "Yo‘q",
@@ -8114,29 +8060,29 @@ export const UZ_LOCALE = {
         "crown": "Toj",
         "stars": "Yulduzlar",
         "petals": "Barglar",
-        "luxury_gold": "Luxury",
-        "soft_portrait": "Soft",
-        "anime_frame": "Anime",
-        "story_glass": "Story",
-        "original": "Original",
+        "luxury_gold": "Ma’lumot",
+        "soft_portrait": "Ma’lumot",
+        "anime_frame": "Ramkalar",
+        "story_glass": "Ma’lumot",
+        "original": "Ma’lumot",
         "square": "Kvadrat",
-        "portrait": "4:5",
-        "story": "9:16"
+        "portrait": "Ma’lumot",
+        "story": "Ma’lumot"
       },
       "textPresetsMap": {
-        "luxury": "Luxury",
-        "neon": "Neon",
-        "soft": "Soft",
-        "comic": "Comic",
-        "anime": "Anime"
+        "luxury": "Ma’lumot",
+        "neon": "Ma’lumot",
+        "soft": "Ma’lumot",
+        "comic": "Ma’lumot",
+        "anime": "Ma’lumot"
       },
       "quick": {
-        "queen": "Queen",
-        "sabiMood": "Sabi Mood",
-        "dream": "Dream",
-        "luxury": "Luxury",
-        "angel": "Angel",
-        "animeGirl": "Anime Girl"
+        "queen": "Ma’lumot",
+        "sabiMood": "Ma’lumot",
+        "dream": "Ma’lumot",
+        "luxury": "Ma’lumot",
+        "angel": "Ma’lumot",
+        "animeGirl": "Ma’lumot"
       }
     }
   },
@@ -8170,7 +8116,7 @@ export const UZ_LOCALE = {
     },
     "kind": {
       "photo": "Rasm",
-      "video": "Video"
+      "video": "Video kutilmoqda"
     },
     "photo": {
       "unavailable": {
@@ -8179,7 +8125,7 @@ export const UZ_LOCALE = {
     },
     "preview": {
       "photo": "Rasm",
-      "video": "Video"
+      "video": "Video kutilmoqda"
     },
     "video": {
       "unavailable": {

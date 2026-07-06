@@ -1,6 +1,4 @@
-import { useMemo } from "react";
-
-import { useI18n, type TranslationLanguage, type TranslationParams } from ".";
+import type { TranslationLanguage, TranslationParams } from ".";
 
 const UZ: Record<string, string> = {
   "qr.mobile.brand.center": "SABI",
@@ -8,7 +6,7 @@ const UZ: Record<string, string> = {
   "qr.mobile.common.back": "Ortga",
   "qr.mobile.common.cancel": "Bekor qilish",
   "qr.mobile.common.confirm": "Tasdiqlash",
-  "qr.mobile.common.counterparty": "ID / buyurtma",
+  "qr.mobile.common.counterparty": "Qarshi tomon",
   "qr.mobile.common.currency": "Valyuta",
   "qr.mobile.common.execution": "Amal",
   "qr.mobile.common.expires": "Muddat: {{value}}",
@@ -16,7 +14,7 @@ const UZ: Record<string, string> = {
   "qr.mobile.common.generate": "QR yaratish",
   "qr.mobile.common.history": "Tarix",
   "qr.mobile.common.mode": "Rejim",
-  "qr.mobile.common.organization": "Tashkilot ID",
+  "qr.mobile.common.organization": "Tashkilot",
   "qr.mobile.common.processing": "Tekshirilmoqda",
   "qr.mobile.common.qrUnavailable": "QR tayyor emas",
   "qr.mobile.common.rail": "Yo‘nalish",
@@ -26,8 +24,8 @@ const UZ: Record<string, string> = {
   "qr.mobile.common.scanAgain": "Qayta skanerlash",
   "qr.mobile.common.share": "Ulashish",
   "qr.mobile.common.shareFailedTitle": "Ulashib bo‘lmadi",
-  "qr.mobile.common.shareFailedText": "QR tokenni ulashib bo‘lmadi.",
-  "qr.mobile.common.shortPayload": "Qisqa kod",
+  "qr.mobile.common.shareFailedText": "QRni ulashib bo‘lmadi.",
+  "qr.mobile.common.shortPayload": "QR ma’lumoti",
   "qr.mobile.common.surface": "Bo‘lim",
   "qr.mobile.common.trust": "Holat",
   "qr.mobile.common.type": "Tur",
@@ -37,30 +35,38 @@ const UZ: Record<string, string> = {
   "qr.mobile.common.userId": "ID",
   "qr.mobile.common.notReady": "Tayyor emas",
   "qr.mobile.identity.autoTitle": "Tasdiqlangan hisob",
-  "qr.mobile.identity.userIdValue": "ID: {{value}}",
-  "qr.mobile.identity.sabiIdValue": "Sabi ID: {{value}}",
+  "qr.mobile.identity.userIdValue": "Hisob tasdiqlangan",
+  "qr.mobile.identity.sabiIdValue": "Sabi hisobi tayyor",
   "qr.mobile.identity.namePending": "Profil ma’lumoti",
-  "qr.mobile.identity.autoFilled": "ID, ism, familiya va tasdiqlangan profil ma’lumotlari avtomatik olinadi.",
-  "qr.mobile.create.identityAutoFilled": "ID, ism, familiya va tasdiqlangan profil ma’lumotlari qo‘lda kiritilmaydi.",
-  "qr.mobile.create.noManualFields": "Bu QR uchun qo‘shimcha qo‘lda kiritiladigan maydon yo‘q.",
+  "qr.mobile.identity.autoFilled":
+    "Ism, familiya va tasdiqlangan profil ma’lumotlari avtomatik olinadi.",
+  "qr.mobile.create.identityAutoFilled":
+    "Ism, familiya va tasdiqlangan profil ma’lumotlari qo‘lda kiritilmaydi.",
+  "qr.mobile.create.noManualFields":
+    "Bu QR uchun qo‘shimcha qo‘lda kiritiladigan maydon yo‘q.",
   "qr.mobile.create.amountPlaceholder": "0.00",
   "qr.mobile.function.unknown.title": "QR",
   "qr.mobile.center.eyebrow": "QR",
   "qr.mobile.center.title": "Sabi QR",
-  "qr.mobile.center.subtitle": "QR endi bo‘limlar bo‘yicha ajratilgan: hamyon, savdo, aloqa, davomat va boshqa yo‘nalishlar.",
+  "qr.mobile.center.subtitle":
+    "QR endi bo‘limlar bo‘yicha ajratilgan: hamyon, savdo, aloqa, davomat va boshqa yo‘nalishlar.",
   "qr.mobile.center.searchPlaceholder": "QR turini qidirish",
   "qr.mobile.center.sectionTitle": "QR turlari",
-  "qr.mobile.center.userIdTitle": "Asosiy hisob ID",
-  "qr.mobile.center.userIdHelp": "QR faqat shu ID bilan yaratiladi.",
+  "qr.mobile.center.userIdTitle": "Tasdiqlangan hisob",
+  "qr.mobile.center.userIdHelp": "QR faqat tasdiqlangan hisob orqali yaratiladi.",
   "qr.mobile.center.loginRequired": "QR yaratish uchun hisobga kirish kerak.",
   "qr.mobile.center.emptyTitle": "QR topilmadi",
-  "qr.mobile.center.emptyText": "Qidiruv so‘zini o‘zgartiring yoki barcha bloklarni ko‘ring.",
+  "qr.mobile.center.emptyText":
+    "Qidiruv so‘zini o‘zgartiring yoki barcha bloklarni ko‘ring.",
   "qr.mobile.group.profile.title": "Profil va aloqa",
-  "qr.mobile.group.profile.subtitle": "Profil, Messenger va chat to‘lovlari uchun QR.",
+  "qr.mobile.group.profile.subtitle":
+    "Profil, Messenger va chat to‘lovlari uchun QR.",
   "qr.mobile.group.wallets.title": "Hamyonlar",
-  "qr.mobile.group.wallets.subtitle": "Sabi Wallet, SABI COIN, Crypto va virtual karta QR.",
+  "qr.mobile.group.wallets.subtitle":
+    "Sabi Wallet, SABI COIN, Crypto va virtual karta QR.",
   "qr.mobile.group.business.title": "Savdo va biznes",
-  "qr.mobile.group.business.subtitle": "Merchant, Business, Marketplace va Delivery uchun QR.",
+  "qr.mobile.group.business.subtitle":
+    "Merchant, Business, Marketplace va Delivery uchun QR.",
   "qr.mobile.group.mobility.title": "Taxi va Stream",
   "qr.mobile.group.mobility.subtitle": "Safar to‘lovi va stream donation QR.",
   "qr.mobile.group.attendance.title": "Maktab va ish davomat",
@@ -75,11 +81,15 @@ const UZ: Record<string, string> = {
   "qr.mobile.create.title": "QR yaratish",
   "qr.mobile.create.detailsTitle": "Ma’lumot",
   "qr.mobile.create.referencePlaceholder": "Buyurtma, safar, sinf yoki izoh",
-  "qr.mobile.create.counterpartyPlaceholder": "Faqat ID kiriting",
-  "qr.mobile.create.organizationPlaceholder": "Tashkilot ID",
+  "qr.mobile.create.counterpartyPlaceholder": "Qarshi tomon ma’lumotini kiriting",
+  "qr.mobile.create.organizationPlaceholder": "Tashkilot nomi yoki kodi",
   "qr.mobile.create.currencyPlaceholder": "Valyuta kodi",
-  "qr.mobile.create.currencyAutoFilled": "Valyuta Wallet sozlamasidan avtomatik olinadi: {{value}}.",
-  "qr.mobile.create.userIdLocked": "QR egasi asosiy ID orqali bog‘langan.",
+  "qr.mobile.create.currencyAutoFilled":
+    "Valyuta Wallet sozlamasidan avtomatik olinadi: {{value}}.",
+  "qr.mobile.create.userIdLocked": "QR egasi tasdiqlangan hisob orqali bog‘langan.",
+  "qr.mobile.create.shareOwner": "Egasi: {{value}}",
+  "qr.mobile.create.shareAmount": "Miqdor: {{value}}",
+  "qr.mobile.create.shareHint": "QRni Sabi ilovasida skanerlang.",
   "qr.mobile.scanner.eyebrow": "Skaner",
   "qr.mobile.scanner.title": "QR skanerlash",
   "qr.mobile.scanner.resolving": "QR tekshirilmoqda",
@@ -88,23 +98,62 @@ const UZ: Record<string, string> = {
   "qr.mobile.scanner.allowCamera": "Ruxsat berish",
   "qr.mobile.scanner.frontCamera": "Old kamera",
   "qr.mobile.scanner.backCamera": "Asosiy kamera",
+  "qr.mobile.scanner.torchOn": "Chiroqni yoqish",
+  "qr.mobile.scanner.torchOff": "Chiroqni o‘chirish",
   "qr.mobile.scanner.resolveFailed": "QR aniqlanmadi.",
   "qr.mobile.scanner.validationFailed": "QR tasdiqlanmadi.",
+  "qr.mobile.scan.detected.title": "QR aniqlandi",
+  "qr.mobile.scan.detected.description":
+    "QR turi toza aniqlangan. Xom uzun kod ko‘rsatilmaydi.",
+  "qr.mobile.scan.detailsTitle": "Skan natijasi",
+  "qr.mobile.scan.detectedData": "Aniqlangan ma’lumot",
+  "qr.mobile.scan.routePath": "Yo‘l",
+  "qr.mobile.scan.routeParam": "Qiymat",
+  "qr.mobile.scan.classifierVersion": "Klassifikator",
+  "qr.mobile.scan.sabiToken.title": "Sabi QR",
+  "qr.mobile.scan.sabiToken.description":
+    "Sabi QR server orqali tekshiriladi va keyin tasdiqlash ekraniga o‘tadi.",
+  "qr.mobile.scan.sabiLink.title": "Sabi app QR",
+  "qr.mobile.scan.sabiLink.description":
+    "Sabi ichki linki aniqlandi. Modul va ma’lumot toza ajratildi.",
+  "qr.mobile.scan.sabiPayload.title": "Sabi payload",
+  "qr.mobile.scan.sabiPayload.description":
+    "Sabi QR payload turi ajratildi. Server imzosi bo‘lmasa avtomatik ijro qilinmaydi.",
+  "qr.mobile.scan.unsignedPreview.title": "Tasdiqlanmagan Sabi preview",
+  "qr.mobile.scan.unsignedPreview.description":
+    "Bu Sabi preview, lekin server imzosi yo‘q. Fake ijro qilinmaydi.",
+  "qr.mobile.scan.unsignedPreview.reason":
+    "QR server imzosisiz bajarilmaydi.",
+  "qr.mobile.scan.phone.title": "Telefon QR",
+  "qr.mobile.scan.phone.description": "Telefon raqami toza aniqlandi.",
+  "qr.mobile.scan.phone.label": "Telefon raqami",
+  "qr.mobile.scan.externalUrl.title": "Tashqi URL",
+  "qr.mobile.scan.externalUrl.description":
+    "Xavfsiz URL aniqlandi. Havola xom payload sifatida ko‘rsatilmaydi.",
+  "qr.mobile.scan.externalUrl.label": "URL",
+  "qr.mobile.scan.unsupported.title": "Qo‘llab-quvvatlanmagan QR",
+  "qr.mobile.scan.unsupported.description":
+    "Bu QR Sabi tomonidan qo‘llab-quvvatlanadigan turga mos kelmadi.",
+  "qr.mobile.scan.blockedDangerous.description":
+    "Bu QR xavfsizlik sababli bloklandi.",
   "qr.mobile.confirm.eyebrow": "Tasdiqlash",
   "qr.mobile.confirm.title": "QR amalini tasdiqlash",
   "qr.mobile.confirm.loading": "QR tekshirilmoqda",
   "qr.mobile.confirm.blockedTitle": "QR bloklandi",
   "qr.mobile.confirm.unavailableTitle": "QR topilmadi",
-  "qr.mobile.confirm.unavailableText": "QR token yoki funksiya qaytmadi.",
+  "qr.mobile.confirm.unavailableText": "QR ma’lumoti yoki funksiya qaytmadi.",
   "qr.mobile.confirm.emptyPayload": "QR bo‘sh.",
   "qr.mobile.confirm.resolveFailed": "QR aniqlanmadi.",
   "qr.mobile.confirm.validateFailed": "QR tasdiqlanmadi.",
   "qr.mobile.confirm.executeFailed": "Amal bajarilmadi.",
   "qr.mobile.card.loadingTitle": "QR yaratilmoqda",
-  "qr.mobile.card.unavailableText": "QR xavfsiz kod yaratilgandan keyin ko‘rsatiladi.",
-  "qr.mobile.card.autoCreatingText": "ID va tasdiqlangan profil ma’lumotlari asosida avtomatik yaratilmoqda.",
+  "qr.mobile.card.unavailableText":
+    "QR xavfsiz kod yaratilgandan keyin ko‘rsatiladi.",
+  "qr.mobile.card.autoCreatingText":
+    "ID va tasdiqlangan profil ma’lumotlari asosida avtomatik yaratilmoqda.",
   "qr.mobile.card.amountWaitingTitle": "Miqdor kerak",
-  "qr.mobile.card.amountWaitingText": "Bu QR uchun faqat miqdorni kiriting. ID va profil ma’lumotlari avtomatik olinadi.",
+  "qr.mobile.card.amountWaitingText":
+    "Bu QR uchun faqat miqdorni kiriting. Hisob va profil ma’lumotlari avtomatik olinadi.",
   "qr.mobile.card.notSigned": "tasdiqlanmagan",
   "qr.mobile.history.eyebrow": "Tarix",
   "qr.mobile.history.title": "QR tarixi",
@@ -119,11 +168,29 @@ const UZ: Record<string, string> = {
   "qr.mobile.result.title": "QR natijasi",
   "qr.mobile.result.detailsTitle": "Natija ma’lumotlari",
   "qr.mobile.result.status": "Holat",
-  "qr.mobile.result.transactionId": "Tranzaksiya ID",
-  "qr.mobile.result.attendanceRecordId": "Davomat yozuvi ID",
-  "qr.mobile.result.reviewId": "Tekshiruv ID",
-  "qr.mobile.result.noReference": "Bu javobda tranzaksiya yoki yozuv ID qaytmadi.",
+  "qr.mobile.result.transactionId": "Tranzaksiya",
+  "qr.mobile.result.attendanceRecordId": "Davomat yozuvi",
+  "qr.mobile.result.reviewId": "Tekshiruv",
+  "qr.mobile.result.noReference":
+    "Bu javobda tranzaksiya yoki yozuv ma’lumoti qaytmadi.",
   "qr.mobile.result.openCenter": "QR Center",
+  "qr.mobile.result.target": "Qabul qiluvchi",
+  "qr.mobile.result.username": "Username",
+  "qr.mobile.result.paymentReference": "To‘lov raqami",
+  "qr.mobile.result.attendanceRecord": "Davomat yozuvi",
+  "qr.mobile.result.reviewReference": "Tekshiruv raqami",
+  "qr.mobile.result.cleanNoExtraDetails": "Amal bajarildi. Texnik QR kodi ko‘rsatilmaydi.",
+  "qr.mobile.result.savedInHistory": "Tarixda saqlandi",
+  "qr.mobile.result.action.paymentSuccess.title": "To‘lov bajarildi",
+  "qr.mobile.result.action.paymentSuccess.description": "QR to‘lov real tizim orqali bajarildi. Natijada faqat kerakli ma’lumotlar ko‘rsatiladi.",
+  "qr.mobile.result.action.coinSuccess.title": "COIN amali bajarildi",
+  "qr.mobile.result.action.coinSuccess.description": "COIN QR amali real COIN tizimi orqali bajarildi.",
+  "qr.mobile.result.action.attendanceSuccess.title": "Davomat qayd qilindi",
+  "qr.mobile.result.action.attendanceSuccess.description": "Kirish/chiqish real davomat tizimida qayd qilindi.",
+  "qr.mobile.result.action.cryptoOpened.title": "Crypto wallet ochildi",
+  "qr.mobile.result.action.cryptoOpened.description": "Crypto QR qabul qilish tizimiga yo‘naltirildi.",
+  "qr.mobile.result.action.cardSuccess.title": "Virtual karta amali bajarildi",
+  "qr.mobile.result.action.cardSuccess.description": "Virtual karta QR amali provider nazorati orqali bajarildi.",
   "qr.mobile.action.notTrusted.title": "QR tasdiqlanmagan",
   "qr.mobile.action.notTrusted.description": "Avval server tekshiruvi kerak.",
   "qr.mobile.action.notTrusted.primary": "Bloklangan",
@@ -131,72 +198,93 @@ const UZ: Record<string, string> = {
   "qr.mobile.action.expired.description": "Yangi QR yaratish kerak.",
   "qr.mobile.action.expired.primary": "Muddati tugagan",
   "qr.mobile.action.identity.title": "Profil QR",
-  "qr.mobile.action.identity.description": "Bu QR faqat profil yoki chatni ochadi.",
+  "qr.mobile.action.identity.description":
+    "Bu QR faqat profil yoki chatni ochadi.",
   "qr.mobile.action.identity.primary": "Ochish",
   "qr.mobile.action.crypto.title": "Crypto qabul qilish",
-  "qr.mobile.action.crypto.description": "Bu QR faqat qabul qilish manzilini ko‘rsatadi.",
+  "qr.mobile.action.crypto.description":
+    "Bu QR faqat qabul qilish manzilini ko‘rsatadi.",
   "qr.mobile.action.crypto.primary": "Ko‘rish",
   "qr.mobile.action.attendance.title": "Davomat",
-  "qr.mobile.action.attendance.description": "Yozuv server tekshiruvidan keyin saqlanadi.",
+  "qr.mobile.action.attendance.description":
+    "Yozuv server tekshiruvidan keyin saqlanadi.",
   "qr.mobile.action.attendance.primary": "Tasdiqlash",
   "qr.mobile.action.card.title": "Virtual karta",
-  "qr.mobile.action.card.description": "Karta amali faqat bank/payment xizmat orqali bajariladi.",
+  "qr.mobile.action.card.description":
+    "Karta amali faqat bank/payment xizmat orqali bajariladi.",
   "qr.mobile.action.card.primary": "So‘rov yuborish",
   "qr.mobile.action.payment.title": "To‘lov",
-  "qr.mobile.action.payment.description": "To‘lov faqat backend va xizmat tekshiruvi orqali bajariladi.",
+  "qr.mobile.action.payment.description":
+    "To‘lov faqat server va xizmat tekshiruvi orqali bajariladi.",
   "qr.mobile.action.payment.primary": "Tasdiqlash",
   "qr.mobile.action.internalSetup.title": "Ulanish kerak",
-  "qr.mobile.action.internalSetup.description": "Bu amal ichki sozlashni talab qiladi.",
+  "qr.mobile.action.internalSetup.description":
+    "Bu amal ichki sozlashni talab qiladi.",
   "qr.mobile.action.internalSetup.primary": "Tayyor emas",
   "qr.mobile.action.validation.title": "Tekshiruv kerak",
-  "qr.mobile.action.validation.description": "Backend validation talab qilinadi.",
+  "qr.mobile.action.validation.description":
+    "Backend validation talab qilinadi.",
   "qr.mobile.action.validation.primary": "Tekshirish",
   "qr.mobile.result.success.title": "Bajarildi",
-  "qr.mobile.result.success.description": "QR amali server tomonidan qabul qilindi.",
+  "qr.mobile.result.success.description":
+    "QR amali server tomonidan qabul qilindi.",
   "qr.mobile.result.pendingReview.title": "Tekshiruvda",
-  "qr.mobile.result.pendingReview.description": "Amal ichki tekshiruv kutmoqda.",
+  "qr.mobile.result.pendingReview.description":
+    "Amal ichki tekshiruv kutmoqda.",
   "qr.mobile.result.providerNotConfigured.title": "Ulanish yo‘q",
-  "qr.mobile.result.providerNotConfigured.description": "Kerakli provider serverda ulanmagan.",
+  "qr.mobile.result.providerNotConfigured.description":
+    "Kerakli provider serverda ulanmagan.",
   "qr.mobile.result.executorNotConfigured.title": "Ijrochi ulanmagan",
-  "qr.mobile.result.executorNotConfigured.description": "Bu QR turi uchun backend executor hali ulanmagan.",
+  "qr.mobile.result.executorNotConfigured.description":
+    "Bu QR turi uchun server ijrosi hali ulanmagan.",
   "qr.mobile.result.restricted.title": "Cheklangan",
-  "qr.mobile.result.restricted.description": "Amal xavfsizlik yoki siyosat sababli cheklangan.",
+  "qr.mobile.result.restricted.description":
+    "Amal xavfsizlik yoki siyosat sababli cheklangan.",
   "qr.mobile.result.failed.title": "Bajarilmadi",
-  "qr.mobile.result.failed.description": "Server amalni rad etdi yoki xatolik qaytdi.",
-  "qr.mobile.error.authRequired": "QR yaratish uchun hisob ID kerak.",
+  "qr.mobile.result.failed.description":
+    "Server amalni rad etdi yoki xatolik qaytdi.",
+  "qr.mobile.error.authRequired": "QR yaratish uchun hisobga kirish kerak.",
   "qr.mobile.error.createFailed": "QR yaratilmadi.",
   "qr.mobile.error.signingNotConfigured": "Backend QR kaliti sozlanmagan.",
   "qr.mobile.error.invalidQr": "QR noto‘g‘ri.",
   "qr.mobile.error.expiredOrMissing": "QR topilmadi yoki muddati tugagan.",
   "qr.mobile.error.amountRequired": "Miqdor kerak.",
+  "qr.mobile.error.amountInvalid": "Miqdor 0 dan katta va to‘g‘ri formatda bo‘lishi kerak.",
   "qr.mobile.error.currencyRequired": "Valyuta kerak.",
-  "qr.mobile.error.referenceRequired": "Izoh yoki buyurtma ID kerak.",
-  "qr.mobile.error.counterpartyRequired": "Qarshi tomon ID kerak.",
-  "qr.mobile.error.identityMismatch": "QR identity ma’lumoti tasdiqlangan hisobga mos kelmadi.",
+  "qr.mobile.error.referenceRequired": "Izoh yoki buyurtma ma’lumoti kerak.",
+  "qr.mobile.error.counterpartyRequired": "Qarshi tomon ma’lumoti kerak.",
+  "qr.mobile.error.identityMismatch":
+    "QR identity ma’lumoti tasdiqlangan hisobga mos kelmadi.",
   "qr.mobile.error.strictPayloadFailed": "QR xavfsizlik tekshiruvidan o‘tmadi.",
   "qr.mobile.error.generic": "Amal bajarilmadi.",
   "qr.mobile.crypto.receiveEyebrow": "Crypto QR",
   "qr.mobile.crypto.receiveTitle": "{{value}} qabul QR",
-  "qr.mobile.crypto.receiveSubtitle": "QR faqat asosiy ID va tanlangan crypto aktiv ma’lumotlari bilan yaratiladi.",
+  "qr.mobile.crypto.receiveSubtitle":
+    "QR tasdiqlangan hisob va tanlangan crypto aktiv ma’lumotlari bilan yaratiladi.",
   "qr.mobile.crypto.asset": "Aktiv",
   "qr.mobile.crypto.network": "Tarmoq",
   "qr.mobile.crypto.assetNotSelected": "Aktiv tanlanmagan",
   "qr.mobile.crypto.networkNotSelected": "Tarmoq tanlanmagan",
   "qr.mobile.crypto.assetRequiredTitle": "Aktiv kerak",
-  "qr.mobile.crypto.assetRequiredText": "Crypto aktivni tanlang. ID qo‘lda kiritilmaydi.",
+  "qr.mobile.crypto.assetRequiredText":
+    "Crypto aktivni tanlang. Hisob ma’lumoti qo‘lda kiritilmaydi.",
   "qr.mobile.crypto.errorAssetRequired": "Crypto aktiv tanlanmagan.",
   "qr.mobile.crypto.providerTitle": "Crypto servis holati",
-  "qr.mobile.crypto.providerText": "Blockchain address va memo faqat crypto-provider serverda ulangandan keyin beriladi.",
+  "qr.mobile.crypto.providerText":
+    "Blockchain address va memo faqat crypto-provider serverda ulangandan keyin beriladi.",
   "qr.mobile.crypto.scanRedirectTitle": "QR skaner ochilmoqda",
-  "qr.mobile.crypto.scanRedirectText": "Crypto QR umumiy Sabi QR scanner orqali tekshiriladi.",
+  "qr.mobile.crypto.scanRedirectText":
+    "Crypto QR umumiy Sabi QR scanner orqali tekshiriladi.",
   "qr.mobile.function.profile_identity.title": "Profil QR",
   "qr.mobile.function.profile_identity.subtitle": "Faqat profil ochadi.",
   "qr.mobile.function.wallet_receive.title": "Sabi Wallet qabul",
   "qr.mobile.function.wallet_receive.subtitle": "Shaxsiy hamyon uchun.",
   "qr.mobile.function.wallet_user_payment.title": "Sabi Wallet to‘lov",
-  "qr.mobile.function.wallet_user_payment.subtitle": "Kassada skanerlash uchun.",
+  "qr.mobile.function.wallet_user_payment.subtitle":
+    "Kassada skanerlash uchun.",
   "qr.mobile.function.merchant_static_entry.title": "Savdo QR",
-  "qr.mobile.function.merchant_static_entry.subtitle": "Doimiy savdo nuqtasi QR.",
+  "qr.mobile.function.merchant_static_entry.subtitle":
+    "Doimiy savdo nuqtasi QR.",
   "qr.mobile.function.merchant_dynamic_order.title": "Buyurtma QR",
   "qr.mobile.function.merchant_dynamic_order.subtitle": "Aniq buyurtma uchun.",
   "qr.mobile.function.business_invoice.title": "Biznes hisob QR",
@@ -210,27 +298,35 @@ const UZ: Record<string, string> = {
   "qr.mobile.function.messenger_profile.title": "Messenger QR",
   "qr.mobile.function.messenger_profile.subtitle": "Chat yoki profil ochish.",
   "qr.mobile.function.messenger_payment.title": "Messenger to‘lov",
-  "qr.mobile.function.messenger_payment.subtitle": "Chat ichidagi to‘lov uchun.",
+  "qr.mobile.function.messenger_payment.subtitle":
+    "Chat ichidagi to‘lov uchun.",
   "qr.mobile.function.marketplace_order.title": "Marketplace QR",
-  "qr.mobile.function.marketplace_order.subtitle": "Marketplace buyurtmasi uchun.",
+  "qr.mobile.function.marketplace_order.subtitle":
+    "Marketplace buyurtmasi uchun.",
   "qr.mobile.function.stream_donation.title": "Stream donation",
-  "qr.mobile.function.stream_donation.subtitle": "Stream qo‘llab-quvvatlash QR.",
+  "qr.mobile.function.stream_donation.subtitle":
+    "Stream qo‘llab-quvvatlash QR.",
   "qr.mobile.function.taxi_trip_payment.title": "Taxi to‘lov",
   "qr.mobile.function.taxi_trip_payment.subtitle": "Safar to‘lovi uchun.",
   "qr.mobile.function.delivery_order.title": "Delivery QR",
-  "qr.mobile.function.delivery_order.subtitle": "Yetkazib berish buyurtmasi uchun.",
+  "qr.mobile.function.delivery_order.subtitle":
+    "Yetkazib berish buyurtmasi uchun.",
   "qr.mobile.function.school_check_in.title": "Maktab kirish",
-  "qr.mobile.function.school_check_in.subtitle": "O‘quvchi kirishini belgilash.",
+  "qr.mobile.function.school_check_in.subtitle":
+    "O‘quvchi kirishini belgilash.",
   "qr.mobile.function.school_check_out.title": "Maktab chiqish",
-  "qr.mobile.function.school_check_out.subtitle": "O‘quvchi chiqishini belgilash.",
+  "qr.mobile.function.school_check_out.subtitle":
+    "O‘quvchi chiqishini belgilash.",
   "qr.mobile.function.work_check_in.title": "Ish kirish",
   "qr.mobile.function.work_check_in.subtitle": "Xodim kirishini belgilash.",
   "qr.mobile.function.work_check_out.title": "Ish chiqish",
   "qr.mobile.function.work_check_out.subtitle": "Xodim chiqishini belgilash.",
   "qr.mobile.function.virtual_card_issuance.title": "Virtual karta chiqarish",
-  "qr.mobile.function.virtual_card_issuance.subtitle": "Provider orqali karta so‘rovi.",
+  "qr.mobile.function.virtual_card_issuance.subtitle":
+    "Provider orqali karta so‘rovi.",
   "qr.mobile.function.virtual_card_payment.title": "Virtual karta to‘lov",
-  "qr.mobile.function.virtual_card_payment.subtitle": "Virtual karta provider to‘lovi.",
+  "qr.mobile.function.virtual_card_payment.subtitle":
+    "Virtual karta provider to‘lovi.",
   "qr.mobile.function.provider_api_admin.title": "Provider sozlash",
   "qr.mobile.function.provider_api_admin.subtitle": "Admin provider ulanishi.",
   "qr.mobile.value.unknown": "Noma’lum",
@@ -289,7 +385,7 @@ const UZ: Record<string, string> = {
   "qr.mobile.value.pending_review": "Tekshiruvda",
   "qr.mobile.value.executor_not_configured": "Ijrochi ulanmagan",
   "qr.mobile.value.restricted": "Cheklangan",
-  "qr.mobile.result.tokenId": "Token ID",
+  "qr.mobile.result.tokenId": "Kvitansiya",
   "qr.mobile.result.integrationTitle": "Modul bog‘lanishi",
   "qr.mobile.result.integrationModule": "Modul",
   "qr.mobile.result.integrationStatusTarget": "Status yo‘li",
@@ -305,7 +401,8 @@ const UZ: Record<string, string> = {
   "qr.mobile.result.ledgerReference": "Ledger havolasi",
   "qr.mobile.result.providerReference": "Provider havolasi",
   "qr.mobile.result.cardDataPolicy": "Karta ma’lumoti",
-  "qr.mobile.result.cardDataPolicyValue": "Faqat provider token saqlanadi. PAN/CVV Sabi’da saqlanmaydi.",
+  "qr.mobile.result.cardDataPolicyValue":
+    "Faqat to‘lov provayderining xavfsiz yozuvi saqlanadi. PAN/CVV Sabi’da saqlanmaydi.",
   "qr.mobile.integration.module.profile": "Profil",
   "qr.mobile.integration.module.wallet": "Sabi Wallet",
   "qr.mobile.integration.module.coinWallet": "SABI COIN",
@@ -335,7 +432,8 @@ const UZ: Record<string, string> = {
   "qr.mobile.integration.status.school": "Maktab davomat statusi",
   "qr.mobile.integration.status.work": "Ish davomat statusi",
   "qr.mobile.integration.status.virtualCard": "Virtual card provider statusi",
-  "qr.mobile.integration.status.adminProvider": "Admin provider registry statusi",
+  "qr.mobile.integration.status.adminProvider":
+    "Admin provider registry statusi",
   "qr.mobile.integration.history.identity": "Profil faolligi tarixi",
   "qr.mobile.integration.history.wallet": "Sabi Wallet transaction tarixi",
   "qr.mobile.integration.history.coinWallet": "Coin Wallet transaction tarixi",
@@ -352,13 +450,20 @@ const UZ: Record<string, string> = {
   "qr.mobile.integration.history.virtualCard": "Virtual karta operatsiyalari",
   "qr.mobile.integration.history.adminProvider": "Provider admin tarixi",
   "qr.mobile.integration.admin.none": "Qo‘shimcha admin signal kerak emas",
-  "qr.mobile.integration.admin.paymentCompliance": "To‘lov compliance tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.merchantBusiness": "Merchant/Business admin tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.coinWallet": "Coin Wallet risk tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.cryptoAml": "Crypto AML tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.attendance": "Davomat yaxlitligi tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.virtualCard": "Virtual karta provider tekshiruvi kerak bo‘lishi mumkin",
-  "qr.mobile.integration.admin.providerConfiguration": "Provider sozlamalari admin tekshiruvi kerak",
+  "qr.mobile.integration.admin.paymentCompliance":
+    "To‘lov compliance tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.merchantBusiness":
+    "Merchant/Business admin tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.coinWallet":
+    "Coin Wallet risk tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.cryptoAml":
+    "Crypto AML tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.attendance":
+    "Davomat yaxlitligi tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.virtualCard":
+    "Virtual karta provider tekshiruvi kerak bo‘lishi mumkin",
+  "qr.mobile.integration.admin.providerConfiguration":
+    "Provider sozlamalari admin tekshiruvi kerak",
 };
 
 const RU: Record<string, string> = {
@@ -366,7 +471,7 @@ const RU: Record<string, string> = {
   "qr.mobile.common.back": "Назад",
   "qr.mobile.common.cancel": "Отмена",
   "qr.mobile.common.confirm": "Подтвердить",
-  "qr.mobile.common.counterparty": "ID / заказ",
+  "qr.mobile.common.counterparty": "Получатель / заказ",
   "qr.mobile.common.currency": "Валюта",
   "qr.mobile.common.execution": "Действие",
   "qr.mobile.common.expires": "Срок: {{value}}",
@@ -374,7 +479,7 @@ const RU: Record<string, string> = {
   "qr.mobile.common.generate": "Создать QR",
   "qr.mobile.common.history": "История",
   "qr.mobile.common.mode": "Режим",
-  "qr.mobile.common.organization": "ID организации",
+  "qr.mobile.common.organization": "Организация",
   "qr.mobile.common.processing": "Проверяется",
   "qr.mobile.common.qrUnavailable": "QR не готов",
   "qr.mobile.common.rail": "Направление",
@@ -384,8 +489,8 @@ const RU: Record<string, string> = {
   "qr.mobile.common.scanAgain": "Сканировать снова",
   "qr.mobile.common.share": "Поделиться",
   "qr.mobile.common.shareFailedTitle": "Не удалось поделиться",
-  "qr.mobile.common.shareFailedText": "Не удалось поделиться QR token.",
-  "qr.mobile.common.shortPayload": "Короткий код",
+  "qr.mobile.common.shareFailedText": "Не удалось поделиться QR.",
+  "qr.mobile.common.shortPayload": "Данные QR",
   "qr.mobile.common.surface": "Раздел",
   "qr.mobile.common.trust": "Статус",
   "qr.mobile.common.type": "Тип",
@@ -395,34 +500,43 @@ const RU: Record<string, string> = {
   "qr.mobile.common.userId": "ID",
   "qr.mobile.common.notReady": "Не готово",
   "qr.mobile.identity.autoTitle": "Подтверждённый аккаунт",
-  "qr.mobile.identity.userIdValue": "ID: {{value}}",
-  "qr.mobile.identity.sabiIdValue": "Sabi ID: {{value}}",
+  "qr.mobile.identity.userIdValue": "Аккаунт подтверждён",
+  "qr.mobile.identity.sabiIdValue": "Sabi аккаунт готов",
   "qr.mobile.identity.namePending": "Данные профиля",
-  "qr.mobile.identity.autoFilled": "ID, имя, фамилия и подтверждённые данные профиля берутся автоматически.",
-  "qr.mobile.create.identityAutoFilled": "ID, имя, фамилия и подтверждённые данные профиля не вводятся вручную.",
-  "qr.mobile.create.noManualFields": "Для этого QR нет дополнительных ручных полей.",
+  "qr.mobile.identity.autoFilled":
+    "Имя, фамилия и подтверждённые данные профиля берутся автоматически.",
+  "qr.mobile.create.identityAutoFilled":
+    "Имя, фамилия и подтверждённые данные профиля не вводятся вручную.",
+  "qr.mobile.create.noManualFields":
+    "Для этого QR нет дополнительных ручных полей.",
   "qr.mobile.create.amountPlaceholder": "0.00",
   "qr.mobile.function.unknown.title": "QR",
   "qr.mobile.center.eyebrow": "QR",
   "qr.mobile.center.title": "Sabi QR",
-  "qr.mobile.center.subtitle": "QR разделён по блокам: кошельки, торговля, связь, посещаемость и другие направления.",
+  "qr.mobile.center.subtitle":
+    "QR разделён по блокам: кошельки, торговля, связь, посещаемость и другие направления.",
   "qr.mobile.center.searchPlaceholder": "Найти тип QR",
   "qr.mobile.center.sectionTitle": "Типы QR",
-  "qr.mobile.center.userIdTitle": "Главный ID аккаунта",
-  "qr.mobile.center.userIdHelp": "QR создаётся только через этот ID.",
+  "qr.mobile.center.userIdTitle": "Подтверждённый аккаунт",
+  "qr.mobile.center.userIdHelp": "QR создаётся только через подтверждённый аккаунт.",
   "qr.mobile.center.loginRequired": "Для создания QR нужен вход в аккаунт.",
   "qr.mobile.center.emptyTitle": "QR не найден",
   "qr.mobile.center.emptyText": "Измените поиск или откройте все блоки.",
   "qr.mobile.group.profile.title": "Профиль и связь",
-  "qr.mobile.group.profile.subtitle": "QR для профиля, Messenger и платежей в чате.",
+  "qr.mobile.group.profile.subtitle":
+    "QR для профиля, Messenger и платежей в чате.",
   "qr.mobile.group.wallets.title": "Кошельки",
-  "qr.mobile.group.wallets.subtitle": "QR для Sabi Wallet, SABI COIN, Crypto и виртуальной карты.",
+  "qr.mobile.group.wallets.subtitle":
+    "QR для Sabi Wallet, SABI COIN, Crypto и виртуальной карты.",
   "qr.mobile.group.business.title": "Торговля и бизнес",
-  "qr.mobile.group.business.subtitle": "QR для Merchant, Business, Marketplace и Delivery.",
+  "qr.mobile.group.business.subtitle":
+    "QR для Merchant, Business, Marketplace и Delivery.",
   "qr.mobile.group.mobility.title": "Taxi и Stream",
-  "qr.mobile.group.mobility.subtitle": "QR для оплаты поездки и stream donation.",
+  "qr.mobile.group.mobility.subtitle":
+    "QR для оплаты поездки и stream donation.",
   "qr.mobile.group.attendance.title": "Школа и рабочая отметка",
-  "qr.mobile.group.attendance.subtitle": "QR входа и выхода для школы и работы.",
+  "qr.mobile.group.attendance.subtitle":
+    "QR входа и выхода для школы и работы.",
   "qr.mobile.filter.all": "Все",
   "qr.mobile.filter.wallet": "Кошелёк",
   "qr.mobile.filter.merchant": "Торговля",
@@ -433,11 +547,15 @@ const RU: Record<string, string> = {
   "qr.mobile.create.title": "Создать QR",
   "qr.mobile.create.detailsTitle": "Данные",
   "qr.mobile.create.referencePlaceholder": "Заказ, поездка, класс или заметка",
-  "qr.mobile.create.counterpartyPlaceholder": "Введите только ID",
-  "qr.mobile.create.organizationPlaceholder": "ID организации",
+  "qr.mobile.create.counterpartyPlaceholder": "Введите данные получателя или заказа",
+  "qr.mobile.create.organizationPlaceholder": "Название или код организации",
   "qr.mobile.create.currencyPlaceholder": "Код валюты",
-  "qr.mobile.create.currencyAutoFilled": "Валюта берётся автоматически из настроек Wallet: {{value}}.",
-  "qr.mobile.create.userIdLocked": "Владелец QR привязан к главному ID.",
+  "qr.mobile.create.currencyAutoFilled":
+    "Валюта берётся автоматически из настроек Wallet: {{value}}.",
+  "qr.mobile.create.userIdLocked": "QR привязан к подтверждённому аккаунту.",
+  "qr.mobile.create.shareOwner": "Владелец: {{value}}",
+  "qr.mobile.create.shareAmount": "Сумма: {{value}}",
+  "qr.mobile.create.shareHint": "Отсканируйте QR в приложении Sabi.",
   "qr.mobile.scanner.eyebrow": "Сканер",
   "qr.mobile.scanner.title": "Сканировать QR",
   "qr.mobile.scanner.resolving": "QR проверяется",
@@ -446,23 +564,62 @@ const RU: Record<string, string> = {
   "qr.mobile.scanner.allowCamera": "Разрешить",
   "qr.mobile.scanner.frontCamera": "Передняя камера",
   "qr.mobile.scanner.backCamera": "Основная камера",
+  "qr.mobile.scanner.torchOn": "Включить фонарик",
+  "qr.mobile.scanner.torchOff": "Выключить фонарик",
   "qr.mobile.scanner.resolveFailed": "QR не распознан.",
   "qr.mobile.scanner.validationFailed": "QR не прошёл проверку.",
+  "qr.mobile.scan.detected.title": "QR определён",
+  "qr.mobile.scan.detected.description":
+    "Тип QR определён чисто. Длинный сырой код не показывается.",
+  "qr.mobile.scan.detailsTitle": "Результат сканирования",
+  "qr.mobile.scan.detectedData": "Определённые данные",
+  "qr.mobile.scan.routePath": "Путь",
+  "qr.mobile.scan.routeParam": "Значение",
+  "qr.mobile.scan.classifierVersion": "Классификатор",
+  "qr.mobile.scan.sabiToken.title": "Sabi QR",
+  "qr.mobile.scan.sabiToken.description":
+    "Sabi QR проверяется через сервер, затем открывается экран подтверждения.",
+  "qr.mobile.scan.sabiLink.title": "Sabi app QR",
+  "qr.mobile.scan.sabiLink.description":
+    "Определена внутренняя Sabi-ссылка. Модуль и данные выделены чисто.",
+  "qr.mobile.scan.sabiPayload.title": "Sabi payload",
+  "qr.mobile.scan.sabiPayload.description":
+    "Тип Sabi QR payload определён. Без server signature автоматическое выполнение запрещено.",
+  "qr.mobile.scan.unsignedPreview.title": "Неподписанный Sabi preview",
+  "qr.mobile.scan.unsignedPreview.description":
+    "Это Sabi preview, но без server signature. Fake-выполнение не используется.",
+  "qr.mobile.scan.unsignedPreview.reason":
+    "QR без server signature не выполняется.",
+  "qr.mobile.scan.phone.title": "Телефонный QR",
+  "qr.mobile.scan.phone.description": "Телефонный номер определён чисто.",
+  "qr.mobile.scan.phone.label": "Номер телефона",
+  "qr.mobile.scan.externalUrl.title": "Внешний URL",
+  "qr.mobile.scan.externalUrl.description":
+    "Безопасный URL определён. Сырой payload не показывается как мусор.",
+  "qr.mobile.scan.externalUrl.label": "URL",
+  "qr.mobile.scan.unsupported.title": "Неподдерживаемый QR",
+  "qr.mobile.scan.unsupported.description":
+    "Этот QR не подходит под поддержанные типы Sabi.",
+  "qr.mobile.scan.blockedDangerous.description":
+    "Этот QR заблокирован по причине безопасности.",
   "qr.mobile.confirm.eyebrow": "Подтверждение",
   "qr.mobile.confirm.title": "Подтвердить QR",
   "qr.mobile.confirm.loading": "QR проверяется",
   "qr.mobile.confirm.blockedTitle": "QR заблокирован",
   "qr.mobile.confirm.unavailableTitle": "QR не найден",
-  "qr.mobile.confirm.unavailableText": "QR token или функция не вернулись.",
+  "qr.mobile.confirm.unavailableText": "Данные QR или функция не вернулись.",
   "qr.mobile.confirm.emptyPayload": "QR пустой.",
   "qr.mobile.confirm.resolveFailed": "QR не распознан.",
   "qr.mobile.confirm.validateFailed": "QR не прошёл проверку.",
   "qr.mobile.confirm.executeFailed": "Действие не выполнено.",
   "qr.mobile.card.loadingTitle": "QR создаётся",
-  "qr.mobile.card.unavailableText": "QR появится после создания защищённого кода.",
-  "qr.mobile.card.autoCreatingText": "Создаётся автоматически на основе ID и подтверждённых данных профиля.",
+  "qr.mobile.card.unavailableText":
+    "QR появится после создания защищённого кода.",
+  "qr.mobile.card.autoCreatingText":
+    "Создаётся автоматически на основе подтверждённого аккаунта и данных профиля.",
   "qr.mobile.card.amountWaitingTitle": "Нужна сумма",
-  "qr.mobile.card.amountWaitingText": "Для этого QR введите только сумму. ID и данные профиля берутся автоматически.",
+  "qr.mobile.card.amountWaitingText":
+    "Для этого QR введите только сумму. Аккаунт и данные профиля берутся автоматически.",
   "qr.mobile.card.notSigned": "не подтверждён",
   "qr.mobile.history.eyebrow": "История",
   "qr.mobile.history.title": "История QR",
@@ -477,11 +634,28 @@ const RU: Record<string, string> = {
   "qr.mobile.result.title": "Результат QR",
   "qr.mobile.result.detailsTitle": "Данные результата",
   "qr.mobile.result.status": "Статус",
-  "qr.mobile.result.transactionId": "ID транзакции",
-  "qr.mobile.result.attendanceRecordId": "ID отметки",
-  "qr.mobile.result.reviewId": "ID проверки",
-  "qr.mobile.result.noReference": "В ответе нет ID транзакции или записи.",
+  "qr.mobile.result.transactionId": "Транзакция",
+  "qr.mobile.result.attendanceRecordId": "Отметка",
+  "qr.mobile.result.reviewId": "Проверка",
+  "qr.mobile.result.noReference": "В ответе нет данных транзакции или записи.",
   "qr.mobile.result.openCenter": "QR Center",
+  "qr.mobile.result.target": "Получатель",
+  "qr.mobile.result.username": "Username",
+  "qr.mobile.result.paymentReference": "Номер платежа",
+  "qr.mobile.result.attendanceRecord": "Запись посещения",
+  "qr.mobile.result.reviewReference": "Номер проверки",
+  "qr.mobile.result.cleanNoExtraDetails": "Действие выполнено. Технический QR-код не показывается.",
+  "qr.mobile.result.savedInHistory": "Сохранено в истории",
+  "qr.mobile.result.action.paymentSuccess.title": "Оплата выполнена",
+  "qr.mobile.result.action.paymentSuccess.description": "QR-оплата выполнена через реальную систему. Показываются только нужные данные.",
+  "qr.mobile.result.action.coinSuccess.title": "COIN операция выполнена",
+  "qr.mobile.result.action.coinSuccess.description": "COIN QR операция выполнена через реальную COIN систему.",
+  "qr.mobile.result.action.attendanceSuccess.title": "Посещение отмечено",
+  "qr.mobile.result.action.attendanceSuccess.description": "Вход/выход записан в реальной системе посещения.",
+  "qr.mobile.result.action.cryptoOpened.title": "Crypto wallet открыт",
+  "qr.mobile.result.action.cryptoOpened.description": "Crypto QR направлен в систему получения.",
+  "qr.mobile.result.action.cardSuccess.title": "Virtual card операция выполнена",
+  "qr.mobile.result.action.cardSuccess.description": "Virtual card QR операция выполнена через provider контроль.",
   "qr.mobile.action.notTrusted.title": "QR не подтверждён",
   "qr.mobile.action.notTrusted.description": "Сначала нужна проверка сервера.",
   "qr.mobile.action.notTrusted.primary": "Заблокировано",
@@ -489,74 +663,95 @@ const RU: Record<string, string> = {
   "qr.mobile.action.expired.description": "Нужно создать новый QR.",
   "qr.mobile.action.expired.primary": "Истёк",
   "qr.mobile.action.identity.title": "QR профиля",
-  "qr.mobile.action.identity.description": "Этот QR только открывает профиль или чат.",
+  "qr.mobile.action.identity.description":
+    "Этот QR только открывает профиль или чат.",
   "qr.mobile.action.identity.primary": "Открыть",
   "qr.mobile.action.crypto.title": "Получение Crypto",
-  "qr.mobile.action.crypto.description": "Этот QR только показывает адрес для получения.",
+  "qr.mobile.action.crypto.description":
+    "Этот QR только показывает адрес для получения.",
   "qr.mobile.action.crypto.primary": "Посмотреть",
   "qr.mobile.action.attendance.title": "Отметка",
-  "qr.mobile.action.attendance.description": "Запись сохраняется после проверки сервера.",
+  "qr.mobile.action.attendance.description":
+    "Запись сохраняется после проверки сервера.",
   "qr.mobile.action.attendance.primary": "Подтвердить",
   "qr.mobile.action.card.title": "Виртуальная карта",
-  "qr.mobile.action.card.description": "Операция карты выполняется только через bank/payment provider.",
+  "qr.mobile.action.card.description":
+    "Операция карты выполняется только через bank/payment provider.",
   "qr.mobile.action.card.primary": "Отправить запрос",
   "qr.mobile.action.payment.title": "Платёж",
-  "qr.mobile.action.payment.description": "Платёж выполняется только через backend и проверку сервиса.",
+  "qr.mobile.action.payment.description":
+    "Платёж выполняется только через сервер и проверку сервиса.",
   "qr.mobile.action.payment.primary": "Подтвердить",
   "qr.mobile.action.internalSetup.title": "Нужно подключение",
-  "qr.mobile.action.internalSetup.description": "Это действие требует внутренней настройки.",
+  "qr.mobile.action.internalSetup.description":
+    "Это действие требует внутренней настройки.",
   "qr.mobile.action.internalSetup.primary": "Не готово",
   "qr.mobile.action.validation.title": "Нужна проверка",
-  "qr.mobile.action.validation.description": "Требуется backend validation.",
+  "qr.mobile.action.validation.description": "Требуется серверная проверка.",
   "qr.mobile.action.validation.primary": "Проверить",
   "qr.mobile.result.success.title": "Выполнено",
   "qr.mobile.result.success.description": "QR действие принято сервером.",
   "qr.mobile.result.pendingReview.title": "На проверке",
-  "qr.mobile.result.pendingReview.description": "Действие ожидает внутреннюю проверку.",
+  "qr.mobile.result.pendingReview.description":
+    "Действие ожидает внутреннюю проверку.",
   "qr.mobile.result.providerNotConfigured.title": "Provider не подключён",
-  "qr.mobile.result.providerNotConfigured.description": "Нужный provider не подключён на сервере.",
-  "qr.mobile.result.executorNotConfigured.title": "Executor не подключён",
-  "qr.mobile.result.executorNotConfigured.description": "Backend executor для этого QR типа ещё не подключён.",
+  "qr.mobile.result.providerNotConfigured.description":
+    "Нужный provider не подключён на сервере.",
+  "qr.mobile.result.executorNotConfigured.title": "Исполнение не подключено",
+  "qr.mobile.result.executorNotConfigured.description":
+    "Серверное исполнение для этого QR типа ещё не подключено.",
   "qr.mobile.result.restricted.title": "Ограничено",
-  "qr.mobile.result.restricted.description": "Действие ограничено по безопасности или политике.",
+  "qr.mobile.result.restricted.description":
+    "Действие ограничено по безопасности или политике.",
   "qr.mobile.result.failed.title": "Не выполнено",
-  "qr.mobile.result.failed.description": "Сервер отклонил действие или вернул ошибку.",
-  "qr.mobile.error.authRequired": "Для QR нужен ID аккаунта.",
+  "qr.mobile.result.failed.description":
+    "Сервер отклонил действие или вернул ошибку.",
+  "qr.mobile.error.authRequired": "Для QR нужен вход в аккаунт.",
   "qr.mobile.error.createFailed": "QR не создан.",
   "qr.mobile.error.signingNotConfigured": "Backend-ключ QR не настроен.",
   "qr.mobile.error.invalidQr": "QR неверный.",
   "qr.mobile.error.expiredOrMissing": "QR не найден или истёк.",
   "qr.mobile.error.amountRequired": "Нужна сумма.",
+  "qr.mobile.error.amountInvalid": "Сумма должна быть больше 0 и в правильном формате.",
   "qr.mobile.error.currencyRequired": "Нужна валюта.",
-  "qr.mobile.error.referenceRequired": "Нужен комментарий или ID заказа.",
-  "qr.mobile.error.counterpartyRequired": "Нужен ID второй стороны.",
-  "qr.mobile.error.identityMismatch": "Данные identity в QR не совпали с подтверждённым аккаунтом.",
-  "qr.mobile.error.strictPayloadFailed": "QR не прошёл строгую проверку безопасности.",
+  "qr.mobile.error.referenceRequired": "Нужен комментарий или данные заказа.",
+  "qr.mobile.error.counterpartyRequired": "Нужны данные второй стороны.",
+  "qr.mobile.error.identityMismatch":
+    "Данные identity в QR не совпали с подтверждённым аккаунтом.",
+  "qr.mobile.error.strictPayloadFailed":
+    "QR не прошёл строгую проверку безопасности.",
   "qr.mobile.error.generic": "Действие не выполнено.",
   "qr.mobile.crypto.receiveEyebrow": "Crypto QR",
   "qr.mobile.crypto.receiveTitle": "QR для получения {{value}}",
-  "qr.mobile.crypto.receiveSubtitle": "QR создаётся только с главным ID и данными выбранного crypto-актива.",
+  "qr.mobile.crypto.receiveSubtitle":
+    "QR создаётся через подтверждённый аккаунт и данные выбранного crypto-актива.",
   "qr.mobile.crypto.asset": "Актив",
   "qr.mobile.crypto.network": "Сеть",
   "qr.mobile.crypto.assetNotSelected": "Актив не выбран",
   "qr.mobile.crypto.networkNotSelected": "Сеть не выбрана",
   "qr.mobile.crypto.assetRequiredTitle": "Нужен актив",
-  "qr.mobile.crypto.assetRequiredText": "Выберите crypto-актив. ID не вводится вручную.",
+  "qr.mobile.crypto.assetRequiredText":
+    "Выберите crypto-актив. Данные аккаунта не вводятся вручную.",
   "qr.mobile.crypto.errorAssetRequired": "Crypto-актив не выбран.",
   "qr.mobile.crypto.providerTitle": "Статус crypto-сервиса",
-  "qr.mobile.crypto.providerText": "Blockchain-адрес и memo выдаются только сервером после подключения crypto-provider.",
+  "qr.mobile.crypto.providerText":
+    "Blockchain-адрес и memo выдаются только сервером после подключения crypto-provider.",
   "qr.mobile.crypto.scanRedirectTitle": "Открывается QR-сканер",
-  "qr.mobile.crypto.scanRedirectText": "Crypto QR проверяется через общий Sabi QR scanner.",
+  "qr.mobile.crypto.scanRedirectText":
+    "Crypto QR проверяется через общий Sabi QR scanner.",
   "qr.mobile.function.profile_identity.title": "QR профиля",
   "qr.mobile.function.profile_identity.subtitle": "Только открывает профиль.",
   "qr.mobile.function.wallet_receive.title": "Sabi Wallet приём",
   "qr.mobile.function.wallet_receive.subtitle": "Для личного кошелька.",
   "qr.mobile.function.wallet_user_payment.title": "Sabi Wallet платёж",
-  "qr.mobile.function.wallet_user_payment.subtitle": "Для сканирования на кассе.",
+  "qr.mobile.function.wallet_user_payment.subtitle":
+    "Для сканирования на кассе.",
   "qr.mobile.function.merchant_static_entry.title": "Торговый QR",
-  "qr.mobile.function.merchant_static_entry.subtitle": "Постоянный QR торговой точки.",
+  "qr.mobile.function.merchant_static_entry.subtitle":
+    "Постоянный QR торговой точки.",
   "qr.mobile.function.merchant_dynamic_order.title": "QR заказа",
-  "qr.mobile.function.merchant_dynamic_order.subtitle": "Для конкретного заказа.",
+  "qr.mobile.function.merchant_dynamic_order.subtitle":
+    "Для конкретного заказа.",
   "qr.mobile.function.business_invoice.title": "QR бизнес-счёта",
   "qr.mobile.function.business_invoice.subtitle": "Для бизнес-счёта.",
   "qr.mobile.function.coin_wallet_receive.title": "Приём SABI COIN",
@@ -586,11 +781,14 @@ const RU: Record<string, string> = {
   "qr.mobile.function.work_check_out.title": "Работа выход",
   "qr.mobile.function.work_check_out.subtitle": "Отметить выход сотрудника.",
   "qr.mobile.function.virtual_card_issuance.title": "Выпуск виртуальной карты",
-  "qr.mobile.function.virtual_card_issuance.subtitle": "Запрос карты через provider.",
+  "qr.mobile.function.virtual_card_issuance.subtitle":
+    "Запрос карты через provider.",
   "qr.mobile.function.virtual_card_payment.title": "Платёж виртуальной картой",
-  "qr.mobile.function.virtual_card_payment.subtitle": "Платёж через card provider.",
+  "qr.mobile.function.virtual_card_payment.subtitle":
+    "Платёж через card provider.",
   "qr.mobile.function.provider_api_admin.title": "Настройка provider",
-  "qr.mobile.function.provider_api_admin.subtitle": "Подключение provider для admin.",
+  "qr.mobile.function.provider_api_admin.subtitle":
+    "Подключение provider для admin.",
   "qr.mobile.value.unknown": "Неизвестно",
   "qr.mobile.value.profile": "Профиль",
   "qr.mobile.value.wallet": "Sabi Wallet",
@@ -645,9 +843,9 @@ const RU: Record<string, string> = {
   "qr.mobile.value.success": "Выполнено",
   "qr.mobile.value.failed": "Не выполнено",
   "qr.mobile.value.pending_review": "На проверке",
-  "qr.mobile.value.executor_not_configured": "Executor не подключён",
+  "qr.mobile.value.executor_not_configured": "Исполнение не подключено",
   "qr.mobile.value.restricted": "Ограничено",
-  "qr.mobile.result.tokenId": "Token ID",
+  "qr.mobile.result.tokenId": "Квитанция",
   "qr.mobile.result.integrationTitle": "Связь с модулем",
   "qr.mobile.result.integrationModule": "Модуль",
   "qr.mobile.result.integrationStatusTarget": "Путь статуса",
@@ -663,7 +861,8 @@ const RU: Record<string, string> = {
   "qr.mobile.result.ledgerReference": "Ledger reference",
   "qr.mobile.result.providerReference": "Provider reference",
   "qr.mobile.result.cardDataPolicy": "Данные карты",
-  "qr.mobile.result.cardDataPolicyValue": "Сохраняется только provider token. PAN/CVV не хранятся в Sabi.",
+  "qr.mobile.result.cardDataPolicyValue":
+    "Сохраняется только безопасная запись платёжного провайдера. PAN/CVV не хранятся в Sabi.",
   "qr.mobile.integration.module.profile": "Профиль",
   "qr.mobile.integration.module.wallet": "Sabi Wallet",
   "qr.mobile.integration.module.coinWallet": "SABI COIN",
@@ -693,11 +892,13 @@ const RU: Record<string, string> = {
   "qr.mobile.integration.status.school": "Статус школьной отметки",
   "qr.mobile.integration.status.work": "Статус рабочей отметки",
   "qr.mobile.integration.status.virtualCard": "Статус Virtual Card provider",
-  "qr.mobile.integration.status.adminProvider": "Статус Admin provider registry",
+  "qr.mobile.integration.status.adminProvider":
+    "Статус Admin provider registry",
   "qr.mobile.integration.history.identity": "История активности профиля",
   "qr.mobile.integration.history.wallet": "История транзакций Sabi Wallet",
   "qr.mobile.integration.history.coinWallet": "История транзакций Coin Wallet",
-  "qr.mobile.integration.history.cryptoWallet": "История активности Crypto Wallet",
+  "qr.mobile.integration.history.cryptoWallet":
+    "История активности Crypto Wallet",
   "qr.mobile.integration.history.merchant": "История заказов Merchant",
   "qr.mobile.integration.history.business": "История Business invoice",
   "qr.mobile.integration.history.messenger": "История активности Messenger",
@@ -710,13 +911,20 @@ const RU: Record<string, string> = {
   "qr.mobile.integration.history.virtualCard": "Операции виртуальной карты",
   "qr.mobile.integration.history.adminProvider": "История provider admin",
   "qr.mobile.integration.admin.none": "Дополнительный admin signal не нужен",
-  "qr.mobile.integration.admin.paymentCompliance": "Может потребоваться проверка payment compliance",
-  "qr.mobile.integration.admin.merchantBusiness": "Может потребоваться Merchant/Business admin проверка",
-  "qr.mobile.integration.admin.coinWallet": "Может потребоваться проверка риска Coin Wallet",
-  "qr.mobile.integration.admin.cryptoAml": "Может потребоваться Crypto AML проверка",
-  "qr.mobile.integration.admin.attendance": "Может потребоваться проверка целостности отметки",
-  "qr.mobile.integration.admin.virtualCard": "Может потребоваться проверка provider виртуальной карты",
-  "qr.mobile.integration.admin.providerConfiguration": "Требуется admin проверка provider настроек",
+  "qr.mobile.integration.admin.paymentCompliance":
+    "Может потребоваться проверка payment compliance",
+  "qr.mobile.integration.admin.merchantBusiness":
+    "Может потребоваться Merchant/Business admin проверка",
+  "qr.mobile.integration.admin.coinWallet":
+    "Может потребоваться проверка риска Coin Wallet",
+  "qr.mobile.integration.admin.cryptoAml":
+    "Может потребоваться Crypto AML проверка",
+  "qr.mobile.integration.admin.attendance":
+    "Может потребоваться проверка целостности отметки",
+  "qr.mobile.integration.admin.virtualCard":
+    "Может потребоваться проверка provider виртуальной карты",
+  "qr.mobile.integration.admin.providerConfiguration":
+    "Требуется admin проверка provider настроек",
 };
 
 const EN: Record<string, string> = {
@@ -725,7 +933,7 @@ const EN: Record<string, string> = {
   "qr.mobile.common.back": "Back",
   "qr.mobile.common.cancel": "Cancel",
   "qr.mobile.common.confirm": "Confirm",
-  "qr.mobile.common.counterparty": "ID / order",
+  "qr.mobile.common.counterparty": "Counterparty / order",
   "qr.mobile.common.currency": "Currency",
   "qr.mobile.common.execution": "Action",
   "qr.mobile.common.expires": "Expires: {{value}}",
@@ -733,7 +941,7 @@ const EN: Record<string, string> = {
   "qr.mobile.common.generate": "Create QR",
   "qr.mobile.common.history": "History",
   "qr.mobile.common.mode": "Mode",
-  "qr.mobile.common.organization": "Organization ID",
+  "qr.mobile.common.organization": "Organization",
   "qr.mobile.common.processing": "Checking",
   "qr.mobile.common.qrUnavailable": "QR is not ready",
   "qr.mobile.common.rail": "Rail",
@@ -743,8 +951,8 @@ const EN: Record<string, string> = {
   "qr.mobile.common.scanAgain": "Scan again",
   "qr.mobile.common.share": "Share",
   "qr.mobile.common.shareFailedTitle": "Could not share",
-  "qr.mobile.common.shareFailedText": "Could not share QR token.",
-  "qr.mobile.common.shortPayload": "Short code",
+  "qr.mobile.common.shareFailedText": "Could not share QR.",
+  "qr.mobile.common.shortPayload": "QR data",
   "qr.mobile.common.surface": "Section",
   "qr.mobile.common.trust": "Status",
   "qr.mobile.common.type": "Type",
@@ -754,34 +962,42 @@ const EN: Record<string, string> = {
   "qr.mobile.common.userId": "ID",
   "qr.mobile.common.notReady": "Not ready",
   "qr.mobile.identity.autoTitle": "Verified account",
-  "qr.mobile.identity.userIdValue": "ID: {{value}}",
-  "qr.mobile.identity.sabiIdValue": "Sabi ID: {{value}}",
+  "qr.mobile.identity.userIdValue": "Account verified",
+  "qr.mobile.identity.sabiIdValue": "Sabi account ready",
   "qr.mobile.identity.namePending": "Profile data",
-  "qr.mobile.identity.autoFilled": "ID, first name, last name and verified profile data are filled automatically.",
-  "qr.mobile.create.identityAutoFilled": "ID, first name, last name and verified profile data are not entered manually.",
+  "qr.mobile.identity.autoFilled":
+    "First name, last name and verified profile data are filled automatically.",
+  "qr.mobile.create.identityAutoFilled":
+    "First name, last name and verified profile data are not entered manually.",
   "qr.mobile.create.noManualFields": "This QR has no extra manual fields.",
   "qr.mobile.create.amountPlaceholder": "0.00",
   "qr.mobile.function.unknown.title": "QR",
   "qr.mobile.center.eyebrow": "QR",
   "qr.mobile.center.title": "Sabi QR",
-  "qr.mobile.center.subtitle": "QR is grouped by wallets, commerce, communication, attendance and other rails.",
+  "qr.mobile.center.subtitle":
+    "QR is grouped by wallets, commerce, communication, attendance and other rails.",
   "qr.mobile.center.searchPlaceholder": "Search QR type",
   "qr.mobile.center.sectionTitle": "QR types",
-  "qr.mobile.center.userIdTitle": "Primary account ID",
-  "qr.mobile.center.userIdHelp": "QR is created only with this ID.",
+  "qr.mobile.center.userIdTitle": "Verified account",
+  "qr.mobile.center.userIdHelp": "QR is created only through the verified account.",
   "qr.mobile.center.loginRequired": "Sign in to create QR.",
   "qr.mobile.center.emptyTitle": "QR not found",
   "qr.mobile.center.emptyText": "Change the search or open all groups.",
   "qr.mobile.group.profile.title": "Profile and communication",
-  "qr.mobile.group.profile.subtitle": "QR for profile, Messenger and chat payments.",
+  "qr.mobile.group.profile.subtitle":
+    "QR for profile, Messenger and chat payments.",
   "qr.mobile.group.wallets.title": "Wallets",
-  "qr.mobile.group.wallets.subtitle": "QR for Sabi Wallet, SABI COIN, Crypto and virtual card.",
+  "qr.mobile.group.wallets.subtitle":
+    "QR for Sabi Wallet, SABI COIN, Crypto and virtual card.",
   "qr.mobile.group.business.title": "Commerce and business",
-  "qr.mobile.group.business.subtitle": "QR for Merchant, Business, Marketplace and Delivery.",
+  "qr.mobile.group.business.subtitle":
+    "QR for Merchant, Business, Marketplace and Delivery.",
   "qr.mobile.group.mobility.title": "Taxi and Stream",
-  "qr.mobile.group.mobility.subtitle": "QR for trip payment and stream donation.",
+  "qr.mobile.group.mobility.subtitle":
+    "QR for trip payment and stream donation.",
   "qr.mobile.group.attendance.title": "School and work attendance",
-  "qr.mobile.group.attendance.subtitle": "Check-in and check-out attendance QR.",
+  "qr.mobile.group.attendance.subtitle":
+    "Check-in and check-out attendance QR.",
   "qr.mobile.filter.all": "All",
   "qr.mobile.filter.wallet": "Wallet",
   "qr.mobile.filter.merchant": "Merchant",
@@ -792,11 +1008,15 @@ const EN: Record<string, string> = {
   "qr.mobile.create.title": "Create QR",
   "qr.mobile.create.detailsTitle": "Details",
   "qr.mobile.create.referencePlaceholder": "Order, trip, class or note",
-  "qr.mobile.create.counterpartyPlaceholder": "Enter ID only",
-  "qr.mobile.create.organizationPlaceholder": "Organization ID",
+  "qr.mobile.create.counterpartyPlaceholder": "Enter recipient or order details",
+  "qr.mobile.create.organizationPlaceholder": "Organization name or code",
   "qr.mobile.create.currencyPlaceholder": "Currency code",
-  "qr.mobile.create.currencyAutoFilled": "Currency is taken automatically from Wallet settings: {{value}}.",
-  "qr.mobile.create.userIdLocked": "QR owner is bound to the primary ID.",
+  "qr.mobile.create.currencyAutoFilled":
+    "Currency is taken automatically from Wallet settings: {{value}}.",
+  "qr.mobile.create.userIdLocked": "QR is bound to the verified account.",
+  "qr.mobile.create.shareOwner": "Owner: {{value}}",
+  "qr.mobile.create.shareAmount": "Amount: {{value}}",
+  "qr.mobile.create.shareHint": "Scan this QR in the Sabi app.",
   "qr.mobile.scanner.eyebrow": "Scanner",
   "qr.mobile.scanner.title": "Scan QR",
   "qr.mobile.scanner.resolving": "Checking QR",
@@ -805,23 +1025,62 @@ const EN: Record<string, string> = {
   "qr.mobile.scanner.allowCamera": "Allow camera",
   "qr.mobile.scanner.frontCamera": "Front camera",
   "qr.mobile.scanner.backCamera": "Main camera",
+  "qr.mobile.scanner.torchOn": "Turn on light",
+  "qr.mobile.scanner.torchOff": "Turn off light",
   "qr.mobile.scanner.resolveFailed": "QR could not be resolved.",
-  "qr.mobile.scanner.validationFailed": "QR tasdiqlanmadi.",
+  "qr.mobile.scanner.validationFailed": "QR validation failed.",
+  "qr.mobile.scan.detected.title": "QR detected",
+  "qr.mobile.scan.detected.description":
+    "The QR type was detected cleanly. A long raw code is not shown.",
+  "qr.mobile.scan.detailsTitle": "Scan result",
+  "qr.mobile.scan.detectedData": "Detected data",
+  "qr.mobile.scan.routePath": "Route",
+  "qr.mobile.scan.routeParam": "Value",
+  "qr.mobile.scan.classifierVersion": "Classifier",
+  "qr.mobile.scan.sabiToken.title": "Sabi QR",
+  "qr.mobile.scan.sabiToken.description":
+    "The Sabi QR is validated by the server before opening confirmation.",
+  "qr.mobile.scan.sabiLink.title": "Sabi app QR",
+  "qr.mobile.scan.sabiLink.description":
+    "An internal Sabi link was detected. Module and data were extracted cleanly.",
+  "qr.mobile.scan.sabiPayload.title": "Sabi payload",
+  "qr.mobile.scan.sabiPayload.description":
+    "The Sabi QR payload type was detected. Without a server signature it is not auto-executed.",
+  "qr.mobile.scan.unsignedPreview.title": "Unsigned Sabi preview",
+  "qr.mobile.scan.unsignedPreview.description":
+    "This is a Sabi preview, but it has no server signature. Fake execution is not used.",
+  "qr.mobile.scan.unsignedPreview.reason":
+    "QR cannot execute without a server signature.",
+  "qr.mobile.scan.phone.title": "Phone QR",
+  "qr.mobile.scan.phone.description": "The phone number was detected cleanly.",
+  "qr.mobile.scan.phone.label": "Phone number",
+  "qr.mobile.scan.externalUrl.title": "External URL",
+  "qr.mobile.scan.externalUrl.description":
+    "A safe URL was detected. The raw payload is not shown as garbage.",
+  "qr.mobile.scan.externalUrl.label": "URL",
+  "qr.mobile.scan.unsupported.title": "Unsupported QR",
+  "qr.mobile.scan.unsupported.description":
+    "This QR does not match a supported Sabi type.",
+  "qr.mobile.scan.blockedDangerous.description":
+    "This QR was blocked for safety.",
   "qr.mobile.confirm.eyebrow": "Tasdiqlash",
   "qr.mobile.confirm.title": "QR amalini tasdiqlash",
   "qr.mobile.confirm.loading": "QR tekshirilmoqda",
   "qr.mobile.confirm.blockedTitle": "QR bloklandi",
   "qr.mobile.confirm.unavailableTitle": "QR topilmadi",
-  "qr.mobile.confirm.unavailableText": "QR token yoki funksiya qaytmadi.",
+  "qr.mobile.confirm.unavailableText": "QR ma’lumoti yoki funksiya qaytmadi.",
   "qr.mobile.confirm.emptyPayload": "QR bo‘sh.",
   "qr.mobile.confirm.resolveFailed": "QR aniqlanmadi.",
   "qr.mobile.confirm.validateFailed": "QR tasdiqlanmadi.",
   "qr.mobile.confirm.executeFailed": "Amal bajarilmadi.",
   "qr.mobile.card.loadingTitle": "QR yaratilmoqda",
-  "qr.mobile.card.unavailableText": "QR xavfsiz kod yaratilgandan keyin ko‘rsatiladi.",
-  "qr.mobile.card.autoCreatingText": "ID va tasdiqlangan profil ma’lumotlari asosida avtomatik yaratilmoqda.",
+  "qr.mobile.card.unavailableText":
+    "QR xavfsiz kod yaratilgandan keyin ko‘rsatiladi.",
+  "qr.mobile.card.autoCreatingText":
+    "ID va tasdiqlangan profil ma’lumotlari asosida avtomatik yaratilmoqda.",
   "qr.mobile.card.amountWaitingTitle": "Miqdor kerak",
-  "qr.mobile.card.amountWaitingText": "Bu QR uchun faqat miqdorni kiriting. ID va profil ma’lumotlari avtomatik olinadi.",
+  "qr.mobile.card.amountWaitingText":
+    "Bu QR uchun faqat miqdorni kiriting. Hisob va profil ma’lumotlari avtomatik olinadi.",
   "qr.mobile.card.notSigned": "tasdiqlanmagan",
   "qr.mobile.history.eyebrow": "Tarix",
   "qr.mobile.history.title": "QR tarixi",
@@ -836,11 +1095,28 @@ const EN: Record<string, string> = {
   "qr.mobile.result.title": "QR result",
   "qr.mobile.result.detailsTitle": "Result details",
   "qr.mobile.result.status": "Status",
-  "qr.mobile.result.transactionId": "Transaction ID",
-  "qr.mobile.result.attendanceRecordId": "Attendance record ID",
-  "qr.mobile.result.reviewId": "Review ID",
-  "qr.mobile.result.noReference": "No transaction or record ID was returned.",
+  "qr.mobile.result.transactionId": "Transaction",
+  "qr.mobile.result.attendanceRecordId": "Attendance record",
+  "qr.mobile.result.reviewId": "Review",
+  "qr.mobile.result.noReference": "No transaction or record details were returned.",
   "qr.mobile.result.openCenter": "QR Center",
+  "qr.mobile.result.target": "Recipient",
+  "qr.mobile.result.username": "Username",
+  "qr.mobile.result.paymentReference": "Payment reference",
+  "qr.mobile.result.attendanceRecord": "Attendance record",
+  "qr.mobile.result.reviewReference": "Review reference",
+  "qr.mobile.result.cleanNoExtraDetails": "The action is complete. Technical QR code is not shown.",
+  "qr.mobile.result.savedInHistory": "Saved in history",
+  "qr.mobile.result.action.paymentSuccess.title": "Payment completed",
+  "qr.mobile.result.action.paymentSuccess.description": "The QR payment was completed through the real system. Only useful data is shown.",
+  "qr.mobile.result.action.coinSuccess.title": "COIN action completed",
+  "qr.mobile.result.action.coinSuccess.description": "The COIN QR action was completed through the real COIN system.",
+  "qr.mobile.result.action.attendanceSuccess.title": "Attendance recorded",
+  "qr.mobile.result.action.attendanceSuccess.description": "Check-in/check-out was recorded in the real attendance system.",
+  "qr.mobile.result.action.cryptoOpened.title": "Crypto wallet opened",
+  "qr.mobile.result.action.cryptoOpened.description": "The Crypto QR was routed to the receive system.",
+  "qr.mobile.result.action.cardSuccess.title": "Virtual card action completed",
+  "qr.mobile.result.action.cardSuccess.description": "The Virtual card QR action was completed through provider control.",
   "qr.mobile.action.notTrusted.title": "QR tasdiqlanmagan",
   "qr.mobile.action.notTrusted.description": "Avval server tekshiruvi kerak.",
   "qr.mobile.action.notTrusted.primary": "Bloklangan",
@@ -848,72 +1124,93 @@ const EN: Record<string, string> = {
   "qr.mobile.action.expired.description": "Yangi QR yaratish kerak.",
   "qr.mobile.action.expired.primary": "Muddati tugagan",
   "qr.mobile.action.identity.title": "Profil QR",
-  "qr.mobile.action.identity.description": "Bu QR faqat profil yoki chatni ochadi.",
+  "qr.mobile.action.identity.description":
+    "Bu QR faqat profil yoki chatni ochadi.",
   "qr.mobile.action.identity.primary": "Ochish",
   "qr.mobile.action.crypto.title": "Crypto qabul qilish",
-  "qr.mobile.action.crypto.description": "Bu QR faqat qabul qilish manzilini ko‘rsatadi.",
+  "qr.mobile.action.crypto.description":
+    "Bu QR faqat qabul qilish manzilini ko‘rsatadi.",
   "qr.mobile.action.crypto.primary": "Ko‘rish",
   "qr.mobile.action.attendance.title": "Davomat",
-  "qr.mobile.action.attendance.description": "Yozuv server tekshiruvidan keyin saqlanadi.",
+  "qr.mobile.action.attendance.description":
+    "Yozuv server tekshiruvidan keyin saqlanadi.",
   "qr.mobile.action.attendance.primary": "Tasdiqlash",
   "qr.mobile.action.card.title": "Virtual karta",
-  "qr.mobile.action.card.description": "Karta amali faqat bank/payment xizmat orqali bajariladi.",
+  "qr.mobile.action.card.description":
+    "Karta amali faqat bank/payment xizmat orqali bajariladi.",
   "qr.mobile.action.card.primary": "So‘rov yuborish",
   "qr.mobile.action.payment.title": "To‘lov",
-  "qr.mobile.action.payment.description": "To‘lov faqat backend va xizmat tekshiruvi orqali bajariladi.",
+  "qr.mobile.action.payment.description":
+    "To‘lov faqat server va xizmat tekshiruvi orqali bajariladi.",
   "qr.mobile.action.payment.primary": "Tasdiqlash",
   "qr.mobile.action.internalSetup.title": "Ulanish kerak",
-  "qr.mobile.action.internalSetup.description": "Bu amal ichki sozlashni talab qiladi.",
+  "qr.mobile.action.internalSetup.description":
+    "Bu amal ichki sozlashni talab qiladi.",
   "qr.mobile.action.internalSetup.primary": "Tayyor emas",
   "qr.mobile.action.validation.title": "Tekshiruv kerak",
-  "qr.mobile.action.validation.description": "Backend validation talab qilinadi.",
+  "qr.mobile.action.validation.description":
+    "Backend validation talab qilinadi.",
   "qr.mobile.action.validation.primary": "Tekshirish",
   "qr.mobile.result.success.title": "Bajarildi",
-  "qr.mobile.result.success.description": "QR amali server tomonidan qabul qilindi.",
+  "qr.mobile.result.success.description":
+    "QR amali server tomonidan qabul qilindi.",
   "qr.mobile.result.pendingReview.title": "Tekshiruvda",
-  "qr.mobile.result.pendingReview.description": "Amal ichki tekshiruv kutmoqda.",
+  "qr.mobile.result.pendingReview.description":
+    "Amal ichki tekshiruv kutmoqda.",
   "qr.mobile.result.providerNotConfigured.title": "Ulanish yo‘q",
-  "qr.mobile.result.providerNotConfigured.description": "The required provider is not connected on the server.",
+  "qr.mobile.result.providerNotConfigured.description":
+    "The required provider is not connected on the server.",
   "qr.mobile.result.executorNotConfigured.title": "Ijrochi ulanmagan",
-  "qr.mobile.result.executorNotConfigured.description": "The backend executor for this QR type is not connected yet.",
+  "qr.mobile.result.executorNotConfigured.description":
+    "Server execution for this QR type is not connected yet.",
   "qr.mobile.result.restricted.title": "Cheklangan",
-  "qr.mobile.result.restricted.description": "Amal xavfsizlik yoki siyosat sababli cheklangan.",
+  "qr.mobile.result.restricted.description":
+    "Amal xavfsizlik yoki siyosat sababli cheklangan.",
   "qr.mobile.result.failed.title": "Bajarilmadi",
-  "qr.mobile.result.failed.description": "Server amalni rad etdi yoki xatolik qaytdi.",
-  "qr.mobile.error.authRequired": "QR yaratish uchun hisob ID kerak.",
+  "qr.mobile.result.failed.description":
+    "Server amalni rad etdi yoki xatolik qaytdi.",
+  "qr.mobile.error.authRequired": "QR yaratish uchun hisobga kirish kerak.",
   "qr.mobile.error.createFailed": "QR yaratilmadi.",
   "qr.mobile.error.signingNotConfigured": "Backend QR kaliti sozlanmagan.",
   "qr.mobile.error.invalidQr": "QR noto‘g‘ri.",
   "qr.mobile.error.expiredOrMissing": "QR topilmadi yoki muddati tugagan.",
   "qr.mobile.error.amountRequired": "Amount is required.",
+  "qr.mobile.error.amountInvalid": "Amount must be greater than 0 and use a valid format.",
   "qr.mobile.error.currencyRequired": "Currency is required.",
-  "qr.mobile.error.referenceRequired": "Izoh yoki buyurtma ID kerak.",
-  "qr.mobile.error.counterpartyRequired": "Qarshi tomon ID kerak.",
-  "qr.mobile.error.identityMismatch": "QR identity ma’lumoti tasdiqlangan hisobga mos kelmadi.",
+  "qr.mobile.error.referenceRequired": "Izoh yoki buyurtma ma’lumoti kerak.",
+  "qr.mobile.error.counterpartyRequired": "Counterparty details are required.",
+  "qr.mobile.error.identityMismatch":
+    "QR identity ma’lumoti tasdiqlangan hisobga mos kelmadi.",
   "qr.mobile.error.strictPayloadFailed": "QR xavfsizlik tekshiruvidan o‘tmadi.",
   "qr.mobile.error.generic": "Amal bajarilmadi.",
   "qr.mobile.crypto.receiveEyebrow": "Crypto QR",
   "qr.mobile.crypto.receiveTitle": "{{value}} qabul QR",
-  "qr.mobile.crypto.receiveSubtitle": "QR faqat asosiy ID va tanlangan crypto aktiv ma’lumotlari bilan yaratiladi.",
+  "qr.mobile.crypto.receiveSubtitle":
+    "QR tasdiqlangan hisob va tanlangan crypto aktiv ma’lumotlari bilan yaratiladi.",
   "qr.mobile.crypto.asset": "Aktiv",
   "qr.mobile.crypto.network": "Tarmoq",
   "qr.mobile.crypto.assetNotSelected": "Aktiv tanlanmagan",
   "qr.mobile.crypto.networkNotSelected": "Tarmoq tanlanmagan",
   "qr.mobile.crypto.assetRequiredTitle": "Aktiv kerak",
-  "qr.mobile.crypto.assetRequiredText": "Crypto aktivni tanlang. ID qo‘lda kiritilmaydi.",
+  "qr.mobile.crypto.assetRequiredText":
+    "Crypto aktivni tanlang. Hisob ma’lumoti qo‘lda kiritilmaydi.",
   "qr.mobile.crypto.errorAssetRequired": "Crypto aktiv tanlanmagan.",
   "qr.mobile.crypto.providerTitle": "Crypto servis holati",
-  "qr.mobile.crypto.providerText": "Blockchain address va memo faqat crypto-provider serverda ulangandan keyin beriladi.",
+  "qr.mobile.crypto.providerText":
+    "Blockchain address va memo faqat crypto-provider serverda ulangandan keyin beriladi.",
   "qr.mobile.crypto.scanRedirectTitle": "QR skaner ochilmoqda",
-  "qr.mobile.crypto.scanRedirectText": "Crypto QR umumiy Sabi QR scanner orqali tekshiriladi.",
+  "qr.mobile.crypto.scanRedirectText":
+    "Crypto QR umumiy Sabi QR scanner orqali tekshiriladi.",
   "qr.mobile.function.profile_identity.title": "Profil QR",
   "qr.mobile.function.profile_identity.subtitle": "Faqat profil ochadi.",
   "qr.mobile.function.wallet_receive.title": "Sabi Wallet qabul",
   "qr.mobile.function.wallet_receive.subtitle": "Shaxsiy hamyon uchun.",
   "qr.mobile.function.wallet_user_payment.title": "Sabi Wallet to‘lov",
-  "qr.mobile.function.wallet_user_payment.subtitle": "Kassada skanerlash uchun.",
+  "qr.mobile.function.wallet_user_payment.subtitle":
+    "Kassada skanerlash uchun.",
   "qr.mobile.function.merchant_static_entry.title": "Savdo QR",
-  "qr.mobile.function.merchant_static_entry.subtitle": "Doimiy savdo nuqtasi QR.",
+  "qr.mobile.function.merchant_static_entry.subtitle":
+    "Doimiy savdo nuqtasi QR.",
   "qr.mobile.function.merchant_dynamic_order.title": "Buyurtma QR",
   "qr.mobile.function.merchant_dynamic_order.subtitle": "Aniq buyurtma uchun.",
   "qr.mobile.function.business_invoice.title": "Biznes hisob QR",
@@ -927,27 +1224,35 @@ const EN: Record<string, string> = {
   "qr.mobile.function.messenger_profile.title": "Messenger QR",
   "qr.mobile.function.messenger_profile.subtitle": "Chat yoki profil ochish.",
   "qr.mobile.function.messenger_payment.title": "Messenger to‘lov",
-  "qr.mobile.function.messenger_payment.subtitle": "Chat ichidagi to‘lov uchun.",
+  "qr.mobile.function.messenger_payment.subtitle":
+    "Chat ichidagi to‘lov uchun.",
   "qr.mobile.function.marketplace_order.title": "Marketplace QR",
-  "qr.mobile.function.marketplace_order.subtitle": "Marketplace buyurtmasi uchun.",
+  "qr.mobile.function.marketplace_order.subtitle":
+    "Marketplace buyurtmasi uchun.",
   "qr.mobile.function.stream_donation.title": "Stream donation",
-  "qr.mobile.function.stream_donation.subtitle": "Stream qo‘llab-quvvatlash QR.",
+  "qr.mobile.function.stream_donation.subtitle":
+    "Stream qo‘llab-quvvatlash QR.",
   "qr.mobile.function.taxi_trip_payment.title": "Taxi to‘lov",
   "qr.mobile.function.taxi_trip_payment.subtitle": "Safar to‘lovi uchun.",
   "qr.mobile.function.delivery_order.title": "Delivery QR",
-  "qr.mobile.function.delivery_order.subtitle": "Yetkazib berish buyurtmasi uchun.",
+  "qr.mobile.function.delivery_order.subtitle":
+    "Yetkazib berish buyurtmasi uchun.",
   "qr.mobile.function.school_check_in.title": "Maktab kirish",
-  "qr.mobile.function.school_check_in.subtitle": "O‘quvchi kirishini belgilash.",
+  "qr.mobile.function.school_check_in.subtitle":
+    "O‘quvchi kirishini belgilash.",
   "qr.mobile.function.school_check_out.title": "Maktab chiqish",
-  "qr.mobile.function.school_check_out.subtitle": "O‘quvchi chiqishini belgilash.",
+  "qr.mobile.function.school_check_out.subtitle":
+    "O‘quvchi chiqishini belgilash.",
   "qr.mobile.function.work_check_in.title": "Ish kirish",
   "qr.mobile.function.work_check_in.subtitle": "Xodim kirishini belgilash.",
   "qr.mobile.function.work_check_out.title": "Ish chiqish",
   "qr.mobile.function.work_check_out.subtitle": "Xodim chiqishini belgilash.",
   "qr.mobile.function.virtual_card_issuance.title": "Virtual karta chiqarish",
-  "qr.mobile.function.virtual_card_issuance.subtitle": "Provider orqali karta so‘rovi.",
+  "qr.mobile.function.virtual_card_issuance.subtitle":
+    "Provider orqali karta so‘rovi.",
   "qr.mobile.function.virtual_card_payment.title": "Virtual karta to‘lov",
-  "qr.mobile.function.virtual_card_payment.subtitle": "Virtual karta provider to‘lovi.",
+  "qr.mobile.function.virtual_card_payment.subtitle":
+    "Virtual karta provider to‘lovi.",
   "qr.mobile.function.provider_api_admin.title": "Provider sozlash",
   "qr.mobile.function.provider_api_admin.subtitle": "Admin provider ulanishi.",
   "qr.mobile.value.unknown": "Noma’lum",
@@ -1006,7 +1311,7 @@ const EN: Record<string, string> = {
   "qr.mobile.value.pending_review": "Tekshiruvda",
   "qr.mobile.value.executor_not_configured": "Ijrochi ulanmagan",
   "qr.mobile.value.restricted": "Cheklangan",
-  "qr.mobile.result.tokenId": "Token ID",
+  "qr.mobile.result.tokenId": "Receipt",
   "qr.mobile.result.integrationTitle": "Module connection",
   "qr.mobile.result.integrationModule": "Module",
   "qr.mobile.result.integrationStatusTarget": "Status path",
@@ -1022,7 +1327,8 @@ const EN: Record<string, string> = {
   "qr.mobile.result.ledgerReference": "Ledger reference",
   "qr.mobile.result.providerReference": "Provider reference",
   "qr.mobile.result.cardDataPolicy": "Card data policy",
-  "qr.mobile.result.cardDataPolicyValue": "Only the provider token is stored. PAN/CVV are not stored in Sabi.",
+  "qr.mobile.result.cardDataPolicyValue":
+    "Only the secure payment provider record is stored. PAN/CVV are not stored in Sabi.",
   "qr.mobile.integration.module.profile": "Profile",
   "qr.mobile.integration.module.wallet": "Sabi Wallet",
   "qr.mobile.integration.module.coinWallet": "SABI COIN",
@@ -1052,11 +1358,13 @@ const EN: Record<string, string> = {
   "qr.mobile.integration.status.school": "School attendance status",
   "qr.mobile.integration.status.work": "Work attendance status",
   "qr.mobile.integration.status.virtualCard": "Virtual Card provider status",
-  "qr.mobile.integration.status.adminProvider": "Admin provider registry status",
+  "qr.mobile.integration.status.adminProvider":
+    "Admin provider registry status",
   "qr.mobile.integration.history.identity": "Profile activity history",
   "qr.mobile.integration.history.wallet": "Sabi Wallet transaction history",
   "qr.mobile.integration.history.coinWallet": "Coin Wallet transaction history",
-  "qr.mobile.integration.history.cryptoWallet": "Crypto wallet activity history",
+  "qr.mobile.integration.history.cryptoWallet":
+    "Crypto wallet activity history",
   "qr.mobile.integration.history.merchant": "Merchant order history",
   "qr.mobile.integration.history.business": "Business invoice history",
   "qr.mobile.integration.history.messenger": "Messenger activity history",
@@ -1069,13 +1377,19 @@ const EN: Record<string, string> = {
   "qr.mobile.integration.history.virtualCard": "Virtual card operations",
   "qr.mobile.integration.history.adminProvider": "Provider admin history",
   "qr.mobile.integration.admin.none": "No extra admin signal is needed",
-  "qr.mobile.integration.admin.paymentCompliance": "Payment compliance review may be needed",
-  "qr.mobile.integration.admin.merchantBusiness": "Merchant/Business admin review may be needed",
-  "qr.mobile.integration.admin.coinWallet": "Coin Wallet risk review may be needed",
+  "qr.mobile.integration.admin.paymentCompliance":
+    "Payment compliance review may be needed",
+  "qr.mobile.integration.admin.merchantBusiness":
+    "Merchant/Business admin review may be needed",
+  "qr.mobile.integration.admin.coinWallet":
+    "Coin Wallet risk review may be needed",
   "qr.mobile.integration.admin.cryptoAml": "Crypto AML review may be needed",
-  "qr.mobile.integration.admin.attendance": "Attendance integrity review may be needed",
-  "qr.mobile.integration.admin.virtualCard": "Virtual card provider review may be needed",
-  "qr.mobile.integration.admin.providerConfiguration": "Provider configuration admin review is required",
+  "qr.mobile.integration.admin.attendance":
+    "Attendance integrity review may be needed",
+  "qr.mobile.integration.admin.virtualCard":
+    "Virtual card provider review may be needed",
+  "qr.mobile.integration.admin.providerConfiguration":
+    "Provider configuration admin review is required",
 };
 
 export const QR_MOBILE_TRANSLATIONS: Record<string, Record<string, string>> = {
@@ -1099,7 +1413,9 @@ function interpolate(template: string, params?: TranslationParams): string {
   });
 }
 
-function getDict(language?: TranslationLanguage | string | null): Record<string, string> {
+function getDict(
+  language?: TranslationLanguage | string | null,
+): Record<string, string> {
   const normalized = String(language || "en").toLowerCase();
   if (normalized.startsWith("uz")) return DICTS.uz;
   if (normalized.startsWith("ru")) return DICTS.ru;
@@ -1123,25 +1439,10 @@ export function translateQrMobileError(
   if (!value) return translateQrMobileText(language, "qr.mobile.error.generic");
   if (value.startsWith("qr.mobile.")) {
     const translated = translateQrMobileText(language, value);
-    return translated || translateQrMobileText(language, "qr.mobile.error.generic");
+    return (
+      translated || translateQrMobileText(language, "qr.mobile.error.generic")
+    );
   }
 
   return translateQrMobileText(language, "qr.mobile.error.generic");
-}
-
-export function useQrMobileTranslations() {
-  const { language } = useI18n();
-
-  return useMemo(() => {
-    const tq = (key: string, params?: TranslationParams) => translateQrMobileText(language, key, params);
-    const functionTitle = (code: string) => tq(`qr.mobile.function.${code}.title`) || tq("qr.mobile.function.unknown.title");
-    const functionSubtitle = (code: string) => tq(`qr.mobile.function.${code}.subtitle`) || "";
-    const valueLabel = (value?: string | null) => {
-      if (!value) return tq("qr.mobile.value.unknown");
-      return tq(`qr.mobile.value.${value}`) || tq("qr.mobile.value.unknown");
-    };
-    const errorLabel = (value?: string | null) => translateQrMobileError(language, value);
-
-    return { language, tq, functionTitle, functionSubtitle, valueLabel, errorLabel };
-  }, [language]);
 }

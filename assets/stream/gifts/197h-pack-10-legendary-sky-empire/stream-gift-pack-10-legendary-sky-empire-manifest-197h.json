@@ -1,0 +1,80 @@
+{
+  "version": "STREAM-GAME-GIFTS-197H",
+  "pack": "197h-pack-10-legendary-sky-empire",
+  "giftCount": 8,
+  "cumulativeGiftCountAfter197H": 80,
+  "diamondPriceMin": 6,
+  "diamondPriceMax": 10000,
+  "totalDiamondRangeMin": 1,
+  "totalDiamondRangeMax": 10000,
+  "minimumTopUpCoins": 10,
+  "minimumTopUpUsd": 10,
+  "userFacingOnly": true,
+  "runtime": {
+    "backend": false,
+    "payment": false,
+    "provider": false,
+    "walletMutation": false,
+    "payout": false,
+    "realSend": false,
+    "soundAutoplay": false
+  },
+  "gifts": [
+    {
+      "id": "emerald-clover-six",
+      "displayNameRu": "Изумрудный Клевер",
+      "diamondPrice": 6,
+      "poster": "posters/emerald-clover-six.svg",
+      "soundCue": "sound-cues/emerald-clover-six-cue.wav"
+    },
+    {
+      "id": "ruby-fox-twenty-two",
+      "displayNameRu": "Рубиновый Лис",
+      "diamondPrice": 22,
+      "poster": "posters/ruby-fox-twenty-two.svg",
+      "soundCue": "sound-cues/ruby-fox-twenty-two-cue.wav"
+    },
+    {
+      "id": "silver-koi-ninety",
+      "displayNameRu": "Серебряный Кои",
+      "diamondPrice": 90,
+      "poster": "posters/silver-koi-ninety.svg",
+      "soundCue": "sound-cues/silver-koi-ninety-cue.wav"
+    },
+    {
+      "id": "golden-phoenix-six-hundred",
+      "displayNameRu": "Золотой Феникс",
+      "diamondPrice": 600,
+      "poster": "posters/golden-phoenix-six-hundred.svg",
+      "soundCue": "sound-cues/golden-phoenix-six-hundred-cue.wav"
+    },
+    {
+      "id": "royal-airship-twelve-hundred",
+      "displayNameRu": "Королевский Дирижабль",
+      "diamondPrice": 1200,
+      "poster": "posters/royal-airship-twelve-hundred.svg",
+      "soundCue": "sound-cues/royal-airship-twelve-hundred-cue.wav"
+    },
+    {
+      "id": "diamond-tiger-forty-five-hundred",
+      "displayNameRu": "Алмазный Тигр",
+      "diamondPrice": 4500,
+      "poster": "posters/diamond-tiger-forty-five-hundred.svg",
+      "soundCue": "sound-cues/diamond-tiger-forty-five-hundred-cue.wav"
+    },
+    {
+      "id": "crystal-planet-nine-five-hundred",
+      "displayNameRu": "Кристальная Планета",
+      "diamondPrice": 9500,
+      "poster": "posters/crystal-planet-nine-five-hundred.svg",
+      "soundCue": "sound-cues/crystal-planet-nine-five-hundred-cue.wav"
+    },
+    {
+      "id": "immortal-dragon-ten-thousand",
+      "displayNameRu": "Бессмертный Дракон",
+      "diamondPrice": 10000,
+      "poster": "posters/immortal-dragon-ten-thousand.svg",
+      "soundCue": "sound-cues/immortal-dragon-ten-thousand-cue.wav"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+export const STREAM_113U_LIVE_FINAL_PHONE_KERNEL_AUDIT_UIUX_PLAN = {
+  version: "STREAM-113U",
+  title: "Live final phone UI/UX audit with kernel-only connection boundary",
+  scope: "Stream Live UI/UX only",
+  order: [
+    "Finish Live UI/UX to 100% first.",
+    "Then finish full Stream to 100%.",
+    "Add profile/business hooks inside Live only when needed, without creating their full screens now.",
+    "Keep gift sending as an end-stage feature; no fake payment or gift send now.",
+  ],
+  checks: [
+    "Phone first screen has clean hierarchy and no overlap.",
+    "Technical panels remain hidden from normal UX.",
+    "Host/viewer paths are one continuous product journey.",
+    "18+, profanity, insults, reports and review remain clear and safe.",
+    "All future realtime/provider/room lifecycle/moderation/co-host/battle sync goes through core/kernel facades/events.",
+    "No direct provider/realtime/scattered service connection is promised from UI.",
+  ],
+  forbidden: {
+    walletTouch: false,
+    messengerTouch: false,
+    coreAiTouch: false,
+    businessStreamScreenNow: false,
+    profileScreenNow: false,
+    giftSendNow: false,
+    fakeLive: false,
+    fakeRealtime: false,
+    fakeProvider: false,
+    fakePayments: false,
+    fakeGiftSending: false,
+  },
+} as const;

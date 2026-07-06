@@ -1,0 +1,37 @@
+{
+  "version": "STREAM-GAME-GIFTS-195D",
+  "title": "Stream Gift Local Economy Disclosure Final Handoff",
+  "scope": "24 gifts / user-facing only / evidence-only",
+  "sourceRuntimeChangedNow": false,
+  "streamScreenChangedNow": false,
+  "indexChangedNow": false,
+  "base": "195C",
+  "chainClosed": [
+    "195A",
+    "195B-FIX1",
+    "195C",
+    "195D"
+  ],
+  "coverage": {
+    "giftCount": 24,
+    "demoPointsDisclosureCoverage": 24,
+    "giftOnlySpendingCoverage": 24,
+    "noCashoutCoverage": 24,
+    "officialCreatorBoundaryCoverage": 24,
+    "interactionModeCount": 4
+  },
+  "safety": {
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "dbReadRuntimeEnabledNow": false,
+    "dbWriteRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false
+  }
+}

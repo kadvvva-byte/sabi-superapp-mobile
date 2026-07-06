@@ -1,0 +1,25 @@
+export const stream110gProfileSetupFoundationPlan = {
+  version: "STREAM-110G",
+  title: "Streamer/profile setup foundation",
+  scope: "Stream-only streamer profile setup with creator/official/business profile drafts, local profile readiness checks, Shorts/Business Stream handoff evidence, and provider/Admin blockers. No Wallet, payments, gifts, monetization, server, or provider calls.",
+  allowedScope: [
+    "src/modules/stream/mobile/streamProfileSetupRuntime.ts",
+    "src/modules/stream/mobile/StreamProfileSetupPanel.tsx",
+    "src/modules/stream/screens/StreamScreen.tsx",
+    "src/modules/stream/index.ts",
+    "src/modules/stream/admin/streamAdminVerificationPlan.ts",
+  ],
+  forbiddenScope: ["Wallet", "Messenger", "Calls", "server", "foundation", "backend finance", "payments", "gifts", "monetization"],
+  runtimeRules: {
+    profilePublishIsLocalOnly: true,
+    officialBadgeIsReviewOnly: true,
+    businessIdentityIsDraftOnly: true,
+    providerAdminHandoffRequired: true,
+    noFakeProfilePublish: true,
+    noFakeOfficialBadge: true,
+    noFakeFollowerCount: true,
+    noFakePayment: true,
+    noFakeGift: true,
+    monetizationAllowedNow: false,
+  },
+} as const;

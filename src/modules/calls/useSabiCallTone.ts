@@ -1,8 +1,10 @@
 import { useEffect, useRef } from "react";
+import { resolveSabiSoundForKind, type SabiResolvedSound } from "../notifications/sounds/sabiSoundPreferences";
+import { getSabiBundledSoundSource } from "../notifications/sounds/sabiNotificationSounds";
 import { createSabiLoopingCallTonePlayer, setSabiCallAudioMode, stopAndRemoveSabiCallTonePlayer, type SabiCallTonePlayer } from "./sabiCallAudio";
 
 const SABI_RINGBACK_SOUND = require("../../../assets/sounds/sabi-ringback.wav");
-const SABI_RINGTONE_SOUND = require("../../../assets/sounds/sabi-ringtone.wav");
+const SABI_FAST_INCOMING_FALLBACK_SOUND = getSabiBundledSoundSource("call_neon");
 
 export type SabiCallToneMode = "none" | "incoming" | "outgoing";
 
@@ -85,6 +87,69 @@ async function stopSabiGlobalTone(ownerKey?: string) {
   await unloadSound(sound);
 }
 
+function isSameSabiIncomingTone(selected: SabiResolvedSound | null) {
+  return !selected || (!selected.isCustom && selected.id === "call_neon");
+}
+
+async function resolveIncomingToneSafely() {
+  try {
+    return await resolveSabiSoundForKind("call");
+  } catch {
+    return null;
+  }
+}
+
+async function upgradeSabiIncomingToneIfNeeded(params: {
+  ownerKey: string;
+  callId: string;
+  generation: number;
+  volume: number;
+}) {
+  const selectedIncomingTone = await resolveIncomingToneSafely();
+  if (isSameSabiIncomingTone(selectedIncomingTone)) return;
+
+  const state = getSabiGlobalToneState();
+  if (
+    state.generation !== params.generation ||
+    state.ownerKey !== params.ownerKey ||
+    state.callId !== params.callId ||
+    state.mode !== "incoming" ||
+    isClosedCallId(params.callId)
+  ) {
+    return;
+  }
+
+  const clip = selectedIncomingTone?.isCustom
+    ? {
+        clipStartMs: selectedIncomingTone.clipStartMs ?? 0,
+        clipDurationMs: selectedIncomingTone.clipDurationMs ?? 30000,
+      }
+    : undefined;
+
+  try {
+    const nextSound = await createSabiLoopingCallTonePlayer(
+      selectedIncomingTone?.source ?? SABI_FAST_INCOMING_FALLBACK_SOUND,
+      params.volume,
+      clip,
+    );
+    const current = getSabiGlobalToneState();
+    if (
+      current.generation !== params.generation ||
+      current.ownerKey !== params.ownerKey ||
+      current.callId !== params.callId ||
+      current.mode !== "incoming" ||
+      isClosedCallId(params.callId)
+    ) {
+      await unloadSound(nextSound);
+      return;
+    }
+
+    const previousSound = current.sound;
+    current.sound = nextSound;
+    await unloadSound(previousSound);
+  } catch {}
+}
+
 export function markSabiCallToneCallClosed(callId?: string) {
   const id = String(callId || "");
   if (!id) return;
@@ -127,7 +192,7 @@ export function useSabiCallTone(params: {
 
     async function startTone() {
       if (!params.enabled || params.mode === "none" || isClosedCallId(callId)) {
-        await stopSabiGlobalTone(ownerKey);
+        await stopSabiGlobalTone();
         return;
       }
 
@@ -144,7 +209,7 @@ export function useSabiCallTone(params: {
       // caused delayed ringback on some Android devices.
       void configureSabiCallToneAudio();
 
-      const source = params.mode === "incoming" ? SABI_RINGTONE_SOUND : SABI_RINGBACK_SOUND;
+      const source = params.mode === "incoming" ? SABI_FAST_INCOMING_FALLBACK_SOUND : SABI_RINGBACK_SOUND;
       const volume = params.mode === "incoming" ? 0.9 : 0.5;
 
       try {
@@ -170,6 +235,15 @@ export function useSabiCallTone(params: {
         current.stopTimer = setTimeout(() => {
           void stopSabiGlobalTone(ownerKey);
         }, params.mode === "incoming" ? 90000 : 75000);
+
+        if (params.mode === "incoming") {
+          void upgradeSabiIncomingToneIfNeeded({
+            ownerKey,
+            callId,
+            generation: startGeneration,
+            volume,
+          });
+        }
       } catch {
         const failedState = getSabiGlobalToneState();
         if (failedState.ownerKey === ownerKey) {

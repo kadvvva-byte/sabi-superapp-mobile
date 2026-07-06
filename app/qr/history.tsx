@@ -6,8 +6,119 @@ import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { fetchSabiQrHistory } from "../../src/modules/qr/api/qrApiClient";
 import { getSabiQrRuntimeState, subscribeSabiQrRuntime } from "../../src/modules/qr/runtime/qrRuntimeStore";
-import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../src/shared/i18n/qr-mobile-hooks";
 import type { SabiQrTokenRecord } from "../../src/modules/qr/contracts/universalQr.contracts";
+import { cleanSabiQrUserDisplayValue } from "../../src/modules/qr/runtime/qrDisplaySanitizer";
+
+
+type QrHistoryVisibleRow = {
+  labelKey: string;
+  value: string;
+};
+
+function normalizeText(value: unknown): string {
+  return typeof value === "string" ? value.trim() : String(value ?? "").trim();
+}
+
+function metadataValue(token: SabiQrTokenRecord, keys: string[]): string {
+  const metadata = token.metadata;
+  if (!metadata || typeof metadata !== "object") return "";
+  const record = metadata as Record<string, unknown>;
+  for (const key of keys) {
+    const value = normalizeText(record[key]);
+    if (value) return value;
+  }
+  return "";
+}
+
+function firstVisibleHuman(values: unknown[], maxLength = 64): string {
+  for (const value of values) {
+    const clean = cleanSabiQrUserDisplayValue(value, { kind: "human", maxLength });
+    if (clean) return clean;
+  }
+  return "";
+}
+
+function firstVisibleReference(values: unknown[], maxLength = 56): string {
+  for (const value of values) {
+    const clean = cleanSabiQrUserDisplayValue(value, { kind: "reference", maxLength });
+    if (clean) return clean;
+  }
+  return "";
+}
+
+function firstVisiblePhone(values: unknown[]): string {
+  for (const value of values) {
+    const clean = cleanSabiQrUserDisplayValue(value, { kind: "phone", maxLength: 24 });
+    if (clean) return clean;
+  }
+  return "";
+}
+
+function buildQrHistoryIdentityTitle(token: SabiQrTokenRecord): string {
+  const verified = token.verifiedIdentity;
+  const firstLast = [verified?.firstName, verified?.lastName]
+    .map(normalizeText)
+    .filter(Boolean)
+    .join(" ");
+  const username = firstVisibleHuman([
+    verified?.username ? `@${normalizeText(verified.username).replace(/^@+/, "")}` : "",
+    metadataValue(token, ["username", "publicUsername", "handle"]),
+  ], 40);
+  const phone = firstVisiblePhone([metadataValue(token, ["phone", "phoneNumber", "phoneMasked"])]);
+
+  return firstVisibleHuman([
+    verified?.displayName,
+    firstLast,
+    metadataValue(token, [
+      "displayName",
+      "publicName",
+      "name",
+      "fullName",
+      "targetName",
+      "recipientName",
+      "payeeName",
+      "merchantName",
+      "businessName",
+      "organizationName",
+      "companyName",
+      "title",
+    ]),
+    username,
+    phone,
+  ]);
+}
+
+function buildQrHistoryVisibleRows(token: SabiQrTokenRecord): QrHistoryVisibleRow[] {
+  const rows: QrHistoryVisibleRow[] = [];
+  const seen = new Set<string>();
+  const add = (labelKey: string, value: string) => {
+    const cleanValue = value.trim();
+    const dedupeKey = `${labelKey}:${cleanValue.toLowerCase()}`;
+    if (!cleanValue || seen.has(dedupeKey)) return;
+    seen.add(dedupeKey);
+    rows.push({ labelKey, value: cleanValue });
+  };
+
+  const amount = normalizeText(token.amount || metadataValue(token, ["amount", "total", "price"]));
+  const currency = normalizeText(token.currency || metadataValue(token, ["currency", "coinSymbol"]));
+  if (amount || currency) add("qr.mobile.common.amount", [amount, currency].filter(Boolean).join(" "));
+
+  add("qr.mobile.common.reference", firstVisibleReference([
+    token.reference,
+    metadataValue(token, ["reference", "orderNumber", "orderTitle", "invoiceNumber", "note", "comment"]),
+  ]));
+  add("qr.mobile.common.counterparty", firstVisibleHuman([
+    metadataValue(token, ["counterpartyName", "recipientName", "payeeName", "customerName"]),
+    token.counterpartyId,
+  ]));
+  add("qr.mobile.common.organization", firstVisibleHuman([
+    metadataValue(token, ["organizationName", "businessName", "merchantName", "companyName", "storeName"]),
+    token.organizationId,
+  ]));
+
+  return rows.slice(0, 4);
+}
 
 function mergeTokens(remote: SabiQrTokenRecord[], local: SabiQrTokenRecord[]): SabiQrTokenRecord[] {
   const byId = new Map<string, SabiQrTokenRecord>();
@@ -76,16 +187,26 @@ export default function SabiQrHistoryScreen() {
           </View>
         ) : (
           <View style={styles.list}>
-            {tokens.map((token) => (
-              <View key={token.tokenId} style={styles.itemCard}>
-                <View style={styles.itemHeader}>
-                  <Text style={styles.itemTitle}>{functionTitle(token.functionCode)}</Text>
-                  <Text style={styles.itemBadge}>{valueLabel(token.surface)}</Text>
+            {tokens.map((token) => {
+              const title = buildQrHistoryIdentityTitle(token);
+              const rows = buildQrHistoryVisibleRows(token);
+
+              return (
+                <View key={token.tokenId} style={styles.itemCard}>
+                  <View style={styles.itemHeader}>
+                    <Text style={styles.itemTitle}>{functionTitle(token.functionCode)}</Text>
+                    <Text style={styles.itemBadge}>{valueLabel(token.surface)}</Text>
+                  </View>
+                  <Text style={styles.itemMeta}>{tq("qr.mobile.common.expires", { value: new Date(token.expiresAt).toLocaleString() })}</Text>
+                  {title ? <Text numberOfLines={1} style={styles.itemValue}>{title}</Text> : null}
+                  {rows.map((row) => (
+                    <Text key={`${token.tokenId}-${row.labelKey}-${row.value}`} numberOfLines={1} style={styles.itemSubValue}>
+                      {tq(row.labelKey)}: {row.value}
+                    </Text>
+                  ))}
                 </View>
-                <Text style={styles.itemMeta}>{valueLabel(token.trustState)} • {tq("qr.mobile.common.expires", { value: new Date(token.expiresAt).toLocaleString() })}</Text>
-                <Text numberOfLines={1} style={styles.itemValue}>{token.shortValue}</Text>
-              </View>
-            ))}
+              );
+            })}
           </View>
         )}
       </ScrollView>
@@ -112,4 +233,5 @@ const styles = StyleSheet.create({
   itemBadge: { color: "#77A7FF", fontSize: 10, fontWeight: "900", paddingHorizontal: 8, paddingVertical: 5, borderRadius: 999, backgroundColor: "rgba(119,167,255,0.12)" },
   itemMeta: { color: "rgba(255,255,255,0.62)", fontSize: 11, fontWeight: "700", marginTop: 6 },
   itemValue: { color: "#77A7FF", fontSize: 12, fontWeight: "800", marginTop: 7 },
+  itemSubValue: { color: "rgba(255,255,255,0.70)", fontSize: 11, lineHeight: 16, fontWeight: "700", marginTop: 5 },
 });

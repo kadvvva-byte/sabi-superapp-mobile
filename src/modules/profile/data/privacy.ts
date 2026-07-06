@@ -55,6 +55,46 @@ export type PrivacyHubRow = {
   badge?: string;
 };
 
+export const SABI_PRIVACY_POLICY_URL =
+  "https://sabi.example.com/privacy";
+
+export const SABI_ACCOUNT_DELETION_URL =
+  "https://sabi.example.com/account-deletion";
+
+export const SABI_PRIVACY_POLICY_URL_STATUS =
+  "placeholder_until_final_public_domain_connected";
+
+export const SABI_ACCOUNT_DELETION_PATH =
+  "Profile > Privacy > Account deletion";
+
+export const SABI_ACCOUNT_DELETION_RETENTION_EXCEPTIONS = [
+  "fraud and abuse prevention",
+  "security logs",
+  "payment disputes and chargebacks",
+  "legal, tax, and accounting obligations",
+  "KYC, KYB, and AML records",
+  "provider, issuer, or payment network obligations",
+  "records required to protect users and comply with law",
+] as const;
+
+export const SABI_ACCOUNT_DELETION_REVIEWER_EVIDENCE = [
+  "in-app account deletion path",
+  "public web deletion request URL",
+  "retention exception copy",
+  "Privacy Policy URL",
+  "support/contact path",
+  "Data Safety consistency note",
+] as const;
+
+export const SABI_ACCOUNT_DELETION_PRIVACY_ROW: PrivacyHubRow = {
+  key: "account_deletion",
+  title: "Account deletion",
+  description:
+    "Review how to request Sabi account deletion, what can be deleted, and which records may be retained for legal, financial, security, KYC/KYB/AML, provider, or dispute obligations.",
+  route: "/profile/privacy/auto-delete",
+  badge: "Play-ready",
+};
+
 const EVERYONE: PrivacyOption = {
   key: "everyone",
   label: "profile.privacyDetailScreen.options.everyone",
@@ -89,11 +129,12 @@ export const PRIVACY_SECURITY_ROWS: PrivacyHubRow[] = [
     description: "profile.privacyScreen.rows.blocked.description",
     route: "/profile/blocked",
   },
+  SABI_ACCOUNT_DELETION_PRIVACY_ROW,
   {
     key: "autodelete",
     title: "profile.privacyScreen.rows.autodelete.title",
     description: "profile.privacyScreen.rows.autodelete.description",
-    route: "/profile/auto-delete",
+    route: "/profile/privacy/auto-delete",
   },
   {
     key: "login_email",

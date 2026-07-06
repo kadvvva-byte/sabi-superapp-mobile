@@ -17,12 +17,12 @@ export const RU_COMPLETION_LOCALE = {
         "title": "Сетевое лобби",
         "value": "Основа лобби готова. Для реального match-making требуется подключение provider."
       },
-      "miniApps": "Mini Apps",
+      "miniApps": "Мини-приложения",
       "policy": {
         "title": "Политика наград"
       },
       "realtime": {
-        "title": "Realtime provider",
+        "title": "Провайдер реального времени",
         "value": "Без фальшивых онлайн-соперников. До интеграции показывается состояние provider required."
       },
       "rewards": {
@@ -39,7 +39,7 @@ export const RU_COMPLETION_LOCALE = {
       "hearts": "Сердца",
       "search": "Поиск animated emoji",
       "subtitle": "Premium emoji с полноэкранным воспроизведением 5 секунд",
-      "title": "Animated emoji"
+      "title": "Анимированные эмодзи"
     },
     "chat": {
       "addContactName": "Имя",
@@ -49,7 +49,7 @@ export const RU_COMPLETION_LOCALE = {
       "addContactSave": "Сохранить контакт",
       "addContactSubtitle": "Сохраните контакт в Sabi Messenger или в контактах телефона.",
       "addContactTitle": "Добавить контакт",
-      "addContactUsername": "Username",
+      "addContactUsername": "Имя пользователя",
       "addContactUsernamePlaceholder": "Введите username",
       "contactChooseSource": "Выберите источник контакта",
       "contactNameRequired": "Нужно указать имя контакта.",
@@ -152,17 +152,17 @@ export const RU_COMPLETION_LOCALE = {
       },
       "hero": {
         "description": "Настройки и информация для раздела бизнес-аккаунта.",
-        "launchBadge": "launch Бейдж",
+        "launchBadge": "Бейдж запуска",
         "title": "Раздел бизнес-аккаунта"
       },
       "sections": {
-        "features": "features",
-        "plans": "plans"
+        "Возможности": "Возможности",
+        "Планы": "Планы"
       }
     },
     "colorsScreen": {
       "alerts": {
-        "savedDescription": "saved Описание",
+        "savedDescription": "Описание сохранения",
         "savedTitle": "saved Заголовок"
       },
       "footer": {
@@ -183,7 +183,7 @@ export const RU_COMPLETION_LOCALE = {
         "title": "Раздел темы и рамок профиля"
       },
       "preview": {
-        "bio": "bio",
+        "Био": "Био",
         "ownerThemeBadge": "Тема владельца",
         "quickPills": {
           "aiIdentity": "AI-идентичность",
@@ -241,15 +241,15 @@ export const RU_COMPLETION_LOCALE = {
       "title": "Завершите профиль",
       "unifiedId": "Единый User ID",
       "unifiedIdHint": "Это будет основной ID для Wallet, Messenger и всего аккаунта.",
-      "username": "Username",
+      "username": "Имя пользователя",
       "usernameHint": "Username создаётся на основе имени, но его можно изменить вручную."
     },
     "creditsScreen": {
       "balance": {
         "actions": {
-          "giftCenter": "gift center",
-          "statistics": "statistics",
-          "topUp": "top up"
+          "giftCenter": "Центр подарков",
+          "Статистика": "Статистика",
+          "topUp": "Пополнить"
         },
         "label": "Поле кредитов"
       },
@@ -280,7 +280,7 @@ export const RU_COMPLETION_LOCALE = {
           "title": "Раздел управления данными"
         }
       },
-      "discovery": {
+      "Поиск": {
         "memoryControls": {
           "description": "Настройки и информация для раздела управления данными.",
           "title": "Раздел управления данными"
@@ -314,9 +314,9 @@ export const RU_COMPLETION_LOCALE = {
         }
       },
       "metrics": {
-        "contactsSync": "contacts sync",
-        "draftBackup": "draft backup",
-        "privateExport": "private export"
+        "contactsSync": "Синхронизация контактов",
+        "draftBackup": "Резервная копия черновиков",
+        "privateExport": "Приватный экспорт"
       },
       "metricStates": {
         "off": "off",
@@ -326,18 +326,18 @@ export const RU_COMPLETION_LOCALE = {
         "description": "Настройки и информация для раздела управления данными.",
         "title": "Раздел управления данными"
       },
-      "retention": {
+      "Хранение": {
         "autoCleanup": {
           "description": "Настройки и информация для раздела управления данными.",
           "title": "Раздел управления данными"
         }
       },
       "sections": {
-        "discovery": "discovery",
-        "retention": "retention",
-        "storage": "storage"
+        "Поиск": "Поиск",
+        "Хранение": "Хранение",
+        "Хранилище": "Хранилище"
       },
-      "storage": {
+      "Хранилище": {
         "draftBackup": {
           "description": "Настройки и информация для раздела управления данными.",
           "title": "Раздел управления данными"
@@ -409,7 +409,7 @@ export const RU_COMPLETION_LOCALE = {
         "subtitle": "Управление разделом редактирования профиля.",
         "title": "Раздел редактирования профиля"
       },
-      "presentation": {
+      "Представление": {
         "ai": {
           "badge": "Бейдж",
           "description": "Настройки и информация для раздела редактирования профиля.",
@@ -429,7 +429,7 @@ export const RU_COMPLETION_LOCALE = {
           "title": "Раздел редактирования профиля"
         }
       },
-      "safety": {
+      "Безопасность": {
         "privacy": {
           "description": "Настройки и информация для раздела редактирования профиля.",
           "title": "Раздел редактирования профиля"
@@ -445,13 +445,13 @@ export const RU_COMPLETION_LOCALE = {
       },
       "sections": {
         "identity": "Идентичность",
-        "presentation": "presentation",
-        "safety": "safety"
+        "Представление": "Представление",
+        "Безопасность": "Безопасность"
       }
     },
     "giftsScreen": {
       "common": {
-        "diamonds": "diamonds"
+        "Алмазы": "Алмазы"
       },
       "footer": {
         "action": "Продолжить",
@@ -464,19 +464,19 @@ export const RU_COMPLETION_LOCALE = {
       },
       "hero": {
         "actions": {
-          "credits": "credits",
+          "Кредиты": "Кредиты",
           "premium": "Premium",
           "public": "Публичный профиль",
           "theme": "Тема"
         },
         "badges": {
           "identity": "Идентичность",
-          "unifiedIdBound": "unified id bound"
+          "unifiedIdBound": "Единый ID привязан"
         },
         "stats": {
-          "diamonds": "diamonds",
+          "Алмазы": "Алмазы",
           "owner": "Владелец",
-          "status": "status"
+          "Статус": "Статус"
         }
       },
       "intro": {
@@ -503,14 +503,14 @@ export const RU_COMPLETION_LOCALE = {
     },
     "identityDetail": {
       "birthday": {
-        "day": "day",
-        "dayPlaceholder": "day Поле ввода",
-        "month": "month",
-        "monthPlaceholder": "month Поле ввода",
+        "День": "День",
+        "dayPlaceholder": "Поле ввода дня",
+        "Месяц": "Месяц",
+        "monthPlaceholder": "Поле ввода месяца",
         "noteText": "Примечание Текст",
         "noteTitle": "Примечание Заголовок",
-        "year": "year",
-        "yearPlaceholder": "year Поле ввода"
+        "Год": "Год",
+        "yearPlaceholder": "Поле ввода года"
       },
       "channel": {
         "fieldLabel": "Поле Метка",
@@ -522,13 +522,13 @@ export const RU_COMPLETION_LOCALE = {
         "noteText": "Примечание Текст",
         "noteTitle": "Примечание Заголовок",
         "presets": {
-          "blue": "blue",
-          "emerald": "emerald",
-          "gold": "gold",
-          "purple": "purple",
-          "teal": "teal"
+          "Синий": "Синий",
+          "Изумрудный": "Изумрудный",
+          "Золотой": "Золотой",
+          "Фиолетовый": "Фиолетовый",
+          "Бирюзовый": "Бирюзовый"
         },
-        "previewTitle": "preview Заголовок"
+        "previewTitle": "Заголовок предпросмотра"
       },
       "modes": {
         "birthday": {
@@ -572,7 +572,7 @@ export const RU_COMPLETION_LOCALE = {
     },
     "likesScreen": {
       "actions": {
-        "fromUsers": "from users"
+        "fromUsers": "От пользователей"
       },
       "card": {
         "subtitle": "Управление разделом лайков профиля.",
@@ -668,11 +668,11 @@ export const RU_COMPLETION_LOCALE = {
     },
     "photosScreen": {
       "actions": {
-        "cameraFx": "camera fx",
-        "gallery": "gallery"
+        "cameraFx": "Эффекты камеры",
+        "Галерея": "Галерея"
       },
       "alerts": {
-        "permissionMessage": "permission message",
+        "permissionMessage": "Сообщение о разрешении",
         "permissionTitle": "permission Заголовок"
       },
       "badges": {
@@ -687,25 +687,25 @@ export const RU_COMPLETION_LOCALE = {
         "title": "Раздел фотографий профиля"
       },
       "filters": {
-        "cool": "cool",
-        "emerald": "emerald",
-        "mono": "mono",
-        "none": "none",
-        "warm": "warm"
+        "Холодный": "Холодный",
+        "Изумрудный": "Изумрудный",
+        "Монохромный": "Монохромный",
+        "Без фильтра": "Без фильтра",
+        "Тёплый": "Тёплый"
       },
       "header": {
         "title": "Раздел фотографий профиля"
       },
       "modal": {
         "actions": {
-          "delete": "delete",
-          "setAvatar": "set Аватар"
+          "Удалить": "Удалить",
+          "setAvatar": "Сделать аватаром"
         },
         "editor": {
-          "left": "left",
-          "mirrorX": "mirror x",
-          "mirrorY": "mirror y",
-          "right": "right"
+          "Влево": "Влево",
+          "mirrorX": "Отразить по горизонтали",
+          "mirrorY": "Отразить по вертикали",
+          "Вправо": "Вправо"
         }
       }
     },
@@ -730,25 +730,25 @@ export const RU_COMPLETION_LOCALE = {
         }
       },
       "metrics": {
-        "compact": "compact",
-        "haptics": "haptics",
-        "sound": "sound"
+        "Компактно": "Компактно",
+        "Вибрация": "Вибрация",
+        "Звук": "Звук"
       },
       "note": {
         "description": "Настройки и информация для раздела настроек профиля.",
         "title": "Раздел настроек профиля"
       },
       "sections": {
-        "interaction": "interaction",
-        "localization": "localization",
-        "presentation": "presentation"
+        "Взаимодействие": "Взаимодействие",
+        "Локализация": "Локализация",
+        "Представление": "Представление"
       },
       "toggles": {
-        "compact": {
+        "Компактно": {
           "description": "Настройки и информация для раздела настроек профиля.",
           "title": "Раздел настроек профиля"
         },
-        "haptics": {
+        "Вибрация": {
           "description": "Настройки и информация для раздела настроек профиля.",
           "title": "Раздел настроек профиля"
         },
@@ -760,14 +760,14 @@ export const RU_COMPLETION_LOCALE = {
           "description": "Настройки и информация для раздела настроек профиля.",
           "title": "Раздел настроек профиля"
         },
-        "sound": {
+        "Звук": {
           "description": "Настройки и информация для раздела настроек профиля.",
           "title": "Раздел настроек профиля"
         }
       }
     },
     "premiumScreen": {
-      "features": {
+      "Возможности": {
         "ai": {
           "subtitle": "Управление разделом профиля.",
           "title": "Раздел профиля"
@@ -776,7 +776,7 @@ export const RU_COMPLETION_LOCALE = {
           "subtitle": "Управление разделом профиля.",
           "title": "Раздел профиля"
         },
-        "gifts": {
+        "Подарки": {
           "subtitle": "Управление разделом профиля.",
           "title": "Раздел профиля"
         },
@@ -797,7 +797,7 @@ export const RU_COMPLETION_LOCALE = {
       "hero": {
         "actions": {
           "ai": "AI",
-          "gifts": "gifts",
+          "Подарки": "Подарки",
           "public": "Публичный профиль",
           "themes": "Темы"
         },
@@ -836,11 +836,11 @@ export const RU_COMPLETION_LOCALE = {
           "description": "Настройки и информация для раздела профиля.",
           "title": "Раздел профиля"
         },
-        "credits": {
+        "Кредиты": {
           "description": "Настройки и информация для раздела профиля.",
           "title": "Раздел профиля"
         },
-        "gifts": {
+        "Подарки": {
           "description": "Настройки и информация для раздела профиля.",
           "title": "Раздел профиля"
         },
@@ -854,8 +854,8 @@ export const RU_COMPLETION_LOCALE = {
         }
       },
       "sections": {
-        "controls": "controls",
-        "unlocks": "unlocks"
+        "Управление": "Управление",
+        "Разблокировки": "Разблокировки"
       }
     },
     "privacyDetailScreen": {
@@ -865,7 +865,7 @@ export const RU_COMPLETION_LOCALE = {
       "exceptions": {
         "title": "Раздел профиля"
       },
-      "lockedHelper": "locked helper",
+      "lockedHelper": "Подсказка для заблокированного режима",
       "notes": {
         "title": "Раздел профиля"
       },
@@ -878,7 +878,7 @@ export const RU_COMPLETION_LOCALE = {
         "eyebrow": "ПРОФИЛЯ"
       },
       "preview": {
-        "forwardedFrom": "forwarded from"
+        "forwardedFrom": "Переслано от"
       }
     },
     "privacyScreen": {
@@ -888,20 +888,20 @@ export const RU_COMPLETION_LOCALE = {
         "title": "Раздел профиля"
       },
       "sections": {
-        "securityAccess": "Безопасность access",
-        "visibilityCommunication": "visibility communication"
+        "Безопасность и доступ": "Безопасность access",
+        "visibilityCommunication": "Видимость и общение"
       }
     },
     "publicScreen": {
       "editor": {
-        "bio": "bio",
-        "name": "name",
+        "Био": "Био",
+        "Имя": "Имя",
         "subtitle": "Управление разделом профиля.",
         "title": "Раздел профиля",
-        "username": "Username"
+        "username": "Имя пользователя"
       },
       "fallback": {
-        "bio": "bio",
+        "Био": "Био",
         "subtitle": "Управление разделом профиля."
       },
       "header": {
@@ -922,7 +922,7 @@ export const RU_COMPLETION_LOCALE = {
         }
       },
       "sections": {
-        "manage": "manage",
+        "Управление": "Управление",
         "metrics": "Метрики"
       }
     },
@@ -937,13 +937,13 @@ export const RU_COMPLETION_LOCALE = {
     },
     "securityScreen": {
       "common": {
-        "notRequired": "not required",
+        "notRequired": "Не требуется",
         "required": "Обязательно"
       },
       "emailFlow": {
-        "currentEmail": "current Email {{value}}",
-        "currentVerification": "current Верификация {{value}}",
-        "newVerification": "new Верификация {{value}}",
+        "currentEmail": "Текущий Email {{value}}",
+        "currentVerification": "Текущая верификация {{value}}",
+        "newVerification": "Новая верификация {{value}}",
         "title": "Раздел профиля"
       },
       "identityChange": {
@@ -976,7 +976,7 @@ export const RU_COMPLETION_LOCALE = {
           "description": "Настройки и информация для раздела профиля.",
           "title": "Раздел профиля"
         },
-        "biometric": {
+        "Биометрия": {
           "description": "Настройки и информация для раздела профиля.",
           "title": "Раздел профиля"
         },
@@ -986,20 +986,20 @@ export const RU_COMPLETION_LOCALE = {
         }
       },
       "metrics": {
-        "appPin": "app pin",
-        "biometric": "biometric",
-        "twoFactor": "two factor"
+        "appPin": "PIN приложения",
+        "Биометрия": "Биометрия",
+        "twoFactor": "Двухфакторная защита"
       },
       "phoneFlow": {
-        "currentPhone": "current Телефон {{value}}",
-        "newVerification": "new Верификация {{value}}",
-        "oldVerification": "old Верификация {{value}}",
+        "currentPhone": "Текущий телефон {{value}}",
+        "newVerification": "Новая верификация {{value}}",
+        "oldVerification": "Старая верификация {{value}}",
         "title": "Раздел профиля"
       },
       "sections": {
-        "identityChangeProtection": "Идентичность change protection",
-        "mainProtection": "main protection",
-        "sensitiveActions": "sensitive Действия"
+        "identityChangeProtection": "Защита изменения идентичности",
+        "mainProtection": "Основная защита",
+        "sensitiveActions": "Чувствительные действия"
       },
       "sensitiveActions": {
         "confirmation": {
@@ -1018,11 +1018,11 @@ export const RU_COMPLETION_LOCALE = {
     },
     "shortVideosScreen": {
       "actions": {
-        "add": "add"
+        "Добавить": "Добавить"
       },
       "alerts": {
         "permission": {
-          "message": "message",
+          "Сообщение": "Сообщение",
           "title": "Раздел профиля"
         }
       },
@@ -1041,7 +1041,7 @@ export const RU_COMPLETION_LOCALE = {
         "title": "Раздел профиля"
       },
       "modal": {
-        "remove": "remove"
+        "Удалить": "Удалить"
       }
     },
     "supportScreen": {
@@ -1070,8 +1070,8 @@ export const RU_COMPLETION_LOCALE = {
     },
     "trustedScreen": {
       "actions": {
-        "block": "block",
-        "restore": "restore"
+        "Заблокировать": "Заблокировать",
+        "Восстановить": "Восстановить"
       },
       "badges": {
         "blocked": "Заблокированные",
@@ -1126,7 +1126,7 @@ export const RU_COMPLETION_LOCALE = {
       "checks": {
         "address": "Адрес",
         "email": "Email",
-        "liveness": "Liveness",
+        "liveness": "Проверка живости",
         "phone": "Телефон"
       },
       "common": {
@@ -1155,7 +1155,7 @@ export const RU_COMPLETION_LOCALE = {
       },
       "metrics": {
         "email": "Email",
-        "liveness": "Liveness",
+        "liveness": "Проверка живости",
         "phone": "Телефон"
       },
       "sections": {
@@ -1171,7 +1171,7 @@ export const RU_COMPLETION_LOCALE = {
       },
       "alerts": {
         "permission": {
-          "message": "Разрешите доступ к микрофону.",
+          "Сообщение": "Разрешите доступ к микрофону.",
           "title": "Разрешение микрофона"
         },
         "recordFailed": "Не удалось записать голос."
@@ -1202,7 +1202,7 @@ export const RU_COMPLETION_LOCALE = {
   },
   "stories": {
     "actions": {
-      "add": "Добавить"
+      "Добавить": "Добавить"
     },
     "empty": {
       "action": "Открыть профиль",
@@ -1210,7 +1210,7 @@ export const RU_COMPLETION_LOCALE = {
       "title": "Публичных stories пока нет"
     },
     "header": {
-      "title": "Stories"
+      "title": "Истории"
     },
     "hero": {
       "subtitle": "Фото и короткие видео из публичного профиля показываются здесь без чёрного экрана.",

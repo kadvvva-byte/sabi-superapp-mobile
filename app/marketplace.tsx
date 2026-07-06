@@ -1,6 +1,7 @@
 import React from "react";
-import HomeProgramEntryScreen from "../src/modules/home/screens/HomeProgramEntryScreen";
+
+import MarketplaceScreen from "../src/modules/marketplace/screens/MarketplaceScreen";
 
 export default function MarketplaceEntryScreen() {
-  return <HomeProgramEntryScreen kind="marketplace" />;
+  return <MarketplaceScreen />;
 }

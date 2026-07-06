@@ -1,0 +1,32 @@
+{
+  "version": "STREAM-GAME-GIFTS-196A",
+  "scope": "user_facing_mobile_only_final_integration_qa",
+  "giftCount": 24,
+  "coverage": {
+    "catalog192C": 24,
+    "livePreview191D": 24,
+    "sendComposer193C": 24,
+    "receiptHistory194D": 24,
+    "localEconomyDisclosure195D": 24,
+    "finalIntegrationQa196A": 24
+  },
+  "safety": {
+    "realSendRuntimeEnabledNow": false,
+    "backendRuntimeEnabledNow": false,
+    "dbReadRuntimeEnabledNow": false,
+    "dbWriteRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "walletMutationEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualMediaPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  },
+  "files": [
+    "src/modules/stream/gifts/streamPremiumGiftMobileFinalIntegrationQa196A.ts",
+    "src/modules/stream/screens/StreamScreen.tsx",
+    "src/modules/stream/index.ts"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "version": "STREAM-GAME-GIFTS-191C",
+  "scope": "mobile_user_facing_live_preview_interaction_polish_only",
+  "giftCount": 24,
+  "interactionModes": [
+    "replay",
+    "focus",
+    "reduceMotion"
+  ],
+  "phaseControls": [
+    "entrance",
+    "loop",
+    "finale"
+  ],
+  "actualAnimationPlaybackRuntimeEnabledNow": false,
+  "actualMediaPlaybackRuntimeEnabledNow": false,
+  "actualSoundAutoplayRuntimeEnabledNow": false,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false,
+  "randomWinRuntimeEnabledNow": false
+}

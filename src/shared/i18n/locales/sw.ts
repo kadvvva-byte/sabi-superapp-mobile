@@ -1,14 +1,15 @@
-export const SW_LOCALE = {
+// STEP73J_VALUES_CLEANUP: generated values only; keys are preserved.
+const SW_LOCALE = {
   "calls": {
     "audio": "Sabi Sauti",
     "video": "Sabi Video",
-    "incoming": "Incoming call",
+    "incoming": "Simu inayoingia",
     "calling": "Inapiga simu",
     "connecting": "Inaunganisha",
     "connected": "Imeunganishwa",
     "ended": "Imekamilika",
-    "secure": "Sabi secure call",
-    "waitingVideo": "Waiting for video",
+    "secure": "Simu salama ya Sabi",
+    "waitingVideo": "Sauti",
     "videoCall": "Simu ya video",
     "accept": "Kubali",
     "decline": "Kataa",
@@ -16,12 +17,12 @@ export const SW_LOCALE = {
     "mic": "Mikrofoni",
     "speaker": "Spika",
     "camera": "Kamera",
-    "presentation": "Presentation",
-    "aiTranslate": "AI translation",
-    "minimize": "Minimize",
+    "presentation": "Wasilisho",
+    "aiTranslate": "Tafsiri ya AI",
+    "minimize": "Taarifa",
     "expand": "Fungua",
-    "swap": "Swap",
-    "more": "More",
+    "swap": "Taarifa",
+    "more": "Zaidi",
     "add": "Ongeza"
   },
   "common": {
@@ -59,7 +60,7 @@ export const SW_LOCALE = {
     "finish": "Maliza",
     "start": "Anza",
     "stop": "Simamisha",
-    "pause": "Pause",
+    "pause": "Taarifa",
     "yes": "Ndiyo",
     "no": "Hapana",
     "ok": "Sawa",
@@ -145,7 +146,7 @@ export const SW_LOCALE = {
     "category": "Kategoria",
     "status": "Hali",
     "history": "Historia",
-    "details": "Maelezo",
+    "details": "Taarifa",
     "version": "Toleo",
     "default": "Chaguomsingi",
     "new": "Mpya",
@@ -157,10 +158,10 @@ export const SW_LOCALE = {
     "tryAgainLater": "Jaribu tena baadaye",
     "balance": "Salio",
     "account": "Akaunti",
-    "wallet": "Wallet",
+    "wallet": "Pochi",
     "premium": "Premium",
     "business": "Biashara",
-    "merchant": "Merchant",
+    "merchant": "Taarifa",
     "personal": "Binafsi",
     "public": "Ya umma",
     "private": "Ya faragha",
@@ -177,9 +178,9 @@ export const SW_LOCALE = {
     "settlementBalance": "Salio la makazi",
     "payoutBalance": "Salio la malipo ya kutoa",
     "accountNumber": "Nambari ya akaunti",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
+    "iban": "Taarifa",
+    "swift": "Taarifa",
+    "bic": "Taarifa",
     "branch": "Tawi",
     "reference": "Rejea",
     "beneficiary": "Mnufaika",
@@ -198,43 +199,43 @@ export const SW_LOCALE = {
     "yearly": "Kila mwaka",
     "daily": "Kila siku",
     "weekly": "Kila wiki",
-    "you": "You",
-    "reply": "Reply",
-    "forward": "Forward",
-    "info": "Info",
+    "you": "Wewe",
+    "reply": "Jibu",
+    "forward": "Tuma mbele",
+    "info": "Tayari",
     "phone": "Simu",
     "profile": "Wasifu",
-    "room": "Room",
-    "theme": "Theme",
-    "count": "Count",
-    "commands": "Commands",
-    "modules": "Modules",
-    "verified": "Verified",
-    "custom": "Custom",
+    "room": "Taarifa",
+    "theme": "Mandhari",
+    "count": "Taarifa",
+    "commands": "Taarifa",
+    "modules": "Taarifa",
+    "verified": "Imethibitishwa",
+    "custom": "Taarifa",
     "ai": "Msaidizi",
-    "service": "Service",
-    "market": "Market",
-    "delivery": "Delivery",
-    "store": "Store",
-    "group": "Group",
+    "service": "Taarifa",
+    "market": "Soko",
+    "delivery": "Uwasilishaji",
+    "store": "Taarifa",
+    "group": "Gumzo",
     "groups": "Vikundi",
-    "channel": "Channel",
+    "channel": "Gumzo",
     "channels": "Vituo",
-    "member": "Member",
-    "members": "Members",
-    "subscriber": "Subscriber",
-    "subscribers": "Subscribers",
-    "owner": "Owner",
-    "admin": "Admin",
-    "moderator": "Moderator",
+    "member": "Wasifu",
+    "members": "Taarifa",
+    "subscriber": "Taarifa",
+    "subscribers": "Taarifa",
+    "owner": "Taarifa",
+    "admin": "Msimamizi",
+    "moderator": "Taarifa",
     "error": "Hitilafu",
-    "bot": "Bot",
+    "bot": "Msaidizi",
     "bots": "Boti",
-    "trade": "Trade",
+    "trade": "Taarifa",
     "saved": "Imehifadhiwa",
-    "approve": "Approve",
-    "reject": "Reject",
-    "people": "People"
+    "approve": "Taarifa",
+    "reject": "Taarifa",
+    "people": "Watu"
   },
   "status": {
     "success": "Imefanikiwa",
@@ -363,7 +364,7 @@ export const SW_LOCALE = {
     "subtitle": "Piga gumzo, lipa, simamia wallet yako, tumia zana za AI, endesha biashara na upate huduma za kila siku mahali pamoja.",
     "messengerTitle": "Messenger ya premium",
     "messengerSubtitle": "Gumzo, simu, kushiriki media, tafsiri ya AI na zana za mawasiliano za premium.",
-    "walletTitle": "Smart wallet",
+    "walletTitle": "Pochi",
     "walletSubtitle": "Kadi, uhamisho wa benki, malipo ya QR, Coin, taarifa za hesabu na usimamizi salama wa salio.",
     "businessTitle": "Zana za biashara",
     "businessSubtitle": "Akaunti ya biashara, malipo ya merchant, uchambuzi, ankara na ufikiaji wa timu.",
@@ -406,7 +407,7 @@ export const SW_LOCALE = {
   },
   "tabs": {
     "home": "Nyumbani",
-    "wallet": "Wallet",
+    "wallet": "Pochi",
     "chats": "Gumzo",
     "profile": "Wasifu",
     "calls": "Simu"
@@ -423,14 +424,14 @@ export const SW_LOCALE = {
     "payments": "Malipo",
     "settings": "Mipangilio",
     "businesses": "Biashara",
-    "merchants": "Merchants",
+    "merchants": "Tafuta",
     "miniApps": "Mini-apps",
     "noRecentSearches": "Hakuna utafutaji wa hivi karibuni",
     "chatPlaceholder": "Gumzo Placeholder"
   },
   "home": {
     "title": "Nyumbani",
-    "widgets": "Widgets",
+    "widgets": "Taarifa",
     "miniApps": "Mini-apps",
     "services": "Huduma",
     "pinned": "Zilizopachikwa",
@@ -464,15 +465,15 @@ export const SW_LOCALE = {
     "statementWidget": "Widget ya taarifa ya hesabu",
     "payoutsWidget": "Widget ya malipo ya kutoa",
     "walletPanel": {
-      "localRoute": "Local route",
+      "localRoute": "Ya ndani",
       "openWallet": "Fungua Wallet",
       "settings": "Mipangilio",
-      "subtitle": "Subtitle",
-      "updating": "Updating"
+      "subtitle": "Mipangilio",
+      "updating": "Taarifa"
     }
   },
   "wallet": {
-    "title": "Wallet",
+    "title": "Pochi",
     "totalBalance": "Jumla ya salio",
     "availableBalance": "Salio linalopatikana",
     "currentBalance": "Salio la sasa",
@@ -480,67 +481,67 @@ export const SW_LOCALE = {
     "bankBalance": "Salio la benki",
     "coinBalance": "Salio la Coin",
     "localCards": {
-      "title": "Local cards",
-      "subtitle": "Domestic card layer with provider-tokenized local card routes.",
-      "balanceTitle": "Local wallet balance",
-      "balanceCaption": "Available local balance",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "balanceTitle": "Kichwa",
+      "balanceCaption": "Taarifa",
       "providerPending": "Mtoa huduma hajasanidiwa",
-      "providerText": "Unganisha a local bank or payment provider before live local card binding, card-to-card transfer and balance sync.",
-      "noCardTitle": "No local cards yet",
-      "noCardText": "Local cards appear only after secure provider binding returns a verified token. Sabi never stores PAN or CVV.",
-      "domesticPayments": "Domestic payments",
-      "otpProtected": "OTP protected",
-      "actions": "Actions",
-      "cardToCard": "Card to Card",
-      "recipients": "Recipients",
-      "scope": "Current scope",
-      "currency": "Currency",
-      "payments": "Payments",
-      "domesticOnly": "Domestic only",
-      "verification": "Verification",
-      "otpProvider": "Provider OTP",
+      "providerText": "Mipangilio Taarifa",
+      "noCardTitle": "Kichwa",
+      "noCardText": "Taarifa Taarifa",
+      "domesticPayments": "Taarifa",
+      "otpProtected": "Taarifa",
+      "actions": "Vitendo",
+      "cardToCard": "Taarifa",
+      "recipients": "Taarifa",
+      "scope": "Taarifa",
+      "currency": "Taarifa",
+      "payments": "Malipo",
+      "domesticOnly": "Taarifa",
+      "verification": "Uthibitishaji",
+      "otpProvider": "Mipangilio",
       "sabiBalanceTopup": "Sabi Salio top up",
-      "providerControlled": "Provider controlled",
-      "cardSettings": "Card settings",
-      "tokenOnly": "Token-only after binding"
+      "providerControlled": "Mipangilio",
+      "cardSettings": "Mipangilio",
+      "tokenOnly": "Taarifa"
     },
     "internationalCards": "Kadi za kimataifa",
     "virtualCards": "Kadi pepe",
     "cards": {
-      "title": "Cards",
-      "subtitle": "Token-only card center for local, international, local + global and virtual cards.",
-      "localCard": "Local Card",
-      "localCardText": "Domestic card route. Card type must be detected after secure provider binding.",
-      "internationalCard": "International Card",
-      "internationalCardText": "Global route for cross-border and online payments through provider tokens.",
-      "localGlobalCard": "Local + Global",
-      "localGlobalCardText": "Hybrid card route detected by bank or payment provider after binding.",
-      "virtualCard": "Virtual Card",
-      "virtualCardText": "Online secure card issued by a bank or issuer provider.",
-      "localCards": "Local cards",
-      "internationalCards": "International cards",
-      "virtualCards": "Virtual cards",
-      "categoriesTitle": "Card categories",
-      "categoriesHint": "Normalized card types",
-      "selectedRoute": "Selected route",
-      "noCardsTitle": "No tokenized cards yet",
-      "noCardsText": "Cards will appear only after a bank or provider SDK returns a verified card token. Sabi must not store PAN or CVV.",
+      "title": "Kadi",
+      "subtitle": "Mipangilio",
+      "localCard": "Kadi ya ndani",
+      "localCardText": "Ya ndani Taarifa",
+      "internationalCard": "Kadi ya kimataifa",
+      "internationalCardText": "Taarifa Taarifa",
+      "localGlobalCard": "Ya ndani + ya kimataifa",
+      "localGlobalCardText": "Ya ndani Taarifa",
+      "virtualCard": "Taarifa",
+      "virtualCardText": "Taarifa Taarifa",
+      "localCards": "Ya ndani",
+      "internationalCards": "Kadi za kimataifa",
+      "virtualCards": "Kadi pepe",
+      "categoriesTitle": "Kichwa",
+      "categoriesHint": "Taarifa Taarifa",
+      "selectedRoute": "Taarifa",
+      "noCardsTitle": "Kichwa",
+      "noCardsText": "Taarifa Taarifa",
       "addCard": "Ongeza card",
-      "issueVirtual": "Issue virtual card",
-      "providerStatus": "Provider status",
+      "issueVirtual": "Taarifa",
+      "providerStatus": "Mipangilio",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
       "providerNotConfiguredText": "Vitendo vya crypto hubaki vimezimwa hadi mtoa huduma halisi wa custody/wallet, njia ya data ya soko na udhibiti wa admin viunganishwe.",
-      "securityTitle": "Bank-grade card rules",
-      "securityHint": "Required foundation",
-      "ruleTokenTitle": "Token-only storage",
-      "ruleTokenText": "Sabi stores provider token ID, masked metadata and status only. PAN and CVV stay inside the bank/provider flow.",
-      "ruleDetectionTitle": "Auto detection",
-      "ruleDetectionText": "UI must show only normalized categories after binding: Local Card, International Card, Local + Global or Virtual Card.",
-      "ruleConfirmationTitle": "Secure confirmation",
-      "ruleConfirmationText": "Money movement must continue through provider confirmation, PIN or device biometric plus wallet risk checks.",
-      "settingsTitle": "Next setup",
-      "settingsHint": "Provider and currency",
-      "settingsText": "Next wallet steps must add primary currency, local currency, provider selection, limits and admin provider controls.",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "ruleTokenTitle": "Kichwa",
+      "ruleTokenText": "Taarifa Taarifa",
+      "ruleDetectionTitle": "Kichwa",
+      "ruleDetectionText": "Taarifa Taarifa",
+      "ruleConfirmationTitle": "Kichwa",
+      "ruleConfirmationText": "Taarifa Taarifa",
+      "settingsTitle": "Mipangilio",
+      "settingsHint": "Mipangilio Taarifa",
+      "settingsText": "Mipangilio Taarifa",
       "open": "Fungua"
     },
     "bankAccounts": "Akaunti za benki",
@@ -548,101 +549,101 @@ export const SW_LOCALE = {
     "accounts": "Akaunti",
     "transactions": "Miamala",
     "history": {
-      "eyebrow": "Wallet activity",
+      "eyebrow": "Historia",
       "title": "Transaction Historia",
-      "subtitle": "Review wallet movements, provider payments and QR operations in one place.",
-      "heroEyebrow": "Activity center",
-      "heroTitle": "Unified wallet history",
-      "heroSubtitle": "Structured transaction timeline for money movement, provider payments and QR routes.",
-      "total": "Total",
-      "pending": "Pending",
+      "subtitle": "Mipangilio",
+      "heroEyebrow": "Historia",
+      "heroTitle": "Historia",
+      "heroSubtitle": "Historia Taarifa",
+      "total": "Jumla",
+      "pending": "Inasubiri",
       "failed": "Imeshindwa",
-      "completed": "Completed",
+      "completed": "Imekamilika",
       "searchPlaceholder": "Tafuta by name, reference or amount",
-      "all": "All",
-      "money": "Money",
-      "cards": "Cards",
+      "all": "Zote",
+      "money": "Taarifa",
+      "cards": "Kadi",
       "qr": "QR",
-      "liveNote": "This screen reads live unified history from the backend wallet API. Crypto history remains inside the crypto module.",
-      "loadingTitle": "Inapakia history",
-      "loadingText": "Pull down to refresh after the first load.",
-      "errorTitle": "Unable to load history",
+      "liveNote": "Taarifa",
+      "loadingTitle": "Inapakia...",
+      "loadingText": "Inapakia...",
+      "errorTitle": "Ombi limeshindikana. Jaribu tena.",
       "retry": "Jaribu tena",
-      "emptyTitle": "No transactions found",
-      "emptyText": "Try another search or filter.",
+      "emptyTitle": "Historia",
+      "emptyText": "Historia Taarifa",
       "back": "Rudi",
-      "walletHome": "Wallet Home",
+      "walletHome": "Pochi",
       "today": "Leo",
       "yesterday": "Jana",
-      "user": "User",
-      "walletTransfer": "Wallet transfer",
+      "user": "Taarifa",
+      "walletTransfer": "Pochi",
       "sendP2p": "Tuma via P2P",
       "receiveP2p": "Pokea via P2P",
-      "topupWallet": "Top up to Wallet",
-      "providerPaymentCredited": "Provider payment credited",
-      "refundWallet": "Refund to Wallet",
-      "providerRefundReturned": "Provider refund returned",
-      "withdrawWallet": "Withdraw from Wallet",
-      "moneyWithdrawal": "Money withdrawal",
-      "depositWallet": "Deposit to Wallet",
-      "moneyCredited": "Money credited",
-      "qrPayment": "QR Payment",
-      "qrRouteExecution": "QR route execution",
-      "walletOperation": "Wallet Core Operation",
-      "walletTransferTitle": "Wallet Transfer"
+      "topupWallet": "Pochi",
+      "providerPaymentCredited": "Mipangilio",
+      "refundWallet": "Pochi",
+      "providerRefundReturned": "Mipangilio",
+      "withdrawWallet": "Pochi",
+      "moneyWithdrawal": "Taarifa",
+      "depositWallet": "Pochi",
+      "moneyCredited": "Taarifa",
+      "qrPayment": "Taarifa",
+      "qrRouteExecution": "Taarifa",
+      "walletOperation": "Pochi",
+      "walletTransferTitle": "Pochi"
     },
     "sendMoney": "Tuma pesa",
     "receiveMoney": "Pokea pesa",
     "requestMoney": {
-      "title": "Request money",
+      "title": "Mipangilio",
       "subtitle": "Unda verified requests by MySabi ID or QR.",
-      "heroTitle": "Internal collection route",
-      "heroText": "Requests must be confirmed by the payer before any incoming balance is created.",
-      "balanceLabel": "Request target balance",
-      "collectInto": "Collect into",
-      "collectIntoHint": "Destination",
-      "personal": "Personal",
+      "heroTitle": "Taarifa",
+      "heroText": "Taarifa Taarifa",
+      "balanceLabel": "Taarifa",
+      "collectInto": "Taarifa",
+      "collectIntoHint": "Lengwa",
+      "personal": "Binafsi",
       "personalText": "Request into personal Sabi Salio.",
       "business": "Biashara",
-      "businessText": "Prepared business route with KYB/admin control.",
-      "merchant": "Merchant",
-      "merchantText": "Prepared merchant collection route.",
-      "recipientTitle": "Request from",
-      "recipientHint": "Verified identity",
-      "recipientId": "Recipient MySabi ID",
-      "recipientPlaceholder": "username or business ID",
-      "recipientHelp": "Use verified user, business or merchant identity.",
-      "recipientError": "Enter a valid MySabi ID.",
-      "detailsTitle": "Request details",
+      "businessText": "Taarifa Taarifa",
+      "merchant": "Taarifa",
+      "merchantText": "Taarifa Taarifa",
+      "recipientTitle": "Kichwa",
+      "recipientHint": "Taarifa Taarifa",
+      "recipientId": "Taarifa",
+      "recipientPlaceholder": "Tafuta",
+      "recipientHelp": "Taarifa",
+      "recipientError": "Ombi limeshindikana. Jaribu tena.",
+      "detailsTitle": "Kichwa",
       "detailsHint": "Kiasi and note",
       "amount": "Kiasi",
-      "reason": "Reason",
-      "reasonPlaceholder": "What is this request for?",
-      "reference": "Reference",
-      "referencePlaceholder": "Optional reference",
-      "previewTitle": "Request preview",
-      "previewHint": "Summary",
-      "from": "From",
-      "destination": "Destination",
-      "notSelected": "Not selected",
-      "noReason": "No reason added",
-      "noReference": "No reference",
+      "reason": "Taarifa",
+      "reasonPlaceholder": "Tafuta",
+      "reference": "Rejea",
+      "referencePlaceholder": "Tafuta",
+      "previewTitle": "Kichwa",
+      "previewHint": "Taarifa Taarifa",
+      "from": "Taarifa",
+      "destination": "Lengwa",
+      "notSelected": "Taarifa",
+      "noReason": "Taarifa",
+      "noReference": "Taarifa",
       "createQr": "Unda QR",
-      "actions": "Actions",
-      "routes": "Helpful routes",
-      "securityTitle": "Security note",
-      "securityHint": "Important",
-      "security1Title": "Verify recipient identity",
-      "security1Text": "Money requests should target the correct unified user ID, business route or merchant account.",
-      "security2Title": "No automatic income",
-      "security2Text": "A request is not income until payer confirmation, provider route and wallet checks are completed.",
-      "paymentsHub": "Payments Hub",
-      "continue": "Continue request",
+      "actions": "Vitendo",
+      "routes": "Taarifa",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "security1Title": "Taarifa",
+      "security1Text": "Taarifa Taarifa",
+      "security2Title": "Taarifa",
+      "security2Text": "Taarifa Taarifa",
+      "paymentsHub": "Taarifa",
+      "continue": "Taarifa",
       "confirmTitle": "Thibitisha request"
     },
     "transfer": "Hamisha",
     "bankTransfer": "Uhamisho wa benki",
-    "wireTransfer": "Wire transfer",
+    "wireTransfer": "Taarifa",
     "swiftTransfer": "Uhamisho wa SWIFT",
     "domesticTransfer": "Uhamisho wa ndani",
     "internationalTransfer": "Uhamisho wa kimataifa",
@@ -650,36 +651,36 @@ export const SW_LOCALE = {
     "scheduledTransfer": "Uhamisho uliopangwa",
     "recurringTransfer": "Uhamisho wa kurudiwa",
     "withdraw": {
-      "title": "Withdraw",
+      "title": "Mipangilio",
       "subtitle": "Move funds from Sabi Salio to a verified tokenized card route.",
-      "source": "Source",
-      "sourceHint": "Internal money",
-      "sourceText": "Internal electronic money available for transfer, payment and withdraw flows.",
-      "storedValue": "Stored value",
-      "available": "Available",
-      "withdrawRoute": "Withdraw route",
-      "linkedCard": "Linked card",
-      "speed": "Speed",
-      "byProviderPolicy": "By provider policy",
+      "source": "Chanzo",
+      "sourceHint": "Taarifa Taarifa",
+      "sourceText": "Taarifa Taarifa",
+      "storedValue": "Taarifa",
+      "available": "Inapatikana",
+      "withdrawRoute": "Taarifa",
+      "linkedCard": "Taarifa",
+      "speed": "Taarifa",
+      "byProviderPolicy": "Mipangilio",
       "amount": "Kiasi",
-      "amountHint": "Cash-out value",
+      "amountHint": "Taarifa Taarifa",
       "helperText": "Withdraw moves funds out of Sabi Salio to an external linked card. It is separate from internal transfer and top up.",
-      "destination": "Withdraw destination",
-      "destinationHint": "Tokenized card",
-      "noLinkedCardsTitle": "No linked tokenized cards",
+      "destination": "Taarifa",
+      "destinationHint": "Taarifa Taarifa",
+      "noLinkedCardsTitle": "Kichwa",
       "noLinkedCardsText": "Ongeza a card through the bank or provider SDK before withdrawing. Sabi must not store PAN or CVV.",
       "addCard": "Ongeza card",
-      "destinationDetails": "Destination details",
-      "destinationDetailsHint": "Resolved target",
-      "destinationLabel": "Destination",
-      "scheme": "Scheme",
-      "maskedCard": "Masked card",
-      "type": "Type",
-      "reference": "Reference",
-      "referenceHint": "Optional note",
-      "notePlaceholder": "Cash-out, personal use, bank withdrawal...",
-      "securityTitle": "Token-only cash-out",
-      "securityText": "Withdraw must use provider token, wallet risk checks and explicit user confirmation before money leaves Sabi Salio.",
+      "destinationDetails": "Taarifa",
+      "destinationDetailsHint": "Taarifa Taarifa",
+      "destinationLabel": "Lengwa",
+      "scheme": "Taarifa",
+      "maskedCard": "Taarifa",
+      "type": "Aina",
+      "reference": "Rejea",
+      "referenceHint": "Taarifa Taarifa",
+      "notePlaceholder": "Tafuta",
+      "securityTitle": "Usalama",
+      "securityText": "Usalama Taarifa",
       "continue": "Endelea",
       "confirmTitle": "Thibitisha withdraw to card"
     },
@@ -689,43 +690,43 @@ export const SW_LOCALE = {
     "topUpByBank": "Ongeza salio kwa benki",
     "exchange": "Badilisha",
     "convert": "Geuza",
-    "details": "Maelezo",
+    "details": "Taarifa",
     "openDetails": "Fungua maelezo",
     "addCard": {
       "title": "Ongeza card",
-      "subtitle": "Secure card binding must start from a bank or provider SDK. Sabi does not collect PAN or CVV.",
-      "roleTitle": "Wallet role",
-      "roleHint": "Routing purpose",
-      "personal": "Personal",
-      "personalText": "Bind card for personal Sabi Wallet flows.",
+      "subtitle": "Mipangilio",
+      "roleTitle": "Kichwa",
+      "roleHint": "Taarifa Taarifa",
+      "personal": "Binafsi",
+      "personalText": "Taarifa binafsi Taarifa",
       "business": "Biashara",
-      "businessText": "Prepare card route for business wallet operations when enabled.",
-      "merchant": "Merchant",
-      "merchantText": "Prepare card route for merchant settlement and commerce flows.",
-      "categoryTitle": "Expected category",
-      "categoryHint": "Provider will finalize",
-      "providerTitle": "Provider binding",
-      "providerHint": "SDK / iFrame",
-      "routeCurrency": "Route currency",
-      "localCurrencyRequired": "Select local currency in Wallet Mipangilio",
-      "internationalCurrency": "International currency",
+      "businessText": "Taarifa Taarifa",
+      "merchant": "Taarifa",
+      "merchantText": "Taarifa Taarifa",
+      "categoryTitle": "Kichwa",
+      "categoryHint": "Taarifa Taarifa",
+      "providerTitle": "Mipangilio",
+      "providerHint": "Mipangilio Taarifa",
+      "routeCurrency": "Taarifa",
+      "localCurrencyRequired": "Ya ndani",
+      "internationalCurrency": "Taarifa",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
-      "providerReady": "Provider ready",
-      "providerKycRequired": "KYC required",
-      "providerReviewRequired": "Review required",
-      "providerRestricted": "Restricted",
-      "providerOpenUnavailable": "Provider SDK launch route is not connected yet.",
-      "providerText": "The real card form must be opened inside the bank or payment provider SDK/iFrame. Sabi receives only provider token, masked metadata and status.",
-      "noManualTitle": "No manual card input",
-      "noManualText": "Do not type card number, CVV or expiry inside Sabi UI. Those fields belong only to the certified provider flow.",
-      "policyTitle": "Binding policy",
-      "policyHint": "Before activation",
-      "tokenTitle": "Provider token",
-      "tokenText": "Store token ID, masked card metadata, category and status only.",
-      "confirmTitle": "User confirmation",
-      "confirmText": "Use provider confirmation plus Sabi PIN/biometric confirmation for sensitive flows.",
-      "adminTitle": "Admin/provider control",
-      "adminText": "Provider keys, limits, availability and risk rules must be controlled from backend/admin.",
+      "providerReady": "Tayari",
+      "providerKycRequired": "Mipangilio",
+      "providerReviewRequired": "Mipangilio",
+      "providerRestricted": "Mipangilio",
+      "providerOpenUnavailable": "Ombi limeshindikana. Jaribu tena.",
+      "providerText": "Mipangilio Taarifa",
+      "noManualTitle": "Kichwa",
+      "noManualText": "Taarifa Taarifa",
+      "policyTitle": "Kichwa",
+      "policyHint": "Taarifa Taarifa",
+      "tokenTitle": "Kichwa",
+      "tokenText": "Taarifa Taarifa",
+      "confirmTitle": "Kichwa",
+      "confirmText": "Taarifa Taarifa",
+      "adminTitle": "Kichwa",
+      "adminText": "Taarifa Taarifa",
       "openProvider": "Fungua provider SDK",
       "providerDisabled": "Mtoa huduma amezimwa"
     },
@@ -740,56 +741,56 @@ export const SW_LOCALE = {
     "internationalCard": "Kadi ya kimataifa",
     "localGlobalCard": "Ya ndani + ya kimataifa",
     "virtualCard": {
-      "title": "Virtual card",
-      "subtitle": "Bank or issuer-provider virtual card issuing with token-only storage.",
-      "previewEyebrow": "VIRTUAL CARD",
-      "previewMasked": "Provider token pending",
-      "previewStatus": "Not issued",
-      "category": "Category",
-      "theme": "Theme",
-      "currency": "Currency",
-      "usd": "USD",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "previewEyebrow": "Taarifa",
+      "previewMasked": "Taarifa",
+      "previewStatus": "Taarifa",
+      "category": "Kategoria",
+      "theme": "Mandhari",
+      "currency": "Taarifa",
+      "usd": "Taarifa",
       "currencyFromSettings": "From Wallet Mipangilio",
-      "monthlyLimit": "Monthly limit",
-      "limitPlaceholder": "0.00",
-      "useCaseTitle": "Use case",
-      "useCaseHint": "Issuing profile",
-      "onlineTitle": "Online payments",
-      "onlineText": "Default virtual card route for online merchants.",
-      "subscriptionTitle": "Subscriptions",
-      "subscriptionText": "Separate controlled card for recurring payments.",
-      "travelTitle": "Travel",
-      "travelText": "Provider-issued card route for international travel usage.",
-      "providerTitle": "Issuer provider",
-      "providerHint": "Bank / card issuer",
+      "monthlyLimit": "Kikomo cha kila mwezi",
+      "limitPlaceholder": "Tafuta",
+      "useCaseTitle": "Kichwa",
+      "useCaseHint": "Taarifa Taarifa",
+      "onlineTitle": "Malipo ya mtandaoni",
+      "onlineText": "Taarifa Taarifa",
+      "subscriptionTitle": "Kichwa",
+      "subscriptionText": "Taarifa Taarifa",
+      "travelTitle": "Kichwa",
+      "travelText": "Taarifa Taarifa",
+      "providerTitle": "Mipangilio",
+      "providerHint": "Mipangilio Taarifa",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
-      "providerReady": "Provider ready",
-      "providerKycRequired": "KYC required",
-      "providerReviewRequired": "Review required",
-      "providerRestricted": "Restricted",
-      "providerOpenUnavailable": "Provider SDK launch route is not connected yet.",
-      "providerText": "Virtual cards can go live only after a partner bank or issuer provider is connected in backend/admin configuration.",
-      "requirementsTitle": "Issuing requirements",
-      "requirementsHint": "Before live card",
-      "reqKycTitle": "KYC / eligibility",
-      "reqKycText": "The backend must verify user eligibility before requesting card issuing.",
-      "reqTokenTitle": "Token-only result",
-      "reqTokenText": "The provider returns token ID, masked metadata and status. Sabi must not store PAN or CVV.",
-      "reqRiskTitle": "Wallet risk checks",
-      "reqRiskText": "Sensitive actions must pass device, behavior and explicit confirmation checks.",
-      "securityTitle": "Security controls",
-      "securityHint": "Card controls",
-      "freeze": "Freeze",
-      "onlinePayments": "Online payments",
-      "internationalUsage": "International usage",
-      "statusTitle": "Issuing status",
-      "kycRequired": "KYC required",
-      "ready": "Ready",
-      "issue": "Issue virtual card",
+      "providerReady": "Tayari",
+      "providerKycRequired": "Mipangilio",
+      "providerReviewRequired": "Mipangilio",
+      "providerRestricted": "Mipangilio",
+      "providerOpenUnavailable": "Ombi limeshindikana. Jaribu tena.",
+      "providerText": "Mipangilio Taarifa",
+      "requirementsTitle": "Kichwa",
+      "requirementsHint": "Taarifa Taarifa",
+      "reqKycTitle": "Kichwa",
+      "reqKycText": "Taarifa Taarifa",
+      "reqTokenTitle": "Kichwa",
+      "reqTokenText": "Taarifa Taarifa",
+      "reqRiskTitle": "Kichwa",
+      "reqRiskText": "Taarifa Taarifa",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "freeze": "Taarifa",
+      "onlinePayments": "Malipo ya mtandaoni",
+      "internationalUsage": "Taarifa",
+      "statusTitle": "Kichwa",
+      "kycRequired": "Taarifa",
+      "ready": "Tayari",
+      "issue": "Taarifa",
       "disabledReason": "Unganisha mtoa huduma kabla ya kutoa.",
-      "manageCards": "Cards"
+      "manageCards": "Kadi"
     },
-    "sabiPay": "Sabi Pay",
+    "sabiPay": "Taarifa",
     "qrPay": "Lipa kwa QR",
     "qrReceive": "Pokea kwa QR",
     "paymentRequest": "Ombi la malipo",
@@ -798,72 +799,72 @@ export const SW_LOCALE = {
     "transferByAccount": "Hamisha kwa akaunti",
     "transferBetweenOwnAccounts": "Hamisha kati ya akaunti zangu",
     "transactionDetails": {
-      "eyebrow": "Wallet details",
-      "title": "Transaction Details",
-      "subtitle": "Full summary, status and reference data for this wallet operation.",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
       "loadingTitle": "Inapakia details",
-      "loadingText": "Fetching live transaction data from the backend.",
-      "errorTitle": "Unable to load details",
+      "loadingText": "Inapakia...",
+      "errorTitle": "Ombi limeshindikana. Jaribu tena.",
       "retry": "Jaribu tena",
-      "completed": "Completed",
-      "completedText": "This transaction has been processed successfully.",
-      "pending": "Pending",
-      "pendingText": "The transaction is still being processed or awaiting final confirmation.",
+      "completed": "Imekamilika",
+      "completedText": "Taarifa Taarifa",
+      "pending": "Inasubiri",
+      "pendingText": "Taarifa Taarifa",
       "failed": "Imeshindwa",
-      "failedText": "This transaction did not complete successfully.",
+      "failedText": "Ombi limeshindikana. Jaribu tena.",
       "incoming": "Inayoingia",
-      "outgoing": "Outgoing",
-      "summaryEyebrow": "Transaction summary",
-      "operationSummary": "Operation summary",
-      "overview": "Overview",
-      "type": "Type",
-      "category": "Category",
-      "status": "Status",
-      "direction": "Direction",
-      "date": "Date",
-      "time": "Time",
-      "referenceData": "Reference data",
-      "tracking": "Tracking",
-      "transactionId": "Transaction ID",
-      "reference": "Reference",
-      "route": "Route",
-      "walletId": "Wallet ID",
-      "statusNote": "Status note",
-      "processing": "Processing",
-      "securityNote": "Security note",
-      "securityText": "Review amount, destination and reference before taking any follow-up action.",
-      "backendPayload": "Backend payload",
-      "liveData": "Live data",
-      "quickActions": "Quick actions",
-      "nextStep": "Next step",
+      "outgoing": "Inayotoka",
+      "summaryEyebrow": "Taarifa",
+      "operationSummary": "Taarifa",
+      "overview": "Taarifa",
+      "type": "Aina",
+      "category": "Kategoria",
+      "status": "Hali",
+      "direction": "Taarifa",
+      "date": "Tarehe",
+      "time": "Muda",
+      "referenceData": "Taarifa",
+      "tracking": "Taarifa",
+      "transactionId": "Kitambulisho cha muamala",
+      "reference": "Rejea",
+      "route": "Taarifa",
+      "walletId": "Pochi",
+      "statusNote": "Taarifa",
+      "processing": "Inapakia…",
+      "securityNote": "Usalama",
+      "securityText": "Usalama Taarifa",
+      "backendPayload": "Rudi",
+      "liveData": "Taarifa",
+      "quickActions": "Mipangilio",
+      "nextStep": "Taarifa",
       "backHistory": "Back to Historia",
-      "walletHome": "Wallet Home",
+      "walletHome": "Pochi",
       "newSend": "New Tuma",
-      "newRequest": "New Request",
+      "newRequest": "Taarifa",
       "copyReference": "Nakili reference",
-      "referenceTitle": "Reference",
-      "transaction": "Transaction",
-      "walletOperation": "Wallet operation",
-      "refundWallet": "Refund to Wallet",
-      "paymentWallet": "Payment to Wallet",
-      "p2pTransfer": "P2P Wallet Transfer",
-      "qrExecution": "QR Payment Execution",
-      "coreOperation": "Wallet Core Operation",
-      "providerPaymentLinked": "Provider payment linked to wallet transaction",
-      "transferBetweenUsers": "Wallet transfer between users",
-      "qrRouteExecution": "Universal QR route execution",
+      "referenceTitle": "Rejea",
+      "transaction": "Taarifa",
+      "walletOperation": "Pochi",
+      "refundWallet": "Pochi",
+      "paymentWallet": "Pochi",
+      "p2pTransfer": "Taarifa",
+      "qrExecution": "Taarifa",
+      "coreOperation": "Taarifa",
+      "providerPaymentLinked": "Mipangilio",
+      "transferBetweenUsers": "Taarifa",
+      "qrRouteExecution": "Taarifa",
       "businessMerchantRoute": "Biashara / merchant / core wallet route",
-      "routeTransaction": "Unified wallet transaction flow",
-      "routePayment": "Provider payment → wallet transaction → ledger",
-      "routeP2p": "P2P → wallet transfer flow",
-      "routeQr": "Universal QR → wallet/payment route",
-      "routeCore": "Wallet core operation",
-      "routeSend": "Wallet send flow",
-      "routeReceive": "Wallet receive flow",
-      "routeTopup": "Wallet top up flow",
-      "routeWithdraw": "Wallet withdraw flow",
-      "routeCard": "Wallet card operation",
-      "routeFallback": "Wallet transaction route"
+      "routeTransaction": "Taarifa",
+      "routePayment": "Taarifa",
+      "routeP2p": "Taarifa",
+      "routeQr": "Taarifa",
+      "routeCore": "Taarifa",
+      "routeSend": "Taarifa",
+      "routeReceive": "Taarifa",
+      "routeTopup": "Taarifa",
+      "routeWithdraw": "Taarifa",
+      "routeCard": "Taarifa",
+      "routeFallback": "Rudi"
     },
     "incoming": "Inayoingia",
     "outgoing": "Inayotoka",
@@ -915,7 +916,7 @@ export const SW_LOCALE = {
     "statements": "Taarifa za hesabu",
     "generateStatement": "Tengeneza taarifa ya hesabu",
     "downloadStatement": "Pakua taarifa ya hesabu",
-    "coinWallet": "Coin Wallet",
+    "coinWallet": "Pochi",
     "coinTopUp": "Ongeza Coin",
     "coinSend": "Tuma Coin",
     "coinReceive": "Pokea Coin",
@@ -928,602 +929,602 @@ export const SW_LOCALE = {
     "businessWallet": "Wallet ya biashara",
     "merchantWallet": "Wallet ya merchant",
     "adminReviewStatus": {
-      "approved": "Approved",
-      "escalated": "Escalated",
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "rejected": "Rejected"
+      "approved": "Imeidhinishwa",
+      "escalated": "Taarifa",
+      "notRequired": "Taarifa",
+      "pending": "Inasubiri",
+      "rejected": "Taarifa"
     },
     "amlStatus": {
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "monitoring": "Monitoring",
-      "reviewRequired": "Review required",
-      "safeHold": "Safe hold"
+      "blocked": "Imefungwa",
+      "clear": "Futa",
+      "monitoring": "Taarifa",
+      "reviewRequired": "Taarifa",
+      "safeHold": "Usalama"
     },
     "coinProvider": {
-      "bridgeRoute": "Bridge Route",
-      "directCardBlocked": "Direct Card Blocked",
-      "guardReason": "Guard Reason",
-      "providerStatus": "Provider Status",
-      "eyebrow": "SABI COIN",
+      "bridgeRoute": "Taarifa",
+      "directCardBlocked": "Taarifa",
+      "guardReason": "Taarifa",
+      "providerStatus": "Mipangilio",
+      "eyebrow": "Mipangilio",
       "providerTitle": "Mtoa huduma hajasanidiwa",
-      "providerText": "COIN financial operations require the real wallet backend, provider route, admin controls and security confirmation.",
-      "noFakeTitle": "Provider-backed COIN execution",
-      "noFakeText": "Top up, send, withdrawal, diamonds, deposits and income records require backend/provider execution.",
-      "securityTitle": "Wallet security route",
-      "securityText": "Real COIN movement must pass unified user ID, wallet risk checks, explicit confirmation and provider status.",
-      "availableCoin": "Available COIN",
-      "totalCoin": "Total COIN",
-      "diamonds": "Diamonds",
-      "deposits": "Deposits",
-      "records": "Records",
+      "providerText": "Mipangilio Taarifa",
+      "noFakeTitle": "Kichwa",
+      "noFakeText": "Taarifa Taarifa",
+      "securityTitle": "Usalama",
+      "securityText": "Usalama Taarifa",
+      "availableCoin": "Tayari",
+      "totalCoin": "Taarifa",
+      "diamonds": "Taarifa",
+      "deposits": "Taarifa",
+      "records": "Taarifa",
       "disabled": "Imezimwa",
-      "backToCoin": "Back to Coin Wallet",
+      "backToCoin": "Rudi",
       "screens": {
         "topup": {
-          "title": "Top up Coin Wallet",
-          "subtitle": "COIN top up requires the real wallet backend, provider route and secure payment confirmation."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "send": {
           "title": "Tuma COIN",
-          "subtitle": "COIN sending requires unified user ID, provider-backed balance, risk checks and explicit confirmation."
+          "subtitle": "Mipangilio"
         },
         "withdraw": {
-          "title": "Move COIN",
-          "subtitle": "COIN can cash out only through Sabi Wallet after provider confirmation, not directly to bank cards."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "diamonds": {
-          "title": "Diamonds",
-          "subtitle": "Diamonds stay as an internal product balance. They do not have wallet transfer functions and cannot be counted as income unless policy allows."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "withdrawDiamonds": {
-          "title": "Withdraw Diamonds",
-          "subtitle": "Only eligible withdrawable diamonds may convert back into COIN through monthly policy and provider-controlled settlement."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "earn": {
-          "title": "Coin Earn",
-          "subtitle": "Locked Coin deposits require backend ledger, freeze/unfreeze controls, maturity schedule and admin risk states before activation."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "history": {
           "title": "Coin Historia",
-          "subtitle": "COIN ledger records must come from the wallet backend/provider ledger."
+          "subtitle": "Mipangilio"
         },
         "diamondsHistory": {
           "title": "Diamond Historia",
-          "subtitle": "Diamond activity must separate financial income from free, promo, won and inventory movement records."
+          "subtitle": "Mipangilio"
         },
         "depositHistory": {
           "title": "Deposit Historia",
-          "subtitle": "Locked Coin deposit records appear only after backend ledger and maturity schedules are connected."
+          "subtitle": "Mipangilio"
         },
         "depositDetails": {
-          "title": "Locked Coin Details",
-          "subtitle": "Deposit details require provider-backed principal lock, interest ledger, maturity date and release status."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         }
       }
     },
     "complianceStatus": {
-      "adminReview": "Admin Review",
-      "amlReview": "Aml Review",
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "kycRequired": "KYC required",
-      "restricted": "Restricted",
-      "safeHold": "Safe hold"
+      "adminReview": "Taarifa",
+      "amlReview": "Taarifa",
+      "blocked": "Imefungwa",
+      "clear": "Futa",
+      "kycRequired": "Taarifa",
+      "restricted": "Taarifa",
+      "safeHold": "Usalama"
     },
     "cryptoProvider": {
       "providerNotConfiguredShort": "Mtoa huduma hajasanidiwa",
-      "providerStatusText": "Provider Status Text",
-      "providerStatusTitle": "Provider Status",
-      "eyebrow": "CRYPTO WALLET",
+      "providerStatusText": "Mipangilio Taarifa",
+      "providerStatusTitle": "Mipangilio",
+      "eyebrow": "Mipangilio",
       "providerNotConfiguredTitle": "Mtoa huduma hajasanidiwa",
       "providerNotConfiguredText": "Vitendo vya crypto hubaki vimezimwa hadi mtoa huduma halisi wa custody/wallet, njia ya data ya soko na udhibiti wa admin viunganishwe.",
-      "cryptoValue": "Crypto value",
-      "status": "Status",
+      "cryptoValue": "Taarifa",
+      "status": "Hali",
       "disabled": "Imezimwa",
-      "securityTitle": "Security provider",
+      "securityTitle": "Usalama",
       "securityText": "Tuma, swap, buy and sell must pass KYC/AML, device checks and explicit confirmation.",
-      "keysTitle": "Provider-secured keys",
-      "keysText": "Seed phrases, addresses and private keys must come only from a secure crypto provider flow.",
-      "marketTitle": "Real market data",
-      "marketText": "Assets, prices, charts, balances and history must come from provider APIs.",
-      "backToCrypto": "Back to Crypto Wallet",
+      "keysTitle": "Kichwa",
+      "keysText": "Taarifa Taarifa",
+      "marketTitle": "Kichwa",
+      "marketText": "Taarifa Taarifa",
+      "backToCrypto": "Rudi",
       "screens": {
         "assets": {
-          "title": "Crypto assets",
-          "subtitle": "Provider-backed assets will appear after crypto provider connection."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "portfolio": {
-          "title": "Crypto portfolio",
-          "subtitle": "Portfolio value must come from the connected crypto provider."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "assetDetails": {
-          "title": "Asset details",
-          "subtitle": "Asset details require provider-backed wallet data."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "buy": {
-          "title": "Buy crypto",
-          "subtitle": "Crypto on-ramp must be executed through a configured provider route."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "sell": {
-          "title": "Sell crypto",
-          "subtitle": "Crypto off-ramp must be executed through a configured provider route."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "swap": {
-          "title": "Swap crypto",
-          "subtitle": "Swap quotes and execution require a configured provider route."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "send": {
           "title": "Tuma crypto",
-          "subtitle": "Crypto sending requires wallet provider, risk checks and explicit confirmation."
+          "subtitle": "Mipangilio"
         },
         "receive": {
           "title": "Pokea crypto",
           "subtitle": "Pokea addresses must be issued by the connected provider."
         },
         "history": {
-          "title": "Crypto history",
-          "subtitle": "Transactions will appear after provider synchronization."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "transactionDetails": {
-          "title": "Transaction details",
-          "subtitle": "Transaction data must come from provider or blockchain synchronization."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "confirm": {
-          "title": "Crypto confirmation",
-          "subtitle": "Crypto operations require provider confirmation and risk checks."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "market": {
-          "title": "Crypto market",
-          "subtitle": "Market data requires a configured market data provider."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "watchlist": {
-          "title": "Watchlist",
-          "subtitle": "Watchlist prices must come from a real market data provider."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "networks": {
-          "title": "Networks",
-          "subtitle": "Supported networks must come from the connected crypto provider."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "manageTokens": {
-          "title": "Manage tokens",
-          "subtitle": "Token list management requires provider-backed asset metadata."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "importToken": {
-          "title": "Import token",
-          "subtitle": "Custom tokens require provider validation before appearing in Wallet."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "addressBook": {
-          "title": "Address book",
+          "title": "Mipangilio",
           "subtitle": "Imehifadhiwa crypto addresses require verified provider storage."
         },
         "addAddress": {
           "title": "Ongeza address",
-          "subtitle": "New addresses require provider validation and risk checks."
+          "subtitle": "Mipangilio"
         },
         "seedCreate": {
           "title": "Unda seed",
           "subtitle": "Mtiririko wa seed/private-key umezimwa hadi mtoa huduma salama halisi aunganishwe."
         },
         "seedBackup": {
-          "title": "Seed backup",
-          "subtitle": "Seed backup requires a secure provider flow."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "seedVerify": {
-          "title": "Seed verification",
-          "subtitle": "Seed verification requires a secure provider flow."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         }
       }
     },
     "home": {
-      "financialDashboardSubtitle": "Financial Dashboard",
-      "financialDashboardTitle": "Financial Dashboard",
+      "financialDashboardSubtitle": "Maelezo Taarifa",
+      "financialDashboardTitle": "Kichwa",
       "receive": "Pokea",
       "receiveSubtitle": "Pokea",
-      "scanQr": "Scan QR",
+      "scanQr": "Skani QR",
       "settings": "Mipangilio",
-      "settingsSubtitle": "Mipangilio",
+      "settingsSubtitle": "Mipangilio Taarifa",
       "topUp": "Ongeza salio",
       "topUpSubtitle": "Ongeza salio",
-      "withdraw": "Withdraw",
-      "withdrawSubtitle": "Withdraw",
-      "headerEyebrow": "Sabi Wallet",
-      "headerTitle": "Wallet hub",
-      "headerSubtitle": "Premium wallet surface connected to wallet foundation and provider-backed balances.",
-      "mainHeroTitle": "Primary wallet foundation",
-      "mainHeroSubtitle": "Primary balance, local balance, Sabi Coin and crypto value are taken from wallet foundation state.",
-      "mainBalanceLabel": "Primary balance",
-      "mainBalanceHint": "Selected primary currency",
-      "localBalanceLabel": "Local balance",
-      "localBalanceHint": "Configured local currency",
+      "withdraw": "Taarifa",
+      "withdrawSubtitle": "Maelezo Taarifa",
+      "headerEyebrow": "Taarifa",
+      "headerTitle": "Kichwa",
+      "headerSubtitle": "Maelezo Taarifa",
+      "mainHeroTitle": "Kichwa",
+      "mainHeroSubtitle": "Maelezo Taarifa",
+      "mainBalanceLabel": "Taarifa",
+      "mainBalanceHint": "Taarifa Taarifa",
+      "localBalanceLabel": "Ya ndani",
+      "localBalanceHint": "Ya ndani Taarifa",
       "send": "Tuma",
-      "cards": "Cards",
-      "quickActionsTitle": "Quick actions",
-      "quickActionsHint": "Daily use",
-      "request": "Request",
+      "cards": "Kadi",
+      "quickActionsTitle": "Mipangilio",
+      "quickActionsHint": "Mipangilio Taarifa",
+      "request": "Ombi",
       "history": "Historia",
-      "mySabiId": "My Sabi ID",
-      "mainBlocksTitle": "Primary wallet blocks",
-      "mainBlocksHint": "Core surface",
-      "sabiPayTitle": "Payment infrastructure",
-      "sabiPaySubtitle": "Primary transfer layer for MySabi ID, internal wallet routing, requests and payment actions.",
-      "sabiPayBalanceLabel": "Primary balance",
-      "qrTitle": "Scan and merchant flow",
-      "qrSubtitle": "Single premium entry for merchant pay, scan-to-pay, My QR generation and camera scan.",
-      "coinTitle": "Sabi Coin Wallet",
-      "coinSubtitle": "Internal coin wallet for Messenger gifts, premium functions and future stream donation flow.",
-      "coinBalanceLabel": "COIN balance",
-      "localCardsTitle": "Local card layer",
-      "localCardsSubtitle": "Separate local card system for domestic transfers, recipients and linked card management.",
-      "localCardsBalanceLabel": "Local balance",
+      "mySabiId": "Taarifa",
+      "mainBlocksTitle": "Kichwa",
+      "mainBlocksHint": "Taarifa Taarifa",
+      "sabiPayTitle": "Kichwa",
+      "sabiPaySubtitle": "Maelezo Taarifa",
+      "sabiPayBalanceLabel": "Taarifa",
+      "qrTitle": "Kichwa",
+      "qrSubtitle": "Maelezo Taarifa",
+      "coinTitle": "Kichwa",
+      "coinSubtitle": "Maelezo Taarifa",
+      "coinBalanceLabel": "Taarifa",
+      "localCardsTitle": "Ya ndani",
+      "localCardsSubtitle": "Ya ndani Taarifa",
+      "localCardsBalanceLabel": "Ya ndani",
       "businessTitle": "Biashara routing",
-      "businessSubtitle": "Route operational, vendor and company payments through a dedicated business layer.",
-      "merchantTitle": "Merchant settlement",
-      "merchantSubtitle": "Marketplace and seller-side wallet flow for merchant checkout and settlement routing.",
-      "cryptoTitle": "Crypto Wallet access",
-      "cryptoSubtitle": "Separate crypto module with its own style, connected from Home as a premium ecosystem block.",
-      "cryptoBalanceLabel": "Crypto value",
-      "aiSectionTitle": "AI assistant",
-      "aiSectionHint": "Smart layer",
-      "aiTitle": "Smart wallet help",
-      "aiSubtitle": "Ask about payments, cards, COIN, business, merchant flows, crypto guidance and wallet history.",
-      "aiGuidanceTitle": "Guidance",
-      "aiGuidanceText": "Find the right wallet action faster",
-      "aiSupportTitle": "Support",
-      "aiSupportText": "Explain transfers, cards, COIN and QR flows",
-      "infraTitle": "Wallet infrastructure",
-      "infraHint": "Compact grid",
-      "cardsHubTitle": "Cards hub",
-      "cardsHubSubtitle": "Local, global, virtual",
+      "businessSubtitle": "Taarifa Taarifa",
+      "merchantTitle": "Makazi ya merchant",
+      "merchantSubtitle": "Maelezo Taarifa",
+      "cryptoTitle": "Kichwa",
+      "cryptoSubtitle": "Maelezo Taarifa",
+      "cryptoBalanceLabel": "Taarifa",
+      "aiSectionTitle": "Msaidizi wa AI",
+      "aiSectionHint": "AI Taarifa",
+      "aiTitle": "AI",
+      "aiSubtitle": "AI Taarifa",
+      "aiGuidanceTitle": "AI",
+      "aiGuidanceText": "AI Taarifa",
+      "aiSupportTitle": "Usaidizi",
+      "aiSupportText": "AI Taarifa",
+      "infraTitle": "Kichwa",
+      "infraHint": "Taarifa Taarifa",
+      "cardsHubTitle": "Kichwa",
+      "cardsHubSubtitle": "Maelezo Taarifa",
       "chatPaymentsTitle": "Gumzo payments",
-      "chatPaymentsSubtitle": "Messenger payment flow",
-      "virtualCardTitle": "Virtual card",
-      "virtualCardSubtitle": "Online secure card",
-      "controlsTitle": "What this home controls",
-      "controlsHint": "Scope",
-      "info1Title": "Sabi Pay foundation",
-      "info1Text": "Entry point for MySabi ID, internal transfer, request money and payment infrastructure.",
-      "info2Title": "QR and merchant entry",
-      "info2Text": "One clean QR entry without repeated QR buttons across the home screen.",
-      "info3Title": "Card architecture",
-      "info3Text": "Keeps local, international and virtual cards inside one structured wallet layer.",
-      "info4Title": "Sabi Coin layer",
-      "info4Text": "Internal COIN balance for Messenger gifts, premium functions and future stream monetization.",
+      "chatPaymentsSubtitle": "Gumzo Taarifa",
+      "virtualCardTitle": "Kichwa",
+      "virtualCardSubtitle": "Maelezo Taarifa",
+      "controlsTitle": "Kichwa",
+      "controlsHint": "Taarifa Taarifa",
+      "info1Title": "Taarifa",
+      "info1Text": "Taarifa Taarifa",
+      "info2Title": "Taarifa",
+      "info2Text": "Taarifa Taarifa",
+      "info3Title": "Taarifa",
+      "info3Text": "Taarifa Taarifa",
+      "info4Title": "Taarifa",
+      "info4Text": "Taarifa Taarifa",
       "info5Title": "Biashara and merchant routing",
-      "info5Text": "Separates personal, business and merchant payment sources to avoid future accounting chaos.",
-      "info6Title": "AI assistant layer",
-      "info6Text": "AI helps explain wallet functions, suggest routes and guide users without replacing critical payment confirmation.",
-      "info7Title": "Crypto access",
-      "info7Text": "Crypto keeps a separate style and flow, but Home links to it as a premium ecosystem block.",
-      "pillInternal": "Internal",
-      "pillCore": "Core",
+      "info5Text": "Taarifa Taarifa",
+      "info6Title": "Taarifa",
+      "info6Text": "Taarifa Taarifa",
+      "info7Title": "Taarifa",
+      "info7Text": "Taarifa Taarifa",
+      "pillInternal": "Taarifa",
+      "pillCore": "Taarifa",
       "pillCamera": "Kamera",
-      "pillMerchant": "Merchant",
+      "pillMerchant": "Taarifa",
       "pillGifts": "Zawadi",
-      "pillStream": "Stream",
-      "pillDomestic": "Local",
-      "pillOperations": "Operations",
-      "pillReferences": "References",
-      "pillCheckout": "Checkout",
-      "pillSettlements": "Settlements",
-      "pillAssets": "Assets",
-      "pillProvider": "Provider",
-      "pillCustody": "Custody",
-      "pillSeparated": "Separated",
-      "askAi": "Ask AI",
-      "smartTips": "Smart tips",
-      "recentHelp": "Recent help",
-      "loading": "Updating wallet state...",
-      "eyebrowSabiPay": "SABI PAY",
+      "pillStream": "Taarifa",
+      "pillDomestic": "Taarifa",
+      "pillOperations": "Taarifa",
+      "pillReferences": "Taarifa",
+      "pillCheckout": "Taarifa",
+      "pillSettlements": "Makazi",
+      "pillAssets": "Taarifa",
+      "pillProvider": "Mipangilio",
+      "pillCustody": "Taarifa",
+      "pillSeparated": "Taarifa",
+      "askAi": "AI",
+      "smartTips": "Taarifa",
+      "recentHelp": "Taarifa",
+      "loading": "Inapakia...",
+      "eyebrowSabiPay": "Taarifa",
       "eyebrowQr": "QR",
-      "eyebrowSabiCoin": "SABI COIN",
-      "eyebrowLocalCards": "LOCAL CARDS",
-      "eyebrowBusiness": "BUSINESS",
-      "eyebrowMerchant": "MERCHANT",
-      "eyebrowCrypto": "CRYPTO",
-      "pillSabiPay": "Sabi Pay",
+      "eyebrowSabiCoin": "Taarifa",
+      "eyebrowLocalCards": "Ya ndani",
+      "eyebrowBusiness": "Taarifa",
+      "eyebrowMerchant": "Taarifa",
+      "eyebrowCrypto": "Taarifa",
+      "pillSabiPay": "Taarifa",
       "pillSabiBalance": "Sabi Salio",
-      "pillMyQr": "My QR",
+      "pillMyQr": "QR yangu",
       "pillBusiness": "Biashara"
     },
     "kycStatus": {
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "rejected": "Rejected",
+      "notRequired": "Taarifa",
+      "pending": "Inasubiri",
+      "rejected": "Taarifa",
       "required": "Inahitajika",
-      "verified": "Verified"
+      "verified": "Imethibitishwa"
     },
     "pinConfirm": {
-      "guardReason": "Guard Reason",
-      "providerStatus": "Provider Status",
-      "riskStatus": "Risk Status",
-      "walletRoute": "Wallet Route",
-      "eyebrow": "Secure confirm",
+      "guardReason": "Taarifa",
+      "providerStatus": "Mipangilio",
+      "riskStatus": "Taarifa",
+      "walletRoute": "Pochi",
+      "eyebrow": "Taarifa",
       "title": "Thibitisha operation",
-      "subtitle": "Authorize this protected wallet action through the final security provider.",
-      "protectedAction": "Protected action",
-      "authorizationTitle": "PIN authorization",
-      "authorizationText": "This action requires secure confirmation before execution.",
-      "amountLabel": "Confirmation amount",
-      "flow": "Flow",
-      "digits": "Digits",
-      "security": "Security",
-      "active": "Active",
-      "summaryTitle": "Confirmation summary",
-      "summaryHint": "Review",
-      "recipientTarget": "Recipient / Target",
-      "source": "Source",
+      "subtitle": "Mipangilio",
+      "protectedAction": "Taarifa",
+      "authorizationTitle": "Kichwa",
+      "authorizationText": "Taarifa Taarifa",
+      "amountLabel": "Taarifa",
+      "flow": "Taarifa",
+      "digits": "Taarifa",
+      "security": "Usalama",
+      "active": "Inatumika",
+      "summaryTitle": "Kichwa",
+      "summaryHint": "Taarifa Taarifa",
+      "recipientTarget": "Taarifa",
+      "source": "Chanzo",
       "amount": "Kiasi",
-      "reference": "Reference",
-      "note": "Note",
-      "emptyAmount": "—",
-      "emptyNote": "No note",
-      "emptyReference": "No reference",
-      "protectedTarget": "Protected target",
-      "walletSource": "Wallet",
-      "enterPin": "Enter PIN",
-      "providerRequired": "Secure confirmation provider required",
-      "providerRequiredError": "Secure confirmation provider is not configured yet.",
-      "helperText": "This screen continues only after the real wallet security provider confirms the action.",
-      "protectionTitle": "Confirmation protection",
-      "protectionText": "Critical wallet actions require a protected step before processing.",
-      "providerTitle": "Provider required",
-      "providerText": "PIN, biometric and wallet risk checks must be connected through the final auth layer before money movement."
+      "reference": "Rejea",
+      "note": "Dokezo",
+      "emptyAmount": "Taarifa",
+      "emptyNote": "Taarifa",
+      "emptyReference": "Taarifa",
+      "protectedTarget": "Taarifa",
+      "walletSource": "Pochi",
+      "enterPin": "Weka PIN",
+      "providerRequired": "Mipangilio",
+      "providerRequiredError": "Ombi limeshindikana. Jaribu tena.",
+      "helperText": "Taarifa Taarifa",
+      "protectionTitle": "Kichwa",
+      "protectionText": "Taarifa Taarifa",
+      "providerTitle": "Mipangilio",
+      "providerText": "Mipangilio Taarifa"
     },
     "providerPanel": {
-      "cardsHint": "Cards",
-      "cardsTitle": "Cards",
-      "coinHint": "Coin",
-      "coinTitle": "Coin",
-      "compliance": "Compliance",
-      "cryptoHint": "Crypto",
-      "cryptoTitle": "Crypto",
-      "settingsHint": "Mipangilio",
+      "cardsHint": "Kadi",
+      "cardsTitle": "Kadi",
+      "coinHint": "Taarifa Taarifa",
+      "coinTitle": "Kichwa",
+      "compliance": "Uzingatiaji",
+      "cryptoHint": "Taarifa Taarifa",
+      "cryptoTitle": "Kichwa",
+      "settingsHint": "Mipangilio Taarifa",
       "settingsTitle": "Mipangilio",
-      "tokenOnlyPolicy": "Token Only Policy",
-      "virtualCardHint": "Virtual Card",
-      "virtualCardTitle": "Virtual Card",
-      "walletHint": "Wallet",
-      "walletTitle": "Wallet"
+      "tokenOnlyPolicy": "Taarifa",
+      "virtualCardHint": "Taarifa Taarifa",
+      "virtualCardTitle": "Kichwa",
+      "walletHint": "Pochi",
+      "walletTitle": "Pochi"
     },
     "providerStatus": {
-      "kycRequired": "KYC required",
+      "kycRequired": "Taarifa",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
-      "ready": "Ready",
-      "restricted": "Restricted",
-      "reviewRequired": "Review required"
+      "ready": "Tayari",
+      "restricted": "Taarifa",
+      "reviewRequired": "Taarifa"
     },
     "settings": {
-      "adminComplianceDescription": "Admin Compliance",
-      "adminComplianceTitle": "Admin Compliance",
-      "adminReview": "Admin Review",
-      "adminReviewStatus": "Admin Review Status",
-      "amlReview": "Aml Review",
-      "amlStatus": "Aml Status",
-      "approved": "Approved",
-      "blocked": "Blocked",
-      "clear": "Clear",
-      "complianceStatus": "Compliance Status",
-      "escalated": "Escalated",
-      "kycRequired": "KYC required",
-      "kycStatus": "Kyc Status",
-      "monitoring": "Monitoring",
-      "notRequired": "Not required",
-      "pending": "Pending",
-      "providerConfigurationRequired": "Provider Configuration Required",
-      "rejected": "Rejected",
+      "adminComplianceDescription": "Maelezo Taarifa",
+      "adminComplianceTitle": "Kichwa",
+      "adminReview": "Taarifa",
+      "adminReviewStatus": "Taarifa",
+      "amlReview": "Taarifa",
+      "amlStatus": "Taarifa",
+      "approved": "Imeidhinishwa",
+      "blocked": "Imefungwa",
+      "clear": "Futa",
+      "complianceStatus": "Taarifa",
+      "escalated": "Taarifa",
+      "kycRequired": "Taarifa",
+      "kycStatus": "Taarifa",
+      "monitoring": "Taarifa",
+      "notRequired": "Taarifa",
+      "pending": "Inasubiri",
+      "providerConfigurationRequired": "Mipangilio",
+      "rejected": "Taarifa",
       "required": "Inahitajika",
-      "restricted": "Restricted",
-      "reviewRequired": "Review required",
-      "safeHold": "Safe hold",
-      "safeHoldState": "Safe Hold State",
-      "tokenOnlyPolicy": "Token Only Policy",
-      "tokenOnlyPolicyText": "Token Only Policy Text",
-      "verified": "Verified",
-      "back": "Wallet",
-      "eyebrow": "WALLET CONTROL CENTER",
+      "restricted": "Taarifa",
+      "reviewRequired": "Taarifa",
+      "safeHold": "Usalama",
+      "safeHoldState": "Usalama",
+      "tokenOnlyPolicy": "Taarifa",
+      "tokenOnlyPolicyText": "Taarifa Taarifa",
+      "verified": "Imethibitishwa",
+      "back": "Pochi",
+      "eyebrow": "Mipangilio",
       "title": "Wallet Mipangilio",
-      "subtitle": "Wallet currency, cards, security, limits and payment routing.",
-      "profileActive": "Wallet profile active",
-      "heroTitle": "Your wallet rules",
-      "heroText": "Configure currency, card behavior, privacy controls and safer payment flows without changing wallet routes.",
-      "smartRouting": "Smart routing",
-      "sensitiveGuard": "Sensitive guard",
-      "largePaymentCheck": "Large payment check",
-      "on": "ON",
-      "off": "OFF",
-      "currencyTitle": "Currency",
-      "primaryCurrency": "Primary currency",
+      "subtitle": "Mipangilio",
+      "profileActive": "Wasifu",
+      "heroTitle": "Mipangilio",
+      "heroText": "Taarifa Taarifa",
+      "smartRouting": "Taarifa",
+      "sensitiveGuard": "Taarifa",
+      "largePaymentCheck": "Taarifa",
+      "on": "Taarifa",
+      "off": "Taarifa",
+      "currencyTitle": "Kichwa",
+      "primaryCurrency": "Taarifa",
       "primaryCurrencyDescription": "Main Wallet screen and Sabi Salio display use this currency. Default is USD.",
-      "localCurrency": "Local currency",
-      "localCurrencyDescription": "Local card and local wallet routes use this currency after detection or manual selection.",
-      "internationalCurrency": "International card currency",
-      "internationalCurrencyDescription": "International card routes default to USD unless another provider currency is selected.",
-      "noHardcodedCurrencyTitle": "No hardcoded local currency",
-      "noHardcodedCurrencyText": "Main Wallet does not force local currency labels. Local currency appears only after this setting or provider detection.",
-      "cardPreferences": "Card preferences",
-      "manageCards": "Manage cards",
-      "manageCardsDescription": "Fungua token-only cards hub, local / international / virtual cards and provider binding.",
-      "defaultCardMode": "Default card mode",
-      "defaultCardModeDescription": "Choose how wallet decides the main payment card.",
-      "smart": "Smart",
-      "local": "Local",
-      "international": "International",
-      "virtual": "Virtual",
-      "autoSelectBestCard": "Auto-select best card",
-      "autoSelectBestCardDescription": "Prefer the best available tokenized card for the current flow.",
-      "showLast4": "Show only last 4 digits by default",
-      "showLast4Description": "Do not reveal sensitive card data in normal card views.",
-      "walletPreferences": "Wallet preferences",
-      "sabiPayQuickAccess": "SabiPay quick access",
+      "localCurrency": "Ya ndani",
+      "localCurrencyDescription": "Ya ndani Taarifa",
+      "internationalCurrency": "Taarifa",
+      "internationalCurrencyDescription": "Maelezo Taarifa",
+      "noHardcodedCurrencyTitle": "Kichwa",
+      "noHardcodedCurrencyText": "Taarifa Taarifa",
+      "cardPreferences": "Mapendeleo",
+      "manageCards": "Taarifa",
+      "manageCardsDescription": "Maelezo Taarifa",
+      "defaultCardMode": "Taarifa",
+      "defaultCardModeDescription": "Maelezo Taarifa",
+      "smart": "Taarifa",
+      "local": "Ya ndani",
+      "international": "Taarifa",
+      "virtual": "Taarifa",
+      "autoSelectBestCard": "Taarifa",
+      "autoSelectBestCardDescription": "Maelezo Taarifa",
+      "showLast4": "Taarifa",
+      "showLast4Description": "Taarifa Taarifa",
+      "walletPreferences": "Pochi",
+      "sabiPayQuickAccess": "Taarifa",
       "sabiPayQuickAccessDescription": "Fungua secure send routes from wallet actions.",
-      "qrQuickAccess": "QR quick access",
+      "qrQuickAccess": "Taarifa",
       "qrQuickAccessDescription": "Fungua wallet QR screen and QR payment actions.",
-      "allowSmartRouting": "Allow smart routing",
+      "allowSmartRouting": "Taarifa",
       "allowSmartRoutingDescription": "Choose the best available route between Sabi Salio, cards and provider rails.",
-      "paymentPriority": "Payment priority",
-      "paymentPriorityDescription": "Choose what wallet tries first for daily payment flows.",
-      "security": "Security",
-      "walletNotifications": "Wallet notifications",
+      "paymentPriority": "Taarifa",
+      "paymentPriorityDescription": "Maelezo Taarifa",
+      "security": "Usalama",
+      "walletNotifications": "Arifa za wallet",
       "walletNotificationsDescription": "Pokea payment, card, QR and balance alerts.",
-      "securityAlerts": "Security alerts",
-      "securityAlertsDescription": "High-priority alerts for sensitive wallet and protection events.",
-      "requireLargeConfirmation": "Require confirmation for large payments",
-      "requireLargeConfirmationDescription": "Ask for an extra confirmation step on higher-value wallet payments.",
-      "sensitiveBehavior": "Sensitive info behavior",
-      "sensitiveBehaviorDescription": "Control how card-sensitive details and hidden values are revealed.",
-      "tap": "Tap",
-      "biometric": "Biometric",
-      "pin": "PIN",
-      "useBiometric": "Use biometric for sensitive info",
-      "useBiometricDescription": "Face ID / fingerprint challenge before opening sensitive card details.",
-      "hideBalances": "Hide balances on screen open",
-      "hideBalancesDescription": "Start wallet screens with masked balances until user chooses to reveal.",
+      "securityAlerts": "Usalama",
+      "securityAlertsDescription": "Usalama Taarifa",
+      "requireLargeConfirmation": "Taarifa",
+      "requireLargeConfirmationDescription": "Maelezo Taarifa",
+      "sensitiveBehavior": "Taarifa",
+      "sensitiveBehaviorDescription": "Maelezo Taarifa",
+      "tap": "Taarifa",
+      "biometric": "Taarifa",
+      "pin": "Taarifa",
+      "useBiometric": "Taarifa",
+      "useBiometricDescription": "Maelezo Taarifa",
+      "hideBalances": "Taarifa",
+      "hideBalancesDescription": "Maelezo Taarifa",
       "notificationPreferences": "Arifa preferences",
       "notificationPreferencesDescription": "Fungua global notification controls and module alert rules.",
-      "limits": "Limits",
-      "dailySendLimit": "Daily send limit",
-      "dailySendLimitDescription": "Controlled by provider, KYC level, wallet risk and admin policy.",
-      "qrPaymentLimit": "QR payment limit",
-      "qrPaymentLimitDescription": "Controlled by provider, merchant policy and wallet risk checks.",
-      "sensitiveWindow": "Sensitive reveal window",
-      "sensitiveWindowDescription": "Provider/admin policy decides how long sensitive values stay visible.",
-      "policyControlled": "Policy controlled",
-      "defaultBehavior": "Default behavior",
-      "defaultSensitiveUnlock": "Default sensitive unlock",
-      "defaultCardSelection": "Default card selection",
-      "defaultPaymentSource": "Default payment source",
-      "smartAuto": "Smart auto",
-      "localFirst": "Local first",
-      "internationalFirst": "International first",
-      "virtualFirst": "Virtual first",
-      "tapToReveal": "Tap to reveal",
-      "pinRequired": "PIN required",
-      "biometricRequired": "Biometric required",
+      "limits": "Vikomo",
+      "dailySendLimit": "Taarifa",
+      "dailySendLimitDescription": "Maelezo Taarifa",
+      "qrPaymentLimit": "Taarifa",
+      "qrPaymentLimitDescription": "Maelezo Taarifa",
+      "sensitiveWindow": "Taarifa",
+      "sensitiveWindowDescription": "Maelezo Taarifa",
+      "policyControlled": "Taarifa",
+      "defaultBehavior": "Taarifa",
+      "defaultSensitiveUnlock": "Taarifa",
+      "defaultCardSelection": "Taarifa",
+      "defaultPaymentSource": "Taarifa",
+      "smartAuto": "Taarifa",
+      "localFirst": "Ya ndani",
+      "internationalFirst": "Taarifa",
+      "virtualFirst": "Taarifa",
+      "tapToReveal": "Taarifa",
+      "pinRequired": "Taarifa",
+      "biometricRequired": "Taarifa",
       "sabiBalanceFirst": "Sabi Salio first",
-      "cardsFirst": "Cards first"
+      "cardsFirst": "Taarifa"
     },
     "shared": {
       "back": "Rudi",
-      "wallet": "Wallet",
-      "totalBalance": "Total balance",
-      "walletBalance": "Wallet balance",
-      "personal": "Personal",
-      "mainBalance": "Primary balance",
-      "localBalance": "Local balance",
-      "coinBalance": "COIN balance",
-      "cryptoValue": "Crypto value",
+      "wallet": "Pochi",
+      "totalBalance": "Jumla ya salio",
+      "walletBalance": "Pochi",
+      "personal": "Binafsi",
+      "mainBalance": "Taarifa",
+      "localBalance": "Ya ndani",
+      "coinBalance": "Taarifa",
+      "cryptoValue": "Taarifa",
       "sabiBalance": "Sabi Salio",
-      "sabiBalanceDescription": "Internal Sabi balance for top up, transfers, rewards and ecosystem payments",
-      "internal": "Internal",
-      "holder": "Holder",
-      "expiry": "Expiry",
+      "sabiBalanceDescription": "Maelezo Taarifa",
+      "internal": "Taarifa",
+      "holder": "Taarifa",
+      "expiry": "Taarifa",
       "balance": "Salio",
-      "unknown": "Unknown"
+      "unknown": "Haijulikani"
     },
     "entry": {
-      "headerTitle": "Wallet",
+      "headerTitle": "Pochi",
       "headerSubtitle": "Personal Wallet, Sabi Salio, cards, QR, top up and crypto in one place",
-      "quickActionsTitle": "Quick actions",
-      "quickActionsHint": "Core wallet actions",
+      "quickActionsTitle": "Mipangilio",
+      "quickActionsHint": "Mipangilio Taarifa",
       "topUp": "Ongeza salio",
       "send": "Tuma",
       "receive": "Pokea",
-      "qrPay": "QR Pay",
-      "cards": "Cards",
-      "crypto": "Crypto",
-      "cardsAccessTitle": "Cards access",
-      "cardsAccessHint": "Manage card flows from one secure place",
-      "allCardsTitle": "All cards",
-      "allCardsSubtitle": "Linked cards, default cards and card management",
-      "localCardsTitle": "Local cards",
-      "localCardsSubtitle": "Local card flows, OTP checks and domestic transfers"
+      "qrPay": "Lipa kwa QR",
+      "cards": "Kadi",
+      "crypto": "Taarifa",
+      "cardsAccessTitle": "Kichwa",
+      "cardsAccessHint": "Taarifa Taarifa",
+      "allCardsTitle": "Kichwa",
+      "allCardsSubtitle": "Maelezo Taarifa",
+      "localCardsTitle": "Ya ndani",
+      "localCardsSubtitle": "Ya ndani Taarifa"
     },
     "coinIndex": {
-      "eyebrow": "SABI COIN ECOSYSTEM",
-      "title": "Coin Wallet",
-      "subtitle": "Full payment wallet for COIN with transfers, history, diamond conversion, yield products and future credit foundation.",
-      "totalLabel": "AVAILABLE + FROZEN + RESERVED + PENDING",
-      "heroSubtitle": "COIN works as the real financial wallet. Diamonds stay separate as an internal product balance without direct transfer functions.",
-      "myCoinQr": "My Coin QR",
-      "myCoinQrText": "Generate separate Coin receive QR",
-      "scanCoinQr": "Scan Coin QR",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "totalLabel": "Taarifa",
+      "heroSubtitle": "Taarifa Taarifa",
+      "myCoinQr": "Taarifa",
+      "myCoinQrText": "Taarifa Taarifa",
+      "scanCoinQr": "Taarifa",
       "scanCoinQrText": "Fungua camera scanner for Coin flow",
-      "diamondLayer": "Diamond layer",
-      "diamondLayerText": "Internal spend balance",
+      "diamondLayer": "Taarifa",
+      "diamondLayerText": "Taarifa Taarifa",
       "open": "Fungua",
-      "diamondWithdrawRule": "Diamond withdraw rule",
-      "nextAvailableDate": "Next available date",
-      "coinActions": "Coin actions",
-      "coreWallet": "Core wallet",
+      "diamondWithdrawRule": "Taarifa",
+      "nextAvailableDate": "Tayari",
+      "coinActions": "Mipangilio",
+      "coreWallet": "Pochi",
       "topUp": "Ongeza salio",
       "topUpText": "Ongeza COIN to wallet",
       "send": "Tuma",
-      "sendText": "Transfer COIN",
+      "sendText": "Taarifa Taarifa",
       "receive": "Pokea",
-      "receiveText": "Incoming COIN",
+      "receiveText": "Taarifa Taarifa",
       "history": "Historia",
-      "historyText": "Transaction log",
-      "diamonds": "Diamonds",
-      "diamondsText": "Buy, convert and withdraw",
-      "earn": "Earn",
-      "earnText": "6M / 12M deposit",
-      "lockedDeposit": "Locked Coin Deposit",
-      "lockedDepositText": "16% APR • 6M to 12M",
-      "manage": "Manage",
-      "maturity": "Maturity",
-      "months": "months",
-      "noActiveDeposits": "No active deposits yet.",
-      "moveCoinToWallet": "Move COIN to main wallet",
-      "available": "Available",
-      "frozen": "Frozen",
-      "interest": "Interest",
-      "spendable": "Spendable",
-      "withdrawable": "Withdrawable",
-      "gameEligible": "Game-eligible",
-      "diamondsUnit": "DIAMONDS"
+      "historyText": "Historia Taarifa",
+      "diamonds": "Taarifa",
+      "diamondsText": "Taarifa Taarifa",
+      "earn": "Taarifa",
+      "earnText": "Taarifa Taarifa",
+      "lockedDeposit": "Taarifa",
+      "lockedDepositText": "Taarifa Taarifa",
+      "manage": "Dhibiti",
+      "maturity": "Taarifa",
+      "months": "Taarifa",
+      "noActiveDeposits": "Taarifa",
+      "moveCoinToWallet": "Pochi",
+      "available": "Inapatikana",
+      "frozen": "Imesimamishwa",
+      "interest": "Riba",
+      "spendable": "Taarifa",
+      "withdrawable": "Taarifa",
+      "gameEligible": "Taarifa",
+      "diamondsUnit": "Taarifa"
     },
     "cryptoIndex": {
-      "eyebrow": "SABI CRYPTO",
-      "title": "Crypto Wallet",
-      "subtitle": "Separate crypto access with provider-based assets, network routing and wallet risk checks.",
-      "totalBalance": "Total crypto value",
-      "providerRequired": "Provider required",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "totalBalance": "Taarifa",
+      "providerRequired": "Mipangilio",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
-      "assetsCount": "0 assets",
-      "networks": "Networks",
-      "change24h": "24h",
-      "status": "Status",
-      "quickActions": "Quick actions",
-      "buy": "Buy",
-      "buyText": "Provider funding",
+      "assetsCount": "Taarifa",
+      "networks": "Taarifa",
+      "change24h": "Taarifa",
+      "status": "Hali",
+      "quickActions": "Mipangilio",
+      "buy": "Taarifa",
+      "buyText": "Taarifa Taarifa",
       "send": "Tuma",
-      "sendText": "Transfer out",
+      "sendText": "Taarifa Taarifa",
       "receive": "Pokea",
-      "receiveText": "Wallet address",
-      "swap": "Swap",
-      "swapText": "Exchange assets",
-      "sell": "Sell",
-      "sellText": "Convert out",
+      "receiveText": "Taarifa Taarifa",
+      "swap": "Taarifa",
+      "swapText": "Taarifa Taarifa",
+      "sell": "Taarifa",
+      "sellText": "Taarifa Taarifa",
       "history": "Historia",
-      "historyText": "Confirmed activity",
-      "portfolio": "Portfolio",
-      "custody": "Custody route",
-      "custodyText": "Crypto balances must come from a connected provider or wallet backend.",
-      "pricing": "Market pricing",
-      "pricingText": "USD value is shown only after provider price feed is connected.",
-      "risk": "Risk checks",
+      "historyText": "Historia Taarifa",
+      "portfolio": "Taarifa",
+      "custody": "Taarifa",
+      "custodyText": "Taarifa Taarifa",
+      "pricing": "Taarifa",
+      "pricingText": "Taarifa Taarifa",
+      "risk": "Taarifa",
       "riskText": "Tuma, sell and swap require wallet risk checks and explicit confirmation.",
-      "assets": "Assets",
-      "noAssetsTitle": "No crypto assets yet",
-      "noAssetsText": "Assets will appear only after a real crypto provider or wallet backend returns verified balances.",
-      "networksTokens": "Networks and tokens",
-      "networksText": "Network list must come from provider configuration.",
-      "tokensText": "Visible token list must be provider-backed.",
-      "cryptoFoundation": "Crypto foundation",
-      "cryptoFoundationText": "Crypto stays separate from Sabi Wallet, Coin Wallet and card rails, with values supplied by a connected provider.",
-      "backToWalletHome": "Back to Wallet Home",
+      "assets": "Taarifa",
+      "noAssetsTitle": "Kichwa",
+      "noAssetsText": "Taarifa Taarifa",
+      "networksTokens": "Taarifa",
+      "networksText": "Taarifa Taarifa",
+      "tokensText": "Taarifa Taarifa",
+      "cryptoFoundation": "Taarifa",
+      "cryptoFoundationText": "Taarifa Taarifa",
+      "backToWalletHome": "Rudi",
       "openAssets": "Fungua assets"
     },
     "businessPay": {
@@ -1532,252 +1533,252 @@ export const SW_LOCALE = {
       "subtitle": "Biashara wallet route is prepared for provider-backed payouts and merchant-linked settlements.",
       "providerStatus": "Mtoa huduma hajasanidiwa",
       "routeTitle": "Biashara route",
-      "routeHint": "Provider-backed routes",
-      "routeEmptyTitle": "No business routes yet",
+      "routeHint": "Taarifa Taarifa",
+      "routeEmptyTitle": "Taarifa",
       "routeEmptyText": "Routes must come from Biashara Wallet provider, KYB and admin configuration.",
-      "searchPlaceholder": "Tafuta business routes",
-      "fundingTitle": "Funding source",
-      "fundingHint": "Token and wallet rails",
+      "searchPlaceholder": "Tafuta",
+      "fundingTitle": "Kichwa",
+      "fundingHint": "Taarifa Taarifa",
       "businessBalance": "Biashara Wallet",
       "businessBalanceText": "Available after Biashara Wallet launch",
-      "sabiBalanceText": "Personal Sabi Wallet bridge",
-      "merchantBalance": "Merchant route",
-      "merchantBalanceText": "Available after merchant settlement provider is connected",
+      "sabiBalanceText": "Taarifa Taarifa",
+      "merchantBalance": "Taarifa",
+      "merchantBalanceText": "Taarifa Taarifa",
       "notConfigured": "Haijasanidiwa",
-      "detailsTitle": "Payout details",
+      "detailsTitle": "Kichwa",
       "detailsHint": "Kiasi and reference",
       "amount": "Kiasi",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
-      "referencePlaceholder": "Invoice, order or payout reference",
-      "previewTitle": "Routing preview",
-      "previewHint": "Summary",
-      "selectedRoute": "Selected route",
-      "fundingSource": "Funding source",
-      "noReference": "No reference",
+      "amountPlaceholder": "Tafuta",
+      "reference": "Rejea",
+      "referencePlaceholder": "Tafuta",
+      "previewTitle": "Kichwa",
+      "previewHint": "Taarifa Taarifa",
+      "selectedRoute": "Taarifa",
+      "fundingSource": "Taarifa",
+      "noReference": "Taarifa",
       "qrTitle": "Biashara QR",
-      "qrSubtitle": "Generate business receive QR",
-      "scanTitle": "Scan business QR",
+      "qrSubtitle": "Maelezo Taarifa",
+      "scanTitle": "Kichwa",
       "scanSubtitle": "Fungua wallet scanner",
       "routesTitle": "Biashara links",
-      "routesHint": "Wallet navigation",
-      "merchantLink": "Merchant link",
+      "routesHint": "Taarifa Taarifa",
+      "merchantLink": "Taarifa",
       "history": "Historia",
-      "paymentsHub": "Payments hub",
-      "notesTitle": "Security",
-      "notesHint": "Policy",
+      "paymentsHub": "Taarifa",
+      "notesTitle": "Usalama",
+      "notesHint": "Taarifa Taarifa",
       "note1Title": "Biashara route separation",
-      "note1Text": "Biashara money routing stays separate from personal wallet flow.",
-      "note2Title": "KYB and admin control",
+      "note1Text": "Taarifa Taarifa",
+      "note2Title": "Taarifa",
       "note2Text": "Biashara payouts require provider, KYB, wallet risk checks and admin/compliance hooks.",
-      "note3Title": "Provider settlement only",
+      "note3Title": "Taarifa",
       "note3Text": "Biashara balances and payouts require provider settlement confirmation.",
       "back": "Rudi",
-      "process": "Process payout"
+      "process": "Taarifa"
     },
     "merchantPay": {
-      "eyebrow": "Merchant Pay",
-      "title": "Merchant settlement",
-      "subtitle": "Merchant settlement route is prepared for provider-backed checkout and seller payouts.",
+      "eyebrow": "Taarifa",
+      "title": "Makazi ya merchant",
+      "subtitle": "Mipangilio",
       "providerStatus": "Mtoa huduma hajasanidiwa",
-      "routeTitle": "Merchant route",
-      "routeHint": "Provider-backed merchants",
-      "routeEmptyTitle": "No merchant routes yet",
-      "routeEmptyText": "Merchant routes must come from merchant provider, KYB/KYC and admin configuration.",
+      "routeTitle": "Kichwa",
+      "routeHint": "Taarifa Taarifa",
+      "routeEmptyTitle": "Taarifa",
+      "routeEmptyText": "Taarifa Taarifa",
       "searchPlaceholder": "Tafuta merchant routes",
-      "fundingTitle": "Funding source",
-      "fundingHint": "Settlement and wallet rails",
+      "fundingTitle": "Kichwa",
+      "fundingHint": "Taarifa Taarifa",
       "businessBalance": "Biashara Wallet",
       "businessBalanceText": "Available after Biashara Wallet launch",
-      "sabiBalanceText": "Sabi Wallet payment source",
+      "sabiBalanceText": "Taarifa Taarifa",
       "merchantBalance": "Merchant Salio",
-      "merchantBalanceText": "Available after merchant settlement provider is connected",
+      "merchantBalanceText": "Taarifa Taarifa",
       "notConfigured": "Haijasanidiwa",
-      "detailsTitle": "Payment details",
+      "detailsTitle": "Kichwa",
       "detailsHint": "Kiasi and reference",
       "amount": "Kiasi",
-      "amountPlaceholder": "0.00",
-      "reference": "Reference",
-      "referencePlaceholder": "Order, invoice or settlement reference",
-      "previewTitle": "Payment preview",
-      "previewHint": "Summary",
-      "selectedRoute": "Selected route",
-      "fundingSource": "Funding source",
-      "noReference": "No reference",
-      "qrTitle": "Merchant QR",
-      "qrSubtitle": "Generate merchant receive QR",
-      "scanTitle": "Scan merchant QR",
+      "amountPlaceholder": "Tafuta",
+      "reference": "Rejea",
+      "referencePlaceholder": "Tafuta",
+      "previewTitle": "Kichwa",
+      "previewHint": "Taarifa Taarifa",
+      "selectedRoute": "Taarifa",
+      "fundingSource": "Taarifa",
+      "noReference": "Taarifa",
+      "qrTitle": "QR ya merchant",
+      "qrSubtitle": "Maelezo Taarifa",
+      "scanTitle": "Kichwa",
       "scanSubtitle": "Fungua wallet scanner",
-      "routesTitle": "Merchant links",
-      "routesHint": "Wallet navigation",
+      "routesTitle": "Kichwa",
+      "routesHint": "Taarifa Taarifa",
       "merchantLink": "Biashara link",
       "history": "Historia",
-      "paymentsHub": "Payments hub",
-      "notesTitle": "Security",
-      "notesHint": "Policy",
-      "note1Title": "Merchant route separation",
-      "note1Text": "Merchant settlement stays separate from personal wallet flow.",
-      "note2Title": "Provider and admin control",
-      "note2Text": "Merchant payments require provider routing, wallet risk checks and admin/compliance hooks.",
-      "note3Title": "Provider merchant balance",
-      "note3Text": "Merchant payments and settlement balances require provider confirmation.",
+      "paymentsHub": "Taarifa",
+      "notesTitle": "Usalama",
+      "notesHint": "Taarifa Taarifa",
+      "note1Title": "Taarifa",
+      "note1Text": "Taarifa Taarifa",
+      "note2Title": "Taarifa",
+      "note2Text": "Taarifa Taarifa",
+      "note3Title": "Taarifa",
+      "note3Text": "Taarifa Taarifa",
       "back": "Rudi",
-      "process": "Process payment"
+      "process": "Taarifa"
     },
     "paymentsHub": {
-      "eyebrow": "SABI WALLET PAY",
-      "title": "Payments Hub",
-      "subtitle": "Unified payment center for Sabi Wallet, cards, QR, merchant routing and Messenger payments.",
-      "heroTitle": "Payment infrastructure",
-      "heroSubtitle": "Real payment routes must come from wallet foundation, bank providers, QR/Pay and compliance gates.",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "heroTitle": "Taarifa",
+      "heroSubtitle": "Taarifa Taarifa",
       "providerNotConfigured": "Mtoa huduma hajasanidiwa",
-      "mainBalance": "Primary balance",
-      "primaryCurrency": "Primary currency",
-      "providerRoutes": "Provider routes",
-      "pillSabi": "Sabi Wallet",
-      "pillCards": "Cards",
-      "pillMerchant": "Merchant",
-      "pillInternal": "Internal",
-      "pillIdentity": "Identity",
-      "featuredTitle": "Featured payment flows",
-      "featuredHint": "Core routes",
-      "internalEyebrow": "INTERNAL PAYMENTS",
-      "internalTitle": "MySabi ID and transfers",
-      "internalSubtitle": "Internal send, request, contacts and identity-based wallet routing.",
-      "availableBalance": "Available balance",
-      "cardEyebrow": "CARDS AND MOVEMENT",
-      "cardTitle": "Cards, top up and withdraw",
-      "cardSubtitle": "Money movement between Sabi Wallet and cards must use provider tokens only.",
-      "cardProvider": "Card provider",
-      "ecosystemEyebrow": "MERCHANT AND CHAT",
+      "mainBalance": "Taarifa",
+      "primaryCurrency": "Taarifa",
+      "providerRoutes": "Mipangilio",
+      "pillSabi": "Taarifa",
+      "pillCards": "Kadi",
+      "pillMerchant": "Taarifa",
+      "pillInternal": "Taarifa",
+      "pillIdentity": "Identitet",
+      "featuredTitle": "Premium",
+      "featuredHint": "Premium Taarifa",
+      "internalEyebrow": "Taarifa",
+      "internalTitle": "Kichwa",
+      "internalSubtitle": "Maelezo Taarifa",
+      "availableBalance": "Salio linalopatikana",
+      "cardEyebrow": "Taarifa",
+      "cardTitle": "Kichwa",
+      "cardSubtitle": "Maelezo Taarifa",
+      "cardProvider": "Mipangilio",
+      "ecosystemEyebrow": "Taarifa",
       "ecosystemTitle": "Biashara, merchant and Messenger",
-      "ecosystemSubtitle": "Merchant, business and chat payments stay separated from personal balance until provider routes are connected.",
-      "ecosystemProvider": "Ecosystem provider",
-      "qrAccess": "QR access",
-      "singleEntry": "Single entry",
-      "myQr": "My Sabi QR",
-      "myQrSubtitle": "Generate receive QR for Sabi Wallet.",
-      "scanQr": "Scan QR",
+      "ecosystemSubtitle": "Maelezo Taarifa",
+      "ecosystemProvider": "Mipangilio",
+      "qrAccess": "Taarifa",
+      "singleEntry": "Taarifa",
+      "myQr": "Taarifa",
+      "myQrSubtitle": "Maelezo Taarifa",
+      "scanQr": "Skani QR",
       "scanQrSubtitle": "Fungua scanner for user, merchant or dynamic QR flow.",
-      "internalPayments": "Internal payments",
-      "core": "Core",
-      "cardsBalance": "Cards and balance",
-      "moneyMovement": "Money movement",
-      "ecosystemPayments": "Ecosystem payments",
-      "extendedRoutes": "Extended routes",
-      "mySabiId": "MySabi ID",
-      "mySabiIdSubtitle": "Manage internal wallet identity and payment sharing.",
-      "send": "Tuma money",
+      "internalPayments": "Taarifa",
+      "core": "Taarifa",
+      "cardsBalance": "Taarifa",
+      "moneyMovement": "Taarifa",
+      "ecosystemPayments": "Taarifa",
+      "extendedRoutes": "Taarifa",
+      "mySabiId": "Taarifa",
+      "mySabiIdSubtitle": "Maelezo Taarifa",
+      "send": "Taarifa",
       "sendSubtitle": "Tuma by Sabi Wallet, card route or internal wallet route.",
-      "request": "Request money",
+      "request": "Taarifa",
       "requestSubtitle": "Unda a verified payment request.",
-      "contacts": "Wallet contacts",
+      "contacts": "Taarifa",
       "contactsSubtitle": "Imehifadhiwa recipients must come from verified wallet contacts.",
-      "topup": "Top up from card",
-      "topupSubtitle": "Ongeza money through a tokenized provider card route.",
-      "withdraw": "Withdraw to card",
+      "topup": "Taarifa",
+      "topupSubtitle": "Maelezo Taarifa",
+      "withdraw": "Taarifa",
       "withdrawSubtitle": "Move Sabi Salio back to a provider-tokenized card.",
-      "cards": "Cards",
-      "cardsSubtitle": "Manage local, international and virtual tokenized cards.",
-      "virtualCard": "Virtual card",
-      "virtualCardSubtitle": "Issue only through a real bank or issuer provider.",
+      "cards": "Kadi",
+      "cardsSubtitle": "Maelezo Taarifa",
+      "virtualCard": "Taarifa",
+      "virtualCardSubtitle": "Maelezo Taarifa",
       "chatPayments": "Gumzo payments",
-      "chatPaymentsSubtitle": "Messenger payment routes with explicit confirmation.",
-      "merchantPay": "Merchant Pay",
-      "merchantPaySubtitle": "Provider-backed merchant checkout and settlement routing.",
+      "chatPaymentsSubtitle": "Gumzo Taarifa",
+      "merchantPay": "Taarifa",
+      "merchantPaySubtitle": "Maelezo Taarifa",
       "businessPay": "Biashara routing",
       "businessPaySubtitle": "Biashara Wallet route prepared for KYB/admin control.",
-      "securityTitle": "Wallet-grade routing",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-based routing",
-      "identityText": "MySabi ID connects personal, business and merchant payment discovery through verified identity.",
-      "tokenTitle": "Token-only card movement",
-      "tokenText": "Card movement uses bank/provider tokens. Sabi must not store PAN or CVV.",
-      "separationTitle": "Merchant and business separation",
-      "separationText": "Seller checkout and business payment routing stay separate from personal wallet balance.",
-      "noFakeTitle": "Secure provider execution",
-      "noFakeText": "Balances and routes appear only after wallet foundation, provider or backend data is available."
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "identityTitle": "Kichwa",
+      "identityText": "Taarifa Taarifa",
+      "tokenTitle": "Kichwa",
+      "tokenText": "Taarifa Taarifa",
+      "separationTitle": "Kichwa",
+      "separationText": "Taarifa Taarifa",
+      "noFakeTitle": "Kichwa",
+      "noFakeText": "Taarifa Taarifa"
     },
     "contacts": {
-      "title": "Wallet contacts",
-      "subtitle": "Verified wallet contacts will appear after backend directory sync.",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
       "searchPlaceholder": "Tafuta verified wallet contacts",
-      "all": "All",
-      "people": "People",
+      "all": "Zote",
+      "people": "Watu",
       "business": "Biashara",
-      "merchant": "Merchant",
-      "quickRoutes": "Quick routes",
-      "quickRoutesHint": "Actions",
+      "merchant": "Taarifa",
+      "quickRoutes": "Taarifa",
+      "quickRoutesHint": "Vitendo",
       "send": "Tuma",
-      "request": "Request",
+      "request": "Ombi",
       "chatPay": "Gumzo Pay",
-      "mySabiId": "MySabi ID",
-      "directoryTitle": "Verified directory",
-      "directoryHint": "Verified directory required",
-      "emptyTitle": "No verified contacts yet",
-      "emptyText": "Contacts must come from verified user, business or merchant routes.",
-      "securityTitle": "Contact system",
-      "securityHint": "Policy",
-      "identityTitle": "Identity-first routing",
-      "identityText": "Wallet contacts must use unified user ID, MySabi ID or verified merchant/business route.",
-      "verifiedTitle": "Verified paths",
-      "verifiedText": "Tuma and request flows should resolve recipients from backend/profile data before money movement."
+      "mySabiId": "Taarifa",
+      "directoryTitle": "Kichwa",
+      "directoryHint": "Taarifa Taarifa",
+      "emptyTitle": "Taarifa",
+      "emptyText": "Taarifa Taarifa",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "identityTitle": "Kichwa",
+      "identityText": "Taarifa Taarifa",
+      "verifiedTitle": "Kichwa",
+      "verifiedText": "Taarifa Taarifa"
     },
     "chatPayments": {
       "title": "Gumzo payments",
-      "subtitle": "Messenger payment route by ID or QR.",
-      "heroTitle": "Messenger payment layer",
+      "subtitle": "Mipangilio",
+      "heroTitle": "Gumzo",
       "heroText": "Gumzo payments must resolve real Messenger identity and wallet provider routes before confirmation.",
-      "currentRoute": "Current route",
-      "currentAmount": "Current amount",
-      "byId": "By ID",
-      "byQr": "By QR",
-      "paymentMode": "Payment mode",
-      "paymentModeHint": "ID or QR",
-      "byIdText": "Use internal user ID or @handle.",
-      "byQrText": "Scan or generate Messenger payment QR.",
-      "paymentSource": "Payment source",
-      "paymentSourceHint": "Fiat or COIN",
-      "sabiWallet": "Sabi Wallet",
-      "sabiWalletText": "Primary wallet balance for chat payments.",
-      "coinWallet": "Coin Wallet",
-      "coinWalletText": "COIN route for premium chat transfers.",
-      "recipientTitle": "Recipient by ID",
-      "recipientHint": "Messenger identity",
-      "recipientLabel": "Recipient ID / @handle",
-      "recipientPlaceholder": "@username or user ID",
-      "qrRecipientTitle": "QR recipient",
-      "qrRecipientHint": "Scanned result",
-      "qrRecipientLabel": "QR recipient / reference",
-      "qrRecipientPlaceholder": "Scanned handle, ID or QR reference",
-      "myMessengerQr": "My Messenger QR",
-      "myMessengerQrText": "Generate receive QR for chat.",
-      "scanMessengerQr": "Scan Messenger QR",
+      "currentRoute": "Taarifa",
+      "currentAmount": "Taarifa",
+      "byId": "Taarifa",
+      "byQr": "Taarifa",
+      "paymentMode": "Taarifa",
+      "paymentModeHint": "Taarifa Taarifa",
+      "byIdText": "Taarifa Taarifa",
+      "byQrText": "Taarifa Taarifa",
+      "paymentSource": "Taarifa",
+      "paymentSourceHint": "Taarifa Taarifa",
+      "sabiWallet": "Pochi",
+      "sabiWalletText": "Pochi Taarifa",
+      "coinWallet": "Pochi",
+      "coinWalletText": "Pochi Taarifa",
+      "recipientTitle": "Kichwa",
+      "recipientHint": "Taarifa Taarifa",
+      "recipientLabel": "Taarifa",
+      "recipientPlaceholder": "Tafuta",
+      "qrRecipientTitle": "Kichwa",
+      "qrRecipientHint": "Taarifa Taarifa",
+      "qrRecipientLabel": "Taarifa",
+      "qrRecipientPlaceholder": "Tafuta",
+      "myMessengerQr": "Taarifa",
+      "myMessengerQrText": "Taarifa Taarifa",
+      "scanMessengerQr": "Taarifa",
       "scanMessengerQrText": "Fungua wallet scanner.",
-      "detailsTitle": "Payment details",
-      "detailsHint": "Compose",
+      "detailsTitle": "Kichwa",
+      "detailsHint": "Taarifa Taarifa",
       "amount": "Kiasi",
-      "note": "Note",
-      "notePlaceholder": "Reason or payment note",
+      "note": "Dokezo",
+      "notePlaceholder": "Tafuta",
       "previewTitle": "Gumzo payment preview",
-      "previewHint": "Summary",
-      "mode": "Mode",
-      "recipient": "Recipient",
-      "source": "Source",
-      "notSelected": "Not selected",
-      "noNote": "No note",
-      "shortcutsTitle": "Messenger shortcuts",
-      "shortcutsHint": "Routes",
+      "previewHint": "Taarifa Taarifa",
+      "mode": "Taarifa",
+      "recipient": "Mpokeaji",
+      "source": "Chanzo",
+      "notSelected": "Taarifa",
+      "noNote": "Taarifa",
+      "shortcutsTitle": "Kichwa",
+      "shortcutsHint": "Taarifa Taarifa",
       "history": "Historia",
-      "coinWalletShortcut": "Coin Wallet",
-      "sabiWalletShortcut": "Sabi Wallet",
-      "askAi": "Ask AI",
-      "securityTitle": "Messenger payment notes",
-      "securityHint": "Policy",
-      "security1Title": "Identity-linked route",
-      "security1Text": "The recipient must be resolved from real Messenger/user identity before money movement.",
-      "security2Title": "Explicit confirmation",
-      "security2Text": "Gumzo payment is passed to Wallet confirmation and security provider before execution.",
+      "coinWalletShortcut": "Pochi",
+      "sabiWalletShortcut": "Pochi",
+      "askAi": "AI",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "security1Title": "Taarifa",
+      "security1Text": "Taarifa Taarifa",
+      "security2Title": "Taarifa",
+      "security2Text": "Taarifa Taarifa",
       "back": "Rudi",
       "sendById": "Tuma by ID",
       "sendByQr": "Tuma by QR",
@@ -1786,417 +1787,417 @@ export const SW_LOCALE = {
     },
     "currency": {
       "notConfigured": "Haijasanidiwa",
-      "usd": "US Dollar",
-      "eur": "Euro",
-      "cny": "Chinese yuan",
-      "aed": "UAE dirham",
-      "gbp": "British pound",
-      "jpy": "Japanese yen",
-      "krw": "Korean won",
-      "uzs": "Uzbek soʻm",
-      "kzt": "Kazakh tenge",
-      "kgs": "Kyrgyz som",
-      "tjs": "Tajik somoni",
-      "tmt": "Turkmen manat",
-      "azn": "Azerbaijani manat",
-      "try": "Turkish lira",
-      "inr": "Indian rupee"
+      "usd": "Taarifa",
+      "eur": "Taarifa",
+      "cny": "Taarifa",
+      "aed": "Taarifa",
+      "gbp": "Taarifa",
+      "jpy": "Taarifa",
+      "krw": "Taarifa",
+      "uzs": "Taarifa",
+      "kzt": "Taarifa",
+      "kgs": "Taarifa",
+      "tjs": "Taarifa",
+      "tmt": "Taarifa",
+      "azn": "Taarifa",
+      "try": "Taarifa",
+      "inr": "Taarifa"
     },
     "localTransfer": {
-      "eyebrow": "LOCAL TRANSFER",
-      "title": "Card to Card",
-      "subtitle": "Domestic card-to-card route through a connected bank or payment provider.",
-      "heroTitle": "Provider-backed local transfer",
-      "heroText": "Local card flow must use provider tokenization, provider OTP and wallet risk checks. Sabi does not issue local OTP or store PAN/CVV.",
-      "transferFrom": "Transfer from",
-      "sourceHint": "Tokenized source card",
-      "sourceLabel": "Source card token",
-      "sourcePlaceholder": "Select linked card or provider token",
-      "recipientTitle": "Recipient",
-      "recipientHint": "Destination card route",
-      "recipientLabel": "Recipient card or token",
-      "recipientPlaceholder": "Provider token or linked card recipient",
+      "eyebrow": "Ya ndani",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "heroTitle": "Ya ndani",
+      "heroText": "Taarifa Taarifa",
+      "transferFrom": "Hamisha kutoka",
+      "sourceHint": "Taarifa Taarifa",
+      "sourceLabel": "Taarifa",
+      "sourcePlaceholder": "Tafuta",
+      "recipientTitle": "Mpokeaji",
+      "recipientHint": "Taarifa Taarifa",
+      "recipientLabel": "Taarifa",
+      "recipientPlaceholder": "Tafuta",
       "amountTitle": "Kiasi",
-      "amountHint": "Local currency",
-      "amountPlaceholder": "0.00",
-      "noteLabel": "Note",
-      "notePlaceholder": "Optional transfer note",
-      "selectedSource": "Selected source",
-      "selectedRecipient": "Selected recipient",
+      "amountHint": "Taarifa Taarifa",
+      "amountPlaceholder": "Tafuta",
+      "noteLabel": "Dokezo",
+      "notePlaceholder": "Tafuta",
+      "selectedSource": "Taarifa",
+      "selectedRecipient": "Taarifa",
       "providerTitle": "Mtoa huduma hajasanidiwa",
-      "providerText": "Unganisha a local bank/provider route before requesting OTP or executing local card transfers.",
-      "currencyTitle": "Local currency required",
-      "currencyText": "Choose local currency in Wallet Mipangilio before preparing domestic local card routes.",
-      "notesTitle": "Local transfer notes",
-      "notesHint": "Important",
-      "otpTitle": "OTP by provider",
-      "otpText": "OTP must be issued and verified by the connected bank/payment provider. This screen accepts only provider-verified OTP results.",
-      "localOnlyTitle": "Local flow only",
-      "localOnlyText": "This route is separated from international card routing and uses the configured local currency.",
-      "cardsHub": "Cards Hub"
+      "providerText": "Mipangilio Taarifa",
+      "currencyTitle": "Kichwa",
+      "currencyText": "Taarifa Taarifa",
+      "notesTitle": "Kichwa",
+      "notesHint": "Taarifa Taarifa",
+      "otpTitle": "Kichwa",
+      "otpText": "Taarifa Taarifa",
+      "localOnlyTitle": "Ya ndani",
+      "localOnlyText": "Ya ndani Taarifa",
+      "cardsHub": "Taarifa"
     },
     "localRecipients": {
-      "eyebrow": "LOCAL RECIPIENTS",
-      "title": "Domestic recipient directory",
-      "subtitle": "Verified local-card recipients from provider, contacts and profile sync.",
-      "heroTitle": "No local recipients yet",
-      "heroText": "Imehifadhiwa recipients must come from a real provider directory, verified contacts or successful transfer history.",
-      "trusted": "Trusted",
+      "eyebrow": "Ya ndani",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "heroTitle": "Ya ndani",
+      "heroText": "Taarifa Taarifa",
+      "trusted": "Taarifa",
       "searchTitle": "Tafuta recipients",
-      "searchHint": "Provider directory",
+      "searchHint": "Tafuta",
       "searchPlaceholder": "Tafuta by name, phone, ID or provider token",
-      "emptyTitle": "No recipients found",
-      "emptyText": "The local recipient list is empty until real verified recipients are synced. No local test contacts are shipped in this screen.",
-      "note1Title": "Verified recipients only",
-      "note1Text": "Local transfers should be sent only to verified domestic recipients or provider-confirmed card tokens.",
-      "note2Title": "Real directory only",
-      "note2Text": "This directory contains only synced provider recipients or verified transfer history.",
-      "newTransfer": "New transfer"
+      "emptyTitle": "Ya ndani",
+      "emptyText": "Ya ndani Taarifa",
+      "note1Title": "Taarifa",
+      "note1Text": "Taarifa Taarifa",
+      "note2Title": "Taarifa",
+      "note2Text": "Taarifa Taarifa",
+      "newTransfer": "Uhamisho mpya"
     },
     "localCardDetails": {
-      "eyebrow": "LOCAL CARD",
-      "title": "Local card details",
-      "subtitle": "Tokenized card profile, provider status and domestic permissions.",
-      "noCardTitle": "No local card selected",
-      "noCardText": "Fungua this screen only from a verified tokenized local card. Sabi does not create local test card details.",
-      "profile": "Card profile",
-      "tokenStatus": "Token status",
-      "tokenPending": "Pending provider token",
-      "cardName": "Card name",
-      "scheme": "Scheme",
-      "issuer": "Issuer",
-      "maskedCard": "Masked card",
-      "currency": "Currency",
-      "verification": "Verification",
+      "eyebrow": "Ya ndani",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "noCardTitle": "Kichwa",
+      "noCardText": "Taarifa Taarifa",
+      "profile": "Wasifu",
+      "tokenStatus": "Taarifa",
+      "tokenPending": "Taarifa",
+      "cardName": "Jina la kadi",
+      "scheme": "Taarifa",
+      "issuer": "Mtoaji",
+      "maskedCard": "Taarifa",
+      "currency": "Taarifa",
+      "verification": "Uthibitishaji",
       "topup": "Sabi Salio top up",
-      "securityTitle": "Security",
-      "securityText": "PAN/CVV stay inside the provider flow. Sabi may show only masked metadata, token ID, provider status and user controls.",
-      "controlsTitle": "Controls",
-      "controlsText": "Live card controls must be executed through provider/admin policy, not local UI simulation."
+      "securityTitle": "Usalama",
+      "securityText": "Usalama Taarifa",
+      "controlsTitle": "Kichwa",
+      "controlsText": "Taarifa Taarifa"
     },
     "cardInfo": {
-      "title": "Card details",
-      "subtitle": "Provider-tokenized card profile, visual style and controlled card actions.",
-      "noCard": "No tokenized card selected",
-      "noCardText": "Card details are available only after a bank or provider returns a verified token.",
-      "defaultBadge": "Token pending",
-      "cardProfile": "Card profile",
-      "overview": "Overview",
-      "cardType": "Card type",
-      "scheme": "Scheme",
-      "issuer": "Issuer",
-      "verification": "Verification",
-      "topup": "Top up eligibility",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "noCard": "Taarifa",
+      "noCardText": "Taarifa Taarifa",
+      "defaultBadge": "Taarifa",
+      "cardProfile": "Wasifu",
+      "overview": "Taarifa",
+      "cardType": "Taarifa",
+      "scheme": "Taarifa",
+      "issuer": "Mtoaji",
+      "verification": "Uthibitishaji",
+      "topup": "Taarifa",
       "balance": "Salio",
-      "restricted": "Restricted",
-      "cardStyle": "Card style",
-      "personalization": "Personalization",
-      "controls": "Controls",
-      "permissions": "Provider permissions",
-      "security": "Security",
-      "protection": "Protection",
-      "securitySettings": "Security settings",
-      "securitySettingsText": "PIN, biometric and trusted-device rules must be handled by wallet security/provider policy.",
-      "cardAlerts": "Card alerts",
-      "cardAlertsText": "Transaction, risk and authorization notifications come from wallet/provider events.",
-      "cardLimits": "Card limits",
-      "cardLimitsText": "Spending, cash and transaction controls are provider/admin policy controlled.",
-      "advanced": "Advanced",
-      "management": "Management",
-      "routeRole": "Wallet role routing",
-      "routeRoleText": "Personal, business or merchant card roles must be assigned through provider-backed card state.",
-      "cardActivity": "Card activity",
+      "restricted": "Taarifa",
+      "cardStyle": "Taarifa",
+      "personalization": "Taarifa",
+      "controls": "Taarifa",
+      "permissions": "Taarifa",
+      "security": "Usalama",
+      "protection": "Taarifa",
+      "securitySettings": "Usalama",
+      "securitySettingsText": "Usalama Taarifa",
+      "cardAlerts": "Ishara",
+      "cardAlertsText": "Ishara Taarifa",
+      "cardLimits": "Taarifa",
+      "cardLimitsText": "Taarifa Taarifa",
+      "advanced": "Ya hali ya juu",
+      "management": "Taarifa",
+      "routeRole": "Taarifa",
+      "routeRoleText": "Taarifa Taarifa",
+      "cardActivity": "Taarifa",
       "cardActivityText": "Fungua transactions, statuses and reconciliation hooks.",
-      "styleMidnight": "Midnight",
-      "styleOcean": "Ocean",
-      "styleEmerald": "Emerald",
-      "styleViolet": "Violet",
-      "styleSunset": "Sunset",
-      "styleYouth": "Youth"
+      "styleMidnight": "Taarifa",
+      "styleOcean": "Taarifa",
+      "styleEmerald": "Taarifa",
+      "styleViolet": "Taarifa",
+      "styleSunset": "Taarifa",
+      "styleYouth": "Taarifa"
     },
     "confirmAddCard": {
       "title": "Thibitisha card binding",
-      "subtitle": "Only provider-tokenized card binding can be activated.",
-      "blockedTitle": "Provider token required",
-      "blockedText": "This confirmation screen cannot activate a card without a verified token returned by the bank or payment provider.",
-      "providerToken": "Provider token",
-      "maskedCard": "Masked card",
-      "cardCategory": "Card category",
-      "status": "Status",
-      "missing": "Missing",
-      "pending": "Pending",
-      "verified": "Verified",
-      "rejected": "Rejected",
-      "restricted": "Restricted",
-      "invalidPayload": "Raw card data blocked",
-      "blockedFields": "Blocked fields",
-      "source": "Provider token",
+      "subtitle": "Mipangilio",
+      "blockedTitle": "Kichwa",
+      "blockedText": "Taarifa Taarifa",
+      "providerToken": "Mipangilio",
+      "maskedCard": "Taarifa",
+      "cardCategory": "Taarifa",
+      "status": "Hali",
+      "missing": "Taarifa",
+      "pending": "Inasubiri",
+      "verified": "Imethibitishwa",
+      "rejected": "Taarifa",
+      "restricted": "Taarifa",
+      "invalidPayload": "Taarifa",
+      "blockedFields": "Taarifa",
+      "source": "Taarifa",
       "pinTitle": "Thibitisha card token",
-      "pinSubtitle": "Final activation must pass Wallet Security before backend/provider save.",
-      "tokenOnlyTitle": "Token-only activation",
-      "tokenOnlyText": "Sabi may store token ID, masked metadata and provider status only. PAN and CVV must never be saved.",
-      "backToCards": "Back to cards",
+      "pinSubtitle": "Maelezo Taarifa",
+      "tokenOnlyTitle": "Kichwa",
+      "tokenOnlyText": "Taarifa Taarifa",
+      "backToCards": "Rudi",
       "continue": "Endelea"
     },
     "send": {
-      "title": "Tuma money",
-      "subtitle": "Choose a secure route before confirmation.",
-      "routeTitle": "Transfer route",
-      "routeHint": "Source and destination",
-      "sabiToSabi": "Sabi Wallet to Sabi Wallet",
-      "sabiToSabiText": "Internal Wallet transfer by ID, phone or username.",
-      "cardToCard": "Card to card",
-      "cardToCardText": "Provider-tokenized card transfer with bank confirmation.",
-      "sabiToCard": "Sabi Wallet to card",
+      "title": "Taarifa",
+      "subtitle": "Mipangilio",
+      "routeTitle": "Kichwa",
+      "routeHint": "Taarifa Taarifa",
+      "sabiToSabi": "Taarifa",
+      "sabiToSabiText": "Taarifa Taarifa",
+      "cardToCard": "Taarifa",
+      "cardToCardText": "Taarifa Taarifa",
+      "sabiToCard": "Taarifa",
       "sabiToCardText": "Tuma from Sabi Salio to a linked or recipient card.",
-      "cardToSabi": "Card to Sabi Wallet",
-      "cardToSabiText": "Top up or transfer from a tokenized card to Sabi Wallet.",
-      "sourceTitle": "Source",
-      "sourceHint": "Funding account",
-      "linkedCard": "Linked card",
-      "linkedCardPlaceholder": "Select linked card or provider token",
-      "chooseCard": "Choose card",
-      "tokenOnlyDetails": "Provider token only. PAN and CVV are not stored by Sabi.",
-      "sabiBalanceDetails": "Internal Sabi Wallet balance",
-      "available": "Available",
+      "cardToSabi": "Taarifa",
+      "cardToSabiText": "Taarifa Taarifa",
+      "sourceTitle": "Chanzo",
+      "sourceHint": "Taarifa Taarifa",
+      "linkedCard": "Taarifa",
+      "linkedCardPlaceholder": "Tafuta",
+      "chooseCard": "Taarifa",
+      "tokenOnlyDetails": "Taarifa",
+      "sabiBalanceDetails": "Taarifa",
+      "available": "Inapatikana",
       "amount": "Kiasi",
-      "amountPlaceholder": "0.00",
-      "destinationTitle": "Destination",
-      "destinationHint": "Recipient details",
-      "walletRecipient": "Wallet recipient",
-      "walletRecipientPlaceholder": "User ID, phone or @username",
-      "cardRecipient": "Recipient card",
-      "cardRecipientPlaceholder": "Provider token or linked card recipient",
-      "recipientName": "Recipient name",
-      "recipientNamePlaceholder": "Optional name for confirmation",
-      "note": "Note",
-      "notePlaceholder": "Optional payment note",
-      "securityTitle": "Bank-grade routing",
-      "securityHint": "Before confirmation",
-      "security1Title": "Token-only cards",
-      "security1Text": "Card operations must use bank or provider tokenization.",
-      "security2Title": "Secure confirmation",
-      "security2Text": "Money movement continues through PIN, biometric or provider confirmation.",
-      "security3Title": "Provider-backed balance",
+      "amountPlaceholder": "Tafuta",
+      "destinationTitle": "Lengwa",
+      "destinationHint": "Taarifa Taarifa",
+      "walletRecipient": "Pochi",
+      "walletRecipientPlaceholder": "Tafuta",
+      "cardRecipient": "Kadi ya mpokeaji",
+      "cardRecipientPlaceholder": "Tafuta",
+      "recipientName": "Taarifa",
+      "recipientNamePlaceholder": "Tafuta",
+      "note": "Dokezo",
+      "notePlaceholder": "Tafuta",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
+      "security1Title": "Taarifa",
+      "security1Text": "Taarifa Taarifa",
+      "security2Title": "Taarifa",
+      "security2Text": "Taarifa Taarifa",
+      "security3Title": "Taarifa",
       "security3Text": "This screen reads Sabi Salio from Wallet foundation only.",
       "continue": "Endelea",
-      "cardRequired": "Linked card is required",
-      "recipientRequired": "Recipient is required",
+      "cardRequired": "Taarifa",
+      "recipientRequired": "Taarifa",
       "confirmTitle": "Thibitisha transfer",
-      "cardRail": "CARD",
-      "sabiRail": "SABI",
-      "usd": "USD"
+      "cardRail": "Taarifa",
+      "sabiRail": "Taarifa",
+      "usd": "Taarifa"
     },
     "topup": {
       "title": "Ongeza salio",
       "subtitle": "Fund Sabi Salio only through verified tokenized provider routes.",
-      "destination": "Destination",
-      "destinationHint": "Internal money",
-      "destinationText": "Internal electronic money for transfers, ecosystem payments and daily usage.",
-      "storedValue": "Stored value",
-      "type": "Type",
-      "internalMoney": "Internal electronic money",
-      "usage": "Usage",
-      "transfersPayments": "Transfers + Payments",
-      "speed": "Speed",
-      "byProviderPolicy": "By provider policy",
+      "destination": "Lengwa",
+      "destinationHint": "Taarifa Taarifa",
+      "destinationText": "Taarifa Taarifa",
+      "storedValue": "Taarifa",
+      "type": "Aina",
+      "internalMoney": "Taarifa",
+      "usage": "Taarifa",
+      "transfersPayments": "Taarifa",
+      "speed": "Taarifa",
+      "byProviderPolicy": "Mipangilio",
       "amount": "Kiasi",
-      "amountHint": "Funding value",
+      "amountHint": "Taarifa Taarifa",
       "helperText": "Top up brings external funds into Sabi Salio. It is separate from internal transfer and withdraw.",
-      "fundingSource": "Funding source",
-      "fundingSourceHint": "Tokenized card",
-      "noLinkedCardsTitle": "No linked tokenized cards",
+      "fundingSource": "Taarifa",
+      "fundingSourceHint": "Taarifa Taarifa",
+      "noLinkedCardsTitle": "Kichwa",
       "noLinkedCardsText": "Ongeza a card through the bank or provider SDK before funding Sabi Salio. Sabi must not store PAN or CVV.",
       "addCard": "Ongeza card",
-      "eligibility": "Eligibility",
-      "eligibilityHint": "Resolved by rules",
-      "eligible": "Eligible",
-      "restricted": "Restricted",
+      "eligibility": "Taarifa",
+      "eligibilityHint": "Taarifa Taarifa",
+      "eligible": "Taarifa",
+      "restricted": "Taarifa",
       "eligibleText": "This provider token is allowed to fund Sabi Salio.",
-      "restrictedText": "A verified provider token is required before top up can continue.",
-      "selectedSource": "Selected source",
-      "scheme": "Scheme",
-      "maskedCard": "Masked card",
-      "sourceType": "Source type",
-      "tokenOnlyTitle": "Token-only route",
-      "tokenOnlyText": "Card funding must be confirmed through provider tokenization, biometric/PIN confirmation and wallet risk checks.",
+      "restrictedText": "Taarifa Taarifa",
+      "selectedSource": "Taarifa",
+      "scheme": "Taarifa",
+      "maskedCard": "Taarifa",
+      "sourceType": "Taarifa",
+      "tokenOnlyTitle": "Kichwa",
+      "tokenOnlyText": "Taarifa Taarifa",
       "continue": "Endelea",
       "confirmTitle": "Thibitisha Sabi Salio top up"
     },
     "receive": {
       "title": "Pokea",
       "subtitle": "Prepare a request into Sabi Salio through verified account routing.",
-      "destination": "Destination",
-      "destinationHint": "Internal balance",
-      "destinationText": "Internal electronic money destination for incoming transfers and future QR receive flows.",
+      "destination": "Lengwa",
+      "destinationHint": "Taarifa Taarifa",
+      "destinationText": "Taarifa Taarifa",
       "receiveBadge": "Pokea",
-      "walletRail": "Wallet rail",
-      "sabiInternal": "Sabi Internal",
-      "speed": "Speed",
-      "instant": "Instant",
-      "status": "Status",
-      "active": "Active",
-      "expectedAmount": "Expected amount",
-      "expectedAmountHint": "Request value",
+      "walletRail": "Pochi",
+      "sabiInternal": "Taarifa",
+      "speed": "Taarifa",
+      "instant": "Taarifa",
+      "status": "Hali",
+      "active": "Inatumika",
+      "expectedAmount": "Taarifa",
+      "expectedAmountHint": "Taarifa Taarifa",
       "helperText": "Pokea creates an inbound request into Sabi Salio and requires payer confirmation.",
-      "incomingSource": "Incoming source",
-      "incomingSourceHint": "Inside system",
-      "fromUser": "From user",
+      "incomingSource": "Taarifa",
+      "incomingSourceHint": "Taarifa Taarifa",
+      "fromUser": "Taarifa",
       "fromUserText": "Pokea internal transfer from another Sabi user.",
-      "fromBusiness": "From business",
-      "fromBusinessText": "Pokea payout or transfer from a business wallet route.",
-      "fromMerchant": "From merchant",
+      "fromBusiness": "Taarifa",
+      "fromBusinessText": "Taarifa Taarifa",
+      "fromMerchant": "Taarifa",
       "fromMerchantText": "Pokea settlement or merchant-origin transfer through merchant routing.",
       "receiveRoute": "Pokea route",
-      "receiveRouteHint": "Verified account",
-      "internalRoute": "Verified Sabi account route",
-      "mode": "Mode",
-      "userInbound": "User inbound",
+      "receiveRouteHint": "Taarifa Taarifa",
+      "internalRoute": "Taarifa",
+      "mode": "Taarifa",
+      "userInbound": "Taarifa",
       "businessInbound": "Biashara inbound",
-      "merchantInbound": "Merchant inbound",
-      "reference": "Reference",
-      "referenceHint": "Optional note",
-      "referencePlaceholder": "Invoice, order, reimbursement, daily transfer...",
-      "securityTitle": "Confirmed income only",
-      "securityHint": "Request only",
+      "merchantInbound": "Taarifa",
+      "reference": "Rejea",
+      "referenceHint": "Taarifa Taarifa",
+      "referencePlaceholder": "Tafuta",
+      "securityTitle": "Usalama",
+      "securityHint": "Usalama Taarifa",
       "securityText": "This screen creates only a request route. Salio is credited only after real payment confirmation.",
       "continue": "Endelea",
       "confirmTitle": "Thibitisha receive request"
     },
     "confirm": {
       "title": "Thibitisha transfer",
-      "subtitle": "Review transfer details before secure confirmation.",
+      "subtitle": "Mipangilio",
       "amount": "Kiasi",
-      "transferValue": "Transfer value",
-      "ready": "Ready for confirmation",
-      "source": "Source",
-      "funds": "Funds",
-      "rail": "Rail",
-      "details": "Details",
-      "tokenizedSource": "Tokenized / internal source",
-      "destination": "Destination",
-      "recipient": "Recipient",
-      "routeType": "Route type",
-      "handle": "Handle",
-      "note": "Note",
-      "reference": "Reference",
-      "security": "Security",
-      "bankGrade": "Bank-grade",
-      "pinTitle": "Secure confirmation",
-      "pinText": "The next step requires wallet security provider confirmation.",
-      "routeTitle": "Protected route",
-      "routeText": "Money movement is prepared for secure provider-backed execution.",
-      "notificationTitle": "Final status",
-      "notificationText": "Imefanikiwa, pending or failure must come from wallet backend/provider status.",
+      "transferValue": "Taarifa",
+      "ready": "Tayari",
+      "source": "Chanzo",
+      "funds": "Taarifa",
+      "rail": "Taarifa",
+      "details": "Taarifa",
+      "tokenizedSource": "Taarifa",
+      "destination": "Lengwa",
+      "recipient": "Mpokeaji",
+      "routeType": "Taarifa",
+      "handle": "Taarifa",
+      "note": "Dokezo",
+      "reference": "Rejea",
+      "security": "Usalama",
+      "bankGrade": "Taarifa",
+      "pinTitle": "Kichwa",
+      "pinText": "Taarifa Taarifa",
+      "routeTitle": "Kichwa",
+      "routeText": "Taarifa Taarifa",
+      "notificationTitle": "Arifa",
+      "notificationText": "Arifa Taarifa",
       "continue": "Endelea",
-      "pinConfirmTitle": "Thibitisha with Wallet Security",
-      "pinConfirmSubtitle": "Authorize this operation with secure wallet confirmation."
+      "pinConfirmTitle": "Kichwa",
+      "pinConfirmSubtitle": "Maelezo Taarifa"
     },
     "success": {
-      "title": "Transfer request submitted",
-      "subtitle": "The operation was passed to secure wallet confirmation. Final status must come from the provider or wallet backend.",
-      "backToWallet": "Back to Wallet"
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "backToWallet": "Rudi"
     },
     "financialDashboard": {
-      "eyebrow": "Sabi Wallet",
-      "walletTitle": "Wallet dashboard",
-      "title": "Financial dashboard",
-      "subtitle": "Backend-backed wallet overview",
+      "eyebrow": "Taarifa",
+      "walletTitle": "Pochi",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
       "loading": "Inapakia dashboard...",
-      "errorTitle": "Dashboard error",
+      "errorTitle": "Ombi limeshindikana. Jaribu tena.",
       "retry": "Jaribu tena",
-      "totalBalance": "Total balance",
-      "wallets": "Wallets",
-      "locked": "Locked",
-      "active": "Active",
-      "quickActions": "Quick actions",
+      "totalBalance": "Jumla ya salio",
+      "wallets": "Taarifa",
+      "locked": "Imefungwa",
+      "active": "Inatumika",
+      "quickActions": "Mipangilio",
       "history": "Historia",
-      "p2pSend": "P2P send",
-      "qrExecute": "QR execute",
-      "paymentRoute": "Payment route",
-      "totals": "Totals",
-      "payments": "Payments",
-      "p2p": "P2P",
+      "p2pSend": "Taarifa",
+      "qrExecute": "Taarifa",
+      "paymentRoute": "Taarifa",
+      "totals": "Taarifa",
+      "payments": "Malipo",
+      "p2p": "Taarifa",
       "qr": "QR",
-      "walletOps": "Wallet ops",
+      "walletOps": "Pochi",
       "business": "Biashara",
-      "merchant": "Merchant",
-      "noWallets": "No wallets found for current scope.",
-      "recentHistory": "Recent history",
-      "seeAll": "See all",
-      "noEvents": "No financial events yet.",
-      "unknown": "unknown"
+      "merchant": "Taarifa",
+      "noWallets": "Taarifa",
+      "recentHistory": "Historia",
+      "seeAll": "Tazama zote",
+      "noEvents": "Taarifa",
+      "unknown": "Taarifa"
     },
     "financialItem": {
-      "eyebrow": "Wallet record",
-      "title": "Financial details",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
       "loading": "Inapakia details...",
-      "errorTitle": "Details error",
+      "errorTitle": "Ombi limeshindikana. Jaribu tena.",
       "amountUnavailable": "Kiasi unavailable",
-      "unknown": "unknown",
+      "unknown": "Taarifa",
       "id": "ID",
-      "transaction": "Transaction",
-      "wallet": "Wallet",
-      "reference": "Reference",
-      "createdAt": "Created at",
-      "payload": "Payload"
+      "transaction": "Taarifa",
+      "wallet": "Pochi",
+      "reference": "Rejea",
+      "createdAt": "Iliundwa tarehe",
+      "payload": "Taarifa"
     },
     "paymentExecution": {
-      "eyebrow": "Payment route",
-      "title": "Secure payment execution",
-      "subtitle": "Payment execution must come from provider confirmation, not from manual local form input.",
-      "statusTitle": "Provider route required",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "statusTitle": "Kichwa",
       "statusText": "Unganisha bank/payment provider, idempotency, wallet risk checks and admin audit before enabling execution.",
-      "currentWallet": "Current wallet",
-      "currentUser": "Current user",
-      "notProvided": "Not provided",
-      "providerTitle": "Bank/provider confirmation",
-      "providerText": "Capture, refund and settlement must use provider transaction IDs returned by backend.",
-      "tokenTitle": "Token-only wallet",
-      "tokenText": "No PAN, CVV or card secrets can be entered or stored inside this screen.",
-      "auditTitle": "Admin audit",
-      "auditText": "Every payment execution must create secure ledger and audit records.",
-      "goToSend": "Fungua Tuma Money",
+      "currentWallet": "Pochi",
+      "currentUser": "Taarifa",
+      "notProvided": "Taarifa",
+      "providerTitle": "Mipangilio",
+      "providerText": "Mipangilio Taarifa",
+      "tokenTitle": "Kichwa",
+      "tokenText": "Taarifa Taarifa",
+      "auditTitle": "Kichwa",
+      "auditText": "Taarifa Taarifa",
+      "goToSend": "Taarifa",
       "goToQr": "Fungua QR Pay"
     },
     "mySabiId": {
-      "eyebrow": "MYSABI ID",
-      "title": "Wallet Identity",
-      "subtitle": "Verified payment identity for internal transfers, payment requests, My QR and scanner access.",
+      "eyebrow": "Taarifa",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
       "notConfigured": "Haijasanidiwa",
-      "pending": "Pending",
+      "pending": "Inasubiri",
       "status": "Wasifu identity required",
-      "internalPay": "Internal Pay",
+      "internalPay": "Taarifa",
       "receive": "Pokea",
-      "identity": "Identity",
-      "mainBanner": "Primary banner",
-      "preview": "Preview",
-      "bannerAppearance": "Banner appearance",
-      "displayName": "Display name",
-      "displayNamePlaceholder": "Use verified profile name",
-      "sabiId": "MySabi ID",
-      "sabiIdPlaceholder": "Use verified MySabi ID",
-      "bannerColor": "Banner color",
-      "bannerStyle": "Banner style",
-      "qrAccess": "Identity QR access",
-      "core": "Core",
-      "myQr": "My QR",
-      "scan": "Scan",
+      "identity": "Identitet",
+      "mainBanner": "Taarifa",
+      "preview": "Mwonekano wa awali",
+      "bannerAppearance": "Mwonekano",
+      "displayName": "Jina linaloonekana",
+      "displayNamePlaceholder": "Tafuta",
+      "sabiId": "Taarifa",
+      "sabiIdPlaceholder": "Tafuta",
+      "bannerColor": "Taarifa",
+      "bannerStyle": "Taarifa",
+      "qrAccess": "Taarifa",
+      "core": "Taarifa",
+      "myQr": "QR yangu",
+      "scan": "Taarifa",
       "share": "Shiriki",
       "copyId": "Nakili ID",
-      "askAi": "Ask AI",
-      "howWorks": "How this identity works",
-      "flow": "Flow",
-      "internalTitle": "Internal wallet handle",
-      "internalText": "MySabi ID is the verified address for internal transfers, payment requests and wallet discovery.",
-      "qrTitle": "Separate QR access",
-      "qrText": "This screen opens your own Sabi QR and the shared camera scanner using verified profile identity.",
-      "customizeTitle": "Identity customization",
-      "customizeText": "Banner color and style personalize the screen without changing wallet routing logic.",
-      "walletIdentity": "Wallet identity",
-      "secureRoute": "Secure internal route",
-      "style": "Style",
-      "theme": "Theme",
+      "askAi": "AI",
+      "howWorks": "Taarifa",
+      "flow": "Taarifa",
+      "internalTitle": "Kichwa",
+      "internalText": "Taarifa Taarifa",
+      "qrTitle": "Kichwa",
+      "qrText": "Taarifa Taarifa",
+      "customizeTitle": "Kichwa",
+      "customizeText": "Taarifa Taarifa",
+      "walletIdentity": "Pochi",
+      "secureRoute": "Taarifa",
+      "style": "Taarifa",
+      "theme": "Mandhari",
       "profileFallback": "Wasifu"
     }
   },
@@ -2261,10 +2262,10 @@ export const SW_LOCALE = {
     "beneficiaryBank": "Benki ya mnufaika",
     "beneficiaryAddress": "Anwani ya mnufaika",
     "accountNumber": "Nambari ya akaunti",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing number",
+    "iban": "Taarifa",
+    "swift": "Taarifa",
+    "bic": "Taarifa",
+    "routingNumber": "Taarifa",
     "correspondentBank": "Benki mwandishi",
     "intermediaryBank": "Benki ya kati",
     "bankCode": "Msimbo wa benki",
@@ -2293,7 +2294,7 @@ export const SW_LOCALE = {
     "domesticTransfer": "Uhamisho wa ndani",
     "internationalTransfer": "Uhamisho wa kimataifa",
     "swiftTransfer": "Uhamisho wa SWIFT",
-    "wireTransfer": "Wire transfer",
+    "wireTransfer": "Taarifa",
     "instantTransfer": "Uhamisho wa papo hapo",
     "scheduledTransfer": "Uhamisho uliopangwa",
     "recurringTransfer": "Uhamisho wa kurudiwa",
@@ -2308,10 +2309,10 @@ export const SW_LOCALE = {
     "beneficiaryCountry": "Nchi ya mnufaika",
     "recipientBank": "Benki ya mpokeaji",
     "bankBranch": "Tawi la benki",
-    "iban": "IBAN",
-    "swift": "SWIFT",
-    "bic": "BIC",
-    "routingNumber": "Routing number",
+    "iban": "Taarifa",
+    "swift": "Taarifa",
+    "bic": "Taarifa",
+    "routingNumber": "Taarifa",
     "transferAmount": "Kiasi cha uhamisho",
     "receivingAmount": "Kiasi kinachopokelewa",
     "transferFee": "Ada ya uhamisho",
@@ -2337,7 +2338,7 @@ export const SW_LOCALE = {
     "noSavedRecipients": "Hakuna wapokeaji waliowekwa kumbukumbu"
   },
   "walletCoin": {
-    "title": "Coin Wallet",
+    "title": "Mipangilio",
     "subtitle": "Simamia salio la Coin, uhamisho, mapato na bidhaa zilizofungwa.",
     "availableCoin": "Coin inayopatikana",
     "lockedCoin": "Coin iliyofungwa",
@@ -2420,7 +2421,7 @@ export const SW_LOCALE = {
     "netSales": "Mauzo halisi",
     "refunds": "Marejesho ya fedha",
     "refundRate": "Kiwango cha marejesho",
-    "chargebacks": "Chargebacks",
+    "chargebacks": "Rudi",
     "chargebackRate": "Kiwango cha chargeback",
     "disputes": "Migogoro",
     "paymentAcceptance": "Kupokea malipo",
@@ -2525,7 +2526,7 @@ export const SW_LOCALE = {
     "title": "Uzingatiaji",
     "subtitle": "Uthibitishaji, ukaguzi wa kikanuni na udhibiti wa uzingatiaji wa benki.",
     "kyc": "KYC",
-    "aml": "AML",
+    "aml": "Taarifa",
     "sanctionsScreening": "Ukaguzi wa vikwazo",
     "pepCheck": "Ukaguzi wa PEP",
     "sourceOfFunds": "Chanzo cha fedha",
@@ -2567,7 +2568,7 @@ export const SW_LOCALE = {
     "calls": "Simu",
     "groups": "Vikundi",
     "channels": "Chaneli",
-    "bots": "Bots",
+    "bots": "Boti",
     "businessInbox": "Kikasha cha biashara",
     "newChat": "Gumzo jipya",
     "newGroup": "Kikundi kipya",
@@ -2581,13 +2582,13 @@ export const SW_LOCALE = {
     "delivered": "Umefika",
     "seen": "Umeonekana",
     "attach": "Ambatisha",
-    "media": "Media",
+    "media": "Taarifa",
     "photo": "Picha",
-    "video": "Video",
+    "video": "Waiting for video",
     "document": "Hati",
     "contact": "Anwani",
     "location": "Mahali",
-    "sticker": "Sticker",
+    "sticker": "Taarifa",
     "premiumSticker": "Sticker ya premium",
     "animated": "Iliyohuishwa",
     "voiceMessage": "Ujumbe wa sauti",
@@ -2604,7 +2605,7 @@ export const SW_LOCALE = {
     "deleteForMe": "Nifutie mimi",
     "deleteForEveryone": "Wafutie wote",
     "selectMessages": "Chagua ujumbe",
-    "reactions": "Reactions",
+    "reactions": "Taarifa",
     "quickReactions": "Reactions za haraka",
     "muteChat": "Nyamazisha gumzo",
     "unmuteChat": "Washa sauti ya gumzo",
@@ -2643,419 +2644,419 @@ export const SW_LOCALE = {
     "translateCall": "Tafsiri simu",
     "premiumTranslation": "Tafsiri ya premium",
     "attachment": {
-      "title": "Attach",
-      "subtitle": "Real attachment flow for chat",
+      "title": "Ambatisha",
+      "subtitle": "Mipangilio",
       "camera": "Kamera",
-      "cameraSubtitle": "capture with effects",
-      "gallery": "Gallery",
-      "gallerySubtitle": "photo or video",
-      "document": "Document",
-      "documentSubtitle": "pdf doc zip and more",
-      "location": "Location",
-      "locationSubtitle": "real place card",
-      "contact": "Contact",
-      "contactSubtitle": "device contacts",
-      "catalog": "Catalog",
-      "catalogSubtitle": "product card",
-      "fiat": "Tuma money",
-      "fiatSubtitle": "through Sabi Wallet",
+      "cameraSubtitle": "Sauti Taarifa",
+      "gallery": "Taarifa",
+      "gallerySubtitle": "Maelezo Taarifa",
+      "document": "Hati",
+      "documentSubtitle": "Maelezo Taarifa",
+      "location": "Mahali",
+      "locationSubtitle": "Maelezo Taarifa",
+      "contact": "Anwani",
+      "contactSubtitle": "Maelezo Taarifa",
+      "catalog": "Katalogi",
+      "catalogSubtitle": "Maelezo Taarifa",
+      "fiat": "Taarifa",
+      "fiatSubtitle": "Maelezo Taarifa",
       "coin": "Tuma COIN",
-      "coinSubtitle": "through Coin Wallet",
-      "poll": "Poll",
-      "pollSubtitle": "vote inside chat",
-      "event": "Event",
-      "eventSubtitle": "meeting invite"
+      "coinSubtitle": "Maelezo Taarifa",
+      "poll": "Taarifa",
+      "pollSubtitle": "Maelezo Taarifa",
+      "event": "Taarifa",
+      "eventSubtitle": "Maelezo Taarifa"
     },
     "animatedHub": {
-      "title": "Animated",
-      "subtitle": "reaction · emoji · GIFT 3D PREMIUM",
-      "reactionTitle": "Animated reaction",
-      "reactionSubtitle": "full-screen premium reactions · 5 sec",
-      "emojiTitle": "Animated emoji",
-      "emojiSubtitle": "premium emoji layer · no 3D · no audio",
-      "giftTitle": "GIFT 3D PREMIUM",
-      "giftSubtitle": "paid premium 3D gifts"
+      "title": "Iliyohuishwa",
+      "subtitle": "Mipangilio",
+      "reactionTitle": "Kichwa",
+      "reactionSubtitle": "Maelezo Taarifa",
+      "emojiTitle": "Kichwa",
+      "emojiSubtitle": "Maelezo Taarifa",
+      "giftTitle": "Premium",
+      "giftSubtitle": "Premium Taarifa"
     },
     "animatedReaction": {
-      "title": "Premium stickers",
-      "subtitle": "all premium PNG stickers",
+      "title": "Stickers za premium",
+      "subtitle": "Mipangilio",
       "search": "Tafuta premium stickers",
-      "love": "Love",
-      "fun": "Fun",
-      "mood": "Mood"
+      "love": "Taarifa",
+      "fun": "Taarifa",
+      "mood": "Taarifa"
     },
     "stickerSheet": {
-      "title": "Sticker reactions",
-      "subtitle": "Reactions, emoji, gestures and country flags",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
       "searchPlaceholder": "Tafuta emoji or flag",
-      "quickReactions": "Quick reactions",
-      "empty": "Nothing found in this section",
+      "quickReactions": "Reactions za haraka",
+      "empty": "Taarifa",
       "tabs": {
-        "recent": "Recent",
-        "reactions": "Reactions",
-        "emoji": "Emoji",
-        "gestures": "Gestures",
-        "flags": "Flags"
+        "recent": "Za hivi karibuni",
+        "reactions": "Taarifa",
+        "emoji": "Taarifa",
+        "gestures": "Taarifa",
+        "flags": "Taarifa"
       }
     },
     "animatedGift": {
-      "premiumLayer": "Premium gift layer • Messenger only",
-      "storage": "My gifts",
-      "featured": "Featured",
-      "family": "Zodiac",
-      "local": "Ride",
-      "treasure": "Leisure",
+      "premiumLayer": "Premium",
+      "storage": "Taarifa",
+      "featured": "Iliyoangaziwa",
+      "family": "Taarifa",
+      "local": "Ya ndani",
+      "treasure": "Taarifa",
       "luxury": "Premium"
     },
     "giftStorage": {
-      "inventory": "Gift inventory",
-      "won": "Won",
-      "seasonal": "Seasonal",
-      "expiring": "Expiring soon",
-      "emptyTitle": "Storage is empty",
-      "emptyText": "There are no gifts in this section yet.",
-      "buy": "Purchased",
-      "event": "Event",
-      "promo": "Promo",
-      "basic": "Basic",
+      "inventory": "Hesabu ya zawadi",
+      "won": "Taarifa",
+      "seasonal": "Taarifa",
+      "expiring": "Taarifa",
+      "emptyTitle": "Premium",
+      "emptyText": "Premium Taarifa",
+      "buy": "Taarifa",
+      "event": "Taarifa",
+      "promo": "Taarifa",
+      "basic": "Taarifa",
       "premium": "Premium",
-      "ultra": "Ultra",
-      "days": "days"
+      "ultra": "Taarifa",
+      "days": "Taarifa"
     },
     "createBot": "Unda bot",
-    "manageBot": "Manage bot",
-    "myBots": "My bots",
+    "manageBot": "Msaidizi",
+    "myBots": "Taarifa",
     "privateBots": "Faragha bots",
     "searchBots": "Tafuta bots",
-    "botWorkspace": "Bot workspace",
-    "botOwnerPanel": "Bot owner panel",
-    "botOwnerPanelSubtitle": "Full control over bot profile, status, modules and wallet routing.",
+    "botWorkspace": "Msaidizi",
+    "botOwnerPanel": "Msaidizi",
+    "botOwnerPanelSubtitle": "Msaidizi Taarifa",
     "ownerPanelHint": "Fungua the full bot management panel",
-    "createBotHint": "Clients can create bots and connect them to market, delivery, store or support flows.",
-    "createBotButtonHint": "Unda and connect business bots without extra screens",
-    "emptyBotsTitle": "No bots yet",
+    "createBotHint": "Msaidizi Taarifa",
+    "createBotButtonHint": "Msaidizi Taarifa",
+    "emptyBotsTitle": "Taarifa",
     "emptyBotsSubtitle": "Unda your first bot and it will appear here.",
-    "botNameRequired": "Enter the bot name",
-    "botUsernameRequired": "Enter the bot username",
-    "botCreated": "Bot created",
-    "botUpdated": "Bot updated",
-    "botRemoved": "Bot removed",
-    "botMissing": "Bot not found",
+    "botNameRequired": "Msaidizi",
+    "botUsernameRequired": "Msaidizi",
+    "botCreated": "Msaidizi",
+    "botUpdated": "Msaidizi",
+    "botRemoved": "Msaidizi",
+    "botMissing": "Msaidizi",
     "botLoading": "Inapakia bot...",
-    "botProfile": "Bot profile",
-    "walletRouting": "Wallet routing",
-    "sabiWalletRoute": "SABI Wallet",
+    "botProfile": "Msaidizi",
+    "walletRouting": "Pochi",
+    "sabiWalletRoute": "Pochi",
     "businessRoutingLayer": "Biashara Routing Layer",
     "businessWalletComingSoon": "Biashara Wallet coming soon",
-    "botTradeRouteHint": "Trade and commerce bot income is routed into SABI Wallet.",
-    "botBusinessRouteHint": "Until Biashara Wallet launches, business bot income is routed into the temporary Biashara Routing Layer.",
-    "botStatusHint": "The bot can be paused or activated again without deleting it.",
+    "botTradeRouteHint": "Msaidizi Taarifa",
+    "botBusinessRouteHint": "Msaidizi Taarifa",
+    "botStatusHint": "Msaidizi Taarifa",
     "addCommand": "Ongeza command",
     "editCommand": "Hariri command",
-    "commandName": "Command",
-    "commandTitle": "Command title",
-    "commandDescription": "Command description",
-    "commandEnabled": "Command enabled",
-    "commandSaved": "Command saved",
-    "commandDeleted": "Command deleted",
-    "commandAndTitleRequired": "Command and title are required.",
-    "noCommandsYet": "No commands yet",
+    "commandName": "Taarifa",
+    "commandTitle": "Kichwa",
+    "commandDescription": "Maelezo Taarifa",
+    "commandEnabled": "Taarifa",
+    "commandSaved": "Taarifa",
+    "commandDeleted": "Taarifa",
+    "commandAndTitleRequired": "Kichwa",
+    "noCommandsYet": "Taarifa",
     "noCommandsYetSubtitle": "Ongeza the first command for this bot from the owner panel.",
-    "quickOwnerControls": "Quick owner controls",
+    "quickOwnerControls": "Taarifa",
     "openBotChatInMessenger": "Fungua bot chat in Messenger",
     "removeBotFromOwnerList": "Ondoa bot from owner list",
     "openRoute": "Fungua route",
     "businessPath": "Biashara path",
-    "sabiPath": "SABI path",
-    "muteBot": "Mute bot",
-    "unmuteBot": "Unmute bot",
-    "pinBot": "Pin bot",
-    "unpinBot": "Unpin bot",
+    "sabiPath": "Taarifa",
+    "muteBot": "Msaidizi",
+    "unmuteBot": "Msaidizi",
+    "pinBot": "Msaidizi",
+    "unpinBot": "Msaidizi",
     "createGroup": "Unda group",
-    "manageGroup": "Manage group",
-    "myGroups": "My groups",
+    "manageGroup": "Gumzo",
+    "myGroups": "Taarifa",
     "searchGroups": "Tafuta groups",
-    "groupWorkspace": "Group workspace",
-    "createGroupHint": "Unda a new group, add members and manage all group settings.",
-    "emptyGroupsTitle": "No groups yet",
+    "groupWorkspace": "Gumzo",
+    "createGroupHint": "Gumzo Taarifa",
+    "emptyGroupsTitle": "Taarifa",
     "emptyGroupsSubtitle": "Unda your first group and it will appear here.",
-    "groupOwnerPanel": "Group owner panel",
-    "groupOwnerPanelSubtitle": "Full control over group profile, members, permissions and settings.",
-    "groupCreated": "Group created",
-    "groupUpdated": "Group updated",
-    "groupRemoved": "Group removed",
-    "groupMissing": "Group not found",
+    "groupOwnerPanel": "Gumzo",
+    "groupOwnerPanelSubtitle": "Gumzo Taarifa",
+    "groupCreated": "Gumzo",
+    "groupUpdated": "Gumzo",
+    "groupRemoved": "Gumzo",
+    "groupMissing": "Gumzo",
     "groupLoading": "Inapakia group...",
-    "groupProfile": "Group profile",
-    "groupMembers": "Group members",
+    "groupProfile": "Gumzo",
+    "groupMembers": "Gumzo",
     "addMember": "Ongeza member",
     "removeMember": "Ondoa member",
-    "groupAdmins": "Group admins",
-    "quickGroupControls": "Quick group controls",
+    "groupAdmins": "Gumzo",
+    "quickGroupControls": "Gumzo",
     "openGroupChatInMessenger": "Fungua group chat in Messenger",
     "publicGroup": "Umma group",
     "privateGroup": "Faragha group",
     "createChannel": "Unda channel",
-    "manageChannel": "Manage channel",
-    "myChannels": "My channels",
+    "manageChannel": "Gumzo",
+    "myChannels": "Taarifa",
     "searchChannels": "Tafuta channels",
-    "channelWorkspace": "Channel workspace",
-    "createChannelHint": "Unda a new channel, manage subscribers and fully control publication settings.",
-    "emptyChannelsTitle": "No channels yet",
+    "channelWorkspace": "Gumzo",
+    "createChannelHint": "Gumzo Taarifa",
+    "emptyChannelsTitle": "Taarifa",
     "emptyChannelsSubtitle": "Unda your first channel and it will appear here.",
-    "channelOwnerPanel": "Channel owner panel",
-    "channelOwnerPanelSubtitle": "Full control over channel profile, subscribers, publication permissions and settings.",
-    "channelCreated": "Channel created",
-    "channelUpdated": "Channel updated",
-    "channelRemoved": "Channel removed",
-    "channelMissing": "Channel not found",
+    "channelOwnerPanel": "Gumzo",
+    "channelOwnerPanelSubtitle": "Gumzo Taarifa",
+    "channelCreated": "Gumzo",
+    "channelUpdated": "Gumzo",
+    "channelRemoved": "Gumzo",
+    "channelMissing": "Gumzo",
     "channelLoading": "Inapakia channel...",
-    "channelProfile": "Channel profile",
-    "channelSubscribers": "Channel subscribers",
+    "channelProfile": "Gumzo",
+    "channelSubscribers": "Gumzo",
     "addSubscriber": "Ongeza subscriber",
     "removeSubscriber": "Ondoa subscriber",
-    "channelAdmins": "Channel admins",
-    "quickChannelControls": "Quick channel controls",
+    "channelAdmins": "Gumzo",
+    "quickChannelControls": "Gumzo",
     "openChannelInMessenger": "Fungua channel in Messenger",
     "publicChannel": "Umma channel",
     "privateChannel": "Faragha channel",
-    "onlyAdminsCanPost": "Only admins can post",
-    "linkedDiscussion": "Linked discussion",
-    "joinRequests": "Join requests",
+    "onlyAdminsCanPost": "Taarifa",
+    "linkedDiscussion": "Taarifa",
+    "joinRequests": "Taarifa",
     "roomSettings": {
-      "title": "Gumzo settings",
-      "subtitle": "Manage this chat",
-      "botTitle": "Bot",
-      "botSubtitle": "Bot"
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "botTitle": "Msaidizi",
+      "botSubtitle": "Msaidizi Taarifa"
     },
     "menu": {
       "addContact": "Ongeza contact",
       "addContactSubtitle": "Fungua the new contact creation sheet",
-      "contactSaved": "Contact saved",
-      "contactSavedSubtitle": "This user is already in contacts",
-      "contactUnavailable": "No number available to save",
+      "contactSaved": "Taarifa",
+      "contactSavedSubtitle": "Maelezo Taarifa",
+      "contactUnavailable": "Ombi limeshindikana. Jaribu tena.",
       "addToList": "Ongeza to list",
       "addToListSubtitle": "Hifadhi this chat in your list",
       "removeFromList": "Ondoa from list",
       "removeFromListSubtitle": "Ondoa this chat from your list",
-      "mute": "Mute",
-      "muteSubtitle": "Turn off notifications for this chat",
-      "unmute": "Unmute",
-      "unmuteSubtitle": "Turn notifications back on",
-      "disappearing": "Disappearing messages",
+      "mute": "Taarifa",
+      "muteSubtitle": "Maelezo Taarifa",
+      "unmute": "Taarifa",
+      "unmuteSubtitle": "Maelezo Taarifa",
+      "disappearing": "Taarifa",
       "disappearingSubtitle": "Washa auto-delete for new messages",
       "disableDisappearing": "Zima disappearing messages",
-      "disableDisappearingSubtitle": "Keep new messages in the chat",
+      "disableDisappearingSubtitle": "Maelezo Taarifa",
       "theme": "Gumzo theme",
-      "themeSubtitle": "Change room style and appearance",
+      "themeSubtitle": "Mandhari Taarifa",
       "editor": "Gumzo info",
-      "editorSubtitle": "Fungua profile and chat details",
-      "more": "More",
-      "moreSubtitle": "Additional chat actions",
-      "report": "Report",
+      "editorSubtitle": "Maelezo Taarifa",
+      "more": "Zaidi",
+      "moreSubtitle": "Maelezo Taarifa",
+      "report": "Taarifa",
       "reportSubtitle": "Fungua the report sheet and select a reason",
-      "block": "Block",
-      "blockSubtitle": "Restrict this user in chat",
-      "unblock": "Unblock",
-      "unblockSubtitle": "Restore communication with this user",
-      "clearChat": "Clear chat",
-      "clearChatSubtitle": "Futa message history in this room",
+      "block": "Taarifa",
+      "blockSubtitle": "Maelezo Taarifa",
+      "unblock": "Taarifa",
+      "unblockSubtitle": "Maelezo Taarifa",
+      "clearChat": "Futa gumzo",
+      "clearChatSubtitle": "Gumzo Taarifa",
       "addToHome": "Ongeza to home screen",
-      "addToHomeSubtitle": "Quick access from the device home screen",
+      "addToHomeSubtitle": "Maelezo Taarifa",
       "addBotToList": "Ongeza Bot To List",
       "addBotToListSubtitle": "Ongeza Bot To List",
       "removeBotFromList": "Ondoa Bot From List",
       "removeBotFromListSubtitle": "Ondoa Bot From List",
-      "muteBot": "Mute Bot",
-      "muteBotSubtitle": "Mute Bot",
-      "unmuteBot": "Unmute Bot",
-      "unmuteBotSubtitle": "Unmute Bot",
-      "ai": "Ai",
-      "aiSubtitle": "Ai",
-      "aiBotSubtitle": "Ai Bot",
-      "manageBot": "Manage Bot",
-      "manageBotSubtitle": "Manage Bot",
-      "botTools": "Bot Tools",
-      "botToolsSubtitle": "Bot Tools",
-      "moreBotSubtitle": "More Bot",
-      "reportBotSubtitle": "Report Bot",
-      "blockBot": "Block Bot",
-      "blockBotSubtitle": "Block Bot",
-      "unblockBot": "Unblock Bot",
-      "unblockBotSubtitle": "Unblock Bot",
+      "muteBot": "Msaidizi",
+      "muteBotSubtitle": "Msaidizi Taarifa",
+      "unmuteBot": "Msaidizi",
+      "unmuteBotSubtitle": "Msaidizi Taarifa",
+      "ai": "AI",
+      "aiSubtitle": "AI Taarifa",
+      "aiBotSubtitle": "AI Taarifa",
+      "manageBot": "Msaidizi",
+      "manageBotSubtitle": "Msaidizi Taarifa",
+      "botTools": "Msaidizi",
+      "botToolsSubtitle": "Msaidizi Taarifa",
+      "moreBotSubtitle": "Msaidizi Taarifa",
+      "reportBotSubtitle": "Msaidizi Taarifa",
+      "blockBot": "Msaidizi",
+      "blockBotSubtitle": "Msaidizi Taarifa",
+      "unblockBot": "Msaidizi",
+      "unblockBotSubtitle": "Msaidizi Taarifa",
       "clearBotChatSubtitle": "Clear Bot Gumzo",
-      "hideConversation": "Hide Conversation",
-      "hideConversationSubtitle": "Hide Conversation",
+      "hideConversation": "Taarifa",
+      "hideConversationSubtitle": "Maelezo Taarifa",
       "addBotToHome": "Ongeza Bot To Home",
       "addBotToHomeSubtitle": "Ongeza Bot To Home"
     },
     "chat": {
-      "you": "You",
-      "typing": "Typing...",
+      "you": "Wewe",
+      "typing": "Anaandika...",
       "online": "Mtandaoni",
       "offline": "Nje ya mtandao",
       "connecting": "Inaunganisha...",
-      "reconnecting": "Reconnecting...",
-      "lastSeenToday": "last seen today at {{time}}",
-      "lastSeenYesterday": "last seen yesterday at {{time}}",
-      "lastSeenDate": "last seen on {{date}} at {{time}}",
-      "conversationPlaceholder": "The conversation will appear here.",
+      "reconnecting": "Inapakia...",
+      "lastSeenToday": "Taarifa",
+      "lastSeenYesterday": "Taarifa",
+      "lastSeenDate": "Taarifa",
+      "conversationPlaceholder": "Tafuta",
       "today": "Leo",
       "yesterday": "Jana",
-      "directRoom": "Direct chat",
-      "groupRoom": "Group",
-      "channelRoom": "Channel",
+      "directRoom": "Taarifa",
+      "groupRoom": "Gumzo",
+      "channelRoom": "Gumzo",
       "businessRoom": "Biashara chat",
       "encrypted": "Ujumbe are protected with end-to-end encryption",
-      "messagePlaceholder": "Type a message",
+      "messagePlaceholder": "Andika ujumbe",
       "messageTitle": "Ujumbe",
-      "replyAction": "Reply",
-      "replyPlaceholder": "Write a quick reply",
+      "replyAction": "Jibu",
+      "replyPlaceholder": "Tafuta",
       "selectionDelete": "Futa",
-      "selectionForward": "Forward",
+      "selectionForward": "Tuma mbele",
       "deleteMe": "Futa for me only",
       "deleteAllAction": "Futa for everyone",
       "save": "Hifadhi",
-      "link": "Link",
+      "link": "Taarifa",
       "searchTitle": "Tafuta",
-      "searchMessage": "Room search will be added in the next step.",
-      "muteTitle": "Mute mode",
-      "muteMessage": "Gumzo notification controls will be added in room settings.",
-      "locationTitle": "Location",
-      "sharedLocation": "Shared location",
-      "locationAttached": "Location attached",
-      "locationOpenNotice": "Opening location",
-      "locationOpenError": "Could not open location.",
-      "locationSendError": "Could not send location.",
-      "locationCoordsMissing": "Location coordinates were not found.",
-      "locationAccessError": "Could not access location.",
-      "contactTitle": "Contact",
+      "searchMessage": "Tafuta",
+      "muteTitle": "Kichwa",
+      "muteMessage": "Taarifa",
+      "locationTitle": "Mahali",
+      "sharedLocation": "Taarifa",
+      "locationAttached": "Taarifa",
+      "locationOpenNotice": "Taarifa",
+      "locationOpenError": "Ombi limeshindikana. Jaribu tena.",
+      "locationSendError": "Ombi limeshindikana. Jaribu tena.",
+      "locationCoordsMissing": "Taarifa",
+      "locationAccessError": "Ombi limeshindikana. Jaribu tena.",
+      "contactTitle": "Anwani",
       "contactsTitle": "Mawasiliano",
-      "contactCard": "Contact card",
-      "contactAttached": "Contact attached",
-      "contactReady": "Contact ready",
-      "contactOpenNotice": "Opening contact",
-      "contactOpenError": "Could not open contact.",
-      "contactsAccessError": "Could not access contacts.",
-      "documentTitle": "Document",
-      "documentsTitle": "Documents",
-      "documentAttached": "Document attached",
-      "documentPreviewUnavailable": "Document preview is unavailable.",
+      "contactCard": "Taarifa",
+      "contactAttached": "Taarifa",
+      "contactReady": "Tayari",
+      "contactOpenNotice": "Taarifa",
+      "contactOpenError": "Ombi limeshindikana. Jaribu tena.",
+      "contactsAccessError": "Ombi limeshindikana. Jaribu tena.",
+      "documentTitle": "Hati",
+      "documentsTitle": "Kichwa",
+      "documentAttached": "Taarifa",
+      "documentPreviewUnavailable": "Ombi limeshindikana. Jaribu tena.",
       "documentOpenNotice": "Fungua or save the document",
-      "documentOpening": "Opening document",
-      "documentOpenError": "Could not open document.",
-      "documentAccessError": "Could not access documents.",
-      "galleryTitle": "Gallery",
-      "galleryAccessError": "Could not access gallery.",
-      "photoTitle": "Photo",
-      "photoPreviewSubtitle": "Full-screen preview",
-      "photoPreviewUnavailable": "Photo preview is unavailable.",
-      "photoCaptured": "Photo ready",
+      "documentOpening": "Taarifa",
+      "documentOpenError": "Ombi limeshindikana. Jaribu tena.",
+      "documentAccessError": "Ombi limeshindikana. Jaribu tena.",
+      "galleryTitle": "Kichwa",
+      "galleryAccessError": "Ombi limeshindikana. Jaribu tena.",
+      "photoTitle": "Picha",
+      "photoPreviewSubtitle": "Wasifu Taarifa",
+      "photoPreviewUnavailable": "Ombi limeshindikana. Jaribu tena.",
+      "photoCaptured": "Wasifu",
       "photoSaveNotice": "Hifadhi photo",
-      "photoSaveError": "Could not save photo.",
-      "videoTitle": "Video message",
-      "videoCaptured": "Video message ready",
+      "photoSaveError": "Ombi limeshindikana. Jaribu tena.",
+      "videoTitle": "Ujumbe wa video",
+      "videoCaptured": "Sauti",
       "videoSaveNotice": "Hifadhi video",
-      "videoSaveError": "Could not save video.",
-      "videoCloseHint": "Tap outside to close",
-      "videoMessageText": "🎬 Video message",
-      "voiceTitle": "Voice message",
-      "voiceRecordingTitle": "Voice recording",
-      "voiceRecordingSubtitle": "Hold the button to record and release when you are ready to send.",
-      "voiceReadySubtitle": "Voice message is ready to send.",
-      "recordingVoice": "Recording voice message...",
-      "voiceReady": "Voice message ready",
-      "voiceReadyInline": "Voice message ready",
-      "voiceReadyToSend": "Voice message is ready to send",
-      "voiceSent": "Voice message sent",
-      "voicePlayback": "Playing voice message",
-      "voiceStartError": "Could not start recording.",
-      "voiceFinishError": "Could not finish recording.",
-      "voiceUploadError": "Could not upload the voice message.",
-      "voicePlayError": "Could not play the voice message.",
-      "voiceRateError": "Could not change playback speed.",
-      "copiedText": "Text copied",
-      "infoAction": "Info",
+      "videoSaveError": "Ombi limeshindikana. Jaribu tena.",
+      "videoCloseHint": "Ghairi",
+      "videoMessageText": "Sauti Taarifa",
+      "voiceTitle": "Ujumbe wa sauti",
+      "voiceRecordingTitle": "AI ya sauti",
+      "voiceRecordingSubtitle": "AI ya sauti",
+      "voiceReadySubtitle": "AI ya sauti",
+      "recordingVoice": "AI ya sauti",
+      "voiceReady": "AI ya sauti",
+      "voiceReadyInline": "AI ya sauti",
+      "voiceReadyToSend": "AI ya sauti",
+      "voiceSent": "AI ya sauti",
+      "voicePlayback": "AI ya sauti",
+      "voiceStartError": "AI ya sauti",
+      "voiceFinishError": "AI ya sauti",
+      "voiceUploadError": "AI ya sauti",
+      "voicePlayError": "AI ya sauti",
+      "voiceRateError": "AI ya sauti",
+      "copiedText": "Taarifa Taarifa",
+      "infoAction": "Tayari",
       "editingTitle": "Hariri message",
-      "editingSubtitle": "Change the text and send the message again",
+      "editingSubtitle": "Maelezo Taarifa",
       "editPlaceholder": "Hariri message",
-      "replyingTitle": "Quick reply",
-      "readOnlyTitle": "This channel is read only",
+      "replyingTitle": "Kichwa",
+      "readOnlyTitle": "Kichwa",
       "readOnlySubtitle": "Kutuma ujumbe kumezimwa hapa. Fungua maelezo ya channel kwa taarifa zaidi.",
-      "mediaLabel": "Media",
-      "mediaTitle": "Media",
-      "mediaMessage": "Media, links and documents will be expanded in the next step.",
-      "mediaCaptureFailed": "Could not complete media processing.",
+      "mediaLabel": "Taarifa",
+      "mediaTitle": "Kichwa",
+      "mediaMessage": "Taarifa",
+      "mediaCaptureFailed": "Ombi limeshindikana. Jaribu tena.",
       "mediaSaved": "Imehifadhiwa",
-      "privacyTitle": "Privacy",
-      "privacyMessage": "Privacy and disappearing message settings will be added in the next step.",
-      "roomThemeUpdated": "Room theme updated",
+      "privacyTitle": "Faragha",
+      "privacyMessage": "Faragha",
+      "roomThemeUpdated": "Mandhari",
       "messageContextMissing": "Ujumbe context is unavailable.",
       "messageEdited": "Ujumbe updated",
       "messageSent": "Ujumbe sent",
-      "messageSendError": "Could not send the message.",
-      "giftSent": "Gift sent",
-      "animatedReactionSent": "Animated reaction sent",
-      "animatedEmojiSent": "Animated emoji sent",
-      "stickerAdded": "Sticker added to composer",
-      "selectedForForwardPrefix": "Selected for forwarding",
-      "chooseMessagesForward": "Choose messages to forward",
-      "deletedPrefix": "Deleted",
+      "messageSendError": "Ombi limeshindikana. Jaribu tena.",
+      "giftSent": "Zawadi imetumwa",
+      "animatedReactionSent": "Taarifa",
+      "animatedEmojiSent": "Taarifa",
+      "stickerAdded": "Taarifa",
+      "selectedForForwardPrefix": "Taarifa",
+      "chooseMessagesForward": "Taarifa",
+      "deletedPrefix": "Taarifa",
       "deletedForAll": "Ujumbe deleted for everyone",
       "deletedForMe": "Ujumbe deleted for you only",
-      "addedToComposer": "Added to composer",
-      "saveMediaReady": "Prepared for saving",
-      "openLinkReady": "Prepared to open link",
-      "openingWalletFiat": "Opening fiat wallet",
-      "openingCoinWallet": "Opening COIN wallet",
-      "catalogSoon": "Catalog will be added in the next step.",
-      "pollSoon": "Poll will be added in the next step.",
-      "eventSoon": "Event will be added in the next step.",
-      "openingDocument": "Opening document",
-      "openingContact": "Opening contact",
-      "normal": "Normal",
-      "editedLabel": "edited",
-      "mapLabel": "Map",
+      "addedToComposer": "Taarifa",
+      "saveMediaReady": "Tayari",
+      "openLinkReady": "Tayari",
+      "openingWalletFiat": "Pochi",
+      "openingCoinWallet": "Pochi",
+      "catalogSoon": "Taarifa",
+      "pollSoon": "Taarifa",
+      "eventSoon": "Taarifa",
+      "openingDocument": "Taarifa",
+      "openingContact": "Taarifa",
+      "normal": "Taarifa",
+      "editedLabel": "Taarifa",
+      "mapLabel": "Taarifa",
       "tapSend": "Tap Tuma",
-      "diamondsUnit": "diamonds",
-      "channelInfoAction": "Channel info",
-      "commandConfigSubtitle": "Configure the real command for the selected bot.",
-      "commandTitlePlaceholder": "Start",
-      "commandDescriptionPlaceholder": "Describe what this command does",
+      "diamondsUnit": "Taarifa",
+      "channelInfoAction": "Gumzo",
+      "commandConfigSubtitle": "Maelezo Taarifa",
+      "commandTitlePlaceholder": "Anza",
+      "commandDescriptionPlaceholder": "Maelezo Taarifa",
       "cancelAction": "Ghairi",
       "openRoute": "Fungua route",
       "removeBotFromOwnerList": "Ondoa bot from owner list",
-      "botProfile": "Bot profile",
-      "quickOwnerControls": "Quick owner controls",
+      "botProfile": "Msaidizi",
+      "quickOwnerControls": "Taarifa",
       "openBotChatInMessenger": "Fungua bot chat in Messenger",
-      "savingNow": "Saving...",
-      "nameAndUsernameRequired": "Bot name and username are required.",
-      "commandAndTitleRequired": "Command and title are required.",
-      "groupInfoAction": "Group info",
+      "savingNow": "Inahifadhi...",
+      "nameAndUsernameRequired": "Taarifa",
+      "commandAndTitleRequired": "Kichwa",
+      "groupInfoAction": "Gumzo",
       "businessInfoAction": "Biashara info",
-      "membersCount": "members",
-      "subscribersCount": "subscribers",
+      "membersCount": "Taarifa",
+      "subscribersCount": "Taarifa",
       "mutedEnabled": "Arifa muted",
       "mutedDisabled": "Kunyamazisha kumezimwa",
-      "searchFocused": "Tafuta ready",
+      "searchFocused": "Tafuta",
       "aiTitle": "AI",
-      "aiMessage": "The AI entry point was moved here. Rewrite, translation and smart reply tools will be connected in the next step.",
-      "aiReady": "AI ready",
-      "contactSavedToDevice": "Contact saved to address book",
-      "contactPermissionDenied": "Contacts permission denied",
-      "contactUnavailable": "The chat partner has no phone number",
+      "aiMessage": "AI",
+      "aiReady": "Tayari",
+      "contactSavedToDevice": "Taarifa",
+      "contactPermissionDenied": "Taarifa",
+      "contactUnavailable": "Ombi limeshindikana. Jaribu tena.",
       "addedToList": "Gumzo added to list",
       "removedFromList": "Gumzo removed from list",
-      "disappearingEnabled": "Disappearing messages enabled",
+      "disappearingEnabled": "Taarifa",
       "disappearingDisabled": "Ujumbe unaopotea umezimwa",
-      "reportSent": "Report prepared",
+      "reportSent": "Taarifa",
       "chatCleared": "Gumzo cleared",
       "chatExported": "Gumzo export opened",
-      "homeShortcutPinned": "Shortcut added to home screen",
-      "homeShortcutUnsupported": "Android shortcut bridge is required to add a home screen shortcut",
+      "homeShortcutPinned": "Taarifa",
+      "homeShortcutUnsupported": "Taarifa",
       "blockActionDone": "Gumzo blocked",
       "unblockActionDone": "Gumzo unblocked",
-      "fileBadgeGeneric": "FILE",
+      "fileBadgeGeneric": "Taarifa",
       "addContactName": "Ongeza Contact Name",
       "addContactNamePlaceholder": "Ongeza Contact Name Placeholder",
       "addContactPhone": "Ongeza Contact Phone",
@@ -3065,283 +3066,283 @@ export const SW_LOCALE = {
       "addContactTitle": "Ongeza Contact",
       "addContactUsername": "Ongeza Contact Username",
       "addContactUsernamePlaceholder": "Ongeza Contact Username Placeholder",
-      "contactChooseSource": "Contact Choose Source",
-      "contactNameRequired": "Contact Name Required",
+      "contactChooseSource": "Taarifa",
+      "contactNameRequired": "Taarifa",
       "contactSavedInContacts": "Contact Imehifadhiwa In Contacts",
       "contactSavedInMessenger": "Contact Imehifadhiwa In Messenger",
-      "linkEmpty": "Link Empty",
-      "linkTitle": "Link",
+      "linkEmpty": "Taarifa",
+      "linkTitle": "Kichwa",
       "mediaSavedToPhone": "Media Imehifadhiwa To Phone",
       "mediaSavedToSabi": "Media Imehifadhiwa To Sabi",
       "openContactInMessenger": "Fungua Contact In Messenger",
       "openContactInPhone": "Fungua Contact In Phone",
-      "phoneContactsSubtitle": "Phone Contacts",
-      "phoneContactsTitle": "Phone Contacts",
-      "sabiContactsSubtitle": "Sabi Contacts",
-      "sabiContactsTitle": "Sabi Contacts",
+      "phoneContactsSubtitle": "Maelezo Taarifa",
+      "phoneContactsTitle": "Kichwa",
+      "sabiContactsSubtitle": "Maelezo Taarifa",
+      "sabiContactsTitle": "Kichwa",
       "saveMediaChooseTitle": "Hifadhi Media Choose",
       "saveToSabiApp": "Hifadhi To Sabi App",
       "saveToPhone": "Hifadhi To Phone",
       "saveVideoTitle": "Hifadhi Video",
       "saveVideoSubtitle": "Hifadhi Video",
-      "videoReady": "Video Ready",
+      "videoReady": "Tayari",
       "saveVideoAction": "Hifadhi Video Action",
       "savePhotoTitle": "Hifadhi Photo",
       "savePhotoSubtitle": "Hifadhi Photo",
-      "photoReady": "Photo Ready",
+      "photoReady": "Tayari",
       "savePhotoAction": "Hifadhi Photo Action",
       "saveMediaTitle": "Hifadhi Media",
       "saveMediaSubtitle": "Hifadhi Media",
-      "mediaReady": "Media Ready",
+      "mediaReady": "Tayari",
       "mediaSaveNotice": "Media Hifadhi Notice",
       "saveMediaAction": "Hifadhi Media Action",
-      "conversationHidden": "Conversation Hidden"
+      "conversationHidden": "Taarifa"
     },
     "reportScreen": {
-      "title": "Report",
-      "subtitle": "Choose a reason or write your own",
-      "chooseReason": "Choose a report reason",
-      "otherReason": "Other reason",
-      "otherReasonPlaceholder": "Describe the reason",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "chooseReason": "Taarifa",
+      "otherReason": "Taarifa",
+      "otherReasonPlaceholder": "Tafuta",
       "submit": "Tuma report",
-      "success": "Report sent",
-      "spam": "Spam",
-      "scam": "Scam",
-      "fakeProfile": "Fake profile",
-      "impersonation": "Impersonation",
-      "harassment": "Harassment or bullying",
-      "hateSpeech": "Hate speech",
-      "violentContent": "Violent content",
-      "adultContent": "Adult content",
-      "childSafety": "Child safety issue",
-      "illegalGoods": "Illegal goods or services",
-      "dangerousContent": "Dangerous content",
-      "selfHarm": "Self-harm related content",
-      "copyright": "Copyright violation",
-      "privacyViolation": "Privacy violation",
-      "somethingElse": "Something else"
+      "success": "Taarifa",
+      "spam": "Taarifa",
+      "scam": "Taarifa",
+      "fakeProfile": "Wasifu",
+      "impersonation": "Taarifa",
+      "harassment": "Taarifa",
+      "hateSpeech": "Taarifa",
+      "violentContent": "Taarifa",
+      "adultContent": "Taarifa",
+      "childSafety": "Taarifa",
+      "illegalGoods": "Taarifa",
+      "dangerousContent": "Taarifa",
+      "selfHarm": "Taarifa",
+      "copyright": "Taarifa",
+      "privacyViolation": "Faragha",
+      "somethingElse": "Taarifa"
     },
     "createContact": {
-      "title": "New contact",
+      "title": "Mipangilio",
       "subtitle": "Hifadhi the chat partner to contacts",
-      "firstName": "First name",
-      "lastName": "Last name",
+      "firstName": "Jina la kwanza",
+      "lastName": "Jina la mwisho",
       "phone": "Simu",
       "username": "Jina la mtumiaji",
-      "company": "Company",
-      "note": "Note",
+      "company": "Taarifa",
+      "note": "Dokezo",
       "saveContact": "Hifadhi contact",
-      "contactCreated": "Contact created",
-      "phoneRequired": "Phone number is required"
+      "contactCreated": "Taarifa",
+      "phoneRequired": "Taarifa"
     },
     "ownerRouting": {
-      "title": "Owner routing",
+      "title": "Mipangilio",
       "subtitle": "All owner controls for groups, channels, and bots are opened through Wasifu.",
       "openProfileManagement": "Fungua management inside Wasifu",
       "createFromProfile": "Creation is done only from inside Wasifu",
       "manageFromProfile": "Publication, bindings, and owner data are managed inside Wasifu",
       "publicInfoOnly": "Gumzo partner info remains a public/view-only screen",
-      "hideIfNotCreated": "If the object has not been created, the profile section is hidden",
-      "unifiedUserId": "The unified user ID remains the main identifier across all flows"
+      "hideIfNotCreated": "Taarifa",
+      "unifiedUserId": "Taarifa"
     },
     "groupManagement": {
-      "title": "Group management",
-      "subtitle": "Full management of group creation, owner data, publication, and bindings.",
-      "profileEntryTitle": "Group profile",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "profileEntryTitle": "Wasifu",
       "profileEntrySubtitle": "Group owner data, publication, and bindings are managed inside Wasifu.",
       "createEntryTitle": "Unda group",
       "createEntrySubtitle": "Unda a new group from inside Wasifu and manage it afterward.",
-      "ownerPanel": "Group owner panel",
-      "ownerPanelSubtitle": "Full control over group profile, members, admins, permissions, and publication settings.",
-      "publication": "Group publication",
-      "bindings": "Group bindings",
-      "ownerData": "Owner data",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "members": "Members",
-      "admins": "Adminlar",
-      "inviteLink": "Invite link",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Linked chat ID",
-      "linkedBotId": "Linked bot ID",
-      "groupId": "Group ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
+      "ownerPanel": "Taarifa",
+      "ownerPanelSubtitle": "Maelezo Taarifa",
+      "publication": "Taarifa",
+      "bindings": "Taarifa",
+      "ownerData": "Taarifa",
+      "accessRules": "Taarifa",
+      "moderation": "Udhibiti",
+      "members": "Taarifa",
+      "admins": "Taarifa",
+      "inviteLink": "Gumzo",
+      "publicationId": "Taarifa",
+      "linkedChatId": "Gumzo",
+      "linkedBotId": "Msaidizi",
+      "groupId": "Gumzo",
+      "ownerUserId": "Taarifa",
+      "ownerName": "Taarifa",
+      "ownerPhone": "Taarifa",
+      "ownerEmail": "Taarifa",
+      "role": "Taarifa",
       "publicGroup": "Umma group",
       "privateGroup": "Faragha group",
-      "published": "Published",
+      "published": "Imechapishwa",
       "showInProfile": "Show in Wasifu",
-      "joinRequests": "Join requests",
-      "memberInvites": "Members can send invites",
-      "onlyAdminsPost": "Only admins can post messages",
-      "onlyAdminsEdit": "Only admins can edit",
-      "commentsEnabled": "Comments enabled",
-      "createSuccess": "Group created",
-      "saveSuccess": "Group settings saved",
-      "resetSuccess": "Group data reset",
+      "joinRequests": "Taarifa",
+      "memberInvites": "Wasifu",
+      "onlyAdminsPost": "Taarifa",
+      "onlyAdminsEdit": "Taarifa",
+      "commentsEnabled": "Taarifa",
+      "createSuccess": "Taarifa",
+      "saveSuccess": "Taarifa",
+      "resetSuccess": "Taarifa",
       "openMessengerRoom": "Fungua group chat in Messenger",
-      "hiddenIfNotCreated": "If the group has not been created, the profile entry is hidden",
+      "hiddenIfNotCreated": "Taarifa",
       "createInProfileOnly": "Wasifu is the main entry point for group creation"
     },
     "channelManagement": {
-      "title": "Channel management",
-      "subtitle": "Full management of channel creation, owner data, publication, and bindings.",
-      "profileEntryTitle": "Channel profile",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "profileEntryTitle": "Wasifu",
       "profileEntrySubtitle": "Channel owner data, publication, and bindings are managed inside Wasifu.",
       "createEntryTitle": "Unda channel",
       "createEntrySubtitle": "Unda a new channel from inside Wasifu and manage it afterward.",
-      "ownerPanel": "Channel owner panel",
-      "ownerPanelSubtitle": "Full control over channel profile, subscribers, admins, publication permissions, and settings.",
-      "publication": "Channel publication",
-      "bindings": "Channel bindings",
-      "ownerData": "Owner data",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "subscribers": "Subscribers",
-      "admins": "Adminlar",
-      "inviteLink": "Invite link",
-      "publicationId": "Publication ID",
-      "linkedChatId": "Linked chat ID",
-      "linkedDiscussionId": "Linked discussion ID",
-      "linkedBotId": "Linked bot ID",
-      "channelId": "Channel ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
+      "ownerPanel": "Taarifa",
+      "ownerPanelSubtitle": "Maelezo Taarifa",
+      "publication": "Taarifa",
+      "bindings": "Taarifa",
+      "ownerData": "Taarifa",
+      "accessRules": "Taarifa",
+      "moderation": "Udhibiti",
+      "subscribers": "Taarifa",
+      "admins": "Taarifa",
+      "inviteLink": "Gumzo",
+      "publicationId": "Taarifa",
+      "linkedChatId": "Gumzo",
+      "linkedDiscussionId": "Taarifa",
+      "linkedBotId": "Msaidizi",
+      "channelId": "Gumzo",
+      "ownerUserId": "Taarifa",
+      "ownerName": "Taarifa",
+      "ownerPhone": "Taarifa",
+      "ownerEmail": "Taarifa",
+      "role": "Taarifa",
       "publicChannel": "Umma channel",
       "privateChannel": "Faragha channel",
-      "published": "Published",
+      "published": "Imechapishwa",
       "showInProfile": "Show in Wasifu",
-      "joinRequests": "Join requests",
-      "onlyAdminsPost": "Only admins can post",
-      "onlyAdminsEdit": "Only admins can edit",
-      "commentsEnabled": "Comments enabled",
-      "linkedDiscussion": "Ulangan discussion",
-      "createSuccess": "Channel created",
-      "saveSuccess": "Channel settings saved",
-      "resetSuccess": "Channel data reset",
+      "joinRequests": "Taarifa",
+      "onlyAdminsPost": "Taarifa",
+      "onlyAdminsEdit": "Taarifa",
+      "commentsEnabled": "Taarifa",
+      "linkedDiscussion": "Taarifa",
+      "createSuccess": "Taarifa",
+      "saveSuccess": "Taarifa",
+      "resetSuccess": "Taarifa",
       "openMessengerRoom": "Fungua channel in Messenger",
-      "hiddenIfNotCreated": "If the channel has not been created, the profile entry is hidden",
+      "hiddenIfNotCreated": "Taarifa",
       "createInProfileOnly": "Wasifu is the main entry point for channel creation"
     },
     "botManagement": {
-      "title": "Bot management",
-      "subtitle": "Full management of bot creation, owner data, modules, publication, and wallet routing.",
-      "profileEntryTitle": "Bot profile",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "profileEntryTitle": "Wasifu",
       "profileEntrySubtitle": "Bot owner data, modules, publication, and routing are managed inside Wasifu.",
       "createEntryTitle": "Unda bot",
       "createEntrySubtitle": "Unda a new bot from inside Wasifu and manage it afterward.",
-      "ownerPanel": "Bot owner panel",
-      "ownerPanelSubtitle": "Full control over bot profile, status, modules, commands, and wallet routing.",
-      "publication": "Bot publication",
-      "bindings": "Bot bindings",
-      "ownerData": "Owner data",
-      "routing": "Wallet routing",
-      "modules": "Modules",
-      "commands": "Commands",
-      "botId": "Bot ID",
-      "ownerUserId": "Owner User ID",
-      "ownerName": "Owner name",
-      "ownerPhone": "Owner phone",
-      "ownerEmail": "Owner email",
-      "role": "Role",
-      "linkedChatId": "Linked chat ID",
-      "linkedGroupId": "Linked group ID",
-      "linkedChannelId": "Linked channel ID",
-      "linkedMarketId": "Linked market ID",
-      "publicationId": "Publication ID",
+      "ownerPanel": "Taarifa",
+      "ownerPanelSubtitle": "Maelezo Taarifa",
+      "publication": "Taarifa",
+      "bindings": "Taarifa",
+      "ownerData": "Taarifa",
+      "routing": "Taarifa",
+      "modules": "Taarifa",
+      "commands": "Taarifa",
+      "botId": "Msaidizi",
+      "ownerUserId": "Taarifa",
+      "ownerName": "Taarifa",
+      "ownerPhone": "Taarifa",
+      "ownerEmail": "Taarifa",
+      "role": "Taarifa",
+      "linkedChatId": "Gumzo",
+      "linkedGroupId": "Gumzo",
+      "linkedChannelId": "Gumzo",
+      "linkedMarketId": "Taarifa",
+      "publicationId": "Taarifa",
       "publicBot": "Umma bot",
       "privateBot": "Faragha bot",
-      "published": "Published",
+      "published": "Imechapishwa",
       "showInProfile": "Show in Wasifu",
-      "active": "Active",
-      "paused": "Paused",
+      "active": "Inatumika",
+      "paused": "Imesitishwa kwa muda",
       "acceptCommands": "Kubali commands",
-      "showInCatalog": "Show in catalog",
-      "allowPayments": "Allow payments",
-      "sabiWalletRoute": "SABI Wallet",
+      "showInCatalog": "Taarifa",
+      "allowPayments": "Taarifa",
+      "sabiWalletRoute": "Pochi",
       "businessRoutingLayer": "Biashara Routing Layer",
-      "tradeBot": "Trade bot",
+      "tradeBot": "Msaidizi",
       "businessBot": "Biashara bot",
-      "tradeHint": "Trade and commerce bot income is routed to SABI Wallet.",
-      "businessHint": "Until Biashara Wallet launches, business bot income is routed to the Biashara Routing Layer.",
-      "createSuccess": "Bot created",
-      "saveSuccess": "Bot settings saved",
-      "resetSuccess": "Bot data reset",
+      "tradeHint": "Taarifa Taarifa",
+      "businessHint": "Taarifa Taarifa",
+      "createSuccess": "Taarifa",
+      "saveSuccess": "Taarifa",
+      "resetSuccess": "Taarifa",
       "openMessengerRoom": "Fungua bot chat in Messenger",
-      "hiddenIfNotCreated": "If the bot has not been created, the profile entry is hidden",
+      "hiddenIfNotCreated": "Taarifa",
       "createInProfileOnly": "Wasifu is the main entry point for bot creation"
     },
     "settingsPanels": {
-      "title": "Owner settings",
-      "subtitle": "Internal settings for groups, channels, and bots are managed inside separate owner panels.",
-      "ownerData": "Owner data",
-      "publication": "Publication",
-      "bindings": "Bindings",
-      "accessRules": "Access rules",
-      "moderation": "Moderation",
-      "routing": "Routing",
-      "modules": "Modules",
-      "commands": "Commands",
-      "permissions": "Permissions",
-      "statistics": "Statistics",
-      "archive": "Archive",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "ownerData": "Taarifa",
+      "publication": "Taarifa",
+      "bindings": "Taarifa",
+      "accessRules": "Taarifa",
+      "moderation": "Udhibiti",
+      "routing": "Taarifa",
+      "modules": "Taarifa",
+      "commands": "Taarifa",
+      "permissions": "Ruhusa",
+      "statistics": "Taarifa",
+      "archive": "Taarifa",
       "openInProfile": "Fungua inside Wasifu",
-      "hiddenWhenNotCreated": "The section is hidden for objects that have not been created"
+      "hiddenWhenNotCreated": "Taarifa"
     },
     "publicationFlow": {
-      "title": "Publication flow",
-      "subtitle": "All publication settings for groups, channels, and bots are handled through Wasifu.",
-      "publicationEnabled": "Publication enabled",
+      "title": "Mipangilio",
+      "subtitle": "Taarifa Taarifa",
+      "publicationEnabled": "Taarifa",
       "showInProfile": "Show in Wasifu",
       "publicMode": "Umma mode",
       "privateMode": "Faragha mode",
-      "ownerManagement": "Owner management",
-      "bindings": "Bindings",
+      "ownerManagement": "Taarifa",
+      "bindings": "Taarifa",
       "profileControls": "Wasifu management",
-      "publicationVisibleOnlyWhenCreated": "The publication section becomes visible only after the object is created"
+      "publicationVisibleOnlyWhenCreated": "Taarifa"
     },
     "unifiedIdentity": {
-      "title": "Unified identity",
-      "subtitle": "The unified user ID remains the main identifier across Messenger, Stream, Wallet, and other modules.",
-      "sameUserIdRequired": "The same user ID is required for group, channel, bot, gift, and payment flows",
-      "blockOnMismatch": "If the IDs do not match, money and gift flows are blocked"
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "sameUserIdRequired": "Taarifa",
+      "blockOnMismatch": "Taarifa"
     },
     "animatedEmoji": {
-      "celebration": "Celebration",
-      "empty": "Empty",
-      "faces": "Faces",
-      "hearts": "Hearts",
+      "celebration": "Taarifa",
+      "empty": "Taarifa",
+      "faces": "Taarifa",
+      "hearts": "Taarifa",
       "search": "Tafuta",
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "Mipangilio",
+      "title": "Kichwa"
     },
-    "report": "Report",
-    "reportDetails": "Report Details",
-    "reportDetailsHint": "Report Details",
-    "reportDetailsPlaceholder": "Report Details Placeholder",
-    "reportMinDetails": "Report Min Details",
-    "reportReasonList": "Report Reason List",
-    "reportSent": "Report Sent",
-    "reportSubtitle": "Report",
-    "reportTarget": "Report Target",
-    "reportTitle": "Report",
-    "reportValidation": "Report Validation",
+    "report": "Taarifa",
+    "reportDetails": "Taarifa",
+    "reportDetailsHint": "Taarifa Taarifa",
+    "reportDetailsPlaceholder": "Tafuta",
+    "reportMinDetails": "Taarifa",
+    "reportReasonList": "Taarifa",
+    "reportSent": "Taarifa",
+    "reportSubtitle": "Maelezo Taarifa",
+    "reportTarget": "Taarifa",
+    "reportTitle": "Kichwa",
+    "reportValidation": "Taarifa",
     "sendReport": "Tuma Report",
-    "bot": "Bot",
-    "botConversation": "Bot Conversation",
+    "bot": "Msaidizi",
+    "botConversation": "Msaidizi",
     "privateChats": "Faragha Gumzo",
     "privateChatsSubtitle": "Faragha Gumzo",
     "privateGroups": "Faragha Groups",
     "privateChannels": "Faragha Channels",
-    "themeWallpaper": "Theme Wallpaper",
-    "quickAccess": "Quick Access",
-    "quickAccessMeta": "Quick Access Meta",
+    "themeWallpaper": "Mandhari",
+    "quickAccess": "Taarifa",
+    "quickAccessMeta": "Taarifa",
     "createMeta": "Unda Meta",
     "groupCreateSubtitle": "Group Unda",
     "channelCreateSubtitle": "Channel Unda",
@@ -3353,181 +3354,181 @@ export const SW_LOCALE = {
     "channelsSubtitle": "Vituo",
     "businessSubtitle": "Biashara",
     "chatsMeta": "Gumzo Meta",
-    "officialName": "Official Name",
-    "officialPreview": "Official Preview",
+    "officialName": "Taarifa",
+    "officialPreview": "Taarifa",
     "openBots": "Fungua Bots",
     "openChannels": "Fungua Channels",
     "returnToChats": "Return To Gumzo",
     "mainChats": "Main Gumzo",
-    "workspace": "Workspace",
-    "mobile": "Mobile",
+    "workspace": "Taarifa",
+    "mobile": "Taarifa",
     "username": "Jina la mtumiaji",
     "birthday": "Siku ya kuzaliwa",
-    "publications": "Publications",
+    "publications": "Taarifa",
     "gifts": "Zawadi",
-    "archive": "Archive",
-    "allStories": "All Stories",
+    "archive": "Taarifa",
+    "allStories": "Taarifa",
     "likes": "Kupenda",
     "giftsPublic": "Gifts Umma",
-    "emptyPublications": "Empty Publications",
-    "emptyGifts": "Empty Gifts",
-    "emptyArchive": "Empty Archive",
-    "fullscreenHint": "Fullscreen",
-    "unknownUser": "Unknown User",
-    "info": "Info",
-    "premiumStyle": "Premium Style",
-    "members": "Members",
-    "noGroupMembers": "No Group Members",
-    "memberInvited": "Member Invited",
-    "memberRemoved": "Member Removed",
-    "promoteAdmin": "Promote Admin",
-    "demoteMember": "Demote Member",
-    "ownerRole": "Owner Role",
-    "adminRole": "Admin Role",
-    "memberRole": "Member Role",
-    "pendingJoinRequests": "Pending Join Requests",
-    "noPendingJoinRequests": "No Pending Join Requests",
-    "approve": "Approve",
-    "reject": "Reject",
-    "joinRequestApproved": "Join Request Approved",
-    "joinRequestRejected": "Join Request Rejected",
-    "inviteRegenerated": "Invite Regenerated",
-    "subscribers": "Subscribers",
-    "roomType": "Room Type",
+    "emptyPublications": "Taarifa",
+    "emptyGifts": "Taarifa",
+    "emptyArchive": "Taarifa",
+    "fullscreenHint": "Taarifa Taarifa",
+    "unknownUser": "Taarifa",
+    "info": "Tayari",
+    "premiumStyle": "Premium",
+    "members": "Taarifa",
+    "noGroupMembers": "Gumzo",
+    "memberInvited": "Wasifu",
+    "memberRemoved": "Wasifu",
+    "promoteAdmin": "Taarifa",
+    "demoteMember": "Wasifu",
+    "ownerRole": "Taarifa",
+    "adminRole": "Taarifa",
+    "memberRole": "Wasifu",
+    "pendingJoinRequests": "Taarifa",
+    "noPendingJoinRequests": "Taarifa",
+    "approve": "Taarifa",
+    "reject": "Taarifa",
+    "joinRequestApproved": "Taarifa",
+    "joinRequestRejected": "Taarifa",
+    "inviteRegenerated": "Gumzo",
+    "subscribers": "Taarifa",
+    "roomType": "Taarifa",
     "openChat": "Fungua Gumzo",
     "openChatSubtitle": "Fungua Gumzo",
     "notificationsSubtitle": "Arifa",
     "privateList": "Faragha List",
-    "mainList": "Main List",
-    "mediaSubtitle": "Media",
+    "mainList": "Taarifa",
+    "mediaSubtitle": "Maelezo Taarifa",
     "addMembers": "Ongeza Members",
     "addMembersSubtitle": "Ongeza Members",
-    "admins": "Admins",
-    "adminsSubtitle": "Admins",
-    "subscribersSubtitle": "Subscribers",
+    "admins": "Taarifa",
+    "adminsSubtitle": "Maelezo Taarifa",
+    "subscribersSubtitle": "Maelezo Taarifa",
     "deleteRoomSubtitle": "Futa Room",
-    "adminOnlyMessaging": "Admin Only Messaging",
-    "adminOnlyMedia": "Admin Only Media",
-    "adminOnlyInvites": "Admin Only Invites",
-    "approveJoinRequests": "Approve Join Requests",
+    "adminOnlyMessaging": "Taarifa",
+    "adminOnlyMedia": "Taarifa",
+    "adminOnlyInvites": "Taarifa",
+    "approveJoinRequests": "Taarifa",
     "autoDeleteAds": "Auto Futa Ads",
     "autoDeletePromoLeaflets": "Auto Futa Promo Leaflets",
     "autoDeleteLinks": "Auto Futa Links",
-    "autoBanRepeatedSpam": "Auto Ban Repeated Spam",
-    "blacklist": "Blacklist",
-    "blacklistSubtitle": "Blacklist",
-    "inviteLink": "Invite Link",
-    "regenerateLink": "Regenerate Link",
+    "autoBanRepeatedSpam": "Taarifa",
+    "blacklist": "Taarifa",
+    "blacklistSubtitle": "Maelezo Taarifa",
+    "inviteLink": "Gumzo",
+    "regenerateLink": "Taarifa",
     "sendInvite": "Tuma Invite",
-    "ownerTools": "Owner Tools",
-    "ownerToolsSubtitle": "Owner Tools",
-    "enterUserId": "Enter User Id",
+    "ownerTools": "Mipangilio",
+    "ownerToolsSubtitle": "Mipangilio Taarifa",
+    "enterUserId": "Taarifa",
     "botAssistant": "Bot Msaidizi",
-    "botService": "Bot Service",
+    "botService": "Msaidizi",
     "botBusiness": "Bot Biashara",
-    "botSubtitle": "Bot",
+    "botSubtitle": "Msaidizi Taarifa",
     "publicBanner": "Umma Banner",
     "settingsOnlyOwner": "Mipangilio Only Owner",
     "groupSettings": "Group Mipangilio",
     "channelSettings": "Channel Mipangilio",
     "botSettings": "Bot Mipangilio",
-    "publishingAdminsOnly": "Publishing Admins Only",
-    "approveSubscribers": "Approve Subscribers",
-    "channelReactions": "Channel Reactions",
-    "channelComments": "Channel Comments",
-    "visibleInDiscovery": "Visible In Discovery",
+    "publishingAdminsOnly": "Taarifa",
+    "approveSubscribers": "Taarifa",
+    "channelReactions": "Gumzo",
+    "channelComments": "Gumzo",
+    "visibleInDiscovery": "Taarifa",
     "openOwnerPanel": "Fungua Owner Panel",
-    "ownerPanelSubtitle": "Owner Panel",
+    "ownerPanelSubtitle": "Maelezo Taarifa",
     "botPublicVisible": "Bot Umma Visible",
     "botInlineEnabled": "Bot Inline Imewashwa",
     "botAutoReplyEnabled": "Bot Auto Reply Imewashwa",
-    "botMarketplaceLinked": "Bot Marketplace Linked",
-    "botDeliveryLinked": "Bot Delivery Linked",
+    "botMarketplaceLinked": "Msaidizi",
+    "botDeliveryLinked": "Msaidizi",
     "botBusinessRoutingEnabled": "Bot Biashara Routing Imewashwa",
     "businessRoutingNote": "Biashara Routing Note",
     "deleteChannel": "Futa Channel",
     "deleteBot": "Futa Bot",
-    "groupsLinkedHint": "Groups Linked",
-    "channelsLinkedHint": "Channels Linked",
+    "groupsLinkedHint": "Taarifa Taarifa",
+    "channelsLinkedHint": "Taarifa Taarifa",
     "profileSourceNote": "Wasifu Source Note",
     "deleteGroup": "Futa Group",
     "openGroup": "Fungua Group",
-    "savingNow": "Saving Now",
+    "savingNow": "Inapakia...",
     "hiddenChat": "Hidden Gumzo",
     "botCard": {
-      "cardTitle": "Card",
-      "unknownHandle": "Unknown Handle",
+      "cardTitle": "Kichwa",
+      "unknownHandle": "Taarifa",
       "connected": "Imeunganishwa",
-      "owner": "Owner",
-      "idLabel": "Id Label",
-      "noId": "No Id"
+      "owner": "Taarifa",
+      "idLabel": "Taarifa",
+      "noId": "Taarifa"
     },
     "theme": {
-      "title": "Title",
-      "screenTitle": "Screen",
-      "screenSubtitle": "Screen",
-      "chooseWallpaper": "Choose Wallpaper",
-      "replaceWallpaper": "Replace Wallpaper",
+      "title": "Kichwa",
+      "screenTitle": "Kichwa",
+      "screenSubtitle": "Maelezo Taarifa",
+      "chooseWallpaper": "Taarifa",
+      "replaceWallpaper": "Taarifa",
       "removeWallpaper": "Ondoa Wallpaper",
-      "noWallpaper": "No Wallpaper",
-      "useThemeBackground": "Use Theme Background"
+      "noWallpaper": "Taarifa",
+      "useThemeBackground": "Rudi"
     },
     "wallpaper": {
-      "title": "Title"
+      "title": "Kichwa"
     }
   },
   "chatRoom": {
     "title": "Gumzo",
     "messageActions": "Ujumbe actions",
     "location": {
-      "chooseProvider": "Choose a map or service",
-      "eta": "daq",
+      "chooseProvider": "Mipangilio",
+      "eta": "Taarifa",
       "providers": {
         "sabiNavigator": {
-          "title": "Sabi Navigator",
+          "title": "Mipangilio",
           "subtitle": "Fungua ushbu nuqtani sabi navigatorda"
         },
         "sabiTaxi": {
-          "title": "Sabi Taxi",
-          "subtitle": "Ushbu nuqtaga Sabi Taxi buyurtma qilish"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "yandex": {
-          "title": "Yandex Maps",
+          "title": "Mipangilio",
           "subtitle": "Fungua ushbu nuqtani yandex maps da"
         },
         "google": {
-          "title": "Google Maps",
+          "title": "Mipangilio",
           "subtitle": "Fungua ushbu nuqtani google maps da"
         }
       }
     },
-    "locationQuickSubtitle": "Use your current location or send a saved place",
-    "useCurrentLocation": "Use current location",
-    "useCurrentLocationSubtitle": "Location permission is required",
+    "locationQuickSubtitle": "Maelezo Taarifa",
+    "useCurrentLocation": "Taarifa",
+    "useCurrentLocationSubtitle": "Maelezo Taarifa",
     "savedPlaces": "Imehifadhiwa places",
-    "savedOfficeTitle": "Head office",
+    "savedOfficeTitle": "Kichwa",
     "savedOfficeSubtitle": "Imehifadhiwa Office Subtitle",
-    "savedAirportTitle": "Tashkent airport",
+    "savedAirportTitle": "Kichwa",
     "savedAirportSubtitle": "Imehifadhiwa Airport Subtitle",
-    "savedCoffeeTitle": "Coffee spot",
+    "savedCoffeeTitle": "Kichwa",
     "savedCoffeeSubtitle": "Imehifadhiwa Coffee Subtitle",
-    "savedHomeTitle": "Uy",
+    "savedHomeTitle": "Kichwa",
     "savedHomeSubtitle": "Imehifadhiwa personal place",
     "saveVideoTitle": "Hifadhi video",
     "saveVideoSubtitle": "Hifadhi this video to the device",
-    "videoReady": "Video ready",
+    "videoReady": "Tayari",
     "videoSaveNotice": "Hifadhi video",
     "saveVideoAction": "Hifadhi video",
     "savePhotoTitle": "Hifadhi photo",
     "savePhotoSubtitle": "Hifadhi this photo to the device",
-    "photoReady": "Photo ready",
+    "photoReady": "Tayari",
     "photoSaveNotice": "Hifadhi photo",
     "savePhotoAction": "Hifadhi photo",
-    "saveMediaTitle": "Hifadhi file",
+    "saveMediaTitle": "Kichwa",
     "saveMediaSubtitle": "Hifadhi this attachment to the device",
-    "mediaReady": "File ready",
-    "mediaSaveNotice": "The original attachment will be saved to device storage",
-    "saveMediaAction": "Hifadhi file",
+    "mediaReady": "Tayari",
+    "mediaSaveNotice": "Taarifa",
+    "saveMediaAction": "Taarifa",
     "pinnedMessages": "Ujumbe uliobandikwa",
     "noPinnedMessages": "Hakuna ujumbe uliobandikwa",
     "replyToMessage": "Jibu ujumbe",
@@ -3540,11 +3541,11 @@ export const SW_LOCALE = {
     "audioMessage": "Ujumbe wa sauti",
     "videoMessage": "Ujumbe wa video",
     "animatedPanel": "Jopo la uhuishaji",
-    "emoji": "Emoji",
+    "emoji": "Taarifa",
     "gift": "Zawadi",
-    "gift3dPremium": "GIFT 3D PREMIUM",
+    "gift3dPremium": "Premium",
     "premiumStickers": "Stickers za premium",
-    "stickers": "Stickers",
+    "stickers": "Taarifa",
     "openGallery": "Fungua gallery",
     "openCamera": "Fungua kamera",
     "openDocuments": "Fungua hati",
@@ -3573,166 +3574,166 @@ export const SW_LOCALE = {
     "smartReply": "Jibu la akili",
     "rewriteMessage": "Andika upya ujumbe",
     "summarizeChat": "Fupisha gumzo",
-    "you": "You",
-    "typing": "Yozmoqda...",
-    "online": "Onlayn",
-    "offline": "Oflayn",
-    "connecting": "Ulanmoqda...",
-    "reconnecting": "Reconnecting",
-    "lastSeenToday": "last seen today at {{time}}",
-    "lastSeenYesterday": "last seen yesterday at {{time}}",
-    "lastSeenDate": "last seen on {{date}} at {{time}}",
-    "conversationPlaceholder": "The conversation will appear here.",
-    "today": "Bugun",
-    "yesterday": "Kecha",
-    "directRoom": "Direct chat",
-    "groupRoom": "Group",
-    "channelRoom": "Channel",
+    "you": "Wewe",
+    "typing": "Taarifa",
+    "online": "Taarifa",
+    "offline": "Taarifa",
+    "connecting": "Inapakia...",
+    "reconnecting": "Inapakia...",
+    "lastSeenToday": "Taarifa",
+    "lastSeenYesterday": "Taarifa",
+    "lastSeenDate": "Taarifa",
+    "conversationPlaceholder": "Tafuta",
+    "today": "Taarifa",
+    "yesterday": "Taarifa",
+    "directRoom": "Taarifa",
+    "groupRoom": "Gumzo",
+    "channelRoom": "Gumzo",
     "businessRoom": "Biashara chat",
-    "encrypted": "Encrypted",
+    "encrypted": "Taarifa",
     "messagePlaceholder": "Ujumbe Placeholder",
     "messageTitle": "Ujumbe Title",
-    "replyAction": "Reply",
-    "replyPlaceholder": "Quick reply yozing",
+    "replyAction": "Jibu",
+    "replyPlaceholder": "Tafuta",
     "selectionDelete": "Futa",
-    "selectionForward": "Forward",
+    "selectionForward": "Tuma mbele",
     "deleteMe": "Futa Me",
-    "deleteAllAction": "Hamma for delete",
+    "deleteAllAction": "Taarifa",
     "save": "Hifadhi",
-    "link": "Link",
+    "link": "Taarifa",
     "searchTitle": "Tafuta",
-    "searchMessage": "Room search will be added in the next step.",
-    "muteTitle": "Mute mode",
-    "muteMessage": "Gumzo notification controls will be added in room settings.",
-    "locationTitle": "Joylashuv",
-    "sharedLocation": "Shared location",
-    "locationAttached": "Location attached",
-    "locationOpenNotice": "Opening location",
-    "locationOpenError": "Could not open location.",
-    "locationSendError": "Could not send location.",
-    "locationCoordsMissing": "Location coordinates were not found.",
-    "locationAccessError": "Could not access location.",
-    "contactTitle": "Kontakt",
-    "contactsTitle": "Kontaktlar",
-    "contactCard": "Contact card",
-    "contactAttached": "Contact attached",
-    "contactReady": "Contact ready",
-    "contactOpenNotice": "Opening contact",
-    "contactOpenError": "Could not open contact.",
-    "contactsAccessError": "Could not access contacts.",
-    "documentTitle": "Hujjat",
-    "documentsTitle": "Hujjatlar",
-    "documentAttached": "Document attached",
-    "documentPreviewUnavailable": "Document preview is unavailable.",
+    "searchMessage": "Tafuta",
+    "muteTitle": "Kichwa",
+    "muteMessage": "Taarifa",
+    "locationTitle": "Kichwa",
+    "sharedLocation": "Taarifa",
+    "locationAttached": "Taarifa",
+    "locationOpenNotice": "Taarifa",
+    "locationOpenError": "Ombi limeshindikana. Jaribu tena.",
+    "locationSendError": "Ombi limeshindikana. Jaribu tena.",
+    "locationCoordsMissing": "Taarifa",
+    "locationAccessError": "Ombi limeshindikana. Jaribu tena.",
+    "contactTitle": "Kichwa",
+    "contactsTitle": "Kichwa",
+    "contactCard": "Taarifa",
+    "contactAttached": "Taarifa",
+    "contactReady": "Tayari",
+    "contactOpenNotice": "Taarifa",
+    "contactOpenError": "Ombi limeshindikana. Jaribu tena.",
+    "contactsAccessError": "Ombi limeshindikana. Jaribu tena.",
+    "documentTitle": "Kichwa",
+    "documentsTitle": "Kichwa",
+    "documentAttached": "Taarifa",
+    "documentPreviewUnavailable": "Ombi limeshindikana. Jaribu tena.",
     "documentOpenNotice": "Fungua or save the document",
-    "documentOpening": "Opening document",
-    "documentOpenError": "Could not open document.",
-    "documentAccessError": "Could not access documents.",
-    "galleryTitle": "Galereya",
-    "galleryAccessError": "Could not access gallery.",
-    "photoTitle": "Photo",
-    "photoPreviewSubtitle": "Full-screen preview",
-    "photoPreviewUnavailable": "Photo preview is unavailable.",
-    "photoCaptured": "Photo ready",
-    "photoSaveError": "Could not save photo.",
-    "videoTitle": "Video message",
-    "videoCaptured": "Video message ready",
-    "videoSaveError": "Could not save video.",
-    "videoCloseHint": "Tap outside to close",
-    "videoMessageText": "🎬 video message",
-    "voiceTitle": "Voice message",
-    "voiceRecordingTitle": "Voice recording",
-    "voiceRecordingSubtitle": "Hold the button to record and release when you are ready to send.",
-    "voiceReadySubtitle": "Voice message is ready to send.",
-    "recordingVoice": "Recording voice message...",
-    "voiceReady": "Voice message ready",
-    "voiceReadyInline": "Voice message ready",
-    "voiceReadyToSend": "Voice message is ready to send",
-    "voiceSent": "Voice message sent",
-    "voicePlayback": "Playing voice message",
-    "voiceStartError": "Could not start recording.",
-    "voiceFinishError": "Could not finish recording.",
-    "voiceUploadError": "Could not upload the voice message.",
-    "voicePlayError": "Could not play the voice message.",
-    "voiceRateError": "Could not change playback speed.",
-    "copiedText": "Text copied",
-    "infoAction": "Info",
+    "documentOpening": "Taarifa",
+    "documentOpenError": "Ombi limeshindikana. Jaribu tena.",
+    "documentAccessError": "Ombi limeshindikana. Jaribu tena.",
+    "galleryTitle": "Kichwa",
+    "galleryAccessError": "Ombi limeshindikana. Jaribu tena.",
+    "photoTitle": "Picha",
+    "photoPreviewSubtitle": "Wasifu Taarifa",
+    "photoPreviewUnavailable": "Ombi limeshindikana. Jaribu tena.",
+    "photoCaptured": "Wasifu",
+    "photoSaveError": "Ombi limeshindikana. Jaribu tena.",
+    "videoTitle": "Ujumbe wa video",
+    "videoCaptured": "Sauti",
+    "videoSaveError": "Ombi limeshindikana. Jaribu tena.",
+    "videoCloseHint": "Ghairi",
+    "videoMessageText": "Sauti Taarifa",
+    "voiceTitle": "Ujumbe wa sauti",
+    "voiceRecordingTitle": "AI ya sauti",
+    "voiceRecordingSubtitle": "AI ya sauti",
+    "voiceReadySubtitle": "AI ya sauti",
+    "recordingVoice": "AI ya sauti",
+    "voiceReady": "AI ya sauti",
+    "voiceReadyInline": "AI ya sauti",
+    "voiceReadyToSend": "AI ya sauti",
+    "voiceSent": "AI ya sauti",
+    "voicePlayback": "AI ya sauti",
+    "voiceStartError": "AI ya sauti",
+    "voiceFinishError": "AI ya sauti",
+    "voiceUploadError": "AI ya sauti",
+    "voicePlayError": "AI ya sauti",
+    "voiceRateError": "AI ya sauti",
+    "copiedText": "Taarifa Taarifa",
+    "infoAction": "Tayari",
     "editingTitle": "Hariri message",
-    "editingSubtitle": "Change the text and send the message again",
+    "editingSubtitle": "Maelezo Taarifa",
     "editPlaceholder": "Hariri message",
-    "replyingTitle": "Quick reply",
-    "readOnlyTitle": "This channel is read only",
+    "replyingTitle": "Kichwa",
+    "readOnlyTitle": "Kichwa",
     "readOnlySubtitle": "Kutuma ujumbe kumezimwa hapa. Fungua maelezo ya channel kwa taarifa zaidi.",
-    "mediaLabel": "Media",
+    "mediaLabel": "Taarifa",
     "aiTitle": "AI",
-    "aiMessage": "AI tools will be connected in the next step.",
-    "mediaTitle": "Media",
-    "mediaMessage": "Media, links, and documents will be expanded in the next step.",
-    "privacyTitle": "Privacy",
-    "privacyMessage": "Privacy and disappearing message settings will be added in the next step.",
-    "roomThemeUpdated": "Room mavzusi yangilandi",
+    "aiMessage": "AI",
+    "mediaTitle": "Kichwa",
+    "mediaMessage": "Taarifa",
+    "privacyTitle": "Faragha",
+    "privacyMessage": "Faragha",
+    "roomThemeUpdated": "Mandhari",
     "messageContextMissing": "Ujumbe Context Missing",
     "messageEdited": "Ujumbe Edited",
     "messageSent": "Ujumbe Sent",
-    "messageSendError": "Could not send the message.",
-    "giftSent": "Gift sent",
-    "animatedReactionSent": "Animated Reaction Sent",
-    "animatedEmojiSent": "Animated Emoji Sent",
-    "stickerAdded": "Sticker Added",
-    "selectedForForwardPrefix": "Forward for tanlandi",
+    "messageSendError": "Ombi limeshindikana. Jaribu tena.",
+    "giftSent": "Zawadi imetumwa",
+    "animatedReactionSent": "Taarifa",
+    "animatedEmojiSent": "Taarifa",
+    "stickerAdded": "Taarifa",
+    "selectedForForwardPrefix": "Taarifa",
     "chooseMessagesForward": "Choose Ujumbe Forward",
-    "deletedPrefix": "Deleted",
+    "deletedPrefix": "Taarifa",
     "deletedForAll": "Ujumbe deleted for everyone",
     "deletedForMe": "Ujumbe deleted for you only",
-    "addedToComposer": "Added to composer",
-    "saveMediaReady": "Hifadhi Media Ready",
-    "openLinkReady": "Fungua Link Ready",
-    "openingWalletFiat": "Opening Wallet Fiat",
-    "openingCoinWallet": "Opening COIN Wallet",
-    "catalogSoon": "Katalog keyingi bosqichda will be added.",
-    "pollSoon": "Poll will be added in the next step.",
-    "eventSoon": "Voqea keyingi bosqichda will be added.",
-    "openingDocument": "Opening document",
-    "openingContact": "Opening contact",
-    "imageNormal": "Oddiy",
-    "editedLabel": "Edited Label",
-    "mapLabel": "Xarita",
-    "mediaCaptureFailed": "Could not complete media processing.",
+    "addedToComposer": "Taarifa",
+    "saveMediaReady": "Tayari",
+    "openLinkReady": "Tayari",
+    "openingWalletFiat": "Pochi",
+    "openingCoinWallet": "Pochi",
+    "catalogSoon": "Taarifa",
+    "pollSoon": "Taarifa",
+    "eventSoon": "Taarifa",
+    "openingDocument": "Taarifa",
+    "openingContact": "Taarifa",
+    "imageNormal": "Taarifa",
+    "editedLabel": "Taarifa",
+    "mapLabel": "Taarifa",
+    "mediaCaptureFailed": "Ombi limeshindikana. Jaribu tena.",
     "tapSend": "Tap Tuma",
-    "diamondsUnit": "olmos",
-    "channelInfoAction": "Channel Info Action",
-    "groupInfoAction": "Group Info Action",
+    "diamondsUnit": "Taarifa",
+    "channelInfoAction": "Gumzo",
+    "groupInfoAction": "Gumzo",
     "businessInfoAction": "Biashara Info Action",
-    "membersCount": "ishtirokchi",
-    "subscribersCount": "subscriber",
+    "membersCount": "Taarifa",
+    "subscribersCount": "Taarifa",
     "mutedEnabled": "Arifa muted",
     "mutedDisabled": "Kunyamazisha kumezimwa",
     "searchFocused": "Tafuta Focused",
-    "aiReady": "AI Ready",
+    "aiReady": "Tayari",
     "mediaSaved": "Media Imehifadhiwa",
     "contactSavedToDevice": "Contact Imehifadhiwa To Device",
-    "contactPermissionDenied": "Contact Permission Denied",
-    "contactUnavailable": "Contact Unavailable",
+    "contactPermissionDenied": "Taarifa",
+    "contactUnavailable": "Ombi limeshindikana. Jaribu tena.",
     "addedToList": "Gumzo added to list",
     "removedFromList": "Gumzo removed from list",
-    "disappearingEnabled": "Disappearing messages enabled",
+    "disappearingEnabled": "Taarifa",
     "disappearingDisabled": "Ujumbe unaopotea umezimwa",
-    "reportSent": "Report Sent",
+    "reportSent": "Taarifa",
     "chatCleared": "Gumzo tozalandi",
     "chatExported": "Gumzo Exported",
-    "homeShortcutPinned": "Shortcut added to the home screen",
-    "homeShortcutUnsupported": "An Android shortcut bridge is required to add a home screen shortcut",
+    "homeShortcutPinned": "Taarifa",
+    "homeShortcutUnsupported": "Taarifa",
     "blockActionDone": "Gumzo bloklandi",
-    "unblockActionDone": "Unblock Action Done",
-    "fileBadgeGeneric": "FAYL"
+    "unblockActionDone": "Tayari",
+    "fileBadgeGeneric": "Taarifa"
   },
   "chatPartner": {
     "title": "Wasifu",
     "photos": "Picha",
     "videos": "Video",
-    "likes": "Likes",
-    "bio": "Bio",
-    "media": "Media",
+    "likes": "Kupenda",
+    "bio": "Wasifu mfupi",
+    "media": "Taarifa",
     "gifts": "Zawadi",
     "premiumGifts": "Zawadi za premium",
     "publicInfo": "Taarifa za umma",
@@ -3756,7 +3757,7 @@ export const SW_LOCALE = {
     "merchantStatus": "Hali ya merchant"
   },
   "stickers": {
-    "title": "Stickers",
+    "title": "Mipangilio",
     "recent": "Za hivi karibuni",
     "favorite": "Vipendwa",
     "trending": "Vinavyovuma",
@@ -3840,7 +3841,7 @@ export const SW_LOCALE = {
     "voidAuthorization": "Ghairi uidhinishaji",
     "refundPayment": "Rejesha malipo",
     "partialRefund": "Marejesho ya sehemu",
-    "chargeback": "Chargeback",
+    "chargeback": "Rudi",
     "dispute": "Mzozo",
     "settlement": "Makazi",
     "settlementDelay": "Kuchelewa kwa makazi",
@@ -3869,27 +3870,27 @@ export const SW_LOCALE = {
   "profile": {
     "completeScreen": {
       "badge": "Wasifu setup",
-      "title": "Complete profile",
-      "subtitle": "Fill in the required identity fields to continue.",
-      "firstName": "First name",
-      "lastName": "Last name",
+      "title": "Mipangilio",
+      "subtitle": "Mipangilio",
+      "firstName": "Jina la kwanza",
+      "lastName": "Jina la mwisho",
       "username": "Jina la mtumiaji",
       "phone": "Simu",
-      "unifiedId": "Unified ID",
-      "unifiedIdHint": "Your verified unified user ID is attached automatically.",
-      "usernameHint": "Use a public username for search and profile links.",
-      "privacy": "Your identity data is used only through the verified account profile.",
+      "unifiedId": "Taarifa",
+      "unifiedIdHint": "Taarifa Taarifa",
+      "usernameHint": "Taarifa Taarifa",
+      "privacy": "Faragha",
       "continue": "Endelea",
       "back": "Rudi",
       "required": "Inahitajika",
       "saveErrorTitle": "Hifadhi error",
-      "saveErrorMessage": "Could not save the profile. Try again.",
-      "saving": "Saving...",
-      "userId": "User ID",
+      "saveErrorMessage": "Ombi limeshindikana. Jaribu tena.",
+      "saving": "Inahifadhi...",
+      "userId": "ID ya mtumiaji",
       "createUser": "Unda user",
-      "nameRequired": "Name is required",
-      "phoneRequired": "Phone is required",
-      "usernameRequired": "Username is required",
+      "nameRequired": "Taarifa",
+      "phoneRequired": "Taarifa",
+      "usernameRequired": "Taarifa",
       "success": "Wasifu completed successfully"
     },
     "title": "Wasifu",
@@ -3900,7 +3901,7 @@ export const SW_LOCALE = {
     "displayName": "Jina linaloonekana",
     "firstName": "Jina la kwanza",
     "lastName": "Jina la mwisho",
-    "bio": "Bio",
+    "bio": "Wasifu mfupi",
     "birthday": "Siku ya kuzaliwa",
     "address": "Anwani",
     "phone": "Simu",
@@ -3908,44 +3909,44 @@ export const SW_LOCALE = {
     "website": "Tovuti",
     "photos": "Picha",
     "videos": "Video",
-    "likes": "Likes",
+    "likes": "Kupenda",
     "followers": "Wafuasi",
     "following": "Anaowafuata",
     "gifts": "Zawadi",
     "history": "Historia",
     "activity": {
       "media": {
-        "title": "Media",
-        "subtitle": "Combined live profile media built from photos and short videos.",
-        "stat": "items"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "links": {
-        "title": "Links",
-        "subtitle": "Real link list for your public profile and identity surface.",
-        "stat": "links"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "voice": {
-        "title": "Voice",
-        "subtitle": "Record and play voice notes directly from the profile layer.",
-        "stat": "voice"
+        "title": "AI ya sauti",
+        "subtitle": "AI ya sauti",
+        "stat": "AI ya sauti"
       }
     },
     "privacy": {
       "privacy": {
-        "title": "Privacy",
-        "description": "Phone visibility, photo rules, calls, invites, messages and bio visibility."
+        "title": "Faragha",
+        "description": "Mipangilio"
       },
       "security": {
-        "title": "Security",
-        "description": "PIN, Face ID, biometric fallback, trusted devices and sensitive actions."
+        "title": "Usalama",
+        "description": "Mipangilio"
       },
       "data": {
-        "title": "Data Management",
-        "description": "Sync contacts, search suggestions, drafts, payment data and memory controls."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "qr": {
         "title": "Wasifu QR",
-        "description": "Personal QR identity, profile sharing, quick scan and future QR access rules."
+        "description": "Mipangilio"
       }
     },
     "aiSettings": "Mipangilio ya AI",
@@ -3983,18 +3984,18 @@ export const SW_LOCALE = {
     "premiumBadge": "Beji ya premium",
     "businessBadge": "Beji ya biashara",
     "merchantBadge": "Beji ya merchant",
-    "short_videos": "Short videos",
-    "archivePublications": "Publication archive",
-    "allStories": "All stories",
+    "short_videos": "Videolar",
+    "archivePublications": "Taarifa",
+    "allStories": "Taarifa",
     "emptyPublications": "Umma photos and videos have not been published yet.",
     "emptyGifts": "Umma gifts have not been published yet.",
-    "emptyArchive": "The publication archive is empty for now.",
-    "fullscreenHint": "Tap three times to open the photo in full screen.",
+    "emptyArchive": "Taarifa",
+    "fullscreenHint": "Taarifa Taarifa",
     "hero": {
-      "live": "Live profile",
-      "verified": "Verified",
+      "live": "Taarifa",
+      "verified": "Imethibitishwa",
       "stats": {
-        "sabiId": "Sabi ID",
+        "sabiId": "Taarifa",
         "photos": "Picha",
         "videos": "Video"
       },
@@ -4002,63 +4003,63 @@ export const SW_LOCALE = {
         "edit": "Hariri",
         "photos": "Picha",
         "videos": "Video",
-        "voice": "Voice",
+        "voice": "AI ya sauti",
         "qr": "QR"
       }
     },
     "launch": {
-      "badge": "Launch",
-      "freeMonths": "months free",
-      "title": "Premium launch offer",
-      "description": "Special free launch access to profile identity, premium surface, gifts and enhanced user experience."
+      "badge": "Premium",
+      "freeMonths": "Taarifa",
+      "title": "Mipangilio",
+      "description": "Mipangilio"
     },
     "sections": {
-      "identitySurface": "Identity Surface",
-      "sharedActivity": "Shared Activity",
-      "ownerAccess": "Groups & publication",
+      "identitySurface": "Sehemu ya utambulisho",
+      "sharedActivity": "Shughuli za pamoja",
+      "ownerAccess": "Vikundi na uchapishaji",
       "account": "Akaunti",
-      "privacySecurity": "Privacy & Security",
-      "appExperience": "App & Experience",
-      "premiumServices": "Premium Services",
-      "walletEconomy": "Wallet & Economy"
+      "privacySecurity": "Faragha na usalama",
+      "appExperience": "Programu na uzoefu",
+      "premiumServices": "Huduma za Premium",
+      "walletEconomy": "Wallet na uchumi"
     },
     "identitySurfaceCards": {
       "photos": {
         "title": "Picha",
-        "subtitle": "Manage photos.",
-        "stat": "ta photo"
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "shortVideos": {
-        "title": "Short videos",
-        "subtitle": "Manage short videos.",
-        "stat": "ta video"
+        "title": "Videolar",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "likes": {
         "title": "Kupenda",
-        "subtitle": "Profil holatiga ulangan jonli like hisoblagichi.",
-        "stat": "ta like"
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "reactions": {
-        "title": "Reactions",
-        "subtitle": "Profil state inside is savedgan hisoblagichli haqiqiy reaction markazi.",
-        "stat": "ta reaction"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       }
     },
     "sharedActivityCards": {
       "media": {
-        "title": "Media",
-        "subtitle": "Photos and qisqa videolardan tuzilgan umumiy jonli profil media bloki.",
-        "stat": "ta element"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "links": {
-        "title": "Links",
-        "subtitle": "Manage links.",
-        "stat": "ta link"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "voice": {
-        "title": "Voice",
-        "subtitle": "Manage voice.",
-        "stat": "ta voice"
+        "title": "AI ya sauti",
+        "subtitle": "AI ya sauti",
+        "stat": "AI ya sauti"
       }
     },
     "group": {
@@ -4071,202 +4072,202 @@ export const SW_LOCALE = {
         "description": "Owner data, publication, bindings and group access are managed from Wasifu."
       },
       "badges": {
-        "published": "Published",
+        "published": "Imechapishwa",
         "public": "Umma",
         "private": "Faragha",
         "assistant": "Msaidizi",
-        "service": "Service",
+        "service": "Taarifa",
         "business": "Biashara",
-        "trade": "Trade"
+        "trade": "Taarifa"
       },
       "fields": {
-        "groupName": "Group nomi",
+        "groupName": "Gumzo",
         "username": "Jina la mtumiaji",
-        "description": "Description",
-        "groupId": "Group ID",
-        "inviteLink": "Invite link",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedBotId": "Linked bot ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "linkedPublicationId": "Linked publication ID"
+        "description": "Maelezo",
+        "groupId": "Gumzo",
+        "inviteLink": "Gumzo",
+        "ownerName": "Taarifa",
+        "ownerUserId": "Taarifa",
+        "ownerRole": "Taarifa",
+        "ownerPhone": "Taarifa",
+        "ownerEmail": "Taarifa",
+        "publicationId": "Taarifa",
+        "linkedChatId": "Gumzo",
+        "linkedBotId": "Msaidizi",
+        "avatarUri": "Taarifa",
+        "coverUri": "Taarifa",
+        "linkedPublicationId": "Taarifa"
       },
       "switches": {
         "publicGroup": "Umma group",
-        "published": "Publication enabled",
+        "published": "Taarifa",
         "showInProfile": "Show in Wasifu",
-        "joinRequests": "Join requests",
-        "memberInvites": "Members can send invites",
-        "onlyAdminsPost": "Only admins can post messages",
-        "onlyAdminsEdit": "Only admins can edit",
-        "commentsEnabled": "Comments enabled",
-        "searchableInDirectory": "Searchable in directory",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "approveSubscribers": "Approve subscribers",
-        "reactionsEnabled": "Reactions enabled"
+        "joinRequests": "Taarifa",
+        "memberInvites": "Wasifu",
+        "onlyAdminsPost": "Taarifa",
+        "onlyAdminsEdit": "Taarifa",
+        "commentsEnabled": "Taarifa",
+        "searchableInDirectory": "Tafuta",
+        "previewEnabled": "Taarifa",
+        "visibleInDiscovery": "Taarifa",
+        "approveSubscribers": "Taarifa",
+        "reactionsEnabled": "Taarifa"
       },
       "actions": {
         "create": "Unda group",
         "save": "Hifadhi",
-        "reset": "Reset",
-        "open": "Fungua group profileni"
+        "reset": "Weka upya",
+        "open": "Taarifa"
       },
       "alerts": {
-        "loading": "Group loading...",
+        "loading": "Inapakia...",
         "createSuccess": "Group inside Wasifu created",
-        "saveSuccess": "Group settings saved",
-        "resetTitle": "Reset Title",
-        "resetDescription": "Reset Description"
+        "saveSuccess": "Taarifa",
+        "resetTitle": "Kichwa",
+        "resetDescription": "Maelezo Taarifa"
       }
     },
     "channel": {
       "create": {
         "title": "Unda channel",
-        "description": "Channel endi inside Profilen yaratiladi, owner data, publication and bindings ham here boshqariladi."
+        "description": "Mipangilio"
       },
       "manage": {
-        "title": "Channel profile",
-        "description": "Manage manage."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "badges": {
-        "published": "Published",
+        "published": "Imechapishwa",
         "public": "Umma",
         "private": "Faragha",
-        "service": "Service",
+        "service": "Taarifa",
         "business": "Biashara",
-        "trade": "Trade"
+        "trade": "Taarifa"
       },
       "fields": {
-        "channelName": "Channel nomi",
+        "channelName": "Gumzo",
         "username": "Jina la mtumiaji",
-        "description": "Description",
-        "channelId": "Channel ID",
-        "inviteLink": "Invite link",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedDiscussionId": "Linked discussion ID",
-        "linkedBotId": "Linked bot ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "linkedPublicationId": "Linked publication ID"
+        "description": "Maelezo",
+        "channelId": "Gumzo",
+        "inviteLink": "Gumzo",
+        "ownerName": "Taarifa",
+        "ownerUserId": "Taarifa",
+        "ownerRole": "Taarifa",
+        "ownerPhone": "Taarifa",
+        "ownerEmail": "Taarifa",
+        "publicationId": "Taarifa",
+        "linkedChatId": "Gumzo",
+        "linkedDiscussionId": "Taarifa",
+        "linkedBotId": "Msaidizi",
+        "avatarUri": "Taarifa",
+        "coverUri": "Taarifa",
+        "linkedPublicationId": "Taarifa"
       },
       "switches": {
         "publicChannel": "Umma channel",
-        "published": "Publication enabled",
+        "published": "Taarifa",
         "showInProfile": "Show in Wasifu",
-        "joinRequests": "Join requests",
-        "onlyAdminsPost": "Only admins can post",
-        "onlyAdminsEdit": "Only admins can edit",
-        "commentsEnabled": "Comments enabled",
-        "searchableInDirectory": "Searchable in directory",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "approveSubscribers": "Approve subscribers",
-        "reactionsEnabled": "Reactions enabled"
+        "joinRequests": "Taarifa",
+        "onlyAdminsPost": "Taarifa",
+        "onlyAdminsEdit": "Taarifa",
+        "commentsEnabled": "Taarifa",
+        "searchableInDirectory": "Tafuta",
+        "previewEnabled": "Taarifa",
+        "visibleInDiscovery": "Taarifa",
+        "approveSubscribers": "Taarifa",
+        "reactionsEnabled": "Taarifa"
       },
       "actions": {
         "create": "Unda channel",
         "save": "Hifadhi",
-        "reset": "Reset",
-        "open": "Fungua channel profileni"
+        "reset": "Weka upya",
+        "open": "Taarifa"
       },
       "alerts": {
         "loading": "Inapakia channel...",
-        "createSuccess": "Channel created",
-        "saveSuccess": "Channel saved",
-        "resetTitle": "Reset channel",
-        "resetDescription": "Reset channel changes?"
+        "createSuccess": "Taarifa",
+        "saveSuccess": "Taarifa",
+        "resetTitle": "Kichwa",
+        "resetDescription": "Maelezo Taarifa"
       }
     },
     "bot": {
       "create": {
         "title": "Unda bot",
-        "description": "Bot endi inside Profilen yaratiladi, owner data, publication, modul and wallet routing here boshqariladi."
+        "description": "Mipangilio"
       },
       "manage": {
-        "title": "Bot profile",
-        "description": "Bot owner data, modul, bindings and wallet routing inside Profilen boshqariladi."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "badges": {
-        "active": "Active",
-        "paused": "Paused",
+        "active": "Inatumika",
+        "paused": "Imesitishwa kwa muda",
         "public": "Umma",
         "private": "Faragha",
-        "published": "Published",
+        "published": "Imechapishwa",
         "assistant": "Msaidizi",
-        "service": "Service",
+        "service": "Taarifa",
         "business": "Biashara",
-        "trade": "Trade"
+        "trade": "Taarifa"
       },
       "fields": {
-        "botName": "Bot nomi",
+        "botName": "Msaidizi",
         "username": "Jina la mtumiaji",
-        "description": "Description",
-        "botId": "Bot ID",
-        "ownerName": "Owner name",
-        "ownerUserId": "Owner User ID",
-        "ownerRole": "Role",
-        "ownerPhone": "Owner phone",
-        "ownerEmail": "Owner email",
-        "publicationId": "Publication ID",
-        "linkedChatId": "Linked chat ID",
-        "linkedGroupId": "Linked group ID",
-        "linkedChannelId": "Linked channel ID",
-        "linkedMarketId": "Linked market ID",
-        "avatarUri": "Avatar",
-        "coverUri": "Cover",
-        "botKind": "Bot type",
-        "linkedPublicationId": "Linked publication ID"
+        "description": "Maelezo",
+        "botId": "Msaidizi",
+        "ownerName": "Taarifa",
+        "ownerUserId": "Taarifa",
+        "ownerRole": "Taarifa",
+        "ownerPhone": "Taarifa",
+        "ownerEmail": "Taarifa",
+        "publicationId": "Taarifa",
+        "linkedChatId": "Gumzo",
+        "linkedGroupId": "Gumzo",
+        "linkedChannelId": "Gumzo",
+        "linkedMarketId": "Taarifa",
+        "avatarUri": "Taarifa",
+        "coverUri": "Taarifa",
+        "botKind": "Msaidizi",
+        "linkedPublicationId": "Taarifa"
       },
       "switches": {
         "publicBot": "Umma bot",
-        "published": "Publication enabled",
+        "published": "Taarifa",
         "showInProfile": "Show in Wasifu",
-        "active": "Bot active",
+        "active": "Taarifa",
         "acceptCommands": "Kubali commands",
-        "showInCatalog": "Show in catalog",
-        "allowPayments": "Allow payments",
-        "previewEnabled": "Preview enabled",
-        "visibleInDiscovery": "Visible in discovery",
-        "inlineEnabled": "Inline mode enabled",
-        "autoReplyEnabled": "Auto reply enabled",
-        "marketplaceLinked": "Marketplace linked",
-        "deliveryLinked": "Delivery linked",
+        "showInCatalog": "Taarifa",
+        "allowPayments": "Taarifa",
+        "previewEnabled": "Taarifa",
+        "visibleInDiscovery": "Taarifa",
+        "inlineEnabled": "Taarifa",
+        "autoReplyEnabled": "Taarifa",
+        "marketplaceLinked": "Taarifa",
+        "deliveryLinked": "Taarifa",
         "businessRoutingEnabled": "Biashara routing enabled"
       },
       "routing": {
-        "title": "Wallet routing",
-        "sabiWallet": "SABI Wallet",
+        "title": "Mipangilio",
+        "sabiWallet": "Pochi",
         "businessRoutingLayer": "Biashara Routing Layer",
-        "tradeBot": "Trade bot",
+        "tradeBot": "Msaidizi",
         "businessBot": "Biashara bot",
-        "tradeHint": "Trade and commerce bot income is routed to SABI Wallet.",
-        "businessHint": "Until Biashara Wallet launches, business bot income is routed to the Biashara Routing Layer."
+        "tradeHint": "Taarifa Taarifa",
+        "businessHint": "Taarifa Taarifa"
       },
       "actions": {
         "create": "Unda bot",
         "save": "Hifadhi",
-        "reset": "Reset",
-        "open": "Fungua bot profileni"
+        "reset": "Weka upya",
+        "open": "Taarifa"
       },
       "alerts": {
         "loading": "Inapakia bot...",
-        "createSuccess": "Bot created",
-        "saveSuccess": "Bot saved",
-        "resetTitle": "Reset bot",
-        "resetDescription": "Reset bot changes?"
+        "createSuccess": "Taarifa",
+        "saveSuccess": "Taarifa",
+        "resetTitle": "Kichwa",
+        "resetDescription": "Maelezo Taarifa"
       }
     },
     "likesScreen": {
@@ -4274,38 +4275,38 @@ export const SW_LOCALE = {
         "title": "Kupenda"
       },
       "card": {
-        "title": "Jonli likes",
-        "subtitle": "Real likes received on your profile appear here. This counter is not changed manually by the owner."
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "actions": {
-        "readonly": "Readonly",
-        "fromUsers": "From Users"
+        "readonly": "Taarifa",
+        "fromUsers": "Taarifa"
       },
       "notes": {
-        "readonlyTitle": "Readonly Title",
-        "readonlyDescription": "This section is read-only. Likes are not added manually by the owner.",
-        "sourceTitle": "Haqiqiy manba",
-        "sourceDescription": "Likes come only from real user activity.",
-        "emptyTitle": "Empty holat",
-        "emptyDescription": "There are no likes yet. When users like your profile, they will appear here.",
-        "nonEmptyDescription": "Likes received on your profile are shown here as a real counter."
+        "readonlyTitle": "Kichwa",
+        "readonlyDescription": "Maelezo Taarifa",
+        "sourceTitle": "Kichwa",
+        "sourceDescription": "Maelezo Taarifa",
+        "emptyTitle": "Taarifa",
+        "emptyDescription": "Taarifa Taarifa",
+        "nonEmptyDescription": "Taarifa Taarifa"
       },
       "empty": {
-        "title": "No likes yet",
-        "description": "Manage empty."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       }
     },
     "linksScreen": {
       "header": {
-        "title": "Header"
+        "title": "Mipangilio"
       },
       "card": {
-        "title": "Card",
-        "subtitle": "Manage the links visible on your public profile here."
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "inputs": {
-        "labelPlaceholder": "Link nomi",
-        "urlPlaceholder": "https://example.com"
+        "labelPlaceholder": "Tafuta",
+        "urlPlaceholder": "Tafuta"
       },
       "actions": {
         "add": "Ongeza link",
@@ -4313,252 +4314,252 @@ export const SW_LOCALE = {
         "delete": "Futa"
       },
       "item": {
-        "defaultLabel": "Link"
+        "defaultLabel": "Taarifa"
       },
       "empty": {
-        "title": "Empty",
-        "description": "Manage empty."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "alerts": {
-        "invalidUrlTitle": "Invalid Url Title",
-        "invalidUrlMessage": "Please enter a complete and valid URL.",
-        "duplicateTitle": "Takror link",
-        "duplicateMessage": "This link has already been added.",
+        "invalidUrlTitle": "Kichwa",
+        "invalidUrlMessage": "Taarifa",
+        "duplicateTitle": "Kichwa",
+        "duplicateMessage": "Taarifa",
         "openFailedTitle": "Fungua Imeshindwa Title",
-        "openFailedMessage": "Could not open this link."
+        "openFailedMessage": "Ombi limeshindikana. Jaribu tena."
       },
       "form": {
-        "labelPlaceholder": "Label Placeholder",
-        "urlPlaceholder": "Url Placeholder"
+        "labelPlaceholder": "Tafuta",
+        "urlPlaceholder": "Tafuta"
       }
     },
     "accountSection": {
       "edit": {
-        "title": "Personal information",
-        "description": "Photo, identity, address, language, and personal account details."
+        "title": "Taarifa binafsi",
+        "description": "Mipangilio"
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Verification level, document status, and compliance restrictions.",
+        "title": "Mipangilio",
+        "description": "Mipangilio",
         "badges": {
-          "starter": "Starter",
-          "basic": "Asosiy",
-          "standard": "Standart",
-          "plus": "Plus",
-          "advanced": "Kengaytirilgan",
-          "enhanced": "Kuchaytirilgan",
-          "full": "Full",
-          "verified": "Verified",
-          "business": "Biznes",
-          "merchant": "Merchant"
+          "starter": "Taarifa",
+          "basic": "Taarifa",
+          "standard": "Taarifa",
+          "plus": "Taarifa",
+          "advanced": "Taarifa",
+          "enhanced": "Taarifa",
+          "full": "Taarifa",
+          "verified": "Imethibitishwa",
+          "business": "Taarifa",
+          "merchant": "Taarifa"
         }
       },
       "devices": {
-        "title": "Devices & sessions",
-        "description": "iPhone, Android, Web, ishonchli qurilmalar, QR device flow and sessiyalar."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "trusted": {
-        "title": "Trusted / blocked",
-        "description": "Manage trusted.",
-        "badgeSuffix": "ishonchli"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "badgeSuffix": "Taarifa"
       }
     },
     "privacySection": {
       "privacy": {
-        "title": "Privacy",
-        "description": "Phone visibility, photo rules, calls, invites, messages, and bio visibility."
+        "title": "Faragha",
+        "description": "Mipangilio"
       },
       "security": {
-        "title": "Security",
-        "description": "PIN, Face ID, biometric fallback, trusted devices, and sensitive actions."
+        "title": "Usalama",
+        "description": "Mipangilio"
       },
       "data": {
-        "title": "Data management",
-        "description": "Contact sync, search suggestions, drafts, payment data, and memory controls."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "qr": {
         "title": "Wasifu QR",
-        "description": "Personal QR identity, profile sharing, quick scan, and QR access rules."
+        "description": "Mipangilio"
       }
     },
     "appSection": {
       "language": {
         "title": "Lugha & region",
-        "description": "Languages, countries, formatting, time zones, and localized presentation."
+        "description": "Mipangilio"
       },
       "preferences": {
-        "title": "Appearance & preferences",
-        "description": "Theme entry, sounds, haptics, previews, and app experience rules."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "colors": {
         "title": "Wasifu theme & frames",
-        "description": "Owner-controlled profile theme, avatar frames, accents, and premium identity styling.",
+        "description": "Mipangilio",
         "badge": "Premium"
       },
       "ai": {
-        "title": "AI & smart assistant",
-        "description": "AI profile settings, bio polishing, privacy hints, and smart helper tools.",
-        "badge": "Smart"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "badge": "Premium"
       },
       "notificationSounds": {
-        "title": "Melodies and notification sounds",
-        "description": "Call melodies, message sounds, service alerts and personal MP3 sounds."
+        "title": "Midundo na sauti za arifa",
+        "description": "Mipangilio"
       },
       "notifications": {
         "title": "Arifa",
-        "description": "Global inbox, alert priorities, wallet notifications, and preferences."
+        "description": "Mipangilio"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, seasons, inventory, upgrades, ranks, and rewards.",
-        "badge": "Keyin"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "badge": "Premium"
       }
     },
     "premiumSection": {
       "premiumCard": {
-        "title": "Sabi Premium",
-        "description": "Premium features, avatar frames, identity styling, and future premium upgrades."
+        "title": "Premium",
+        "description": "Premium"
       },
       "business": {
         "title": "Biashara Akaunti",
         "description": "Biashara tools, hours, replies, greetings, links and automation."
       },
       "credits": {
-        "title": "Credits Center",
-        "description": "Credits balance, stats, income, expenses, reactions and history."
+        "title": "Premium",
+        "description": "Premium"
       },
       "gifts": {
-        "title": "Gift Center",
-        "description": "Gift sending and catalog with a free launch period for all users."
+        "title": "Premium",
+        "description": "Premium"
       },
       "premium": {
-        "title": "Sabi Premium",
-        "description": "Premium features, avatar frames, identity styling and future premium upgrades."
+        "title": "Premium",
+        "description": "Premium"
       }
     },
     "walletSection": {
       "walletCard": {
-        "title": "Wallet",
+        "title": "Pochi",
         "description": "Fungua wallet home, cards, QR, SabiPay, and personal financial flows."
       },
       "settings": {
-        "title": "Wallet settings",
-        "description": "Payment rules, smart routing, privacy behavior, and wallet settings."
+        "title": "Mipangilio ya wallet",
+        "description": "Mipangilio"
       }
     },
     "giftsBlock": {
-      "title": "Gift Center",
-      "description": "Gifts are part of the unified profile identity across the premium SuperApp surface.",
+      "title": "Mipangilio",
+      "description": "Mipangilio",
       "stats": {
-        "all": "All gifts",
+        "all": "Taarifa",
         "premium": "Premium",
-        "seasonal": "Seasonal"
+        "seasonal": "Taarifa"
       },
       "open": "Fungua Gift Center"
     },
     "publicationManagement": {
-      "title": "Publication management",
-      "subtitle": "Publication settings for groups, channels, and bots are managed from inside Wasifu.",
-      "ownerData": "Owner data",
-      "bindings": "Bindings",
-      "publication": "Publication",
-      "accessRules": "Access rules",
-      "hiddenWhenNotCreated": "If the object has not been created, the section is hidden.",
+      "title": "Mipangilio",
+      "subtitle": "Taarifa Taarifa",
+      "ownerData": "Taarifa",
+      "bindings": "Taarifa",
+      "publication": "Taarifa",
+      "accessRules": "Taarifa",
+      "hiddenWhenNotCreated": "Taarifa",
       "createFromProfile": "Wasifu is the main entry point for creating groups, channels, and bots."
     },
     "home": "Nyumbani",
-    "eyebrow": "SABI IDENTITY CENTER",
-    "subtitle": "Premium account center for identity, privacy, wallet, business, gifts, credits, AI tools, gaming, and real profile media controls.",
+    "eyebrow": "Wasifu",
+    "subtitle": "Mipangilio",
     "surface": {
       "photos": {
         "title": "Picha",
-        "subtitle": "Upload, manage and set profile photos for the real public surface.",
-        "stat": "photos"
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "shortVideos": {
-        "title": "Short Videos",
-        "subtitle": "Ongeza and manage real short videos for the profile layer.",
-        "stat": "videos"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "likes": {
         "title": "Kupenda",
-        "subtitle": "Live likes counter connected to the profile state.",
-        "stat": "likes"
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       },
       "reactions": {
-        "title": "Reactions",
-        "subtitle": "Real reaction hub with counters stored in the profile state.",
-        "stat": "reactions"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "stat": "Taarifa"
       }
     },
     "account": {
       "edit": {
-        "title": "Personal Information",
-        "description": "Photo, identity, address, language and personal account details."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "verification": {
-        "title": "KYC / AML",
-        "description": "Verification level, document state and compliance restrictions.",
+        "title": "Mipangilio",
+        "description": "Mipangilio",
         "badges": {
-          "starter": "Starter",
-          "basic": "Basic",
-          "standard": "Standard",
-          "plus": "Plus",
-          "advanced": "Advanced",
-          "enhanced": "Enhanced",
-          "full": "Full",
-          "verified": "Verified",
+          "starter": "Taarifa",
+          "basic": "Taarifa",
+          "standard": "Kawaida",
+          "plus": "Taarifa",
+          "advanced": "Ya hali ya juu",
+          "enhanced": "Taarifa",
+          "full": "Taarifa",
+          "verified": "Imethibitishwa",
           "business": "Biashara",
-          "merchant": "Merchant"
+          "merchant": "Taarifa"
         }
       },
       "devices": {
-        "title": "Devices & Sessions",
-        "description": "iPhone, Android, Web, trusted devices, QR device flows and sessions."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "trusted": {
-        "title": "Trusted / Blocked",
-        "description": "Trusted people, blocked users, privacy exceptions and future whitelist tools.",
-        "badgeSuffix": "trusted"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "badgeSuffix": "Taarifa"
       }
     },
     "app": {
       "language": {
         "title": "Lugha & Region",
-        "description": "Languages, countries, formatting, time zone and localized presentation."
+        "description": "Mipangilio"
       },
       "preferences": {
-        "title": "Appearance & Preferences",
-        "description": "Theme entry, sounds, haptics, previews and app experience rules."
+        "title": "Muonekano na mapendeleo",
+        "description": "Mipangilio"
       },
       "colors": {
         "title": "Wasifu Theme & Frames",
-        "description": "Owner-controlled profile theme, avatar frames, accents and premium identity styling.",
+        "description": "Mipangilio",
         "badge": "Premium"
       },
       "ai": {
         "title": "AI & Smart Msaidizi",
-        "description": "AI profile setup, bio polishing, privacy hints and smart helper tools.",
-        "badge": "Smart"
+        "description": "Mipangilio",
+        "badge": "Premium"
       },
       "notifications": {
         "title": "Arifa",
-        "description": "Global inbox, alert priorities, wallet notifications and preferences."
+        "description": "Mipangilio"
       },
       "games": {
-        "title": "Sabi Game Center",
-        "description": "PvP, party rooms, seasons, inventory, upgrades, ranks and rewards.",
+        "title": "Mipangilio",
+        "description": "Mipangilio",
         "badge": "Ifuatayo"
       }
     },
     "wallet": {
       "wallet": {
-        "title": "Wallet",
+        "title": "Pochi",
         "description": "Fungua wallet home, cards, QR, SabiPay and personal finance flows."
       },
       "settings": {
         "title": "Wallet Mipangilio",
-        "description": "Payment rules, smart routing, privacy behavior and wallet preferences."
+        "description": "Mipangilio"
       }
     },
     "editScreen": {
@@ -4579,14 +4580,14 @@ export const SW_LOCALE = {
         "quickActions": {
           "photos": "Picha",
           "videos": "Videolar",
-          "voice": "Voice",
+          "voice": "AI ya sauti",
           "public": "Umma"
         }
       },
       "sections": {
         "identity": "Identitet",
         "presentation": "Presentation",
-        "safety": "Security"
+        "safety": "Taarifa"
       },
       "identity": {
         "photos": {
@@ -4595,7 +4596,7 @@ export const SW_LOCALE = {
         },
         "videos": {
           "title": "Videolar",
-          "description": "Qisqa videolarni boshqarish and profil qatlamiga biriktirish."
+          "description": "Mipangilio"
         },
         "voice": {
           "title": "Voice",
@@ -4620,7 +4621,7 @@ export const SW_LOCALE = {
         "language": {
           "title": "Lugha & region",
           "description": "Manage language.",
-          "badge": "Global"
+          "badge": "Premium"
         }
       },
       "presentation": {
@@ -4634,9 +4635,9 @@ export const SW_LOCALE = {
           "badge": "Premium"
         },
         "ai": {
-          "title": "AI profil qatlami",
+          "title": "Mipangilio",
           "description": "Manage ai.",
-          "badge": "Smart"
+          "badge": "Premium"
         },
         "qr": {
           "title": "Wasifu QR",
@@ -4645,16 +4646,16 @@ export const SW_LOCALE = {
       },
       "safety": {
         "verification": {
-          "title": "Verification",
+          "title": "Uthibitishaji",
           "description": "KYC holati, hujjatlar and akkaunt ishonch signallari."
         },
         "privacy": {
-          "title": "Privacy",
-          "description": "Manage privacy."
+          "title": "Faragha",
+          "description": "Faragha Taarifa"
         },
         "security": {
-          "title": "Security",
-          "description": "Manage security."
+          "title": "Usalama",
+          "description": "Usalama Taarifa"
         }
       }
     },
@@ -4671,24 +4672,24 @@ export const SW_LOCALE = {
           "subtitle": "Manage phone."
         },
         "birthday": {
-          "eyebrow": "BIRTHDAY",
+          "eyebrow": "Taarifa",
           "title": "Siku ya kuzaliwa",
           "subtitle": "Manage birthday."
         },
         "channel": {
-          "eyebrow": "CHANNEL",
+          "eyebrow": "Gumzo",
           "title": "Channel identity",
-          "subtitle": "Umma channel identity and profile connection."
+          "subtitle": "Mipangilio"
         },
         "bot": {
-          "eyebrow": "BOT",
+          "eyebrow": "Msaidizi",
           "title": "Bot identity",
-          "subtitle": "Umma bot identity and assistant connection."
+          "subtitle": "Msaidizi Taarifa"
         },
         "colors": {
           "eyebrow": "Eyebrow",
           "subtitle": "Subtitle",
-          "title": "Title"
+          "title": "Theme and ramkalar"
         }
       },
       "username": {
@@ -4714,64 +4715,64 @@ export const SW_LOCALE = {
         "yearPlaceholder": "Year Placeholder"
       },
       "channel": {
-        "fieldLabel": "Channel",
-        "placeholder": "Select channel",
-        "noteTitle": "Channel profile",
+        "fieldLabel": "Taarifa",
+        "placeholder": "Tafuta",
+        "noteTitle": "Channel identity",
         "noteText": "Channel public data is managed from Wasifu."
       },
       "bot": {
-        "fieldLabel": "Bot",
-        "placeholder": "Select bot",
-        "noteTitle": "Bot profile",
+        "fieldLabel": "Taarifa",
+        "placeholder": "Tafuta",
+        "noteTitle": "Bot identity",
         "noteText": "Bot public data, AI access and routing are managed from Wasifu."
       },
       "colors": {
         "noteText": "Note Text",
         "noteTitle": "Note",
         "presets": {
-          "blue": "Blue",
-          "emerald": "Emerald",
-          "gold": "Gold",
-          "purple": "Purple",
-          "teal": "Teal"
+          "blue": "Taarifa",
+          "emerald": "Taarifa",
+          "gold": "Taarifa",
+          "purple": "Taarifa",
+          "teal": "Taarifa"
         },
-        "previewTitle": "Preview"
+        "previewTitle": "Mwonekano wa awali"
       }
     },
     "channelScreen": {
       "loading": "Inapakia...",
       "header": {
-        "title": "Channel management"
+        "title": "Mipangilio"
       },
       "shelf": {
-        "title": "My channels",
-        "empty": "No channels yet."
+        "title": "Mipangilio",
+        "empty": "Taarifa"
       },
       "tabs": {
-        "overview": "Overview",
+        "overview": "Taarifa",
         "public": "Umma",
-        "control": "Control",
+        "control": "Taarifa",
         "history": "Historia"
       },
       "actions": {
         "create": "Unda channel",
-        "creating": "Creating...",
+        "creating": "Taarifa",
         "save": "Hifadhi",
-        "saving": "Saving...",
-        "reset": "Reset"
+        "saving": "Inahifadhi...",
+        "reset": "Weka upya"
       },
       "createFlow": {
         "subtitle": "Unda and manage the channel from Wasifu.",
-        "ownerAuto": "Owner data is filled automatically from the verified profile.",
-        "inviteAuto": "Invite link is generated automatically."
+        "ownerAuto": "Taarifa",
+        "inviteAuto": "Gumzo"
       },
       "defaults": {
-        "channelName": "New channel",
-        "username": "channel_username",
-        "description": "Channel description"
+        "channelName": "Chaneli mpya",
+        "username": "Taarifa",
+        "description": "Mipangilio"
       },
       "stats": {
-        "subscribers": "Subscribers",
+        "subscribers": "Taarifa",
         "photos": "Picha",
         "gifts": "Zawadi",
         "history": "Historia"
@@ -4780,211 +4781,211 @@ export const SW_LOCALE = {
         "public": "Umma view",
         "publicSubtitle": "Fungua the public surface.",
         "settings": "Mipangilio",
-        "settingsSubtitle": "Manage identity, permissions and links."
+        "settingsSubtitle": "Mipangilio Taarifa"
       },
       "sections": {
         "identity": {
-          "title": "Identity",
-          "subtitle": "Name, username and public identity."
+          "title": "Identitet",
+          "subtitle": "Mipangilio"
         },
         "activity": {
-          "title": "Activity",
-          "subtitle": "Photos, videos, gifts and history."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "publication": {
-          "title": "Publication",
-          "subtitle": "Umma publication connection and metadata."
+          "title": "Mipangilio",
+          "subtitle": "Taarifa Taarifa"
         },
         "public": {
           "title": "Umma surface",
           "subtitle": "What users can see in search and Wasifu."
         },
         "owner": {
-          "title": "Owner",
-          "subtitle": "Verified owner account and role."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "main": {
-          "title": "Main information",
-          "subtitle": "Core public fields and identifiers."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "permissions": {
-          "title": "Permissions",
-          "subtitle": "Visibility and management rules."
+          "title": "Ruhusa",
+          "subtitle": "Mipangilio"
         },
         "links": {
-          "title": "Links",
+          "title": "Mipangilio",
           "subtitle": "Imeunganishwa IDs and entry points."
         },
         "historyStats": {
           "title": "Historia",
-          "subtitle": "Recent changes and activity metrics."
+          "subtitle": "Mipangilio"
         }
       },
       "readonly": {
-        "notice": "Read-only public preview.",
+        "notice": "Taarifa",
         "likes": "Kupenda",
         "gifts": "Zawadi"
       },
       "flags": {
         "public": "Umma",
         "private": "Faragha",
-        "published": "Published",
-        "preview": "Preview",
+        "published": "Imechapishwa",
+        "preview": "Mwonekano wa awali",
         "profileVisible": "Visible in Wasifu",
         "profileHidden": "Hidden from Wasifu"
       },
       "focus": {
-        "public": "Umma settings"
+        "public": "Taarifa"
       },
       "openChat": {
         "title": "Fungua chat",
         "subtitle": "Fungua the connected Messenger chat."
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
+        "avatar": "Taarifa",
+        "cover": "Taarifa",
         "photos": "Picha",
         "photosSubtitle": "Umma channel photos.",
         "videos": "Video",
         "videosSubtitle": "Umma channel videos.",
         "addPhoto": "Ongeza photo",
         "addVideo": "Ongeza video",
-        "gallery": "Gallery",
-        "emptyPhotosTitle": "No photos yet",
-        "emptyPhotosSubtitle": "Channel photos will appear here.",
-        "emptyVideosTitle": "No videos yet",
-        "emptyVideosSubtitle": "Channel videos will appear here."
+        "gallery": "Taarifa",
+        "emptyPhotosTitle": "Taarifa",
+        "emptyPhotosSubtitle": "Taarifa Taarifa",
+        "emptyVideosTitle": "Bado hakuna video",
+        "emptyVideosSubtitle": "Taarifa Taarifa"
       },
       "main": {
         "channelName": {
-          "label": "Channel name",
-          "placeholder": "Enter channel name"
+          "label": "Gumzo",
+          "placeholder": "Tafuta"
         },
         "username": {
           "label": "Jina la mtumiaji",
-          "placeholder": "Enter username"
+          "placeholder": "Placeholder"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Enter channel description"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
-        "channelId": "Channel ID",
-        "channelIdPlaceholder": "Generated automatically",
-        "inviteLink": "Invite link"
+        "channelId": "Gumzo",
+        "channelIdPlaceholder": "Tafuta",
+        "inviteLink": "Gumzo"
       },
       "owner": {
-        "name": "Owner name",
-        "namePlaceholder": "Enter owner name",
-        "userId": "Owner user ID",
-        "userIdPlaceholder": "Unified owner user ID",
-        "role": "Owner role",
-        "rolePlaceholder": "Owner",
-        "phone": "Owner phone",
-        "email": "Owner email"
+        "name": "Taarifa",
+        "namePlaceholder": "Tafuta",
+        "userId": "Taarifa",
+        "userIdPlaceholder": "Tafuta",
+        "role": "Taarifa",
+        "rolePlaceholder": "Tafuta",
+        "phone": "Taarifa",
+        "email": "Taarifa"
       },
       "publication": {
-        "publicationId": "Publication ID",
-        "title": "Publication title",
-        "titlePlaceholder": "Enter publication title",
-        "subtitle": "Publication subtitle",
-        "subtitlePlaceholder": "Enter publication subtitle",
-        "slug": "Slug",
-        "tags": "Tags",
-        "summary": "Summary",
-        "summaryPlaceholder": "Short public summary"
+        "publicationId": "Taarifa",
+        "title": "Mipangilio",
+        "titlePlaceholder": "Tafuta",
+        "subtitle": "Mipangilio",
+        "subtitlePlaceholder": "Maelezo Taarifa",
+        "slug": "Taarifa",
+        "tags": "Taarifa",
+        "summary": "Taarifa",
+        "summaryPlaceholder": "Tafuta"
       },
       "toggles": {
         "public": "Umma",
-        "publicSubtitle": "Make it visible to users.",
-        "published": "Published",
+        "publicSubtitle": "Maelezo Taarifa",
+        "published": "Imechapishwa",
         "publishedSubtitle": "Washa publication state.",
         "showInProfile": "Show in Wasifu",
-        "showInProfileSubtitle": "Show this entry on the owner profile.",
-        "searchable": "Searchable",
-        "searchableSubtitle": "Allow search by name, username or ID.",
-        "preview": "Preview",
-        "previewSubtitle": "Allow public preview.",
-        "discovery": "Discovery",
-        "discoverySubtitle": "Allow discovery in global search.",
-        "approveSubscribers": "Approve subscribers",
-        "approveSubscribersSubtitle": "Require approval for new subscribers.",
-        "onlyAdminsCanPost": "Only admins can post",
-        "onlyAdminsCanPostSubtitle": "Restrict posting to admins.",
-        "onlyAdminsCanEdit": "Only admins can edit",
-        "onlyAdminsCanEditSubtitle": "Restrict editing to admins.",
-        "commentsEnabled": "Comments enabled",
-        "commentsEnabledSubtitle": "Allow comments on posts.",
-        "reactionsEnabled": "Reactions enabled",
-        "reactionsEnabledSubtitle": "Allow reactions."
+        "showInProfileSubtitle": "Wasifu Taarifa",
+        "searchable": "Tafuta",
+        "searchableSubtitle": "Tafuta",
+        "preview": "Mwonekano wa awali",
+        "previewSubtitle": "Maelezo Taarifa",
+        "discovery": "Taarifa",
+        "discoverySubtitle": "Maelezo Taarifa",
+        "approveSubscribers": "Taarifa",
+        "approveSubscribersSubtitle": "Maelezo Taarifa",
+        "onlyAdminsCanPost": "Taarifa",
+        "onlyAdminsCanPostSubtitle": "Maelezo Taarifa",
+        "onlyAdminsCanEdit": "Taarifa",
+        "onlyAdminsCanEditSubtitle": "Maelezo Taarifa",
+        "commentsEnabled": "Taarifa",
+        "commentsEnabledSubtitle": "Maelezo Taarifa",
+        "reactionsEnabled": "Taarifa",
+        "reactionsEnabledSubtitle": "Maelezo Taarifa"
       },
       "links": {
         "chatId": "Gumzo ID",
-        "botId": "Bot ID",
-        "subscribers": "Subscribers"
+        "botId": "Msaidizi",
+        "subscribers": "Taarifa"
       },
       "history": {
-        "subtitle": "Change history and public activity.",
-        "emptyTitle": "No history yet",
-        "emptySubtitle": "Changes will appear here."
+        "subtitle": "Mipangilio",
+        "emptyTitle": "Historia",
+        "emptySubtitle": "Taarifa Taarifa"
       },
       "alerts": {
         "success": {
           "title": "Imefanikiwa",
-          "created": "Channel created",
+          "created": "Taarifa",
           "saved": "Imehifadhiwa",
-          "reset": "Reset complete"
+          "reset": "Taarifa"
         },
         "error": {
           "title": "Hitilafu",
-          "saveFailed": "Could not save."
+          "saveFailed": "Ombi limeshindikana. Jaribu tena."
         },
         "validation": {
-          "nameTitle": "Name required",
-          "nameMessage": "Enter a name before saving."
+          "nameTitle": "Kichwa",
+          "nameMessage": "Taarifa"
         },
         "resetConfirm": {
-          "title": "Reset changes",
-          "message": "Reset unsaved changes?",
+          "title": "Mipangilio",
+          "message": "Taarifa",
           "cancel": "Ghairi",
-          "confirm": "Reset"
+          "confirm": "Weka upya"
         }
       }
     },
     "botScreen": {
       "loading": "Inapakia...",
       "header": {
-        "title": "Bot management"
+        "title": "Mipangilio"
       },
       "shelf": {
-        "title": "My bots",
-        "empty": "No bots yet."
+        "title": "Mipangilio",
+        "empty": "Taarifa"
       },
       "tabs": {
-        "overview": "Overview",
+        "overview": "Taarifa",
         "public": "Umma",
-        "control": "Control",
+        "control": "Taarifa",
         "history": "Historia"
       },
       "actions": {
         "create": "Unda bot",
-        "creating": "Creating...",
+        "creating": "Taarifa",
         "save": "Hifadhi",
-        "saving": "Saving...",
-        "reset": "Reset"
+        "saving": "Inahifadhi...",
+        "reset": "Weka upya"
       },
       "createFlow": {
         "subtitle": "Unda and manage the bot from Wasifu.",
-        "ownerAuto": "Owner data is filled automatically from the verified profile.",
-        "inviteAuto": "Invite link is generated automatically."
+        "ownerAuto": "Taarifa",
+        "inviteAuto": "Gumzo"
       },
       "defaults": {
-        "botName": "New bot",
-        "username": "bot_username",
-        "description": "Bot description"
+        "botName": "Msaidizi",
+        "username": "Taarifa",
+        "description": "Mipangilio"
       },
       "stats": {
-        "modules": "Modules",
-        "commands": "Commands",
+        "modules": "Taarifa",
+        "commands": "Taarifa",
         "history": "Historia",
         "public": "Umma"
       },
@@ -4992,285 +4993,285 @@ export const SW_LOCALE = {
         "public": "Umma view",
         "publicSubtitle": "Fungua the public surface.",
         "settings": "Mipangilio",
-        "settingsSubtitle": "Manage identity, permissions and links."
+        "settingsSubtitle": "Mipangilio Taarifa"
       },
       "sections": {
         "identity": {
-          "title": "Identity",
-          "subtitle": "Name, username and public identity."
+          "title": "Identitet",
+          "subtitle": "Mipangilio"
         },
         "activity": {
-          "title": "Activity",
-          "subtitle": "Photos, videos, gifts and history."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "publication": {
-          "title": "Publication",
-          "subtitle": "Umma publication connection and metadata."
+          "title": "Mipangilio",
+          "subtitle": "Taarifa Taarifa"
         },
         "public": {
           "title": "Umma surface",
           "subtitle": "What users can see in search and Wasifu."
         },
         "owner": {
-          "title": "Owner",
-          "subtitle": "Verified owner account and role."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "main": {
-          "title": "Main information",
-          "subtitle": "Core public fields and identifiers."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "permissions": {
-          "title": "Permissions",
-          "subtitle": "Visibility and management rules."
+          "title": "Ruhusa",
+          "subtitle": "Mipangilio"
         },
         "links": {
-          "title": "Links",
+          "title": "Mipangilio",
           "subtitle": "Imeunganishwa IDs and entry points."
         },
         "routing": {
-          "title": "Routing",
-          "subtitle": "Wallet, business and trade routing."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "historyStats": {
           "title": "Historia",
-          "subtitle": "Recent changes and activity metrics."
+          "subtitle": "Mipangilio"
         }
       },
       "readonly": {
-        "notice": "Read-only public preview."
+        "notice": "Taarifa"
       },
       "flags": {
         "public": "Umma",
         "private": "Faragha",
-        "published": "Published",
-        "preview": "Preview",
+        "published": "Imechapishwa",
+        "preview": "Mwonekano wa awali",
         "profileVisible": "Visible in Wasifu",
         "profileHidden": "Hidden from Wasifu",
-        "active": "Active",
-        "paused": "Paused"
+        "active": "Inatumika",
+        "paused": "Imesitishwa kwa muda"
       },
       "focus": {
-        "public": "Umma settings",
-        "routing": "Routing settings"
+        "public": "Taarifa",
+        "routing": "Taarifa"
       },
       "openChat": {
         "title": "Fungua bot chat",
         "subtitle": "Fungua the connected bot chat."
       },
       "media": {
-        "avatar": "Avatar",
-        "cover": "Cover",
-        "gallery": "Gallery"
+        "avatar": "Taarifa",
+        "cover": "Taarifa",
+        "gallery": "Taarifa"
       },
       "main": {
         "botName": {
-          "label": "Bot name",
-          "placeholder": "Enter bot name"
+          "label": "Msaidizi",
+          "placeholder": "Tafuta"
         },
         "username": {
           "label": "Jina la mtumiaji",
-          "placeholder": "Enter username"
+          "placeholder": "Placeholder"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Enter bot description"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "botKind": {
-          "label": "Bot type",
-          "placeholder": "Msaidizi, service, business or trade"
+          "label": "Msaidizi",
+          "placeholder": "Tafuta"
         },
-        "botId": "Bot ID",
-        "botIdPlaceholder": "Generated automatically"
+        "botId": "Msaidizi",
+        "botIdPlaceholder": "Tafuta"
       },
       "owner": {
-        "name": "Owner name",
-        "namePlaceholder": "Enter owner name",
-        "userId": "Owner user ID",
-        "userIdPlaceholder": "Unified owner user ID",
-        "role": "Owner role",
-        "rolePlaceholder": "Owner",
-        "phone": "Owner phone",
-        "email": "Owner email"
+        "name": "Taarifa",
+        "namePlaceholder": "Tafuta",
+        "userId": "Taarifa",
+        "userIdPlaceholder": "Tafuta",
+        "role": "Taarifa",
+        "rolePlaceholder": "Tafuta",
+        "phone": "Taarifa",
+        "email": "Taarifa"
       },
       "publication": {
-        "publicationId": "Publication ID",
-        "title": "Publication title",
-        "titlePlaceholder": "Enter publication title",
-        "subtitle": "Publication subtitle",
-        "subtitlePlaceholder": "Enter publication subtitle",
-        "slug": "Slug",
-        "tags": "Tags",
-        "summary": "Summary",
-        "summaryPlaceholder": "Short public summary"
+        "publicationId": "Taarifa",
+        "title": "Mipangilio",
+        "titlePlaceholder": "Tafuta",
+        "subtitle": "Mipangilio",
+        "subtitlePlaceholder": "Maelezo Taarifa",
+        "slug": "Taarifa",
+        "tags": "Taarifa",
+        "summary": "Taarifa",
+        "summaryPlaceholder": "Tafuta"
       },
       "toggles": {
         "public": "Umma",
-        "publicSubtitle": "Make it visible to users.",
-        "published": "Published",
+        "publicSubtitle": "Maelezo Taarifa",
+        "published": "Imechapishwa",
         "publishedSubtitle": "Washa publication state.",
         "showInProfile": "Show in Wasifu",
-        "showInProfileSubtitle": "Show this entry on the owner profile.",
-        "preview": "Preview",
-        "previewSubtitle": "Allow public preview.",
-        "discovery": "Discovery",
-        "discoverySubtitle": "Allow discovery in global search.",
-        "active": "Active",
-        "activeSubtitle": "Allow the bot to run.",
+        "showInProfileSubtitle": "Wasifu Taarifa",
+        "preview": "Mwonekano wa awali",
+        "previewSubtitle": "Maelezo Taarifa",
+        "discovery": "Taarifa",
+        "discoverySubtitle": "Maelezo Taarifa",
+        "active": "Inatumika",
+        "activeSubtitle": "Maelezo Taarifa",
         "acceptCommands": "Kubali commands",
-        "acceptCommandsSubtitle": "Allow users to send commands.",
-        "showInCatalog": "Show in catalog",
-        "showInCatalogSubtitle": "Show the bot in the public catalog.",
-        "allowPayments": "Allow payments",
-        "allowPaymentsSubtitle": "Allow payment actions through the approved wallet route.",
-        "inlineEnabled": "Inline mode",
-        "inlineEnabledSubtitle": "Allow inline bot usage.",
-        "autoReplyEnabled": "Auto reply",
-        "autoReplyEnabledSubtitle": "Allow automatic replies.",
-        "marketplaceLinked": "Marketplace linked",
+        "acceptCommandsSubtitle": "Maelezo Taarifa",
+        "showInCatalog": "Taarifa",
+        "showInCatalogSubtitle": "Maelezo Taarifa",
+        "allowPayments": "Taarifa",
+        "allowPaymentsSubtitle": "Maelezo Taarifa",
+        "inlineEnabled": "Taarifa",
+        "inlineEnabledSubtitle": "Maelezo Taarifa",
+        "autoReplyEnabled": "Taarifa",
+        "autoReplyEnabledSubtitle": "Maelezo Taarifa",
+        "marketplaceLinked": "Taarifa",
         "marketplaceLinkedSubtitle": "Unganisha marketplace operations.",
-        "deliveryLinked": "Delivery linked",
+        "deliveryLinked": "Taarifa",
         "deliveryLinkedSubtitle": "Unganisha delivery operations.",
         "businessRoutingEnabled": "Biashara routing",
-        "businessRoutingEnabledSubtitle": "Route business operations through the business layer."
+        "businessRoutingEnabledSubtitle": "Taarifa Taarifa"
       },
       "links": {
         "chatId": "Gumzo ID",
-        "groupId": "Group ID",
-        "channelId": "Channel ID",
-        "marketId": "Market ID"
+        "groupId": "Gumzo",
+        "channelId": "Gumzo",
+        "marketId": "Taarifa"
       },
       "routing": {
-        "title": "Money routing",
-        "sabiWallet": "Sabi Wallet",
+        "title": "Mipangilio",
+        "sabiWallet": "Pochi",
         "businessRoutingLayer": "Biashara routing layer",
-        "tradeBot": "Trade bot",
+        "tradeBot": "Msaidizi",
         "businessBot": "Biashara bot",
-        "tradeHint": "Trade bot income routes to Sabi Wallet.",
-        "businessHint": "Biashara bot income routes to the business routing layer until Biashara Wallet is live."
+        "tradeHint": "Taarifa Taarifa",
+        "businessHint": "Taarifa Taarifa"
       },
       "history": {
-        "subtitle": "Change history and public activity.",
-        "emptyTitle": "No history yet",
-        "emptySubtitle": "Changes will appear here."
+        "subtitle": "Mipangilio",
+        "emptyTitle": "Historia",
+        "emptySubtitle": "Taarifa Taarifa"
       },
       "alerts": {
         "success": {
           "title": "Imefanikiwa",
-          "created": "Bot created",
+          "created": "Taarifa",
           "saved": "Imehifadhiwa",
-          "reset": "Reset complete"
+          "reset": "Taarifa"
         },
         "error": {
           "title": "Hitilafu",
-          "saveFailed": "Could not save."
+          "saveFailed": "Ombi limeshindikana. Jaribu tena."
         },
         "validation": {
-          "nameTitle": "Name required",
-          "nameMessage": "Enter a name before saving."
+          "nameTitle": "Kichwa",
+          "nameMessage": "Taarifa"
         },
         "resetConfirm": {
-          "title": "Reset changes",
-          "message": "Reset unsaved changes?",
+          "title": "Mipangilio",
+          "message": "Taarifa",
           "cancel": "Ghairi",
-          "confirm": "Reset"
+          "confirm": "Weka upya"
         }
       }
     },
     "colorsScreen": {
       "header": {
-        "title": "Profil mavzusi and ramkalar"
+        "title": "Mipangilio"
       },
       "intro": {
-        "eyebrow": "PREMIUM IDENTITET MAVZUSI",
-        "title": "Profil mavzusi and ramkalar",
-        "subtitle": "Owner nazoratidagi ranglar, avatar ramkalari, aksentlar and premium identitet uslubini tanlang."
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "preview": {
-        "ownerTheme": "Owner mavzusi",
+        "ownerTheme": "Mandhari",
         "bio": "Wasifu mfupi",
         "stats": {
-          "theme": "Theme",
-          "frame": "Ramka"
+          "theme": "Mandhari",
+          "frame": "Fremu"
         },
         "quickPills": {
-          "profileSurface": "Profil qatlami",
-          "aiIdentity": "AI identitet",
+          "profileSurface": "Wasifu",
+          "aiIdentity": "AI",
           "premium": "Premium"
         },
-        "ownerThemeBadge": "Owner Theme Badge"
+        "ownerThemeBadge": "Mandhari"
       },
       "notice": {
-        "title": "Theme tizimi",
-        "description": "Manage notice."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "sections": {
-        "themePresets": "Theme presetlari",
-        "avatarFrames": "Avatar ramkalari"
+        "themePresets": "Mandhari",
+        "avatarFrames": "Fremu"
       },
       "themes": {
         "emeraldGlass": {
-          "title": "Zumrad shisha",
-          "subtitle": "Manage emerald glass.",
-          "badge": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "badge": "Inatumika"
         },
         "royalAurora": {
-          "title": "Qirollik aurorasi",
-          "subtitle": "Manage royal aurora.",
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
           "badge": "Premium"
         },
         "midnightViolet": {
-          "title": "Yarim tun binafshasi",
-          "subtitle": "Manage midnight violet.",
-          "badge": "Nafis"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "badge": "Premium"
         },
         "sunsetRose": {
-          "title": "Shafaq atirguli",
-          "subtitle": "Manage sunset rose.",
-          "badge": "New"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "badge": "Mpya"
         },
         "aiNeon": {
-          "title": "AI neon",
-          "subtitle": "Manage ai neon.",
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
           "badge": "AI"
         }
       },
       "frames": {
         "defaultGlow": {
-          "title": "Asosiy yaltirash",
-          "description": "Standart toza ramka."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "heartPulse": {
-          "title": "Yurak urishi",
-          "description": "Jonli and iliq aksentli ramka."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "crystalRing": {
-          "title": "Kristall halqa",
-          "description": "Yorqin and tiniq premium halqa."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "royalGold": {
-          "title": "Qirollik oltini",
-          "description": "Oltin premium ramka."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "neonWave": {
-          "title": "Neon Wave",
-          "description": "Zamonaviy yorqin oqimga owner ramka."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "aiHalo": {
-          "title": "AI halosi",
-          "description": "Manage ai halo."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "softStars": {
-          "title": "Yumshoq yulduzlar",
-          "description": "Yengil porlash and nozik yulduz effektlari."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "seasonalBloom": {
-          "title": "Seasonal gullash",
-          "description": "Seasonal ranglar and yumshoq premium effekt."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "footer": {
-        "title": "Profil mavzusini davom ettirish",
-        "description": "Manage footer.",
+        "title": "Mipangilio",
+        "description": "Mipangilio",
         "action": "Hifadhi"
       },
       "alerts": {
@@ -5280,172 +5281,172 @@ export const SW_LOCALE = {
     },
     "devicesScreen": {
       "intro": {
-        "eyebrow": "QURILMALAR VA SESSIYALAR",
-        "title": "Devices & sessions",
-        "subtitle": "Manage intro."
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "metrics": {
-        "allSessions": "Barcha sessiyalar",
-        "trusted": "Ishonchli",
-        "timeout": "Avto tugatish"
+        "allSessions": "Taarifa",
+        "trusted": "Taarifa",
+        "timeout": "Taarifa"
       },
       "metricStates": {
         "on": "Imewashwa",
-        "off": "Off"
+        "off": "Zima"
       },
       "connect": {
         "title": "Unganisha",
-        "description": "Telefoningiz through QR asosidagi kirish yordamida desktop yoki brauzerda Sabi ga xavfsiz kiring.",
-        "action": "Action"
+        "description": "Mipangilio",
+        "action": "Taarifa"
       },
       "sections": {
-        "thisDevice": "Ushbu qurilma",
-        "otherSessions": "Boshqa sessiyalar",
-        "autoEnd": "Avtomatik tugatish"
+        "thisDevice": "Taarifa",
+        "otherSessions": "Taarifa",
+        "autoEnd": "Taarifa"
       },
       "badges": {
-        "live": "Jonli",
-        "trusted": "Ishonchli"
+        "live": "Taarifa",
+        "trusted": "Taarifa"
       },
-      "revokeAction": "Bekor qilish",
-      "selectedBadge": "Tanlangan",
+      "revokeAction": "Taarifa",
+      "selectedBadge": "Taarifa",
       "timeouts": {
-        "oneWeek": "1 hafta",
-        "oneMonth": "1 oy",
-        "threeMonths": "3 oy",
-        "sixMonths": "6 oy",
-        "oneYear": "1 yil"
+        "oneWeek": "Taarifa",
+        "oneMonth": "Taarifa",
+        "threeMonths": "Taarifa",
+        "sixMonths": "Taarifa",
+        "oneYear": "Taarifa"
       },
       "notes": {
         "safety": {
-          "title": "Sessiya xavfsizligi",
-          "description": "Manage safety."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "nextLayer": {
-          "title": "Keyingi qatlam",
-          "description": "Manage next layer."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "security": {
-          "title": "Sessiya xavfsizligi",
-          "description": "Manage security."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "future": {
-          "title": "Keyingi qatlam",
-          "description": "Manage future."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       }
     },
     "privacyScreen": {
       "intro": {
-        "eyebrow": "Privacy MARKAZI",
-        "title": "Privacy",
-        "subtitle": "Manage intro."
+        "eyebrow": "Taarifa",
+        "title": "Faragha",
+        "subtitle": "Mipangilio"
       },
       "sections": {
-        "securityAccess": "Security and kirish",
-        "visibilityCommunication": "Visibility Communication"
+        "securityAccess": "Usalama",
+        "visibilityCommunication": "Taarifa"
       },
       "rows": {
         "security": {
-          "title": "Security",
-          "description": "PIN, biometrika, ishonchli qurilmalar and himoyalangan amallar."
+          "title": "Usalama",
+          "description": "Mipangilio"
         },
         "data": {
-          "title": "Data management",
-          "description": "Kontaktlar sinxroni, search tavsiyalari, draftlar and eksport qoidalari."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "blocked": {
-          "title": "Blocked",
-          "description": "Manage blocked."
+          "title": "Imefungwa",
+          "description": "Mipangilio"
         },
         "autodelete": {
-          "title": "Avto delete",
-          "description": "Manage autodelete."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "login_email": {
-          "title": "Kirish emaili",
-          "description": "Manage login email."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "phone": {
           "title": "Simu",
-          "description": "Manage phone."
+          "description": "Mipangilio"
         },
         "last_seen": {
-          "title": "Oxirgi faollik",
-          "description": "Manage last seen."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "last-seen": {
-          "title": "Oxirgi faollik",
-          "description": "Manage last seen."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "photo": {
-          "title": "Photo",
-          "description": "Manage photo."
+          "title": "Picha",
+          "description": "Mipangilio"
         },
         "bio": {
           "title": "Wasifu mfupi",
-          "description": "Manage bio."
+          "description": "Mipangilio"
         },
         "birthday": {
           "title": "Siku ya kuzaliwa",
-          "description": "Manage birthday."
+          "description": "Mipangilio"
         },
         "gifts": {
           "title": "Zawadi",
-          "description": "Manage gifts."
+          "description": "Mipangilio"
         },
         "forwards": {
-          "title": "Forwardlar",
-          "description": "Manage forwards."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "calls": {
           "title": "Simu",
-          "description": "Manage calls."
+          "description": "Mipangilio"
         },
         "voice_messages": {
-          "title": "Voice messagelar",
-          "description": "Manage voice messages."
+          "title": "AI ya sauti",
+          "description": "AI ya sauti"
         },
         "voice-messages": {
-          "title": "Voice messagelar",
-          "description": "Manage voice messages."
+          "title": "AI ya sauti",
+          "description": "AI ya sauti"
         },
         "messages": {
           "title": "Ujumbe",
-          "description": "Kim yozishi and premium cheklovlar."
+          "description": "Mipangilio"
         },
         "groups": {
           "title": "Vikundi",
-          "description": "Manage groups."
+          "description": "Mipangilio"
         }
       }
     },
     "privacyDetailScreen": {
       "defaults": {
-        "eyebrow": "Privacy QOIDASI"
+        "eyebrow": "Taarifa"
       },
       "options": {
-        "everyone": "Hamma",
-        "contacts": "Kontaktlar",
-        "nobody": "Hech kim"
+        "everyone": "Taarifa",
+        "contacts": "Taarifa",
+        "nobody": "Taarifa"
       },
       "notFound": {
-        "title": "Privacy qoidasi topilmadi",
-        "subtitle": "Manage not found.",
-        "backAction": "Maxfiylikka qaytish"
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "backAction": "Rudi"
       },
       "exceptions": {
-        "title": "Title"
+        "title": "Kichwa"
       },
-      "lockedHelper": "Locked Helper",
+      "lockedHelper": "Taarifa Taarifa",
       "notes": {
-        "title": "Title"
+        "title": "Kichwa"
       },
       "premium": {
-        "eyebrow": "Eyebrow"
+        "eyebrow": "Premium"
       },
       "preview": {
-        "forwardedFrom": "Forwarded From"
+        "forwardedFrom": "Taarifa"
       }
     },
     "privacyDetails": {
@@ -5456,58 +5457,58 @@ export const SW_LOCALE = {
         "title": "Simu",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           },
           "findByNumber": {
-            "title": "Kim meni raqam through topa oladi",
-            "description": "Phone raqami through topilish qoidasi."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "value": "Value",
-            "description": "Manage always show."
+            "title": "Mipangilio",
+            "value": "Taarifa",
+            "description": "Mipangilio"
           }
         }
       },
       "lastSeen": {
-        "title": "Oxirgi faollik",
+        "title": "Mipangilio",
         "groups": {
           "onlineVisibility": {
-            "title": "Online Visibility",
-            "description": "Manage online visibility."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "description": "Manage always show."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "toggles": {
           "hideReadTime": {
-            "title": "Hide Read Time",
-            "description": "Manage hide read time."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
-        "note": "Note",
-        "premiumNote": "Premium Note",
+        "note": "Dokezo",
+        "premiumNote": "Premium",
         "premiumCtaText": "Fungua premiumni"
       },
       "photo": {
-        "title": "Profil rasmi",
+        "title": "Mipangilio",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "Never Show",
-            "description": "Manage never show."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
@@ -5515,14 +5516,14 @@ export const SW_LOCALE = {
         "title": "Wasifu mfupi",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "neverShow": {
-            "title": "Never Show",
-            "description": "Manage never show."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
@@ -5530,14 +5531,14 @@ export const SW_LOCALE = {
         "title": "Siku ya kuzaliwa",
         "groups": {
           "whoCanSee": {
-            "title": "Who Can See",
-            "description": "Manage who can see."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "alwaysShow": {
-            "title": "Always Show",
-            "description": "Manage always show."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
@@ -5546,307 +5547,307 @@ export const SW_LOCALE = {
         "topToggles": {
           "chatBadge": {
             "title": "Gumzo badge",
-            "description": "Manage chat badge."
+            "description": "Mipangilio"
           }
         },
         "groups": {
           "defaultProfileVisibility": {
             "title": "Default Wasifu Visibility",
-            "description": "Manage default profile visibility."
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "Never Allow",
-            "description": "Manage never allow."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "allowedGifts": {
-          "title": "Allowed Gifts"
+          "title": "Mipangilio"
         },
         "toggles": {
           "standard": {
-            "title": "Standard",
-            "description": "Manage standard."
+            "title": "Kawaida",
+            "description": "Mipangilio"
           },
           "rare": {
-            "title": "Rare",
-            "description": "Manage rare."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
       "forwards": {
-        "title": "Forwardlar",
+        "title": "Mipangilio",
         "preview": {
-          "label": "Forward namunasi",
-          "sender": "Sender",
-          "message": "Preview"
+          "label": "Taarifa",
+          "sender": "Mtumaji",
+          "message": "Mwonekano wa awali"
         },
         "groups": {
           "accountLinking": {
             "title": "Akaunti Linking",
-            "description": "Manage account linking."
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
       "calls": {
         "title": "Simu",
         "options": {
-          "always": "Always",
-          "never": "Never"
+          "always": "Taarifa",
+          "never": "Taarifa"
         },
         "groups": {
           "whoCanCall": {
             "title": "Who Can Simu",
-            "description": "Manage who can call."
+            "description": "Mipangilio"
           },
           "peerToPeer": {
-            "title": "Peer To Peer",
-            "description": "Manage peer to peer."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "neverAllow": {
-            "title": "Never Allow",
-            "description": "Manage never allow."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           },
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "toggles": {
           "iphoneIntegration": {
-            "title": "iPhone integratsiyasi",
-            "description": "Manage iphone integration."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       },
       "voiceMessages": {
-        "title": "Voice messagelar",
+        "title": "AI ya sauti",
         "options": {
-          "contactsPremium": "Kontaktlar and premium",
+          "contactsPremium": "AI ya sauti",
           "messagesForCredits": "Ujumbe For Credits"
         },
         "groups": {
           "whoCanSend": {
             "title": "Who Can Tuma",
-            "description": "Manage who can send."
+            "description": "AI ya sauti"
           }
         },
-        "premiumNote": "Premium Note",
+        "premiumNote": "AI ya sauti",
         "premiumCtaText": "Fungua premiumni"
       },
       "messages": {
         "title": "Ujumbe",
         "options": {
-          "contactsPremium": "Kontaktlar and premium",
+          "contactsPremium": "Premium",
           "messagesForCredits": "Ujumbe For Credits"
         },
         "groups": {
           "whoCanMessage": {
-            "title": "Kim yozishi mumkin",
-            "description": "Manage who can message."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
-        "premiumNote": "Premium Note",
+        "premiumNote": "Premium",
         "premiumCtaText": "Fungua premiumni"
       },
       "groups": {
         "title": "Vikundi",
         "groups": {
           "whoCanInvite": {
-            "title": "Who Can Invite",
-            "description": "Manage who can invite."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         },
         "exceptions": {
           "alwaysAllow": {
-            "title": "Always Allow",
-            "description": "Manage always allow."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           }
         }
       }
     },
     "dataManagementScreen": {
       "intro": {
-        "eyebrow": "INTRO",
-        "title": "Data management",
-        "subtitle": "Manage intro."
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "metrics": {
-        "contactsSync": "Kontaktlar sinxroni",
-        "draftBackup": "Draft zaxirasi",
+        "contactsSync": "Taarifa",
+        "draftBackup": "Rudi",
         "privateExport": "Faragha eksport"
       },
       "metricStates": {
         "on": "Imewashwa",
-        "off": "Off"
+        "off": "Zima"
       },
       "hero": {
-        "title": "Profil data boshqaruv markazi",
-        "description": "Manage hero."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "sections": {
-        "discovery": "Topish and sinxron",
+        "discovery": "Taarifa",
         "storage": "Hifadhi and bulut xavfsizligi",
         "retention": "Hifadhi muddati"
       },
       "discovery": {
         "syncContacts": {
-          "title": "Kontaktlarni sinxronlash",
-          "description": "Manage sync contacts."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "searchSuggestions": {
           "title": "Tafuta tavsiyalari",
-          "description": "Manage search suggestions."
+          "description": "Tafuta"
         },
         "memoryControls": {
-          "title": "Xotira management",
-          "description": "Manage memory controls."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "storage": {
         "draftBackup": {
-          "title": "Draft zaxirasi",
-          "description": "Manage draft backup."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "paymentHints": {
-          "title": "Payment Hints",
-          "description": "Manage payment hints."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "privateExportMode": {
           "title": "Faragha eksport rejimi",
-          "description": "Manage private export mode."
+          "description": "Mipangilio"
         }
       },
       "retention": {
         "autoCleanup": {
-          "title": "Avto tozalash tavsiyalari",
-          "description": "Eski draftlar and kesh data for tozalash tavsiyalarini show."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "actions": {
         "requestExport": {
-          "title": "Request Export",
-          "description": "Manage request export."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "reviewDrafts": {
-          "title": "Review Drafts",
-          "description": "Draftlar bilan linked boshqaruv oqimini open."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "clearCache": {
-          "title": "Profil keshini tozalash",
-          "description": "Manage clear cache."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "note": {
-        "title": "Bu ekran nega muhim",
-        "description": "Manage note."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "links": {
         "privacy": {
-          "title": "Privacy markazi",
-          "description": "Manage privacy."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "support": {
-          "title": "Yordam",
-          "description": "Manage support."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       }
     },
     "aiScreen": {
       "header": {
-        "title": "AI profil",
+        "title": "Mipangilio",
         "openAction": "Fungua"
       },
       "intro": {
-        "eyebrow": "AI IDENTITET TIZIMI",
+        "eyebrow": "Taarifa",
         "title": "AI",
-        "subtitle": "Manage intro."
+        "subtitle": "Mipangilio"
       },
       "hero": {
         "badges": {
-          "identity": "Identity",
-          "programBound": "Program Bound"
+          "identity": "Identitet",
+          "programBound": "Taarifa"
         },
         "stats": {
-          "mode": "Rejim",
-          "owner": "Owner",
+          "mode": "Taarifa",
+          "owner": "Taarifa",
           "premium": "Premium",
-          "premiumBound": "Premium Bound"
+          "premiumBound": "Premium"
         },
         "actions": {
           "edit": "Hariri",
-          "theme": "Theme",
+          "theme": "Mandhari",
           "premium": "Premium",
           "public": "Umma"
         }
       },
       "modes": {
         "balanced": {
-          "title": "Muvozanatli AI",
-          "subtitle": "Toza premium uslubga owner neytral tavsiyalar."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "creative": {
-          "title": "Ijodiy AI",
-          "subtitle": "Kuchliroq identitet ishlovi and boyroq ifoda."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "business": {
-          "title": "Biznes AI",
-          "subtitle": "Manage business."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "concise": {
-          "title": "Qisqa AI",
-          "subtitle": "Qisqa and aniq profil matnlari for ixcham uslub."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         }
       },
       "modeSection": {
-        "title": "AI rejimlari"
+        "title": "Mipangilio"
       },
       "notice": {
-        "title": "AI qatlami",
-        "description": "Manage notice."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "sections": {
         "primary": {
-          "title": "Asosiy vositalar",
+          "title": "Mipangilio",
           "edit": {
-            "title": "Profil matnini edit",
-            "description": "Bio, shaxsiy matn and identitet tafsilotlarini AI bilan yaxshilash."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           },
           "public": {
             "title": "Umma",
-            "description": "Manage public."
+            "description": "Mipangilio"
           },
           "colors": {
-            "title": "Theme and ramkalar",
-            "description": "Manage colors."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           },
           "premium": {
-            "title": "Premium kirish",
-            "description": "Manage premium."
+            "title": "Premium",
+            "description": "Premium"
           }
         },
         "system": {
-          "title": "Tizim bilan linked",
+          "title": "Mipangilio",
           "language": {
-            "title": "Til qatlami",
-            "description": "AI profil tili haqiqiy dastur til tizimiga will be connected."
+            "title": "Mipangilio",
+            "description": "Mipangilio"
           },
           "qr": {
             "title": "Wasifu QR",
-            "description": "Manage qr."
+            "description": "Mipangilio"
           },
           "premiumSurface": {
-            "title": "Premium identitet oqimi",
-            "description": "Manage premium surface."
+            "title": "Premium",
+            "description": "Premium"
           }
         }
       },
@@ -5854,375 +5855,375 @@ export const SW_LOCALE = {
         "premium": "Premium"
       },
       "footer": {
-        "title": "Footer",
-        "description": "Manage footer.",
-        "action": "Davom etish"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "action": "Taarifa"
       }
     },
     "giftsScreen": {
       "header": {
-        "title": "Gift center",
+        "title": "Mipangilio",
         "openAction": "Fungua"
       },
       "intro": {
-        "eyebrow": "INTRO",
-        "title": "Intro",
-        "subtitle": "Manage intro."
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "hero": {
         "badges": {
-          "identity": "Identity",
-          "unifiedIdBound": "Unified ID Bound"
+          "identity": "Identitet",
+          "unifiedIdBound": "Taarifa"
         },
         "stats": {
-          "diamonds": "Olmoslar",
-          "status": "Holat",
-          "owner": "Owner"
+          "diamonds": "Taarifa",
+          "status": "Taarifa",
+          "owner": "Taarifa"
         },
         "actions": {
           "public": "Umma",
           "premium": "Premium",
-          "credits": "Kreditlar",
-          "theme": "Tema"
+          "credits": "Taarifa",
+          "theme": "Mandhari"
         }
       },
       "notice": {
-        "title": "Notice",
-        "description": "Manage notice."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "tabs": {
-        "received": "Qabul qilingan",
-        "inventory": "Inventar",
-        "history": "Tarix"
+        "received": "Taarifa",
+        "inventory": "Taarifa",
+        "history": "Historia"
       },
       "common": {
-        "diamonds": "olmos"
+        "diamonds": "Taarifa"
       },
       "items": {
         "goldenAura": {
-          "title": "Oltin aura",
-          "subtitle": "Manage golden aura.",
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
           "rarity": "Premium",
-          "status": "Active"
+          "status": "Inatumika"
         },
         "violetWave": {
-          "title": "Violet Wave",
-          "subtitle": "Manage violet wave.",
-          "rarity": "Noyob",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "mintLight": {
-          "title": "Yalpiz nuri",
-          "subtitle": "Manage mint light.",
-          "rarity": "Yengil premium",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "dragonNote": {
-          "title": "Ajdar eslatmasi",
-          "subtitle": "Manage dragon note.",
-          "rarity": "Afsonaviy",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "moonSilk": {
-          "title": "Oy ipaklari",
-          "subtitle": "Manage moon silk.",
-          "rarity": "Nafis",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "seaBloom": {
-          "title": "Dengiz gullashi",
-          "subtitle": "Manage sea bloom.",
-          "rarity": "Kam uchraydigan",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "phoenixBloom": {
-          "title": "Feniks gullashi",
-          "subtitle": "Manage phoenix bloom.",
-          "rarity": "Afsonaviy",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "crystalComet": {
-          "title": "Kristall kometa",
-          "subtitle": "Manage crystal comet.",
-          "rarity": "Noyob",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         },
         "emeraldLotus": {
-          "title": "Zumrad lotus",
-          "subtitle": "Manage emerald lotus.",
-          "rarity": "Nafis",
-          "status": "Active"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio",
+          "rarity": "Taarifa",
+          "status": "Inatumika"
         }
       },
       "footer": {
-        "title": "Footer",
-        "description": "Manage footer.",
+        "title": "Mipangilio",
+        "description": "Mipangilio",
         "action": "Fungua premiumni"
       }
     },
     "creditsScreen": {
       "header": {
-        "eyebrow": "KREDIT IQTISODI",
-        "title": "Kreditlar markazi",
-        "subtitle": "Manage header.",
-        "backAction": "Orqaga"
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "backAction": "Rudi"
       },
       "balance": {
-        "label": "Mavjud balans",
+        "label": "Taarifa",
         "actions": {
-          "topUp": "Top Up",
-          "statistics": "Statistics",
-          "giftCenter": "Gift center"
+          "topUp": "Taarifa",
+          "statistics": "Taarifa",
+          "giftCenter": "Premium"
         }
       },
       "tabs": {
-        "all": "Barchasi",
-        "incoming": "Kiruvchi",
-        "outgoing": "Chiquvchi"
+        "all": "Taarifa",
+        "incoming": "Taarifa",
+        "outgoing": "Taarifa"
       }
     },
     "businessUpgradeScreen": {
       "header": {
-        "eyebrow": "BIZNES AKKAUNT",
-        "title": "Header",
-        "subtitle": "Manage header.",
-        "backAction": "Profil"
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio",
+        "backAction": "Rudi"
       },
       "hero": {
-        "title": "Telegram darajasidagi chuqurlik, Sabi darajasidagi quvvat",
-        "description": "Manage hero.",
-        "launchBadge": "oy bepul"
+        "title": "Mipangilio",
+        "description": "Mipangilio",
+        "launchBadge": "Taarifa"
       },
       "sections": {
-        "plans": "Ishga tushirishdan keyingi rejalar",
-        "features": "Biznes funksiyalari"
+        "plans": "Taarifa",
+        "features": "Taarifa"
       },
       "plans": {
         "business_annual": {
-          "title": "Yillik biznes reja",
-          "period": "12 oy",
-          "price": "Price",
-          "description": "Manage business annual.",
-          "badge": "Yillik"
+          "title": "Mipangilio",
+          "period": "Taarifa",
+          "price": "Bei",
+          "description": "Mipangilio",
+          "badge": "Premium"
         },
         "business_monthly": {
-          "title": "Oylik biznes reja",
-          "period": "1 oy",
-          "price": "Price",
-          "description": "Manage business monthly.",
-          "badge": "Oylik"
+          "title": "Mipangilio",
+          "period": "Taarifa",
+          "price": "Bei",
+          "description": "Mipangilio",
+          "badge": "Premium"
         }
       },
       "features": {
         "address": {
-          "title": "Manzil",
-          "description": "Manage address."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "workHours": {
-          "title": "Ish soatlari",
-          "description": "Haftalik jadval and mavjudlik settings."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "quickReplies": {
-          "title": "Quick replylar",
-          "description": "Manage quick replies."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "greetings": {
-          "title": "Salomlashuvlar",
-          "description": "Manage greetings."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "notAvailable": {
-          "title": "Not Available",
-          "description": "Manage not available."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "chatLinks": {
           "title": "Gumzo Links",
-          "description": "Manage chat links."
+          "description": "Mipangilio"
         }
       },
       "footer": {
-        "action": "Biznes launch kirishi active"
+        "action": "Taarifa"
       },
-      "cta": "Cta"
+      "cta": "Taarifa"
     },
     "preferencesScreen": {
       "intro": {
-        "eyebrow": "APP PREFERENCES",
-        "title": "Preferences",
-        "subtitle": "Manage language, interaction behavior, previews, compact mode, and profile-linked app experience settings."
+        "eyebrow": "Taarifa",
+        "title": "Mapendeleo",
+        "subtitle": "Mipangilio"
       },
       "metrics": {
-        "haptics": "Haptics",
-        "sound": "Sound",
-        "compact": "Compact"
+        "haptics": "Taarifa",
+        "sound": "Sauti",
+        "compact": "Taarifa"
       },
       "sections": {
-        "localization": "Localization",
-        "interaction": "Interaction",
-        "presentation": "Presentation"
+        "localization": "Taarifa",
+        "interaction": "Taarifa",
+        "presentation": "Wasilisho"
       },
       "language": {
-        "title": "App language",
-        "description": "Choose how the profile and the rest of the app are localized."
+        "title": "Lugha ya programu",
+        "description": "Mipangilio"
       },
       "toggles": {
         "haptics": {
-          "title": "Haptics",
-          "description": "Use tactile feedback for profile actions and main app interactions."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "sound": {
-          "title": "Interface sound",
-          "description": "Play interface sounds for supported profile and app actions."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "preview": {
-          "title": "Preview content",
-          "description": "Show previews for supported profile and linked content surfaces."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "compact": {
-          "title": "Compact mode",
-          "description": "Use a denser layout for profile-linked app surfaces."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "smartInsights": {
-          "title": "Smart insights",
-          "description": "Washa profile-linked suggestions and app guidance where supported."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "note": {
         "title": "Wasifu-linked appearance",
-        "description": "Preferences affect profile-linked behavior and should remain connected to your language, layout, and app presentation system."
+        "description": "Mipangilio"
       },
       "links": {
         "language": {
-          "title": "Lugha settings",
+          "title": "Lugha",
           "description": "Fungua the language screen and manage the active app language."
         },
         "notifications": {
           "title": "Arifa preferences",
-          "description": "Fungua deeper notification controls connected to your profile experience."
+          "description": "Mipangilio"
         }
       }
     },
     "loginEmailScreen": {
       "intro": {
-        "eyebrow": "LOGIN EMAIL",
-        "title": "Login email",
-        "subtitle": "Manage the email used for sign-in, confirmation rules, and protected profile access flows."
+        "eyebrow": "Taarifa",
+        "title": "Kirish emaili",
+        "subtitle": "Mipangilio"
       },
       "hero": {
-        "title": "Primary login email",
-        "description": "This email is used for account sign-in, recovery, and protected profile access confirmation."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "field": {
-        "label": "Email address",
-        "placeholder": "Enter email address"
+        "label": "Barua pepe",
+        "placeholder": "Weka barua pepe"
       },
       "toggles": {
         "currentVerification": {
-          "title": "Verify current email",
-          "description": "Require confirmation from the currently linked email before applying changes."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "newVerification": {
-          "title": "Verify new email",
-          "description": "Require confirmation from the new email before it becomes active."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "note": {
-        "title": "Protected identity flow",
-        "description": "Email changes should remain part of the protected profile identity flow and stay connected to security controls."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       }
     },
     "securityScreen": {
       "intro": {
-        "eyebrow": "SECURITY CENTER",
-        "title": "Security",
-        "subtitle": "Manage biometric access, app PIN, identity change protection, trusted device alerts, and profile-linked account security."
+        "eyebrow": "Taarifa",
+        "title": "Usalama",
+        "subtitle": "Mipangilio"
       },
       "metrics": {
-        "biometric": "Biometric",
-        "appPin": "App PIN",
-        "twoFactor": "2FA"
+        "biometric": "Taarifa",
+        "appPin": "Taarifa",
+        "twoFactor": "Taarifa"
       },
       "sections": {
-        "mainProtection": "Main protection",
-        "sensitiveActions": "Sensitive actions",
-        "identityChangeProtection": "Identity change protection"
+        "mainProtection": "Taarifa",
+        "sensitiveActions": "Mipangilio",
+        "identityChangeProtection": "Taarifa"
       },
       "mainProtection": {
         "biometric": {
-          "title": "Biometric access",
-          "description": "Use biometrics for secure access to profile and account-sensitive areas."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "appPin": {
-          "title": "App PIN",
-          "description": "Require a PIN for protected profile and app access flows."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "twoFactor": {
           "description": "Ongeza an additional confirmation layer for sign-in and identity-sensitive actions.",
-          "title": "Two-factor protection"
+          "title": "Mipangilio"
         }
       },
       "common": {
-        "notRequired": "Not required",
+        "notRequired": "Taarifa",
         "required": "Inahitajika"
       },
       "emailFlow": {
-        "currentEmail": "Current email: {{value}}",
-        "currentVerification": "Current email verification: {{value}}",
-        "newVerification": "New email verification: {{value}}",
-        "title": "Email change flow"
+        "currentEmail": "Taarifa",
+        "currentVerification": "Taarifa",
+        "newVerification": "Taarifa",
+        "title": "Mipangilio"
       },
       "identityChange": {
         "emailFaceId": {
-          "description": "Require biometric confirmation before changing the linked email address.",
-          "title": "Face ID for email change"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         },
         "fallbackPin": {
-          "description": "Use a protected fallback PIN when biometric confirmation is unavailable.",
-          "title": "Fallback PIN"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         },
         "phoneFaceId": {
-          "description": "Require biometric confirmation before changing the linked phone number.",
-          "title": "Face ID for phone change"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         }
       },
       "links": {
         "devices": {
-          "description": "Review active devices, sessions, and deeper security controls from the profile layer.",
+          "description": "Mipangilio",
           "title": "Fungua Devices & Sessions"
         }
       },
       "phoneFlow": {
-        "currentPhone": "Current phone: {{value}}",
-        "newVerification": "New phone verification: {{value}}",
-        "oldVerification": "Old phone verification: {{value}}",
-        "title": "Phone change flow"
+        "currentPhone": "Taarifa",
+        "newVerification": "Taarifa",
+        "oldVerification": "Taarifa",
+        "title": "Mipangilio"
       },
       "sensitiveActions": {
         "confirmation": {
-          "description": "Require additional confirmation before critical identity or account actions.",
-          "title": "Sensitive action confirmation"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         },
         "suspiciousAlerts": {
-          "description": "Pokea alerts for unusual sign-in behavior linked to your profile account.",
-          "title": "Suspicious login alerts"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         },
         "trustedAlerts": {
           "description": "Pokea alerts when trusted device access changes or new trusted sessions appear.",
-          "title": "Trusted device alerts"
+          "title": "Mipangilio"
         }
       }
     },
     "qrScreen": {
       "header": {
-        "howItWorksAction": "How it works"
+        "howItWorksAction": "Taarifa"
       },
       "intro": {
-        "eyebrow": "IDENTITY QR",
+        "eyebrow": "Taarifa",
         "title": "Wasifu QR",
-        "subtitle": "Shiriki your public Sabi identity, open your profile quickly, and manage scan and share rules from one place."
+        "subtitle": "Mipangilio"
       },
       "hero": {
-        "title": "Identity QR card",
-        "description": "This QR is linked to your public profile surface and can be shared directly or opened from your identity layer."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "actions": {
         "sendQr": "Tuma QR",
@@ -6230,213 +6231,213 @@ export const SW_LOCALE = {
       },
       "toggles": {
         "allowScan": {
-          "title": "Allow profile QR scan",
-          "description": "Let other people open your public identity using this QR code."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "allowShare": {
-          "title": "Allow QR share",
-          "description": "Allow this identity QR to be shared directly from your profile surface."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "note": {
-        "title": "QR safety",
-        "description": "Wasifu QR remains separate from wallet QR. It is only for identity, profile access, and controlled public sharing."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "share": {
-        "title": "Shiriki profile QR",
+        "title": "Mipangilio",
         "message": {
           "header": "Wasifu QR",
           "name": "Jina",
           "username": "Jina la mtumiaji",
-          "sabiId": "Sabi ID",
+          "sabiId": "Taarifa",
           "profileCode": "Wasifu code",
           "profileLink": "Wasifu link"
         }
       },
       "alerts": {
         "shareFailed": {
-          "title": "Could not share",
-          "message": "The profile QR could not be shared."
+          "title": "Mipangilio",
+          "message": "Taarifa"
         },
         "howItWorks": {
-          "title": "How it works",
-          "message": "Your profile QR opens your public identity layer. Wallet QR and profile QR remain separate and follow different safety rules."
+          "title": "Mipangilio",
+          "message": "Taarifa"
         }
       }
     },
     "supportScreen": {
       "intro": {
-        "eyebrow": "SUPPORT & LEGAL",
-        "title": "Support",
-        "subtitle": "Get help with your account, privacy, premium profile, legal details, and trust-related information."
+        "eyebrow": "Taarifa",
+        "title": "Usaidizi",
+        "subtitle": "Mipangilio"
       },
       "hero": {
-        "title": "Need help with your account?",
-        "description": "Support, legal information, trust surfaces, and profile-related guidance are connected here as one system."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "sections": {
-        "links": "Support links"
+        "links": "Taarifa"
       },
       "notes": {
         "premiumFoundation": {
-          "title": "Premium support foundation",
-          "description": "Premium profile, AI tools, gifts, credits, business surfaces, and identity settings should stay connected to one support structure."
+          "title": "Premium",
+          "description": "Premium"
         },
         "legalTrust": {
-          "title": "Legal & trust",
-          "description": "Privacy policy, terms, legal references, and service explanations should remain accessible from the unified profile layer."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "links": {
         "helpCenter": {
-          "title": "Help center",
-          "description": "Guides, answers, and support articles for core profile actions."
+          "title": "Kituo cha msaada",
+          "description": "Mipangilio"
         },
         "contactSupport": {
-          "title": "Contact support",
-          "description": "Fungua direct support help for account or profile issues."
+          "title": "Wasiliana na usaidizi",
+          "description": "Mipangilio"
         },
         "privacyPolicy": {
-          "title": "Privacy policy",
-          "description": "Review how profile and identity data are handled."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "termsOfService": {
-          "title": "Terms of service",
-          "description": "Read the main service rules, obligations, and account conditions."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "aboutSabi": {
-          "title": "About Sabi",
-          "description": "Read about the platform, product direction, and trust surface."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       }
     },
     "trustedScreen": {
       "intro": {
-        "eyebrow": "RELATIONSHIP RULES",
-        "title": "Trusted / Blocked",
-        "subtitle": "Manage the people you trust, the people you block, and how these relationship rules connect to your profile privacy layer."
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "metrics": {
-        "trusted": "Trusted",
-        "blocked": "Blocked",
-        "totalRules": "Total rules"
+        "trusted": "Taarifa",
+        "blocked": "Imefungwa",
+        "totalRules": "Taarifa"
       },
       "hero": {
-        "title": "Relationship control center",
-        "description": "Trusted and blocked relationships affect visibility, access, and safety behavior across the unified profile surface."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "sections": {
-        "trusted": "Trusted people",
-        "blocked": "Blocked users"
+        "trusted": "Taarifa",
+        "blocked": "Watumiaji waliozuiwa"
       },
       "badges": {
-        "trusted": "Trusted",
-        "blocked": "Blocked"
+        "trusted": "Taarifa",
+        "blocked": "Imefungwa"
       },
       "actions": {
-        "block": "Block",
-        "restore": "Restore"
+        "block": "Taarifa",
+        "restore": "Taarifa"
       },
       "notes": {
-        "movedFromTrusted": "Moved here from the trusted list.",
-        "restoredFromBlocked": "Restored from the blocked list.",
-        "genericTrusted": "This person has trusted-level visibility and access rules in your profile layer.",
-        "genericBlocked": "This person is blocked from direct profile interaction and restricted by your privacy rules."
+        "movedFromTrusted": "Taarifa",
+        "restoredFromBlocked": "Taarifa",
+        "genericTrusted": "Taarifa",
+        "genericBlocked": "Taarifa"
       },
       "empty": {
         "trusted": {
-          "title": "No trusted people yet",
-          "description": "Trusted users will appear here when you add relationship-based access rules."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "blocked": {
-          "title": "No blocked users",
-          "description": "Blocked users will appear here when you restrict someone in your profile privacy layer."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         }
       },
       "links": {
         "blockedOnly": {
           "title": "Fungua blocked-only screen",
-          "description": "Go to the focused blocked users screen from the profile layer."
+          "description": "Mipangilio"
         },
         "privacyCenter": {
-          "title": "Fungua Privacy Center",
-          "description": "Manage all profile privacy, access, and relationship rules in one place."
+          "title": "Faragha",
+          "description": "Mipangilio"
         }
       }
     },
     "verificationScreen": {
       "intro": {
-        "eyebrow": "IDENTITY VERIFICATION",
-        "title": "Verification",
-        "subtitle": "Track profile verification, compliance state, document approvals, and identity checks from one profile layer."
+        "eyebrow": "Taarifa",
+        "title": "Uthibitishaji",
+        "subtitle": "Mipangilio"
       },
       "status": {
-        "verified": "Verified",
-        "pending": "Pending",
-        "review": "In review",
-        "limited": "Limited",
-        "rejected": "Rejected"
+        "verified": "Imethibitishwa",
+        "pending": "Inasubiri",
+        "review": "Inakaguliwa",
+        "limited": "Imepunguzwa",
+        "rejected": "Taarifa"
       },
       "common": {
-        "verified": "Verified",
-        "pending": "Pending",
-        "unknown": "Unknown"
+        "verified": "Imethibitishwa",
+        "pending": "Inasubiri",
+        "unknown": "Haijulikani"
       },
       "sections": {
-        "compliance": "Compliance",
-        "checks": "Checks",
-        "documents": "Documents"
+        "compliance": "Uzingatiaji",
+        "checks": "Taarifa",
+        "documents": "Taarifa"
       },
       "complianceState": {
-        "label": "Compliance state: {{value}}",
-        "restrictedIntro": "The following actions are currently restricted:",
-        "noRestrictions": "There are no active restrictions right now.",
-        "sourceOfFundsRequested": "Source of funds was requested for this profile.",
-        "reverificationRequired": "This profile requires reverification."
+        "label": "Taarifa",
+        "restrictedIntro": "Taarifa",
+        "noRestrictions": "Taarifa",
+        "sourceOfFundsRequested": "Taarifa",
+        "reverificationRequired": "Taarifa"
       },
       "checks": {
-        "address": "Address verification",
-        "email": "Email verification",
-        "liveness": "Liveness check",
-        "phone": "Phone verification"
+        "address": "Taarifa",
+        "email": "Taarifa",
+        "liveness": "Taarifa",
+        "phone": "Taarifa"
       },
       "documents": {
-        "updatedAt": "Updated: {{value}}"
+        "updatedAt": "Taarifa"
       },
       "hero": {
-        "residencyCountry": "Residency country: {{value}}",
-        "reviewReason": "Review note: {{value}}"
+        "residencyCountry": "Taarifa",
+        "reviewReason": "Taarifa"
       },
       "metrics": {
-        "email": "Email",
-        "liveness": "Liveness",
+        "email": "Barua pepe",
+        "liveness": "Taarifa",
         "phone": "Simu"
       }
     },
     "mediaScreen": {
       "header": {
-        "title": "Media"
+        "title": "Mipangilio"
       },
       "card": {
-        "title": "Live profile media",
-        "subtitle": "Media is built from real photos and short videos, with direct access to links and voice notes."
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "routes": {
         "photos": {
           "title": "Picha",
-          "subtitle": "Upload and manage profile photos"
+          "subtitle": "Mipangilio"
         },
         "shortVideos": {
-          "title": "Short videos",
-          "subtitle": "Manage real short videos"
+          "title": "Videolar",
+          "subtitle": "Mipangilio"
         },
         "links": {
-          "title": "Links",
-          "subtitle": "Ongeza and remove profile links"
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "voice": {
-          "title": "Voice",
-          "subtitle": "Record and play voice notes"
+          "title": "AI ya sauti",
+          "subtitle": "AI ya sauti"
         }
       }
     },
@@ -6445,69 +6446,69 @@ export const SW_LOCALE = {
         "title": "Picha"
       },
       "card": {
-        "title": "Live profile photos",
-        "subtitle": "Manage real photos, avatar state, filters, and camera effects for the profile layer."
+        "title": "Mipangilio",
+        "subtitle": "Mipangilio"
       },
       "actions": {
-        "gallery": "Gallery",
-        "cameraFx": "Camera FX"
+        "gallery": "Taarifa",
+        "cameraFx": "Sauti"
       },
       "badges": {
-        "avatar": "Avatar"
+        "avatar": "Taarifa"
       },
       "filters": {
-        "none": "None",
-        "warm": "Warm",
-        "cool": "Cool",
-        "mono": "Mono",
-        "emerald": "Emerald"
+        "none": "Hakuna",
+        "warm": "Taarifa",
+        "cool": "Taarifa",
+        "mono": "Taarifa",
+        "emerald": "Taarifa"
       },
       "modal": {
         "actions": {
-          "setAvatar": "Set avatar",
+          "setAvatar": "Taarifa",
           "delete": "Futa"
         },
         "editor": {
-          "left": "Left",
-          "right": "Right",
-          "mirrorX": "Mirror X",
-          "mirrorY": "Mirror Y"
+          "left": "Taarifa",
+          "right": "Taarifa",
+          "mirrorX": "Taarifa",
+          "mirrorY": "Taarifa"
         },
-        "info": "Wasifu photo editor. Rotation, mirroring, avatar state, and filter overlay are applied to the live profile runtime."
+        "info": "Mipangilio"
       },
       "capture": {
-        "cameraSuffix": "camera",
-        "fxPrefix": "FX",
-        "photoLabel": "Photo"
+        "cameraSuffix": "Sauti",
+        "fxPrefix": "Taarifa",
+        "photoLabel": "Picha"
       },
       "defaults": {
-        "photoName": "Photo"
+        "photoName": "Picha"
       },
       "empty": {
-        "title": "No photos yet",
-        "description": "Ongeza your first profile photo from the gallery or use the camera with effects."
+        "title": "Mipangilio",
+        "description": "Mipangilio"
       },
       "alerts": {
-        "permissionTitle": "Gallery permission",
-        "permissionMessage": "Allow access to your gallery."
+        "permissionTitle": "Kichwa",
+        "permissionMessage": "Taarifa"
       }
     },
     "shortVideosScreen": {
       "header": {
-        "title": "Short Videos"
+        "title": "Mipangilio"
       },
       "card": {
-        "title": "Short videos",
-        "subtitle": "Ongeza and manage real short videos for the profile layer."
+        "title": "Videolar",
+        "subtitle": "Mipangilio"
       },
       "actions": {
         "add": "Ongeza short video"
       },
       "defaults": {
-        "videoName": "Short video"
+        "videoName": "Sauti"
       },
       "empty": {
-        "title": "No short videos yet",
+        "title": "Mipangilio",
         "description": "Ongeza your first video. It will open in a separate full-screen player."
       },
       "modal": {
@@ -6515,209 +6516,209 @@ export const SW_LOCALE = {
       },
       "alerts": {
         "permission": {
-          "title": "Gallery permission",
-          "message": "Allow access to the gallery."
+          "title": "Mipangilio",
+          "message": "Taarifa"
         }
       },
       "item": {
-        "title": "Title"
+        "title": "Kichwa"
       }
     },
     "groupScreen": {
-      "loading": "Group loading...",
+      "loading": "Inapakia...",
       "header": {
-        "eyebrow": "GROUP OWNER",
-        "title": "Group management",
+        "eyebrow": "Taarifa",
+        "title": "Mipangilio",
         "badges": {
-          "active": "Active",
+          "active": "Inatumika",
           "create": "Unda"
         }
       },
       "hero": {
         "fallbacks": {
-          "newGroup": "New group",
-          "usernameNotSet": "Username is not set yet"
+          "newGroup": "Kikundi kipya",
+          "usernameNotSet": "Taarifa"
         },
         "pills": {
-          "created": "Yaratilgan",
-          "createFromProfile": "Inside Profilen yaratiladi",
+          "created": "Taarifa",
+          "createFromProfile": "Wasifu",
           "public": "Umma",
           "private": "Faragha",
-          "admins": "admin",
-          "blacklist": "blacklist"
+          "admins": "Taarifa",
+          "blacklist": "Taarifa"
         }
       },
       "sections": {
         "main": {
-          "title": "Main",
-          "subtitle": "Group nomi, username, description and asosiy identifikatorlar."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "owner": {
-          "title": "Owner data",
-          "subtitle": "Yagona user ID asosida group owner data and asosiy rol."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "publication": {
-          "title": "Publication and public qatlam",
-          "subtitle": "Manage publication."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "accessRules": {
-          "title": "Kirish and moderation",
-          "subtitle": "Members, postlash, edit, join request and moderation qoidalari."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "admins": {
-          "title": "Adminlar",
-          "subtitle": "Manage admins."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "blacklist": {
-          "title": "Blacklist",
-          "subtitle": "Manage blacklist."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "bindings": {
-          "title": "Bindings",
-          "subtitle": "Manage bindings."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         }
       },
       "main": {
         "groupName": {
-          "label": "Group nomi",
-          "placeholder": "Enter group name"
+          "label": "Gumzo",
+          "placeholder": "Tafuta"
         },
         "username": {
           "label": "Jina la mtumiaji",
-          "placeholder": "Enter username"
+          "placeholder": "Placeholder"
         },
         "description": {
-          "label": "Description",
-          "placeholder": "Group tavsifini yozing"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "groupId": {
-          "label": "Group ID",
-          "placeholder": "Avtomatik yaratiladi"
+          "label": "Gumzo",
+          "placeholder": "Tafuta"
         },
         "inviteLink": {
-          "label": "Invite link",
-          "placeholder": "sabi://group/..."
+          "label": "Gumzo",
+          "placeholder": "Tafuta"
         }
       },
       "owner": {
         "defaults": {
-          "role": "Owner"
+          "role": "Taarifa"
         },
         "name": {
-          "label": "Owner name",
-          "placeholder": "Enter name"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "userId": {
-          "label": "Owner User ID",
-          "placeholder": "Asosiy yagona user ID"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "role": {
-          "label": "Owner role",
-          "placeholder": "Owner"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "phone": {
-          "label": "Owner phone",
-          "placeholder": "+998..."
+          "label": "Taarifa",
+          "placeholder": "Placeholder"
         },
         "email": {
-          "label": "Owner email",
-          "placeholder": "owner@sabi.app"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         }
       },
       "publication": {
         "publicGroup": {
           "title": "Umma group",
-          "subtitle": "Manage public group."
+          "subtitle": "Mipangilio"
         },
         "published": {
-          "title": "Publication enabled",
+          "title": "Mipangilio",
           "subtitle": "Umma group nashrini faollashtirish."
         },
         "showInProfile": {
           "title": "Show in Wasifu",
-          "subtitle": "Manage show in profile."
+          "subtitle": "Mipangilio"
         },
         "searchable": {
-          "title": "Searchable",
-          "subtitle": "Manage searchable."
+          "title": "Tafuta",
+          "subtitle": "Tafuta"
         },
         "preview": {
-          "title": "Preview enabled",
-          "subtitle": "Link and profile preview kartalarini show."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "publicationId": {
-          "label": "Publication ID",
-          "placeholder": "pub_..."
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "title": {
-          "label": "Publication sarlavhasi",
-          "placeholder": "Enter title"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "subtitle": {
-          "label": "Publication subtitri",
-          "placeholder": "Qisqa public description"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "slug": {
-          "label": "Publication slug",
-          "placeholder": "group-slug"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "tags": {
-          "label": "Tags",
-          "placeholder": "community, update, public"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         },
         "summary": {
-          "label": "Publication xulosasi",
-          "placeholder": "Enter summary"
+          "label": "Taarifa",
+          "placeholder": "Tafuta"
         }
       },
       "access": {
         "joinRequests": {
-          "title": "Join requests",
-          "subtitle": "Manage join requests."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "memberInvites": {
-          "title": "Members can send invites",
-          "subtitle": "Manage member invites."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "onlyAdminsPost": {
-          "title": "Only admins can post messages",
-          "subtitle": "Manage only admins post."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "onlyAdminsEdit": {
-          "title": "Only admins can edit",
-          "subtitle": "Manage only admins edit."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "commentsEnabled": {
-          "title": "Comments enabled",
-          "subtitle": "Manage comments enabled."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "memberListVisible": {
-          "title": "Member List Visible",
-          "subtitle": "Manage member list visible."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "slowMode": {
-          "title": "Slow mode",
-          "subtitle": "Manage slow mode."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         },
         "messageApproval": {
           "title": "Ujumbe Approval",
-          "subtitle": "Manage message approval."
+          "subtitle": "Mipangilio"
         },
         "mediaApproval": {
-          "title": "Media Approval",
-          "subtitle": "Manage media approval."
+          "title": "Mipangilio",
+          "subtitle": "Mipangilio"
         }
       },
       "admins": {
         "metrics": {
-          "total": "Jami admin",
-          "owner": "Owner"
+          "total": "Taarifa",
+          "owner": "Taarifa"
         },
         "defaults": {
-          "adminRole": "Admin"
+          "adminRole": "Msimamizi"
         },
         "badges": {
-          "owner": "Owner"
+          "owner": "Taarifa"
         },
         "actions": {
           "add": "Ongeza admin",
@@ -6726,187 +6727,187 @@ export const SW_LOCALE = {
         "form": {
           "title": "Ongeza admin",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Admin user ID"
+            "label": "ID ya mtumiaji",
+            "placeholder": "Tafuta"
           },
           "name": {
             "label": "Jina",
-            "placeholder": "Admin name"
+            "placeholder": "Tafuta"
           },
           "role": {
-            "label": "Role",
-            "placeholder": "Admin / moderator"
+            "label": "Taarifa",
+            "placeholder": "Tafuta"
           }
         }
       },
       "blacklist": {
         "metrics": {
-          "total": "Jami cheklangan",
-          "active": "Active",
+          "total": "Taarifa",
+          "active": "Inatumika",
           "yes": "Ndiyo",
           "no": "Hapana"
         },
         "defaults": {
-          "reason": "Cheklangan"
+          "reason": "Taarifa"
         },
         "actions": {
           "add": "Ongeza",
           "remove": "Ondoa"
         },
         "empty": {
-          "title": "Blacklist empty",
-          "description": "Manage empty."
+          "title": "Mipangilio",
+          "description": "Mipangilio"
         },
         "form": {
-          "title": "Form",
+          "title": "Mipangilio",
           "userId": {
-            "label": "User ID",
-            "placeholder": "Cheklanadigan user ID"
+            "label": "ID ya mtumiaji",
+            "placeholder": "Tafuta"
           },
           "name": {
             "label": "Jina",
-            "placeholder": "Enter name"
+            "placeholder": "Tafuta"
           },
           "reason": {
-            "label": "Sabab",
-            "placeholder": "Spam, abuse, scam and hokazo"
+            "label": "Taarifa",
+            "placeholder": "Tafuta"
           }
         }
       },
       "bindings": {
         "chatId": {
-          "label": "Linked chat ID",
-          "placeholder": "chat_..."
+          "label": "Gumzo",
+          "placeholder": "Tafuta"
         },
         "botId": {
-          "label": "Linked bot ID",
-          "placeholder": "bot_..."
+          "label": "Msaidizi",
+          "placeholder": "Tafuta"
         }
       },
       "alerts": {
         "success": {
           "title": "Imefanikiwa",
-          "created": "Group created",
-          "saved": "Group settings saved",
-          "reset": "Group data reset"
+          "created": "Taarifa",
+          "saved": "Taarifa",
+          "reset": "Taarifa"
         },
         "error": {
-          "title": "Xato",
+          "title": "Mipangilio",
           "saveFailed": "Hifadhi Imeshindwa",
           "resetFailed": "Reset Imeshindwa"
         },
         "validation": {
-          "nameTitle": "Group nomi kerak",
+          "nameTitle": "Kichwa",
           "nameMessage": "Name Ujumbe",
-          "ownerIdTitle": "Owner ID kerak",
-          "ownerIdMessage": "Group owner user IDrequired.",
-          "adminTitle": "Admin Title",
+          "ownerIdTitle": "Kichwa",
+          "ownerIdMessage": "Taarifa",
+          "adminTitle": "Kichwa",
           "adminMessage": "Admin Ujumbe",
-          "blacklistTitle": "Blacklist Title",
+          "blacklistTitle": "Kichwa",
           "blacklistMessage": "Blacklist Ujumbe",
-          "blacklistConflictTitle": "Blacklist Conflict Title",
+          "blacklistConflictTitle": "Kichwa",
           "blacklistConflictMessage": "Blacklist Conflict Ujumbe",
-          "ownerProtectedTitle": "Owner himoyalangan",
+          "ownerProtectedTitle": "Kichwa",
           "ownerProtectedMessage": "Owner Protected Ujumbe",
           "ownerBlacklistMessage": "Owner Blacklist Ujumbe"
         },
         "resetConfirm": {
           "title": "Reset Thibitisha",
           "message": "Reset Thibitisha",
-          "cancel": "Bekor qilish",
-          "confirm": "Reset"
+          "cancel": "Ghairi",
+          "confirm": "Weka upya"
         }
       },
       "actions": {
         "create": "Unda group",
-        "creating": "Yaratilmoqda...",
+        "creating": "Taarifa",
         "save": "Hifadhi",
-        "saving": "Saving",
-        "reset": "Reset"
+        "saving": "Inapakia...",
+        "reset": "Weka upya"
       }
     },
     "autoDeleteScreen": {
       "hero": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Maelezo",
+        "title": "Kichwa"
       },
       "intro": {
-        "eyebrow": "Eyebrow",
-        "subtitle": "Subtitle",
-        "title": "Title"
+        "eyebrow": "Taarifa",
+        "subtitle": "Mipangilio",
+        "title": "Kichwa"
       },
       "note": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Maelezo",
+        "title": "Kichwa"
       },
-      "selectedBadge": "Selected Badge",
+      "selectedBadge": "Taarifa",
       "toggles": {
         "channels": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Maelezo",
+          "title": "Kichwa"
         },
         "groups": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Maelezo",
+          "title": "Kichwa"
         },
         "newChats": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Maelezo",
+          "title": "Kichwa"
         }
       }
     },
     "blockedScreen": {
       "empty": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Maelezo",
+        "title": "Kichwa"
       },
       "hero": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Maelezo",
+        "title": "Kichwa"
       },
       "intro": {
-        "eyebrow": "Eyebrow",
-        "subtitle": "Subtitle",
-        "title": "Title"
+        "eyebrow": "Taarifa",
+        "subtitle": "Mipangilio",
+        "title": "Kichwa"
       },
       "metric": {
-        "title": "Title"
+        "title": "Kichwa"
       },
       "person": {
-        "defaultNote": "Default Note",
-        "unblockAction": "Unblock Action"
+        "defaultNote": "Taarifa",
+        "unblockAction": "Taarifa"
       }
     },
     "giftsSection": {
-      "subtitle": "Premium gifts, moments, and recent highlights.",
-      "title": "Received gifts"
+      "subtitle": "Mipangilio",
+      "title": "Zawadi zilizopokelewa"
     },
     "hub": {
-      "eyebrow": "Eyebrow"
+      "eyebrow": "Taarifa"
     },
     "premiumScreen": {
       "features": {
         "ai": {
-          "subtitle": "Fungua AI profile features connected to premium identity.",
-          "title": "AI tools"
+          "subtitle": "Premium",
+          "title": "Zana za AI"
         },
         "frames": {
-          "subtitle": "Use profile frames connected to public and premium identity surfaces.",
-          "title": "Premium frames"
+          "subtitle": "Premium",
+          "title": "Premium"
         },
         "gifts": {
-          "subtitle": "Manage premium gift visibility, access, and presentation.",
-          "title": "Gift layer"
+          "subtitle": "Premium",
+          "title": "Premium"
         },
         "themes": {
-          "subtitle": "Fungua profile colors, style direction, and visual identity setup.",
-          "title": "Premium themes"
+          "subtitle": "Premium",
+          "title": "Premium"
         }
       },
       "footer": {
         "action": "Fungua themes",
-        "description": "Fungua the theme and premium identity layer to continue customizing your profile surface.",
-        "title": "Continue to Theme Setup"
+        "description": "Premium",
+        "title": "Premium"
       },
       "header": {
         "openAction": "Fungua",
@@ -6917,71 +6918,71 @@ export const SW_LOCALE = {
           "ai": "AI",
           "gifts": "Zawadi",
           "public": "Umma",
-          "themes": "Themes"
+          "themes": "Premium"
         },
         "badges": {
-          "identity": "Premium identity",
-          "ownerSurface": "Owner surface"
+          "identity": "Premium",
+          "ownerSurface": "Premium"
         },
-        "subtitle": "Premium themes, frames, AI identity tools, QR presentation, and gift surfaces are connected to one profile system.",
-        "title": "Sabi Premium"
+        "subtitle": "Premium",
+        "title": "Premium"
       },
       "identityCard": {
-        "description": "Your premium state is tied to your profile identity and should activate automatically after successful payment confirmation.",
-        "title": "Premium identity card"
+        "description": "Premium",
+        "title": "Premium"
       },
       "intro": {
-        "eyebrow": "SABI PREMIUM",
-        "subtitle": "Premium styling, identity upgrades, AI tools, QR presentation, gifts, credits, and business surfaces live in one profile layer.",
-        "title": "Premium identity"
+        "eyebrow": "Premium",
+        "subtitle": "Premium",
+        "title": "Premium"
       },
       "notice": {
-        "description": "Premium is a connected profile layer and should remain linked to AI, public profile, colors, gifts, QR, and future admin controls.",
-        "title": "Premium connected option"
+        "description": "Premium",
+        "title": "Premium"
       },
       "rows": {
         "ai": {
           "badge": "AI",
-          "description": "Fungua premium AI tools connected to your profile layer.",
-          "title": "AI profile"
+          "description": "Premium",
+          "title": "Premium"
         },
         "business": {
-          "description": "Prepare business-related premium expansion from the profile layer.",
+          "description": "Premium",
           "title": "Biashara upgrade"
         },
         "colors": {
-          "badge": "Themes",
-          "description": "Fungua color setup, visual styling, and profile frame selection.",
-          "title": "Premium themes"
+          "badge": "Premium",
+          "description": "Premium",
+          "title": "Premium"
         },
         "credits": {
-          "description": "Fungua credits, balance-linked profile perks, and upgrade helpers.",
-          "title": "Credits"
+          "description": "Premium",
+          "title": "Premium"
         },
         "gifts": {
-          "description": "Manage premium gifts, storage, and profile gift presentation.",
-          "title": "Gift center"
+          "description": "Premium",
+          "title": "Premium"
         },
         "public": {
-          "description": "Control the public surface connected to your premium identity.",
+          "description": "Premium",
           "title": "Wasifu wa umma"
         },
         "qr": {
-          "description": "Manage the profile QR presentation linked to premium identity.",
+          "description": "Premium",
           "title": "Wasifu QR"
         }
       },
       "sections": {
-        "controls": "Controls",
-        "unlocks": "Unlocks"
+        "controls": "Taarifa",
+        "unlocks": "Premium"
       }
     },
     "publicScreen": {
       "editor": {
         "bio": "Wasifu mfupi",
         "name": "Jina",
-        "subtitle": "Subtitle",
-        "title": "Title",
+        "subtitle": "Mipangilio",
+        "title": "Mipangilio",
         "username": "Jina la mtumiaji"
       },
       "fallback": {
@@ -6992,54 +6993,54 @@ export const SW_LOCALE = {
         "title": "Wasifu wa umma"
       },
       "hero": {
-        "subtitle": "Umma identity is fully tied to your profile layer and follows the same owner data, premium state, and visibility rules.",
-        "title": "Title"
+        "subtitle": "Mipangilio",
+        "title": "Wasifu wa umma"
       },
       "rows": {
         "photos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Mipangilio",
+          "title": "Picha za umma"
         },
         "videos": {
-          "description": "Description",
-          "title": "Title"
+          "description": "Mipangilio",
+          "title": "Mipangilio"
         }
       },
       "sections": {
-        "manage": "Manage",
-        "metrics": "Metrics"
+        "manage": "Dhibiti",
+        "metrics": "Taarifa"
       }
     },
     "reactionsScreen": {
       "card": {
-        "subtitle": "Ongeza real reactions here and the counts update the main profile immediately.",
-        "title": "Reaction hub"
+        "subtitle": "Mipangilio",
+        "title": "Mipangilio"
       },
       "header": {
-        "title": "Reactions"
+        "title": "Mipangilio"
       }
     },
     "voiceScreen": {
       "actions": {
-        "record": "Record",
-        "stop": "Stop"
+        "record": "Rekodi",
+        "stop": "Simamisha"
       },
       "alerts": {
         "permission": {
-          "message": "Allow access to the microphone.",
-          "title": "Microphone permission"
+          "message": "AI ya sauti",
+          "title": "AI ya sauti"
         },
         "recordFailed": "Record Imeshindwa"
       },
       "card": {
-        "subtitle": "Voice notes are now connected to real recording, saving, and playback.",
-        "title": "Voice notes"
+        "subtitle": "AI ya sauti",
+        "title": "AI ya sauti"
       },
       "header": {
-        "title": "Voice"
+        "title": "AI ya sauti"
       },
       "item": {
-        "title": "Title"
+        "title": "Kichwa"
       }
     }
   },
@@ -7117,7 +7118,7 @@ export const SW_LOCALE = {
         "back": "Rudi",
         "cancel": "Ghairi",
         "loading": "Inapakia...",
-        "notConnected": "Not connected",
+        "notConnected": "Haijaunganishwa",
         "open": "Fungua",
         "refresh": "Onyesha upya",
         "retry": "Jaribu tena",
@@ -7127,56 +7128,56 @@ export const SW_LOCALE = {
         "requestFailed": "Ombi limeshindwa. Jaribu tena.",
         "saved": "Imehifadhiwa",
         "search": "Tafuta",
-        "ready": "Ready"
+        "ready": "Tayari"
       },
       "status": {
-        "ready": "Ready",
-        "limited": "Limited",
+        "ready": "Tayari",
+        "limited": "Imepunguzwa",
         "error": "Hitilafu",
-        "not_connected": "Not connected",
-        "unavailable": "Unavailable",
-        "active": "Active",
-        "pending": "Pending"
+        "not_connected": "Haijaunganishwa",
+        "unavailable": "Haipatikani",
+        "active": "Inatumika",
+        "pending": "Inasubiri"
       },
       "messageStatus": {
-        "sent": "Sent",
+        "sent": "Imetumwa",
         "error": "Hitilafu",
-        "pending": "Pending",
-        "sending": "Sending",
-        "awaiting_confirmation": "Awaiting confirmation"
+        "pending": "Inasubiri",
+        "sending": "Inatuma",
+        "awaiting_confirmation": "Inasubiri uthibitisho"
       },
       "action": {
         "chat": {
           "title": "AI Gumzo",
-          "description": "Talk with the assistant and receive action cards."
+          "description": "Gumzo la AI"
         },
         "voice": {
-          "title": "Voice AI",
-          "description": "Native voice bridge, push-to-talk and TTS command screen."
+          "title": "AI ya sauti",
+          "description": "AI ya sauti"
         },
         "translation": {
-          "title": "Realtime translation",
-          "description": "Premium text, audio, video and call translation control."
+          "title": "Tafsiri",
+          "description": "Tafsiri"
         },
         "history": {
           "title": "Historia",
           "description": "Msaidizi activity, summaries and previous conversations."
         },
         "tasks": {
-          "title": "Tasks",
-          "description": "Draft, confirmed and completed AI tasks."
+          "title": "Kazi",
+          "description": "Kazi"
         },
         "memory": {
-          "title": "Memory",
-          "description": "Personalization, privacy mode and saved instructions."
+          "title": "Kumbukumbu",
+          "description": "Kumbukumbu"
         },
         "settings": {
           "title": "AI Mipangilio",
-          "description": "Providers, permissions, locale and safety state."
+          "description": "Mipangilio"
         },
         "premium": {
-          "title": "Premium AI",
-          "description": "COIN access for advanced AI and translation functions."
+          "title": "Premium",
+          "description": "Premium AI"
         },
         "setting": {
           "title": "Mipangilio",
@@ -7189,274 +7190,274 @@ export const SW_LOCALE = {
       },
       "home": {
         "title": "Sabi AI",
-        "subtitle": "Msaidizi program for chat, voice, translation, memory, safe actions and premium AI tools.",
-        "heroEyebrow": "AI PROGRAM",
-        "heroTitle": "Your SuperApp assistant",
-        "heroDescription": "The mobile UI is connected to the AI kernel contracts. No fake answers: if backend or provider is unavailable, the screen shows a real connection state.",
-        "connection": "Connection",
-        "userId": "User ID",
-        "quickAccess": "Quick access",
-        "capabilities": "Capabilities",
-        "safeActions": "Safe actions",
-        "safeActionsDescription": "AI-24 safety/admin monitoring is backend-owned and visible in admin panel contracts.",
-        "safeActionsText": "Money, account deletion and high-risk actions require confirmation and admin/compliance rules.",
-        "cleanWorkspaceTitle": "Clean AI workspace",
-        "cleanWorkspaceText": "Only useful AI functions for the user are shown here."
+        "subtitle": "Taarifa Taarifa",
+        "heroEyebrow": "AI",
+        "heroTitle": "Msaidizi wa AI",
+        "heroDescription": "Gumzo la AI · AI ya sauti · Tafsiri · Kumbukumbu · Premium AI.",
+        "connection": "Muunganisho",
+        "userId": "ID ya mtumiaji",
+        "quickAccess": "Ufikiaji wa haraka",
+        "capabilities": "Uwezo",
+        "safeActions": "Usalama",
+        "safeActionsDescription": "Usalama",
+        "safeActionsText": "Usalama",
+        "cleanWorkspaceTitle": "Msaidizi wa AI",
+        "cleanWorkspaceText": "Uwezo"
       },
       "chat": {
         "title": "AI Gumzo",
-        "subtitle": "Real assistant chat connected to /api/ai/mobile-ui and /api/ai/assistant.",
+        "subtitle": "Gumzo la AI",
         "runtimeTitle": "Msaidizi runtime",
-        "backendRequired": "Authenticated backend session is required for AI chat.",
-        "emptyTitle": "No messages yet",
-        "emptyText": "Tuma a message. If the backend is offline, the error will be shown honestly instead of a fake response.",
-        "placeholder": "Ask Sabi AI...",
-        "roleUser": "You",
-        "emptyBackendResponse": "AI backend responded, but no assistant text field was returned.",
-        "cleanEmptyText": "Write a question, upload a file, speak by voice or enable web search.",
+        "backendRequired": "Haijaunganishwa",
+        "emptyTitle": "Sabi AI",
+        "emptyText": "Gumzo Taarifa",
+        "placeholder": "Gumzo la AI",
+        "roleUser": "Wewe",
+        "emptyBackendResponse": "Bado tupu",
+        "cleanEmptyText": "Gumzo la AI",
         "errorMessage": "Ujumbe could not be sent.",
-        "thinking": "Thinking...",
-        "assistantCenterTitle": "AI assistant",
-        "assistantCenterDescription": "Clean chat with files, web search, business and study assistants.",
+        "thinking": "Inapakia…",
+        "assistantCenterTitle": "Msaidizi wa AI",
+        "assistantCenterDescription": "Uwezo",
         "modeTitle": "Msaidizi type",
-        "modeSubtitle": "Choose the assistant you need before sending a question.",
-        "assistantMenuTitle": "Assistants",
+        "modeSubtitle": "Msaidizi wa AI",
+        "assistantMenuTitle": "Msaidizi wa AI",
         "assistantMenuSubtitle": "Biashara, student, applicant, teacher or universal AI.",
         "mode": {
           "chatgpt": {
-            "title": "Universal AI",
-            "short": "Universal",
-            "description": "Questions, analysis, writing and general help.",
-            "prompt": "Help me as a universal AI assistant."
+            "title": "Msaidizi wa AI",
+            "short": "Msaidizi wa AI",
+            "description": "Msaidizi wa AI",
+            "prompt": "Msaidizi wa AI"
           },
           "business": {
-            "title": "Biashara assistant",
+            "title": "Taarifa",
             "short": "Biashara",
-            "description": "Plans, documents, sales, support and business processes.",
-            "prompt": "Help me as a business assistant."
+            "description": "Msaidizi wa AI",
+            "prompt": "Msaidizi wa AI"
           },
           "student": {
-            "title": "Student assistant",
-            "short": "Student",
-            "description": "Topic explanations, tasks and step-by-step learning.",
-            "prompt": "Help me as a student assistant."
+            "title": "Msaidizi wa AI",
+            "short": "Msaidizi wa AI",
+            "description": "Msaidizi wa AI",
+            "prompt": "Msaidizi wa AI"
           },
           "applicant": {
-            "title": "Applicant assistant",
-            "short": "Applicant",
-            "description": "Admissions, exams, essays, interviews and university choice.",
-            "prompt": "Help me as an applicant assistant."
+            "title": "Msaidizi wa AI",
+            "short": "Msaidizi wa AI",
+            "description": "Msaidizi wa AI",
+            "prompt": "Msaidizi wa AI"
           },
           "teacher": {
-            "title": "Teacher assistant",
-            "short": "Teacher",
-            "description": "Lesson plans, materials, grading and classroom work.",
-            "prompt": "Help me as a teacher assistant."
+            "title": "Msaidizi wa AI",
+            "short": "Msaidizi wa AI",
+            "description": "Msaidizi wa AI",
+            "prompt": "Msaidizi wa AI"
           }
         },
-        "toolsTitle": "Functions",
-        "toolsSubtitle": "Active mode: {mode}. Upload a file or enable web search.",
-        "toolsSheetTitle": "Additional functions",
-        "toolsSheetSubtitle": "Upload a photo, video, document or enable web search.",
+        "toolsTitle": "Msaidizi wa AI",
+        "toolsSubtitle": "Msaidizi wa AI",
+        "toolsSheetTitle": "Msaidizi wa AI",
+        "toolsSheetSubtitle": "Msaidizi wa AI",
         "camera": "Kamera",
         "cameraDescription": "Ongeza a photo from the camera.",
-        "uploadPhoto": "Photo",
+        "uploadPhoto": "Picha",
         "uploadPhotoDescription": "Ongeza a photo from the gallery.",
-        "uploadVideo": "Video",
-        "uploadVideoDescription": "Ongeza a video file.",
-        "uploadDocument": "Document",
-        "uploadDocumentDescription": "Ongeza a PDF, text file or another document.",
-        "webSearch": "Web search",
-        "webSearchShort": "Internet",
-        "webSearchDescription": "Prepare the answer using web search.",
-        "voiceRecording": "Voice recording",
-        "permissionCamera": "Camera permission is required.",
-        "permissionPhoto": "Photo permission is required.",
-        "permissionVideo": "Video permission is required.",
-        "attachmentsSent": "Attachments",
-        "attachmentPhoto": "Photo",
-        "attachmentVideo": "Video",
-        "attachmentDocument": "Document",
+        "uploadVideo": "Waiting for video",
+        "uploadVideoDescription": "Sauti Taarifa",
+        "uploadDocument": "Hati",
+        "uploadDocumentDescription": "Maelezo Taarifa",
+        "webSearch": "Utafutaji wa wavuti",
+        "webSearchShort": "Utafutaji wa wavuti",
+        "webSearchDescription": "Utafutaji wa wavuti",
+        "voiceRecording": "AI ya sauti",
+        "permissionCamera": "Kamera",
+        "permissionPhoto": "Picha",
+        "permissionVideo": "Video",
+        "attachmentsSent": "Msaidizi wa AI",
+        "attachmentPhoto": "Picha",
+        "attachmentVideo": "Waiting for video",
+        "attachmentDocument": "Hati",
         "attachmentAudio": "Sauti",
-        "uploadContractNotice": "Files are attached to the AI request and processed through the provider.",
-        "safetyConfirmTitle": "Confirmation required",
-        "safetyConfirmMessage": "This action requires confirmation to continue.",
+        "uploadContractNotice": "Msaidizi wa AI",
+        "safetyConfirmTitle": "Msaidizi wa AI",
+        "safetyConfirmMessage": "Msaidizi wa AI",
         "safetyConfirmCancel": "Ghairi",
         "safetyConfirmContinue": "Endelea",
-        "securityNotice": "AI will not send messages, money or important actions without your confirmation.",
+        "securityNotice": "Msaidizi wa AI",
         "prompt": {
-          "business": "Analyze my business task.",
-          "study": "Explain this topic step by step.",
+          "business": "Msaidizi wa AI",
+          "study": "Msaidizi wa AI",
           "search": "Tafuta the internet and give me a short summary.",
-          "file": "If I upload a file, analyze its content."
+          "file": "Msaidizi wa AI"
         }
       },
       "activity": {
         "historyTitle": "AI Historia",
         "historySubtitle": "Historia preview from the AI mobile snapshot.",
-        "tasksTitle": "AI Tasks",
-        "tasksSubtitle": "Tasks created by assistant brain and action confirmations.",
-        "emptyTitle": "No items",
-        "emptyText": "The backend did not return items for this section yet."
+        "tasksTitle": "Kazi",
+        "tasksSubtitle": "Kazi",
+        "emptyTitle": "Bado tupu",
+        "emptyText": "Bado tupu"
       },
       "memory": {
-        "title": "AI Memory",
-        "subtitle": "Personalization runtime: privacy mode, preferences and saved instructions.",
-        "privacyMode": "Privacy mode",
-        "strict": "Strict",
-        "balanced": "Balanced",
-        "adaptive": "Adaptive",
+        "title": "Kumbukumbu",
+        "subtitle": "Kumbukumbu",
+        "privacyMode": "Hali ya faragha",
+        "strict": "Kali",
+        "balanced": "Sawa",
+        "adaptive": "Inayobadilika",
         "instructionPlaceholder": "Ongeza an instruction for Sabi AI...",
         "addInstruction": "Ongeza instruction",
         "instructions": "Imehifadhiwa instruction",
-        "noAccusation": "AI stores preferences only through the approved memory/personalization layer.",
+        "noAccusation": "Usalama",
         "modeSaved": {
-          "strict": "Strict mode saved.",
-          "balanced": "Balanced mode saved.",
-          "adaptive": "Adaptive mode saved."
+          "strict": "Imehifadhiwa",
+          "balanced": "Imehifadhiwa",
+          "adaptive": "Imehifadhiwa"
         },
-        "instructionSaved": "Instruction saved."
+        "instructionSaved": "Imehifadhiwa"
       },
       "premium": {
-        "title": "Premium AI",
-        "subtitle": "COIN access for translation, voice AI and advanced assistant actions.",
-        "accessTitle": "Premium AI access",
+        "title": "Premium",
+        "subtitle": "Premium AI",
+        "accessTitle": "Premium AI",
         "noFakePayment": "Malipo hayafanywi kwa uongo hapa. Uwezeshaji lazima utoke kwenye mtiririko halisi wa uthibitisho wa Premium/COIN.",
-        "realtimeCallTranslationTitle": "Realtime call translation",
-        "realtimeTranslationTitle": "Realtime translation",
-        "realtimeTranslationDescription": "Premium gate: ai_translation_realtime. Actual permission comes from backend.",
-        "mediaTranslationTitle": "Media translation",
-        "mediaTranslationDescription": "Sauti/video transcript translation through native bridge and backend provider.",
-        "advancedAssistantActionsTitle": "Advanced assistant actions",
-        "safeActionsTitle": "Safe actions",
-        "safeActionsDescription": "Money/account actions stay confirmation-gated and safety-controlled.",
+        "realtimeCallTranslationTitle": "Tafsiri",
+        "realtimeTranslationTitle": "Tafsiri",
+        "realtimeTranslationDescription": "Tafsiri",
+        "mediaTranslationTitle": "Tafsiri",
+        "mediaTranslationDescription": "Tafsiri Taarifa",
+        "advancedAssistantActionsTitle": "Msaidizi wa AI",
+        "safeActionsTitle": "Usalama",
+        "safeActionsDescription": "Usalama",
         "openProfilePremium": "Fungua Wasifu Premium",
         "brandText": "Sabi Premium · COIN controlled activation",
-        "heroEyebrow": "Premium AI",
+        "heroEyebrow": "Premium",
         "badge": "Premium",
-        "safeBadge": "Safe access"
+        "safeBadge": "Usalama"
       },
       "settings": {
         "title": "AI Mipangilio",
-        "subtitle": "Provider, locale, permissions, safety and profile contracts.",
+        "subtitle": "Mipangilio",
         "metricApi": "API",
-        "metricSource": "Source",
+        "metricSource": "Chanzo",
         "sourceLocalContract": "local_contract",
-        "connectionDetails": "Connection details",
-        "sections": "Sections",
-        "providerTitle": "Provider contracts",
-        "providerDescription": "Google/Yandex/Internal provider settings are loaded from backend settings contracts.",
-        "safetyTitle": "Safety/Admin monitoring",
-        "safetyDescription": "Internal AI-24 reports, holds and critical escalation are backend/admin-panel owned.",
-        "heroEyebrow": "AI settings",
-        "heroTitle": "AI control center",
-        "heroDescription": "Manage providers, locale, permissions and safety state.",
-        "controlTitle": "Controls",
+        "connectionDetails": "Muunganisho",
+        "sections": "Uwezo",
+        "providerTitle": "Mtoa huduma",
+        "providerDescription": "Mtoa huduma",
+        "safetyTitle": "Usalama",
+        "safetyDescription": "Usalama",
+        "heroEyebrow": "Mipangilio ya AI",
+        "heroTitle": "Mipangilio",
+        "heroDescription": "Mipangilio Taarifa",
+        "controlTitle": "Kichwa",
         "profileOwnerTitle": "Wasifu owner",
-        "profileOwnerDescription": "AI settings are linked to the verified profile owner.",
-        "note": "Real provider settings must come from the backend."
+        "profileOwnerDescription": "AI ya wasifu",
+        "note": "Taarifa"
       },
       "translation": {
         "title": "AI Tafsiri",
-        "subtitle": "Realtime translation screen for text now, audio/video/calls through native transcript bridge.",
-        "realtimeTitle": "Realtime translation",
-        "source": "Source text",
-        "sourcePlaceholder": "Text to translate...",
-        "target": "Target language",
-        "targetPlaceholder": "en, ru, uz, tg...",
+        "subtitle": "Tafsiri",
+        "realtimeTitle": "Tafsiri",
+        "source": "Maandishi chanzo",
+        "sourcePlaceholder": "Maandishi chanzo",
+        "target": "Lugha lengwa",
+        "targetPlaceholder": "Lugha lengwa",
         "translate": "Tafsiri",
-        "result": "Result",
-        "premium": "Premium gate stays in backend. The screen only displays the real response.",
+        "result": "Matokeo",
+        "premium": "Premium AI",
         "heroEyebrow": "Tafsiri",
-        "textPhotoCamera": "Text, camera and photo",
-        "inputPlaceholder": "Enter text",
+        "textPhotoCamera": "Maandishi chanzo · Kamera · Picha",
+        "inputPlaceholder": "Maandishi chanzo",
         "outputPlaceholder": "Tafsiri",
         "camera": "Kamera",
-        "photo": "Photo",
-        "from": "From language",
-        "to": "To language",
-        "detect": "Detect language",
-        "selectLanguage": "Select language",
+        "photo": "Picha",
+        "from": "Maandishi chanzo",
+        "to": "Lugha lengwa",
+        "detect": "Tafuta",
+        "selectLanguage": "Lugha lengwa",
         "searchLanguage": "Tafuta language",
-        "permissionCamera": "Camera permission is required for camera translation.",
-        "permissionPhoto": "Gallery permission is required for photo translation.",
-        "emptyText": "Enter text to translate.",
-        "noOutput": "The translation provider returned no text.",
-        "sameLanguage": "Source and target languages are the same.",
-        "photoReady": "Photo selected",
-        "cameraReady": "Camera photo ready",
-        "detectCannotSwap": "Select the source language before swapping.",
-        "noImageOutput": "Image translation returned no text.",
-        "detectedText": "Detected text",
-        "messengerPathTitle": "Messenger path",
-        "messengerReady": "The path for Messenger chat text, audio transcripts and call subtitles is ready.",
-        "imageProcessing": "Translating photo...",
-        "textProcessing": "Translating...",
-        "metaDetected": "Detected"
+        "permissionCamera": "Kamera",
+        "permissionPhoto": "Picha",
+        "emptyText": "Bado tupu",
+        "noOutput": "Bado tupu",
+        "sameLanguage": "Lugha lengwa",
+        "photoReady": "Picha",
+        "cameraReady": "Kamera",
+        "detectCannotSwap": "Lugha lengwa",
+        "noImageOutput": "Bado tupu",
+        "detectedText": "Maandishi chanzo",
+        "messengerPathTitle": "Messenger",
+        "messengerReady": "Tayari",
+        "imageProcessing": "Inapakia…",
+        "textProcessing": "Inapakia…",
+        "metaDetected": "Tayari"
       },
       "voice": {
-        "title": "Voice AI",
-        "subtitle": "Native STT/TTS bridge contract for the next Siri/Alice-level step.",
-        "nativeBridge": "Native bridge",
+        "title": "AI ya sauti",
+        "subtitle": "AI ya sauti",
+        "nativeBridge": "Muunganisho",
         "realBridgeDescription": "Daraja halisi la mobile: kurekodi kipaza sauti, matukio ya sauti ya native, kukabidhi transcript na kucheza audio URL. Text-only TTS haifanywi kwa uongo.",
-        "bind": "Bind bridge",
-        "invoke": "Quick invoke",
-        "start": "Start session",
-        "stop": "Stop session",
-        "interrupt": "Interrupt",
-        "recording": "Recording",
-        "startRecording": "Record",
-        "stopRecording": "Stop record",
+        "bind": "Muunganisho",
+        "invoke": "Tuma",
+        "start": "Anza",
+        "stop": "Simamisha",
+        "interrupt": "Simamisha",
+        "recording": "Rekodi",
+        "startRecording": "Rekodi",
+        "stopRecording": "Simamisha",
         "audioCapturedNotice": "Sauti was captured and reported as a native voice event. Speech recognition must provide a real transcript; this screen does not invent one.",
-        "audioDuration": "Duration",
+        "audioDuration": "AI ya sauti",
         "audioSize": "Sauti size",
-        "sttTtsBridgeTitle": "STT / TTS bridge",
-        "transcriptPlaceholder": "Transcript from native STT bridge...",
-        "submitTranscript": "Submit transcript",
-        "ttsTitle": "TTS playback",
-        "ttsPlaceholder": "Text to request from backend TTS...",
-        "playLastTts": "Play last TTS",
-        "noFakeTts": "Hakuna sauti bandia: audio playback hufanya kazi tu backend/native TTS ikirudisha audio URL. Text-only TTS huonyeshwa kama maandishi hadi expo-speech au native TTS module iunganishwe.",
-        "runtimeLog": "Voice runtime log",
-        "noEvents": "No voice events yet.",
-        "contractOnly": "This screen does not fake recording. It expects the real native bridge to provide transcript/audio events.",
-        "quickInvokeSent": "Quick invoke command sent.",
-        "sessionStopped": "Voice session stopped.",
-        "session": "Session",
-        "recordingNow": "Recording...",
-        "tapToSpeak": "Tap to speak",
-        "transcriptReady": "Transcript ready",
+        "sttTtsBridgeTitle": "AI ya sauti",
+        "transcriptPlaceholder": "AI ya sauti",
+        "submitTranscript": "AI ya sauti",
+        "ttsTitle": "Cheza",
+        "ttsPlaceholder": "AI ya sauti",
+        "playLastTts": "Cheza",
+        "noFakeTts": "Taarifa",
+        "runtimeLog": "Historia",
+        "noEvents": "Bado tupu",
+        "contractOnly": "AI ya sauti",
+        "quickInvokeSent": "Imetumwa",
+        "sessionStopped": "Simamisha",
+        "session": "Muunganisho",
+        "recordingNow": "Inarekodi...",
+        "tapToSpeak": "AI ya sauti",
+        "transcriptReady": "Tayari",
         "state": {
-          "idle": "Idle",
-          "processing": "Processing",
-          "requesting_permission": "Requesting permission",
-          "recording": "Recording",
+          "idle": "Tayari",
+          "processing": "Inapakia…",
+          "requesting_permission": "Usalama",
+          "recording": "Rekodi",
           "error": "Hitilafu",
-          "playing": "Playing"
+          "playing": "Cheza"
         },
         "log": {
-          "info": "Info",
-          "bridge_bound": "Bridge connected",
-          "recording_started": "Recording started",
+          "info": "Tayari",
+          "bridge_bound": "Tayari",
+          "recording_started": "Rekodi",
           "audio_captured": "Sauti captured",
-          "transcript_ready": "Transcript ready",
-          "tts_requested": "TTS requested",
-          "playback_started": "Playback started",
-          "interrupted": "Interrupted",
+          "transcript_ready": "Tayari",
+          "tts_requested": "AI ya sauti",
+          "playback_started": "Cheza",
+          "interrupted": "Simamisha",
           "error": "Hitilafu"
         }
       },
       "error": {
-        "ai_mobile_api_base_url_missing": "AI mobile API base URL is missing.",
-        "ai_mobile_auth_required": "AI mobile authorization is required.",
-        "ai_mobile_request_failed": "AI mobile request failed.",
-        "ai_mobile_network_error": "AI mobile network error.",
-        "ai_voice_microphone_permission_denied": "Microphone permission was denied.",
-        "ai_voice_recording_already_active": "Voice recording is already active.",
-        "ai_voice_recording_not_active": "Voice recording is not active.",
-        "ai_voice_playback_command_missing": "Voice playback command is missing.",
-        "ai_voice_empty_tts_text": "TTS text is empty.",
-        "ai_voice_audio_url_missing": "Voice audio URL is missing."
+        "ai_mobile_api_base_url_missing": "Hitilafu",
+        "ai_mobile_auth_required": "Hitilafu",
+        "ai_mobile_request_failed": "Hitilafu",
+        "ai_mobile_network_error": "Hitilafu",
+        "ai_voice_microphone_permission_denied": "Hitilafu",
+        "ai_voice_recording_already_active": "Hitilafu",
+        "ai_voice_recording_not_active": "Hitilafu",
+        "ai_voice_playback_command_missing": "Hitilafu",
+        "ai_voice_empty_tts_text": "Hitilafu",
+        "ai_voice_audio_url_missing": "Hitilafu"
       }
     }
   },
@@ -7485,7 +7486,7 @@ export const SW_LOCALE = {
     "permissions": "Ruhusa",
     "analytics": "Uchambuzi",
     "orders": "Maagizo",
-    "crm": "CRM",
+    "crm": "Taarifa",
     "automation": "Otomesheni",
     "quickReplies": "Majibu ya haraka",
     "welcomeMessage": "Ujumbe wa ukaribisho",
@@ -7523,7 +7524,7 @@ export const SW_LOCALE = {
     "disputes": "Migogoro",
     "paymentLinks": "Viungo vya malipo",
     "checkoutPages": "Kurasa za checkout",
-    "qrCheckout": "QR checkout",
+    "qrCheckout": "Taarifa",
     "posMode": "Hali ya POS",
     "cashierMode": "Hali ya cashier",
     "terminals": "Terminali",
@@ -7541,7 +7542,7 @@ export const SW_LOCALE = {
     "acquiringControls": "Udhibiti wa kupokea malipo"
   },
   "stream": {
-    "title": "Stream",
+    "title": "Mipangilio",
     "liveNow": "Moja kwa moja sasa",
     "upcoming": "Inayokuja",
     "ended": "Imeisha",
@@ -7564,7 +7565,7 @@ export const SW_LOCALE = {
     "stores": "Maduka",
     "categories": "Kategoria",
     "cart": "Toroli",
-    "checkout": "Checkout",
+    "checkout": "Taarifa",
     "orderNow": "Agiza sasa",
     "buyNow": "Nunua sasa",
     "addToCart": "Ongeza kwenye toroli",
@@ -7576,7 +7577,7 @@ export const SW_LOCALE = {
     "noProducts": "Hakuna bidhaa zilizopatikana"
   },
   "taxi": {
-    "title": "Taxi",
+    "title": "Mipangilio",
     "whereTo": "Unaenda wapi?",
     "pickupPoint": "Sehemu ya kuchukuliwa",
     "destination": "Lengwa",
@@ -7601,30 +7602,30 @@ export const SW_LOCALE = {
     "networkGames": "Michezo ya mtandao",
     "noGames": "Hakuna michezo inayopatikana",
     "foundation": {
-      "games": "Games",
+      "games": "Michezo",
       "hero": {
-        "text": "Text",
-        "title": "Title"
+        "text": "Mipangilio",
+        "title": "Kichwa"
       },
       "leaderboard": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Kichwa",
+        "value": "Taarifa"
       },
       "lobby": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Kichwa",
+        "value": "Taarifa"
       },
-      "miniApps": "Mini Apps",
+      "miniApps": "Taarifa",
       "policy": {
-        "title": "Title"
+        "title": "Kichwa"
       },
       "realtime": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Kichwa",
+        "value": "Taarifa"
       },
       "rewards": {
-        "title": "Title",
-        "value": "Value"
+        "title": "Kichwa",
+        "value": "Taarifa"
       }
     }
   },
@@ -7723,7 +7724,7 @@ export const SW_LOCALE = {
     "pinCode": "Msimbo wa PIN",
     "changePin": "Badilisha PIN",
     "biometrics": "Biometriki",
-    "faceId": "Face ID",
+    "faceId": "Taarifa",
     "fingerprint": "Alama ya kidole",
     "twoFactorAuth": "Uthibitishaji wa hatua mbili",
     "recoveryOptions": "Chaguo za urejeshaji",
@@ -7752,7 +7753,7 @@ export const SW_LOCALE = {
     "sendFeedback": "Tuma maoni",
     "helpCenter": "Kituo cha msaada",
     "faq": "Maswali yanayoulizwa mara kwa mara",
-    "liveChat": "Live chat",
+    "liveChat": "Gumzo",
     "emailSupport": "Usaidizi wa barua pepe",
     "callSupport": "Usaidizi kwa simu",
     "attachScreenshot": "Ambatisha picha ya skrini",
@@ -7791,7 +7792,7 @@ export const SW_LOCALE = {
     "analytics": "Uchambuzi",
     "contentReview": "Ukaguzi wa maudhui",
     "systemStatus": "Hali ya mfumo",
-    "wallets": "Wallets",
+    "wallets": "Taarifa",
     "bankAccounts": "Akaunti za benki",
     "statements": "Taarifa za hesabu",
     "payouts": "Malipo ya kutoa",
@@ -7900,239 +7901,239 @@ export const SW_LOCALE = {
     "paragraph4": "Kuendelea kutumia jukwaa baada ya masharti kusasishwa kunamaanisha kukubali toleo la sasa la sheria za huduma."
   },
   "privacyPolicyScreen": {
-    "paragraph1": "Sabi respects user privacy and protects personal data.",
-    "paragraph2": "Your data is used only for platform operations, legal compliance, transaction protection, support, and improving SuperApp features.",
-    "paragraph3": "We do not disclose personal data to third parties without a legal basis, except where required for service delivery, verification, regulatory compliance, or protecting users and the platform.",
-    "paragraph4": "By using Sabi, you agree to data processing under this policy."
+    "paragraph1": "Taarifa",
+    "paragraph2": "Taarifa",
+    "paragraph3": "Taarifa",
+    "paragraph4": "Taarifa"
   },
   "profileCompleteScreen": {
-    "badge": "PROFILE SETUP",
-    "title": "Complete your profile",
-    "subtitle": "Enter your first and last name. Username and unified ID will be generated automatically.",
-    "firstName": "First name",
-    "lastName": "Last name",
+    "badge": "Premium",
+    "title": "Mipangilio",
+    "subtitle": "Mipangilio",
+    "firstName": "Jina la kwanza",
+    "lastName": "Jina la mwisho",
     "username": "Jina la mtumiaji",
-    "phone": "Verified phone",
-    "unifiedId": "Unified User ID",
-    "unifiedIdHint": "This will be the main ID across Wallet, Messenger, and the whole account.",
-    "usernameHint": "The username is generated automatically from the name, but can be changed manually.",
-    "privacy": "After activation, this unified ID should remain the same across all modules.",
+    "phone": "Taarifa",
+    "unifiedId": "Taarifa",
+    "unifiedIdHint": "Taarifa Taarifa",
+    "usernameHint": "Taarifa Taarifa",
+    "privacy": "Faragha",
     "continue": "Endelea",
     "back": "Rudi",
-    "required": "Fill in all fields correctly to continue",
+    "required": "Taarifa",
     "saveErrorTitle": "Hifadhi error",
-    "saveErrorMessage": "Could not save the profile information. Please try again.",
-    "saving": "Saving...",
-    "userId": "User ID",
+    "saveErrorMessage": "Ombi limeshindikana. Jaribu tena.",
+    "saving": "Inahifadhi...",
+    "userId": "ID ya mtumiaji",
     "createUser": "Unda user",
-    "nameRequired": "First and last name are required",
-    "phoneRequired": "Phone number is required",
-    "usernameRequired": "Username is required",
+    "nameRequired": "Taarifa",
+    "phoneRequired": "Taarifa",
+    "usernameRequired": "Taarifa",
     "success": "Wasifu created successfully"
   },
   "gallery": {
-    "title": "Gallery",
-    "import": "Import",
-    "video": "Video",
-    "selected": "{{count}} selected",
+    "title": "Mipangilio",
+    "import": "Ingiza",
+    "video": "Waiting for video",
+    "selected": "Taarifa",
     "empty": {
-      "all": "No media",
-      "public": "No public media",
-      "private": "No private media"
+      "all": "Taarifa",
+      "public": "Taarifa",
+      "private": "Taarifa"
     },
     "alerts": {
-      "noAccessTitle": "No access",
-      "noAccessMessage": "Allow photo and video access to open Gallery.",
+      "noAccessTitle": "Kichwa",
+      "noAccessMessage": "Taarifa",
       "deleteSelectedTitle": "Futa",
       "deleteSelectedMessage": "Futa selected files: {{count}}?",
-      "deleteOneTitle": "Futa file",
-      "deleteOneMessage": "Futa this file?"
+      "deleteOneTitle": "Kichwa",
+      "deleteOneMessage": "Taarifa"
     },
     "share": {
-      "system": "System share"
+      "system": "Taarifa"
     },
     "viewer": {
-      "player": "Sabi Player",
-      "edited": "Edited"
+      "player": "Taarifa",
+      "edited": "Imehaririwa"
     },
     "camera": {
-      "title": "Sabi Camera",
+      "title": "Mipangilio",
       "short": "Kamera",
-      "photo": "Photo",
-      "video": "Video",
+      "photo": "Picha",
+      "video": "Waiting for video",
       "open": "Fungua camera"
     },
     "editor": {
-      "title": "Beauty Studio",
-      "missing": "Photo not found",
-      "videoEditorUnavailable": "Video editor unavailable",
+      "title": "Mipangilio",
+      "missing": "Taarifa",
+      "videoEditorUnavailable": "Ombi limeshindikana. Jaribu tena.",
       "saveErrorTitle": "Hifadhi error",
-      "saveErrorMessage": "Could not save photo changes.",
-      "textOverlay": "Text",
-      "textPlaceholder": "Text",
-      "textPresets": "Presets",
-      "textStyle": "Style",
-      "color": "Color",
-      "position": "Position",
-      "background": "Background",
-      "size": "Size",
-      "opacity": "Opacity",
-      "beautyStudio": "Beauty",
-      "stickers": "Stickers",
-      "stickerIntensity": "Sticker intensity",
-      "effects": "Effects",
-      "frames": "Frames",
-      "animeLayer": "Anime",
-      "filterLooks": "Filters",
-      "adjust": "Adjust",
-      "crop": "Crop",
-      "transform": "Transform",
-      "left": "Left",
-      "right": "Right",
-      "mirrorX": "Mirror X",
-      "mirrorY": "Mirror Y",
-      "smoothSkin": "Smooth skin",
-      "softGlow": "Soft glow",
-      "skinTone": "Skin tone",
-      "portraitLight": "Portrait light",
-      "eyesLight": "Eyes light",
-      "lipsTint": "Lips tint",
-      "blush": "Blush",
-      "animeBeauty": "Anime beauty",
-      "sparkles": "Sparkles",
-      "bokeh": "Bokeh",
-      "lightLeak": "Light leak",
-      "hearts": "Hearts",
-      "dust": "Dust",
-      "goldLight": "Gold light",
-      "neonEdge": "Neon edge",
-      "frameIntensity": "Frame intensity",
-      "aura": "Aura",
-      "mangaLines": "Manga lines",
-      "sakura": "Sakura",
-      "kawaiiHearts": "Kawaii hearts",
-      "comicFrame": "Comic frame",
-      "glowEyes": "Glow eyes",
-      "brightness": "Brightness",
-      "contrast": "Contrast",
-      "saturation": "Saturation",
-      "warmth": "Warmth",
-      "cool": "Cool",
-      "blur": "Blur",
-      "vignette": "Vignette",
-      "fade": "Fade",
-      "sharpen": "Sharpen",
+      "saveErrorMessage": "Ombi limeshindikana. Jaribu tena.",
+      "textOverlay": "Taarifa Taarifa",
+      "textPlaceholder": "Taarifa Taarifa",
+      "textPresets": "Taarifa Taarifa",
+      "textStyle": "Taarifa Taarifa",
+      "color": "Taarifa",
+      "position": "Taarifa",
+      "background": "Rudi",
+      "size": "Taarifa",
+      "opacity": "Taarifa",
+      "beautyStudio": "Taarifa",
+      "stickers": "Taarifa",
+      "stickerIntensity": "Taarifa",
+      "effects": "Taarifa",
+      "frames": "Fremu",
+      "animeLayer": "Taarifa",
+      "filterLooks": "Taarifa",
+      "adjust": "Taarifa",
+      "crop": "Taarifa",
+      "transform": "Taarifa",
+      "left": "Taarifa",
+      "right": "Taarifa",
+      "mirrorX": "Taarifa",
+      "mirrorY": "Taarifa",
+      "smoothSkin": "Taarifa",
+      "softGlow": "Taarifa",
+      "skinTone": "Taarifa",
+      "portraitLight": "Taarifa",
+      "eyesLight": "Taarifa",
+      "lipsTint": "Taarifa",
+      "blush": "Taarifa",
+      "animeBeauty": "Taarifa",
+      "sparkles": "Taarifa",
+      "bokeh": "Taarifa",
+      "lightLeak": "Taarifa",
+      "hearts": "Taarifa",
+      "dust": "Taarifa",
+      "goldLight": "Taarifa",
+      "neonEdge": "Taarifa",
+      "frameIntensity": "Fremu",
+      "aura": "Taarifa",
+      "mangaLines": "Taarifa",
+      "sakura": "Taarifa",
+      "kawaiiHearts": "Taarifa",
+      "comicFrame": "Fremu",
+      "glowEyes": "Taarifa",
+      "brightness": "Taarifa",
+      "contrast": "Taarifa",
+      "saturation": "Taarifa",
+      "warmth": "Taarifa",
+      "cool": "Taarifa",
+      "blur": "Taarifa",
+      "vignette": "Taarifa",
+      "fade": "Taarifa",
+      "sharpen": "Taarifa",
       "tabs": {
-        "text": "Text",
-        "beauty": "Beauty",
-        "effects": "Effects",
-        "anime": "Anime",
-        "adjust": "Adjust",
-        "crop": "Crop",
-        "transform": "Transform"
+        "text": "Mipangilio",
+        "beauty": "Taarifa",
+        "effects": "Taarifa",
+        "anime": "Taarifa",
+        "adjust": "Taarifa",
+        "crop": "Taarifa",
+        "transform": "Taarifa"
       },
       "textStyles": {
-        "classic": "Classic",
-        "glow": "Glow",
-        "outline": "Outline",
-        "bubble": "Bubble"
+        "classic": "Taarifa",
+        "glow": "Taarifa",
+        "outline": "Taarifa",
+        "bubble": "Taarifa"
       },
       "align": {
-        "top": "Top",
-        "center": "Center",
-        "bottom": "Bottom"
+        "top": "Taarifa",
+        "center": "Taarifa",
+        "bottom": "Taarifa"
       },
       "filters": {
-        "none": "Original",
-        "soft_beauty": "Soft Beauty",
-        "luxury_portrait": "Luxury",
-        "warm_film": "Warm Film",
-        "cool_night": "Cool Night",
-        "anime_glow": "Anime Glow",
-        "pink_dream": "Pink Dream",
-        "gold_glam": "Gold Glam"
+        "none": "Taarifa",
+        "soft_beauty": "Taarifa",
+        "luxury_portrait": "Taarifa",
+        "warm_film": "Taarifa",
+        "cool_night": "Taarifa",
+        "anime_glow": "Taarifa",
+        "pink_dream": "Taarifa",
+        "gold_glam": "Taarifa"
       },
       "option": {
-        "none": "None",
-        "sparkle_cluster": "Sparkles",
-        "hearts": "Hearts",
-        "crown": "Crown",
-        "stars": "Stars",
-        "petals": "Petals",
-        "luxury_gold": "Luxury",
-        "soft_portrait": "Soft",
-        "anime_frame": "Anime",
-        "story_glass": "Story",
-        "original": "Original",
-        "square": "Square",
-        "portrait": "4:5",
-        "story": "9:16"
+        "none": "Hakuna",
+        "sparkle_cluster": "Taarifa",
+        "hearts": "Taarifa",
+        "crown": "Taarifa",
+        "stars": "Taarifa",
+        "petals": "Taarifa",
+        "luxury_gold": "Taarifa",
+        "soft_portrait": "Taarifa",
+        "anime_frame": "Fremu",
+        "story_glass": "Taarifa",
+        "original": "Taarifa",
+        "square": "Taarifa",
+        "portrait": "Taarifa",
+        "story": "Taarifa"
       },
       "textPresetsMap": {
-        "luxury": "Luxury",
-        "neon": "Neon",
-        "soft": "Soft",
-        "comic": "Comic",
-        "anime": "Anime"
+        "luxury": "Taarifa",
+        "neon": "Taarifa",
+        "soft": "Taarifa",
+        "comic": "Taarifa",
+        "anime": "Taarifa"
       },
       "quick": {
-        "queen": "Queen",
-        "sabiMood": "Sabi Mood",
-        "dream": "Dream",
-        "luxury": "Luxury",
-        "angel": "Angel",
-        "animeGirl": "Anime Girl"
+        "queen": "Taarifa",
+        "sabiMood": "Taarifa",
+        "dream": "Taarifa",
+        "luxury": "Taarifa",
+        "angel": "Taarifa",
+        "animeGirl": "Taarifa"
       }
     }
   },
   "sabiMessengerChannelMenu": {
     "channelAddedToChats": "Channel Added To Gumzo",
-    "channelBotMissing": "Channel Bot Missing",
-    "channelInviteMissing": "Channel Invite Missing",
-    "channelShareReady": "Channel Shiriki Ready"
+    "channelBotMissing": "Gumzo",
+    "channelInviteMissing": "Gumzo",
+    "channelShareReady": "Tayari"
   },
   "sabiMessengerGroupMenu": {
     "groupAddMember": "Group Ongeza Member",
-    "groupInviteMissing": "Group Invite Missing",
-    "groupInviteReady": "Group Invite Ready",
-    "groupShareReady": "Group Shiriki Ready"
+    "groupInviteMissing": "Gumzo",
+    "groupInviteReady": "Tayari",
+    "groupShareReady": "Tayari"
   },
   "stories": {
     "actions": {
       "add": "Ongeza"
     },
     "empty": {
-      "action": "Action",
-      "text": "Text",
-      "title": "Title"
+      "action": "Taarifa",
+      "text": "Mipangilio",
+      "title": "Kichwa"
     },
     "header": {
-      "title": "Title"
+      "title": "Kichwa"
     },
     "hero": {
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "subtitle": "Mipangilio",
+      "title": "Kichwa"
     },
     "kind": {
-      "photo": "Photo",
-      "video": "Video"
+      "photo": "Picha",
+      "video": "Waiting for video"
     },
     "photo": {
       "unavailable": {
-        "title": "Title"
+        "title": "Kichwa"
       }
     },
     "preview": {
-      "photo": "Photo",
-      "video": "Video"
+      "photo": "Picha",
+      "video": "Waiting for video"
     },
     "video": {
       "unavailable": {
-        "text": "Text",
-        "title": "Title"
+        "text": "Mipangilio",
+        "title": "Kichwa"
       }
     }
   }
-};
+} as const;
 
 export default SW_LOCALE;

@@ -14,24 +14,28 @@ import { router } from "expo-router";
 import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context";
 import { ArrowLeft, Globe2, Search, ShieldCheck } from "lucide-react-native";
 
+import { useI18n } from "../../../shared/i18n";
 import { useHomeMobileText } from "../../../shared/i18n/home-mobile-translations";
+import { localizeSilkRoadMiniAppItems } from "../../marketplace/presentation/marketplace.i18n";
 import { MINI_APPS_ALL } from "../panels/data/miniApps.data";
 import { normalizeSabiHomeRoute } from "../navigation/homeRoutes";
 
 export default function SabiHomeSearchScreen() {
   const insets = useSafeAreaInsets();
   const homeText = useHomeMobileText();
+  const { language } = useI18n();
+  const miniAppsAll = useMemo(() => localizeSilkRoadMiniAppItems(MINI_APPS_ALL, language), [language]);
   const [query, setQuery] = useState("");
 
   const normalizedQuery = query.trim().toLowerCase();
 
   const results = useMemo(() => {
     if (!normalizedQuery) return [];
-    return MINI_APPS_ALL.filter((item) => {
+    return miniAppsAll.filter((item) => {
       const text = `${item.title} ${item.subtitle} ${item.kind} ${item.category}`.toLowerCase();
       return text.includes(normalizedQuery);
     }).slice(0, 24);
-  }, [normalizedQuery]);
+  }, [miniAppsAll, normalizedQuery]);
 
   const openInternal = (route?: string) => {
     router.push(normalizeSabiHomeRoute(route || "/mini-apps") as never);

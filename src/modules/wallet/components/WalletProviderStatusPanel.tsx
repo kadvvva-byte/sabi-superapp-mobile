@@ -3,6 +3,9 @@ import { StyleSheet, Text, View } from "react-native";
 
 import { useI18n } from "../../../shared/i18n";
 import { useWalletFoundation } from "../../../shared/wallet/wallet-foundation";
+import PlayReadyProviderNotConfiguredEvidencePanel from "../../play-ready/mobile/PlayReadyProviderNotConfiguredEvidencePanel";
+import PlayReadyBillingWalletSeparationEvidencePanel from "../../play-ready/mobile/PlayReadyBillingWalletSeparationEvidencePanel";
+import PlayReadyFinancialFeatureDisclosurePanel from "../../play-ready/mobile/PlayReadyFinancialFeatureDisclosurePanel";
 import {
   getWalletProviderPanelHint,
   getWalletProviderPanelTitle,
@@ -71,6 +74,21 @@ export default function WalletProviderStatusPanel({
       </View>
 
       <Text style={styles.policyText}>{tokenOnlyPolicy}</Text>
+
+      <PlayReadyProviderNotConfiguredEvidencePanel
+        compact={compact}
+        contextLabel="Wallet/Airwallex/Alipay provider_not_configured reviewer evidence"
+      />
+
+      <PlayReadyBillingWalletSeparationEvidencePanel
+        compact={compact}
+        contextLabel="Wallet billing separation evidence"
+      />
+
+      <PlayReadyFinancialFeatureDisclosurePanel
+        compact={compact}
+        contextLabel="Financial features and virtual asset disclosure evidence"
+      />
     </View>
   );
 }

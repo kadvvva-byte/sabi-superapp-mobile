@@ -1,0 +1,45 @@
+export const stream109dLiveInteractionHardeningPlan = {
+  version: "STREAM-109D",
+  title: "Comments and live-room interaction hardening",
+  scope: "stream-only-mobile-source",
+  runtimeFiles: [
+    "src/modules/stream/mobile/streamLiveInteractionHardeningRuntime.ts",
+    "src/modules/stream/mobile/StreamRoomRuntimePanel.tsx",
+  ],
+  realLocalActions: [
+    "comment draft guard state",
+    "comment policy acknowledgement",
+    "local interaction readiness check",
+    "selected participant/comment focus",
+    "pending report/moderation attention detection",
+    "provider comment delivery request blocked with explicit contract blockers",
+  ],
+  providerReadyContracts: [
+    "backend comment contract required",
+    "realtime comment provider required",
+    "backend moderation queue required",
+    "Admin review queue required",
+  ],
+  forbidden: {
+    walletTouched: false,
+    messengerTouched: false,
+    callsTouched: false,
+    serverTouched: false,
+    backendFinanceTouched: false,
+    paymentsTouched: false,
+    giftsTouched: false,
+    monetizationTouched: false,
+    fakeLiveAllowed: false,
+    fakeOnAirAllowed: false,
+    fakeProviderAllowed: false,
+    fakeCommentDeliveryAllowed: false,
+    fakeRealtimeAllowed: false,
+    fakeBackendModerationAllowed: false,
+    fakePaymentAllowed: false,
+    fakeGiftAllowed: false,
+    fakeLaunchCompleteAllowed: false,
+  },
+  nextRecommendedStep: "109E — realtime room event contract local queue, still Stream-only and without server/provider/payment/gifts",
+} as const;
+
+export type Stream109dLiveInteractionHardeningPlan = typeof stream109dLiveInteractionHardeningPlan;

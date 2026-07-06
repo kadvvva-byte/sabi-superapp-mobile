@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080" role="img" aria-label="Алмазный Джинн Final premium gift poster fallback">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="38%" r="72%"><stop offset="0%" stop-color="#E9D8FF"/><stop offset="48%" stop-color="#8F6BFF"/><stop offset="100%" stop-color="#09070D"/></radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0.82"/><stop offset="1" stop-color="#F2C75B" stop-opacity="0.20"/></linearGradient>
+  </defs>
+  <rect width="1080" height="1080" rx="128" fill="url(#bg)"/>
+  <circle cx="540" cy="480" r="315" fill="#09070D" opacity="0.24"/>
+  <circle cx="540" cy="480" r="226" fill="none" stroke="url(#shine)" stroke-width="22" opacity="0.78"/>
+  <path d="M214 712 C330 642 406 786 540 690 C674 786 750 642 866 712" fill="none" stroke="#FFFFFF" stroke-width="26" stroke-linecap="round" opacity="0.82"/>
+  <path d="M316 382 C386 252 500 242 540 350 C580 242 694 252 764 382 C672 344 612 408 540 468 C468 408 408 344 316 382Z" fill="#FFFFFF" opacity="0.86"/>
+  <text x="540" y="838" text-anchor="middle" font-family="Arial, sans-serif" font-size="58" font-weight="800" fill="#FFFFFF">Алмазный Джинн</text>
+  <text x="540" y="902" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#F2C75B">Mythic Premium · Genie Reveal</text>
+</svg>

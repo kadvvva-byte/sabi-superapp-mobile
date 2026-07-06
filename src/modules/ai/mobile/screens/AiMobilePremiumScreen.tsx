@@ -12,6 +12,7 @@ import {
   AiStatusPill,
 } from "../components/AiMobileScaffold";
 import { useAiMobileSnapshot } from "../useAiMobileSnapshot";
+import PlayReadyBillingWalletSeparationEvidencePanel from "../../../play-ready/mobile/PlayReadyBillingWalletSeparationEvidencePanel";
 
 type PremiumFeature = {
   key: string;
@@ -103,6 +104,11 @@ export default function AiMobilePremiumScreen() {
           <PremiumFeatureRow key={feature.key} feature={feature} />
         ))}
       </AiGlassCard>
+
+      <PlayReadyBillingWalletSeparationEvidencePanel
+        compact
+        contextLabel="AI Premium billing separation evidence"
+      />
 
       <Pressable
         onPress={() => router.push("/profile/premium" as never)}

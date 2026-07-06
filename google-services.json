@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "369220149458",
-    "project_id": "sabi-superapp",
-    "storage_bucket": "sabi-superapp.firebasestorage.app"
+    "project_number": "970072647981",
+    "project_id": "sabi-official-prod-37629",
+    "storage_bucket": "sabi-official-prod-37629.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:369220149458:android:41e77d18f2e78e5fa28d0b",
+        "mobilesdk_app_id": "1:970072647981:android:4161866ad2f57460fb4ba4",
         "android_client_info": {
-          "package_name": "com.anonymous.superappmobile"
+          "package_name": "app.sabiai.superapp"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDqhqrjWz3M8NUO5j08_nwKmbKBANppal0"
+          "current_key": "AIzaSyAyPwAi6llIEUkMgQTmG6kRl4t6YcwHflw"
         }
       ],
       "services": {

@@ -36,7 +36,7 @@ import {
   type StandardCallKind,
   type StandardCallPhase,
 } from "./videoCallRuntime";
-import { stopSabiCallToneNow, useSabiCallTone } from "../useSabiCallTone";
+import { stopSabiCallToneForCall, stopSabiCallToneNow, useSabiCallTone } from "../useSabiCallTone";
 
 type PeerHandle = ReturnType<typeof createStandardCallPeer>;
 type IconName = keyof typeof MaterialCommunityIcons.glyphMap;
@@ -121,6 +121,8 @@ type SabiCallEndMeta = {
 
 const SABI_VIDEO_INCOMING_NO_ANSWER_TIMEOUT_MS = 30000;
 const SABI_VIDEO_OUTGOING_NO_ANSWER_TIMEOUT_MS = 30000;
+const SABI_VIDEO_INCOMING_PREWARM_DELAY_MS = 220;
+const SABI_VIDEO_INVITE_RETRY_DELAYS_MS: readonly number[] = [420, 950, 1500] as const;
 
 function sabiPayloadText(...values: unknown[]): string {
   for (const value of values) {
@@ -342,9 +344,37 @@ function normalizeSabiRemoteCallEnd(payload: unknown, missedBeforeAccept: boolea
 
 
 
-const SABI_RECENTLY_FINISHED_CALL_SUPPRESS_MS = 900;
+const SABI_RECENTLY_FINISHED_CALL_SUPPRESS_MS = 12000;
+const SABI_VIDEO_PREACCEPT_OFFER_DELAY_MS = 0;
+const SABI_VIDEO_REPEAT_PREACCEPT_OFFER_DELAY_MS = 0;
+const SABI_VIDEO_STALE_INCOMING_ROUTE_CLOSE_MS = 45000;
 
-function callLifecycleKey(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+function sabiVideoCallIdCreatedAtMs(callId?: string | null): number {
+  const parts = String(callId || "").split(":");
+  for (const part of parts) {
+    const value = Number(part);
+    if (Number.isFinite(value) && value > 1000000000000 && value < 9999999999999) return value;
+  }
+  return 0;
+}
+
+function isStaleIncomingVideoRoute(route: { incoming?: boolean; callId?: string | null }, maxAgeMs = SABI_VIDEO_STALE_INCOMING_ROUTE_CLOSE_MS): boolean {
+  if (!route.incoming) return false;
+  const createdAt = sabiVideoCallIdCreatedAtMs(route.callId);
+  return createdAt > 0 && Date.now() - createdAt > maxAgeMs;
+}
+
+function callLifecycleKey(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string }) {
+  return [
+    route.kind || "video",
+    route.chatId || route.roomId || "direct",
+    route.userId || "self",
+    route.peerId || "peer",
+    route.callId || "no-call-id",
+  ].join("|");
+}
+
+function callPairLifecycleKey(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
   return [
     route.kind || "video",
     route.chatId || route.roomId || "direct",
@@ -353,15 +383,17 @@ function callLifecycleKey(route: { kind?: string; chatId?: string; roomId?: stri
   ].join("|");
 }
 
-function rememberFinishedCall(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+function rememberFinishedCall(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string }) {
   try {
     const root = globalThis as any;
     const map = (root.__sabiRecentlyFinishedCalls ||= {}) as Record<string, number>;
     map[callLifecycleKey(route)] = Date.now();
+    const pairMap = (root.__sabiRecentlyFinishedVideoCallPairs ||= {}) as Record<string, number>;
+    pairMap[callPairLifecycleKey(route)] = Date.now();
   } catch {}
 }
 
-function wasCallJustFinished(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }) {
+function wasCallJustFinished(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string }) {
   try {
     const root = globalThis as any;
     const map = (root.__sabiRecentlyFinishedCalls || {}) as Record<string, number>;
@@ -370,6 +402,75 @@ function wasCallJustFinished(route: { kind?: string; chatId?: string; roomId?: s
   } catch {
     return false;
   }
+}
+
+function wasVideoPairJustFinished(route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string }, windowMs = 120000) {
+  try {
+    const root = globalThis as any;
+    const map = (root.__sabiRecentlyFinishedVideoCallPairs || {}) as Record<string, number>;
+    const at = Number(map[callPairLifecycleKey(route)] || 0);
+    return at > 0 && Date.now() - at < windowMs;
+  } catch {
+    return false;
+  }
+}
+
+type SabiVideoCallVisibleState = {
+  acceptedAt?: number;
+  activeAt?: number;
+};
+
+function getSabiVideoCallVisibleStates(): Record<string, SabiVideoCallVisibleState> {
+  const root = globalThis as any;
+  return (root.__sabiVideoCallVisibleStates ||= {}) as Record<string, SabiVideoCallVisibleState>;
+}
+
+function rememberVideoAcceptedOrActive(
+  route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string },
+  status: "accepted" | "active",
+) {
+  try {
+    const states = getSabiVideoCallVisibleStates();
+    const key = callLifecycleKey(route);
+    const now = Date.now();
+    const state = (states[key] ||= {});
+    if (status === "accepted" && !state.acceptedAt) state.acceptedAt = now;
+    if (status === "active") {
+      if (!state.acceptedAt) state.acceptedAt = now;
+      state.activeAt = now;
+    }
+  } catch {}
+}
+
+function wasVideoAcceptedOrActive(
+  route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string },
+) {
+  try {
+    const state = getSabiVideoCallVisibleStates()[callLifecycleKey(route)];
+    if (!state) return false;
+    const now = Date.now();
+    const acceptedAt = Number(state.acceptedAt || 0);
+    const activeAt = Number(state.activeAt || 0);
+    return Boolean(
+      (acceptedAt > 0 && now - acceptedAt < 90000) ||
+        (activeAt > 0 && now - activeAt < 90000),
+    );
+  } catch {
+    return false;
+  }
+}
+
+function clearVideoAcceptedOrActive(
+  route: { kind?: string; chatId?: string; roomId?: string; userId?: string; peerId?: string; callId?: string },
+) {
+  try {
+    delete getSabiVideoCallVisibleStates()[callLifecycleKey(route)];
+  } catch {}
+}
+
+function isSoftNoAnswerReason(reason: string) {
+  const normalized = String(reason || "").toLowerCase();
+  return normalized.includes("missed") || normalized.includes("no_answer") || normalized.includes("timeout");
 }
 
 function sabiVideoPayloadTimeMs(payload: unknown): number {
@@ -550,6 +651,7 @@ export default function VideoCallScreen() {
   const [statusKey, setStatusKey] = useState<TextKey>(route.incoming ? "incoming" : "calling");
   const [seconds, setSeconds] = useState(0);
   const activeStartedAtRef = useRef<number | null>(null);
+  const phaseRef = useRef<StandardCallPhase>(route.incoming ? "ringing" : "calling");
 
   const [localStream, setLocalStreamState] = useState<any | null>(null);
   const [remoteStream, setRemoteStream] = useState<any | null>(null);
@@ -621,6 +723,10 @@ export default function VideoCallScreen() {
     });
   }, [miniPreviewPan, settleMiniPreviewPosition, windowHeight, windowWidth]);
 
+  useEffect(() => {
+    phaseRef.current = phase;
+  }, [phase]);
+
   const miniPreviewPanResponder = useMemo(
     () =>
       PanResponder.create({
@@ -661,10 +767,17 @@ export default function VideoCallScreen() {
   const peerRef = useRef<PeerHandle | null>(null);
   const startedRef = useRef(false);
   const acceptedRef = useRef(false);
+  const handlingOfferRef = useRef(false);
   const acceptedVideoWantedRef = useRef(false);
   const mountedRef = useRef(true);
   const seenSignalsRef = useRef(new Set<string>());
   const pendingOfferPayloadRef = useRef<unknown | null>(null);
+  const pendingRemoteIcePayloadsRef = useRef<unknown[]>([]);
+  const preacceptOfferTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const inviteRetryTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+  const incomingPrewarmTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const incomingPrewarmStartedRef = useRef(false);
+  const outgoingPrewarmStartedRef = useRef(false);
   const preferredRemoteMainRef = useRef(true);
   const endedCallIdsRef = useRef<Set<string>>(new Set<string>());
   const remoteVideoLostAtRef = useRef(0);
@@ -672,6 +785,24 @@ export default function VideoCallScreen() {
   const callHistoryStartedAtRef = useRef(new Date().toISOString());
   const callHistoryAnsweredAtRef = useRef<string | null>(null);
   const callHistoryFinalKeyRef = useRef("");
+  const speakerRetryTimersRef = useRef<ReturnType<typeof setTimeout>[]>([]);
+
+  const clearSpeakerRetryTimers = useCallback(() => {
+    const timers = speakerRetryTimersRef.current.splice(0, speakerRetryTimersRef.current.length);
+    timers.forEach((timer) => clearTimeout(timer));
+  }, []);
+
+  const clearInviteRetryTimers = useCallback(() => {
+    const timers = inviteRetryTimersRef.current.splice(0, inviteRetryTimersRef.current.length);
+    timers.forEach((timer) => clearTimeout(timer));
+  }, []);
+
+  const clearIncomingPrewarmTimer = useCallback(() => {
+    if (incomingPrewarmTimerRef.current) {
+      clearTimeout(incomingPrewarmTimerRef.current);
+      incomingPrewarmTimerRef.current = null;
+    }
+  }, []);
 
   const setProtectedLocalStream = useCallback((nextStream: any | null) => {
     if (nextStream) {
@@ -686,9 +817,27 @@ export default function VideoCallScreen() {
   }, []);
 
   const closePeer = useCallback(() => {
+    clearSpeakerRetryTimers();
     peerRef.current?.close();
     peerRef.current = null;
-  }, []);
+  }, [clearSpeakerRetryTimers]);
+
+  const flushPendingRemoteIcePayloads = useCallback((reason: string) => {
+    const peer = peerRef.current;
+    const queue = pendingRemoteIcePayloadsRef.current.splice(0, pendingRemoteIcePayloadsRef.current.length);
+    if (!queue.length) return;
+
+    if (!peer) {
+      pendingRemoteIcePayloadsRef.current.unshift(...queue.slice(-40));
+      callDebug("ice:flush_waiting_peer", { reason, count: queue.length });
+      return;
+    }
+
+    callDebug("ice:flush_screen_queue", { reason, count: queue.length });
+    queue.forEach((payload) => {
+      try { void peer.handleIce(payload); } catch {}
+    });
+  }, [callDebug]);
 
   const shouldProcessSignal = useCallback((eventName: string, payload: unknown) => {
     const key = makeSignalKey(eventName, payload);
@@ -713,9 +862,7 @@ export default function VideoCallScreen() {
 
       const isConnected =
         eventText.includes("connected") ||
-        eventText.includes("active") ||
-        eventText.includes("accepted") ||
-        eventText.includes("answer");
+        eventText.includes("active");
       const isMissed = eventText.includes("missed") || eventText.includes("no_answer") || eventText.includes("timeout");
       const isFinal =
         isMissed ||
@@ -778,8 +925,18 @@ export default function VideoCallScreen() {
     peerRef.current = createStandardCallPeer({
       route,
       socket,
-      initialVideoEnabled: cameraEnabled || acceptedVideoWantedRef.current,
+      // VIDEO-CALLS-1.5_REPEAT_FAST_SAFE:
+      // On a repeat incoming video call, answer first with audio/peer only and
+      // attach camera immediately after Accept/answer. This removes the repeat
+      // answer delay without opening the callee camera before Accept.
+      initialVideoEnabled: route.kind === "video" ? true : (cameraEnabled || acceptedVideoWantedRef.current),
       initialCameraFacing: cameraFacing,
+      // VIDEO-CALLS-2.0_REPEAT_OUTGOING_FAST_OFFER:
+      // Repeat video calls must not wait on Android camera/microphone before
+      // sending the first SDP offer. Defer local media on both sides only for
+      // repeat calls; camera still starts after Accept / answer.
+      deferInitialLocalMedia: false,
+      localMediaBeforeAnswerTimeoutMs: 7000,
       canStartCaller: () => Boolean(!endedCallIdsRef.current.has(route.callId)),
       onLocalStream: setProtectedLocalStream,
       onRemoteStream: (stream) => {
@@ -830,17 +987,18 @@ export default function VideoCallScreen() {
         } catch {}
 
         if (stream && mountedRef.current && !endedCallIdsRef.current.has(route.callId) && phase !== "ended") {
-          // Keep media rendering instant, but do not create extra connected
-          // lifecycle events from ontrack. Runtime emits connected only once
-          // from a real ICE/connection state.
-          if (!activeStartedAtRef.current) activeStartedAtRef.current = Date.now();
-          setPhase("active");
-          setStatusKey("connected");
+          // Render remote media immediately, but do not start call timer here.
+          // Timer/active state starts only from local WebRTC peer connected.
+          void stopSabiCallToneNow();
         }
       },
       onConnected: () => {
-        if (!mountedRef.current) return;
+        if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+        void stopSabiCallToneNow();
+        rememberVideoAcceptedOrActive(route, "active");
+        acceptedRef.current = true;
         if (!activeStartedAtRef.current) activeStartedAtRef.current = Date.now();
+        phaseRef.current = "active";
         setPhase("active");
         setStatusKey("connected");
         recordCallHistory("call:connected", { event: "connected", status: "connected", phase: "active" });
@@ -848,7 +1006,7 @@ export default function VideoCallScreen() {
       onError: (message) => {
         callDebug("peer:error", { message });
         if (!mountedRef.current) return;
-        setStatusKey("connecting");
+        if (phaseRef.current !== "active") setStatusKey("connecting");
       },
     });
 
@@ -869,6 +1027,82 @@ export default function VideoCallScreen() {
     speakerEnabled,
   ]);
 
+  const startIncomingPrewarm = useCallback((reason: string) => {
+    if (!route.incoming) return;
+    if (incomingPrewarmStartedRef.current || acceptedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+    incomingPrewarmStartedRef.current = true;
+    acceptedVideoWantedRef.current = true;
+    callDebug("incoming:prewarm:start", { reason });
+    void (ensurePeer() as any).prepareLocalMedia?.(reason)
+      .then(() => {
+        if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+        callDebug("incoming:prewarm:ready", { reason });
+        flushPendingRemoteIcePayloads("incoming_prewarm_ready");
+      })
+      .catch((error: unknown) => {
+        incomingPrewarmStartedRef.current = false;
+        callDebug("incoming:prewarm:error", { reason, message: error instanceof Error ? error.message : String(error) });
+      });
+  }, [callDebug, ensurePeer, flushPendingRemoteIcePayloads, route]);
+
+
+  const startOutgoingPrewarm = useCallback((reason: string) => {
+    if (route.incoming) return;
+    if (outgoingPrewarmStartedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+    outgoingPrewarmStartedRef.current = true;
+    acceptedVideoWantedRef.current = true;
+    callDebug("outgoing:prewarm:start", { reason });
+
+    void (ensurePeer() as any).prepareLocalMedia?.(reason)
+      .then(() => {
+        if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+        callDebug("outgoing:prewarm:ready", { reason });
+        flushPendingRemoteIcePayloads("outgoing_prewarm_ready");
+      })
+      .catch((error: unknown) => {
+        outgoingPrewarmStartedRef.current = false;
+        callDebug("outgoing:prewarm:error", { reason, message: error instanceof Error ? error.message : String(error) });
+      });
+  }, [callDebug, ensurePeer, flushPendingRemoteIcePayloads, route]);
+
+  const enableAcceptedIncomingCamera = useCallback((reason: string) => {
+    if (!route.incoming || endedCallIdsRef.current.has(route.callId)) return;
+    acceptedVideoWantedRef.current = true;
+    setCameraEnabledState(true);
+    setVideoLayoutEnabled(true);
+
+    const peer = peerRef.current;
+    if (!peer || typeof (peer as any).setCameraEnabled !== "function") return;
+
+    callDebug("incoming:camera_after_accept:start", { reason });
+    void (peer as any).setCameraEnabled(true)
+      .then(() => {
+        if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+        callDebug("incoming:camera_after_accept:ready", { reason });
+      })
+      .catch((error: unknown) => {
+        callDebug("incoming:camera_after_accept:error", { reason, message: error instanceof Error ? error.message : String(error) });
+      });
+  }, [callDebug, route.callId, route.incoming]);
+
+  const makeStableIncomingPayload = useCallback(() => {
+    const payload = makeCallPayload(route, {
+      event: "incoming",
+      signalKind: "incoming",
+      phase: "ringing",
+      status: "ringing",
+      inviteBurst: wasVideoPairJustFinished(route),
+    });
+
+    const createdAtMs = sabiVideoCallIdCreatedAtMs(route.callId);
+    const stableAt = createdAtMs > 0 ? new Date(createdAtMs).toISOString() : route.callId;
+    (payload as any).at = stableAt;
+    (payload as any).createdAt = stableAt;
+    (payload as any).startedAt = stableAt;
+    (payload as any).inviteInstanceKey = route.callId;
+    return payload;
+  }, [route]);
+
   useSabiCallTone({
     enabled: phase === "calling" || phase === "ringing",
     mode: phase === "ringing" ? "incoming" : phase === "calling" ? "outgoing" : "none",
@@ -878,7 +1112,10 @@ export default function VideoCallScreen() {
   useEffect(() => {
     mountedRef.current = true;
     acceptedRef.current = false;
+    handlingOfferRef.current = false;
     startedRef.current = false;
+    incomingPrewarmStartedRef.current = false;
+    outgoingPrewarmStartedRef.current = false;
     seenSignalsRef.current.clear();
     callHistoryStartedAtRef.current = new Date().toISOString();
     callHistoryAnsweredAtRef.current = null;
@@ -897,11 +1134,17 @@ export default function VideoCallScreen() {
       videoOnly: true,
     });
 
+    pendingOfferPayloadRef.current = null;
+    pendingRemoteIcePayloadsRef.current = [];
+    clearSpeakerRetryTimers();
+    clearInviteRetryTimers();
+    clearIncomingPrewarmTimer();
     peerRef.current?.close();
     peerRef.current = null;
     closePeer();
 
     setSeconds(0);
+    phaseRef.current = route.incoming ? "ringing" : "calling";
     setPhase(route.incoming ? "ringing" : "calling");
     setStatusKey(route.incoming ? "incoming" : "calling");
     setRemoteStream(null);
@@ -920,15 +1163,38 @@ export default function VideoCallScreen() {
 
     return () => {
       mountedRef.current = false;
+      clearSpeakerRetryTimers();
+      clearInviteRetryTimers();
+      clearIncomingPrewarmTimer();
+      outgoingPrewarmStartedRef.current = false;
+      if (preacceptOfferTimerRef.current) {
+        clearTimeout(preacceptOfferTimerRef.current);
+        preacceptOfferTimerRef.current = null;
+      }
+      pendingOfferPayloadRef.current = null;
+      pendingRemoteIcePayloadsRef.current = [];
       releaseStableOutgoingVideoCallId(route);
       closePeer();
     };
-  }, [callDebug, closePeer, recordCallHistory, route.callId, route.incoming, routeKey, setProtectedLocalStream]);
+  }, [callDebug, clearInviteRetryTimers, clearIncomingPrewarmTimer, clearSpeakerRetryTimers, closePeer, recordCallHistory, route.callId, route.incoming, routeKey, setProtectedLocalStream]);
 
   useEffect(() => {
+    if (route.incoming && isStaleIncomingVideoRoute(route)) {
+      callDebug("incoming:close:stale_route_after_cancel", { callId: route.callId });
+      endedCallIdsRef.current.add(route.callId);
+      pendingOfferPayloadRef.current = null;
+      pendingRemoteIcePayloadsRef.current = [];
+      phaseRef.current = "ended";
+      setPhase("ended");
+      setStatusKey("ended");
+      closeCallRoute();
+      return undefined;
+    }
+
     if (!route.incoming && wasCallJustFinished(route)) {
       callDebug("invite:skip:recently_finished", { callId: route.callId, suppressMs: SABI_RECENTLY_FINISHED_CALL_SUPPRESS_MS });
       endedCallIdsRef.current.add(route.callId);
+      phaseRef.current = "ended";
       setPhase("ended");
       setStatusKey("ended");
       closeCallRoute();
@@ -940,27 +1206,65 @@ export default function VideoCallScreen() {
     callDebug("room:join:emit", { socketConnected: Boolean(socket.connected) });
     joinSabiCallTransportScopes(socket, makeCallPayload(route, { event: "join" }));
 
+    // VIDEO-CALLS-1.4_REPEAT_SAFE:
+    // Do not open camera/mic on the callee while the call is still ringing.
+    // The user explicitly rejected early camera activation before Accept.
+    // Media is prepared only after Accept, so the second phone never shows
+    // camera activity before the user accepts the video call.
+
     if (!route.incoming && !startedRef.current) {
       startedRef.current = true;
 
-      const payload = makeCallPayload(route, {
-        event: "incoming",
-        signalKind: "incoming",
-        phase: "ringing",
-        status: "ringing",
-      });
+      const makeIncomingPayload = makeStableIncomingPayload;
 
+      const payload = makeIncomingPayload();
       callDebug("invite:start:emit", summarizeSabiCallPayloadForDebug(payload));
       emitSabiCallTransportEvent(socket, "call:incoming", payload);
+
+      // Start caller camera/mic immediately after the invite is emitted, before
+      // startCaller/createOffer. startCaller reuses the same localStreamPromise,
+      // so the first normal video offer still contains real audio+video and no
+      // split-offer camera upgrade path is not introduced.
+      startOutgoingPrewarm("before_preaccept_offer");
+
+      clearInviteRetryTimers();
+      const retryDelays = wasVideoPairJustFinished(route) ? SABI_VIDEO_INVITE_RETRY_DELAYS_MS : [];
+      retryDelays.forEach((delayMs) => {
+        const timer = setTimeout(() => {
+          if (!mountedRef.current || route.incoming || acceptedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+          const retryPayload = makeIncomingPayload();
+          callDebug("invite:retry:emit", { delayMs });
+          emitSabiCallTransportEvent(socket, "call:incoming", retryPayload);
+        }, delayMs);
+        inviteRetryTimersRef.current.push(timer);
+      });
+
       recordCallHistory("call:start", { event: "start", status: "calling", phase: "calling" });
-      // Outgoing side sends invite only. The incoming side creates the first offer immediately after Accept.
-      // This prevents video being treated as an audio-only offer before the callee accepts.
+
+      // VIDEO-CALLS-1.4_REPEAT_SAFE:
+      // Keep the first-call flow and only prepare the caller offer after the
+      // invite is sent. No incoming camera prewarm and no invite burst here:
+      // duplicate incoming routes were closing the accepted repeat call.
+      if (preacceptOfferTimerRef.current) clearTimeout(preacceptOfferTimerRef.current);
+      const preacceptDelayMs = wasVideoPairJustFinished(route) ? SABI_VIDEO_REPEAT_PREACCEPT_OFFER_DELAY_MS : SABI_VIDEO_PREACCEPT_OFFER_DELAY_MS;
+      preacceptOfferTimerRef.current = setTimeout(() => {
+        preacceptOfferTimerRef.current = null;
+        if (!mountedRef.current || route.incoming || endedCallIdsRef.current.has(route.callId) || acceptedRef.current) return;
+        callDebug("preaccept:offer:start", { reason: "repeat_deferred_media_offer_no_camera_block", delayMs: preacceptDelayMs });
+        void ensurePeer().startCaller().finally(() => flushPendingRemoteIcePayloads("preaccept_offer"));
+      }, preacceptDelayMs);
     }
 
     return () => {
+      clearInviteRetryTimers();
+      clearIncomingPrewarmTimer();
+      if (preacceptOfferTimerRef.current) {
+        clearTimeout(preacceptOfferTimerRef.current);
+        preacceptOfferTimerRef.current = null;
+      }
       leaveSabiCallTransportScopes(socket, makeCallPayload(route, { event: "leave" }));
     };
-  }, [callDebug, recordCallHistory, route, routeKey, socket]);
+  }, [callDebug, clearIncomingPrewarmTimer, clearInviteRetryTimers, ensurePeer, flushPendingRemoteIcePayloads, makeStableIncomingPayload, recordCallHistory, route, routeKey, socket, startIncomingPrewarm, startOutgoingPrewarm]);
 
   useEffect(() => {
     if (phase !== "active") {
@@ -1052,10 +1356,25 @@ export default function VideoCallScreen() {
 
   const finishLocal = useCallback(
     (reason: string) => {
-      if (phase === "ended") return;
+      if (phase === "ended" || endedCallIdsRef.current.has(route.callId)) return;
+      if (isSoftNoAnswerReason(reason) && wasVideoAcceptedOrActive(route)) {
+        callDebug("finish:skip_no_answer_after_accept_or_connected", { reason });
+        return;
+      }
 
       endedCallIdsRef.current.add(route.callId);
+      clearVideoAcceptedOrActive(route);
       rememberFinishedCall(route);
+      clearSpeakerRetryTimers();
+      clearInviteRetryTimers();
+      clearIncomingPrewarmTimer();
+      if (preacceptOfferTimerRef.current) {
+        clearTimeout(preacceptOfferTimerRef.current);
+        preacceptOfferTimerRef.current = null;
+      }
+      pendingOfferPayloadRef.current = null;
+      pendingRemoteIcePayloadsRef.current = [];
+      void stopSabiCallToneForCall(route.callId);
 
       const endMeta = normalizeSabiLocalCallEnd(reason, phase, route.incoming);
       const payload = makeCallPayload(route, {
@@ -1088,12 +1407,16 @@ export default function VideoCallScreen() {
       setStableRemoteVideoStream(null);
       setStableRemoteVideoUrl("");
       setProtectedLocalStream(null);
+      phaseRef.current = "ended";
       setPhase("ended");
       setStatusKey("ended");
 
       closeCallRoute();
     },
     [
+      clearIncomingPrewarmTimer,
+      clearInviteRetryTimers,
+      clearSpeakerRetryTimers,
       closePeer,
       localStream,
       phase,
@@ -1107,39 +1430,53 @@ export default function VideoCallScreen() {
 
   useEffect(() => {
     if (phase !== "calling" && phase !== "ringing") return undefined;
-    if (acceptedRef.current || endedCallIdsRef.current.has(route.callId)) return undefined;
+    if (acceptedRef.current || endedCallIdsRef.current.has(route.callId) || wasVideoAcceptedOrActive(route)) return undefined;
 
     const timeoutMs = route.incoming
       ? SABI_VIDEO_INCOMING_NO_ANSWER_TIMEOUT_MS
       : SABI_VIDEO_OUTGOING_NO_ANSWER_TIMEOUT_MS;
     const timer = setTimeout(() => {
-      if (acceptedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+      if (acceptedRef.current || endedCallIdsRef.current.has(route.callId) || wasVideoAcceptedOrActive(route)) return;
       finishLocal(route.incoming ? "missed" : "no_answer");
     }, timeoutMs);
 
     return () => clearTimeout(timer);
   }, [finishLocal, phase, route.callId, route.incoming]);
 
-  const startVideoConnectedTimerNow = useCallback((reason: string) => {
+  const markVideoAcceptedConnecting = useCallback((reason: string) => {
     if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
-    if (!activeStartedAtRef.current) activeStartedAtRef.current = Date.now();
-    callDebug("timer:start", { reason });
-    setPhase("active");
-    setStatusKey("connected");
-  }, [callDebug, route.callId]);
+    rememberVideoAcceptedOrActive(route, "accepted");
+
+    // VIDEO-CALLS-1.9_STABLE_RESET:
+    // Late duplicate answer / camera renegotiation must not move an already
+    // connected video call back to connecting. This keeps the timer alive.
+    if (phaseRef.current === "active" || activeStartedAtRef.current) {
+      callDebug("accepted:connecting:skip_active", { reason, currentPhase: phaseRef.current });
+      return;
+    }
+
+    callDebug("accepted:connecting", { reason });
+    phaseRef.current = "connecting";
+    setPhase("connecting");
+    setStatusKey("connecting");
+  }, [callDebug, route]);
 
   const accept = useCallback(() => {
     if (!route.incoming || acceptedRef.current) return;
 
     acceptedRef.current = true;
-    startVideoConnectedTimerNow("local_accept");
-    recordCallHistory("call:accepted", { event: "accepted", status: "connected", phase: "active" });
+    clearInviteRetryTimers();
+    clearIncomingPrewarmTimer();
+    if (preacceptOfferTimerRef.current) {
+      clearTimeout(preacceptOfferTimerRef.current);
+      preacceptOfferTimerRef.current = null;
+    }
+    markVideoAcceptedConnecting("local_accept");
+    recordCallHistory("call:accepted", { event: "accepted", status: "connecting", phase: "connecting" });
 
     acceptedVideoWantedRef.current = true;
     setCameraEnabledState(true);
     setVideoLayoutEnabled(true);
-
-    ensurePeer();
 
     const payload = makeCallPayload(route, {
       event: "accepted",
@@ -1151,10 +1488,39 @@ export default function VideoCallScreen() {
     callDebug("accept:emit", summarizeSabiCallPayloadForDebug(payload));
     emitSabiCallTransportEvent(socket, "call:accepted", payload);
 
+    const pendingOfferPayload = pendingOfferPayloadRef.current;
     pendingOfferPayloadRef.current = null;
+
+    if (pendingOfferPayload && hasSabiSessionDescription(pendingOfferPayload)) {
+      if (!handlingOfferRef.current) {
+        handlingOfferRef.current = true;
+        void ensurePeer().handleOffer(pendingOfferPayload).then(() => {
+          enableAcceptedIncomingCamera("local_accept_pending_offer_answered");
+        }).finally(() => {
+          handlingOfferRef.current = false;
+          flushPendingRemoteIcePayloads("local_accept_pending_offer");
+        });
+      }
+      return;
+    }
+
+    if (wasVideoPairJustFinished(route)) {
+      callDebug("incoming:prepare_after_accept:start", { reason: "repeat_waiting_offer" });
+      void (ensurePeer() as any).prepareLocalMedia?.("repeat_waiting_offer_after_accept")
+        .then(() => {
+          if (!mountedRef.current || endedCallIdsRef.current.has(route.callId)) return;
+          callDebug("incoming:prepare_after_accept:ready", { reason: "repeat_waiting_offer" });
+          flushPendingRemoteIcePayloads("local_accept_prepare_ready");
+        })
+        .catch((error: unknown) => {
+          callDebug("incoming:prepare_after_accept:error", { message: error instanceof Error ? error.message : String(error) });
+        });
+    }
+
+    flushPendingRemoteIcePayloads("local_accept");
     // CALL-LOCKED-RELAY-16: incoming side only confirms accept.
     // The outgoing caller creates the first WebRTC offer after accepted is received.
-  }, [callDebug, ensurePeer, recordCallHistory, route, socket, startVideoConnectedTimerNow]);
+  }, [callDebug, clearIncomingPrewarmTimer, clearInviteRetryTimers, enableAcceptedIncomingCamera, ensurePeer, flushPendingRemoteIcePayloads, markVideoAcceptedConnecting, recordCallHistory, route, socket]);
 
   useEffect(() => {
     // CALL-PUSH-AUTO-ACCEPT:
@@ -1172,21 +1538,25 @@ export default function VideoCallScreen() {
   }, [accept, autoAcceptFromNotification, route.callId, route.incoming]);
 
   const toggleMic = useCallback(() => {
+    if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
     const next = !micEnabled;
     setMicEnabledState(next);
     peerRef.current?.setMicEnabled(next);
-  }, [micEnabled]);
+  }, [micEnabled, phase, route.callId]);
 
   const toggleSpeaker = useCallback(() => {
+    if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
     const next = !speakerEnabled;
     setSpeakerEnabledState(next);
+    clearSpeakerRetryTimers();
     void peerRef.current?.setSpeakerEnabled(next);
-    setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 250);
-    setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 900);
-    setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 1600);
-  }, [speakerEnabled]);
+    speakerRetryTimersRef.current.push(setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 250));
+    speakerRetryTimersRef.current.push(setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 900));
+    speakerRetryTimersRef.current.push(setTimeout(() => void peerRef.current?.setSpeakerEnabled(next), 1600));
+  }, [clearSpeakerRetryTimers, phase, route.callId, speakerEnabled]);
 
   const toggleCamera = useCallback(() => {
+    if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
     const next = !cameraEnabled;
     acceptedVideoWantedRef.current = next;
 
@@ -1212,7 +1582,6 @@ export default function VideoCallScreen() {
         mediaState: next ? "camera_on" : "camera_off",
       });
 
-      emitSabiCallTransportEvent(socket, "call:webrtc:offer", mediaStatePayload);
       emitSabiCallTransportEvent(socket, "call:media:state", mediaStatePayload);
       emitSabiCallTransportEvent(socket, "call:camera:state", mediaStatePayload);
 
@@ -1231,6 +1600,7 @@ export default function VideoCallScreen() {
   ]);
 
   const switchCamera = useCallback(() => {
+    if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
     acceptedVideoWantedRef.current = true;
     setCameraEnabledState(true);
     setVideoLayoutEnabled(true);
@@ -1242,7 +1612,7 @@ export default function VideoCallScreen() {
     } else {
       setCameraFacing((value) => (value === "user" ? "environment" : "user"));
     }
-  }, [ensurePeer, phase]);
+  }, [ensurePeer, phase, route.callId]);
 
   const togglePresentation = useCallback(() => {
     const next = !presentationEnabled;
@@ -1286,11 +1656,27 @@ export default function VideoCallScreen() {
       callDebug("accepted:recv", summarizeSabiCallPayloadForDebug(payload));
 
       acceptedRef.current = true;
-      startVideoConnectedTimerNow("remote_accept");
-      recordCallHistory("call:accepted", { event: "accepted", status: "connected", phase: "active" });
+      clearInviteRetryTimers();
+      if (preacceptOfferTimerRef.current) {
+        clearTimeout(preacceptOfferTimerRef.current);
+        preacceptOfferTimerRef.current = null;
+      }
+      markVideoAcceptedConnecting("remote_accept");
+      recordCallHistory("call:accepted", { event: "accepted", status: "connecting", phase: "connecting" });
 
       void stopSabiCallToneNow();
-      void ensurePeer().startCaller();
+      const peer = ensurePeer();
+      void peer.startCaller().finally(() => flushPendingRemoteIcePayloads("after_start_caller"));
+      // VIDEO-CALLS-2.0: if the repeat outgoing offer was sent without local
+      // camera/mic to avoid the Android repeat getUserMedia stall, attach media
+      // after Accept. If the peer is not stable yet, the runtime will skip a
+      // premature renegotiate and the next answer/peer-state path will keep the
+      // call connected instead of blocking the invite.
+      if (wasVideoPairJustFinished(route)) {
+        void peer.setCameraEnabled(true).catch((error: unknown) => {
+          callDebug("outgoing:camera_after_accept:error", { message: error instanceof Error ? error.message : String(error) });
+        });
+      }
     };
 
     const handleOffer = (payload: unknown, alreadyDeduped = false) => {
@@ -1305,9 +1691,14 @@ export default function VideoCallScreen() {
       callDebug("offer:recv", summarizeSabiCallPayloadForDebug(payload));
       if (!route.incoming && !acceptedRef.current) {
         acceptedRef.current = true;
-        startVideoConnectedTimerNow("remote_offer");
+        markVideoAcceptedConnecting("remote_offer");
       }
       if (route.incoming && !acceptedRef.current) {
+        if (wasVideoAcceptedOrActive(route)) {
+          callDebug("offer:ignored_duplicate_visible_owner", summarizeSabiCallPayloadForDebug(payload));
+          if (hasDescription && !pendingOfferPayloadRef.current) pendingOfferPayloadRef.current = payload;
+          return;
+        }
         if (hasDescription) pendingOfferPayloadRef.current = payload;
         return;
       }
@@ -1327,39 +1718,76 @@ export default function VideoCallScreen() {
       if (!hasDescription && (isCameraOffSignal || isCameraOnSignal)) return;
       if (!alreadyDeduped && !shouldProcessSignal("call:webrtc:offer", payload)) return;
 
-      setPhase("connecting");
-      setStatusKey("connecting");
-
-      if (route.incoming && acceptedRef.current) {
-        // Do not close a fresh accepted incoming peer in stable state.
-        // Closing here forced camera/mic to restart and added a visible 5+ sec delay.
-        // Reset only if this side really has a stale local offer/glare.
-        const currentState = peerRef.current?.getSignalingState?.() || "";
-        if (currentState === "have-local-offer" || currentState === "have-remote-pranswer") {
-          closePeer();
-        }
+      if (handlingOfferRef.current) {
+        callDebug("offer:ignored_already_handling", summarizeSabiCallPayloadForDebug(payload));
+        return;
       }
 
-      void ensurePeer().handleOffer(payload);
+      if (phaseRef.current !== "active" && !activeStartedAtRef.current) {
+        phaseRef.current = "connecting";
+        setPhase("connecting");
+        setStatusKey("connecting");
+      }
+
+      // Do not close the accepted incoming peer on every offer. The previous
+      // close/recreate path allowed duplicate offer deliveries to close the peer
+      // while setLocalDescription(answer) was still running, leaving both sides
+      // in closed/new states. Keep one peer per call and only let the runtime
+      // handle the SDP offer once.
+      handlingOfferRef.current = true;
+      void ensurePeer().handleOffer(payload).then(() => {
+        if (route.incoming && acceptedRef.current) {
+          enableAcceptedIncomingCamera("offer_answered");
+        }
+      }).finally(() => {
+        handlingOfferRef.current = false;
+        flushPendingRemoteIcePayloads("after_handle_offer");
+      });
     };
 
     const handleAnswer = (payload: unknown, alreadyDeduped = false) => {
+      if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
       if (!payloadMatches(route, payload)) return;
       if (!isFromPeer(route, payload)) return;
       if (!alreadyDeduped && !shouldProcessSignal("call:webrtc:answer", payload)) return;
       callDebug("answer:recv", summarizeSabiCallPayloadForDebug(payload));
-      startVideoConnectedTimerNow("remote_answer");
 
-      void peerRef.current?.handleAnswer(payload);
+      if (!peerRef.current) {
+        callDebug("answer:ignored_no_peer", summarizeSabiCallPayloadForDebug(payload));
+        return;
+      }
+
+      if (phaseRef.current !== "active" && !activeStartedAtRef.current) {
+        markVideoAcceptedConnecting("remote_answer");
+      }
+
+      void peerRef.current.handleAnswer(payload).then(() => {
+        if (!route.incoming && wasVideoPairJustFinished(route) && acceptedRef.current && !endedCallIdsRef.current.has(route.callId)) {
+          void peerRef.current?.setCameraEnabled(true).catch((error: unknown) => {
+            callDebug("outgoing:camera_after_answer:error", { message: error instanceof Error ? error.message : String(error) });
+          });
+        }
+      }).finally(() => flushPendingRemoteIcePayloads("after_handle_answer"));
     };
 
     const handleIce = (payload: unknown, alreadyDeduped = false) => {
+      if (endedCallIdsRef.current.has(route.callId) || phase === "ended") return;
       if (!payloadMatches(route, payload)) return;
       if (!isFromPeer(route, payload)) return;
       if (!alreadyDeduped && !shouldProcessSignal("call:webrtc:ice", payload)) return;
       callDebug("ice:recv", summarizeSabiCallPayloadForDebug(payload));
 
-      void peerRef.current?.handleIce(payload);
+      const peer = peerRef.current;
+      if (!peer) {
+        pendingRemoteIcePayloadsRef.current.push(payload);
+        if (pendingRemoteIcePayloadsRef.current.length > 40) {
+          pendingRemoteIcePayloadsRef.current.splice(0, pendingRemoteIcePayloadsRef.current.length - 40);
+        }
+        callDebug("ice:queued_before_peer", { pendingIce: pendingRemoteIcePayloadsRef.current.length });
+        return;
+      }
+
+      void peer.handleIce(payload);
     };
 
     const handleConnected = (payload: unknown) => {
@@ -1370,10 +1798,11 @@ export default function VideoCallScreen() {
       callDebug("connected:recv", summarizeSabiCallPayloadForDebug(payload));
 
       acceptedRef.current = true;
-      if (!activeStartedAtRef.current) activeStartedAtRef.current = Date.now();
-      setPhase("active");
-      setStatusKey("connected");
-      recordCallHistory("call:connected", { event: "connected", status: "connected", phase: "active" });
+      void stopSabiCallToneNow();
+      rememberVideoAcceptedOrActive(route, "accepted");
+      setStatusKey((current) => (current === "connected" ? current : "connecting"));
+      // Do not start phase/timer from remote socket connected. Runtime starts
+      // active state only from local WebRTC connected/completed peer state.
     };
 
     const handleEnded = (payload: unknown) => {
@@ -1384,14 +1813,7 @@ export default function VideoCallScreen() {
       if (!isRealCallEndPayload(payload)) return;
       if (!shouldProcessSignal("call:ended", payload)) return;
 
-      const hasLiveDirectMedia = Boolean(
-        phase === "active" ||
-          remoteStream ||
-          stableRemoteVideoUrl ||
-          stableRemoteVideoStream,
-      );
-
-      const explicitEnd = [
+      const remoteEndText = [
         getSabiCallPayloadEvent(payload),
         payload && typeof payload === "object" ? sabiPayloadText((payload as Record<string, unknown>).endReason) : "",
         payload && typeof payload === "object" ? sabiPayloadText((payload as Record<string, unknown>).reason) : "",
@@ -1400,14 +1822,26 @@ export default function VideoCallScreen() {
         .join(" ")
         .toLowerCase();
 
+      if (isSoftNoAnswerReason(remoteEndText) && wasVideoAcceptedOrActive(route)) {
+        callDebug("ended:ignored_no_answer_after_accept_or_connected", summarizeSabiCallPayloadForDebug(payload));
+        return;
+      }
+
+      const hasLiveDirectMedia = Boolean(
+        phase === "active" ||
+          remoteStream ||
+          stableRemoteVideoUrl ||
+          stableRemoteVideoStream,
+      );
+
       const explicitUserEnd =
-        explicitEnd.includes("declined") ||
-        explicitEnd.includes("local_end") ||
-        explicitEnd.includes("remote_end") ||
-        explicitEnd.includes("cancel") ||
-        explicitEnd.includes("busy") ||
-        explicitEnd.includes("hangup") ||
-        explicitEnd.includes("hang_up");
+        remoteEndText.includes("declined") ||
+        remoteEndText.includes("local_end") ||
+        remoteEndText.includes("remote_end") ||
+        remoteEndText.includes("cancel") ||
+        remoteEndText.includes("busy") ||
+        remoteEndText.includes("hangup") ||
+        remoteEndText.includes("hang_up");
 
       if (hasLiveDirectMedia && !explicitUserEnd) return;
 
@@ -1421,7 +1855,12 @@ export default function VideoCallScreen() {
       });
 
       endedCallIdsRef.current.add(route.callId);
+      clearVideoAcceptedOrActive(route);
       rememberFinishedCall(route);
+      clearSpeakerRetryTimers();
+      pendingOfferPayloadRef.current = null;
+      pendingRemoteIcePayloadsRef.current = [];
+      void stopSabiCallToneForCall(route.callId);
 
       closePeer();
       stopSabiMediaStream(localStream);
@@ -1432,6 +1871,7 @@ export default function VideoCallScreen() {
       remoteCameraOffRef.current = false;
       setRemoteCameraOff(false);
       setProtectedLocalStream(null);
+      phaseRef.current = "ended";
       setPhase("ended");
       setStatusKey("ended");
 
@@ -1541,8 +1981,10 @@ export default function VideoCallScreen() {
   }, [
     callDebug,
     cameraEnabled,
+    clearSpeakerRetryTimers,
     closePeer,
     ensurePeer,
+    flushPendingRemoteIcePayloads,
     localStream,
     remoteStream,
     recordCallHistory,
@@ -1554,7 +1996,7 @@ export default function VideoCallScreen() {
     socket,
     stableRemoteVideoStream,
     stableRemoteVideoUrl,
-    startVideoConnectedTimerNow,
+    markVideoAcceptedConnecting,
   ]);
 
   useEffect(() => {

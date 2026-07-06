@@ -1,6 +1,6 @@
-import React from "react";
-import ChannelProfileScreen from "../../src/modules/profile/components/ChannelProfileScreen";
+import createLazyRouteScreen from "../../src/shared/navigation/createLazyRouteScreen";
 
-export default function ProfileChannelsRoute() {
-  return <ChannelProfileScreen />;
-}
+export default createLazyRouteScreen(
+  () => import("../../src/modules/profile/routes/ProfileChannelRoute"),
+  "ProfileChannelRoute",
+);

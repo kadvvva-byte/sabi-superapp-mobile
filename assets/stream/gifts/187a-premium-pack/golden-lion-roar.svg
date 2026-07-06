@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="Golden Lion Roar stream gift poster fallback">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#F2C75B" stop-opacity="0.88"/>
+      <stop offset="55%" stop-color="#17151E" stop-opacity="0.96"/>
+      <stop offset="100%" stop-color="#09070D" stop-opacity="1"/>
+    </radialGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+  <circle cx="256" cy="236" r="132" fill="#F2C75B" opacity="0.18" stroke="#FFFFFF" stroke-width="6"/>
+  <path d="M256 96 L295 196 L402 202 L318 270 L345 378 L256 320 L167 378 L194 270 L110 202 L217 196 Z" fill="url(#shine)" stroke="#FFFFFF" stroke-width="5" stroke-linejoin="round"/>
+  <circle cx="172" cy="146" r="14" fill="#FFFFFF" opacity="0.72"/>
+  <circle cx="360" cy="166" r="10" fill="#FFFFFF" opacity="0.86"/>
+  <circle cx="386" cy="344" r="16" fill="#FFFFFF" opacity="0.36"/>
+  <text x="256" y="438" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="800">Golden Lion Roar</text>
+  <text x="256" y="468" text-anchor="middle" fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700">poster fallback · local preview</text>
+</svg>

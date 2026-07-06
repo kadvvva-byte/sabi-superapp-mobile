@@ -1,0 +1,25 @@
+{
+  "version": "STREAM-GAME-GIFTS-190C",
+  "assetId": "neon-shark-surge",
+  "displayNameRu": "Неоновая Акула",
+  "packLabel": "Pack 3",
+  "screenImpactPolish": {
+    "soundCueReference": "assets/stream/gifts/190a-premium-pack/sound-cues/neon-shark-surge-cue.wav",
+    "hapticSequence": "sharp surge pulse",
+    "screenHitTimingMs": {
+      "preGlow": 170,
+      "impact": 520,
+      "tail": 1180
+    },
+    "recipientFocus": "center-safe spotlight, no chat/input overlap",
+    "crowdMoment": "preview-only sparkle wave, no send/payment/result"
+  },
+  "runtime": {
+    "soundAutoplayEnabledNow": false,
+    "mediaPlaybackEnabledNow": false,
+    "realSendEnabledNow": false,
+    "backendEnabledNow": false,
+    "paymentEnabledNow": false,
+    "payoutEnabledNow": false
+  }
+}

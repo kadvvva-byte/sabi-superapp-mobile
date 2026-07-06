@@ -1,0 +1,68 @@
+{
+  "version": "STREAM-GIFT-LOTTIE-SVG-RENDER-PLAN-189B",
+  "giftId": "diamond-genie-lamp",
+  "displayNameRu": "Алмазный Джинн",
+  "displayName": "Diamond Genie Lamp",
+  "assetKind": "lottie_scaffold_plus_svg_sequence_placeholders",
+  "previewOnlyNow": true,
+  "actualLottieRuntimeIncludedNow": false,
+  "actualSvgAnimationRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "canvas": {
+    "width": 720,
+    "height": 1280,
+    "safeAreaPct": {
+      "top": 8,
+      "bottom": 12,
+      "horizontal": 6
+    }
+  },
+  "fps": 30,
+  "durationMs": 2920,
+  "phases": [
+    {
+      "phase": "entrance",
+      "startMs": 0,
+      "endMs": 760,
+      "svgFrame": "assets/stream/gifts/189b-render-plan/svg-sequence/diamond-genie-lamp-entrance-frame-189b.svg",
+      "motionDirection": "hero scale-in, spotlight fade, first particle reveal",
+      "premiumLayerCount": 7
+    },
+    {
+      "phase": "loop",
+      "startMs": 760,
+      "endMs": 2180,
+      "svgFrame": "assets/stream/gifts/189b-render-plan/svg-sequence/diamond-genie-lamp-loop-frame-189b.svg",
+      "motionDirection": "premium breathing glow, aura orbit, controlled trail motion",
+      "premiumLayerCount": 7
+    },
+    {
+      "phase": "finale",
+      "startMs": 2180,
+      "endMs": 2920,
+      "svgFrame": "assets/stream/gifts/189b-render-plan/svg-sequence/diamond-genie-lamp-finale-frame-189b.svg",
+      "motionDirection": "impact burst, screen flash, recipient focus, clean fade-out",
+      "premiumLayerCount": 7
+    }
+  ],
+  "renderTargets": {
+    "lottieTarget": "assets/stream/gifts/production/lottie/diamond-genie-lamp.json",
+    "svgSequenceDir": "assets/stream/gifts/production/svg-sequence/diamond-genie-lamp",
+    "mp4Target": "assets/stream/gifts/production/mp4/diamond-genie-lamp.mp4",
+    "webpSpriteTarget": "assets/stream/gifts/production/sprites/diamond-genie-lamp.webp"
+  },
+  "layers": [
+    "background dim",
+    "stage light",
+    "hero gift",
+    "aura ring",
+    "particles",
+    "trail",
+    "finale burst"
+  ],
+  "fallbacks": {
+    "liteDevice": "use entrance SVG poster + glow pulse only",
+    "reduceMotion": "static poster + soft fade",
+    "mutedAudio": "visual impact only"
+  }
+}

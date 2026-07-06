@@ -1,0 +1,35 @@
+{
+  "version": "STREAM-GAME-GIFTS-192A",
+  "scope": "premium_catalog_final_polish_user_facing_only",
+  "giftCount": 24,
+  "packCount": 3,
+  "packFilters": [
+    "all",
+    "pack1",
+    "pack2",
+    "pack3"
+  ],
+  "rarityLanes": [
+    "starter",
+    "rare",
+    "legendary",
+    "mythic"
+  ],
+  "files": [
+    "src/modules/stream/gifts/streamPremiumGiftCatalogFinalPolish192A.ts",
+    "src/modules/stream/screens/StreamScreen.tsx",
+    "src/modules/stream/index.ts"
+  ],
+  "safety": {
+    "userFacingOnly": true,
+    "catalogPolishOnly": true,
+    "backendRuntimeEnabledNow": false,
+    "paymentRuntimeEnabledNow": false,
+    "providerRuntimeEnabledNow": false,
+    "payoutRuntimeEnabledNow": false,
+    "sendRuntimeEnabledNow": false,
+    "actualAnimationPlaybackRuntimeEnabledNow": false,
+    "actualSoundAutoplayRuntimeEnabledNow": false,
+    "randomWinRuntimeEnabledNow": false
+  }
+}

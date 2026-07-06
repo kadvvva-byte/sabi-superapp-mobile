@@ -1,0 +1,45 @@
+export const stream109rBusinessModerationCompliancePlan = {
+  version: "STREAM-109R",
+  title: "Business Stream moderation/compliance final pass",
+  scope: "stream-only-mobile-source",
+  businessStreamOnly: true,
+  touchesWallet: false,
+  touchesMessenger: false,
+  touchesCalls: false,
+  touchesServer: false,
+  touchesBackendFinance: false,
+  paymentsTouched: false,
+  giftsTouched: false,
+  monetizationTouched: false,
+  fakeBusinessComplianceAllowed: false,
+  fakeBusinessLaunchAllowed: false,
+  fakePaymentAllowed: false,
+  fakeGiftAllowed: false,
+  fakeMonetizationAllowed: false,
+  realLocalActions: [
+    "select Business Stream compliance check",
+    "acknowledge business safety policy locally",
+    "acknowledge advertising disclosure locally",
+    "acknowledge Q&A safety policy locally",
+    "acknowledge moderation review locally",
+    "review selected local compliance check",
+    "run Business Stream moderation/compliance final pass",
+    "queue local compliance event",
+    "request provider compliance handoff as blocked until real contracts exist"
+  ],
+  providerRequiredContracts: [
+    "backend business compliance contract",
+    "realtime business moderation provider",
+    "durable business moderation store",
+    "Admin business compliance review"
+  ],
+  forbiddenUntilLaterPhases: [
+    "payments",
+    "gifts",
+    "monetization",
+    "Wallet bridge",
+    "fake compliance pass",
+    "fake Business Stream launch",
+    "fake moderation provider delivery"
+  ],
+} as const;

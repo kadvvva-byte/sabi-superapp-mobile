@@ -1,0 +1,51 @@
+{
+  "stage": "189C",
+  "giftId": "dj-star-drop",
+  "displayNameRu": "DJ Звезда",
+  "displayName": "DJ Star Drop",
+  "exportPlanOnly": true,
+  "actualMp4FileIncludedNow": false,
+  "actualWebpFileIncludedNow": false,
+  "actualPlaybackRuntimeIncludedNow": false,
+  "realSendRuntimeIncludedNow": false,
+  "paymentRuntimeIncludedNow": false,
+  "targets": {
+    "mp4Loop": "assets/stream/gifts/production/mp4/dj-star-drop-premium-loop.mp4",
+    "mp4Finale": "assets/stream/gifts/production/mp4/dj-star-drop-premium-finale.mp4",
+    "webpSprite": "assets/stream/gifts/production/webp/dj-star-drop-premium-sprite.webp",
+    "posterFallback": "assets/stream/gifts/production/posters/dj-star-drop-premium-poster.webp",
+    "litePosterFallback": "assets/stream/gifts/production/posters/dj-star-drop-lite-poster.webp"
+  },
+  "dimensions": {
+    "width": 720,
+    "height": 720,
+    "safeAreaInsetPercent": 8
+  },
+  "timing": {
+    "fps": 30,
+    "loopDurationMs": 3120,
+    "finaleDurationMs": 920
+  },
+  "webpSprite": {
+    "frameCount": 36,
+    "columns": 6,
+    "rows": 6,
+    "frameWidth": 360,
+    "frameHeight": 360
+  },
+  "qualityTargets": [
+    "lite",
+    "standard",
+    "ultra"
+  ],
+  "fallbackPolicy": [
+    "poster-first",
+    "mute-safe",
+    "reduce-motion-safe",
+    "low-memory-lite"
+  ],
+  "color": {
+    "primary": "#F2C75B",
+    "light": "#FFF0B3"
+  }
+}

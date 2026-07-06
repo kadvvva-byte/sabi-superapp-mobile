@@ -66,7 +66,10 @@ import { SafeAreaView, useSafeAreaInsets } from "react-native-safe-area-context"
 
 import { homeKernelFacade } from "../../../core/kernel/home";
 import { useHomeKernel } from "../../../core/kernel/home/bindings";
+import { useI18n } from "../../../shared/i18n";
 import { useHomeMobileText } from "../../../shared/i18n/home-mobile-translations";
+import { getSabiMobilePolicy, isHomeCryptoPanelVisibleForSabiPolicy, isMiniAppKindVisibleForSabiPolicy } from "../../../shared/policy/sabiMobilePolicy";
+import { localizeSilkRoadMiniAppItem } from "../../marketplace/presentation/marketplace.i18n";
 import { useAppearance } from "../../../theme/AppearanceProvider";
 import HomeFoundationStrip from "../components/HomeFoundationStrip";
 import { useHomeEditMode } from "../HomeEditModeProvider";
@@ -141,7 +144,7 @@ const STATIC_HOME_CARDS: HomeCard[] = [
   { id: "widget-ai-voice", title: "SABI Voice", type: "widget", kind: "ai_voice", visualKey: "ai_voice", removable: true },
   { id: "widget-gallery", title: "Gallery", type: "widget", kind: "gallery", removable: true },
   { id: "widget-games", title: "Game Center", type: "widget", kind: "games", removable: true },
-  { id: "widget-marketplace", title: "Marketplace", type: "widget", kind: "marketplace", removable: true },
+  { id: "widget-marketplace", title: "SilkRoad", type: "widget", kind: "marketplace", removable: true },
   { id: "widget-supermarket", title: "Supermarket", type: "widget", kind: "supermarket", removable: true },
   { id: "widget-hotels", title: "Hotels", type: "widget", kind: "hotels", visualKey: "hotels", removable: true },
   { id: "widget-food-delivery", title: "Food", type: "widget", kind: "food_delivery", visualKey: "food", removable: true },
@@ -825,6 +828,8 @@ export default function HomePanel() {
   const [homeAlertsVisible, setHomeAlertsVisible] = useState(false);
   const isWeb = Platform.OS === "web";
   const homeText = useHomeMobileText();
+  const { language } = useI18n();
+  const mobilePolicy = useMemo(() => getSabiMobilePolicy(), []);
 
   const safePinnedMiniApps = useMemo(
     () => (Array.isArray(pinnedMiniApps) ? pinnedMiniApps : []),
@@ -843,29 +848,34 @@ export default function HomePanel() {
     [isWeb],
   );
 
+  const localizedStaticHomeCards = useMemo(
+    () => STATIC_HOME_CARDS.filter((item) => isMiniAppKindVisibleForSabiPolicy(item.kind, mobilePolicy)).map((item) => localizeSilkRoadMiniAppItem(item, language)),
+    [language, mobilePolicy],
+  );
+
   const staticKinds = useMemo(
-    () => new Set(STATIC_HOME_CARDS.map((item) => item.kind)),
-    [],
+    () => new Set(localizedStaticHomeCards.map((item) => item.kind)),
+    [localizedStaticHomeCards],
   );
 
   const miniAppCards = useMemo<HomeCard[]>(
     () =>
       safePinnedMiniApps
-        .filter((app) => app.kind !== "mini_apps" && app.id !== "mini-apps" && !staticKinds.has(app.kind))
+        .filter((app) => app.kind !== "mini_apps" && app.id !== "mini-apps" && !staticKinds.has(app.kind) && isMiniAppKindVisibleForSabiPolicy(app.kind, mobilePolicy))
         .map((app) => ({
           id: `miniapp-${app.id}`,
-          title: app.title,
+          title: localizeSilkRoadMiniAppItem(app, language).title,
           type: "miniapp",
           kind: app.kind,
           visualKey: getMiniAppVisualKey(app),
           removable: true,
         })),
-    [safePinnedMiniApps, staticKinds],
+    [language, safePinnedMiniApps, staticKinds, mobilePolicy],
   );
 
   const allKnownCards = useMemo<HomeCard[]>(
-    () => [...STATIC_HOME_CARDS, ...miniAppCards],
-    [miniAppCards],
+    () => [...localizedStaticHomeCards, ...miniAppCards],
+    [localizedStaticHomeCards, miniAppCards],
   );
 
   const allCardsSource = useMemo<HomeCard[]>(
@@ -1509,16 +1519,18 @@ export default function HomePanel() {
                     transparentMode={isCustomBackground}
                     signalLabel={homeText.forexSignal}
                   />
-                  <HeroInfoPanel
-                    title={homeText.cryptoTitle}
-                    symbol={selectedCryptoData.code}
-                    value={selectedCryptoData.price}
-                    change={selectedCryptoData.change}
-                    kind="crypto"
-                    accent={brand}
-                    transparentMode={isCustomBackground}
-                    signalLabel={homeText.cryptoSignal}
-                  />
+                  {isHomeCryptoPanelVisibleForSabiPolicy(mobilePolicy) ? (
+                    <HeroInfoPanel
+                      title={homeText.cryptoTitle}
+                      symbol={selectedCryptoData.code}
+                      value={selectedCryptoData.price}
+                      change={selectedCryptoData.change}
+                      kind="crypto"
+                      accent={brand}
+                      transparentMode={isCustomBackground}
+                      signalLabel={homeText.cryptoSignal}
+                    />
+                  ) : null}
                 </View>
               </View>
 

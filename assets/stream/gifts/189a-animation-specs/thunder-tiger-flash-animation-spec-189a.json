@@ -1,0 +1,87 @@
+{
+  "version": "STREAM-GIFT-ANIMATION-SPEC-189A",
+  "giftId": "thunder-tiger-flash",
+  "displayNameRu": "Громовой Тигр",
+  "displayName": "Thunder Tiger Flash",
+  "assetKind": "lottie_spec_plus_svg_sequence_plan",
+  "previewOnlyNow": true,
+  "runtimeIncludedNow": false,
+  "audioAutoplayIncludedNow": false,
+  "realSendIncludedNow": false,
+  "fps": 30,
+  "totalDurationMs": 3340,
+  "safeArea": {
+    "topPct": 8,
+    "bottomPct": 12,
+    "horizontalPct": 6
+  },
+  "phases": [
+    {
+      "key": "entrance",
+      "durationMs": 720,
+      "labelRu": "lightning slash entrance",
+      "motion": "scale-up + stage fade + hero glow"
+    },
+    {
+      "key": "loop",
+      "durationMs": 2020,
+      "labelRu": "tiger charge loop",
+      "motion": "soft orbit + glow breathing + controlled trail"
+    },
+    {
+      "key": "finale",
+      "durationMs": 600,
+      "labelRu": "shock ring finale",
+      "motion": "burst + spotlight hit + clean fade-out"
+    }
+  ],
+  "layers": [
+    {
+      "key": "background_dim",
+      "labelRu": "кинематографическое затемнение фона",
+      "blend": "multiply",
+      "intensity": 0.38
+    },
+    {
+      "key": "stage_light",
+      "labelRu": "дорогой stage light",
+      "blend": "screen",
+      "intensity": 0.74
+    },
+    {
+      "key": "hero_gift",
+      "labelRu": "Громовой Тигр",
+      "blend": "normal",
+      "intensity": 1
+    },
+    {
+      "key": "particles",
+      "labelRu": "gold thunder particles",
+      "blend": "screen",
+      "intensity": 0.82
+    },
+    {
+      "key": "trail",
+      "labelRu": "мягкий premium trail",
+      "blend": "plus-lighter",
+      "intensity": 0.68
+    },
+    {
+      "key": "finale_burst",
+      "labelRu": "shock ring finale",
+      "blend": "screen",
+      "intensity": 0.9
+    }
+  ],
+  "exports": {
+    "posterFallback": "assets/stream/gifts/188a-premium-pack/thunder-tiger-flash.svg",
+    "lottieTarget": "assets/stream/gifts/production/lottie/thunder-tiger-flash.json",
+    "mp4LoopTarget": "assets/stream/gifts/production/mp4/thunder-tiger-flash.mp4",
+    "spriteSheetTarget": "assets/stream/gifts/production/sprites/thunder-tiger-flash.webp"
+  },
+  "fallbacks": {
+    "reduceMotion": "poster + glow pulse only",
+    "liteDevice": "poster + 12 particles + short fade",
+    "mutedAudio": "visual-only impact label"
+  }
+}

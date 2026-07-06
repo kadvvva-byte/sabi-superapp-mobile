@@ -1,0 +1,16 @@
+{
+  "version": "STREAM-GAME-GIFTS-197B",
+  "scope": "mobile user-facing ultra premium FX polish metadata for 32 gifts",
+  "giftCount": 32,
+  "realAssetPathMapped": true,
+  "posterFirstFallbackReady": true,
+  "actualAnimationPlaybackRuntimeEnabledNow": false,
+  "actualSoundAutoplayRuntimeEnabledNow": false,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false,
+  "walletMutationEnabledNow": false,
+  "randomWinRuntimeEnabledNow": false
+}

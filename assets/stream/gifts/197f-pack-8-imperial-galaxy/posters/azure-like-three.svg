@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 384" role="img" aria-label="Лазурный Лайк 3 алмазов">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="32%" r="78%"><stop offset="0%" stop-color="#BAE6FD"/><stop offset="44%" stop-color="#2563EB"/><stop offset="100%" stop-color="#070712"/></radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset=".52" stop-color="#FFE08A"/><stop offset="1" stop-color="#93C5FD"/></linearGradient>
+    <filter id="softGlow"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="384" height="384" rx="64" fill="url(#bg)"/>
+  <circle cx="192" cy="176" r="128" fill="none" stroke="#FFFFFF" stroke-opacity=".24" stroke-width="3"/>
+  <circle cx="192" cy="176" r="96" fill="#070712" fill-opacity=".30"/>
+  <path d="M132 310h-38V174h38z M146 304h116c20 0 34-16 38-36l18-82c4-20-10-38-30-38h-62l10-54c5-26-10-48-34-48h-8l-62 120z" fill="none" stroke="url(#gold)" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" filter="url(#softGlow)"/>
+  <text x="192" y="326" text-anchor="middle" font-family="Arial, sans-serif" font-size="23" font-weight="800" fill="#FFFFFF">Лазурный Лайк</text>
+  <text x="192" y="354" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#FFE08A">3 алмазов · preview only</text>
+</svg>

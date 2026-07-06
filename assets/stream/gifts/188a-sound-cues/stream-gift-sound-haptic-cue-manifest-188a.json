@@ -1,0 +1,47 @@
+{
+  "version": "STREAM-GAME-GIFTS-188A-SOUND-HAPTIC",
+  "soundCueCount": 8,
+  "soundPlaybackRuntimeEnabledNow": false,
+  "items": [
+    {
+      "assetId": "phoenix-crown-burst",
+      "soundCueFile": "phoenix-crown-burst-cue.wav",
+      "hapticLabel": "finale flame impact"
+    },
+    {
+      "assetId": "crystal-whale-wave",
+      "soundCueFile": "crystal-whale-wave-cue.wav",
+      "hapticLabel": "aqua wave pulse"
+    },
+    {
+      "assetId": "cyber-panda-beat",
+      "soundCueFile": "cyber-panda-beat-cue.wav",
+      "hapticLabel": "beat bounce"
+    },
+    {
+      "assetId": "velvet-butterfly-storm",
+      "soundCueFile": "velvet-butterfly-storm-cue.wav",
+      "hapticLabel": "soft flutter"
+    },
+    {
+      "assetId": "thunder-tiger-flash",
+      "soundCueFile": "thunder-tiger-flash-cue.wav",
+      "hapticLabel": "strong thunder"
+    },
+    {
+      "assetId": "aurora-unicorn-ride",
+      "soundCueFile": "aurora-unicorn-ride-cue.wav",
+      "hapticLabel": "gentle aurora pulse"
+    },
+    {
+      "assetId": "diamond-genie-lamp",
+      "soundCueFile": "diamond-genie-lamp-cue.wav",
+      "hapticLabel": "diamond reveal tap"
+    },
+    {
+      "assetId": "galaxy-idol-stage",
+      "soundCueFile": "galaxy-idol-stage-cue.wav",
+      "hapticLabel": "spotlight pulse"
+    }
+  ]
+}

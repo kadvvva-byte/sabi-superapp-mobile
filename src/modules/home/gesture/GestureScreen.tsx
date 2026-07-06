@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type ComponentType } from "react";
 import {
   Animated,
   Easing,
@@ -12,11 +12,18 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useHomeEditMode } from "../HomeEditModeProvider";
 import HomePanel from "../panels/HomePanel";
-import MessengerPanel from "../panels/MessengerPanel";
-import MiniAppsPanel from "../panels/MiniAppsPanel";
-import WalletPanel from "../panels/WalletPanel";
 
 type PanelKey = "messenger" | "home" | "wallet" | "miniapps";
+type LazyPanelKey = Exclude<PanelKey, "home">;
+type LazyPanelComponent = ComponentType<{ onBack?: () => void }>;
+
+const lazyPanelLoaders: Record<LazyPanelKey, () => Promise<{ default: LazyPanelComponent }>> = {
+  messenger: () => import("../panels/MessengerPanel"),
+  wallet: () => import("../panels/WalletPanel"),
+  miniapps: () => import("../panels/MiniAppsPanel"),
+};
+
+const cachedLazyPanels: Partial<Record<LazyPanelKey, LazyPanelComponent>> = {};
 
 const LEFT_EDGE_ZONE = 18;
 const RIGHT_EDGE_ZONE = 18;
@@ -45,6 +52,10 @@ export default function GestureScreen() {
   });
   const [currentPanel, setCurrentPanel] = useState<PanelKey>("home");
   const currentPanelRef = useRef<PanelKey>("home");
+  const [lazyPanels, setLazyPanels] = useState<Partial<Record<LazyPanelKey, LazyPanelComponent>>>(
+    () => ({ ...cachedLazyPanels }),
+  );
+  const loadingLazyPanelsRef = useRef<Partial<Record<LazyPanelKey, boolean>>>({});
 
   const translateX = useRef(new Animated.Value(0)).current;
   const translateY = useRef(new Animated.Value(0)).current;
@@ -64,6 +75,32 @@ export default function GestureScreen() {
     }),
     [screenWidth, screenHeight],
   );
+
+  const loadLazyPanel = useCallback((panel: LazyPanelKey) => {
+    if (cachedLazyPanels[panel] || loadingLazyPanelsRef.current[panel]) {
+      return;
+    }
+
+    loadingLazyPanelsRef.current[panel] = true;
+
+    void lazyPanelLoaders[panel]()
+      .then((module) => {
+        cachedLazyPanels[panel] = module.default;
+        setLazyPanels((current) => ({
+          ...current,
+          [panel]: module.default,
+        }));
+      })
+      .catch((error) => {
+        console.warn(
+          `[home] failed to load ${panel} panel`,
+          error instanceof Error ? error.message : error,
+        );
+      })
+      .finally(() => {
+        loadingLazyPanelsRef.current[panel] = false;
+      });
+  }, []);
 
   const syncCurrentPanelPosition = useCallback(() => {
     const panel = currentPanelRef.current;
@@ -93,6 +130,10 @@ export default function GestureScreen() {
 
   const animateTo = useCallback(
     (panel: PanelKey) => {
+      if (panel !== "home") {
+        loadLazyPanel(panel);
+      }
+
       currentPanelRef.current = panel;
 
       Animated.parallel([
@@ -114,7 +155,7 @@ export default function GestureScreen() {
         }
       });
     },
-    [positions, translateX, translateY],
+    [loadLazyPanel, positions, translateX, translateY],
   );
 
   const goHome = useCallback(() => {
@@ -129,12 +170,20 @@ export default function GestureScreen() {
     () =>
       PanResponder.create({
         onStartShouldSetPanResponder: () => !isHomeEditMode && currentPanelRef.current === "home",
-        onMoveShouldSetPanResponder: (_, gesture) =>
-          !isHomeEditMode &&
-          currentPanelRef.current === "home" &&
-          Math.abs(gesture.dx) > START_THRESHOLD_X &&
-          Math.abs(gesture.dx) > Math.abs(gesture.dy) &&
-          gesture.dx > 0,
+        onMoveShouldSetPanResponder: (_, gesture) => {
+          const shouldOpen =
+            !isHomeEditMode &&
+            currentPanelRef.current === "home" &&
+            Math.abs(gesture.dx) > START_THRESHOLD_X &&
+            Math.abs(gesture.dx) > Math.abs(gesture.dy) &&
+            gesture.dx > 0;
+
+          if (shouldOpen) {
+            loadLazyPanel("messenger");
+          }
+
+          return shouldOpen;
+        },
         onPanResponderMove: (_, gesture) => {
           translateX.setValue(clamp(gesture.dx, 0, screenWidth));
         },
@@ -147,19 +196,27 @@ export default function GestureScreen() {
           animateTo("home");
         },
       }),
-    [animateTo, completeDistanceX, isHomeEditMode, screenWidth, translateX],
+    [animateTo, completeDistanceX, isHomeEditMode, loadLazyPanel, screenWidth, translateX],
   );
 
   const homeToWalletResponder = useMemo(
     () =>
       PanResponder.create({
         onStartShouldSetPanResponder: () => !isHomeEditMode && currentPanelRef.current === "home",
-        onMoveShouldSetPanResponder: (_, gesture) =>
-          !isHomeEditMode &&
-          currentPanelRef.current === "home" &&
-          Math.abs(gesture.dx) > START_THRESHOLD_X &&
-          Math.abs(gesture.dx) > Math.abs(gesture.dy) &&
-          gesture.dx < 0,
+        onMoveShouldSetPanResponder: (_, gesture) => {
+          const shouldOpen =
+            !isHomeEditMode &&
+            currentPanelRef.current === "home" &&
+            Math.abs(gesture.dx) > START_THRESHOLD_X &&
+            Math.abs(gesture.dx) > Math.abs(gesture.dy) &&
+            gesture.dx < 0;
+
+          if (shouldOpen) {
+            loadLazyPanel("wallet");
+          }
+
+          return shouldOpen;
+        },
         onPanResponderMove: (_, gesture) => {
           translateX.setValue(clamp(gesture.dx, -screenWidth, 0));
         },
@@ -172,19 +229,27 @@ export default function GestureScreen() {
           animateTo("home");
         },
       }),
-    [animateTo, completeDistanceX, isHomeEditMode, screenWidth, translateX],
+    [animateTo, completeDistanceX, isHomeEditMode, loadLazyPanel, screenWidth, translateX],
   );
 
   const homeToMiniAppsResponder = useMemo(
     () =>
       PanResponder.create({
         onStartShouldSetPanResponder: () => !isHomeEditMode && currentPanelRef.current === "home",
-        onMoveShouldSetPanResponder: (_, gesture) =>
-          !isHomeEditMode &&
-          currentPanelRef.current === "home" &&
-          Math.abs(gesture.dy) > START_THRESHOLD_Y &&
-          Math.abs(gesture.dy) > Math.abs(gesture.dx) &&
-          gesture.dy < 0,
+        onMoveShouldSetPanResponder: (_, gesture) => {
+          const shouldOpen =
+            !isHomeEditMode &&
+            currentPanelRef.current === "home" &&
+            Math.abs(gesture.dy) > START_THRESHOLD_Y &&
+            Math.abs(gesture.dy) > Math.abs(gesture.dx) &&
+            gesture.dy < 0;
+
+          if (shouldOpen) {
+            loadLazyPanel("miniapps");
+          }
+
+          return shouldOpen;
+        },
         onPanResponderMove: (_, gesture) => {
           translateY.setValue(clamp(gesture.dy, -screenHeight, 0));
         },
@@ -197,7 +262,7 @@ export default function GestureScreen() {
           animateTo("home");
         },
       }),
-    [animateTo, completeDistanceY, isHomeEditMode, screenHeight, translateY],
+    [animateTo, completeDistanceY, isHomeEditMode, loadLazyPanel, screenHeight, translateY],
   );
 
   const messengerBackResponder = useMemo(
@@ -272,6 +337,10 @@ export default function GestureScreen() {
     [animateTo, completeDistanceY, screenHeight, translateY],
   );
 
+  const MessengerPanel = lazyPanels.messenger;
+  const WalletPanel = lazyPanels.wallet;
+  const MiniAppsPanel = lazyPanels.miniapps;
+
   if (isWeb) {
     return (
       <View style={styles.root} onLayout={handleRootLayout}>
@@ -293,7 +362,7 @@ export default function GestureScreen() {
         ]}
       >
         <View style={[styles.panel, { width: screenWidth, height: screenHeight, left: -screenWidth, top: 0 }]}>
-          <MessengerPanel onBack={goHome} />
+          {MessengerPanel ? <MessengerPanel onBack={goHome} /> : <View style={styles.lazyPanelHost} />}
         </View>
 
         <View style={[styles.panel, { width: screenWidth, height: screenHeight, left: 0, top: 0 }]}>
@@ -301,11 +370,11 @@ export default function GestureScreen() {
         </View>
 
         <View style={[styles.panel, { width: screenWidth, height: screenHeight, left: screenWidth, top: 0 }]}>
-          <WalletPanel onBack={goHome} />
+          {WalletPanel ? <WalletPanel onBack={goHome} /> : <View style={styles.lazyPanelHost} />}
         </View>
 
         <View style={[styles.panel, { width: screenWidth, height: screenHeight, left: 0, top: screenHeight }]}>
-          <MiniAppsPanel onBack={goHome} />
+          {MiniAppsPanel ? <MiniAppsPanel onBack={goHome} /> : <View style={styles.lazyPanelHost} />}
         </View>
       </Animated.View>
 
@@ -371,6 +440,10 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: "transparent",
     overflow: "hidden",
+  },
+  lazyPanelHost: {
+    flex: 1,
+    backgroundColor: "transparent",
   },
   leftZone: {
     position: "absolute",

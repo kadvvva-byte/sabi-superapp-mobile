@@ -8,7 +8,9 @@
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "app.sabiai.superapp",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
     "android": {
       "adaptiveIcon": {
@@ -40,9 +42,10 @@
         "android.permission.FOREGROUND_SERVICE_PHONE_CALL",
         "android.permission.MANAGE_OWN_CALLS"
       ],
-      "package": "com.anonymous.superappmobile",
+      "package": "app.sabiai.superapp",
       "usesCleartextTraffic": true,
-      "googleServicesFile": "./google-services.json"
+      "googleServicesFile": "./google-services.json",
+      "versionCode": 1
     },
     "web": {
       "output": "static",
@@ -100,13 +103,13 @@
       [
         "expo-local-authentication",
         {
-          "faceIDPermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Face ID Р Т‘Р В»РЎРЏ Р С—Р С•Р Т‘РЎвЂљР Р†Р ВµРЎР‚Р В¶Р Т‘Р ВµР Р…Р С‘РЎРЏ Р С—Р В»Р В°РЎвЂљР ВµР В¶Р ВµР в„– Р С‘ Р С—Р ВµРЎР‚Р ВµР Р†Р С•Р Т‘Р С•Р Р†."
+          "faceIDPermission": "Allow Sabi to use Face ID to confirm payments and transfers."
         }
       ],
       [
         "expo-audio",
         {
-          "microphonePermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р СР С‘Р С”РЎР‚Р С•РЎвЂћР С•Р Р… Р Т‘Р В»РЎРЏ Р В°РЎС“Р Т‘Р С‘Р С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†.",
+          "microphonePermission": "Allow Sabi to use the microphone for voice messages, calls, live audio, and streams.",
           "enableBackgroundRecording": true,
           "enableBackgroundPlayback": true
         }
@@ -114,8 +117,8 @@
       [
         "@config-plugins/react-native-webrtc",
         {
-          "cameraPermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р С”Р В°Р СР ВµРЎР‚РЎС“ Р Т‘Р В»РЎРЏ Р Р†Р С‘Р Т‘Р ВµР С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†.",
-          "microphonePermission": "Р В Р В°Р В·РЎР‚Р ВµРЎв‚¬Р С‘РЎвЂљР Вµ Sabi Р С‘РЎРѓР С—Р С•Р В»РЎРЉР В·Р С•Р Р†Р В°РЎвЂљРЎРЉ Р СР С‘Р С”РЎР‚Р С•РЎвЂћР С•Р Р… Р Т‘Р В»РЎРЏ Р В°РЎС“Р Т‘Р С‘Р С•Р В·Р Р†Р С•Р Р…Р С”Р С•Р Р†."
+          "cameraPermission": "Allow Sabi to use the camera for video calls, live streams, and media capture.",
+          "microphonePermission": "Allow Sabi to use the microphone for voice messages, calls, live audio, and streams."
         }
       ],
       [
@@ -138,16 +141,22 @@
         "expo-build-properties",
         {
           "android": {
-            "usesCleartextTraffic": true
+            "usesCleartextTraffic": true,
+            "compileSdkVersion": 36,
+            "targetSdkVersion": 36,
+            "minSdkVersion": 24
           }
         }
       ],
       [
         "expo-location",
         {
-          "locationWhenInUsePermission": "Р Р°Р·СЂРµС€РёС‚Рµ Sabi РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РіРµРѕР»РѕРєР°С†РёСЋ РґР»СЏ РѕС‚РїСЂР°РІРєРё Р»РѕРєР°С†РёРё РІ Messenger."
+          "locationWhenInUsePermission": "Allow Sabi to use your location to share your location in Messenger and nearby features."
         }
-      ]
+      ],
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/messaging"
     ],
     "experiments": {
       "typedRoutes": true

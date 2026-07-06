@@ -1,0 +1,26 @@
+{
+  "version": "STREAM-GAME-GIFTS-192B",
+  "scope": "premium_catalog_accessibility_localization_polish_24_gifts_user_facing_only",
+  "giftCount": 24,
+  "supportedLocales": [
+    "ru",
+    "en"
+  ],
+  "ruCopyCoverage": 24,
+  "enCopyCoverage": 24,
+  "screenReaderCoverage": 24,
+  "highContrastCoverage": 24,
+  "reduceMotionCoverage": 24,
+  "priceDisclosureCoverage": 24,
+  "safetyDisclosureCoverage": 24,
+  "actualAnimationPlaybackRuntimeEnabledNow": false,
+  "actualMediaPlaybackRuntimeEnabledNow": false,
+  "actualSoundAutoplayRuntimeEnabledNow": false,
+  "realSendRuntimeEnabledNow": false,
+  "backendRuntimeEnabledNow": false,
+  "paymentRuntimeEnabledNow": false,
+  "providerRuntimeEnabledNow": false,
+  "payoutRuntimeEnabledNow": false,
+  "walletRuntimeEnabledNow": false,
+  "randomWinRuntimeEnabledNow": false
+}

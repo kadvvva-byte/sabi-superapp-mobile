@@ -5,7 +5,7 @@ import { router } from "expo-router";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 
-import { useQrMobileTranslations } from "../../../src/shared/i18n/qr-mobile-translations";
+import { useQrMobileTranslations } from "../../../src/shared/i18n/qr-mobile-hooks";
 
 function replaceQr(href: { pathname: string; params?: Record<string, string> }) {
   (router.replace as unknown as (nextHref: typeof href) => void)(href);

@@ -1,6 +1,3 @@
-import React from "react";
-import SabiModuleEntryScreen from "../src/modules/home/screens/SabiModuleEntryScreen";
+import StreamScreen from "../src/modules/stream/screens/StreamScreen";
 
-export default function StreamEntryScreen() {
-  return <SabiModuleEntryScreen moduleCode="stream" />;
-}
+export default StreamScreen;
